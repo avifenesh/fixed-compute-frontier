@@ -1,0 +1,363 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/ubuntu/hf-cache/hub/models--HuggingFaceTB--SmolLM2-135M/snapshots/93efa2f097d58c2a74874c7e644dbc9b0cee75a2
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/ubuntu/hf-cache/hub/models--HuggingFaceTB--SmolLM2-360M/snapshots/f8027fd0eaeea54caa13c31d31b9fdc459c38b49
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/ubuntu/hf-cache/hub/models--HuggingFaceTB--SmolLM2-1.7B/snapshots/effd688a12921b4cc83e3312b6feb579f70f9c71
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+/home/ubuntu/hf-cache/hub/datasets--Salesforce--wikitext/snapshots/b08601e04326c79dfdd32d625aee71d232d685c3
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 506856.80 examples/s]
+Generating train split:   0%|          | 0/1801350 [00:00<?, ? examples/s]Generating train split:   8%|▊         | 137000/1801350 [00:00<00:01, 1358625.17 examples/s]Generating train split:  16%|█▋        | 294000/1801350 [00:00<00:01, 1478822.80 examples/s]Generating train split:  25%|██▍       | 450000/1801350 [00:00<00:00, 1512034.80 examples/s]Generating train split:  34%|███▎      | 607000/1801350 [00:00<00:00, 1531824.47 examples/s]Generating train split:  43%|████▎     | 775000/1801350 [00:00<00:00, 1580929.63 examples/s]Generating train split:  56%|█████▋    | 1013675/1801350 [00:00<00:00, 1582099.04 examples/s]Generating train split:  66%|██████▌   | 1185675/1801350 [00:00<00:00, 1583308.47 examples/s]Generating train split:  75%|███████▍  | 1344675/1801350 [00:00<00:00, 1584221.43 examples/s]Generating train split:  88%|████████▊ | 1590675/1801350 [00:01<00:00, 1602917.97 examples/s]Generating train split:  98%|█████████▊| 1761675/1801350 [00:01<00:00, 1614093.30 examples/s]Generating train split: 100%|██████████| 1801350/1801350 [00:01<00:00, 1577386.72 examples/s]
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 1214055.66 examples/s]
+Loading weights:   0%|          | 0/272 [00:00<?, ?it/s]Loading weights: 100%|██████████| 272/272 [00:00<00:00, 13716.76it/s]
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 13681.44it/s]
+Loading weights:   0%|          | 0/218 [00:00<?, ?it/s]Loading weights: 100%|██████████| 218/218 [00:00<00:00, 13337.98it/s]
+{
+  "all_gates_pass": false,
+  "data": {
+    "configuration": "wikitext-103-raw-v1",
+    "dataset": "Salesforce/wikitext",
+    "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "sequence_length": 256,
+    "train_tokens": 8192,
+    "validation_tokens": 4096
+  },
+  "environment": {
+    "cuda_runtime": "13.0",
+    "datasets": "4.8.4",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "gpu_capability": [
+      12,
+      0
+    ],
+    "python": "3.12.3",
+    "torch": "2.12.1+cu130",
+    "transformers": "5.14.0"
+  },
+  "gates": {
+    "all_pair_thresholds_pass": false,
+    "recall_non_decreasing_at_all_depths": false
+  },
+  "models": [
+    {
+      "all_pair_gates_pass": false,
+      "hidden_size": 576,
+      "intermediate_size": 1536,
+      "layer_count": 30,
+      "model_id": "HuggingFaceTB/SmolLM2-135M",
+      "pairs": [
+        {
+          "active_edge_records": 1024,
+          "active_k": 64,
+          "address_count_including_sign": 3072,
+          "all_pair_gates_pass": false,
+          "degree": 16,
+          "depth_fraction": 0.26666666666666666,
+          "destination_layer": 8,
+          "gates": {
+            "global_lift_at_least_0p20": false,
+            "graph_recall_at_least_0p80": false,
+            "shuffled_lift_at_least_0p20": false,
+            "topk_energy_at_least_0p90": false
+          },
+          "global_frequency_recall_at_k": 0.18975448608398438,
+          "graph_minus_global_recall": 0.046726226806640625,
+          "graph_minus_shuffled_recall": 0.059017181396484375,
+          "graph_recall_at_k": 0.236480712890625,
+          "intermediate_size": 1536,
+          "predicted_full_energy_lower_bound_mean": 0.23666180670261383,
+          "shuffled_source_recall_at_k": 0.17746353149414062,
+          "source_layer": 7,
+          "topk_energy_median": 0.5873990654945374,
+          "topk_energy_p10": 0.4844667613506317,
+          "validation_tokens": 4096
+        },
+        {
+          "active_edge_records": 1024,
+          "active_k": 64,
+          "address_count_including_sign": 3072,
+          "all_pair_gates_pass": false,
+          "degree": 16,
+          "depth_fraction": 0.5,
+          "destination_layer": 15,
+          "gates": {
+            "global_lift_at_least_0p20": false,
+            "graph_recall_at_least_0p80": false,
+            "shuffled_lift_at_least_0p20": false,
+            "topk_energy_at_least_0p90": false
+          },
+          "global_frequency_recall_at_k": 0.23022079467773438,
+          "graph_minus_global_recall": 0.038913726806640625,
+          "graph_minus_shuffled_recall": 0.059711456298828125,
+          "graph_recall_at_k": 0.269134521484375,
+          "intermediate_size": 1536,
+          "predicted_full_energy_lower_bound_mean": 0.2073308229446411,
+          "shuffled_source_recall_at_k": 0.20942306518554688,
+          "source_layer": 14,
+          "topk_energy_median": 0.5907294154167175,
+          "topk_energy_p10": 0.5298342108726501,
+          "validation_tokens": 4096
+        },
+        {
+          "active_edge_records": 1024,
+          "active_k": 64,
+          "address_count_including_sign": 3072,
+          "all_pair_gates_pass": false,
+          "degree": 16,
+          "depth_fraction": 0.7333333333333333,
+          "destination_layer": 22,
+          "gates": {
+            "global_lift_at_least_0p20": false,
+            "graph_recall_at_least_0p80": false,
+            "shuffled_lift_at_least_0p20": false,
+            "topk_energy_at_least_0p90": false
+          },
+          "global_frequency_recall_at_k": 0.22818374633789062,
+          "graph_minus_global_recall": 0.056087493896484375,
+          "graph_minus_shuffled_recall": 0.08408355712890625,
+          "graph_recall_at_k": 0.284271240234375,
+          "intermediate_size": 1536,
+          "predicted_full_energy_lower_bound_mean": 0.2783295214176178,
+          "shuffled_source_recall_at_k": 0.20018768310546875,
+          "source_layer": 21,
+          "topk_energy_median": 0.6895754337310791,
+          "topk_energy_p10": 0.6280392408370972,
+          "validation_tokens": 4096
+        }
+      ],
+      "parameter_count": 134515008,
+      "revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2"
+    },
+    {
+      "all_pair_gates_pass": false,
+      "hidden_size": 960,
+      "intermediate_size": 2560,
+      "layer_count": 32,
+      "model_id": "HuggingFaceTB/SmolLM2-360M",
+      "pairs": [
+        {
+          "active_edge_records": 1024,
+          "active_k": 64,
+          "address_count_including_sign": 5120,
+          "all_pair_gates_pass": false,
+          "degree": 16,
+          "depth_fraction": 0.25,
+          "destination_layer": 8,
+          "gates": {
+            "global_lift_at_least_0p20": false,
+            "graph_recall_at_least_0p80": false,
+            "shuffled_lift_at_least_0p20": false,
+            "topk_energy_at_least_0p90": false
+          },
+          "global_frequency_recall_at_k": 0.10126113891601562,
+          "graph_minus_global_recall": 0.043193817138671875,
+          "graph_minus_shuffled_recall": 0.05413055419921875,
+          "graph_recall_at_k": 0.1444549560546875,
+          "intermediate_size": 2560,
+          "predicted_full_energy_lower_bound_mean": 0.13799268007278442,
+          "shuffled_source_recall_at_k": 0.09032440185546875,
+          "source_layer": 7,
+          "topk_energy_median": 0.4638523459434509,
+          "topk_energy_p10": 0.3572785556316376,
+          "validation_tokens": 4096
+        },
+        {
+          "active_edge_records": 1024,
+          "active_k": 64,
+          "address_count_including_sign": 5120,
+          "all_pair_gates_pass": false,
+          "degree": 16,
+          "depth_fraction": 0.5,
+          "destination_layer": 16,
+          "gates": {
+            "global_lift_at_least_0p20": false,
+            "graph_recall_at_least_0p80": false,
+            "shuffled_lift_at_least_0p20": false,
+            "topk_energy_at_least_0p90": false
+          },
+          "global_frequency_recall_at_k": 0.16915130615234375,
+          "graph_minus_global_recall": 0.06882095336914062,
+          "graph_minus_shuffled_recall": 0.08322525024414062,
+          "graph_recall_at_k": 0.23797225952148438,
+          "intermediate_size": 2560,
+          "predicted_full_energy_lower_bound_mean": 0.1597130447626114,
+          "shuffled_source_recall_at_k": 0.15474700927734375,
+          "source_layer": 15,
+          "topk_energy_median": 0.4945167601108551,
+          "topk_energy_p10": 0.4242528975009918,
+          "validation_tokens": 4096
+        },
+        {
+          "active_edge_records": 1024,
+          "active_k": 64,
+          "address_count_including_sign": 5120,
+          "all_pair_gates_pass": false,
+          "degree": 16,
+          "depth_fraction": 0.75,
+          "destination_layer": 24,
+          "gates": {
+            "global_lift_at_least_0p20": false,
+            "graph_recall_at_least_0p80": false,
+            "shuffled_lift_at_least_0p20": false,
+            "topk_energy_at_least_0p90": false
+          },
+          "global_frequency_recall_at_k": 0.18528366088867188,
+          "graph_minus_global_recall": 0.07176971435546875,
+          "graph_minus_shuffled_recall": 0.09582138061523438,
+          "graph_recall_at_k": 0.2570533752441406,
+          "intermediate_size": 2560,
+          "predicted_full_energy_lower_bound_mean": 0.2311069667339325,
+          "shuffled_source_recall_at_k": 0.16123199462890625,
+          "source_layer": 23,
+          "topk_energy_median": 0.6343801021575928,
+          "topk_energy_p10": 0.5524739027023315,
+          "validation_tokens": 4096
+        }
+      ],
+      "parameter_count": 361821120,
+      "revision": "f8027fd0eaeea54caa13c31d31b9fdc459c38b49"
+    },
+    {
+      "all_pair_gates_pass": false,
+      "hidden_size": 2048,
+      "intermediate_size": 8192,
+      "layer_count": 24,
+      "model_id": "HuggingFaceTB/SmolLM2-1.7B",
+      "pairs": [
+        {
+          "active_edge_records": 1024,
+          "active_k": 64,
+          "address_count_including_sign": 16384,
+          "all_pair_gates_pass": false,
+          "degree": 16,
+          "depth_fraction": 0.25,
+          "destination_layer": 6,
+          "gates": {
+            "global_lift_at_least_0p20": false,
+            "graph_recall_at_least_0p80": false,
+            "shuffled_lift_at_least_0p20": false,
+            "topk_energy_at_least_0p90": false
+          },
+          "global_frequency_recall_at_k": 0.10440444946289062,
+          "graph_minus_global_recall": 0.09022903442382812,
+          "graph_minus_shuffled_recall": 0.10433578491210938,
+          "graph_recall_at_k": 0.19463348388671875,
+          "intermediate_size": 8192,
+          "predicted_full_energy_lower_bound_mean": 0.13539168238639832,
+          "shuffled_source_recall_at_k": 0.09029769897460938,
+          "source_layer": 5,
+          "topk_energy_median": 0.3353317975997925,
+          "topk_energy_p10": 0.2580905258655548,
+          "validation_tokens": 4096
+        },
+        {
+          "active_edge_records": 1024,
+          "active_k": 64,
+          "address_count_including_sign": 16384,
+          "all_pair_gates_pass": false,
+          "degree": 16,
+          "depth_fraction": 0.5,
+          "destination_layer": 12,
+          "gates": {
+            "global_lift_at_least_0p20": false,
+            "graph_recall_at_least_0p80": false,
+            "shuffled_lift_at_least_0p20": false,
+            "topk_energy_at_least_0p90": false
+          },
+          "global_frequency_recall_at_k": 0.09066390991210938,
+          "graph_minus_global_recall": 0.08063125610351562,
+          "graph_minus_shuffled_recall": 0.09791183471679688,
+          "graph_recall_at_k": 0.171295166015625,
+          "intermediate_size": 8192,
+          "predicted_full_energy_lower_bound_mean": 0.09253187477588654,
+          "shuffled_source_recall_at_k": 0.07338333129882812,
+          "source_layer": 11,
+          "topk_energy_median": 0.3382474184036255,
+          "topk_energy_p10": 0.27045348286628723,
+          "validation_tokens": 4096
+        },
+        {
+          "active_edge_records": 1024,
+          "active_k": 64,
+          "address_count_including_sign": 16384,
+          "all_pair_gates_pass": false,
+          "degree": 16,
+          "depth_fraction": 0.75,
+          "destination_layer": 18,
+          "gates": {
+            "global_lift_at_least_0p20": false,
+            "graph_recall_at_least_0p80": false,
+            "shuffled_lift_at_least_0p20": false,
+            "topk_energy_at_least_0p90": false
+          },
+          "global_frequency_recall_at_k": 0.10721588134765625,
+          "graph_minus_global_recall": 0.08531570434570312,
+          "graph_minus_shuffled_recall": 0.10455322265625,
+          "graph_recall_at_k": 0.19253158569335938,
+          "intermediate_size": 8192,
+          "predicted_full_energy_lower_bound_mean": 0.16367506980895996,
+          "shuffled_source_recall_at_k": 0.08797836303710938,
+          "source_layer": 17,
+          "topk_energy_median": 0.46436551213264465,
+          "topk_energy_p10": 0.38307881355285645,
+          "validation_tokens": 4096
+        }
+      ],
+      "parameter_count": 1711376384,
+      "revision": "effd688a12921b4cc83e3312b6feb579f70f9c71"
+    }
+  ],
+  "preregistration_sha256": "dc45248f142c2de78d14ed54f3f9e486b6207134d6cda0b59686762be26e2891",
+  "schema": "self-indexed-sparse-latent-locality-v1",
+  "seed": 7302026,
+  "source_sha256": "7e89a579dd1b5e2ac72a1378a9e3561982b0b20abcac34bc0dbfb6e6d87d1499",
+  "status": "closed_at_natural_locality_gate",
+  "width_trends": [
+    {
+      "energy_non_decreasing_with_width": false,
+      "graph_recalls": [
+        0.236480712890625,
+        0.1444549560546875,
+        0.19463348388671875
+      ],
+      "pair_position": 0,
+      "recall_non_decreasing_with_width": false,
+      "topk_energy_medians": [
+        0.5873990654945374,
+        0.4638523459434509,
+        0.3353317975997925
+      ]
+    },
+    {
+      "energy_non_decreasing_with_width": false,
+      "graph_recalls": [
+        0.269134521484375,
+        0.23797225952148438,
+        0.171295166015625
+      ],
+      "pair_position": 1,
+      "recall_non_decreasing_with_width": false,
+      "topk_energy_medians": [
+        0.5907294154167175,
+        0.4945167601108551,
+        0.3382474184036255
+      ]
+    },
+    {
+      "energy_non_decreasing_with_width": false,
+      "graph_recalls": [
+        0.284271240234375,
+        0.2570533752441406,
+        0.19253158569335938
+      ],
+      "pair_position": 2,
+      "recall_non_decreasing_with_width": false,
+      "topk_energy_medians": [
+        0.6895754337310791,
+        0.6343801021575928,
+        0.46436551213264465
+      ]
+    }
+  ]
+}

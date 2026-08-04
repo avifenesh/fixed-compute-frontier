@@ -1,0 +1,51 @@
+{
+  "algebra_gate": {
+    "pivot_identity_max_abs_error": 1.1102230246251565e-16,
+    "value_output_product_max_abs_error": 1.1102230246251565e-16,
+    "zero_gate_output_max_abs_error_over_128_inputs": 8.881784197001252e-16
+  },
+  "attention_scan_unchanged": true,
+  "candidate": "gauge_funded_quadratic_values",
+  "decision": "retain_as_pre_candidate_gpu_kernel_and_lm_quality_unproven",
+  "gpu_required_now": false,
+  "key_coupled_variant": {
+    "affine_value_map_second_finite_difference": 0.0,
+    "logical_kv_projection_ledger_example": {
+      "candidate_addition_saving": 16128,
+      "candidate_kv_weights": 1032320,
+      "candidate_multiplication_saving": 16128,
+      "candidate_scalar_additions": 1032192,
+      "candidate_scalar_multiplications": 1032448,
+      "candidate_weight_saving": 16256,
+      "dense_kv_weights": 1048576,
+      "dense_scalar_additions": 1048320,
+      "dense_scalar_multiplications": 1048576,
+      "kv_cache_scalars_per_token_both": 256,
+      "model_width": 4096,
+      "value_width": 128
+    },
+    "one_variable_second_finite_difference": 2.0,
+    "zero_gate_value_max_abs_error_over_128_inputs": 4.440892098500626e-16
+  },
+  "kv_cache_shape_unchanged": true,
+  "logical_projection_ledger_example": {
+    "candidate_scalar_additions": 524160,
+    "candidate_scalar_multiplications": 524288,
+    "candidate_value_weights": 524160,
+    "candidate_weight_saving": 128,
+    "dense_scalar_additions": 524160,
+    "dense_scalar_multiplications": 524288,
+    "dense_value_weights": 524288,
+    "model_width": 4096,
+    "value_cache_scalars_per_token_both": 128,
+    "value_width": 128
+  },
+  "logical_scalar_arithmetic_exactly_matched": true,
+  "schema_version": 1,
+  "seed": 20260726,
+  "source_sha256": "fd526780a7b3e06a80c52285c2106ff851985a802be7c87678292ed6aaa3ad46",
+  "strict_expressivity_witness": {
+    "affine_value_map_mixed_finite_difference": 0.0,
+    "two_variable_mixed_finite_difference": 1.0
+  }
+}

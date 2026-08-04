@@ -1,0 +1,322 @@
+{
+  "all_gates_pass": false,
+  "backend_contract": {
+    "batch_expand_is_storage_view": true,
+    "eligible": true,
+    "forced_execution_finite": true,
+    "key_stride": [
+      0,
+      461952,
+      192,
+      1
+    ],
+    "value_stride": [
+      0,
+      461952,
+      192,
+      1
+    ]
+  },
+  "block_pair": {
+    "b1_t1": {
+      "candidate_over_baseline": 1.0277289152489817,
+      "candidate_over_baseline_peak": 4.731314432989691,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 794624,
+        "candidate": 3759616
+      },
+      "iterations_per_trial": 200,
+      "median_ms": {
+        "baseline": 0.2649825668334961,
+        "candidate": 0.2723302459716797
+      },
+      "trials_ms": {
+        "baseline": [
+          0.26883888244628906,
+          0.2649825668334961,
+          0.26508544921875,
+          0.26229759216308596,
+          0.2616996765136719
+        ],
+        "candidate": [
+          0.30305776596069334,
+          0.3257425689697266,
+          0.2723302459716797,
+          0.27069232940673826,
+          0.2679025650024414
+        ]
+      }
+    },
+    "b1_t128": {
+      "candidate_over_baseline": 1.0196536854871312,
+      "candidate_over_baseline_peak": 6.436931818181818,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 1802240,
+        "candidate": 11600896
+      },
+      "iterations_per_trial": 200,
+      "median_ms": {
+        "baseline": 0.26610336303710935,
+        "candidate": 0.2713332748413086
+      },
+      "trials_ms": {
+        "baseline": [
+          0.2629737663269043,
+          0.2632663917541504,
+          0.26610336303710935,
+          0.3155964851379395,
+          0.2697760009765625
+        ],
+        "candidate": [
+          0.2713332748413086,
+          0.27065887451171877,
+          0.27722848892211915,
+          0.2704148864746094,
+          0.3191846466064453
+        ]
+      }
+    },
+    "b32_t128": {
+      "candidate_over_baseline": 1.2340888067874582,
+      "candidate_over_baseline_peak": 3.8021104600694446,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 37748736,
+        "candidate": 143524864
+      },
+      "iterations_per_trial": 50,
+      "median_ms": {
+        "baseline": 0.26405567169189453,
+        "candidate": 0.32586814880371096
+      },
+      "trials_ms": {
+        "baseline": [
+          0.26649663925170897,
+          0.2627513694763184,
+          0.2633817672729492,
+          0.2644339179992676,
+          0.26405567169189453
+        ],
+        "candidate": [
+          0.3276243209838867,
+          0.3273740768432617,
+          0.32579967498779294,
+          0.32586814880371096,
+          0.3254105758666992
+        ]
+      }
+    },
+    "b8_t128": {
+      "candidate_over_baseline": 1.044336872075299,
+      "candidate_over_baseline_peak": 4.17587890625,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 10485760,
+        "candidate": 43787264
+      },
+      "iterations_per_trial": 50,
+      "median_ms": {
+        "baseline": 0.2624991989135742,
+        "candidate": 0.2741375923156738
+      },
+      "trials_ms": {
+        "baseline": [
+          0.2645414352416992,
+          0.2628531265258789,
+          0.26102720260620116,
+          0.26192703247070315,
+          0.2624991989135742
+        ],
+        "candidate": [
+          0.27578752517700195,
+          0.2755033683776855,
+          0.27274431228637697,
+          0.27375551223754885,
+          0.2741375923156738
+        ]
+      }
+    }
+  },
+  "claim_boundary": "Passing admits training design only. It does not establish record usefulness, language preservation, QA gain, or a Pareto result.",
+  "cpu_bounded_reference": {
+    "maximum_errors": {
+      "forward": 2.7939677238464355e-09,
+      "input_gradient": 8.731149137020111e-11,
+      "key_gradient": 3.725290298461914e-09,
+      "value_gradient": 1.7881393432617188e-07
+    },
+    "null_output_max_abs": 6.367460173350992e-06
+  },
+  "cuda_version": "12.8",
+  "device": "NVIDIA H100 80GB HBM3",
+  "gates": {
+    "block_latency_noninferior": false,
+    "block_parameter_count_exact": true,
+    "block_peak_allocation_noninferior": false,
+    "dense_reference_within_tolerance": true,
+    "dominant_null_suppresses_output": true,
+    "environment_h100_or_h200": true,
+    "expanded_kv_are_views": true,
+    "finite_measurements": true,
+    "flash_backend_eligible_and_forced": true,
+    "matrix_mac_ledger_exact": true,
+    "model_latency_noninferior": true,
+    "model_parameter_count_exact": true,
+    "model_peak_allocation_noninferior": true
+  },
+  "integrity": {
+    "operator_source_sha256": "388a481dff682f9fb24a63968a03d26c76d0358b6106a52c8ea9dc614abd3789",
+    "preregistration_sha256": "048e3a86f5b8a1215ed2632a957ad9a4be89dca27d63a1abdca28f97ed2c3a49",
+    "runtime_v1_result_sha256": "099e2742108f66fb5dfd54a53e95a9dd09ee9c13d287f66d4f13be6f723a9bc9",
+    "source_sha256": "54fc97fb60f21b9a70f417a494840c9d6c4b4dbe94054976b9880ad150dd90a7",
+    "stage0_result_sha256": "ba2ac04c370a4c000b513438ac30ce5b5fccd0d6856ba98861198ea83db47126"
+  },
+  "operator": {
+    "head_dimension": 192,
+    "heads": 2,
+    "matrix_macs_per_token": 2359296,
+    "record_slots": 2406,
+    "softmax_exponentials_per_token": 4812
+  },
+  "parameter_counts": {
+    "block_pair": {
+      "baseline": 2360064,
+      "candidate": 2360064
+    },
+    "whole_model": {
+      "baseline": 36577152,
+      "candidate": 36577152
+    }
+  },
+  "protocol": {
+    "block_surfaces": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        128
+      ],
+      [
+        8,
+        128
+      ],
+      [
+        32,
+        128
+      ]
+    ],
+    "cuda_graph": false,
+    "custom_kernel": false,
+    "forced_backend": "FLASH_ATTENTION",
+    "model_surfaces": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        128
+      ],
+      [
+        8,
+        128
+      ]
+    ],
+    "seed": 10109,
+    "torch_compile": false,
+    "trials": 5,
+    "warmups_per_trial": 20
+  },
+  "schema": "budget-neutral-soft-record-t18-flash2-runtime-v1",
+  "status": "fail",
+  "torch_version": "2.11.0+cu128",
+  "whole_model": {
+    "b1_t1": {
+      "candidate_over_baseline": 1.0177666640413745,
+      "candidate_over_baseline_peak": 1.0,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 37849600,
+        "candidate": 37849600
+      },
+      "iterations_per_trial": 50,
+      "median_ms": {
+        "baseline": 6.323701171875,
+        "candidate": 6.43605224609375
+      },
+      "trials_ms": {
+        "baseline": [
+          6.323701171875,
+          6.327526245117188,
+          6.3024664306640625,
+          6.300635986328125,
+          6.8377880859375
+        ],
+        "candidate": [
+          6.429241943359375,
+          6.437119750976563,
+          6.418729858398438,
+          6.46041259765625,
+          6.43605224609375
+        ]
+      }
+    },
+    "b1_t128": {
+      "candidate_over_baseline": 1.0295704507312629,
+      "candidate_over_baseline_peak": 1.0,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 50626560,
+        "candidate": 50626560
+      },
+      "iterations_per_trial": 50,
+      "median_ms": {
+        "baseline": 6.621604614257812,
+        "candidate": 6.817408447265625
+      },
+      "trials_ms": {
+        "baseline": [
+          6.6599359130859375,
+          6.634592895507812,
+          6.613712768554688,
+          6.608737182617188,
+          6.621604614257812
+        ],
+        "candidate": [
+          6.862855224609375,
+          6.78924560546875,
+          6.77216796875,
+          6.817408447265625,
+          7.1717236328125
+        ]
+      }
+    },
+    "b8_t128": {
+      "candidate_over_baseline": 1.0264991985111882,
+      "candidate_over_baseline_peak": 1.0,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 140771328,
+        "candidate": 140771328
+      },
+      "iterations_per_trial": 10,
+      "median_ms": {
+        "baseline": 6.5904991149902346,
+        "candidate": 6.7651420593261715
+      },
+      "trials_ms": {
+        "baseline": [
+          6.578237152099609,
+          6.585785675048828,
+          6.5904991149902346,
+          6.591168212890625,
+          6.595670318603515
+        ],
+        "candidate": [
+          6.8099006652832035,
+          6.779840087890625,
+          6.735263824462891,
+          6.7651420593261715,
+          6.759884643554687
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "experiment": "packed-token-evidence-plane-t27-decoded-prefix-oracle",
+  "status": "FAIL",
+  "date": "2026-07-31",
+  "failure": {
+    "phase": "first_and_only_scoring_attempt",
+    "reason": "exact_zero_yes_no_margin",
+    "row_id": "5adc53f75542996e6852530a",
+    "row_ordinal_1_based": 71,
+    "condition": "full_document",
+    "question": "Are both Cypress and Ajuga genera?",
+    "label": "no",
+    "exception": "RuntimeError: invalid yes/no margin for 5adc53f75542996e6852530a full_document"
+  },
+  "execution": {
+    "scoring_attempts": 1,
+    "adaptive_retries": 0,
+    "validated_nonzero_margins_before_failure": 283,
+    "pre_scoring_environment_failures": [
+      "missing accelerate dependency before model load",
+      "temporary CUDA 13 dependency shadow caused cublasLt symbol failure before prompt scoring"
+    ]
+  },
+  "reader": {
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "dtype": "bfloat16",
+    "transformers": "5.14.1",
+    "torch": "2.11.0+cu128",
+    "accelerate": "1.14.0",
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "gates": {
+    "artifact_hashes": true,
+    "routing_and_shuffle": true,
+    "prefix_roundtrip_and_shape": true,
+    "label_boundary": true,
+    "single_token_finite_nonzero_scores": false,
+    "correct_prefix_absolute": null,
+    "correct_prefix_causal": null,
+    "full_document_sanity": null,
+    "zero_adaptive_scoring_retries": true
+  },
+  "integrity": {
+    "preregistration_sha256": "d796f4b405af8c61d9db6e48c2cc95e9e66555089b522fbed8e0bf64d48f932d",
+    "source_sha256": "41a39aea412710099cbd25c110af16baa7e3efa08114844b01ab72036790d111",
+    "test_sha256": "6172776598895397b31fcec2f515b2447681b0b49e7be613bae323c557eba104",
+    "stage0_sha256": "6d24c18fbb21ec95e41fff87f547067f93cee4fe46dcdb2a5f499e564dbef0a8"
+  },
+  "decision": "The preregistration declared an exact tie invalid. T27 fixed-prefix evidence is closed without rerun, prompt repair, precision change, alternate reader, or threshold fitting."
+}

@@ -1,0 +1,62 @@
+{"starting_arm": "parallel_swiglu"}
+{"arm": "parallel_swiglu", "step": 305, "train_loss": 5.957469701766968, "validation_loss": 6.132310528308153, "gradient_norm": 0.48394182324409485}
+{"arm": "parallel_swiglu", "step": 1525, "train_loss": 5.461242914199829, "validation_loss": 5.455293349921703, "gradient_norm": 0.5660364031791687}
+{"starting_arm": "parallel_wide_silu"}
+{"arm": "parallel_wide_silu", "step": 305, "train_loss": 5.973559141159058, "validation_loss": 6.158599931746721, "gradient_norm": 0.3879982531070709}
+{"arm": "parallel_wide_silu", "step": 1525, "train_loss": 5.439935684204102, "validation_loss": 5.430096369236708, "gradient_norm": 0.46900829672813416}
+{"starting_arm": "parallel_self_product"}
+{"arm": "parallel_self_product", "step": 305, "train_loss": 5.936845064163208, "validation_loss": 6.125348534435034, "gradient_norm": 0.4882824420928955}
+{"arm": "parallel_self_product", "step": 1525, "train_loss": 5.421725273132324, "validation_loss": 5.418168365955353, "gradient_norm": 0.5802123546600342}
+{
+  "advance_to_scale_test": true,
+  "gates": {
+    "all_activation_diagnostics_finite": true,
+    "all_activation_nonfinite_fractions_zero": true,
+    "all_training_finite": true,
+    "candidate_early_noninferior_within_0p05_percent": true,
+    "candidate_terminal_0p025_percent_better_than_wide_silu": true,
+    "candidate_terminal_0p05_percent_better_than_swiglu": true,
+    "confirmation_initial_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+    "confirmation_initial_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+    "confirmation_initial_activation_rms_layer_median_no_greater_than_swiglu": true,
+    "confirmation_terminal_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+    "confirmation_terminal_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+    "confirmation_terminal_activation_rms_layer_median_no_greater_than_swiglu": true,
+    "discovery_formal_failure_preserved": true,
+    "discovery_quality_and_other_original_gates_passed": true,
+    "folded_h100_feasibility_pass": true,
+    "folded_vs_unfolded_nll_within_0p01_percent": true,
+    "identical_ffn_dense_ledgers": true,
+    "identical_total_parameters": true,
+    "identical_trainable_parameters": true,
+    "integrity_protocol_valid": true,
+    "paired_interval_favors_candidate_vs_swiglu": true,
+    "paired_interval_favors_candidate_vs_wide_silu": true,
+    "paired_interval_favors_full_vs_plain_ablation": true,
+    "plain_ablation_hurts_0p01_percent": true,
+    "revised_exploratory_seed_2718_passed": true,
+    "wide_folded_vs_unfolded_nll_within_0p01_percent": true
+  },
+  "per_seed_relative_improvements": {
+    "1907": {
+      "parallel_swiglu": 0.004296402133875324,
+      "parallel_wide_silu": 0.0006229769053108974
+    },
+    "2718": {
+      "parallel_swiglu": 0.004577467413303673,
+      "parallel_wide_silu": 0.002321541382460426
+    },
+    "31415": {
+      "parallel_swiglu": 0.00680667970815546,
+      "parallel_wide_silu": 0.002196048005998262
+    }
+  },
+  "symmetric_activation_envelope": {
+    "initial_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+    "initial_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+    "initial_activation_rms_layer_median_no_greater_than_swiglu": true,
+    "terminal_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+    "terminal_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+    "terminal_activation_rms_layer_median_no_greater_than_swiglu": true
+  }
+}

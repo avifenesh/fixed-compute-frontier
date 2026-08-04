@@ -1,0 +1,113 @@
+{
+  "all_gates_pass": false,
+  "claim_boundary": "Passing only admits finite-capacity compilation on a new holdout; it is not autonomous extraction, QA, or a strict Pareto result.",
+  "configuration": {
+    "chunk_tokens": 128,
+    "document_pooling": "maximum_predictive_dot_then_minimum_page",
+    "document_tokens": 512,
+    "metric": "token_weight_transpose_times_token_weight_div_vocab",
+    "parameter_count": 36577152,
+    "question_pooling": "last_real_final_normalized_hidden",
+    "training_updates": 0
+  },
+  "development_only": true,
+  "device": "cuda",
+  "gates": {
+    "checkpoint_byte_identical": true,
+    "finite_scores_and_metric": true,
+    "input_integrity": true,
+    "random_state_unchanged": true,
+    "trained_predictive_at_least_70pct": false,
+    "trained_predictive_beats_direct_contextual": false,
+    "trained_predictive_beats_lexical_by_10pp": false,
+    "trained_predictive_beats_random": false,
+    "trained_predictive_beats_static": false,
+    "trained_state_unchanged": true,
+    "zero_training_updates": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "checkpoint_sha256_after": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "checkpoint_sha256_before": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "data_manifest_sha256": "90e539279f540a7516e3c90c3ee59539d3f8654cc84e88a82dc950ce6fb5036e",
+    "preregistration_sha256": "bb7f7654510e6abd33a460033153e3f71dc9f98dec279d04fd361094f0b14ce5",
+    "source_parquet_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+    "source_sha256": "b3d2caadc5f97d09a5bc3e7aefaba744f76831203274910dd7b4d80746fa08ef",
+    "t13_result_sha256": "a09fc367ad52bfe0b357690e9b0aed6e252c5c774b9efaeae8b8f8c906347329"
+  },
+  "predictive_metric_probe": {
+    "claim_boundary": "Privileged gold-page development diagnostic on a previously observed aggregate evaluator; not fresh held-out evidence.",
+    "privileged_lexical_reference_accuracy": 0.5576923076923077,
+    "random_initialization": {
+      "metric_spectrum": {
+        "condition_number": 1.4144681117118707,
+        "maximum_eigenvalue": 0.0004727468767669052,
+        "minimum_eigenvalue": 0.0003342223644722253,
+        "trace": 0.15359891951084137
+      },
+      "probe": {
+        "evaluation": {
+          "accuracy": 0.49038461538461536,
+          "examples": 104,
+          "positive_rate": 0.5384615384615384,
+          "predicted_positive_rate": 0.5673076923076923
+        },
+        "fitted_train_accuracy": 0.5958904109589042,
+        "greater_equal": false,
+        "score_summary": {
+          "evaluation_max": 0.044190507382154465,
+          "evaluation_min": -0.023774268105626106,
+          "train_max": 0.04881768673658371,
+          "train_min": -0.03529611974954605
+        },
+        "threshold": 0.013357081450521946,
+        "train": {
+          "accuracy": 0.5958904109589042,
+          "examples": 146,
+          "positive_rate": 0.5273972602739726,
+          "predicted_positive_rate": 0.4931506849315068
+        }
+      },
+      "state_sha256_after": "40d208029720fb9221f5aa74cbf772e5fa214464f27f90de3a5e7edc77a8843c",
+      "state_sha256_before": "40d208029720fb9221f5aa74cbf772e5fa214464f27f90de3a5e7edc77a8843c"
+    },
+    "trained": {
+      "metric_spectrum": {
+        "condition_number": 292438.6920582668,
+        "maximum_eigenvalue": 10.701091766357422,
+        "minimum_eigenvalue": 3.6592598917195573e-05,
+        "trace": 10.986706733703613
+      },
+      "probe": {
+        "evaluation": {
+          "accuracy": 0.4326923076923077,
+          "examples": 104,
+          "positive_rate": 0.5384615384615384,
+          "predicted_positive_rate": 0.5288461538461539
+        },
+        "fitted_train_accuracy": 0.5753424657534246,
+        "greater_equal": false,
+        "score_summary": {
+          "evaluation_max": 56.1218147277832,
+          "evaluation_min": 21.112478256225586,
+          "train_max": 93.09593200683594,
+          "train_min": 11.677606582641602
+        },
+        "threshold": 31.483291625976562,
+        "train": {
+          "accuracy": 0.5753424657534246,
+          "examples": 146,
+          "positive_rate": 0.5273972602739726,
+          "predicted_positive_rate": 0.541095890410959
+        }
+      },
+      "state_sha256_after": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57",
+      "state_sha256_before": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57"
+    },
+    "trained_direct_contextual_reference_accuracy": 0.5384615384615384,
+    "trained_static_reference_accuracy": 0.6057692307692307
+  },
+  "schema": "hotpot-predictive-metric-t14-v1",
+  "status": "fail",
+  "torch_version": "2.11.0+cu128"
+}

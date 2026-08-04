@@ -1,0 +1,51 @@
+{
+  "manifest_id": "t75-stage-a-model-free-v0",
+  "frozen_at": "2026-08-02-before-first-execution",
+  "scope": "stationary_model_free_no_neural_no_gpu",
+  "hashes": {
+    "experiments/guarded_causal_composition_t75_stage_a.py": "16e1e1df3c93d066d7990a3855521627f75a24368a2f3bfe015e50dec939f304",
+    "results/guarded-causal-composition-t75-stage-a-preregistration.md": "ad97c4fc3cda4f241a73d62ad1476d32ef97107320d5b5fe483cf479a583386c",
+    "results/guarded-causal-composition-t75-stage-a-design-audit.md": "bc86ea16ada1195f21d73120e4c1fd2f3c495134a0266b18c569f3ba6b2068ed"
+  },
+  "world": {
+    "m": 33,
+    "epsilon": 0.1,
+    "prior": "uniform_over_64_worlds",
+    "probe": "do_X_0_then_one_binary_Y"
+  },
+  "constructive_adaptive": {
+    "decisions": 6,
+    "repetition_rule": "min_r_such_that_6_times_max_class_error_le_0.05",
+    "expected_derived_r": 28,
+    "expected_probes": 168
+  },
+  "fixed_nonadaptive": {
+    "selectors": "0_through_31",
+    "repetition_rule": "min_r_such_that_32_times_max_class_error_le_0.05",
+    "expected_derived_r": 40,
+    "expected_probes": 1280
+  },
+  "entropy_greedy": {
+    "claim": "exact_posterior_one_step_entropy_reference_not_globally_optimal",
+    "posterior_stop": 0.95,
+    "horizon": 168,
+    "average_episodes": 8192,
+    "stratified_episodes_per_world": 128,
+    "seeds": {
+      "average_worlds": 75001,
+      "average_outcomes": 75002,
+      "stratified_outcomes": 75003
+    }
+  },
+  "small_exact_dp": {
+    "m": 3,
+    "horizons": [0, 1, 2, 3, 4, 5, 6],
+    "lambda": 0.01
+  },
+  "decision": {
+    "all_hard_assertions_required": true,
+    "entropy_greedy_is_exploratory": true,
+    "neural_admission": false,
+    "gpu_admission": false
+  }
+}

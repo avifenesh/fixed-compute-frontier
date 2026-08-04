@@ -1,0 +1,168 @@
+{
+  "admitted": false,
+  "compiler": {
+    "context": 128,
+    "covariance_seconds": 1.9341543838381767,
+    "document_fields": [
+      "document_id",
+      "text",
+      "title"
+    ],
+    "documents": 2405,
+    "hosvd_energy_fraction": 0.537812715161615,
+    "left_orthonormal_max_error": 0.00019216537475585938,
+    "left_rank": 20,
+    "left_sha256": "d72f829f8ae926627064cc9c84ffe60b6d51c851421c744022c6e19f113c84dd",
+    "minimum_bf16_cosine": 0.9999963045120239,
+    "minimum_random_bf16_cosine": 0.999997615814209,
+    "payload_dimensions": 220,
+    "payload_norm_max_error": 1.7881393432617188e-07,
+    "payload_sha256": "c8498c493cb30e5df589b5932027a1187df895b0b1f77c0c7b61038a85c31df0",
+    "projection_seconds": 1.590926071163267,
+    "random_energy_fraction": 0.001518041702479186,
+    "right_orthonormal_max_error": 0.00017452239990234375,
+    "right_rank": 11,
+    "right_sha256": "d129b240c80fd48a05f4ce998b4cd15356f89967e202fe4103d9064ea68000b7"
+  },
+  "device": "cuda",
+  "effects": {
+    "document_shuffle_drop_pp": 0.0,
+    "gain_over_query_only_pp": -15.384615384615385,
+    "gain_over_random_pp": -5.769230769230771,
+    "gain_over_t19b_pp": -16.346153846153843
+  },
+  "gates": {
+    "document_shuffle_drop_at_least_10pp": false,
+    "evaluation_accuracy_at_least_75pct": false,
+    "finite_nonzero_operators_and_readers": true,
+    "gain_over_query_only_at_least_10pp": false,
+    "gain_over_random_at_least_10pp": false,
+    "gain_over_t19b_at_least_10pp": false,
+    "identical_served_structure_and_write_budget": true,
+    "input_integrity": true,
+    "orthonormal_subspaces": false,
+    "same_model_raw_only_compiler": true,
+    "training_accuracy_at_least_95pct": true,
+    "two_titles_and_both_classes": true,
+    "unit_payloads_and_bf16_fidelity": true
+  },
+  "input_checks": {
+    "candidate_corpus": true,
+    "checkpoint": true,
+    "evaluation_qa": true,
+    "preregistration_exists": true,
+    "train_qa": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "checkpoint_sha256": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "evaluation_qa_sha256": "5a0413f53bfc0fc73b5e66c941c708077624908095934af740c84d234b9fea6b",
+    "preregistration_sha256": "29b5ec50896be72886b038121c44b36020817e79c13156fb74d24dfadfaffc8d",
+    "train_qa_sha256": "edaef010f68f1a919ac9f9e8389444ddde1afde6d2b9d1375156195f8758b0f9"
+  },
+  "limits": [
+    "The query operator is a privileged gradient-side upper bound.",
+    "The physical write is verified but the ordinary model is not trained to emit or consume the operator.",
+    "Passing cannot establish a smarter production model without matched joint from-zero training."
+  ],
+  "physical": {
+    "blocks_used": 3,
+    "channels_used": 2405,
+    "down_payload_writes": 529100,
+    "gate_key_writes": 76960,
+    "gate_threshold_writes": 2405,
+    "title_code_writes": 132800,
+    "total_writes": 743670,
+    "up_constant_writes": 2405
+  },
+  "reader": {
+    "features": 885,
+    "hosvd": {
+      "closure_evaluations": 32,
+      "evaluation": {
+        "accuracy": 0.4423076923076923,
+        "errors": 58,
+        "examples": 104,
+        "finite": true,
+        "positive_rate": 0.5384615384615384,
+        "predicted_positive_rate": 0.3269230769230769
+      },
+      "finite": true,
+      "terminal_regularized_loss": 0.036290979665196746,
+      "train": {
+        "accuracy": 1.0,
+        "errors": 0,
+        "examples": 146,
+        "finite": true,
+        "positive_rate": 0.5273972602739726,
+        "predicted_positive_rate": 0.5273972602739726
+      },
+      "weight_norm": 2.2210484937916926
+    },
+    "query_only": {
+      "closure_evaluations": 66,
+      "evaluation": {
+        "accuracy": 0.5961538461538461,
+        "errors": 42,
+        "examples": 104,
+        "finite": true,
+        "positive_rate": 0.5384615384615384,
+        "predicted_positive_rate": 0.6153846153846154
+      },
+      "finite": true,
+      "terminal_regularized_loss": 0.3196046346081123,
+      "train": {
+        "accuracy": 0.958904109589041,
+        "errors": 6,
+        "examples": 146,
+        "finite": true,
+        "positive_rate": 0.5273972602739726,
+        "predicted_positive_rate": 0.5273972602739726
+      },
+      "weight_norm": 4.111588530267029
+    },
+    "random_subspace": {
+      "closure_evaluations": 44,
+      "evaluation": {
+        "accuracy": 0.5,
+        "errors": 52,
+        "examples": 104,
+        "finite": true,
+        "positive_rate": 0.5384615384615384,
+        "predicted_positive_rate": 0.5576923076923077
+      },
+      "finite": true,
+      "terminal_regularized_loss": 0.03730382859069593,
+      "train": {
+        "accuracy": 1.0,
+        "errors": 0,
+        "examples": 146,
+        "finite": true,
+        "positive_rate": 0.5273972602739726,
+        "predicted_positive_rate": 0.5273972602739726
+      },
+      "weight_norm": 2.2493735650081548
+    },
+    "shuffled_evaluation": {
+      "accuracy": 0.4423076923076923,
+      "errors": 58,
+      "seed": 20005,
+      "unchanged_pairs": 0
+    }
+  },
+  "runtime": {
+    "peak_hbm_allocated_bytes": 1711105536
+  },
+  "schema": "functional-residual-operator-t20a-v1",
+  "served": {
+    "base_hashes_equal_before_write": true,
+    "identical_state_schema": true,
+    "parameter_count": 36577152,
+    "parameter_count_variants": 1
+  },
+  "writer": {
+    "model_seed": 8209,
+    "schema": "hotpot-semantic-address-t12-shared-base-v1",
+    "steps": 20000
+  }
+}

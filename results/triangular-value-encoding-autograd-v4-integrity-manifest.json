@@ -1,0 +1,17 @@
+{
+  "schema": "triangular-value-encoding-autograd-v4-integrity-v1",
+  "gate_source_sha256": "1470ada2d46013c9c1fae2fdb1c6b6f6bc89b7a099a3f5a24ac9fa211f0385cb",
+  "replay_source_sha256": "ed41c723fd6c20c2405367915db5564259bbe00586e3b3b08e29e939eedf3cc8",
+  "replay_test_sha256": "87a786c16ad6fe6cb2a073fa22101d26465a1f6d54fa391f16ed55d2e8412797",
+  "preregistration_sha256": "d4c46f6609eddec1f1f3747736cba4e858c55bd05f3c7f589cdec08b7fcf84af",
+  "reference_autograd_source_sha256": "8bdd733f0c2837841e91742af252c1369855e7657a6d046046fa837411eddaae",
+  "reference_autograd_test_sha256": "9f87c82f710fd0515d2074b1b87b1a2205d0e015dab267c8bbf041a56d8b33a2",
+  "reference_attention_source_sha256": "2a19f4d99835bc45ff7f3ccdbc85657f1732eba2f89dac7d36bac99a96a19225",
+  "v2_gate_source_sha256": "b3668dde0f37fe5faa1a798d866ae6c3d8d47cc4ad6c932d2e313ee3c80bd7a5",
+  "v3_gate_source_sha256": "126cc3dc18c7bb67bace8d37a1f36db2b6a40b444ce93017555718927838ef6e",
+  "v3_hybrid_source_sha256": "8c8c0f06a61c9e248cd2486dec639c82ae11898921cc2be4c0af23261cda4584",
+  "v3_hybrid_test_sha256": "dcca19ef217c7d2d9f786714da85b8456978e31a7eeed189e4eeab823b4f071a",
+  "v3_preregistration_sha256": "adbb59ef010d7454eea7187ef676e8295c1824341ebdf9495aa36fa781b871b8",
+  "v3_manifest_sha256": "99e6002b51747082c8a70c5b4f1bc97d50eea0d4bf3a741fdfa671a13839c2b8",
+  "v3_result_sha256": "396be19ad71951878a551f1016b7f46b7888cb41ae8f41f20f7cd56ec0a40b74"
+}

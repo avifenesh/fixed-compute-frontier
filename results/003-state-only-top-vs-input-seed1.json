@@ -1,0 +1,74 @@
+{
+  "config": {
+    "batch": 128,
+    "d_model": 48,
+    "eval_batches": 10,
+    "keys": 16,
+    "layers": 3,
+    "learning_rate": 0.002,
+    "memory_width": 24,
+    "modes": [
+      "top_both",
+      "input_both"
+    ],
+    "ring_size": 8,
+    "seeds": [
+      1
+    ],
+    "sequence_length": 48,
+    "state_modulus": 4,
+    "task": "state",
+    "train_steps": 200,
+    "values": 16
+  },
+  "device": "cuda",
+  "results": [
+    {
+      "eval_seconds": 1.5172211835160851,
+      "metrics": {
+        "loss": 1.3545572757720947,
+        "macro_accuracy": 0.48977798223495483,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.48977798223495483,
+        "state_count": 18196,
+        "state_majority_baseline": 0.27110353112220764,
+        "target_count": 18196
+      },
+      "mode": "top_both",
+      "parameters": 64129,
+      "seed": 1,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 84.06189952231944,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 1.4821100644767284,
+      "metrics": {
+        "loss": 1.3685593605041504,
+        "macro_accuracy": 0.2640690207481384,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.2640690207481384,
+        "state_count": 18196,
+        "state_majority_baseline": 0.27110353112220764,
+        "target_count": 18196
+      },
+      "mode": "input_both",
+      "parameters": 64129,
+      "seed": 1,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 83.5584766305983,
+      "writer_commits_per_token": 1
+    }
+  ],
+  "torch": "2.11.0+cu130"
+}

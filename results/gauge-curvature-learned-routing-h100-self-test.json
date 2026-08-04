@@ -1,0 +1,36 @@
+{
+  "device": "cuda",
+  "equivalent_initialization_max_abs_errors": {
+    "bda": 5.960464477539063e-08,
+    "cyclic": 5.960464477539063e-08,
+    "g2_matched": 5.960464477539063e-08,
+    "source_mlp": 5.960464477539063e-08
+  },
+  "initial_gradient_norms": {
+    "cyclic": 0.0003773128555621952,
+    "g2_matched": 4.8579244321445e-05,
+    "source_mlp": 1.9289163901703432e-05,
+    "square": 2.8684507924481295e-06
+  },
+  "parameter_counts": {
+    "bda": 201792,
+    "cyclic": 203328,
+    "dense": 203328,
+    "g1": 203328,
+    "g2_full": 203328,
+    "g2_matched": 203328,
+    "glu": 203328,
+    "source_mlp": 203328,
+    "square": 203232
+  },
+  "status": "pass",
+  "tiny_data_invariants": {
+    "address_orthogonality_max_abs_error": 1.1920928955078125e-07,
+    "balanced_labels_max_abs_error": 0.0,
+    "oracle_accuracy": 0.8984375,
+    "oracle_nll": 0.2314775288105011,
+    "paired_content_mean_max_abs": 8.940696716308594e-08,
+    "uniform_all_bags_accuracy": 0.5,
+    "uniform_all_bags_nll": 0.6931471805599453
+  }
+}

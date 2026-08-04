@@ -1,0 +1,25 @@
+stage=replication_environment
+2026-07-31T07:16:32+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=replication_contract_tests
+......                                                                   [100%]
+6 passed in 1.13s
+representation_precondition_passed=true
+stage=three_unseen_seed_replication
+{"all_gates_pass": true, "failed_gates": [], "seed": 6703, "seed_artifact": "/workspace/fixed-compute-frontier-t10-46367071/results/raw-prose-equality-plane-t11-replication-seed-6703.json"}
+{"all_gates_pass": true, "failed_gates": [], "seed": 6997, "seed_artifact": "/workspace/fixed-compute-frontier-t10-46367071/results/raw-prose-equality-plane-t11-replication-seed-6997.json"}
+{"all_gates_pass": true, "failed_gates": [], "seed": 7307, "seed_artifact": "/workspace/fixed-compute-frontier-t10-46367071/results/raw-prose-equality-plane-t11-replication-seed-7307.json"}
+{
+  "aggregate": {
+    "best_natural_nll_relative_delta": -0.008368003000934765,
+    "failed_or_retried_steps": 0,
+    "minimum_direct_margin": 0.10205078125,
+    "minimum_equality_margin": 0.044921875,
+    "worst_natural_nll_relative_delta": 0.0017835611104686233
+  },
+  "all_gates_pass": true,
+  "failed_gates": [],
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/raw-prose-equality-plane-t11-replication.json"
+}
+stage=complete mode=replication

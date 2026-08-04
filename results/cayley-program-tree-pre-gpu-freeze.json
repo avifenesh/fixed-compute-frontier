@@ -1,0 +1,30 @@
+{
+  "schema": "cayley-program-tree-pre-gpu-freeze-v1",
+  "date": "2026-07-30",
+  "tree_gpu_executions_before_freeze": 0,
+  "cpu_tests": {
+    "passed": 17,
+    "failed": 0,
+    "cuda_visible_devices": ""
+  },
+  "sha256": {
+    "experiments/cayley_program_tree.py": "166ce56d7e619d1d9a9ea35346d3b474d1f0dd05babbb735f9beff6f6725ff8b",
+    "experiments/cayley_program_tree_lm_pilot.py": "ace68e73e32bd1efd712b1850ea8425e155edf5d4075afb00f6f84b083463235",
+    "experiments/cayley_program_tree_g7_smoke.py": "20ab617532dd9690f57ee68ddbf0d1c98313efe91d28835b2a3fa2e3a0c0a043",
+    "results/cayley-program-tree-lm-pilot-preregistration.md": "91e68ab40d58c00ab51b6e5710ca3fe3e7ff8ae3a5e207764f5e234f735fdae5",
+    "results/cayley-program-tree-g7-smoke-preregistration.md": "c28542addc8963758c669a57b56497da83f88e84f6667128af21f5fb1650f868",
+    "results/cayley-program-tree-stage0.json": "e06eb9a791e0e8fa87ebf95f1a44d5300b022bca8d0799331de4fa8572cd1259",
+    "results/cayley-conditional-expert-rank.json": "028d0d7fd085bb7fd184610b56e61371072199770bf85b8570634a8597113e4d",
+    "tests/test_cayley_program_tree.py": "0ae19076eb8d1bdf7b705023d57be52f342c62d80a8a0ea3e7131ba3c7101ac3",
+    "tests/test_cayley_program_tree_lm_pilot.py": "befc7c05740b30d53278a6311f64bcab472416905c8219ab270c9ce1714af97c"
+  },
+  "frozen_before_gpu": [
+    "route formula",
+    "matching topology",
+    "basis count and degree",
+    "Neumann order and norm bound",
+    "tree depth and payload",
+    "initialization",
+    "training schedule and gates"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "claim_boundary": "Exact CPU codec/numerics/resource result only; no natural sufficiency, physical reader, training, language-quality, or smarter-model claim.",
+  "corpus_census": {
+    "document_count": 2405,
+    "documents_truncated_at_128": 978,
+    "maximum_stored_token_id": 49137,
+    "minimum_stored_token_id": 0,
+    "pack_unpack_count": 2405,
+    "pack_unpack_failures": 0,
+    "raw_length_maximum": 1555,
+    "raw_length_mean": 127.12390852390853,
+    "raw_length_minimum": 16,
+    "reverse_input_record_sha256": "a8f45105d3d1c1d7122ddc2fc20bb47eaad8613485e729414b59c427ee206cf7",
+    "stored_length_maximum": 128,
+    "stored_length_mean": 100.84698544698544,
+    "stored_length_minimum": 16,
+    "title_sorted_record_sha256": "a8f45105d3d1c1d7122ddc2fc20bb47eaad8613485e729414b59c427ee206cf7"
+  },
+  "domain": {
+    "active_cells": 382,
+    "digit_cells": 381,
+    "model_vocabulary": 49152,
+    "regular_tokens": 127,
+    "reserved_cells": 2,
+    "token_slots": 128,
+    "vocab_capacity": 65536
+  },
+  "experiment": "scale-referenced-whole-record-t32-stage0",
+  "gates": {
+    "attempt1_scientific_reproduction": true,
+    "bf16_clean_replay": true,
+    "bf16_perturbation_replay": true,
+    "corpus_roundtrips": true,
+    "cuda_hidden": true,
+    "exact_source_schema_and_codec_boundary": true,
+    "forbidden_reads_or_operations": true,
+    "input_hash": true,
+    "length_domain": true,
+    "malformed_records_rejected": true,
+    "record_shape": true,
+    "resource_ledger_below_five_percent": true,
+    "resource_ledger_exact": true,
+    "reverse_order_invariance": true,
+    "token_domain": true,
+    "tokenizer_identity": true,
+    "tokenizer_revision": true,
+    "unit_world_roundtrips": true
+  },
+  "integrity": {
+    "attempt1_sha256": "4cebce4831d54bcdeb61a77cb145d40308d9fbf0d642c3c5038d108a5515cf5c",
+    "codec_input_fields": [
+      "title",
+      "text"
+    ],
+    "corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "evaluator_reads": 0,
+    "forbidden_field_reads": 0,
+    "gpu_operations": 0,
+    "model_weight_reads": 0,
+    "preregistration_sha256": "0c371b91db1ef3b4318e57223448f1b2be562f28a2bcff54b05697a08969cd12",
+    "provenance_erratum_sha256": "a010172b0fc701f9a628ee6ff54d2d94333642fe6969539650cc620a79786201",
+    "source_fields": [
+      "document_id",
+      "text",
+      "title"
+    ],
+    "source_sha256": "552dc2bd190ef50d1632b0e669aacc4c84d8256919b7acea03f5b5d86786b716",
+    "test_sha256": "6bad6f87c358ce870111b35019f83878e98899af631db7b701b44702ae83a0c0",
+    "tokenizer_artifact_paths": {
+      "merges.txt": "/root/.cache/huggingface/hub/models--HuggingFaceTB--SmolLM2-135M/snapshots/93efa2f097d58c2a74874c7e644dbc9b0cee75a2/merges.txt",
+      "special_tokens_map.json": "/root/.cache/huggingface/hub/models--HuggingFaceTB--SmolLM2-135M/snapshots/93efa2f097d58c2a74874c7e644dbc9b0cee75a2/special_tokens_map.json",
+      "tokenizer.json": "/root/.cache/huggingface/hub/models--HuggingFaceTB--SmolLM2-135M/snapshots/93efa2f097d58c2a74874c7e644dbc9b0cee75a2/tokenizer.json",
+      "tokenizer_config.json": "/root/.cache/huggingface/hub/models--HuggingFaceTB--SmolLM2-135M/snapshots/93efa2f097d58c2a74874c7e644dbc9b0cee75a2/tokenizer_config.json",
+      "vocab.json": "/root/.cache/huggingface/hub/models--HuggingFaceTB--SmolLM2-135M/snapshots/93efa2f097d58c2a74874c7e644dbc9b0cee75a2/vocab.json"
+    },
+    "tokenizer_name": "HuggingFaceTB/SmolLM2-135M",
+    "tokenizer_requested_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2"
+  },
+  "numerical_replay": {
+    "boundaries_per_decode": 63,
+    "clean_decode_cases": 576,
+    "clean_failures": [],
+    "digits": 64,
+    "linear_boundary_comparisons": 181440,
+    "minimum_clean_margin_in_scale_units": 1.0,
+    "minimum_perturbed_margin_in_scale_units": 0.6849999999999952,
+    "perturbation_cases": 2304,
+    "perturbed_failures": [],
+    "scales": [
+      0.000244140625,
+      0.00390625,
+      0.0625,
+      0.25,
+      1.0,
+      4.0,
+      16.0,
+      256.0,
+      4096.0
+    ]
+  },
+  "resource_ledger": {
+    "fraction_of_model": 0.045950433757117014,
+    "gate_key_entries": 76960,
+    "model_entries": 36577152,
+    "payload_entries": 918710,
+    "percent_of_model": 4.595043375711701,
+    "shared_reader_reserve_entries": 400000,
+    "shared_token_code_entries": 147456,
+    "threshold_entries": 2405,
+    "title_code_entries": 132800,
+    "total_entries": 1680736,
+    "up_constant_entries": 2405
+  },
+  "runtime": {
+    "cpu_seconds": 1.6606733899999995,
+    "cuda_visible_devices": "",
+    "numpy_version": "2.5.1",
+    "peak_rss_kib": 741408,
+    "python_version": "3.12.3",
+    "torch_cuda_available": false,
+    "torch_version": "2.11.0+cu128",
+    "wall_seconds": 1.6573466341942549
+  },
+  "status": "PASS",
+  "unit_worlds": {
+    "malformed_rejections": {
+      "bad_scale_reference": true,
+      "late_auxiliary": true,
+      "reserved_382": true,
+      "reserved_383": true
+    },
+    "roundtrip_failures": [],
+    "world_count": 8
+  }
+}

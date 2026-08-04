@@ -1,0 +1,679 @@
+{
+  "all_gates_pass": true,
+  "exact_worlds": [
+    {
+      "all_equal": true,
+      "degree": 4,
+      "nodes": 7,
+      "queries": [
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 1,
+          "labels": [
+            3,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 4
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 2,
+          "labels": [
+            0,
+            3,
+            1,
+            1,
+            3,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 3
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 4,
+          "labels": [
+            1,
+            2,
+            1,
+            0,
+            1,
+            3
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 2
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 0,
+          "labels": [
+            1,
+            2,
+            1,
+            0,
+            3,
+            2
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 2
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 1,
+          "labels": [
+            0,
+            2,
+            0,
+            0,
+            1,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 5
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 1,
+          "labels": [
+            0,
+            2,
+            0,
+            0,
+            2,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 5
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 2,
+          "labels": [
+            1,
+            1,
+            3,
+            2,
+            0,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 4
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 1,
+          "labels": [
+            2,
+            3,
+            1,
+            2,
+            3,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 4
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 1,
+          "labels": [
+            3,
+            3,
+            2,
+            0,
+            3,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 5
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 6,
+          "labels": [
+            0,
+            3,
+            1,
+            3,
+            3,
+            2
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 4
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 2,
+          "labels": [
+            0,
+            0,
+            1,
+            0,
+            2,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 2
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 294,
+          "endpoint": 2,
+          "labels": [
+            3,
+            3,
+            0,
+            3,
+            0,
+            3
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 0
+        }
+      ],
+      "steps": 6
+    },
+    {
+      "all_equal": true,
+      "degree": 4,
+      "nodes": 11,
+      "queries": [
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 4,
+          "labels": [
+            3,
+            0,
+            3,
+            3,
+            0,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 4
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 4,
+          "labels": [
+            3,
+            2,
+            2,
+            3,
+            1,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 9
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 2,
+          "labels": [
+            1,
+            3,
+            0,
+            1,
+            1,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 10
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 9,
+          "labels": [
+            3,
+            3,
+            3,
+            2,
+            0,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 0
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 9,
+          "labels": [
+            3,
+            2,
+            2,
+            0,
+            3,
+            2
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 1
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 8,
+          "labels": [
+            1,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 2
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 2,
+          "labels": [
+            3,
+            2,
+            3,
+            0,
+            1,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 10
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 10,
+          "labels": [
+            2,
+            0,
+            1,
+            3,
+            2,
+            2
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 9
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 9,
+          "labels": [
+            0,
+            1,
+            1,
+            2,
+            0,
+            3
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 8
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 0,
+          "labels": [
+            3,
+            0,
+            2,
+            1,
+            3,
+            2
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 3
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 8,
+          "labels": [
+            1,
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 10
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 726,
+          "endpoint": 1,
+          "labels": [
+            1,
+            0,
+            3,
+            0,
+            2,
+            3
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 0
+        }
+      ],
+      "steps": 6
+    },
+    {
+      "all_equal": true,
+      "degree": 4,
+      "nodes": 16,
+      "queries": [
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 2,
+          "labels": [
+            2,
+            3,
+            3,
+            2,
+            1,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 3
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 13,
+          "labels": [
+            0,
+            0,
+            1,
+            3,
+            2,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 8
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 6,
+          "labels": [
+            1,
+            3,
+            1,
+            0,
+            3,
+            2
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 15
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 12,
+          "labels": [
+            1,
+            0,
+            0,
+            1,
+            2,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 9
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 14,
+          "labels": [
+            2,
+            3,
+            3,
+            2,
+            2,
+            1
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 1
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 14,
+          "labels": [
+            0,
+            3,
+            1,
+            0,
+            1,
+            3
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 14
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 1,
+          "labels": [
+            0,
+            1,
+            1,
+            3,
+            0,
+            2
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 13
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 7,
+          "labels": [
+            3,
+            0,
+            2,
+            1,
+            1,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 1
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 9,
+          "labels": [
+            1,
+            1,
+            3,
+            0,
+            3,
+            3
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 4
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 1,
+          "labels": [
+            3,
+            2,
+            0,
+            0,
+            3,
+            2
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 7
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 4,
+          "labels": [
+            2,
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 4
+        },
+        {
+          "all_equal": true,
+          "dense_macs": 1536,
+          "endpoint": 11,
+          "labels": [
+            2,
+            1,
+            3,
+            3,
+            2,
+            3
+          ],
+          "lookup_reads": 24,
+          "pointer_reads": 24,
+          "start": 11
+        }
+      ],
+      "steps": 6
+    }
+  ],
+  "fixed_2gib_ledger": {
+    "active_edge_bytes_per_token": 1048576,
+    "active_edge_records_per_token": 131072,
+    "active_features": 256,
+    "degree": 16,
+    "dense_bf16_weights_at_equal_bytes": 1073741824,
+    "dense_square_macs": 1073741824,
+    "edge_record_bytes": 8,
+    "emitted_messages_per_step_before_merge": 4096,
+    "ideal_active_byte_ratio_graph_over_dense": 0.00048828125,
+    "ideal_edge_op_ratio_graph_over_dense_square": 0.0001220703125,
+    "largest_square_dense_width_at_equal_bytes": 32768,
+    "pointer_bits": 32,
+    "resident_budget_bytes": 2147483648,
+    "resident_edge_records": 268435456,
+    "resident_graph_nodes": 16777216,
+    "transition_steps_per_token": 32
+  },
+  "gates": {
+    "active_reads_constant_across_graph_sizes": true,
+    "fixed_budget_ledger_complete": true,
+    "locality_wall_reported": true,
+    "matched_lookup_control_equal_and_equal_reads": true,
+    "pointer_equals_dense_one_hot": true,
+    "resident_records_linear_in_node_count": true
+  },
+  "locality_wall": [
+    {
+      "degree": 4,
+      "minimum_steps_for_global_reach": 10,
+      "nodes": 1048576,
+      "reachable_nodes_upper_bound_at_that_depth": 1398101
+    },
+    {
+      "degree": 16,
+      "minimum_steps_for_global_reach": 6,
+      "nodes": 16777216,
+      "reachable_nodes_upper_bound_at_that_depth": 17895697
+    },
+    {
+      "degree": 16,
+      "minimum_steps_for_global_reach": 8,
+      "nodes": 4294967296,
+      "reachable_nodes_upper_bound_at_that_depth": 4581298449
+    }
+  ],
+  "matched_control_conclusion": "The separation comes from word-addressed learned memory. A matched table/RAM controller is identical; no unique algebraic capability is claimed.",
+  "preregistration_sha256": "baaf891ad4fced6aa9434f0c096c7f319dc82e9d53343ad2c4cbab8321c78061",
+  "scaling": [
+    {
+      "active_records_per_token": 131072,
+      "nodes": 1024,
+      "resident_records": 16384
+    },
+    {
+      "active_records_per_token": 131072,
+      "nodes": 16384,
+      "resident_records": 262144
+    },
+    {
+      "active_records_per_token": 131072,
+      "nodes": 262144,
+      "resident_records": 4194304
+    },
+    {
+      "active_records_per_token": 131072,
+      "nodes": 4194304,
+      "resident_records": 67108864
+    }
+  ],
+  "schema": "self-indexed-sparse-latent-stage0-v1",
+  "seed": 7302026,
+  "source_sha256": "7b6313b82453c45f6d69c586ec410b746d0de132b87d14c4f3a8b8c17a5c0149",
+  "status": "stage0_scaling_separation_only"
+}

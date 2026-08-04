@@ -1,0 +1,57 @@
+/home/ubuntu/fixed-compute-frontier/experiments/spectral_successor_learning_gate.py:132: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.layers = nn.TransformerEncoder(layer, num_layers=LAYERS)
+{"task": "structured", "seed": 731, "arm": "ntp", "step": 0, "first_two_exact": 0.0, "plan_nll": 6.757289886474609}
+{"task": "structured", "seed": 731, "arm": "ntp", "step": 10, "first_two_exact": 0.0, "plan_nll": 5.492303371429443}
+{"task": "structured", "seed": 731, "arm": "ntp", "step": 20, "first_two_exact": 0.00390625, "plan_nll": 4.373035907745361}
+{"task": "structured", "seed": 731, "arm": "ntp", "step": 40, "first_two_exact": 0.0078125, "plan_nll": 2.994734287261963}
+{"task": "structured", "seed": 731, "arm": "ntp", "step": 80, "first_two_exact": 0.0234375, "plan_nll": 2.072092294692993}
+{"task": "structured", "seed": 731, "arm": "ntp", "step": 160, "first_two_exact": 0.62890625, "plan_nll": 0.035109393298625946}
+{"task": "structured", "seed": 731, "arm": "ntp", "step": 320, "first_two_exact": 0.9921875, "plan_nll": 0.016027728095650673}
+{"task": "structured", "seed": 731, "arm": "ntp", "step": 640, "first_two_exact": 1.0, "plan_nll": 4.697298936662264e-05}
+{"task": "structured", "seed": 731, "arm": "ntp", "step": 800, "first_two_exact": 1.0, "plan_nll": 1.8967901269206777e-05}
+/home/ubuntu/fixed-compute-frontier/experiments/spectral_successor_learning_gate.py:132: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.layers = nn.TransformerEncoder(layer, num_layers=LAYERS)
+{"task": "structured", "seed": 731, "arm": "mtp8", "step": 0, "first_two_exact": 0.0, "plan_nll": 6.757289886474609}
+{"task": "structured", "seed": 731, "arm": "mtp8", "step": 10, "first_two_exact": 0.0, "plan_nll": 5.775853157043457}
+{"task": "structured", "seed": 731, "arm": "mtp8", "step": 20, "first_two_exact": 0.0, "plan_nll": 4.6371612548828125}
+{"task": "structured", "seed": 731, "arm": "mtp8", "step": 40, "first_two_exact": 0.0234375, "plan_nll": 3.100492477416992}
+{"task": "structured", "seed": 731, "arm": "mtp8", "step": 80, "first_two_exact": 0.01171875, "plan_nll": 2.477509021759033}
+{"task": "structured", "seed": 731, "arm": "mtp8", "step": 160, "first_two_exact": 0.3046875, "plan_nll": 0.11041801422834396}
+{"task": "structured", "seed": 731, "arm": "mtp8", "step": 320, "first_two_exact": 1.0, "plan_nll": 0.004425280261784792}
+{"task": "structured", "seed": 731, "arm": "mtp8", "step": 640, "first_two_exact": 1.0, "plan_nll": 0.001067503122612834}
+{"task": "structured", "seed": 731, "arm": "mtp8", "step": 800, "first_two_exact": 1.0, "plan_nll": 0.0008616831619292498}
+{"task": "structured", "seed": 731, "arm": "fsp_bow", "step": 0, "first_two_exact": 0.0, "plan_nll": 6.757289886474609}
+{"task": "structured", "seed": 731, "arm": "fsp_bow", "step": 10, "first_two_exact": 0.0, "plan_nll": 6.097941875457764}
+{"task": "structured", "seed": 731, "arm": "fsp_bow", "step": 20, "first_two_exact": 0.0, "plan_nll": 4.911081314086914}
+{"task": "structured", "seed": 731, "arm": "fsp_bow", "step": 40, "first_two_exact": 0.01171875, "plan_nll": 3.142507314682007}
+{"task": "structured", "seed": 731, "arm": "fsp_bow", "step": 80, "first_two_exact": 0.01953125, "plan_nll": 2.560638666152954}
+{"task": "structured", "seed": 731, "arm": "fsp_bow", "step": 160, "first_two_exact": 0.19921875, "plan_nll": 0.18006256222724915}
+{"task": "structured", "seed": 731, "arm": "fsp_bow", "step": 320, "first_two_exact": 1.0, "plan_nll": 0.0037522714119404554}
+{"task": "structured", "seed": 731, "arm": "fsp_bow", "step": 640, "first_two_exact": 1.0, "plan_nll": 0.0009498531580902636}
+{"task": "structured", "seed": 731, "arm": "fsp_bow", "step": 800, "first_two_exact": 1.0, "plan_nll": 0.00074627815047279}
+{"task": "structured", "seed": 731, "arm": "spectral", "step": 0, "first_two_exact": 0.0, "plan_nll": 6.757289886474609}
+{"task": "structured", "seed": 731, "arm": "spectral", "step": 10, "first_two_exact": 0.0, "plan_nll": 5.774105072021484}
+{"task": "structured", "seed": 731, "arm": "spectral", "step": 20, "first_two_exact": 0.0, "plan_nll": 4.662601470947266}
+{"task": "structured", "seed": 731, "arm": "spectral", "step": 40, "first_two_exact": 0.0234375, "plan_nll": 3.1042678356170654}
+{"task": "structured", "seed": 731, "arm": "spectral", "step": 80, "first_two_exact": 0.0078125, "plan_nll": 2.504179000854492}
+{"task": "structured", "seed": 731, "arm": "spectral", "step": 160, "first_two_exact": 0.37109375, "plan_nll": 0.08518994599580765}
+{"task": "structured", "seed": 731, "arm": "spectral", "step": 320, "first_two_exact": 1.0, "plan_nll": 0.0025865172501653433}
+{"task": "structured", "seed": 731, "arm": "spectral", "step": 640, "first_two_exact": 1.0, "plan_nll": 0.0006968577508814633}
+{"task": "structured", "seed": 731, "arm": "spectral", "step": 800, "first_two_exact": 1.0, "plan_nll": 0.0005649067461490631}
+{"task": "structured", "seed": 731, "arm": "spectral_scrambled", "step": 0, "first_two_exact": 0.0, "plan_nll": 6.757289886474609}
+{"task": "structured", "seed": 731, "arm": "spectral_scrambled", "step": 10, "first_two_exact": 0.0, "plan_nll": 5.774765968322754}
+{"task": "structured", "seed": 731, "arm": "spectral_scrambled", "step": 20, "first_two_exact": 0.0, "plan_nll": 4.662957191467285}
+{"task": "structured", "seed": 731, "arm": "spectral_scrambled", "step": 40, "first_two_exact": 0.01953125, "plan_nll": 3.104804039001465}
+{"task": "structured", "seed": 731, "arm": "spectral_scrambled", "step": 80, "first_two_exact": 0.01171875, "plan_nll": 2.504964590072632}
+{"task": "structured", "seed": 731, "arm": "spectral_scrambled", "step": 160, "first_two_exact": 0.2890625, "plan_nll": 0.10385015606880188}
+{"task": "structured", "seed": 731, "arm": "spectral_scrambled", "step": 320, "first_two_exact": 1.0, "plan_nll": 0.0009549498790875077}
+{"task": "structured", "seed": 731, "arm": "spectral_scrambled", "step": 640, "first_two_exact": 1.0, "plan_nll": 0.0003101731126662344}
+{"task": "structured", "seed": 731, "arm": "spectral_scrambled", "step": 800, "first_two_exact": 1.0, "plan_nll": 0.00021927364286966622}
+{"task": "random_mapping", "seed": 731, "arm": "ntp", "step": 0, "first_two_exact": 0.0, "plan_nll": 6.769588470458984}
+{"task": "random_mapping", "seed": 731, "arm": "ntp", "step": 10, "first_two_exact": 0.0, "plan_nll": 5.488036632537842}
+{"task": "random_mapping", "seed": 731, "arm": "ntp", "step": 20, "first_two_exact": 0.0, "plan_nll": 4.356761932373047}
+{"task": "random_mapping", "seed": 731, "arm": "ntp", "step": 40, "first_two_exact": 0.0, "plan_nll": 2.956359386444092}
+{"task": "random_mapping", "seed": 731, "arm": "ntp", "step": 80, "first_two_exact": 0.03515625, "plan_nll": 1.442150592803955}
+{"task": "random_mapping", "seed": 731, "arm": "ntp", "step": 160, "first_two_exact": 0.99609375, "plan_nll": 0.007448518183082342}
+{"task": "random_mapping", "seed": 731, "arm": "ntp", "step": 320, "first_two_exact": 1.0, "plan_nll": 0.0008526312885805964}
+{"task": "random_mapping", "seed": 731, "arm": "ntp", "step": 640, "first_two_exact": 1.0, "plan_nll": 0.00010693779768189415}

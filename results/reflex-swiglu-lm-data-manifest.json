@@ -1,0 +1,36 @@
+{
+  "dataset": "HuggingFaceTB/smollm-corpus",
+  "dataset_config": "fineweb-edu-dedup",
+  "dataset_revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+  "documents_contributing": {
+    "train": 20131,
+    "validation": 2057
+  },
+  "documents_scanned": 22464,
+  "dtype": "uint16",
+  "elapsed_seconds": 29.054424760863185,
+  "eos_token_id": 0,
+  "files": {
+    "train": {
+      "bytes": 42024960,
+      "path": "data/reflex-lm-screen/train.uint16.bin",
+      "sha256": "b37d5f283f49cc1d2b314cda1d0363c2ab602135eaaf24f0282aba6757711829"
+    },
+    "validation": {
+      "bytes": 4202496,
+      "path": "data/reflex-lm-screen/validation.uint16.bin",
+      "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+    }
+  },
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "sequence_length": 512,
+  "split_rule": "validation iff uint64_be(sha256(id)[:8]) mod 10 == 0",
+  "target_tokens": {
+    "train": 21012480,
+    "validation": 2101248
+  },
+  "tokenizer_length": 49152,
+  "train_sequences": 40960,
+  "validation_sequences": 4096
+}

@@ -1,0 +1,50 @@
+{
+  "config": {
+    "batch": 128,
+    "d_model": 48,
+    "eval_batches": 10,
+    "keys": 16,
+    "layers": 3,
+    "learning_rate": 0.002,
+    "memory_width": 24,
+    "modes": [
+      "gru_control"
+    ],
+    "ring_size": 8,
+    "seeds": [
+      1
+    ],
+    "sequence_length": 48,
+    "state_modulus": 4,
+    "task": "state",
+    "train_steps": 200,
+    "values": 16
+  },
+  "device": "cuda",
+  "results": [
+    {
+      "eval_seconds": 0.5249591479077935,
+      "metrics": {
+        "loss": 0.2180752456188202,
+        "macro_accuracy": 0.9613651633262634,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.9613651633262634,
+        "state_count": 18196,
+        "state_majority_baseline": 0.27110353112220764,
+        "target_count": 18196
+      },
+      "mode": "gru_control",
+      "parameters": 57792,
+      "seed": 1,
+      "state_elements_per_sequence": 144,
+      "train_seconds": 10.527328990399837,
+      "writer_commits_per_token": 3
+    }
+  ],
+  "torch": "2.11.0+cu130"
+}

@@ -1,0 +1,236 @@
+{"width": 192, "step": 0, "matrix": "model.layers.0.self_attn.q_proj.weight", "family": "low_rank_plus_block", "cost": 0.7708333333333333}
+{"width": 192, "step": 0, "matrix": "model.layers.0.self_attn.k_proj.weight", "family": "low_rank_plus_block", "cost": 0.875}
+{"width": 192, "step": 0, "matrix": "model.layers.0.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.6666666666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.0.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.6666666666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.0.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.4583333333333333}
+{"width": 192, "step": 0, "matrix": "model.layers.0.mlp.up_proj.weight", "family": "low_rank", "cost": 0.4583333333333333}
+{"width": 192, "step": 0, "matrix": "model.layers.0.mlp.down_proj.weight", "family": "low_rank_plus_block", "cost": 0.8098958333333333}
+{"width": 192, "step": 0, "matrix": "model.layers.3.self_attn.q_proj.weight", "family": "low_rank_plus_block", "cost": 0.8680555555555556}
+{"width": 192, "step": 0, "matrix": "model.layers.3.self_attn.k_proj.weight", "family": "block_sparse", "cost": 0.9166666666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.3.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.3333333333333333}
+{"width": 192, "step": 0, "matrix": "model.layers.3.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.3.mlp.gate_proj.weight", "family": "block_sparse", "cost": 0.9010416666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.3.mlp.up_proj.weight", "family": "block_sparse", "cost": 0.9010416666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.3.mlp.down_proj.weight", "family": "block_sparse", "cost": 0.9010416666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.5.self_attn.q_proj.weight", "family": "low_rank_plus_block", "cost": 0.8680555555555556}
+{"width": 192, "step": 0, "matrix": "model.layers.5.self_attn.k_proj.weight", "family": "block_sparse", "cost": 0.9166666666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.5.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.5.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 192, "step": 0, "matrix": "model.layers.5.mlp.gate_proj.weight", "family": "block_sparse", "cost": 0.9010416666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.5.mlp.up_proj.weight", "family": "block_sparse", "cost": 0.9010416666666666}
+{"width": 192, "step": 0, "matrix": "model.layers.5.mlp.down_proj.weight", "family": "low_rank_plus_block", "cost": 0.8098958333333333}
+{"width": 192, "training_step": 64, "loss": 8.47111988067627}
+{"width": 192, "step": 64, "matrix": "model.layers.0.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.6666666666666666}
+{"width": 192, "step": 64, "matrix": "model.layers.0.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.6666666666666666}
+{"width": 192, "step": 64, "matrix": "model.layers.0.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.3333333333333333}
+{"width": 192, "step": 64, "matrix": "model.layers.0.self_attn.o_proj.weight", "family": "low_rank_plus_block", "cost": 0.1388888888888889}
+{"width": 192, "step": 64, "matrix": "model.layers.0.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.057291666666666664}
+{"width": 192, "step": 64, "matrix": "model.layers.0.mlp.up_proj.weight", "family": "low_rank_plus_block", "cost": 0.06770833333333333}
+{"width": 192, "step": 64, "matrix": "model.layers.0.mlp.down_proj.weight", "family": "low_rank_plus_block", "cost": 0.0546875}
+{"width": 192, "step": 64, "matrix": "model.layers.3.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 192, "step": 64, "matrix": "model.layers.3.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 192, "step": 64, "matrix": "model.layers.3.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 192, "step": 64, "matrix": "model.layers.3.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.010416666666666666}
+{"width": 192, "step": 64, "matrix": "model.layers.3.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{"width": 192, "step": 64, "matrix": "model.layers.3.mlp.up_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{"width": 192, "step": 64, "matrix": "model.layers.3.mlp.down_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{"width": 192, "step": 64, "matrix": "model.layers.5.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.010416666666666666}
+{"width": 192, "step": 64, "matrix": "model.layers.5.self_attn.k_proj.weight", "family": "low_rank_plus_block", "cost": 0.0625}
+{"width": 192, "step": 64, "matrix": "model.layers.5.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 192, "step": 64, "matrix": "model.layers.5.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.010416666666666666}
+{"width": 192, "step": 64, "matrix": "model.layers.5.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{"width": 192, "step": 64, "matrix": "model.layers.5.mlp.up_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{"width": 192, "step": 64, "matrix": "model.layers.5.mlp.down_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{"width": 192, "training_step": 128, "loss": 7.810162544250488}
+{"width": 192, "training_step": 192, "loss": 6.620101451873779}
+{"width": 192, "training_step": 256, "loss": 7.227265357971191}
+{"width": 192, "training_step": 320, "loss": 6.764310836791992}
+{"width": 192, "training_step": 384, "loss": 7.228897571563721}
+{"width": 192, "training_step": 448, "loss": 7.351044654846191}
+{"width": 192, "training_step": 512, "loss": 7.024158477783203}
+{"width": 192, "step": 512, "matrix": "model.layers.0.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.3333333333333333}
+{"width": 192, "step": 512, "matrix": "model.layers.0.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.3333333333333333}
+{"width": 192, "step": 512, "matrix": "model.layers.0.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 192, "step": 512, "matrix": "model.layers.0.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 192, "step": 512, "matrix": "model.layers.0.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.11458333333333333}
+{"width": 192, "step": 512, "matrix": "model.layers.0.mlp.up_proj.weight", "family": "low_rank", "cost": 0.11458333333333333}
+{"width": 192, "step": 512, "matrix": "model.layers.0.mlp.down_proj.weight", "family": "low_rank", "cost": 0.057291666666666664}
+{"width": 192, "step": 512, "matrix": "model.layers.3.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 192, "step": 512, "matrix": "model.layers.3.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 192, "step": 512, "matrix": "model.layers.3.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 192, "step": 512, "matrix": "model.layers.3.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 192, "step": 512, "matrix": "model.layers.3.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 192, "step": 512, "matrix": "model.layers.3.mlp.up_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 192, "step": 512, "matrix": "model.layers.3.mlp.down_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 192, "step": 512, "matrix": "model.layers.5.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 192, "step": 512, "matrix": "model.layers.5.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 192, "step": 512, "matrix": "model.layers.5.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 192, "step": 512, "matrix": "model.layers.5.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 192, "step": 512, "matrix": "model.layers.5.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 192, "step": 512, "matrix": "model.layers.5.mlp.up_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 192, "step": 512, "matrix": "model.layers.5.mlp.down_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 384, "step": 0, "matrix": "model.layers.0.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.6666666666666666}
+{"width": 384, "step": 0, "matrix": "model.layers.0.self_attn.k_proj.weight", "family": "low_rank_plus_block", "cost": 0.7708333333333333}
+{"width": 384, "step": 0, "matrix": "model.layers.0.self_attn.v_proj.weight", "family": "low_rank_plus_block", "cost": 0.5364583333333333}
+{"width": 384, "step": 0, "matrix": "model.layers.0.self_attn.o_proj.weight", "family": "low_rank_plus_block", "cost": 0.4340277777777778}
+{"width": 384, "step": 0, "matrix": "model.layers.0.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.4583333333333333}
+{"width": 384, "step": 0, "matrix": "model.layers.0.mlp.up_proj.weight", "family": "low_rank_plus_block", "cost": 0.279296875}
+{"width": 384, "step": 0, "matrix": "model.layers.0.mlp.down_proj.weight", "family": "low_rank_plus_block", "cost": 0.6588541666666666}
+{"width": 384, "step": 0, "matrix": "model.layers.3.self_attn.q_proj.weight", "family": "low_rank_plus_block", "cost": 0.8680555555555556}
+{"width": 384, "step": 0, "matrix": "model.layers.3.self_attn.k_proj.weight", "family": "block_sparse", "cost": 0.9010416666666666}
+{"width": 384, "step": 0, "matrix": "model.layers.3.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 384, "step": 0, "matrix": "model.layers.3.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 384, "step": 0, "matrix": "model.layers.3.mlp.gate_proj.weight", "family": "block_sparse", "cost": 0.900390625}
+{"width": 384, "step": 0, "matrix": "model.layers.3.mlp.up_proj.weight", "family": "low_rank_plus_block", "cost": 0.80859375}
+{"width": 384, "step": 0, "matrix": "model.layers.3.mlp.down_proj.weight", "family": "block_sparse", "cost": 0.900390625}
+{"width": 384, "step": 0, "matrix": "model.layers.5.self_attn.q_proj.weight", "family": "low_rank_plus_block", "cost": 0.8680555555555556}
+{"width": 384, "step": 0, "matrix": "model.layers.5.self_attn.k_proj.weight", "family": "block_sparse", "cost": 0.9010416666666666}
+{"width": 384, "step": 0, "matrix": "model.layers.5.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 384, "step": 0, "matrix": "model.layers.5.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 384, "step": 0, "matrix": "model.layers.5.mlp.gate_proj.weight", "family": "block_sparse", "cost": 0.900390625}
+{"width": 384, "step": 0, "matrix": "model.layers.5.mlp.up_proj.weight", "family": "low_rank_plus_block", "cost": 0.80859375}
+{"width": 384, "step": 0, "matrix": "model.layers.5.mlp.down_proj.weight", "family": "low_rank_plus_block", "cost": 0.6588541666666666}
+{"width": 384, "training_step": 64, "loss": 7.752203941345215}
+{"width": 384, "step": 64, "matrix": "model.layers.0.self_attn.q_proj.weight", "family": "low_rank_plus_block", "cost": 0.4340277777777778}
+{"width": 384, "step": 64, "matrix": "model.layers.0.self_attn.k_proj.weight", "family": "low_rank_plus_block", "cost": 0.5364583333333333}
+{"width": 384, "step": 64, "matrix": "model.layers.0.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 384, "step": 64, "matrix": "model.layers.0.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 384, "step": 64, "matrix": "model.layers.0.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.057291666666666664}
+{"width": 384, "step": 64, "matrix": "model.layers.0.mlp.up_proj.weight", "family": "low_rank", "cost": 0.057291666666666664}
+{"width": 384, "step": 64, "matrix": "model.layers.0.mlp.down_proj.weight", "family": "low_rank", "cost": 0.014322916666666666}
+{"width": 384, "step": 64, "matrix": "model.layers.3.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.010416666666666666}
+{"width": 384, "step": 64, "matrix": "model.layers.3.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 384, "step": 64, "matrix": "model.layers.3.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.010416666666666666}
+{"width": 384, "step": 64, "matrix": "model.layers.3.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.005208333333333333}
+{"width": 384, "step": 64, "matrix": "model.layers.3.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.0035807291666666665}
+{"width": 384, "step": 64, "matrix": "model.layers.3.mlp.up_proj.weight", "family": "low_rank", "cost": 0.0035807291666666665}
+{"width": 384, "step": 64, "matrix": "model.layers.3.mlp.down_proj.weight", "family": "low_rank", "cost": 0.0035807291666666665}
+{"width": 384, "step": 64, "matrix": "model.layers.5.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.005208333333333333}
+{"width": 384, "step": 64, "matrix": "model.layers.5.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 384, "step": 64, "matrix": "model.layers.5.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.010416666666666666}
+{"width": 384, "step": 64, "matrix": "model.layers.5.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.005208333333333333}
+{"width": 384, "step": 64, "matrix": "model.layers.5.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.0035807291666666665}
+{"width": 384, "step": 64, "matrix": "model.layers.5.mlp.up_proj.weight", "family": "low_rank", "cost": 0.0035807291666666665}
+{"width": 384, "step": 64, "matrix": "model.layers.5.mlp.down_proj.weight", "family": "low_rank", "cost": 0.0035807291666666665}
+{"width": 384, "training_step": 128, "loss": 7.656824111938477}
+{"width": 384, "training_step": 192, "loss": 6.264542579650879}
+{"width": 384, "training_step": 256, "loss": 7.084434509277344}
+{"width": 384, "training_step": 320, "loss": 6.614023208618164}
+{"width": 384, "training_step": 384, "loss": 7.044075965881348}
+{"width": 384, "training_step": 448, "loss": 7.0796918869018555}
+{"width": 384, "training_step": 512, "loss": 6.838454723358154}
+{"width": 384, "step": 512, "matrix": "model.layers.0.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 384, "step": 512, "matrix": "model.layers.0.self_attn.k_proj.weight", "family": "low_rank_plus_block", "cost": 0.13541666666666666}
+{"width": 384, "step": 512, "matrix": "model.layers.0.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 384, "step": 512, "matrix": "model.layers.0.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 384, "step": 512, "matrix": "model.layers.0.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.057291666666666664}
+{"width": 384, "step": 512, "matrix": "model.layers.0.mlp.up_proj.weight", "family": "low_rank", "cost": 0.057291666666666664}
+{"width": 384, "step": 512, "matrix": "model.layers.0.mlp.down_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 384, "step": 512, "matrix": "model.layers.3.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 384, "step": 512, "matrix": "model.layers.3.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 384, "step": 512, "matrix": "model.layers.3.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 384, "step": 512, "matrix": "model.layers.3.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 384, "step": 512, "matrix": "model.layers.3.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.014322916666666666}
+{"width": 384, "step": 512, "matrix": "model.layers.3.mlp.up_proj.weight", "family": "low_rank", "cost": 0.014322916666666666}
+{"width": 384, "step": 512, "matrix": "model.layers.3.mlp.down_proj.weight", "family": "low_rank", "cost": 0.014322916666666666}
+{"width": 384, "step": 512, "matrix": "model.layers.5.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 384, "step": 512, "matrix": "model.layers.5.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 384, "step": 512, "matrix": "model.layers.5.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 384, "step": 512, "matrix": "model.layers.5.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 384, "step": 512, "matrix": "model.layers.5.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.014322916666666666}
+{"width": 384, "step": 512, "matrix": "model.layers.5.mlp.up_proj.weight", "family": "low_rank", "cost": 0.014322916666666666}
+{"width": 384, "step": 512, "matrix": "model.layers.5.mlp.down_proj.weight", "family": "low_rank", "cost": 0.014322916666666666}
+{"width": 768, "step": 0, "matrix": "model.layers.0.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.6666666666666666}
+{"width": 768, "step": 0, "matrix": "model.layers.0.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.6666666666666666}
+{"width": 768, "step": 0, "matrix": "model.layers.0.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.3333333333333333}
+{"width": 768, "step": 0, "matrix": "model.layers.0.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.3333333333333333}
+{"width": 768, "step": 0, "matrix": "model.layers.0.mlp.gate_proj.weight", "family": "low_rank_plus_block", "cost": 0.32926432291666663}
+{"width": 768, "step": 0, "matrix": "model.layers.0.mlp.up_proj.weight", "family": "low_rank", "cost": 0.22916666666666666}
+{"width": 768, "step": 0, "matrix": "model.layers.0.mlp.down_proj.weight", "family": "low_rank", "cost": 0.4583333333333333}
+{"width": 768, "step": 0, "matrix": "model.layers.3.self_attn.q_proj.weight", "family": "block_sparse", "cost": 0.9001736111111112}
+{"width": 768, "step": 0, "matrix": "model.layers.3.self_attn.k_proj.weight", "family": "low_rank_plus_block", "cost": 0.8671875}
+{"width": 768, "step": 0, "matrix": "model.layers.3.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 768, "step": 0, "matrix": "model.layers.3.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 768, "step": 0, "matrix": "model.layers.3.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.6875}
+{"width": 768, "step": 0, "matrix": "model.layers.3.mlp.up_proj.weight", "family": "low_rank", "cost": 0.6875}
+{"width": 768, "step": 0, "matrix": "model.layers.3.mlp.down_proj.weight", "family": "low_rank", "cost": 0.6875}
+{"width": 768, "step": 0, "matrix": "model.layers.5.self_attn.q_proj.weight", "family": "block_sparse", "cost": 0.9001736111111112}
+{"width": 768, "step": 0, "matrix": "model.layers.5.self_attn.k_proj.weight", "family": "block_sparse", "cost": 0.9010416666666666}
+{"width": 768, "step": 0, "matrix": "model.layers.5.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 768, "step": 0, "matrix": "model.layers.5.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 768, "step": 0, "matrix": "model.layers.5.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.6875}
+{"width": 768, "step": 0, "matrix": "model.layers.5.mlp.up_proj.weight", "family": "low_rank", "cost": 0.6875}
+{"width": 768, "step": 0, "matrix": "model.layers.5.mlp.down_proj.weight", "family": "low_rank", "cost": 0.4583333333333333}
+{"width": 768, "training_step": 64, "loss": 7.534221649169922}
+{"width": 768, "step": 64, "matrix": "model.layers.0.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 768, "step": 64, "matrix": "model.layers.0.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.16666666666666666}
+{"width": 768, "step": 64, "matrix": "model.layers.0.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 768, "step": 64, "matrix": "model.layers.0.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 768, "step": 64, "matrix": "model.layers.0.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.014322916666666666}
+{"width": 768, "step": 64, "matrix": "model.layers.0.mlp.up_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 768, "step": 64, "matrix": "model.layers.0.mlp.down_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{"width": 768, "step": 64, "matrix": "model.layers.3.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.0026041666666666665}
+{"width": 768, "step": 64, "matrix": "model.layers.3.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 768, "step": 64, "matrix": "model.layers.3.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.005208333333333333}
+{"width": 768, "step": 64, "matrix": "model.layers.3.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.0026041666666666665}
+{"width": 768, "step": 64, "matrix": "model.layers.3.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.0017903645833333333}
+{"width": 768, "step": 64, "matrix": "model.layers.3.mlp.up_proj.weight", "family": "low_rank", "cost": 0.0017903645833333333}
+{"width": 768, "step": 64, "matrix": "model.layers.3.mlp.down_proj.weight", "family": "low_rank", "cost": 0.0017903645833333333}
+{"width": 768, "step": 64, "matrix": "model.layers.5.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.0026041666666666665}
+{"width": 768, "step": 64, "matrix": "model.layers.5.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 768, "step": 64, "matrix": "model.layers.5.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.005208333333333333}
+{"width": 768, "step": 64, "matrix": "model.layers.5.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.0026041666666666665}
+{"width": 768, "step": 64, "matrix": "model.layers.5.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.0017903645833333333}
+{"width": 768, "step": 64, "matrix": "model.layers.5.mlp.up_proj.weight", "family": "low_rank", "cost": 0.0017903645833333333}
+{"width": 768, "step": 64, "matrix": "model.layers.5.mlp.down_proj.weight", "family": "low_rank", "cost": 0.0017903645833333333}
+{"width": 768, "training_step": 128, "loss": 7.656614303588867}
+{"width": 768, "training_step": 192, "loss": 5.939214706420898}
+{"width": 768, "training_step": 256, "loss": 6.983590126037598}
+{"width": 768, "training_step": 320, "loss": 6.522061824798584}
+{"width": 768, "training_step": 384, "loss": 6.842568397521973}
+{"width": 768, "training_step": 448, "loss": 6.916478633880615}
+{"width": 768, "training_step": 512, "loss": 6.66591739654541}
+{"width": 768, "step": 512, "matrix": "model.layers.0.self_attn.q_proj.weight", "family": "low_rank_plus_block", "cost": 0.09375}
+{"width": 768, "step": 512, "matrix": "model.layers.0.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.08333333333333333}
+{"width": 768, "step": 512, "matrix": "model.layers.0.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 768, "step": 512, "matrix": "model.layers.0.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.041666666666666664}
+{"width": 768, "step": 512, "matrix": "model.layers.0.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 768, "step": 512, "matrix": "model.layers.0.mlp.up_proj.weight", "family": "low_rank", "cost": 0.028645833333333332}
+{"width": 768, "step": 512, "matrix": "model.layers.0.mlp.down_proj.weight", "family": "low_rank", "cost": 0.014322916666666666}
+{"width": 768, "step": 512, "matrix": "model.layers.3.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.010416666666666666}
+{"width": 768, "step": 512, "matrix": "model.layers.3.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 768, "step": 512, "matrix": "model.layers.3.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 768, "step": 512, "matrix": "model.layers.3.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 768, "step": 512, "matrix": "model.layers.3.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.0035807291666666665}
+{"width": 768, "step": 512, "matrix": "model.layers.3.mlp.up_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{"width": 768, "step": 512, "matrix": "model.layers.3.mlp.down_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{"width": 768, "step": 512, "matrix": "model.layers.5.self_attn.q_proj.weight", "family": "low_rank", "cost": 0.010416666666666666}
+{"width": 768, "step": 512, "matrix": "model.layers.5.self_attn.k_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 768, "step": 512, "matrix": "model.layers.5.self_attn.v_proj.weight", "family": "low_rank", "cost": 0.020833333333333332}
+{"width": 768, "step": 512, "matrix": "model.layers.5.self_attn.o_proj.weight", "family": "low_rank", "cost": 0.010416666666666666}
+{"width": 768, "step": 512, "matrix": "model.layers.5.mlp.gate_proj.weight", "family": "low_rank", "cost": 0.0035807291666666665}
+{"width": 768, "step": 512, "matrix": "model.layers.5.mlp.up_proj.weight", "family": "low_rank", "cost": 0.0035807291666666665}
+{"width": 768, "step": 512, "matrix": "model.layers.5.mlp.down_proj.weight", "family": "low_rank", "cost": 0.007161458333333333}
+{
+  "advance": false,
+  "cheap_cells": 6,
+  "distinct_cells": 0,
+  "gates": {
+    "all_models_learned": true,
+    "cost_at_most_35_percent_in_seven_of_nine_cells": false,
+    "isotropic_control_requires_85_percent_dense_cost": true,
+    "mixed_beats_low_rank_by_25_percent_in_six_cells": false,
+    "structured_fraction_decreases_with_width_every_checkpoint": true,
+    "widest_projected_efficiency_at_least_2x_every_checkpoint": false
+  },
+  "scaling_checks": {
+    "0": true,
+    "512": true,
+    "64": true
+  },
+  "widest_projected_efficiencies": [
+    1.4679093304563338,
+    4.5713249518939065,
+    4.3863112816940735
+  ]
+}

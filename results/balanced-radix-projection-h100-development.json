@@ -1,0 +1,84 @@
+{
+  "candidate": "radix-64 two binary projections from one INT8 MMA stream",
+  "cells": [
+    {
+      "columns": 1536,
+      "dual_int8_scalar_products": 201326592,
+      "dual_resident_weight_bytes": 12582912,
+      "fused_dual_ms": [
+        0.05270399898290634,
+        0.05209600180387497,
+        0.05331199988722801
+      ],
+      "max_abs_error_high": 0,
+      "max_abs_error_low": 0,
+      "packed_int8_scalar_products": 100663296,
+      "packed_ms": [
+        0.05488000065088272,
+        0.054016001522541046,
+        0.055615998804569244
+      ],
+      "packed_resident_weight_bytes": 6291456,
+      "packed_speedup_over_fused_dual": 0.960349824304505,
+      "reduction": 4096,
+      "rows": 16
+    },
+    {
+      "columns": 1536,
+      "dual_int8_scalar_products": 1610612736,
+      "dual_resident_weight_bytes": 12582912,
+      "fused_dual_ms": [
+        0.05721599981188774,
+        0.05663999915122986,
+        0.05772799998521805
+      ],
+      "max_abs_error_high": 0,
+      "max_abs_error_low": 0,
+      "packed_int8_scalar_products": 805306368,
+      "packed_ms": [
+        0.06047999858856201,
+        0.05990400165319443,
+        0.06092799827456474
+      ],
+      "packed_resident_weight_bytes": 6291456,
+      "packed_speedup_over_fused_dual": 0.9460317649992215,
+      "reduction": 4096,
+      "rows": 128
+    },
+    {
+      "columns": 1536,
+      "dual_int8_scalar_products": 6442450944,
+      "dual_resident_weight_bytes": 12582912,
+      "fused_dual_ms": [
+        0.1849920004606247,
+        0.18460799753665924,
+        0.18537600338459015
+      ],
+      "max_abs_error_high": 0,
+      "max_abs_error_low": 0,
+      "packed_int8_scalar_products": 3221225472,
+      "packed_ms": [
+        0.194240003824234,
+        0.19392000138759613,
+        0.1952960044145584
+      ],
+      "packed_resident_weight_bytes": 6291456,
+      "packed_speedup_over_fused_dual": 0.9523887809846948,
+      "reduction": 4096,
+      "rows": 512
+    }
+  ],
+  "decision": {
+    "advance_to_learning": false,
+    "beats_fused_dual_all_cells": false,
+    "exact_all_cells": true
+  },
+  "device": "NVIDIA H100 80GB HBM3",
+  "mandatory_constraint": "decode every K=32 partial before accumulation",
+  "runtime": {
+    "cuda": "12.4",
+    "torch": "2.5.1+cu124",
+    "triton": "3.1.0"
+  },
+  "schema": "balanced-radix-projection-h100-development-v1"
+}

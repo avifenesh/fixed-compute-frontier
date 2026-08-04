@@ -1,0 +1,104 @@
+{
+  "candidate_ratios": {
+    "decode_1x512_plus1": {
+      "cuda_event_ms": {
+        "lower_95": 0.9571378532208824,
+        "median_ratio": 0.962358638247319,
+        "upper_95": 0.9668521149666821
+      },
+      "wall_ms": {
+        "lower_95": 0.9574608446716146,
+        "median_ratio": 0.9629818206334336,
+        "upper_95": 0.9663515351270315
+      }
+    },
+    "decode_8x512_plus1": {
+      "cuda_event_ms": {
+        "lower_95": 0.9569357095212664,
+        "median_ratio": 0.9620096314864518,
+        "upper_95": 0.9673552483043975
+      },
+      "wall_ms": {
+        "lower_95": 0.9569969679029697,
+        "median_ratio": 0.9621336277830385,
+        "upper_95": 0.9673034148330403
+      }
+    },
+    "prefill_1x512": {
+      "cuda_event_ms": {
+        "lower_95": 0.9871938428948065,
+        "median_ratio": 0.9900839812879209,
+        "upper_95": 0.9949546080258113
+      },
+      "wall_ms": {
+        "lower_95": 0.9872918634307692,
+        "median_ratio": 0.9900244101654886,
+        "upper_95": 0.9946789654340071
+      }
+    },
+    "prefill_32x512": {
+      "cuda_event_ms": {
+        "lower_95": 1.0433915933083897,
+        "median_ratio": 1.0439783141736931,
+        "upper_95": 1.0454590794279868
+      },
+      "wall_ms": {
+        "lower_95": 1.0433789818605121,
+        "median_ratio": 1.0439793833299047,
+        "upper_95": 1.0454249665530744
+      }
+    },
+    "prefill_8x512": {
+      "cuda_event_ms": {
+        "lower_95": 0.9393716545142684,
+        "median_ratio": 0.9425223041827765,
+        "upper_95": 0.9474489970824114
+      },
+      "wall_ms": {
+        "lower_95": 0.9395199521915281,
+        "median_ratio": 0.9426216461684048,
+        "upper_95": 0.9475880070707872
+      }
+    }
+  },
+  "h100_feasibility_pass": false,
+  "latency_checks": {
+    "decode_1x512_plus1_cuda_event_ms": true,
+    "decode_1x512_plus1_wall_ms": true,
+    "decode_8x512_plus1_cuda_event_ms": true,
+    "decode_8x512_plus1_wall_ms": true,
+    "prefill_1x512_cuda_event_ms": true,
+    "prefill_1x512_wall_ms": true,
+    "prefill_32x512_cuda_event_ms": false,
+    "prefill_32x512_wall_ms": false,
+    "prefill_8x512_cuda_event_ms": true,
+    "prefill_8x512_wall_ms": true
+  },
+  "peak_allocation_pass": false,
+  "peak_checks": {
+    "prefill_1x512_decoder_core_allocated_increment": false,
+    "prefill_1x512_decoder_core_peak_allocated": false,
+    "prefill_1x512_decoder_core_peak_reserved": false,
+    "prefill_1x512_decoder_core_reserved_increment": true,
+    "prefill_1x512_service_last_token_logits_allocated_increment": false,
+    "prefill_1x512_service_last_token_logits_peak_allocated": false,
+    "prefill_1x512_service_last_token_logits_peak_reserved": false,
+    "prefill_1x512_service_last_token_logits_reserved_increment": true,
+    "prefill_32x512_decoder_core_allocated_increment": false,
+    "prefill_32x512_decoder_core_peak_allocated": false,
+    "prefill_32x512_decoder_core_peak_reserved": false,
+    "prefill_32x512_decoder_core_reserved_increment": false,
+    "prefill_32x512_service_last_token_logits_allocated_increment": false,
+    "prefill_32x512_service_last_token_logits_peak_allocated": false,
+    "prefill_32x512_service_last_token_logits_peak_reserved": false,
+    "prefill_32x512_service_last_token_logits_reserved_increment": false,
+    "prefill_8x512_decoder_core_allocated_increment": false,
+    "prefill_8x512_decoder_core_peak_allocated": false,
+    "prefill_8x512_decoder_core_peak_reserved": false,
+    "prefill_8x512_decoder_core_reserved_increment": false,
+    "prefill_8x512_service_last_token_logits_allocated_increment": false,
+    "prefill_8x512_service_last_token_logits_peak_allocated": false,
+    "prefill_8x512_service_last_token_logits_peak_reserved": false,
+    "prefill_8x512_service_last_token_logits_reserved_increment": true
+  }
+}

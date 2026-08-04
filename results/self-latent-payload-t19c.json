@@ -1,0 +1,95 @@
+{
+  "all_gates_pass": false,
+  "claim_boundary": "This tests whether raw-only self-latents are sufficient payloads. It does not train the in-place writer/reader or establish QA superiority.",
+  "configuration": {
+    "batch_size": 32,
+    "context": 128,
+    "documents": 2405,
+    "expected_writes": 743670,
+    "payload_dimensions": 220,
+    "reader_feature_dimensions": 885,
+    "write_budget": 743734
+  },
+  "device": "cuda",
+  "gates": {
+    "bf16_payload_cosine_at_least_0p9999": true,
+    "both_classes": true,
+    "checkpoint_metadata": true,
+    "finite_no_retry_reader": true,
+    "input_integrity": true,
+    "ordinary_served_structure_identical": true,
+    "payloads_and_queries_finite_nonzero": true,
+    "raw_only_compiler_fields": true,
+    "raw_only_writer_signature": true,
+    "reader_beats_t12_by_10pp": false,
+    "reader_beats_t19b_by_10pp": false,
+    "reader_evaluation_at_least_75pct": false,
+    "two_titles_every_question": true,
+    "write_budget": true,
+    "write_count_exact": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "checkpoint_sha256": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "evaluation_qa_sha256": "5a0413f53bfc0fc73b5e66c941c708077624908095934af740c84d234b9fea6b",
+    "preregistration_sha256": "8d65aeb0427460afc29d9b471e16c041d0aaa5c39ecd20bd91e8b2a6e4389e7f",
+    "source_sha256": "6238304d7d4f87dee193b506aecab73c524c5d0d3cd1423a9d04e741b0d4ca21",
+    "train_qa_sha256": "edaef010f68f1a919ac9f9e8389444ddde1afde6d2b9d1375156195f8758b0f9"
+  },
+  "physical_write_ledger": {
+    "blocks_used": 3,
+    "channels_used": 2405,
+    "down_payload_writes": 529100,
+    "gate_key_writes": 76960,
+    "gate_threshold_writes": 2405,
+    "title_code_writes": 132800,
+    "total_writes": 743670,
+    "up_constant_writes": 2405
+  },
+  "reader": {
+    "closure_evaluations": 56,
+    "evaluation": {
+      "accuracy": 0.5,
+      "errors": 52,
+      "examples": 104,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.5
+    },
+    "finite": true,
+    "terminal_regularized_loss": 0.05317060409260729,
+    "train": {
+      "accuracy": 1.0,
+      "errors": 0,
+      "examples": 146,
+      "positive_rate": 0.5273972602739726,
+      "predicted_positive_rate": 0.5273972602739726
+    },
+    "weight_norm": 2.6347268230000656
+  },
+  "reader_data": {
+    "evaluation": {
+      "examples": 104,
+      "minimum_query_norm": 0.9986209273338318,
+      "positive_rate": 0.5384615384615384,
+      "unique_title_pairs": 104
+    },
+    "train": {
+      "examples": 146,
+      "minimum_query_norm": 0.9981691241264343,
+      "positive_rate": 0.5273972602739726,
+      "unique_title_pairs": 146
+    }
+  },
+  "schema": "self-latent-payload-t19c-v1",
+  "status": "fail",
+  "writer": {
+    "checkpoint_sha256": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "metadata": {
+      "model_seed": 8209,
+      "schema": "hotpot-semantic-address-t12-shared-base-v1",
+      "steps": 20000
+    },
+    "minimum_payload_bf16_cosine": 0.999996542930603,
+    "minimum_payload_norm": 0.9983320832252502
+  }
+}

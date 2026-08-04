@@ -1,0 +1,35 @@
+{
+  "schema": "projection-shared-coupling-algebra-v1",
+  "pairs": 4,
+  "identity_max_error": 0.0,
+  "inverse_max_error": 2.220446049250313e-16,
+  "one_way_jacobian_determinants": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "distinct_one_way_jacobians": 16,
+  "expected_distinct_jacobians": 16,
+  "multiple_consumer_gain_fold_max_errors": [
+    1.7763568394002505e-15,
+    1.7763568394002505e-15,
+    1.7763568394002505e-15
+  ],
+  "parameter_chart": {
+    "baseline_rmsnorm_gain": 8,
+    "candidate_alpha_plus_beta": 8
+  }
+}

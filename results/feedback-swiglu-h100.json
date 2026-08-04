@@ -1,0 +1,185 @@
+{
+  "all_gates_pass": false,
+  "args": {
+    "batches": "1,8,32,128",
+    "dimension": 4096,
+    "groups": 8,
+    "hidden": 14336,
+    "hidden_alignment": 8,
+    "output": "results/feedback-swiglu-h100.json",
+    "samples": 200,
+    "seed": 41,
+    "state": 8,
+    "warmup": 40
+  },
+  "candidate": "Feedback-SwiGLU",
+  "cells": [
+    {
+      "batch": 1,
+      "equal_parameter_over_baseline_median": 1.0481040766719738,
+      "same_width_over_baseline_median": 1.0430438428522573,
+      "timings": {
+        "baseline": {
+          "max_us": 614.7199869155884,
+          "mean_us": 500.8478394150734,
+          "median_us": 499.58398938179016,
+          "min_us": 491.7759895324707,
+          "p10_us": 496.16000056266785,
+          "p90_us": 505.3632140159607,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 593.504011631012,
+          "mean_us": 525.0961589813232,
+          "median_us": 523.6160159111023,
+          "min_us": 515.1039958000183,
+          "p10_us": 519.8720097541809,
+          "p90_us": 531.0175836086273,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 598.3679890632629,
+          "mean_us": 522.1974396705627,
+          "median_us": 521.0880041122437,
+          "min_us": 514.7200226783752,
+          "p10_us": 517.6960229873657,
+          "p90_us": 526.8416106700897,
+          "samples": 200
+        }
+      },
+      "zero_feedback_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 8,
+      "equal_parameter_over_baseline_median": 1.0448595938538625,
+      "same_width_over_baseline_median": 1.0421909622057468,
+      "timings": {
+        "baseline": {
+          "max_us": 534.9439978599548,
+          "mean_us": 505.19951939582825,
+          "median_us": 503.61597537994385,
+          "min_us": 498.6560046672821,
+          "p10_us": 500.5760192871094,
+          "p90_us": 513.4015917778015,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 694.3680047988892,
+          "mean_us": 528.190401494503,
+          "median_us": 526.2079834938049,
+          "min_us": 519.7759866714478,
+          "p10_us": 522.7455854415894,
+          "p90_us": 533.9647889137268,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 663.0079746246338,
+          "mean_us": 527.1692800521851,
+          "median_us": 524.8640179634094,
+          "min_us": 518.5920000076294,
+          "p10_us": 521.7535853385925,
+          "p90_us": 534.3904197216034,
+          "samples": 200
+        }
+      },
+      "zero_feedback_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 32,
+      "equal_parameter_over_baseline_median": 1.044952914221561,
+      "same_width_over_baseline_median": 1.0434398747667437,
+      "timings": {
+        "baseline": {
+          "max_us": 536.8000268936157,
+          "mean_us": 508.42224180698395,
+          "median_us": 507.55202770233154,
+          "min_us": 501.3120174407959,
+          "p10_us": 504.4447958469391,
+          "p90_us": 512.1760010719299,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 554.2399883270264,
+          "mean_us": 530.8779209852219,
+          "median_us": 530.3679704666138,
+          "min_us": 523.8080024719238,
+          "p10_us": 526.3968288898468,
+          "p90_us": 534.6495807170868,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 661.9200110435486,
+          "mean_us": 531.5305602550507,
+          "median_us": 529.6000242233276,
+          "min_us": 520.8320021629333,
+          "p10_us": 525.9711921215057,
+          "p90_us": 536.1279845237732,
+          "samples": 200
+        }
+      },
+      "zero_feedback_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 128,
+      "equal_parameter_over_baseline_median": 1.0587048163609338,
+      "same_width_over_baseline_median": 1.056136546138995,
+      "timings": {
+        "baseline": {
+          "max_us": 640.2559876441956,
+          "mean_us": 524.227200448513,
+          "median_us": 523.2959985733032,
+          "min_us": 515.999972820282,
+          "p10_us": 519.3183958530426,
+          "p90_us": 527.5520026683807,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 593.6319828033447,
+          "mean_us": 555.0504010915756,
+          "median_us": 554.0159940719604,
+          "min_us": 547.0719933509827,
+          "p10_us": 550.7135808467865,
+          "p90_us": 558.899176120758,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 578.3680081367493,
+          "mean_us": 553.4315201640129,
+          "median_us": 552.6720285415649,
+          "min_us": 546.0159778594971,
+          "p10_us": 549.3312001228333,
+          "p90_us": 557.507199048996,
+          "samples": 200
+        }
+      },
+      "zero_feedback_max_row_relative_error": 0.0
+    }
+  ],
+  "cuda_version": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "device_properties": "_CudaDeviceProperties(name='NVIDIA H100 80GB HBM3', major=9, minor=0, total_memory=80994MB, multi_processor_count=132, uuid=44700db4-f6b2-9122-550e-6987512886e8, L2_cache_size=50MB)",
+  "driver_version": "550.163.01",
+  "gates": {
+    "equal_parameter_within_1p02_on_key_cells": false,
+    "equal_parameter_within_1p05_on_full_grid": false,
+    "protocol_valid": true,
+    "same_width_within_1p02_on_key_cells": false,
+    "same_width_within_1p05_on_full_grid": false,
+    "zero_feedback_inclusion_below_0p2_percent": true
+  },
+  "ledger": {
+    "adds_tensor_parallel_collective": false,
+    "aligned_equal_parameter_hidden": 14272,
+    "baseline_hidden": 14336,
+    "baseline_parameters": 176160768,
+    "equal_parameter_candidate_parameters": 175602688,
+    "exact_equal_parameter_hidden": 14317,
+    "features_per_baseline_group": 1792,
+    "feedback_groups": 8,
+    "same_width_overhead_fraction": 0.0013020833333333333
+  },
+  "preregistration_sha256": "468932e3b9c73541819269a329a43ea4ac60ade11b2fc515c1419fe172bab7e0",
+  "scope": "stock torch.compile H100 execution gate only",
+  "source_sha256": "611ef488398de1cd7aa3d2abc16ac644e3ceeb5123c17b5b18dfbc03c02d499a",
+  "torch_version": "2.5.1+cu124"
+}

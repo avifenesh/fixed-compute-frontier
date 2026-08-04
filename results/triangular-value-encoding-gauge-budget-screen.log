@@ -1,0 +1,26 @@
+{"starting_gauge_budget_variant": "canonical_control"}
+{"arm": "canonical_value_control", "step": 61, "train_loss": 7.393125057220459, "validation_loss": 7.483638279139996, "gradient_norm": 0.7111490964889526}
+{"arm": "canonical_value_control", "step": 305, "train_loss": 6.422666072845459, "validation_loss": 6.546280264854431, "gradient_norm": 0.4381943345069885}
+{"starting_gauge_budget_variant": "tve_block16"}
+{"arm": "triangular_value_encoding", "step": 61, "train_loss": 7.36829948425293, "validation_loss": 7.454485356807709, "gradient_norm": 0.8768508434295654}
+{"arm": "triangular_value_encoding", "step": 305, "train_loss": 6.403007507324219, "validation_loss": 6.528096854686737, "gradient_norm": 0.5172343254089355}
+{"starting_gauge_budget_variant": "tve_full_head64"}
+{"arm": "triangular_value_encoding", "step": 61, "train_loss": 7.373729228973389, "validation_loss": 7.460490480065346, "gradient_norm": 0.8459115028381348}
+{"arm": "triangular_value_encoding", "step": 305, "train_loss": 6.403620004653931, "validation_loss": 6.52944727987051, "gradient_norm": 0.5022530555725098}
+{
+  "gates": {
+    "all_state_counts_and_bytes_equal": true,
+    "candidate_slot_counts_exact": true,
+    "data_ledger_valid": true,
+    "full64_clears_0_025_percent_vs_control": true,
+    "full64_coefficients_nonzero_and_bounded": true,
+    "full64_export_bit_exact": true,
+    "full64_finite": true,
+    "full64_paired_upper_below_block16": false,
+    "full64_serving_bridge_bit_exact": true,
+    "full64_terminal_mean_below_control": true,
+    "initial_candidate_evaluations_bit_exact": true,
+    "integrity_and_protocol_valid": true
+  },
+  "promote_full_head": false
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "candidate": "routed noncommutative microprogram FFN",
+  "claim": "Sequential composition exposes ordered interaction terms that an equal-call additive MoE cannot express.",
+  "source_sha256": "cc10ae942b793700fc90b4cfa6c91416277dbbc431b12d410a10bb1511a87c7e",
+  "width": 16,
+  "experts": 5,
+  "route_length": 4,
+  "total_ordered_routes": 625,
+  "theoretical_additive_multisets": 70,
+  "observed": {
+    "sequential_unique_operators": 625,
+    "additive_unique_operators": 70,
+    "sequential_operator_span_dimension": 101,
+    "additive_operator_span_dimension": 5,
+    "maximum_sequential_orthogonality_error": 2.5955709908758895e-15,
+    "same_multiset_order_effects": {
+      "compared_route_pairs": 555,
+      "mean_sequential_operator_distance": 0.1914902078691769,
+      "minimum_sequential_operator_distance": 0.050949310427812165,
+      "maximum_additive_operator_distance": 1.375404364072805e-16
+    }
+  },
+  "ledger": {
+    "bank_parameters": 165,
+    "active_macs_upper_bound": 256,
+    "additive_and_sequential_use_same_bank": true,
+    "additive_and_sequential_use_same_expert_calls": true,
+    "dense_width_squared_reference_macs": 256,
+    "active_to_dense_reference_ratio": 1.0,
+    "note": "Each expert is a dense rank-two plane rotation applied without a dense matrix."
+  },
+  "frozen_gates": {
+    "sequential_routes_are_distinct": true,
+    "sequential_span_exceeds_additive_by_4x": true,
+    "route_order_materially_changes_sequential_operator": true,
+    "route_order_cannot_change_additive_operator": true,
+    "sequential_programs_preserve_norm": true
+  },
+  "algebra_gate_passed": true,
+  "scope_boundary": {
+    "proved": [
+      "strict expressed-operator gain over additive routing at equal calls",
+      "ordered routes remain distinguishable",
+      "stable norm-preserving composition"
+    ],
+    "not_proved": [
+      "learned routing discovers useful language programs",
+      "language-model quality improves",
+      "GPU kernels beat a dense SwiGLU at matched quality"
+    ]
+  }
+}

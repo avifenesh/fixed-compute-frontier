@@ -1,0 +1,36 @@
+diff --git a/include/cutlass/gemm/collective/sm90_mma_tma_gmma_ss_warpspecialized.hpp b/include/cutlass/gemm/collective/sm90_mma_tma_gmma_ss_warpspecialized.hpp
+index e040f9d..f521a8b 100644
+--- a/include/cutlass/gemm/collective/sm90_mma_tma_gmma_ss_warpspecialized.hpp
++++ b/include/cutlass/gemm/collective/sm90_mma_tma_gmma_ss_warpspecialized.hpp
+@@ -475,6 +475,10 @@ public:
+     //
+     static_assert((0 <= K_PIPE_MMAS) && (K_PIPE_MMAS <  K_PIPE_MAX),
+         "ERROR : Incorrect number of MMAs in flight");
++#if defined(CUTLASS_ENABLE_MIDPOINT_HINGE)
++    int const original_k_tile_count = k_tile_count;
++    int const midpoint_remaining = original_k_tile_count / 2;
++#endif
+ 
+     // We release buffers to producer warps(dma load) with some mmas in flight
+     PipelineState smem_pipe_release = smem_pipe_read;
+@@ -528,6 +532,20 @@ public:
+     CUTLASS_PRAGMA_NO_UNROLL
+     for ( ; k_tile_count > 0; --k_tile_count)
+     {
++#if defined(CUTLASS_ENABLE_MIDPOINT_HINGE)
++      if constexpr (cute::is_same_v<typename FrgTensorC::value_type, int32_t>) {
++        if (k_tile_count == midpoint_remaining) {
++          warpgroup_wait<0>();
++          warpgroup_fence_operand(accum);
++          CUTLASS_PRAGMA_UNROLL
++          for (int element = 0; element < size(accum); ++element) {
++            int32_t value = accum(element);
++            accum(element) = value > 0 ? value + value : 0;
++          }
++          warpgroup_fence_operand(accum);
++        }
++      }
++#endif
+       // WAIT on smem_pipe_read until its data are available (phase bit flips from rdPhaseBit value)
+       auto barrier_token = pipeline.consumer_try_wait(smem_pipe_read);
+       pipeline.consumer_wait(smem_pipe_read, barrier_token);

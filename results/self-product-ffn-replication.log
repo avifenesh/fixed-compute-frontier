@@ -1,0 +1,85 @@
+{"starting_arm": "parallel_swiglu"}
+{"arm": "parallel_swiglu", "step": 305, "train_loss": 5.95045280456543, "validation_loss": 6.131460979580879, "gradient_norm": 0.5014110803604126}
+{"arm": "parallel_swiglu", "step": 1525, "train_loss": 5.44239616394043, "validation_loss": 5.444660194218159, "gradient_norm": 0.5741831660270691}
+{"starting_arm": "parallel_wide_silu"}
+{"arm": "parallel_wide_silu", "step": 305, "train_loss": 5.95880389213562, "validation_loss": 6.150008384138346, "gradient_norm": 0.42186394333839417}
+{"arm": "parallel_wide_silu", "step": 1525, "train_loss": 5.438775300979614, "validation_loss": 5.43236467987299, "gradient_norm": 0.47265833616256714}
+{"starting_arm": "parallel_self_product"}
+{"arm": "parallel_self_product", "step": 305, "train_loss": 5.927057981491089, "validation_loss": 6.115374758839607, "gradient_norm": 0.5125025510787964}
+{"arm": "parallel_self_product", "step": 1525, "train_loss": 5.427603006362915, "validation_loss": 5.41973016038537, "gradient_norm": 0.5731551647186279}
+{
+  "advance_to_confirmation_seed": true,
+  "advance_to_scale_test": false,
+  "batch_clustered_terminal_intervals": {
+    "parallel_swiglu": {
+      "candidate_minus_reference_mean": -0.02415003627538681,
+      "interpretation": "descriptive interval clustered by validation batch; not a seed-level CI",
+      "lower_95": -0.02554081423559218,
+      "seeds_per_cluster": 2,
+      "standard_error": 0.0007095805919415146,
+      "upper_95": -0.02275925831518144,
+      "validation_batch_clusters": 128
+    },
+    "parallel_wide_silu": {
+      "candidate_minus_reference_mean": -0.007994333282113075,
+      "interpretation": "descriptive interval clustered by validation batch; not a seed-level CI",
+      "lower_95": -0.009805835139727541,
+      "seeds_per_cluster": 2,
+      "standard_error": 0.0009242356416400331,
+      "upper_95": -0.0061828314244986105,
+      "validation_batch_clusters": 128
+    }
+  },
+  "discovery_formal_promotion_preserved_as_false": true,
+  "gates": {
+    "all_activation_diagnostics_finite": true,
+    "all_activation_nonfinite_fractions_zero": true,
+    "all_training_finite": true,
+    "batch_clustered_interval_favors_candidate_vs_parallel_swiglu": true,
+    "batch_clustered_interval_favors_candidate_vs_parallel_wide_silu": true,
+    "candidate_early_noninferior_within_0p05_percent": true,
+    "candidate_terminal_0p025_percent_better_than_wide_silu": true,
+    "candidate_terminal_0p05_percent_better_than_swiglu": true,
+    "discovery_initial_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+    "discovery_initial_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+    "discovery_initial_activation_rms_layer_median_no_greater_than_swiglu": true,
+    "discovery_terminal_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+    "discovery_terminal_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+    "discovery_terminal_activation_rms_layer_median_no_greater_than_swiglu": true,
+    "folded_h100_feasibility_pass": true,
+    "folded_vs_unfolded_nll_within_0p01_percent": true,
+    "identical_ffn_dense_ledgers": true,
+    "identical_total_parameters": true,
+    "identical_trainable_parameters": true,
+    "integrity_protocol_valid": true,
+    "paired_interval_favors_candidate_vs_swiglu": true,
+    "paired_interval_favors_candidate_vs_wide_silu": true,
+    "paired_interval_favors_full_vs_plain_ablation": true,
+    "plain_ablation_hurts_0p01_percent": true,
+    "replication_initial_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+    "replication_initial_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+    "replication_initial_activation_rms_layer_median_no_greater_than_swiglu": true,
+    "replication_terminal_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+    "replication_terminal_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+    "replication_terminal_activation_rms_layer_median_no_greater_than_swiglu": true,
+    "wide_folded_vs_unfolded_nll_within_0p01_percent": true
+  },
+  "symmetric_activation_envelope": {
+    "discovery": {
+      "initial_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+      "initial_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+      "initial_activation_rms_layer_median_no_greater_than_swiglu": true,
+      "terminal_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+      "terminal_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+      "terminal_activation_rms_layer_median_no_greater_than_swiglu": true
+    },
+    "replication": {
+      "initial_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+      "initial_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+      "initial_activation_rms_layer_median_no_greater_than_swiglu": true,
+      "terminal_activation_abs_max_layer_max_no_greater_than_swiglu": true,
+      "terminal_activation_abs_p99_layer_max_no_greater_than_swiglu": true,
+      "terminal_activation_rms_layer_median_no_greater_than_swiglu": true
+    }
+  }
+}

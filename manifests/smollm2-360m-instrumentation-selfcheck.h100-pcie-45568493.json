@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "experiment_id": "smollm2-360m-instrumentation-selfcheck-h100-pcie-45568493",
+  "claim": {
+    "scope": "serve-only",
+    "primary_edge": "D",
+    "edges": ["D"]
+  },
+  "artifacts": {
+    "hash_scheme": "sha256(canonical path\\0bytes\\0file_sha256 records)",
+    "baseline": {
+      "model_reference": "HuggingFaceTB/SmolLM2-360M@f8027fd0eaeea54caa13c31d31b9fdc459c38b49",
+      "checkpoint_sha256": "9b78ff1ef43e6e099a2e6c8fe6b5e6f25cd6ef730e6d9234ec15369dcc4be116",
+      "tokenizer_sha256": "5557efdce7170f2197cdb4cad226bf14aaa8281ae79c636c472e44de4016d532",
+      "learned_bytes": {
+        "core": 723674912,
+        "auxiliary": 0,
+        "metadata": 3376898,
+        "total": 727051810
+      }
+    },
+    "candidate": {
+      "model_reference": "HuggingFaceTB/SmolLM2-360M@f8027fd0eaeea54caa13c31d31b9fdc459c38b49",
+      "checkpoint_sha256": "9b78ff1ef43e6e099a2e6c8fe6b5e6f25cd6ef730e6d9234ec15369dcc4be116",
+      "tokenizer_sha256": "5557efdce7170f2197cdb4cad226bf14aaa8281ae79c636c472e44de4016d532",
+      "learned_bytes": {
+        "core": 723674912,
+        "auxiliary": 0,
+        "metadata": 3376898,
+        "total": 727051810
+      }
+    }
+  },
+  "hardware": {
+    "vast_instance_id": 45568493,
+    "gpu_stratum": "NVIDIA H100 PCIe 80GB",
+    "gpu_pci_id": "00000000:81:00.0",
+    "gpu_power_limit_w": 350,
+    "container_digest": "pytorch/pytorch@sha256:3d614dfd422b7e43647491cbf07d6acc516c032fc49c594a94afdebd52552fb9",
+    "server_commit": "vllm==0.25.1;RECORD-sha256=442a0806e7a01fe1544d18d43378d0135ca7803d79f128cc204bdfe93ae83543",
+    "attention_backend": "FlashAttention-3",
+    "torch": "2.11.0+cu130",
+    "cuda_runtime": "13.0",
+    "driver": "580.159.03",
+    "prefix_cache": false,
+    "cuda_graphs": "FULL_AND_PIECEWISE"
+  },
+  "workload": {
+    "trace_sha256": "e387f3708669ad2abd0e4cd37376b944dc4408d023d45cdd5dbaaea04cdd0f51",
+    "frozen": true,
+    "cells": [
+      {"name": "short-interactive-c1", "input_tokens": 128, "output_tokens": 128, "concurrency": 1},
+      {"name": "short-interactive-c8", "input_tokens": 128, "output_tokens": 128, "concurrency": 8},
+      {"name": "normal-chat-c1", "input_tokens": 512, "output_tokens": 128, "concurrency": 1},
+      {"name": "normal-chat-c8", "input_tokens": 512, "output_tokens": 128, "concurrency": 8},
+      {"name": "prefill-heavy-c1", "input_tokens": 2048, "output_tokens": 128, "concurrency": 1},
+      {"name": "prefill-heavy-c8", "input_tokens": 2048, "output_tokens": 128, "concurrency": 8},
+      {"name": "decode-heavy-c1", "input_tokens": 512, "output_tokens": 512, "concurrency": 1},
+      {"name": "decode-heavy-c8", "input_tokens": 512, "output_tokens": 512, "concurrency": 8}
+    ]
+  },
+  "quality": {
+    "protected_slices": ["P1", "P2", "P3", "P4", "P5"],
+    "noninferiority_margins": {
+      "P1": 0.0,
+      "P2": 0.0,
+      "P3": 0.0,
+      "P4": 0.0,
+      "P5": 0.0
+    }
+  },
+  "planned_training_seeds": [101, 202, 303],
+  "selfcheck": {
+    "kind": "instrumentation-selfcheck-not-benchmark-evidence",
+    "result": "runtime/smollm2-360m-selfcheck-result.json",
+    "artifact_capture": "runtime/smollm2-360m-baseline-capture.json"
+  }
+}

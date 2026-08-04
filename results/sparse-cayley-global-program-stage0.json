@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "candidate": "sparse Cayley global expert programs",
+  "source_sha256": "c8fa7d9f2c7b3fe7ab09f5af917a46416aef0b8a7cc078d19fe7c369d734f96f",
+  "configuration": {
+    "width": 16,
+    "experts": 5,
+    "degree": 3,
+    "route_length": 4,
+    "alpha": 0.25,
+    "neumann_order": 4,
+    "seed": 20260730
+  },
+  "analytic_truncation_bound": 0.0026041666666666665,
+  "experts": [
+    {
+      "generator_skew_error": 0.0,
+      "generator_spectral_norm": 0.2499999999999999,
+      "generator_rank": 16,
+      "cayley_orthogonality_error": 9.643903130529118e-16,
+      "cayley_numerical_density": 1.0,
+      "cayley_displacement_rank": 16,
+      "truncated_relative_error": 0.0007104131203106676
+    },
+    {
+      "generator_skew_error": 0.0,
+      "generator_spectral_norm": 0.25,
+      "generator_rank": 16,
+      "cayley_orthogonality_error": 9.565266503196082e-16,
+      "cayley_numerical_density": 1.0,
+      "cayley_displacement_rank": 16,
+      "truncated_relative_error": 0.0007825905540446845
+    },
+    {
+      "generator_skew_error": 0.0,
+      "generator_spectral_norm": 0.2500000000000001,
+      "generator_rank": 16,
+      "cayley_orthogonality_error": 8.350365181372264e-16,
+      "cayley_numerical_density": 1.0,
+      "cayley_displacement_rank": 16,
+      "truncated_relative_error": 0.000745597278935014
+    },
+    {
+      "generator_skew_error": 0.0,
+      "generator_spectral_norm": 0.2500000000000001,
+      "generator_rank": 16,
+      "cayley_orthogonality_error": 9.528374858115442e-16,
+      "cayley_numerical_density": 1.0,
+      "cayley_displacement_rank": 16,
+      "truncated_relative_error": 0.00069916220933584
+    },
+    {
+      "generator_skew_error": 0.0,
+      "generator_spectral_norm": 0.25000000000000006,
+      "generator_rank": 16,
+      "cayley_orthogonality_error": 1.0571569722266869e-15,
+      "cayley_numerical_density": 1.0,
+      "cayley_displacement_rank": 16,
+      "truncated_relative_error": 0.0008467520827903139
+    }
+  ],
+  "programs": {
+    "total_routes": 625,
+    "sequential_unique": 625,
+    "sequential_span_dimension": 256,
+    "sequential_smallest_to_largest_singular_ratio": 9.639360217634997e-05,
+    "maximum_route_orthogonality_error": 3.874263268029376e-15,
+    "additive_unique": 70,
+    "additive_span_dimension": 5,
+    "additive_smallest_to_largest_singular_ratio": 9.100260729106522e-21
+  },
+  "scaling_ledger": {
+    "width": 4096,
+    "degree": 3,
+    "neumann_sparse_multiplies_per_expert": 4,
+    "route_length": 4,
+    "active_scalar_edge_visits_upper_bound": 196608,
+    "dense_matvec_macs": 16777216,
+    "ideal_active_to_dense_ratio": 0.01171875,
+    "excluded": [
+      "route selection",
+      "index and edge-weight reads",
+      "physical gather/scatter efficiency",
+      "kernel synchronization and launch overhead",
+      "training backward work"
+    ]
+  },
+  "frozen_gates": {
+    "generators_are_full_rank_sparse_skew_contractions": true,
+    "cayley_experts_are_dense_full_displacement_orthogonal": true,
+    "truncated_apply_obeys_bound_and_target": true,
+    "all_ordered_routes_are_distinct": true,
+    "sequential_routes_span_full_matrix_space": true,
+    "additive_control_collapses_to_multisets_and_small_span": true,
+    "all_sequential_routes_remain_orthogonal": true,
+    "scaling_ledger_is_below_three_percent_dense": true
+  },
+  "all_gates_pass": true,
+  "claim_boundary": {
+    "proved_if_pass": [
+      "each linearly sized sparse generator has a dense norm-preserving global response",
+      "each expert changes all feature directions",
+      "short ordered programs span strictly more operator directions than additive aggregation",
+      "truncated application has a width-independent error bound and near-linear logical work"
+    ],
+    "not_proved": [
+      "useful routes are learnable",
+      "composed routes are independent stored knowledge",
+      "language-model quality",
+      "GPU speed or memory-traffic superiority",
+      "novelty beyond the complete sparse-global-program combination"
+    ]
+  }
+}

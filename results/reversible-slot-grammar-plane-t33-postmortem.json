@@ -1,0 +1,146 @@
+{
+  "claim_boundary": "Support locations were already unsealed. These ceilings may diagnose the closed lane but may not select, tune, or promote a T33 variant.",
+  "inputs": {
+    "coverage_object_sha256": "f88f54a313003c49fce576dd708de4320a0ed268154ebe4fdc4664fc4f8f28e7",
+    "phase_a_object_sha256": "23046dbe1e275d0b02cf214ec63701908caf2a9053410ee182f571b4430cb4a9",
+    "source_sha256": "6f746aa92d23181a55ebcd93dad22d92f21461490ff8b0222fe0f73e5d30d7b2"
+  },
+  "mapping": {
+    "mapped_support_items": 217,
+    "source_rows_read_without_answer_column": 104
+  },
+  "object_sha256": "12a538f1805ea0baea1ac432a9bca3245887f26deef9b9d78117cbd0ec80bb95",
+  "observer_documents": 2405,
+  "pair_comparisons": 2208077,
+  "positive_proposals": 1861,
+  "purpose": "If ambiguity rejection alone caused the miss, all positive rules should recover structural coverage within the same byte/edge envelope. If every recurring proposal still misses or exceeds the envelope, the observable one-hole algebra is insufficient.",
+  "raw_proposals": 3577,
+  "recurring_proposals": 3577,
+  "runtime": {
+    "peak_rss_kib": 1211596,
+    "wall_seconds": 18.342806784901768
+  },
+  "schema": "reversible-slot-grammar-plane-t33-privileged-postmortem-v1",
+  "sentences": 9799,
+  "status": "diagnostic-only",
+  "variants": {
+    "all_positive_ambiguous": {
+      "coverage": {
+        "question_both_document_coverage": 0.7596153846153846,
+        "questions": 104,
+        "questions_with_both_documents": 79,
+        "support_edge_coverage": 0.8341013824884793,
+        "support_exactly_one_coverage": 0.16589861751152074,
+        "support_items": 217,
+        "support_items_with_edge": 181,
+        "support_items_with_exactly_one_edge": 36,
+        "usable_middle_lengths": {
+          "count": 799,
+          "maximum": 87,
+          "median": 22,
+          "minimum": 1
+        }
+      },
+      "documents_at_most_24_edge_fraction": 0.9977973568281938,
+      "documents_with_edges": 2270,
+      "edge_bound_pass": true,
+      "edge_metrics": {
+        "duplicate_document_rule_keys": 570,
+        "pointers_outside_record": 3295,
+        "witness_failures": 0
+      },
+      "image_bytes": 755840,
+      "layout": {
+        "anchor_offset": 650432,
+        "document_offset": 673024,
+        "edge_offset": 692288,
+        "header_offset": 0,
+        "integrity_offset": 32,
+        "raw_length_offset": 615744,
+        "raw_token_offset": 64,
+        "rule_offset": 620608,
+        "total_bytes": 755840
+      },
+      "logical_occurrences": 19168,
+      "materialized_edges": 15873,
+      "name": "all_positive_ambiguous",
+      "rules": 1861,
+      "state_byte_cap_pass": true
+    },
+    "all_recurring_ignore_mdl": {
+      "coverage": {
+        "question_both_document_coverage": 0.9038461538461539,
+        "questions": 104,
+        "questions_with_both_documents": 94,
+        "support_edge_coverage": 0.9447004608294931,
+        "support_exactly_one_coverage": 0.18433179723502305,
+        "support_items": 217,
+        "support_items_with_edge": 205,
+        "support_items_with_exactly_one_edge": 40,
+        "usable_middle_lengths": {
+          "count": 921,
+          "maximum": 95,
+          "median": 22,
+          "minimum": 1
+        }
+      },
+      "documents_at_most_24_edge_fraction": 0.996160409556314,
+      "documents_with_edges": 2344,
+      "edge_bound_pass": true,
+      "edge_metrics": {
+        "duplicate_document_rule_keys": 596,
+        "pointers_outside_record": 4224,
+        "witness_failures": 0
+      },
+      "image_bytes": 807872,
+      "layout": {
+        "anchor_offset": 677888,
+        "document_offset": 712832,
+        "edge_offset": 732096,
+        "header_offset": 0,
+        "integrity_offset": 32,
+        "raw_length_offset": 615744,
+        "raw_token_offset": 64,
+        "rule_offset": 620608,
+        "total_bytes": 807872
+      },
+      "logical_occurrences": 23163,
+      "materialized_edges": 18939,
+      "name": "all_recurring_ignore_mdl",
+      "rules": 3577,
+      "state_byte_cap_pass": true
+    },
+    "direct_sentence_index": {
+      "claim_boundary": "Stores one raw start/length per compiler sentence and no grammar rule. This is the mandatory simpler structural control, not a model result.",
+      "coverage": {
+        "question_both_document_coverage": 0.9903846153846154,
+        "questions": 104,
+        "questions_with_both_documents": 103,
+        "support_edge_coverage": 0.9953917050691244,
+        "support_exactly_one_coverage": 0.9124423963133641,
+        "support_items": 217,
+        "support_items_with_edge": 216,
+        "support_items_with_exactly_one_edge": 198,
+        "usable_middle_lengths": {
+          "count": 246,
+          "maximum": 97,
+          "median": 32,
+          "minimum": 2
+        }
+      },
+      "documents_at_most_24_span_fraction": 1.0,
+      "documents_with_spans": 2391,
+      "image_bytes": 669120,
+      "layout": {
+        "document_offset": 620608,
+        "raw_length_offset": 615744,
+        "raw_token_offset": 64,
+        "sentence_span_offset": 639872,
+        "total_bytes": 669120
+      },
+      "name": "direct_sentence_index",
+      "served_sentence_spans": 7300,
+      "state_byte_cap_pass": true
+    }
+  }
+}

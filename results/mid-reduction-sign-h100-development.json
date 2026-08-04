@@ -1,0 +1,1911 @@
+{
+  "cells": [
+    {
+      "best_checkpoint": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_checkpoint_int8_kernel",
+          "ptx_length": 21854,
+          "registers": 96,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 4,
+          "num_warps": 4
+        },
+        "median_ms": 0.10630399733781815,
+        "same_configuration_dense_compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 12868,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        }
+      },
+      "best_checkpoint_over_best_dense": 0.9996990648097389,
+      "best_dense": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 12868,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 4,
+          "num_warps": 4
+        },
+        "median_ms": 0.10633599758148193
+      },
+      "records": [
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 21338,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.10633599758148193,
+            0.10569600015878677,
+            0.1069440022110939
+          ],
+          "checkpoint_over_dense": 0.99849758469687,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 12616,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.10649599879980087,
+            0.10582400113344193,
+            0.10719999670982361
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 21854,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.10630399733781815,
+            0.10569600015878677,
+            0.10697600245475769
+          ],
+          "checkpoint_over_dense": 0.9996990648097389,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 12868,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.10633599758148193,
+            0.10566399991512299,
+            0.1069440022110939
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16055,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.12006399780511856,
+            0.11964800208806992,
+            0.12057600170373917
+          ],
+          "checkpoint_over_dense": 0.9973418192118949,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 9998,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.12038400024175644,
+            0.11993599683046341,
+            0.12110079824924469
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16573,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.1202239990234375,
+            0.11987199634313583,
+            0.12057600170373917
+          ],
+          "checkpoint_over_dense": 1.001332632772887,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 10246,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.12006399780511856,
+            0.11974400281906128,
+            0.12057600170373917
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 32984,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.1632319986820221,
+            0.16236799955368042,
+            0.16406400501728058
+          ],
+          "checkpoint_over_dense": 1.0083020069734134,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 17488,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1618880033493042,
+            0.16099199652671814,
+            0.16335999965667725
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 33524,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16284799575805664,
+            0.16204799711704254,
+            0.16368000209331512
+          ],
+          "checkpoint_over_dense": 1.0053338548641735,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 17739,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.16198399662971497,
+            0.16115200519561768,
+            0.16300800442695618
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 21654,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.1653120070695877,
+            0.16432000696659088,
+            0.16624000668525696
+          ],
+          "checkpoint_over_dense": 1.0023283063780144,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 12936,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.16492800414562225,
+            0.16409599781036377,
+            0.16595199704170227
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22168,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.1650879979133606,
+            0.16421760618686676,
+            0.16592639684677124
+          ],
+          "checkpoint_over_dense": 1.0013586607755212,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13189,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.16486400365829468,
+            0.16387200355529785,
+            0.1659328043460846
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        }
+      ],
+      "rows": 1,
+      "valid": true
+    },
+    {
+      "best_checkpoint": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_checkpoint_int8_kernel",
+          "ptx_length": 21338,
+          "registers": 96,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 3,
+          "num_warps": 4
+        },
+        "median_ms": 0.10649599879980087,
+        "same_configuration_dense_compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 12616,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        }
+      },
+      "best_checkpoint_over_best_dense": 1.0015046759513055,
+      "best_dense": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 12616,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 3,
+          "num_warps": 4
+        },
+        "median_ms": 0.10633599758148193
+      },
+      "records": [
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 21338,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.10649599879980087,
+            0.10585600137710571,
+            0.10716799646615982
+          ],
+          "checkpoint_over_dense": 1.0015046759513055,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 12616,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.10633599758148193,
+            0.10563839972019196,
+            0.10700800269842148
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 21854,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.10654400289058685,
+            0.10592000186443329,
+            0.10719999670982361
+          ],
+          "checkpoint_over_dense": 0.9998498836650844,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 12868,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.10655999928712845,
+            0.10592000186443329,
+            0.10726399719715118
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16055,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.1202239990234375,
+            0.11984000355005264,
+            0.12070400267839432
+          ],
+          "checkpoint_over_dense": 1.001599585659519,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 9998,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.12003199756145477,
+            0.11964800208806992,
+            0.12060800194740295
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16573,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.12031999975442886,
+            0.11987199634313583,
+            0.12080000340938568
+          ],
+          "checkpoint_over_dense": 1.001331568078131,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 10246,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.12015999853610992,
+            0.11980800330638885,
+            0.1207360029220581
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 33108,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16335999965667725,
+            0.16259199380874634,
+            0.16409599781036377
+          ],
+          "checkpoint_over_dense": 1.0060104211956498,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 17603,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1623840034008026,
+            0.16150400042533875,
+            0.16355200111865997
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 33648,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16313600540161133,
+            0.16230399906635284,
+            0.16393600404262543
+          ],
+          "checkpoint_over_dense": 1.0029510815609026,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 17854,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1626559942960739,
+            0.16172799468040466,
+            0.163455992937088
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 21654,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16540800034999847,
+            0.16457599401474,
+            0.16629120707511902
+          ],
+          "checkpoint_over_dense": 1.0034944937879282,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 12936,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1648319959640503,
+            0.16390399634838104,
+            0.16569599509239197
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22168,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16547200083732605,
+            0.1646783947944641,
+            0.16633599996566772
+          ],
+          "checkpoint_over_dense": 1.0023260499177353,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13189,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1650879979133606,
+            0.16414080560207367,
+            0.1661120057106018
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        }
+      ],
+      "rows": 8,
+      "valid": true
+    },
+    {
+      "best_checkpoint": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_checkpoint_int8_kernel",
+          "ptx_length": 22094,
+          "registers": 96,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 3,
+          "num_warps": 4
+        },
+        "median_ms": 0.10825599730014801,
+        "same_configuration_dense_compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 13372,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        }
+      },
+      "best_checkpoint_over_best_dense": 1.0,
+      "best_dense": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 13372,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 3,
+          "num_warps": 4
+        },
+        "median_ms": 0.10825599730014801
+      },
+      "records": [
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22094,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.10825599730014801,
+            0.10771200060844421,
+            0.10892800241708755
+          ],
+          "checkpoint_over_dense": 1.0,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13372,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.10825599730014801,
+            0.10758399963378906,
+            0.10886400192975998
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22610,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.10851199924945831,
+            0.10793600231409073,
+            0.1090880036354065
+          ],
+          "checkpoint_over_dense": 1.0020685737175616,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13624,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1082879975438118,
+            0.10761599987745285,
+            0.10892800241708755
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16346,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.1210239976644516,
+            0.12057600170373917,
+            0.1215360015630722
+          ],
+          "checkpoint_over_dense": 1.0045152447486023,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 10289,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1204800009727478,
+            0.11984000355005264,
+            0.12144000083208084
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16864,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.12092799693346024,
+            0.12041600048542023,
+            0.12137600034475327
+          ],
+          "checkpoint_over_dense": 1.0053205425753038,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 10537,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.12028799951076508,
+            0.11977600306272507,
+            0.12106239795684814
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 34801,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16633599996566772,
+            0.16556799411773682,
+            0.16704000532627106
+          ],
+          "checkpoint_over_dense": 1.0091244663563101,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 19174,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1648319959640503,
+            0.16390399634838104,
+            0.16649599373340607
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 35341,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16646400094032288,
+            0.16566400229930878,
+            0.16723200678825378
+          ],
+          "checkpoint_over_dense": 1.0114719460568093,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 19425,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.16457599401474,
+            0.16368000209331512,
+            0.16550399363040924
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22410,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16633599996566772,
+            0.16550399363040924,
+            0.16713599860668182
+          ],
+          "checkpoint_over_dense": 1.0028940538388171,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13692,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1658560037612915,
+            0.1650560051202774,
+            0.16662399470806122
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22924,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16620799899101257,
+            0.1653759926557541,
+            0.16700799763202667
+          ],
+          "checkpoint_over_dense": 1.001929027074198,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13945,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1658879965543747,
+            0.16512000560760498,
+            0.16662399470806122
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        }
+      ],
+      "rows": 64,
+      "valid": true
+    },
+    {
+      "best_checkpoint": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_checkpoint_int8_kernel",
+          "ptx_length": 22619,
+          "registers": 96,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 4,
+          "num_warps": 4
+        },
+        "median_ms": 0.12432000041007996,
+        "same_configuration_dense_compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 13633,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        }
+      },
+      "best_checkpoint_over_best_dense": 0.9903135800986115,
+      "best_dense": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 13381,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 3,
+          "num_warps": 4
+        },
+        "median_ms": 0.1255359947681427
+      },
+      "records": [
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22103,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.12476799637079239,
+            0.12396799772977829,
+            0.12544000148773193
+          ],
+          "checkpoint_over_dense": 0.993882245496451,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13381,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1255359947681427,
+            0.12476799637079239,
+            0.12632960081100464
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22619,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.12432000041007996,
+            0.12352000176906586,
+            0.12505599856376648
+          ],
+          "checkpoint_over_dense": 0.9900611459302224,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13633,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.12556800246238708,
+            0.12486399710178375,
+            0.1263359934091568
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16351,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.1619199961423874,
+            0.16073599457740784,
+            0.16476799547672272
+          ],
+          "checkpoint_over_dense": 0.9970442667234329,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 10294,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1624000072479248,
+            0.1607999950647354,
+            0.16515199840068817
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16869,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16176000237464905,
+            0.16067199409008026,
+            0.16470399498939514
+          ],
+          "checkpoint_over_dense": 0.9976317167985443,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 10542,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1621440052986145,
+            0.16060799360275269,
+            0.16519039869308472
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 34818,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.1642560064792633,
+            0.1632000058889389,
+            0.16524800658226013
+          ],
+          "checkpoint_over_dense": 1.0088443610460063,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 19191,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.16281600296497345,
+            0.1615999937057495,
+            0.16451199352741241
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 35358,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16419200599193573,
+            0.16316799819469452,
+            0.16512000560760498
+          ],
+          "checkpoint_over_dense": 1.0072634565961458,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 19442,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.16300800442695618,
+            0.16182400286197662,
+            0.16422399878501892
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22419,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.16371199488639832,
+            0.16220800578594208,
+            0.16512000560760498
+          ],
+          "checkpoint_over_dense": 0.9968822833300336,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13701,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.16422399878501892,
+            0.16275200247764587,
+            0.16579200327396393
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22933,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.1637440025806427,
+            0.16233600676059723,
+            0.1650879979133606
+          ],
+          "checkpoint_over_dense": 0.9982442770490301,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13954,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.1640319973230362,
+            0.16249600052833557,
+            0.16569599509239197
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        }
+      ],
+      "rows": 256,
+      "valid": true
+    },
+    {
+      "best_checkpoint": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_checkpoint_int8_kernel",
+          "ptx_length": 22112,
+          "registers": 96,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 3,
+          "num_warps": 4
+        },
+        "median_ms": 0.2871040105819702,
+        "same_configuration_dense_compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 13390,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        }
+      },
+      "best_checkpoint_over_best_dense": 1.0642941768368266,
+      "best_dense": {
+        "compiler": {
+          "has_mma_sync": false,
+          "has_wgmma": true,
+          "name": "_dense_int8_kernel",
+          "ptx_length": 13642,
+          "registers": 64,
+          "shared_bytes": 17408,
+          "spills": 0
+        },
+        "configuration": {
+          "block_k": 32,
+          "block_m": 64,
+          "block_n": 64,
+          "num_stages": 4,
+          "num_warps": 4
+        },
+        "median_ms": 0.26976001262664795
+      },
+      "records": [
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22112,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.2871040105819702,
+            0.28575998544692993,
+            0.289247989654541
+          ],
+          "checkpoint_over_dense": 1.063789409358875,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13390,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.2698880136013031,
+            0.26919040083885193,
+            0.270687997341156
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22628,
+            "registers": 96,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.28780800104141235,
+            0.286655992269516,
+            0.289792001247406
+          ],
+          "checkpoint_over_dense": 1.0669038685127255,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13642,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.26976001262664795,
+            0.2691519856452942,
+            0.2707839906215668
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16356,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.477183997631073,
+            0.47676798701286316,
+            0.4776704013347626
+          ],
+          "checkpoint_over_dense": 1.0092041219470365,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 10299,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.47283199429512024,
+            0.47246718406677246,
+            0.47334399819374084
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 16874,
+            "registers": 64,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.47756800055503845,
+            0.47724801301956177,
+            0.4779840111732483
+          ],
+          "checkpoint_over_dense": 1.010768712960768,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 64,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 10547,
+            "registers": 48,
+            "shared_bytes": 17408,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.47247999906539917,
+            0.47180798649787903,
+            0.473471999168396
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 34835,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.4626080095767975,
+            0.4601280093193054,
+            0.46585598587989807
+          ],
+          "checkpoint_over_dense": 1.2769632121407413,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 19208,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.3622719943523407,
+            0.36137598752975464,
+            0.3657471835613251
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 35375,
+            "registers": 167,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.462336003780365,
+            0.45952001214027405,
+            0.465196818113327
+          ],
+          "checkpoint_over_dense": 1.2774535944440144,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 4
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 19459,
+            "registers": 96,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.36191999912261963,
+            0.3614720106124878,
+            0.36334720253944397
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22428,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.44364801049232483,
+            0.4424000084400177,
+            0.4451200067996979
+          ],
+          "checkpoint_over_dense": 1.1032946109879165,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 3,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13710,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.4021120071411133,
+            0.40163201093673706,
+            0.4026240110397339
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        },
+        {
+          "checkpoint_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_checkpoint_int8_kernel",
+            "ptx_length": 22942,
+            "registers": 104,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "checkpoint_ms": [
+            0.44409599900245667,
+            0.4429439902305603,
+            0.4454655945301056
+          ],
+          "checkpoint_over_dense": 1.1033550343285434,
+          "configuration": {
+            "block_k": 32,
+            "block_m": 64,
+            "block_n": 128,
+            "num_stages": 4,
+            "num_warps": 8
+          },
+          "dense_compiler": {
+            "has_mma_sync": false,
+            "has_wgmma": true,
+            "name": "_dense_int8_kernel",
+            "ptx_length": 13963,
+            "registers": 64,
+            "shared_bytes": 33792,
+            "spills": 0
+          },
+          "dense_ms": [
+            0.40249601006507874,
+            0.4020479917526245,
+            0.40300801396369934
+          ],
+          "maximum_absolute_error": 0,
+          "valid": true
+        }
+      ],
+      "rows": 1024,
+      "valid": true
+    }
+  ],
+  "decision": {
+    "advance_to_algebra_screen": false,
+    "all_cells_at_most_1_03": false,
+    "all_valid": true,
+    "bit_exact_all": true,
+    "compiler_metadata_visible": true,
+    "key_cells_at_most_1_02": true,
+    "selected_checkpoint_no_spills": true,
+    "selected_register_delta_at_most_8": false,
+    "tensor_core_all_best": true
+  },
+  "device": "NVIDIA H100 80GB HBM3",
+  "runtime": {
+    "cuda": "12.4",
+    "torch": "2.5.1+cu124",
+    "triton": "3.1.0"
+  },
+  "runtime_alpha": 0,
+  "schema": "mid-reduction-sign-h100-development-v1",
+  "selected_register_deltas": [
+    32,
+    32,
+    32,
+    32,
+    32
+  ],
+  "shape": {
+    "columns": 4096,
+    "reduction": 4096,
+    "rows": [
+      1,
+      8,
+      64,
+      256,
+      1024
+    ]
+  }
+}

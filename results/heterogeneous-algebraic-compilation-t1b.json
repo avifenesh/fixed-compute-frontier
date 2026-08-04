@@ -1,0 +1,1701 @@
+{
+  "schema": "heterogeneous-algebraic-compilation-t1b-v1",
+  "status": "complete",
+  "device": "cuda",
+  "torch_version": "2.12.1+cu130",
+  "configuration": {
+    "world_seeds": [
+      731,
+      947,
+      1213
+    ],
+    "prefix_examples": 256,
+    "multipliers": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "learning_rates": [
+      0.001,
+      0.003
+    ],
+    "losses": [
+      "bce",
+      "hinge"
+    ],
+    "max_steps": 2000,
+    "batch_size": 64,
+    "parameter_count": 78404
+  },
+  "ledger": {
+    "candidate_dense_training_steps": 0,
+    "candidate_prefix_examples": 256,
+    "control_examples_per_run": 128000,
+    "rademacher_rebirth_parameter_writes": 78404,
+    "datatypes_reported_separately": true
+  },
+  "worlds": {
+    "731": {
+      "latent_support": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "observed_support": [
+        4,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        24,
+        25,
+        27,
+        28,
+        30,
+        31
+      ],
+      "mixing_density": 0.4873046875,
+      "mixing_is_permutation": false,
+      "views": {
+        "mixed": {
+          "candidate": {
+            "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+            "stream_seed": 60731,
+            "rank": 32,
+            "xor_bit_ops": 135696,
+            "recovered_support": [
+              4,
+              7,
+              8,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              22,
+              24,
+              25,
+              27,
+              28,
+              30,
+              31
+            ],
+            "support_exact": true,
+            "compilation": {
+              "support_size": 18,
+              "tree_layers": 5,
+              "parity_coordinate": 49,
+              "routed_parity_coordinate": 50,
+              "routed_protected_coordinate": 51,
+              "nonzero_parameter_writes": 117
+            },
+            "elapsed_seconds": 0.0397794840100687,
+            "evaluation": {
+              "accuracy": 1.0,
+              "parity_accuracy": 1.0,
+              "protected_accuracy": 1.0,
+              "bce": 0.00033554821857251227
+            }
+          },
+          "controls": [
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 5.02128186399932,
+              "evaluation": {
+                "accuracy": 0.751220703125,
+                "parity_accuracy": 0.4947942793369293,
+                "protected_accuracy": 1.0,
+                "bce": 0.34203484654426575
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.8484173150063725,
+              "evaluation": {
+                "accuracy": 0.75390625,
+                "parity_accuracy": 0.501735270023346,
+                "protected_accuracy": 0.9985570311546326,
+                "bce": 1513354.125
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.854495980005595,
+              "evaluation": {
+                "accuracy": 0.7509765625,
+                "parity_accuracy": 0.49454638361930847,
+                "protected_accuracy": 0.9997594952583313,
+                "bce": 0.3438915014266968
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.853319353002007,
+              "evaluation": {
+                "accuracy": 0.751953125,
+                "parity_accuracy": 0.49628162384033203,
+                "protected_accuracy": 1.0,
+                "bce": 0.34347957372665405
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.845847853997839,
+              "evaluation": {
+                "accuracy": 0.7557373046875,
+                "parity_accuracy": 0.5039663314819336,
+                "protected_accuracy": 1.0,
+                "bce": 0.3417324423789978
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.853095394995762,
+              "evaluation": {
+                "accuracy": 0.7520751953125,
+                "parity_accuracy": 0.49677741527557373,
+                "protected_accuracy": 0.9997594952583313,
+                "bce": 3.245267629623413
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.8481602760002716,
+              "evaluation": {
+                "accuracy": 0.752197265625,
+                "parity_accuracy": 0.49677741527557373,
+                "protected_accuracy": 1.0,
+                "bce": 0.3681696951389313
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.843635709010414,
+              "evaluation": {
+                "accuracy": 0.7496337890625,
+                "parity_accuracy": 0.49157166481018066,
+                "protected_accuracy": 1.0,
+                "bce": 0.3589509427547455
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.833281874001841,
+              "evaluation": {
+                "accuracy": 0.758544921875,
+                "parity_accuracy": 0.5096678733825684,
+                "protected_accuracy": 1.0,
+                "bce": 0.3600216805934906
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.829885333994753,
+              "evaluation": {
+                "accuracy": 0.751708984375,
+                "parity_accuracy": 0.49578583240509033,
+                "protected_accuracy": 1.0,
+                "bce": 0.4261714518070221
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.814851766001084,
+              "evaluation": {
+                "accuracy": 0.761962890625,
+                "parity_accuracy": 0.5166088342666626,
+                "protected_accuracy": 1.0,
+                "bce": 0.36003437638282776
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.813573785999324,
+              "evaluation": {
+                "accuracy": 0.749755859375,
+                "parity_accuracy": 0.4923153519630432,
+                "protected_accuracy": 0.9995189905166626,
+                "bce": 48.533939361572266
+              }
+            }
+          ],
+          "best": {
+            "bce": {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.845847853997839,
+              "evaluation": {
+                "accuracy": 0.7557373046875,
+                "parity_accuracy": 0.5039663314819336,
+                "protected_accuracy": 1.0,
+                "bce": 0.3417324423789978
+              }
+            },
+            "hinge": {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 4.814851766001084,
+              "evaluation": {
+                "accuracy": 0.761962890625,
+                "parity_accuracy": 0.5166088342666626,
+                "protected_accuracy": 1.0,
+                "bce": 0.36003437638282776
+              }
+            }
+          },
+          "identical_initial_hashes": true
+        },
+        "recurrence": {
+          "candidate": {
+            "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+            "stream_seed": 7310001,
+            "rank": 32,
+            "xor_bit_ops": 133914,
+            "recovered_support": [
+              4,
+              7,
+              8,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              22,
+              24,
+              25,
+              27,
+              28,
+              30,
+              31
+            ],
+            "support_exact": true,
+            "compilation": {
+              "support_size": 18,
+              "tree_layers": 5,
+              "parity_coordinate": 49,
+              "routed_parity_coordinate": 50,
+              "routed_protected_coordinate": 51,
+              "nonzero_parameter_writes": 117
+            },
+            "elapsed_seconds": 0.03479794999293517,
+            "evaluation": {
+              "accuracy": 1.0,
+              "parity_accuracy": 1.0,
+              "protected_accuracy": 1.0,
+              "bce": 0.0003355486842337996
+            }
+          },
+          "controls": [
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.860452699998859,
+              "evaluation": {
+                "accuracy": 0.75927734375,
+                "parity_accuracy": 0.5151216983795166,
+                "protected_accuracy": 1.0,
+                "bce": 0.34405335783958435
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.91613925700949,
+              "evaluation": {
+                "accuracy": 0.7542724609375,
+                "parity_accuracy": 0.5050405263900757,
+                "protected_accuracy": 1.0,
+                "bce": 0.34603720903396606
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 7.009011679998366,
+              "evaluation": {
+                "accuracy": 0.753173828125,
+                "parity_accuracy": 0.5028275847434998,
+                "protected_accuracy": 1.0,
+                "bce": 0.34488445520401
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.836386112001492,
+              "evaluation": {
+                "accuracy": 0.7528076171875,
+                "parity_accuracy": 0.5043029189109802,
+                "protected_accuracy": 0.9978181719779968,
+                "bce": 0.3828737139701843
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.87086399900727,
+              "evaluation": {
+                "accuracy": 0.7542724609375,
+                "parity_accuracy": 0.5050405263900757,
+                "protected_accuracy": 1.0,
+                "bce": 19.173742294311523
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.8964143240009435,
+              "evaluation": {
+                "accuracy": 0.7506103515625,
+                "parity_accuracy": 0.4979099631309509,
+                "protected_accuracy": 0.9997575879096985,
+                "bce": 9.690641403198242
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.865539135003928,
+              "evaluation": {
+                "accuracy": 0.7548828125,
+                "parity_accuracy": 0.5062699317932129,
+                "protected_accuracy": 1.0,
+                "bce": 0.3842363953590393
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.887739525991492,
+              "evaluation": {
+                "accuracy": 0.75634765625,
+                "parity_accuracy": 0.5131546258926392,
+                "protected_accuracy": 0.9961212277412415,
+                "bce": 5.7136383056640625
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.890387912004371,
+              "evaluation": {
+                "accuracy": 0.752197265625,
+                "parity_accuracy": 0.5015981793403625,
+                "protected_accuracy": 0.9992727041244507,
+                "bce": 0.3793230652809143
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.848730172001524,
+              "evaluation": {
+                "accuracy": 0.75634765625,
+                "parity_accuracy": 0.5099581480026245,
+                "protected_accuracy": 0.9992727041244507,
+                "bce": 0.40269672870635986
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.83927218100871,
+              "evaluation": {
+                "accuracy": 0.7520751953125,
+                "parity_accuracy": 0.5006147027015686,
+                "protected_accuracy": 1.0,
+                "bce": 0.3675948679447174
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.893279972995515,
+              "evaluation": {
+                "accuracy": 0.7608642578125,
+                "parity_accuracy": 0.5190557837486267,
+                "protected_accuracy": 0.9992727041244507,
+                "bce": 0.35472002625465393
+              }
+            }
+          ],
+          "best": {
+            "bce": {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.860452699998859,
+              "evaluation": {
+                "accuracy": 0.75927734375,
+                "parity_accuracy": 0.5151216983795166,
+                "protected_accuracy": 1.0,
+                "bce": 0.34405335783958435
+              }
+            },
+            "hinge": {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "f5527a4ae348182571b8a44d24df78bccb41709c191840b449344b4399771db9",
+              "examples": 128000,
+              "elapsed_seconds": 6.893279972995515,
+              "evaluation": {
+                "accuracy": 0.7608642578125,
+                "parity_accuracy": 0.5190557837486267,
+                "protected_accuracy": 0.9992727041244507,
+                "bce": 0.35472002625465393
+              }
+            }
+          },
+          "identical_initial_hashes": true
+        }
+      }
+    },
+    "947": {
+      "latent_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        30,
+        31
+      ],
+      "observed_support": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        16,
+        18,
+        20,
+        23,
+        25,
+        26,
+        30,
+        31
+      ],
+      "mixing_density": 0.498046875,
+      "mixing_is_permutation": false,
+      "views": {
+        "mixed": {
+          "candidate": {
+            "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+            "stream_seed": 60947,
+            "rank": 32,
+            "xor_bit_ops": 131835,
+            "recovered_support": [
+              1,
+              2,
+              3,
+              7,
+              8,
+              9,
+              10,
+              13,
+              14,
+              16,
+              18,
+              20,
+              23,
+              25,
+              26,
+              30,
+              31
+            ],
+            "support_exact": true,
+            "compilation": {
+              "support_size": 17,
+              "tree_layers": 5,
+              "parity_coordinate": 48,
+              "routed_parity_coordinate": 49,
+              "routed_protected_coordinate": 50,
+              "nonzero_parameter_writes": 111
+            },
+            "elapsed_seconds": 0.034516401996370405,
+            "evaluation": {
+              "accuracy": 1.0,
+              "parity_accuracy": 0.9999999403953552,
+              "protected_accuracy": 1.0,
+              "bce": 0.00033555374830029905
+            }
+          },
+          "controls": [
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.962111905988422,
+              "evaluation": {
+                "accuracy": 0.7513427734375,
+                "parity_accuracy": 0.4999999701976776,
+                "protected_accuracy": 1.0,
+                "bce": 0.3457223176956177
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.991959587001475,
+              "evaluation": {
+                "accuracy": 0.7418212890625,
+                "parity_accuracy": 0.48257240653038025,
+                "protected_accuracy": 0.9983001351356506,
+                "bce": 0.47972825169563293
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.986386848002439,
+              "evaluation": {
+                "accuracy": 0.7525634765625,
+                "parity_accuracy": 0.5024545788764954,
+                "protected_accuracy": 1.0,
+                "bce": 0.34583568572998047
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.971479183994234,
+              "evaluation": {
+                "accuracy": 0.7508544921875,
+                "parity_accuracy": 0.499018132686615,
+                "protected_accuracy": 1.0,
+                "bce": 0.44463473558425903
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.932361339990166,
+              "evaluation": {
+                "accuracy": 0.7445068359375,
+                "parity_accuracy": 0.48699066042900085,
+                "protected_accuracy": 0.9992714524269104,
+                "bce": 0.7560780644416809
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.945126691003679,
+              "evaluation": {
+                "accuracy": 0.749267578125,
+                "parity_accuracy": 0.49656355381011963,
+                "protected_accuracy": 0.9992714524269104,
+                "bce": 0.3487584888935089
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.906235315997037,
+              "evaluation": {
+                "accuracy": 0.745361328125,
+                "parity_accuracy": 0.4879724979400635,
+                "protected_accuracy": 1.0,
+                "bce": 0.3705686926841736
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.836535069000092,
+              "evaluation": {
+                "accuracy": 0.7476806640625,
+                "parity_accuracy": 0.4928816854953766,
+                "protected_accuracy": 0.9997571110725403,
+                "bce": 0.3592686951160431
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.802895228000125,
+              "evaluation": {
+                "accuracy": 0.74609375,
+                "parity_accuracy": 0.4894452393054962,
+                "protected_accuracy": 1.0,
+                "bce": 0.36744916439056396
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.804902184987441,
+              "evaluation": {
+                "accuracy": 0.7503662109375,
+                "parity_accuracy": 0.4985272288322449,
+                "protected_accuracy": 0.9995142817497253,
+                "bce": 71.14081573486328
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.809290257006069,
+              "evaluation": {
+                "accuracy": 0.74609375,
+                "parity_accuracy": 0.4894452393054962,
+                "protected_accuracy": 1.0,
+                "bce": 0.38140690326690674
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.8159062180056935,
+              "evaluation": {
+                "accuracy": 0.7510986328125,
+                "parity_accuracy": 0.4995090663433075,
+                "protected_accuracy": 1.0,
+                "bce": 0.3725464344024658
+              }
+            }
+          ],
+          "best": {
+            "bce": {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.986386848002439,
+              "evaluation": {
+                "accuracy": 0.7525634765625,
+                "parity_accuracy": 0.5024545788764954,
+                "protected_accuracy": 1.0,
+                "bce": 0.34583568572998047
+              }
+            },
+            "hinge": {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 4.8159062180056935,
+              "evaluation": {
+                "accuracy": 0.7510986328125,
+                "parity_accuracy": 0.4995090663433075,
+                "protected_accuracy": 1.0,
+                "bce": 0.3725464344024658
+              }
+            }
+          },
+          "identical_initial_hashes": true
+        },
+        "recurrence": {
+          "candidate": {
+            "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+            "stream_seed": 9470002,
+            "rank": 32,
+            "xor_bit_ops": 134706,
+            "recovered_support": [
+              1,
+              2,
+              3,
+              7,
+              8,
+              9,
+              10,
+              13,
+              14,
+              16,
+              18,
+              20,
+              23,
+              25,
+              26,
+              30,
+              31
+            ],
+            "support_exact": true,
+            "compilation": {
+              "support_size": 17,
+              "tree_layers": 5,
+              "parity_coordinate": 48,
+              "routed_parity_coordinate": 49,
+              "routed_protected_coordinate": 50,
+              "nonzero_parameter_writes": 111
+            },
+            "elapsed_seconds": 0.03455888800090179,
+            "evaluation": {
+              "accuracy": 1.0,
+              "parity_accuracy": 1.0,
+              "protected_accuracy": 1.0,
+              "bce": 0.00033554970286786556
+            }
+          },
+          "controls": [
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.810136704007164,
+              "evaluation": {
+                "accuracy": 0.75048828125,
+                "parity_accuracy": 0.4955577850341797,
+                "protected_accuracy": 1.0,
+                "bce": 0.34366315603256226
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.805308024995611,
+              "evaluation": {
+                "accuracy": 0.74853515625,
+                "parity_accuracy": 0.4916090965270996,
+                "protected_accuracy": 1.0,
+                "bce": 0.3451732397079468
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.801021855993895,
+              "evaluation": {
+                "accuracy": 0.7509765625,
+                "parity_accuracy": 0.4965449571609497,
+                "protected_accuracy": 1.0,
+                "bce": 0.3438718914985657
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.803769183010445,
+              "evaluation": {
+                "accuracy": 0.7462158203125,
+                "parity_accuracy": 0.4869200587272644,
+                "protected_accuracy": 1.0,
+                "bce": 0.3447991609573364
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.8089059659978375,
+              "evaluation": {
+                "accuracy": 0.750244140625,
+                "parity_accuracy": 0.4950641989707947,
+                "protected_accuracy": 1.0,
+                "bce": 0.34548497200012207
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.805446826998377,
+              "evaluation": {
+                "accuracy": 0.757080078125,
+                "parity_accuracy": 0.5088845491409302,
+                "protected_accuracy": 1.0,
+                "bce": 0.34366023540496826
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.7804751790099544,
+              "evaluation": {
+                "accuracy": 0.7481689453125,
+                "parity_accuracy": 0.4908687472343445,
+                "protected_accuracy": 1.0,
+                "bce": 0.4007646441459656
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.781503589998465,
+              "evaluation": {
+                "accuracy": 0.7496337890625,
+                "parity_accuracy": 0.49432381987571716,
+                "protected_accuracy": 0.9995169043540955,
+                "bce": 0.38317176699638367
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.785891439998522,
+              "evaluation": {
+                "accuracy": 0.7491455078125,
+                "parity_accuracy": 0.49284306168556213,
+                "protected_accuracy": 1.0,
+                "bce": 0.36734506487846375
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.78807659400627,
+              "evaluation": {
+                "accuracy": 0.7525634765625,
+                "parity_accuracy": 0.4997532367706299,
+                "protected_accuracy": 1.0,
+                "bce": 0.353092759847641
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.846015080998768,
+              "evaluation": {
+                "accuracy": 0.7510986328125,
+                "parity_accuracy": 0.49728530645370483,
+                "protected_accuracy": 0.9995169043540955,
+                "bce": 0.38367658853530884
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.823865611004294,
+              "evaluation": {
+                "accuracy": 0.7449951171875,
+                "parity_accuracy": 0.48494574427604675,
+                "protected_accuracy": 0.9995169043540955,
+                "bce": 0.5302648544311523
+              }
+            }
+          ],
+          "best": {
+            "bce": {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.805446826998377,
+              "evaluation": {
+                "accuracy": 0.757080078125,
+                "parity_accuracy": 0.5088845491409302,
+                "protected_accuracy": 1.0,
+                "bce": 0.34366023540496826
+              }
+            },
+            "hinge": {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "942045ef1d4d2dc1e52e4cfd2f91204e8917c549855e0855daa6c56533104b30",
+              "examples": 128000,
+              "elapsed_seconds": 6.78807659400627,
+              "evaluation": {
+                "accuracy": 0.7525634765625,
+                "parity_accuracy": 0.4997532367706299,
+                "protected_accuracy": 1.0,
+                "bce": 0.353092759847641
+              }
+            }
+          },
+          "identical_initial_hashes": true
+        }
+      }
+    },
+    "1213": {
+      "latent_support": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        12,
+        13,
+        16,
+        17,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31
+      ],
+      "observed_support": [
+        0,
+        2,
+        3,
+        5,
+        8,
+        13,
+        18,
+        19,
+        20,
+        23,
+        27,
+        30,
+        31
+      ],
+      "mixing_density": 0.49609375,
+      "mixing_is_permutation": false,
+      "views": {
+        "mixed": {
+          "candidate": {
+            "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+            "stream_seed": 61213,
+            "rank": 32,
+            "xor_bit_ops": 135069,
+            "recovered_support": [
+              0,
+              2,
+              3,
+              5,
+              8,
+              13,
+              18,
+              19,
+              20,
+              23,
+              27,
+              30,
+              31
+            ],
+            "support_exact": true,
+            "compilation": {
+              "support_size": 13,
+              "tree_layers": 4,
+              "parity_coordinate": 44,
+              "routed_parity_coordinate": 45,
+              "routed_protected_coordinate": 46,
+              "nonzero_parameter_writes": 87
+            },
+            "elapsed_seconds": 0.034740504997898825,
+            "evaluation": {
+              "accuracy": 1.0,
+              "parity_accuracy": 1.0,
+              "protected_accuracy": 1.0,
+              "bce": 0.0003355498192831874
+            }
+          },
+          "controls": [
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.831129366997629,
+              "evaluation": {
+                "accuracy": 0.741943359375,
+                "parity_accuracy": 0.48900169134140015,
+                "protected_accuracy": 1.0,
+                "bce": 0.350645512342453
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.833390923013212,
+              "evaluation": {
+                "accuracy": 0.7493896484375,
+                "parity_accuracy": 0.5039883852005005,
+                "protected_accuracy": 0.9997534155845642,
+                "bce": 0.35232728719711304
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.8495148019865155,
+              "evaluation": {
+                "accuracy": 0.741455078125,
+                "parity_accuracy": 0.48803478479385376,
+                "protected_accuracy": 1.0,
+                "bce": 0.35112589597702026
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.841839216998778,
+              "evaluation": {
+                "accuracy": 0.7467041015625,
+                "parity_accuracy": 0.4996373951435089,
+                "protected_accuracy": 0.9987669587135315,
+                "bce": 0.35726267099380493
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.840466670997557,
+              "evaluation": {
+                "accuracy": 0.7467041015625,
+                "parity_accuracy": 0.4984287917613983,
+                "protected_accuracy": 1.0,
+                "bce": 0.3522329330444336
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.834438593999948,
+              "evaluation": {
+                "accuracy": 0.7452392578125,
+                "parity_accuracy": 0.4955281615257263,
+                "protected_accuracy": 1.0,
+                "bce": 0.35130274295806885
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.80090219801059,
+              "evaluation": {
+                "accuracy": 0.750244140625,
+                "parity_accuracy": 0.5054386854171753,
+                "protected_accuracy": 1.0,
+                "bce": 0.36982452869415283
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.80886164700496,
+              "evaluation": {
+                "accuracy": 0.7445068359375,
+                "parity_accuracy": 0.4940778315067291,
+                "protected_accuracy": 1.0,
+                "bce": 0.3608395457267761
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.81279264499608,
+              "evaluation": {
+                "accuracy": 0.746826171875,
+                "parity_accuracy": 0.4986705183982849,
+                "protected_accuracy": 1.0,
+                "bce": 0.3731120228767395
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.811878031003289,
+              "evaluation": {
+                "accuracy": 0.7421875,
+                "parity_accuracy": 0.48948511481285095,
+                "protected_accuracy": 1.0,
+                "bce": 0.36564400792121887
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.810374905995559,
+              "evaluation": {
+                "accuracy": 0.74755859375,
+                "parity_accuracy": 0.5001208782196045,
+                "protected_accuracy": 1.0,
+                "bce": 0.38338038325309753
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.826131659996463,
+              "evaluation": {
+                "accuracy": 0.7432861328125,
+                "parity_accuracy": 0.49238577485084534,
+                "protected_accuracy": 0.9992601871490479,
+                "bce": 0.4450802803039551
+              }
+            }
+          ],
+          "best": {
+            "bce": {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.833390923013212,
+              "evaluation": {
+                "accuracy": 0.7493896484375,
+                "parity_accuracy": 0.5039883852005005,
+                "protected_accuracy": 0.9997534155845642,
+                "bce": 0.35232728719711304
+              }
+            },
+            "hinge": {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 4.80090219801059,
+              "evaluation": {
+                "accuracy": 0.750244140625,
+                "parity_accuracy": 0.5054386854171753,
+                "protected_accuracy": 1.0,
+                "bce": 0.36982452869415283
+              }
+            }
+          },
+          "identical_initial_hashes": true
+        },
+        "recurrence": {
+          "candidate": {
+            "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+            "stream_seed": 12130000,
+            "rank": 32,
+            "xor_bit_ops": 134112,
+            "recovered_support": [
+              0,
+              2,
+              3,
+              5,
+              8,
+              13,
+              18,
+              19,
+              20,
+              23,
+              27,
+              30,
+              31
+            ],
+            "support_exact": true,
+            "compilation": {
+              "support_size": 13,
+              "tree_layers": 4,
+              "parity_coordinate": 44,
+              "routed_parity_coordinate": 45,
+              "routed_protected_coordinate": 46,
+              "nonzero_parameter_writes": 87
+            },
+            "elapsed_seconds": 0.03429029400285799,
+            "evaluation": {
+              "accuracy": 1.0,
+              "parity_accuracy": 1.0,
+              "protected_accuracy": 1.0,
+              "bce": 0.0003355493536219001
+            }
+          },
+          "controls": [
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.826037026999984,
+              "evaluation": {
+                "accuracy": 0.7486572265625,
+                "parity_accuracy": 0.5,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.3487136960029602
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.823165695997886,
+              "evaluation": {
+                "accuracy": 0.751953125,
+                "parity_accuracy": 0.5065565705299377,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.3506898283958435
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.816417141002603,
+              "evaluation": {
+                "accuracy": 0.750732421875,
+                "parity_accuracy": 0.5041282176971436,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.3487392067909241
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.813249069993617,
+              "evaluation": {
+                "accuracy": 0.7474365234375,
+                "parity_accuracy": 0.49781444668769836,
+                "protected_accuracy": 0.9997544884681702,
+                "bce": 5.216935157775879
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.812719535999349,
+              "evaluation": {
+                "accuracy": 0.7523193359375,
+                "parity_accuracy": 0.5072850584983826,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.34980422258377075
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.826086236993433,
+              "evaluation": {
+                "accuracy": 0.7518310546875,
+                "parity_accuracy": 0.5063137412071228,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.3500578701496124
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.906952580990037,
+              "evaluation": {
+                "accuracy": 0.75146484375,
+                "parity_accuracy": 0.5060709118843079,
+                "protected_accuracy": 0.9995090365409851,
+                "bce": 0.38836365938186646
+              }
+            },
+            {
+              "multiplier": 0.25,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 7.055855943006463,
+              "evaluation": {
+                "accuracy": 0.748779296875,
+                "parity_accuracy": 0.5002428293228149,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.5723699927330017
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 7.035653195998748,
+              "evaluation": {
+                "accuracy": 0.751953125,
+                "parity_accuracy": 0.5099563002586365,
+                "protected_accuracy": 0.9965635538101196,
+                "bce": 0.46078795194625854
+              }
+            },
+            {
+              "multiplier": 0.5,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.827692383012618,
+              "evaluation": {
+                "accuracy": 0.75,
+                "parity_accuracy": 0.5029140114784241,
+                "protected_accuracy": 0.9997544884681702,
+                "bce": 0.38187044858932495
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.788039794992073,
+              "evaluation": {
+                "accuracy": 0.7568359375,
+                "parity_accuracy": 0.5162700414657593,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.37330979108810425
+              }
+            },
+            {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.791317398994579,
+              "evaluation": {
+                "accuracy": 0.7586669921875,
+                "parity_accuracy": 0.5216124057769775,
+                "protected_accuracy": 0.9982817769050598,
+                "bce": 678906560512.0
+              }
+            }
+          ],
+          "best": {
+            "bce": {
+              "multiplier": 1.0,
+              "lr": 0.001,
+              "loss": "bce",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.812719535999349,
+              "evaluation": {
+                "accuracy": 0.7523193359375,
+                "parity_accuracy": 0.5072850584983826,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.34980422258377075
+              }
+            },
+            "hinge": {
+              "multiplier": 1.0,
+              "lr": 0.003,
+              "loss": "hinge",
+              "initial_hash": "725322e79b5969fdfd42b04574510b22ca9e78dfd2fd7461a2fc19d4f48d2fac",
+              "examples": 128000,
+              "elapsed_seconds": 6.791317398994579,
+              "evaluation": {
+                "accuracy": 0.7586669921875,
+                "parity_accuracy": 0.5216124057769775,
+                "protected_accuracy": 0.9982817769050598,
+                "bce": 678906560512.0
+              }
+            }
+          },
+          "identical_initial_hashes": true
+        }
+      }
+    }
+  },
+  "gates": {
+    "731_mixing_not_permutation": true,
+    "731_mixed_candidate_full_ge_99": true,
+    "731_mixed_candidate_parity_ge_99": true,
+    "731_mixed_candidate_protected_ge_99": true,
+    "731_mixed_support_exact": true,
+    "731_mixed_same_initialization": true,
+    "731_mixed_rademacher_parity_lt_80": true,
+    "731_mixed_rademacher_protected_ge_95": true,
+    "731_recurrence_candidate_full_ge_99": true,
+    "731_recurrence_candidate_parity_ge_99": true,
+    "731_recurrence_candidate_protected_ge_99": true,
+    "731_recurrence_support_exact": true,
+    "731_recurrence_same_initialization": true,
+    "731_recurrence_rademacher_parity_lt_80": true,
+    "731_recurrence_rademacher_protected_ge_95": true,
+    "947_mixing_not_permutation": true,
+    "947_mixed_candidate_full_ge_99": true,
+    "947_mixed_candidate_parity_ge_99": true,
+    "947_mixed_candidate_protected_ge_99": true,
+    "947_mixed_support_exact": true,
+    "947_mixed_same_initialization": true,
+    "947_mixed_rademacher_parity_lt_80": true,
+    "947_mixed_rademacher_protected_ge_95": true,
+    "947_recurrence_candidate_full_ge_99": true,
+    "947_recurrence_candidate_parity_ge_99": true,
+    "947_recurrence_candidate_protected_ge_99": true,
+    "947_recurrence_support_exact": true,
+    "947_recurrence_same_initialization": true,
+    "947_recurrence_rademacher_parity_lt_80": true,
+    "947_recurrence_rademacher_protected_ge_95": true,
+    "1213_mixing_not_permutation": true,
+    "1213_mixed_candidate_full_ge_99": true,
+    "1213_mixed_candidate_parity_ge_99": true,
+    "1213_mixed_candidate_protected_ge_99": true,
+    "1213_mixed_support_exact": true,
+    "1213_mixed_same_initialization": true,
+    "1213_mixed_rademacher_parity_lt_80": true,
+    "1213_mixed_rademacher_protected_ge_95": true,
+    "1213_recurrence_candidate_full_ge_99": true,
+    "1213_recurrence_candidate_parity_ge_99": true,
+    "1213_recurrence_candidate_protected_ge_99": true,
+    "1213_recurrence_support_exact": true,
+    "1213_recurrence_same_initialization": true,
+    "1213_recurrence_rademacher_parity_lt_80": true,
+    "1213_recurrence_rademacher_protected_ge_95": true
+  },
+  "all_gates_pass": true,
+  "integrity": {
+    "source_sha256": "2e2c789d81ad0737a44c724ad73d41350f02f49ba0108dedde5e3c49dee6d501",
+    "test_sha256": "af293ec425b9387154f2a2105d8141b2e21416e1839f149cf2334125fe522782",
+    "preregistration_sha256": "0fad365959686762ddcfcd3d8530f843a13e92b2cd508f46052b6a4716263ac2",
+    "predecessor_sha256": "e74fc24340ce11ac967ed36a26afcfcac234ba566fc4e80c6697793439cd64cd"
+  }
+}

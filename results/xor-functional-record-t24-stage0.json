@@ -1,0 +1,148 @@
+{
+  "bf16": {
+    "decoded_indices_exact": true,
+    "levels": [
+      -15.0,
+      -13.0,
+      -11.0,
+      -9.0,
+      -7.0,
+      -5.0,
+      -3.0,
+      -1.0,
+      1.0,
+      3.0,
+      5.0,
+      7.0,
+      9.0,
+      11.0,
+      13.0,
+      15.0
+    ],
+    "roundtrip_values_exact": true
+  },
+  "claim_boundary": "Exact raw-derived storage/read identity only; no natural query parsing, knowledge gain, physical Transformer export, or smarter-model claim.",
+  "conditions": {
+    "correct": {
+      "all": {
+        "accuracy": 1.0,
+        "correct": 14146,
+        "examples": 14146
+      },
+      "evaluation": {
+        "accuracy": 1.0,
+        "correct": 2833,
+        "examples": 2833
+      },
+      "train": {
+        "accuracy": 1.0,
+        "correct": 11313,
+        "examples": 11313
+      }
+    },
+    "random": {
+      "all": {
+        "accuracy": 0.007139827513077902,
+        "correct": 101,
+        "examples": 14146
+      },
+      "evaluation": {
+        "accuracy": 0.0063536886692552065,
+        "correct": 18,
+        "examples": 2833
+      },
+      "train": {
+        "accuracy": 0.007336692300892778,
+        "correct": 83,
+        "examples": 11313
+      }
+    },
+    "shuffled": {
+      "all": {
+        "accuracy": 0.23123144351760214,
+        "correct": 3271,
+        "examples": 14146
+      },
+      "evaluation": {
+        "accuracy": 0.22273208612777973,
+        "correct": 631,
+        "examples": 2833
+      },
+      "train": {
+        "accuracy": 0.23335985149827632,
+        "correct": 2640,
+        "examples": 11313
+      }
+    },
+    "zero": {
+      "all": {
+        "accuracy": 0.24777322211225788,
+        "correct": 3505,
+        "examples": 14146
+      },
+      "evaluation": {
+        "accuracy": 0.24214613483939287,
+        "correct": 686,
+        "examples": 2833
+      },
+      "train": {
+        "accuracy": 0.2491823565809246,
+        "correct": 2819,
+        "examples": 11313
+      }
+    }
+  },
+  "corpus": {
+    "documents": 2405,
+    "path": "data/hotpot-real-prose-t12/candidate-raw-prose.jsonl",
+    "sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a"
+  },
+  "decision": "admit_one_learned_language_interface_experiment",
+  "gates": {
+    "all_controls_at_least_20_points_below": true,
+    "all_evaluation_reads_bit_exact": true,
+    "all_registered_reads_bit_exact": true,
+    "bf16_levels_and_indices_exact": true,
+    "fixed_record_budget_exact": true,
+    "physical_cells_and_ranges_exact": true,
+    "raw_quotient_exact": true,
+    "single_global_hash_family_full_row_rank": true
+  },
+  "information": {
+    "payload_bits": 7,
+    "semantic_bits_maximum_document": 319,
+    "semantic_bits_mean_covered_document": 18.077846975088967,
+    "semantic_bits_total": 40639,
+    "unused_physical_bits_are_not_counted_as_compression_gain": true
+  },
+  "provenance": {
+    "preregistration_sha256": "be07f9de6c7ebbafaa9f0d832ce79bc5af07c57b3ac0630de2231ceaa695060f",
+    "source_sha256": "657428ea4914abd7532911da44375788d5b48466d6fe497aefca399c4ebd10ae",
+    "source_stage0_sha256": "457c13f0ed2e9dfcdb1b1d68f6259a18ad2b4f5e331ca2977aee2488fe6ac6c7"
+  },
+  "quotient": {
+    "covered_documents": 2248,
+    "edges": 14146,
+    "maximum_edges_per_document": 101,
+    "maximum_target_cardinality": 65,
+    "mean_edges_per_covered_document": 6.29270462633452,
+    "skeletons": 3392
+  },
+  "record": {
+    "hash_family": 1,
+    "hashes_per_query": 3,
+    "high_cells": 109,
+    "logical_slots": 109,
+    "logical_solution_bits_per_document": 763,
+    "low_cells": 109,
+    "maximum_rank": 101,
+    "minimum_rank_over_covered_documents": 1,
+    "per_document_hash_retries": 0,
+    "physical_bits_per_document": 880,
+    "physical_cells_per_document": 220,
+    "reserved_cells": 2
+  },
+  "schema": "xor-functional-record-t24-stage0-v1",
+  "stage0_pass": true,
+  "status": "stage0_only_not_capability_evidence"
+}

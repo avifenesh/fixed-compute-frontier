@@ -1,0 +1,97 @@
+{
+  "admission": "no_neural_no_gpu",
+  "analytic_references": {
+    "constructive_adaptive": {
+      "average_accuracy_exact": 0.9668041328225241,
+      "class_conditional_errors": [
+        0.00495104391029842,
+        0.006270475685596466
+      ],
+      "probes": 168,
+      "repetitions_per_decision": 28,
+      "worst_world_accuracy_exact": 0.9629620210379904
+    },
+    "fixed_nonadaptive": {
+      "class_conditional_errors": [
+        0.0014697224972242636,
+        0.0011107168866146822
+      ],
+      "probes": 1280,
+      "repetitions_per_selector": 40,
+      "average_accuracy_exact": 0.9777728905492991,
+      "worst_world_accuracy_exact": 0.9540247016446591
+    }
+  },
+  "entropy_greedy_reference": {
+    "actions": {
+      "max": 168,
+      "mean": 45.39697265625,
+      "median": 42.0,
+      "p95": 80.0
+    },
+    "average_accuracy": 0.9603271484375,
+    "average_accuracy_cp95": [
+      0.9558724204966477,
+      0.964450477356961
+    ],
+    "average_censored": 1,
+    "average_episodes": 8192,
+    "horizon": 168,
+    "policy": "exact_posterior_one_step_entropy_greedy_not_globally_optimal",
+    "posterior_stop": 0.95,
+    "stratified_censored": 0,
+    "stratified_episodes_per_world": 128,
+    "worst_bonferroni_cp95_lower": 0.8010446832672223,
+    "worst_world_accuracy": 0.9140625
+  },
+  "experiment": "t75-stage-a-model-free-v0",
+  "information_floor": {
+    "capacity_bits_per_probe": 0.14758941820100888,
+    "fano_fixed_integer_budget_floor": 37,
+    "fano_fixed_real_budget_floor": 36.68785413419317,
+    "fano_variable_expected_budget_floor": 36.68785413419317,
+    "q_star": 0.46231297198786375
+  },
+  "invariants": {
+    "evidence_order_invariance": true,
+    "likelihood_normalization": true,
+    "nonadaptive_location_witnesses": true,
+    "passive_zero_information": true,
+    "rational_float_filter_agreement": true,
+    "selector_reflection_equivariance": true,
+    "simulator_filter_identity": true,
+    "world_injectivity": true
+  },
+  "scope": "mechanics_only_no_neural_claim",
+  "small_exact_dp": {
+    "cached_states": 1092,
+    "horizons": [0, 1, 2, 3, 4, 5, 6],
+    "lambda": 0.01,
+    "m": 3,
+    "monotone_nonincreasing": true,
+    "values": [
+      0.75,
+      0.66,
+      0.53,
+      0.4631,
+      0.41434,
+      0.393289,
+      0.3661544
+    ],
+    "values_exact": [
+      "3/4",
+      "33/50",
+      "53/100",
+      "4631/10000",
+      "20717/50000",
+      "393289/1000000",
+      "457693/1250000"
+    ]
+  },
+  "status": "pass",
+  "world": {
+    "epsilon": 0.1,
+    "m": 33,
+    "worlds": 64
+  }
+}

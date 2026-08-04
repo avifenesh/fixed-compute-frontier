@@ -1,0 +1,104 @@
+{
+  "claim_boundary": "Raw-only bridge-existence census. No semantic-purity, natural-QA, model-training, physical-plane, or production claim.",
+  "experiment": "extensional-incidence-quotient-t28-stage0-census",
+  "frozen_rules": {
+    "bridge": "same exact (title,value) tuple under distinct patterns",
+    "max_facts_per_document": 24,
+    "subject": "casefold-exact own-title occurrence",
+    "tokenizer": "\\w+|[^\\w\\s] casefolded",
+    "value_document_frequency": [2, 120],
+    "value_tokens": [1, 4]
+  },
+  "gates": {
+    "bridged_document_fraction": false,
+    "bridged_tuple_fraction": false,
+    "cpu_only_finite": true,
+    "fact_budget": false,
+    "input_and_field_boundary": true,
+    "qualifying_component_count": false,
+    "qualifying_document_fraction": false,
+    "relation_and_value_cardinality": true,
+    "witness_and_constructor_integrity": true
+  },
+  "input": {
+    "fields": ["title", "text"],
+    "path": "data/hotpot-real-prose-t12/candidate-raw-prose.jsonl",
+    "sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a"
+  },
+  "integrity": {
+    "preregistration_sha256": "34456f1c5be36429493507ce297dd1a432e2ef1ea8b3ecac3a3312b21ca156ee",
+    "reverse_document_order_agreement": true,
+    "source_sha256": "a872762ce07698cfb15bd034768298971321f24b2b98c5787451c0dbc7eea0a9",
+    "test_sha256": "35ab8d9d5c7a031ee73de6ddb0caebe845f538c77ec9e9476a05002e2c8ce2e0"
+  },
+  "metrics": {
+    "bridged_document_fraction": 0.2577962577962578,
+    "bridged_documents": 620,
+    "bridged_tuple_fraction": 0.037397529902883225,
+    "bridged_tuples": 1729,
+    "component_key_count": 167,
+    "component_pattern_sizes": {
+      "count": 167,
+      "max": 1,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 1,
+      "p95": 1
+    },
+    "components_sha256": "0a1893392adcb9fae2f0ff7663355ab78a1ec29895dfd7156efc5945e303001c",
+    "covered_documents_fit_24_fraction": 0.0,
+    "cpu_seconds": 0.8253511800000001,
+    "deduplicated_edges": 48352,
+    "distinct_patterns": 48124,
+    "distinct_tuples": 46233,
+    "distinct_value_spans_all_df": 310886,
+    "documents": 2405,
+    "documents_over_24_facts": 0,
+    "eligible_subject_sentences": 2107,
+    "facts_per_all_document": {
+      "count": 2405,
+      "max": 0,
+      "median": 0,
+      "min": 0,
+      "p25": 0,
+      "p75": 0,
+      "p95": 0
+    },
+    "facts_per_covered_document": {
+      "count": 0,
+      "max": 0,
+      "median": 0,
+      "min": 0,
+      "p25": 0,
+      "p75": 0,
+      "p95": 0
+    },
+    "graph_components": 167,
+    "graph_edges": 0,
+    "graph_nodes": 167,
+    "logical_edge_json_bytes": 12197893,
+    "logical_graph_json_bytes": 2,
+    "peak_rss_kib": 883452,
+    "qualifying_component_metadata": [],
+    "qualifying_components": 0,
+    "qualifying_document_fraction": 0.0,
+    "qualifying_documents": 0,
+    "raw_emitted_edges": 48355,
+    "retained_value_dictionary": 0,
+    "sentences": 10245,
+    "tokens": 236109,
+    "value_document_frequency": {
+      "count": 310886,
+      "max": 2235,
+      "median": 1,
+      "min": 1,
+      "p25": 1,
+      "p75": 1,
+      "p95": 3
+    },
+    "wall_seconds": 0.8254276989900973,
+    "witness_regeneration_failures": 0
+  },
+  "status": "FAIL"
+}

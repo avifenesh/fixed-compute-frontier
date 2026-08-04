@@ -1,0 +1,14 @@
+{
+  "schema": "triangular-value-encoding-cache-h100-integrity-v4",
+  "formal_source_sha256": "dd25771fd863350a0df845542e936db2703f0d4f2106588876f746e71c5f13e1",
+  "executor_source_sha256": "d280a18ef15d923855f5f4b005936a42520084cfdb086cf104910e4df2f789f0",
+  "attention_source_sha256": "f34bd9a29d4857d0f7d1855644c090bf5984acf382ab50b8c401f2da65b09fcf",
+  "attention_test_sha256": "dac50631bde276e69fdea542868b09a895bc0c5715df7e010210353d188d2820",
+  "bridge_test_sha256": "74c1bf44fbb9fe04243d3f1edf0b6e02db752d5e36dbecf477e320fd79aab894",
+  "preregistration_sha256": "d26ad172dd188aa6bb3ab830db362a924ccc8b6a28442eed1733702d4af24ca8",
+  "python_version": "3.11.10",
+  "numpy_version": "2.1.2",
+  "torch_version": "2.5.1+cu124",
+  "cuda_version": "12.4",
+  "triton_version": "3.1.0"
+}

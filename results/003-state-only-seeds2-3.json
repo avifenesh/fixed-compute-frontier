@@ -1,0 +1,215 @@
+{
+  "config": {
+    "batch": 128,
+    "d_model": 48,
+    "eval_batches": 10,
+    "keys": 16,
+    "layers": 3,
+    "learning_rate": 0.002,
+    "memory_width": 24,
+    "modes": [
+      "top_both",
+      "input_both",
+      "top_exact_masked",
+      "top_summary_masked"
+    ],
+    "ring_size": 8,
+    "seeds": [
+      2,
+      3
+    ],
+    "sequence_length": 48,
+    "state_modulus": 4,
+    "task": "state",
+    "train_steps": 200,
+    "values": 16
+  },
+  "device": "cuda",
+  "results": [
+    {
+      "eval_seconds": 1.5239495374262333,
+      "metrics": {
+        "loss": 1.2351324558258057,
+        "macro_accuracy": 0.3529672622680664,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.3529672622680664,
+        "state_count": 18030,
+        "state_majority_baseline": 0.26849696040153503,
+        "target_count": 18030
+      },
+      "mode": "top_both",
+      "parameters": 64129,
+      "seed": 2,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 84.61128022894263,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 1.4839976569637656,
+      "metrics": {
+        "loss": 0.9531245827674866,
+        "macro_accuracy": 0.5654552578926086,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.5654552578926086,
+        "state_count": 17913,
+        "state_majority_baseline": 0.2751074731349945,
+        "target_count": 17913
+      },
+      "mode": "top_both",
+      "parameters": 64129,
+      "seed": 3,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 84.02470369264483,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 1.493093109689653,
+      "metrics": {
+        "loss": 1.3657231330871582,
+        "macro_accuracy": 0.2668885290622711,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.2668885290622711,
+        "state_count": 18030,
+        "state_majority_baseline": 0.26849696040153503,
+        "target_count": 18030
+      },
+      "mode": "input_both",
+      "parameters": 64129,
+      "seed": 2,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 84.10938625689596,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 1.4928683508187532,
+      "metrics": {
+        "loss": 1.3684450387954712,
+        "macro_accuracy": 0.2693016231060028,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.2693016231060028,
+        "state_count": 17913,
+        "state_majority_baseline": 0.2751074731349945,
+        "target_count": 17913
+      },
+      "mode": "input_both",
+      "parameters": 64129,
+      "seed": 3,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 84.01180960610509,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 1.5071165319532156,
+      "metrics": {
+        "loss": 1.3811088800430298,
+        "macro_accuracy": 0.26999446749687195,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.26999446749687195,
+        "state_count": 18030,
+        "state_majority_baseline": 0.26849696040153503,
+        "target_count": 18030
+      },
+      "mode": "top_exact_masked",
+      "parameters": 64129,
+      "seed": 2,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 84.91938153281808,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 1.5059893233701587,
+      "metrics": {
+        "loss": 1.3829803466796875,
+        "macro_accuracy": 0.26779434084892273,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.26779434084892273,
+        "state_count": 17913,
+        "state_majority_baseline": 0.2751074731349945,
+        "target_count": 17913
+      },
+      "mode": "top_exact_masked",
+      "parameters": 64129,
+      "seed": 3,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 84.89273515343666,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 1.5091733261942863,
+      "metrics": {
+        "loss": 1.1182818412780762,
+        "macro_accuracy": 0.44486966729164124,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.44486966729164124,
+        "state_count": 18030,
+        "state_majority_baseline": 0.26849696040153503,
+        "target_count": 18030
+      },
+      "mode": "top_summary_masked",
+      "parameters": 64129,
+      "seed": 2,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 85.32066655065864,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 1.5214431248605251,
+      "metrics": {
+        "loss": 0.8380320072174072,
+        "macro_accuracy": 0.6385306715965271,
+        "old_get": 0.0,
+        "old_get_count": 0,
+        "old_get_majority_baseline": 0.0,
+        "recent_get": 0.0,
+        "recent_get_count": 0,
+        "recent_get_majority_baseline": 0.0,
+        "state": 0.6385306715965271,
+        "state_count": 17913,
+        "state_majority_baseline": 0.2751074731349945,
+        "target_count": 17913
+      },
+      "mode": "top_summary_masked",
+      "parameters": 64129,
+      "seed": 3,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 85.14385582134128,
+      "writer_commits_per_token": 1
+    }
+  ],
+  "torch": "2.11.0+cu130"
+}

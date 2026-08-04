@@ -1,0 +1,1465 @@
+{
+  "cell_key": "D1/E2/1707",
+  "checkpoint_freeze_receipt_sha256": "10749e85bcd6c699aa8e277c9db92126d0e40d681ed1684756eba725a2e27c63",
+  "continuations": {
+    "cells": {
+      "D1/E2/1707": {
+        "arms": {
+          "DIRECT3": {
+            "conditional_suffix_nll": 167.73369061454287,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.999,
+            "strata": 24,
+            "stratified_outcome_tv": 1.0000000000000009
+          },
+          "HARD3": {
+            "conditional_suffix_nll": 133.89119546833066,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0001,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9985,
+            "strata": 24,
+            "stratified_outcome_tv": 1.0000000000000009
+          },
+          "K1": {
+            "conditional_suffix_nll": 165.14599188994336,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9996,
+            "strata": 24,
+            "stratified_outcome_tv": 1.0000000000000009
+          },
+          "K2": {
+            "conditional_suffix_nll": 164.83975308813382,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9996,
+            "strata": 24,
+            "stratified_outcome_tv": 1.0000000000000009
+          },
+          "K3": {
+            "conditional_suffix_nll": 164.9639127485161,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9996,
+            "strata": 24,
+            "stratified_outcome_tv": 1.0000000000000009
+          },
+          "LINK32": {
+            "conditional_suffix_nll": 147.6754038836952,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9998,
+            "strata": 24,
+            "stratified_outcome_tv": 1.0000000000000009
+          },
+          "MLP": {
+            "conditional_suffix_nll": 173.32739489109147,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 1.0,
+            "strata": 24,
+            "stratified_outcome_tv": 1.0000000000000009
+          },
+          "RNN32": {
+            "conditional_suffix_nll": 91.26028525691112,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.004,
+            "no_eos_rate": 0.0003,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9934,
+            "strata": 24,
+            "stratified_outcome_tv": 1.0000000000000009
+          },
+          "S32": {
+            "conditional_suffix_nll": 163.6419435610755,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9997,
+            "strata": 24,
+            "stratified_outcome_tv": 1.0000000000000009
+          }
+        },
+        "family": "D1",
+        "seed": 1707,
+        "split": "E2"
+      }
+    },
+    "paired_samples_per_cell": 10000,
+    "sampling_seed": 9401,
+    "schema": "cpkv-topk-001-continuations-v1"
+  },
+  "lineage": "CPKV-TOPK-001",
+  "locked_evaluator_sha256": "d7cadcb82ba8f25b92ddc96f01a0f38cc60fb375fa0e8fcb592d43a4a9657086",
+  "manifest_sha256": "c48cf230e86162e598a87d1b3c9eb0b5714066195d044341685ab9ecbd21060e",
+  "schema": "cpkv-topk-001-locked-evaluation-shard-v1",
+  "shard_index": 56,
+  "status": "complete",
+  "teacher_forced": {
+    "cells": {
+      "D1/E2/1707": {
+        "arms": {
+          "DIRECT3": {
+            "conditional_suffix_nll": 167.73369061454287,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.6128053279851664,
+            "delayed_nll": 6.345943312141154,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.1138591943692884,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.1435270473957461,
+                "nll": 2.1709342607339295,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.13620725604670558,
+                "nll": 2.220112388604269,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.1289405186541984,
+                "nll": 2.2648055790650923,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.12382176520994002,
+                "nll": 2.3000958880998796,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.11862068965517242,
+                "nll": 2.3246448131801167,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.11333275124421549,
+                "nll": 2.3653042766510226,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.11428053970841257,
+                "nll": 2.4151888901457546,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.11059113300492611,
+                "nll": 2.4362174974714925,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.10441837904577123,
+                "nll": 2.4610543480514835,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.0994949494949495,
+                "nll": 2.4703909823528565,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.09425649095200629,
+                "nll": 2.503492132383674,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.09786585365853659,
+                "nll": 2.533129275245152,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.38429629504338,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 1595590,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 18227,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 63,
+              "merged_candidates": 21123534,
+              "payload_reads": 1615590,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 1306908,
+              "push_candidates": 14360310,
+              "retained_configurations": 1615590,
+              "softmaxes": 924647,
+              "tokens": 538530,
+              "valid_transition_branches": 23903850
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.6128053279851664,
+                "nll": 6.345943312141154,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.240202385014843,
+            "sequences": 10000,
+            "token_nll": 4.284669315646236,
+            "tokens": 538530
+          },
+          "HARD3": {
+            "conditional_suffix_nll": 133.89119546833066,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.6293606796208352,
+            "delayed_nll": 5.065050633782336,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.11077516886458669,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.13839111259978787,
+                "nll": 2.206386234991576,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.1316722268557131,
+                "nll": 2.250194203377177,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.12990455991516436,
+                "nll": 2.284344524638193,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.12462510711225364,
+                "nll": 2.316105370001222,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.11763546798029556,
+                "nll": 2.3364595821342977,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.11346372129573037,
+                "nll": 2.369979881490937,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.10757946210268948,
+                "nll": 2.4053470349932042,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.101559934318555,
+                "nll": 2.4222305357753795,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.10234588588058911,
+                "nll": 2.445559249356168,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.09705387205387206,
+                "nll": 2.4580481392092923,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.0930763178599528,
+                "nll": 2.4816842462515285,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.09211128048780488,
+                "nll": 2.5026817256295346,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.383188734095427,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 1615590,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 18119,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 45,
+              "merged_candidates": 1615590,
+              "payload_reads": 1615590,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 1244508,
+              "push_candidates": 14540310,
+              "retained_configurations": 1615590,
+              "softmaxes": 1615590,
+              "tokens": 538530,
+              "valid_transition_branches": 24143850
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.6293606796208352,
+                "nll": 5.065050633782336,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 3.6236881286569456,
+            "sequences": 10000,
+            "token_nll": 3.6557022366422656,
+            "tokens": 538530
+          },
+          "K1": {
+            "conditional_suffix_nll": 165.14599188994336,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.6106673225739314,
+            "delayed_nll": 6.2488095805008435,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.12061756191701511,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.1521799810193714,
+                "nll": 2.108042207606656,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.14418265221017515,
+                "nll": 2.154689316988761,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.13882194157909958,
+                "nll": 2.194721665381883,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.13046272493573266,
+                "nll": 2.230503669327471,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.12669950738916255,
+                "nll": 2.2558725572807163,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.1202305072906662,
+                "nll": 2.2924387698336743,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.11939690301548492,
+                "nll": 2.3324889192014853,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.11522988505747127,
+                "nll": 2.3550740830365253,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.11098862333539113,
+                "nll": 2.3772432988856087,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.10711279461279462,
+                "nll": 2.3897875538834477,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.100786782061369,
+                "nll": 2.418422000613719,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.10186737804878049,
+                "nll": 2.4443134852560084,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.307433444965045,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 538530,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 17160,
+              "maximum_retained_configurations": 1,
+              "maximum_stack_depth": 53,
+              "merged_candidates": 8047950,
+              "payload_reads": 538530,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 445089,
+              "push_candidates": 4846770,
+              "retained_configurations": 538530,
+              "softmaxes": 538530,
+              "tokens": 538530,
+              "valid_transition_branches": 8047950
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.6106673225739314,
+                "nll": 6.2488095805008435,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.1600644382471375,
+            "sequences": 10000,
+            "token_nll": 4.19890037367106,
+            "tokens": 538530
+          },
+          "K2": {
+            "conditional_suffix_nll": 164.83975308813382,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.6106673225739314,
+            "delayed_nll": 6.23723671557549,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.12061756191701511,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.1521799810193714,
+                "nll": 2.108042207606656,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.14418265221017515,
+                "nll": 2.154689316988761,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.13882194157909958,
+                "nll": 2.194721665381883,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.13046272493573266,
+                "nll": 2.230503669327471,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.12669950738916255,
+                "nll": 2.2558725572807163,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.1202305072906662,
+                "nll": 2.2924387698336743,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.11939690301548492,
+                "nll": 2.3324889192014853,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.11522988505747127,
+                "nll": 2.3550740830365253,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.11098862333539113,
+                "nll": 2.3772432988856087,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.10711279461279462,
+                "nll": 2.3897875538834477,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.100786782061369,
+                "nll": 2.418422000613719,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.10186737804878049,
+                "nll": 2.4443134852560084,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.307433444965045,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 1067060,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 17680,
+              "maximum_retained_configurations": 2,
+              "maximum_stack_depth": 53,
+              "merged_candidates": 15841866,
+              "payload_reads": 1077060,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 887889,
+              "push_candidates": 9603540,
+              "retained_configurations": 1077060,
+              "softmaxes": 581374,
+              "tokens": 538530,
+              "valid_transition_branches": 15975900
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.6106673225739314,
+                "nll": 6.23723671557549,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.154871777487027,
+            "sequences": 10000,
+            "token_nll": 4.193213804644105,
+            "tokens": 538530
+          },
+          "K3": {
+            "conditional_suffix_nll": 164.9639127485161,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.6107732768243997,
+            "delayed_nll": 6.2419524874165395,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.12061756191701511,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.1521799810193714,
+                "nll": 2.108042207606656,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.14418265221017515,
+                "nll": 2.154689316988761,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.13882194157909958,
+                "nll": 2.194721665381883,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.13046272493573266,
+                "nll": 2.230503669327471,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.12669950738916255,
+                "nll": 2.2558725572807163,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.1202305072906662,
+                "nll": 2.2924387698336743,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.11939690301548492,
+                "nll": 2.3324889192014853,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.11522988505747127,
+                "nll": 2.3550740830365253,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.11098862333539113,
+                "nll": 2.3772432988856087,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.10711279461279462,
+                "nll": 2.3897875538834477,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.100786782061369,
+                "nll": 2.418422000613719,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.10186737804878049,
+                "nll": 2.4443134852560084,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.307433444965045,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 1595590,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 18164,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 53,
+              "merged_candidates": 22816383,
+              "payload_reads": 1615590,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 1304469,
+              "push_candidates": 14360310,
+              "retained_configurations": 1615590,
+              "softmaxes": 704890,
+              "tokens": 538530,
+              "valid_transition_branches": 23903850
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.6107732768243997,
+                "nll": 6.2419524874165395,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.157370585313292,
+            "sequences": 10000,
+            "token_nll": 4.1955193337768,
+            "tokens": 538530
+          },
+          "LINK32": {
+            "conditional_suffix_nll": 147.6754038836952,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.6156812290693054,
+            "delayed_nll": 5.587859495320117,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.11758651353754754,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.1495003628649584,
+                "nll": 2.1468665444364823,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.13881359466221851,
+                "nll": 2.193601325848369,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.13732767762460232,
+                "nll": 2.233513632664554,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.12864181662382176,
+                "nll": 2.267864228870009,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.12428571428571429,
+                "nll": 2.293472128041703,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.11569021217148345,
+                "nll": 2.32949409484242,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.11658969482930363,
+                "nll": 2.3695917377869193,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.11182266009852217,
+                "nll": 2.3901061945887347,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.10675544580650852,
+                "nll": 2.4134460427018114,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.10475589225589226,
+                "nll": 2.426685385870627,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.0992918961447679,
+                "nll": 2.4541395929706833,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.09817073170731708,
+                "nll": 2.4804770206271365,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.344456089554327,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 16592960,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 18907,
+              "maximum_retained_configurations": 32,
+              "maximum_stack_depth": 65,
+              "merged_candidates": 25309239,
+              "payload_reads": 16782960,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 1601609,
+              "push_candidates": 149336640,
+              "retained_configurations": 16902960,
+              "softmaxes": 4636686,
+              "tokens": 538530,
+              "valid_transition_branches": 248504400
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.6156812290693054,
+                "nll": 5.587859495320117,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 3.856376074006332,
+            "sequences": 10000,
+            "token_nll": 3.892655427447196,
+            "tokens": 538530
+          },
+          "MLP": {
+            "conditional_suffix_nll": 173.32739489109147,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.5693413808109284,
+            "delayed_nll": 6.556030603517696,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.12506764043668286,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.15809747111036676,
+                "nll": 2.1525870243194904,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.14856130108423687,
+                "nll": 2.191591682694409,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.1411838426684662,
+                "nll": 2.225595478144105,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.1358718937446444,
+                "nll": 2.2531798959252107,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.13118226600985222,
+                "nll": 2.276037056868157,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.12869990395529557,
+                "nll": 2.305645397238987,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.12464909897672734,
+                "nll": 2.334469404152087,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.11855500821018063,
+                "nll": 2.353445178116153,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.11363435929094276,
+                "nll": 2.3763277042749955,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.11018518518518519,
+                "nll": 2.3869218818696094,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.10763178599527931,
+                "nll": 2.411444923975431,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.10365853658536585,
+                "nll": 2.432000189417826,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.31763678529082,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 0,
+              "configurations_expanded": 0,
+              "dense_macs": 9788321280,
+              "logical_peak_auxiliary_bytes": 0,
+              "maximum_retained_configurations": 0,
+              "maximum_stack_depth": 0,
+              "merged_candidates": 0,
+              "payload_reads": 0,
+              "payload_vectors_written": 0,
+              "persistent_nodes_written": 0,
+              "push_candidates": 0,
+              "retained_configurations": 0,
+              "softmaxes": 0,
+              "tokens": 538530,
+              "valid_transition_branches": 0
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.5693413808109284,
+                "nll": 6.556030603517696,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.310617579358752,
+            "sequences": 10000,
+            "token_nll": 4.355828336352268,
+            "tokens": 538530
+          },
+          "RNN32": {
+            "conditional_suffix_nll": 91.26028525691112,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.539590940911585,
+            "delayed_nll": 3.3620232934194694,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.09804930656727148,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.12320660972478088,
+                "nll": 3.092790167410402,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.11874478732276897,
+                "nll": 3.1798847445963636,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.11472091005495035,
+                "nll": 3.2564164382821468,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.10962939160239932,
+                "nll": 3.3311867525209693,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.10448275862068966,
+                "nll": 3.3967975043964445,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.1002357460927268,
+                "nll": 3.4737006613756747,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.09300009055510278,
+                "nll": 3.5530252553833317,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.08969622331691297,
+                "nll": 3.6095609378341393,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.08819119851838786,
+                "nll": 3.661438482047988,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.08754208754208755,
+                "nll": 3.7019770676788313,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.08564122738001574,
+                "nll": 3.7478191729823775,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.0794969512195122,
+                "nll": 3.808570829777215,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 3.5089237302704337,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 0,
+              "configurations_expanded": 0,
+              "dense_macs": 9788321280,
+              "logical_peak_auxiliary_bytes": 128,
+              "maximum_retained_configurations": 0,
+              "maximum_stack_depth": 0,
+              "merged_candidates": 0,
+              "payload_reads": 0,
+              "payload_vectors_written": 0,
+              "persistent_nodes_written": 0,
+              "push_candidates": 0,
+              "retained_configurations": 0,
+              "softmaxes": 0,
+              "tokens": 538530,
+              "valid_transition_branches": 0
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.539590940911585,
+                "nll": 3.3620232934194694,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 3.3874042539378175,
+            "sequences": 10000,
+            "token_nll": 3.4165015545080193,
+            "tokens": 538530
+          },
+          "S32": {
+            "conditional_suffix_nll": 163.6419435610755,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.6105840728057064,
+            "delayed_nll": 6.191963886958136,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.11943692884036856,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.15072852118573105,
+                "nll": 2.1169780074731523,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.14251459549624687,
+                "nll": 2.163106785209549,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.13800250650727852,
+                "nll": 2.2028320273946274,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.1296058269065981,
+                "nll": 2.238204867155405,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.12556650246305417,
+                "nll": 2.263328152375239,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.11809132978258971,
+                "nll": 2.2996037017956326,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.1193516254640949,
+                "nll": 2.3393710030811374,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.11358784893267652,
+                "nll": 2.3616450851212702,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.10913660816650499,
+                "nll": 2.3837260641491085,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.10669191919191919,
+                "nll": 2.3959957481967846,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.09940991345397325,
+                "nll": 2.4244382287593647,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.10106707317073171,
+                "nll": 2.450091034607331,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.314472576589758,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 16722960,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 32092,
+              "maximum_retained_configurations": 32,
+              "maximum_stack_depth": 54,
+              "merged_candidates": 215838282,
+              "payload_reads": 16972960,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 13245853,
+              "push_candidates": 150506640,
+              "retained_configurations": 17032960,
+              "softmaxes": 1394836,
+              "tokens": 538530,
+              "valid_transition_branches": 250634400
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.6105840728057064,
+                "nll": 6.191963886958136,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.135256582143168,
+            "sequences": 10000,
+            "token_nll": 4.174425809264419,
+            "tokens": 538530
+          }
+        },
+        "causal_k3_history": {
+          "fraction_delta_le_0_01": 0.0,
+          "maximum_bound_excess": -0.6604151309971631,
+          "maximum_delta": 1.0,
+          "mean_delta": 0.9673243315939369,
+          "mean_read_error": 0.40337101849820256,
+          "prefixes": 538530
+        },
+        "family": "D1",
+        "interventions": {
+          "K3/CHRONO-LINK": {
+            "conditional_suffix_nll": 171.5495741137658,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.6087979868692411,
+            "delayed_nll": 6.491314511637948,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.12061756191701511,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.1521799810193714,
+                "nll": 2.108042207606656,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.14418265221017515,
+                "nll": 2.154689316988761,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.13882194157909958,
+                "nll": 2.194721665381883,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.13046272493573266,
+                "nll": 2.230503669327471,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.12669950738916255,
+                "nll": 2.2558725572807163,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.1202305072906662,
+                "nll": 2.2924387698336743,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.11939690301548492,
+                "nll": 2.3324889192014853,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.11522988505747127,
+                "nll": 2.3550740830365253,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.11098862333539113,
+                "nll": 2.3772432988856087,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.10711279461279462,
+                "nll": 2.3897875538834477,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.100786782061369,
+                "nll": 2.418422000613719,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.10186737804878049,
+                "nll": 2.4443134852560084,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.307433444965045,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 1595590,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 18011,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 65,
+              "merged_candidates": 11312559,
+              "payload_reads": 1615590,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 1211792,
+              "push_candidates": 14360310,
+              "retained_configurations": 1615590,
+              "softmaxes": 1423282,
+              "tokens": 538530,
+              "valid_transition_branches": 23903850
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.6087979868692411,
+                "nll": 6.491314511637948,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.270564178315191,
+            "sequences": 10000,
+            "token_nll": 4.317808925169079,
+            "tokens": 538530
+          },
+          "K3/ZERO-READ": {
+            "conditional_suffix_nll": 160.50126377790104,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.5615953682856224,
+            "delayed_nll": 6.07316155459686,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.07993112973719561,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.09948082398258248,
+                "nll": 2.3097410880931544,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.09591326105087573,
+                "nll": 2.3358580725781306,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.0911018991612841,
+                "nll": 2.3647675558751167,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.08997429305912596,
+                "nll": 2.3851162801967334,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.08487684729064039,
+                "nll": 2.4049327624456995,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.08251113245437877,
+                "nll": 2.4267311817954655,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.07683600470886534,
+                "nll": 2.456033003464209,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.07352216748768473,
+                "nll": 2.469825226777906,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.07474204074433372,
+                "nll": 2.487012505373238,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.07091750841750842,
+                "nll": 2.492239739690011,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.06785995279307631,
+                "nll": 2.511035449914902,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.06573932926829268,
+                "nll": 2.533638303165731,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.4389338552735005,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 1595590,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 18416,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 65,
+              "merged_candidates": 22793406,
+              "payload_reads": 1615590,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 1458806,
+              "push_candidates": 14360310,
+              "retained_configurations": 1615590,
+              "softmaxes": 713668,
+              "tokens": 538530,
+              "valid_transition_branches": 23903850
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.5615953682856224,
+                "nll": 6.07316155459686,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.147405572185531,
+            "sequences": 10000,
+            "token_nll": 4.177181388303061,
+            "tokens": 538530
+          },
+          "S32/CHRONO-LINK": {
+            "conditional_suffix_nll": 168.62843500280331,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.5955423533195845,
+            "delayed_nll": 6.38079442027431,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.1205040395057991,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.15162172723720202,
+                "nll": 2.1059343207492316,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.1438698915763136,
+                "nll": 2.151875267367826,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.13930396220958258,
+                "nll": 2.191599978601808,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.1307840616966581,
+                "nll": 2.227129585812921,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.12645320197044335,
+                "nll": 2.252221769671862,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.11931371693006199,
+                "nll": 2.2884954916469087,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.1202118989405053,
+                "nll": 2.3282321715683616,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.11473727422003284,
+                "nll": 2.350610096738199,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.11019490254872563,
+                "nll": 2.3726132558833957,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.10782828282828283,
+                "nll": 2.3848716532104532,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.1005507474429583,
+                "nll": 2.4133764079560778,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.1017530487804878,
+                "nll": 2.4391792474968437,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.3033788674047786,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 16592960,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 18835,
+              "maximum_retained_configurations": 32,
+              "maximum_stack_depth": 65,
+              "merged_candidates": 24913011,
+              "payload_reads": 16772335,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 1556275,
+              "push_candidates": 149336640,
+              "retained_configurations": 16902960,
+              "softmaxes": 4862634,
+              "tokens": 538530,
+              "valid_transition_branches": 248472525
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.5955423533195845,
+                "nll": 6.38079442027431,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.213888207325586,
+            "sequences": 10000,
+            "token_nll": 4.261576451493435,
+            "tokens": 538530
+          },
+          "S32/ZERO-READ": {
+            "conditional_suffix_nll": 160.50126377790104,
+            "conditional_suffix_tokens": 274265,
+            "delayed_accuracy": 0.5615953682856224,
+            "delayed_nll": 6.07316155459686,
+            "delayed_tokens": 264265,
+            "early_accuracy": 0.07993112973719561,
+            "early_length_slices": {
+              "42": {
+                "accuracy": 0.09948082398258248,
+                "nll": 2.3097410880931544,
+                "tokens": 17913
+              },
+              "44": {
+                "accuracy": 0.09591326105087573,
+                "nll": 2.3358580725781306,
+                "tokens": 19184
+              },
+              "46": {
+                "accuracy": 0.0911018991612841,
+                "nll": 2.3647675558751167,
+                "tokens": 20746
+              },
+              "48": {
+                "accuracy": 0.08997429305912596,
+                "nll": 2.3851162801967334,
+                "tokens": 18672
+              },
+              "50": {
+                "accuracy": 0.08487684729064039,
+                "nll": 2.4049327624456995,
+                "tokens": 20300
+              },
+              "52": {
+                "accuracy": 0.08251113245437877,
+                "nll": 2.4267311817954655,
+                "tokens": 22906
+              },
+              "54": {
+                "accuracy": 0.07683600470886534,
+                "nll": 2.456033003464209,
+                "tokens": 22086
+              },
+              "56": {
+                "accuracy": 0.07352216748768473,
+                "nll": 2.469825226777906,
+                "tokens": 24360
+              },
+              "58": {
+                "accuracy": 0.07474204074433372,
+                "nll": 2.487012505373238,
+                "tokens": 22678
+              },
+              "60": {
+                "accuracy": 0.07091750841750842,
+                "nll": 2.492239739690011,
+                "tokens": 23760
+              },
+              "62": {
+                "accuracy": 0.06785995279307631,
+                "nll": 2.511035449914902,
+                "tokens": 25420
+              },
+              "64": {
+                "accuracy": 0.06573932926829268,
+                "nll": 2.533638303165731,
+                "tokens": 26240
+              }
+            },
+            "early_nll": 2.4389338552735005,
+            "early_tokens": 264265,
+            "executed_state": {
+              "action_projections": 538530,
+              "configurations_expanded": 16722960,
+              "dense_macs": 9753855360,
+              "logical_peak_auxiliary_bytes": 35170,
+              "maximum_retained_configurations": 32,
+              "maximum_stack_depth": 65,
+              "merged_candidates": 208074123,
+              "payload_reads": 16972960,
+              "payload_vectors_written": 538530,
+              "persistent_nodes_written": 13020813,
+              "push_candidates": 150506640,
+              "retained_configurations": 17032960,
+              "softmaxes": 1559995,
+              "tokens": 538530,
+              "valid_transition_branches": 250634400
+            },
+            "position_types": {
+              "typed_closer": {
+                "accuracy": 0.5615953682856224,
+                "nll": 6.07316155459686,
+                "tokens": 264265
+              }
+            },
+            "sequence_weighted_nll": 4.147405572185531,
+            "sequences": 10000,
+            "token_nll": 4.177181388303061,
+            "tokens": 538530
+          }
+        },
+        "kl_s32_to_k3": {
+          "nat_per_token": 0.0002479247155558774,
+          "tokens": 538530
+        },
+        "seed": 1707,
+        "split": "E2"
+      }
+    },
+    "logical_state_byte_accounting": {
+      "configuration_q_pointer_weight_fp64": 16,
+      "payload_vector_fp32": 256,
+      "persistent_node_parent_source_symbol": 9,
+      "rnn32_state_fp32": 128,
+      "scope": "peak logical auxiliary state per sequence; Python object overhead excluded"
+    },
+    "schema": "cpkv-topk-001-teacher-forced-v1"
+  }
+}

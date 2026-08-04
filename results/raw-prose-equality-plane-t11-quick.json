@@ -1,0 +1,104 @@
+{
+  "all_gates_pass": true,
+  "claim_boundary": "This tests whether minimal triangular isolation preserves T10's exact controlled capability. It is not a production claim; matched training must also pass without natural-language degradation.",
+  "configuration": {
+    "alias_views": 2,
+    "entities": 384,
+    "ffn_width": 1024,
+    "heads": 6,
+    "hidden": 384,
+    "layers": 10,
+    "parameter_count": 36577152,
+    "raw_sentences": 12288,
+    "relations": 8,
+    "special_tokens_consumed": 820,
+    "surface_frames": 32,
+    "unused_tokens_available": 925,
+    "values": 16
+  },
+  "device": "cuda",
+  "evaluation": {
+    "direct_accuracy": 1.0,
+    "direct_errors": 0,
+    "direct_minimum_margin": 10.3125,
+    "direct_queries": 12288,
+    "equality_accuracy": 1.0,
+    "equality_errors": 0,
+    "equality_minimum_margin": 10.375,
+    "equality_positive_rate": 0.1785481721162796,
+    "equality_queries": 196608
+  },
+  "extraction": {
+    "compiler_derived_equality_accuracy": 1.0,
+    "compiler_derived_equality_queries": 24576,
+    "direct_fact_accuracy": 1.0,
+    "direct_fact_queries": 3072,
+    "entity_alias_accuracy": 1.0,
+    "entity_aliases": 768,
+    "relation_paraphrase_accuracy": 1.0,
+    "relation_paraphrases": 32
+  },
+  "gates": {
+    "all_surfaces_present": true,
+    "direct_exact": true,
+    "direct_positive_margin": true,
+    "equality_exact": true,
+    "equality_positive_margin": true,
+    "frozen_perturb_enforce_exact": true,
+    "post_enforce_outputs_exact": true,
+    "raw_compiler_alias_exact": true,
+    "raw_compiler_direct_exact": true,
+    "raw_compiler_relation_exact": true,
+    "same_parameter_count": true,
+    "writer_accepts_no_latent_world": true
+  },
+  "integrity": {
+    "base_t10_source_sha256": "8bf901ad52b32777a5007bd7085b44ed1b5a8b9613affeafb660b1d212f11a69",
+    "data_preparer_source_sha256": "442e4815facf76b0335c4227a92860cef1649a7d161c677dc5055d7d6b68d7e6",
+    "extractor_source_sha256": "f5ba2967ca7be611776e49997f087f6e7419db4695e26fb5dac9c12595befd46",
+    "preregistration_sha256": "631dedc3636b08f1f63609b2fb4cc757fe1cc573ce2054b3456759795b5e3f66",
+    "raw_corpus_sha256": "f714bcfba26af7894fd1911b4c394b3e400c63c8da5b622e92f7a5585bfb4775",
+    "source_sha256": "b7034ca7bd660562a05f7f4f721cc628dd3438dfcccc76e074a760281ed447da",
+    "stage0b_sha256": "ef0f7625f02d6ea5f791ff3fa8a763005c1122168de1ccb47617a32279661d5f",
+    "train_sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a",
+    "validation_sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+  },
+  "natural_data": {
+    "train": {
+      "bytes": 100195056,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/train.uint16.bin",
+      "sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a"
+    },
+    "validation": {
+      "bytes": 4202496,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/validation.uint16.bin",
+      "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+    }
+  },
+  "resource_ledger": {
+    "compiler_gpu_seconds": 0.0,
+    "extraction_cpu_seconds": 1.57838867418468,
+    "generation_cpu_seconds": 0.008482084143906832,
+    "writer_gpu_seconds": 0.20630882773548365
+  },
+  "schema": "raw-prose-equality-plane-t11-quick-v1",
+  "status": "pass",
+  "torch_version": "2.11.0+cu128",
+  "writer": {
+    "block0_program_value_coordinates": 38,
+    "block1_selection_channels": 64,
+    "block2_product_channels": 8,
+    "direct_facts": 3072,
+    "fixed_nonzero_entries": 26214,
+    "frozen_parameter_entries": 743734,
+    "frozen_parameter_fraction": 0.0203332944019261,
+    "output_scale": 2.0,
+    "payload_scalars": 24576,
+    "program_hidden_coordinates_during_blocks_0_to_2": 55,
+    "protected_hidden_coordinates_after_block_2": 9,
+    "recovered_entities": 384,
+    "relations": 8,
+    "surface_aliases": 768,
+    "surface_frames": 32
+  }
+}

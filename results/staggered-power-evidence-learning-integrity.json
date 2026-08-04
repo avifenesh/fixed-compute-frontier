@@ -1,0 +1,17 @@
+{
+  "schema": "staggered-power-evidence-learning-integrity-v2",
+  "source_sha256": "117e058643483f93ef17952301ab1a5f0f715d2a9eefb73817ce246b161bcec8",
+  "preregistration_sha256": "f8a217208d2bbaf1f06ae6fa4922d1786f48ed486d85e87553fefa41c13c621a",
+  "stage0_sha256": "c9f0874d19f4c520a9f70c2b2eef8adc43475abcf46d6e42f286e43e45ef72aa",
+  "comparison_stage0_sha256": "98217c897f358647f81eaf27358c03b4a00e8e114306f8e2b6f20ed2e0935659",
+  "formal_arguments": {
+    "steps": 800,
+    "batch_size": 512,
+    "eval_batch_size": 1024,
+    "train_examples": 65536,
+    "validation_examples": 4096
+  },
+  "required_device_substring": "H100",
+  "pre_run_code_review": "GO revision 4 final",
+  "pre_run_scientific_review": "GO revision 4"
+}

@@ -1,0 +1,120 @@
+{
+  "ancestry_batch_one_allocated_bytes": {
+    "64": {
+      "ancestor_bloom64_rebuild": 672,
+      "continuous_ancestor_bf16x16": 2176,
+      "exact_interval_rebuild": 384,
+      "materialized_closure_bitset": 640,
+      "parent_recompute": 128
+    },
+    "256": {
+      "ancestor_bloom64_rebuild": 2592,
+      "continuous_ancestor_bf16x16": 8704,
+      "exact_interval_rebuild": 1536,
+      "materialized_closure_bitset": 8704,
+      "parent_recompute": 512
+    },
+    "1024": {
+      "ancestor_bloom64_rebuild": 10272,
+      "continuous_ancestor_bf16x16": 34816,
+      "exact_interval_rebuild": 6144,
+      "materialized_closure_bitset": 133120,
+      "parent_recompute": 2048
+    }
+  },
+  "bitwise_task_state_agreement": 1.0,
+  "gpu_required": false,
+  "primary_state_allocated_bytes": 4096,
+  "remaining_before_stage_1": [
+    "freeze_refinement_dataset_and_evidence_encoding",
+    "freeze_candidate_and_control_shapes",
+    "freeze_learned_bytes_workspace_and_typed_operation_ceilings",
+    "freeze_training_and_dev_selection_budget"
+  ],
+  "schema_version": 1,
+  "source_hashes": {
+    "ancestry_implementation_sha256": "cbbfa6d065668d803204d804bc57ea997289e30daafc78b429c53e1230d0b5a0",
+    "independent_reference_interpreter_sha256": "676a3d23910da0353dcd8436eda63dcd6114c32fdc2caef8e7354b96e6e69d41",
+    "tested_executor_sha256": "ee995e7611cc599bda0a5de605db49577659ae5d841c5093f9461a894d2e2c5e"
+  },
+  "stage_1_authorized": false,
+  "status": "exact_harness_pass",
+  "total_directed_semantic_transitions_compared": 30,
+  "total_queries_compared": 13440,
+  "total_random_trace_transitions_compared": 3072,
+  "total_state_transitions_compared": 3102,
+  "worlds": [
+    {
+      "accepted_commands": 794,
+      "arena_bytes": 4096,
+      "arena_sha256": "01087b8f7de9726d92b38537320f5f5513d0e6761d9edf60f0aeb6a9fefd6415",
+      "commands": 1024,
+      "directed_semantic_checks": {
+        "accepted": 8,
+        "accepted_two_switches": 2,
+        "checks": 10,
+        "rejected": 2
+      },
+      "final_state_sha256": "7e28e45f4fc58eec791d84ce38e4f3badc58d6c8408461c078d0f51c282e7348",
+      "query_checks": 4480,
+      "rejected_commands": 230,
+      "seed": 17,
+      "trace_sha256": "5e957552402df16e8d9d4f94f6fc80fe8c4ceec2c28af4c9a7e6206f7b8c87d0",
+      "typed_operations": {
+        "branch": 305,
+        "comparison": 30426,
+        "gather": 20612,
+        "integer_arithmetic": 5248,
+        "scatter": 2970
+      }
+    },
+    {
+      "accepted_commands": 795,
+      "arena_bytes": 4096,
+      "arena_sha256": "5e56236f4a5d0efb97e8a6401c4d2cba866af4fbfccdff4c92b6298ef4656144",
+      "commands": 1024,
+      "directed_semantic_checks": {
+        "accepted": 8,
+        "accepted_two_switches": 2,
+        "checks": 10,
+        "rejected": 2
+      },
+      "final_state_sha256": "3ae832e074eb8757aa0acf21664157c21bad3ec8b78adf9a9500e6a10543d9e2",
+      "query_checks": 4480,
+      "rejected_commands": 229,
+      "seed": 29,
+      "trace_sha256": "4844313c3fa46e4f05a53952d6db4d5e905164393ea0c526e7d589fe9eccd242",
+      "typed_operations": {
+        "branch": 290,
+        "comparison": 32200,
+        "gather": 21501,
+        "integer_arithmetic": 5248,
+        "scatter": 2982
+      }
+    },
+    {
+      "accepted_commands": 790,
+      "arena_bytes": 4096,
+      "arena_sha256": "81f588ab1b834ff897c372047a9ed527ca1ecae00a8b4033759bd9ef2cfb6bad",
+      "commands": 1024,
+      "directed_semantic_checks": {
+        "accepted": 8,
+        "accepted_two_switches": 2,
+        "checks": 10,
+        "rejected": 2
+      },
+      "final_state_sha256": "403b45e548d196707b9b61fd67a7c9a888371576f7100e076b6c172fefca4d12",
+      "query_checks": 4480,
+      "rejected_commands": 234,
+      "seed": 43,
+      "trace_sha256": "eb8c4bddc1af3f831d3bd0ea98da5146a7e9b59253a18dc1d24a88714e090baf",
+      "typed_operations": {
+        "branch": 309,
+        "comparison": 33391,
+        "gather": 22076,
+        "integer_arithmetic": 5248,
+        "scatter": 2978
+      }
+    }
+  ]
+}

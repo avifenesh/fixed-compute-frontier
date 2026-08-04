@@ -1,0 +1,503 @@
+{
+  "admitted": false,
+  "arms": {
+    "dense_1x": {
+      "final_natural": {
+        "nll": 6.827360153198242,
+        "per_batch_nll": [
+          6.490025043487549,
+          6.612558364868164,
+          6.83629846572876,
+          6.30927038192749,
+          6.49307918548584,
+          6.906601905822754,
+          7.196907043457031,
+          6.80983829498291,
+          7.167275428771973,
+          7.545345306396484,
+          6.304156303405762,
+          6.436595916748047,
+          6.571184158325195,
+          6.325326442718506,
+          6.649930000305176,
+          6.609388828277588,
+          6.911076545715332,
+          6.785085201263428,
+          6.9351487159729,
+          6.870189189910889,
+          6.974056720733643,
+          6.621415138244629,
+          6.924959659576416,
+          6.491374492645264,
+          7.664770126342773,
+          6.8110671043396,
+          7.165036678314209,
+          6.925117492675781,
+          6.964921474456787,
+          7.360897541046143,
+          6.326262950897217,
+          7.480364799499512
+        ],
+        "tokens": 32768
+      },
+      "pretrain_documents": {
+        "correct": {
+          "finite": true,
+          "mode": "correct",
+          "nll": 4.887899475534274,
+          "tokens": 242537
+        }
+      },
+      "pretrain_natural": {
+        "nll": 5.418646484613419,
+        "per_batch_nll": [
+          5.422153949737549,
+          5.690738677978516,
+          5.432108402252197,
+          5.518340110778809,
+          5.277829647064209,
+          5.44598388671875,
+          5.499917030334473,
+          5.190547466278076,
+          5.857466220855713,
+          5.11667537689209,
+          5.572510719299316,
+          5.623875617980957,
+          5.175065994262695,
+          5.3231730461120605,
+          5.229450225830078,
+          5.398109436035156,
+          5.011608600616455,
+          5.097183704376221,
+          5.527745246887207,
+          5.417287826538086,
+          5.759737968444824,
+          5.707490921020508,
+          5.472956657409668,
+          5.900998592376709,
+          5.42208194732666,
+          5.333698272705078,
+          5.589305877685547,
+          5.415381908416748,
+          4.997458457946777,
+          5.26057767868042,
+          5.46253776550293,
+          5.246690273284912
+        ],
+        "tokens": 32768
+      },
+      "qa_evaluation": {
+        "correct": {
+          "accuracy": 0.6057692170143127,
+          "errors": 41,
+          "examples": 104,
+          "mode": "correct",
+          "positive_rate": 0.5384615659713745,
+          "predicted_positive_rate": 0.6442307829856873
+        }
+      },
+      "qa_training": {
+        "code_sha256_after": null,
+        "code_sha256_before": null,
+        "code_unchanged": true,
+        "elapsed_seconds": 143.15694527886808,
+        "failed_or_retried_steps": 0,
+        "maximum_gradient_norm": 67.1415023803711,
+        "maximum_loss": 0.9462683200836182,
+        "peak_hbm_allocated_bytes": 2277693952,
+        "updates": 3000
+      },
+      "state_sha256": "2cdaeff8b5aab0a38b73cf20466ccef6fb207a916db7f36584eb6656a38340bc",
+      "training": {
+        "document_token_presentations": 1612931,
+        "document_updates": 1000,
+        "elapsed_seconds": 881.5399252381176,
+        "failed_or_retried_steps": 0,
+        "maximum_code_gradient_norm": 0.0,
+        "maximum_loss": 10.867400169372559,
+        "maximum_model_gradient_norm": 198.35391235351562,
+        "natural_token_presentations": 38912000,
+        "natural_updates": 19000,
+        "peak_hbm_allocated_bytes": 2479204352,
+        "total_updates": 20000
+      }
+    },
+    "dense_2x_doc": {
+      "final_natural": {
+        "nll": 6.836247950792313,
+        "per_batch_nll": [
+          6.556127548217773,
+          6.600090980529785,
+          6.849560737609863,
+          6.381343841552734,
+          6.399316310882568,
+          6.954066276550293,
+          7.1911725997924805,
+          6.7795023918151855,
+          7.293528079986572,
+          7.469515323638916,
+          6.465089321136475,
+          6.722230911254883,
+          6.519017219543457,
+          6.37582540512085,
+          6.795397758483887,
+          6.526623249053955,
+          7.0882978439331055,
+          6.889286041259766,
+          7.032408714294434,
+          6.592560768127441,
+          6.943483829498291,
+          6.558811187744141,
+          6.705175399780273,
+          6.49334716796875,
+          7.2973833084106445,
+          6.60513162612915,
+          7.21712589263916,
+          7.168972969055176,
+          6.896444797515869,
+          7.586813449859619,
+          6.241437911987305,
+          7.564845561981201
+        ],
+        "tokens": 32768
+      },
+      "pretrain_documents": {
+        "correct": {
+          "finite": true,
+          "mode": "correct",
+          "nll": 4.455406111361359,
+          "tokens": 242537
+        }
+      },
+      "pretrain_natural": {
+        "nll": 5.4447818249464035,
+        "per_batch_nll": [
+          5.255918502807617,
+          5.578946590423584,
+          5.2778425216674805,
+          5.451624870300293,
+          5.7000956535339355,
+          5.353534698486328,
+          5.446613788604736,
+          5.4789934158325195,
+          5.783044815063477,
+          5.5475616455078125,
+          5.385348320007324,
+          5.651040077209473,
+          5.213943004608154,
+          5.563831329345703,
+          5.367546081542969,
+          5.1626739501953125,
+          5.305782318115234,
+          5.491495132446289,
+          5.499223709106445,
+          5.38375186920166,
+          5.403841018676758,
+          5.529596328735352,
+          5.630929946899414,
+          5.623006343841553,
+          5.276593208312988,
+          5.194733142852783,
+          5.764135360717773,
+          5.629166603088379,
+          5.367851734161377,
+          4.997989177703857,
+          5.508933067321777,
+          5.407430171966553
+        ],
+        "tokens": 32768
+      },
+      "qa_evaluation": {
+        "correct": {
+          "accuracy": 0.5480769276618958,
+          "errors": 47,
+          "examples": 104,
+          "mode": "correct",
+          "positive_rate": 0.5384615659713745,
+          "predicted_positive_rate": 0.7596153616905212
+        }
+      },
+      "qa_training": {
+        "code_sha256_after": null,
+        "code_sha256_before": null,
+        "code_unchanged": true,
+        "elapsed_seconds": 134.57515702722594,
+        "failed_or_retried_steps": 0,
+        "maximum_gradient_norm": 237.1492462158203,
+        "maximum_loss": 1.3702903985977173,
+        "peak_hbm_allocated_bytes": 2288179712,
+        "updates": 3000
+      },
+      "state_sha256": "0b8ccb4bc5f53d7fdc980feb79854399a7ff2adb2a07bb1bef7dc659ebc782b8",
+      "training": {
+        "document_token_presentations": 3226984,
+        "document_updates": 2000,
+        "elapsed_seconds": 1003.7925128391944,
+        "failed_or_retried_steps": 0,
+        "maximum_code_gradient_norm": 0.0,
+        "maximum_loss": 10.867400169372559,
+        "maximum_model_gradient_norm": 447.793212890625,
+        "natural_token_presentations": 38912000,
+        "natural_updates": 19000,
+        "peak_hbm_allocated_bytes": 3085449216,
+        "total_updates": 21000
+      }
+    },
+    "joint_code_1x": {
+      "final_natural": {
+        "nll": 6.70701202750206,
+        "per_batch_nll": [
+          6.324592590332031,
+          6.423504829406738,
+          6.8470258712768555,
+          6.168919563293457,
+          6.338346481323242,
+          6.547853469848633,
+          6.871285438537598,
+          6.7433013916015625,
+          7.002101898193359,
+          7.4242048263549805,
+          6.298866271972656,
+          6.366261959075928,
+          6.283979892730713,
+          6.246523857116699,
+          6.6760640144348145,
+          6.527569770812988,
+          6.816446304321289,
+          6.620761871337891,
+          6.964845657348633,
+          6.675775527954102,
+          6.901464939117432,
+          6.465761661529541,
+          6.697872161865234,
+          6.40172004699707,
+          7.312460899353027,
+          6.593889236450195,
+          7.168013095855713,
+          6.788346767425537,
+          7.109326362609863,
+          7.3672380447387695,
+          6.229832649230957,
+          7.420227527618408
+        ],
+        "tokens": 32768
+      },
+      "pretrain_documents": {
+        "correct": {
+          "finite": true,
+          "mode": "correct",
+          "nll": 4.885033591121535,
+          "tokens": 242537
+        },
+        "shuffle": {
+          "finite": true,
+          "mode": "shuffle",
+          "nll": 4.927441609988244,
+          "tokens": 242537
+        },
+        "zero": {
+          "finite": true,
+          "mode": "zero",
+          "nll": 5.08570308324574,
+          "tokens": 242537
+        }
+      },
+      "pretrain_natural": {
+        "nll": 5.4245249927043915,
+        "per_batch_nll": [
+          5.418272972106934,
+          5.728824138641357,
+          5.439581871032715,
+          5.519453525543213,
+          5.2441864013671875,
+          5.442573070526123,
+          5.5016093254089355,
+          5.20620059967041,
+          5.835463523864746,
+          5.123106479644775,
+          5.573473930358887,
+          5.609335899353027,
+          5.184018135070801,
+          5.334388256072998,
+          5.2593889236450195,
+          5.405460357666016,
+          5.051119804382324,
+          5.086895942687988,
+          5.546525001525879,
+          5.365046501159668,
+          5.792623996734619,
+          5.697319030761719,
+          5.473479747772217,
+          5.937534809112549,
+          5.445487022399902,
+          5.321379661560059,
+          5.5958027839660645,
+          5.442307472229004,
+          5.0101094245910645,
+          5.2729363441467285,
+          5.476805686950684,
+          5.244089126586914
+        ],
+        "tokens": 32768
+      },
+      "qa_evaluation": {
+        "correct": {
+          "accuracy": 0.6057692170143127,
+          "errors": 41,
+          "examples": 104,
+          "mode": "correct",
+          "positive_rate": 0.5384615659713745,
+          "predicted_positive_rate": 0.625
+        },
+        "shuffle": {
+          "accuracy": 0.557692289352417,
+          "errors": 46,
+          "examples": 104,
+          "mode": "shuffle",
+          "positive_rate": 0.5384615659713745,
+          "predicted_positive_rate": 0.6730769276618958
+        },
+        "zero": {
+          "accuracy": 0.567307710647583,
+          "errors": 45,
+          "examples": 104,
+          "mode": "zero",
+          "positive_rate": 0.5384615659713745,
+          "predicted_positive_rate": 0.3173076808452606
+        }
+      },
+      "qa_training": {
+        "code_sha256_after": "9f75ecaff3f920ba250d1d1ec06297bd9fbcf91a69ebe9540925a60fb47ad9ac",
+        "code_sha256_before": "9f75ecaff3f920ba250d1d1ec06297bd9fbcf91a69ebe9540925a60fb47ad9ac",
+        "code_unchanged": true,
+        "elapsed_seconds": 135.56680468237028,
+        "failed_or_retried_steps": 0,
+        "maximum_gradient_norm": 55.05440902709961,
+        "maximum_loss": 1.1675243377685547,
+        "peak_hbm_allocated_bytes": 2285539840,
+        "updates": 3000
+      },
+      "state_sha256": "0f2a7c4b7afaea081719ec147b46629a41b685a04072bc180a2198562f6374f0",
+      "training": {
+        "document_token_presentations": 1612931,
+        "document_updates": 1000,
+        "elapsed_seconds": 927.2481799572706,
+        "failed_or_retried_steps": 0,
+        "maximum_code_gradient_norm": 4.874576091766357,
+        "maximum_loss": 10.867400169372559,
+        "maximum_model_gradient_norm": 395.87799072265625,
+        "natural_token_presentations": 38912000,
+        "natural_updates": 19000,
+        "peak_hbm_allocated_bytes": 2790192128,
+        "total_updates": 20000
+      }
+    }
+  },
+  "data": {
+    "compiler_fields": [
+      "document_id",
+      "text",
+      "title"
+    ],
+    "document_active_tokens": 242537,
+    "documents": 2405,
+    "evaluation_qa": 104,
+    "train_qa": 146
+  },
+  "device": "cuda",
+  "digital_code": {
+    "all_on_frozen_levels": true,
+    "amplitude": 4.0,
+    "bf16_level_indices_exact": true,
+    "dimensions": 220,
+    "documents": 2405,
+    "logical_bits": 2116400,
+    "logical_cells": 529100,
+    "sha256": "9f75ecaff3f920ba250d1d1ec06297bd9fbcf91a69ebe9540925a60fb47ad9ac",
+    "training_parameter_bytes": 2116400,
+    "unique_level_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "effects": {
+    "document_nll_gain_over_shuffle_pct": 0.8606498508423779,
+    "document_nll_gain_over_zero_pct": 3.9457571320922638,
+    "natural_nll_relative_to_dense1_pct": -1.7627329303816759,
+    "qa_gain_over_best_dense_pp": 0.0,
+    "qa_shuffle_code_drop_pp": 4.807692766189575,
+    "qa_zero_code_drop_pp": 3.8461506366729736
+  },
+  "gates": {
+    "code_frozen_during_qa": true,
+    "document_nll_gain_over_shuffle_at_least_10pct": false,
+    "document_nll_gain_over_zero_at_least_10pct": false,
+    "frozen_16_levels_and_bf16_indices": true,
+    "identical_initial_models_and_finite_training": true,
+    "identical_served_structure_and_physical_ledger": true,
+    "input_integrity_and_raw_only_code": true,
+    "natural_nll_within_0_5pct_of_dense1": true,
+    "qa_accuracy_at_least_75pct": false,
+    "qa_gain_over_best_dense_at_least_10pp": false,
+    "shuffled_code_qa_drop_at_least_10pp": false,
+    "two_titles_and_both_classes": true,
+    "zero_code_qa_drop_at_least_10pp": false
+  },
+  "initial_model_sha256": [
+    "40d208029720fb9221f5aa74cbf772e5fa214464f27f90de3a5e7edc77a8843c",
+    "40d208029720fb9221f5aa74cbf772e5fa214464f27f90de3a5e7edc77a8843c",
+    "40d208029720fb9221f5aa74cbf772e5fa214464f27f90de3a5e7edc77a8843c"
+  ],
+  "input_checks": {
+    "candidate_corpus": true,
+    "evaluation_qa": true,
+    "natural_train": true,
+    "natural_validation": true,
+    "preregistration_exists": true,
+    "train_qa": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "evaluation_qa_sha256": "5a0413f53bfc0fc73b5e66c941c708077624908095934af740c84d234b9fea6b",
+    "natural_train_sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a",
+    "natural_validation_sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b",
+    "preregistration_sha256": "5550066c5661dd1d91d7beff6edb7f7b4612c904161eb948ff1a2e90774164a8",
+    "train_qa_sha256": "edaef010f68f1a919ac9f9e8389444ddde1afde6d2b9d1375156195f8758b0f9"
+  },
+  "limits": [
+    "Exact title lookup and hidden-state addition are privileged in T21a.",
+    "The quantized table fits the prospective write ledger but has not been exported into the ordinary graph.",
+    "Passing requires a physical export, final untouched evaluation, and replication before any production claim."
+  ],
+  "physical": {
+    "blocks_used": 3,
+    "channels_used": 2405,
+    "down_payload_writes": 529100,
+    "gate_key_writes": 76960,
+    "gate_threshold_writes": 2405,
+    "title_code_writes": 132800,
+    "total_writes": 743670,
+    "up_constant_writes": 2405
+  },
+  "schema": "joint-quantized-document-code-t21a-v1",
+  "served": {
+    "parameter_count": 36577152,
+    "parameter_count_variants": 1,
+    "state_schema_variants": 1,
+    "virtual_injection_exported": false
+  }
+}

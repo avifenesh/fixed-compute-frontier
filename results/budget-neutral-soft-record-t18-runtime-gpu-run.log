@@ -1,0 +1,27 @@
+stage=environment
+2026-07-31T08:50:42+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+stage=contracts
+...                                                                      [100%]
+3 passed in 2.49s
+stage=runtime_gate
+{
+  "all_gates_pass": false,
+  "block_ratios": {
+    "b1_t1": 0.885703135879774,
+    "b1_t128": 0.9614765521287171,
+    "b32_t128": 1.4776446273801966,
+    "b8_t128": 1.0341593590720026
+  },
+  "failed_gates": [
+    "block_latency_noninferior",
+    "block_peak_allocation_noninferior"
+  ],
+  "model_ratios": {
+    "b1_t1": 1.0090128922516992,
+    "b1_t128": 1.0070451526320834,
+    "b8_t128": 1.0067957088935233
+  },
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/budget-neutral-soft-record-t18-runtime.json"
+}
+stage=complete

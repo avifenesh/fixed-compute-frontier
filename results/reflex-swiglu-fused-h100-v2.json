@@ -1,0 +1,191 @@
+{
+  "all_gates_pass": true,
+  "args": {
+    "batches": "1,8,32,128",
+    "dimension": 4096,
+    "hidden": 14336,
+    "hidden_alignment": 8,
+    "output": "results/reflex-swiglu-fused-h100-v2.json",
+    "samples": 200,
+    "seed": 53,
+    "warmup": 40
+  },
+  "candidate": "Reflex-SwiGLU",
+  "cells": [
+    {
+      "batch": 1,
+      "equal_parameter_over_baseline_median": 1.011520252111359,
+      "same_width_over_baseline_median": 0.9961599510250965,
+      "timings": {
+        "baseline": {
+          "max_us": 155.13600409030914,
+          "mean_us": 141.7753604054451,
+          "median_us": 141.66399836540222,
+          "min_us": 139.615997672081,
+          "p10_us": 140.41279703378677,
+          "p90_us": 142.92159974575043,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 155.16799688339233,
+          "mean_us": 143.32064002752304,
+          "median_us": 143.2960033416748,
+          "min_us": 140.73599874973297,
+          "p10_us": 142.1088010072708,
+          "p90_us": 144.3839967250824,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 156.44800662994385,
+          "mean_us": 141.30544021725655,
+          "median_us": 141.12000167369843,
+          "min_us": 138.49599659442902,
+          "p10_us": 140.3168022632599,
+          "p90_us": 142.30400323867798,
+          "samples": 200
+        }
+      },
+      "zero_reflex_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 8,
+      "equal_parameter_over_baseline_median": 1.005911971155307,
+      "same_width_over_baseline_median": 1.0008758551313182,
+      "timings": {
+        "baseline": {
+          "max_us": 158.04800391197205,
+          "mean_us": 146.36240012943745,
+          "median_us": 146.14400267601013,
+          "min_us": 144.83200013637543,
+          "p10_us": 145.28000354766846,
+          "p90_us": 147.39200472831726,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 150.11200308799744,
+          "mean_us": 147.05024056136608,
+          "median_us": 147.0080018043518,
+          "min_us": 144.31999623775482,
+          "p10_us": 145.9520012140274,
+          "p90_us": 148.16639572381973,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 163.64799439907074,
+          "mean_us": 146.43376030027866,
+          "median_us": 146.27200365066528,
+          "min_us": 144.28800344467163,
+          "p10_us": 145.24799585342407,
+          "p90_us": 147.5200057029724,
+          "samples": 200
+        }
+      },
+      "zero_reflex_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 32,
+      "equal_parameter_over_baseline_median": 1.0108974696382358,
+      "same_width_over_baseline_median": 1.0010684340039022,
+      "timings": {
+        "baseline": {
+          "max_us": 157.53600001335144,
+          "mean_us": 149.8996802419424,
+          "median_us": 149.75999295711517,
+          "min_us": 147.93600142002106,
+          "p10_us": 148.83199334144592,
+          "p90_us": 150.95039457082748,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 171.64799571037292,
+          "mean_us": 151.61727957427502,
+          "median_us": 151.39199793338776,
+          "min_us": 148.95999431610107,
+          "p10_us": 150.56000649929047,
+          "p90_us": 152.61760652065277,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 155.10399639606476,
+          "mean_us": 150.0131192803383,
+          "median_us": 149.9200016260147,
+          "min_us": 148.03199470043182,
+          "p10_us": 149.02399480342865,
+          "p90_us": 151.0079950094223,
+          "samples": 200
+        }
+      },
+      "zero_reflex_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 128,
+      "equal_parameter_over_baseline_median": 1.0089129790836786,
+      "same_width_over_baseline_median": 1.0011625742579082,
+      "timings": {
+        "baseline": {
+          "max_us": 187.1359944343567,
+          "mean_us": 165.4892797023058,
+          "median_us": 165.15199840068817,
+          "min_us": 162.9759967327118,
+          "p10_us": 164.22399878501892,
+          "p90_us": 166.5344014763832,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 176.35199427604675,
+          "mean_us": 166.72447964549065,
+          "median_us": 166.62399470806122,
+          "min_us": 164.32000696659088,
+          "p10_us": 165.50079435110092,
+          "p90_us": 167.84320324659348,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 177.2480010986328,
+          "mean_us": 165.45679964125156,
+          "median_us": 165.3439998626709,
+          "min_us": 163.13600540161133,
+          "p10_us": 164.27839994430542,
+          "p90_us": 166.37119352817535,
+          "samples": 200
+        }
+      },
+      "zero_reflex_max_row_relative_error": 0.0
+    }
+  ],
+  "cuda_version": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "device_properties": "_CudaDeviceProperties(name='NVIDIA H100 80GB HBM3', major=9, minor=0, total_memory=80994MB, multi_processor_count=132, uuid=44700db4-f6b2-9122-550e-6987512886e8, L2_cache_size=50MB)",
+  "driver_version": "550.163.01",
+  "gates": {
+    "equal_parameter_within_1p02_on_key_cells": true,
+    "equal_parameter_within_1p05_on_full_grid": true,
+    "nonzero_reflex_reference_below_1_percent": true,
+    "protocol_valid": true,
+    "same_width_within_1p02_on_key_cells": true,
+    "same_width_within_1p05_on_full_grid": true,
+    "zero_reflex_inclusion_below_0p2_percent": true
+  },
+  "kernel": {
+    "block": 256,
+    "cuda_graph_full_path": true,
+    "num_warps": 4
+  },
+  "ledger": {
+    "aligned_equal_parameter_hidden": 14328,
+    "baseline_hidden": 14336,
+    "exact_equal_parameter_hidden": 14334,
+    "same_width_parameter_overhead_fraction": 8.138020833333333e-05
+  },
+  "nonzero_alpha_reference": {
+    "max_row_relative_error": 0.0036815141793340445,
+    "negative_clipped_coordinates": 148,
+    "positive_clipped_coordinates": 148,
+    "unclipped_coordinates": 472
+  },
+  "preregistration_sha256": "2d44cc05bf9629e173a25b14be857e100f72480ea605a4c764e3d1e1c89451dd",
+  "scope": "fused single-H100 serving gate only",
+  "source_sha256": "5dbe2a10dc94605820f5ce1f554e6d4e6ce384ecff7fdedbc1a4752920b08679",
+  "torch_version": "2.5.1+cu124",
+  "triton_version": "3.1.0"
+}

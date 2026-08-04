@@ -1,0 +1,51 @@
+{
+  "claim_boundary": "Exact arbitrary-state operator separation only; no learned, raw-prose, natural-semantic, novelty, GPU-cost, or production claim.",
+  "domain": {
+    "centered_basis_inputs_per_group": 218,
+    "group_elements": 218,
+    "state_evaluations": 47524,
+    "width": 109
+  },
+  "experiment": "dihedral-monomial-prefix-t30-separation-preflight",
+  "gates": {
+    "all_actions_distinct": true,
+    "all_canonical_words_exact": true,
+    "centered_basis_exact": true,
+    "constructive_routed_witness_exact": true,
+    "generators_noncommute": true,
+    "per_group_formula_exact": true,
+    "state_ledger_220_bytes": true,
+    "uniform_bound_exact": true
+  },
+  "integrity": {
+    "preregistration_sha256": "47c97367c088800e1ad7392ae5f2f44e74d0c667dea72e24e8434e38de2d3a86",
+    "source_sha256": "965aeb296143bfd77d4ab6768c98e55323140a888af934d3a3322cd07d6dda37",
+    "test_sha256": "4edeb017988cfed02ff03fe786e16e2b05a7aa9830c0d2b43af46337bedda2b2"
+  },
+  "measurements": {
+    "centered_basis_covariance_error": 2.220446049250313e-16,
+    "centered_basis_mean_error": 0.0,
+    "distinct_actions": 218,
+    "expected_relaxed_diagonal_average_nmse": 0.9908256880733946,
+    "fixed_point_histogram": {
+      "0": 108,
+      "1": 109,
+      "109": 1
+    },
+    "formula_failures": 0,
+    "maximum_formula_error": 2.220446049250313e-16,
+    "maximum_routed_error": 0.0,
+    "noncommutative_max_difference": 1.0,
+    "observed_relaxed_diagonal_average_nmse": 0.9908256880733948,
+    "routed_failures": 0,
+    "state_bytes": 220,
+    "word_failures": 0
+  },
+  "runtime": {
+    "device": "cpu",
+    "numpy": "2.3.5",
+    "python": "3.14.4",
+    "wall_seconds": 0.03987695100659039
+  },
+  "status": "PASS"
+}

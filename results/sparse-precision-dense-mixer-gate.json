@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "candidate": "feature-axis sparse precision graph with implicit dense response",
+  "claim": "Dense full-rank and low-rank-resistant maps can have near-linear matvec circuits when represented as the inverse of a stable sparse operator.",
+  "source_sha256": "18cf79e9d98b167c535fc7c3c501324453a89867db700c1348608942785eb846",
+  "construction": "W=(I-rho*S)^-1; S is an average of permutation matrices and transposes",
+  "widths": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "degree": 3,
+  "rho": 0.5,
+  "target_relative_tolerance": 0.01,
+  "neumann_order": 8,
+  "rows": [
+    {
+      "width": 64,
+      "degree": 3,
+      "rho": 0.5,
+      "connected": true,
+      "operator_symmetry_error": 0.0,
+      "operator_spectral_norm": 1.0000000000000002,
+      "precision_minimum_eigenvalue": 0.4999999999999999,
+      "mixer_minimum_eigenvalue": 0.7285073588132674,
+      "mixer_maximum_eigenvalue": 2.0000000000000004,
+      "mixer_numerical_density_at_1e-12": 1.0,
+      "neumann": {
+        "order": 8,
+        "uniform_relative_error_bound": 0.005859375,
+        "measured_relative_error": 0.0004573122723705591
+      },
+      "low_rank": {
+        "0.1": {
+          "required_rank": 63,
+          "required_rank_fraction": 0.984375,
+          "theoretical_fraction_lower_bound": 0.9099999999999999
+        },
+        "0.05": {
+          "required_rank": 64,
+          "required_rank_fraction": 1.0,
+          "theoretical_fraction_lower_bound": 0.9775
+        },
+        "0.01": {
+          "required_rank": 64,
+          "required_rank_fraction": 1.0,
+          "theoretical_fraction_lower_bound": 0.9991
+        }
+      },
+      "same_spectrum_control": {
+        "mixer_spectrum_max_abs_difference": 2.6645352591003757e-15,
+        "precision_interaction_nonzero_budget": 371,
+        "structured_best_sparse_relative_error": 0.0,
+        "haar_rotated_best_sparse_relative_error": 0.7661846509236112
+      },
+      "ledger": {
+        "dense_matvec_macs": 4096,
+        "sparse_scalar_visits_upper_bound": 3136,
+        "ideal_sparse_to_dense_ratio": 0.765625,
+        "permutation_gathers_per_iteration": 6,
+        "neumann_iterations": 8,
+        "excludes": "physical kernel launch, memory traffic, and backward-pass cost"
+      }
+    },
+    {
+      "width": 128,
+      "degree": 3,
+      "rho": 0.5,
+      "connected": true,
+      "operator_symmetry_error": 0.0,
+      "operator_spectral_norm": 1.0000000000000002,
+      "precision_minimum_eigenvalue": 0.4999999999999999,
+      "mixer_minimum_eigenvalue": 0.7337862578837353,
+      "mixer_maximum_eigenvalue": 2.0000000000000004,
+      "mixer_numerical_density_at_1e-12": 1.0,
+      "neumann": {
+        "order": 8,
+        "uniform_relative_error_bound": 0.005859375,
+        "measured_relative_error": 0.0003298704735246353
+      },
+      "low_rank": {
+        "0.1": {
+          "required_rank": 126,
+          "required_rank_fraction": 0.984375,
+          "theoretical_fraction_lower_bound": 0.9099999999999999
+        },
+        "0.05": {
+          "required_rank": 128,
+          "required_rank_fraction": 1.0,
+          "theoretical_fraction_lower_bound": 0.9775
+        },
+        "0.01": {
+          "required_rank": 128,
+          "required_rank_fraction": 1.0,
+          "theoretical_fraction_lower_bound": 0.9991
+        }
+      },
+      "same_spectrum_control": {
+        "mixer_spectrum_max_abs_difference": 3.1086244689504383e-15,
+        "precision_interaction_nonzero_budget": 751,
+        "structured_best_sparse_relative_error": 0.0,
+        "haar_rotated_best_sparse_relative_error": 0.8591484355656996
+      },
+      "ledger": {
+        "dense_matvec_macs": 16384,
+        "sparse_scalar_visits_upper_bound": 6272,
+        "ideal_sparse_to_dense_ratio": 0.3828125,
+        "permutation_gathers_per_iteration": 6,
+        "neumann_iterations": 8,
+        "excludes": "physical kernel launch, memory traffic, and backward-pass cost"
+      }
+    },
+    {
+      "width": 256,
+      "degree": 3,
+      "rho": 0.5,
+      "connected": true,
+      "operator_symmetry_error": 0.0,
+      "operator_spectral_norm": 0.9999999999999997,
+      "precision_minimum_eigenvalue": 0.5000000000000002,
+      "mixer_minimum_eigenvalue": 0.7302043110661277,
+      "mixer_maximum_eigenvalue": 1.9999999999999991,
+      "mixer_numerical_density_at_1e-12": 1.0,
+      "neumann": {
+        "order": 8,
+        "uniform_relative_error_bound": 0.005859375,
+        "measured_relative_error": 0.0002847658760794554
+      },
+      "low_rank": {
+        "0.1": {
+          "required_rank": 251,
+          "required_rank_fraction": 0.98046875,
+          "theoretical_fraction_lower_bound": 0.9099999999999999
+        },
+        "0.05": {
+          "required_rank": 255,
+          "required_rank_fraction": 0.99609375,
+          "theoretical_fraction_lower_bound": 0.9775
+        },
+        "0.01": {
+          "required_rank": 256,
+          "required_rank_fraction": 1.0,
+          "theoretical_fraction_lower_bound": 0.9991
+        }
+      },
+      "same_spectrum_control": {
+        "mixer_spectrum_max_abs_difference": 3.552713678800501e-15,
+        "precision_interaction_nonzero_budget": 1521,
+        "structured_best_sparse_relative_error": 0.0,
+        "haar_rotated_best_sparse_relative_error": 0.9160480009513868
+      },
+      "ledger": {
+        "dense_matvec_macs": 65536,
+        "sparse_scalar_visits_upper_bound": 12544,
+        "ideal_sparse_to_dense_ratio": 0.19140625,
+        "permutation_gathers_per_iteration": 6,
+        "neumann_iterations": 8,
+        "excludes": "physical kernel launch, memory traffic, and backward-pass cost"
+      }
+    },
+    {
+      "width": 512,
+      "degree": 3,
+      "rho": 0.5,
+      "connected": true,
+      "operator_symmetry_error": 0.0,
+      "operator_spectral_norm": 1.0,
+      "precision_minimum_eigenvalue": 0.5,
+      "mixer_minimum_eigenvalue": 0.7310153367462521,
+      "mixer_maximum_eigenvalue": 2.0,
+      "mixer_numerical_density_at_1e-12": 1.0,
+      "neumann": {
+        "order": 8,
+        "uniform_relative_error_bound": 0.005859375,
+        "measured_relative_error": 0.0001386478925186399
+      },
+      "low_rank": {
+        "0.1": {
+          "required_rank": 502,
+          "required_rank_fraction": 0.98046875,
+          "theoretical_fraction_lower_bound": 0.9099999999999999
+        },
+        "0.05": {
+          "required_rank": 510,
+          "required_rank_fraction": 0.99609375,
+          "theoretical_fraction_lower_bound": 0.9775
+        },
+        "0.01": {
+          "required_rank": 512,
+          "required_rank_fraction": 1.0,
+          "theoretical_fraction_lower_bound": 0.9991
+        }
+      },
+      "same_spectrum_control": {
+        "mixer_spectrum_max_abs_difference": 6.8833827526759706e-15,
+        "precision_interaction_nonzero_budget": 3058,
+        "structured_best_sparse_relative_error": 0.0,
+        "haar_rotated_best_sparse_relative_error": 0.951013427818819
+      },
+      "ledger": {
+        "dense_matvec_macs": 262144,
+        "sparse_scalar_visits_upper_bound": 25088,
+        "ideal_sparse_to_dense_ratio": 0.095703125,
+        "permutation_gathers_per_iteration": 6,
+        "neumann_iterations": 8,
+        "excludes": "physical kernel launch, memory traffic, and backward-pass cost"
+      }
+    }
+  ],
+  "frozen_gates": {
+    "dense_mixer": true,
+    "not_low_rank_at_10_percent_error": true,
+    "one_percent_solver_accuracy": true,
+    "sub_15_percent_logical_work_at_D512": true,
+    "same_spectrum_control_loses_sparse_precision": true
+  },
+  "algebra_gate_passed": true,
+  "scope_boundary": {
+    "proved": [
+      "dense and full-rank response",
+      "bad low-rank approximability",
+      "near-linear logical application cost at fixed epsilon",
+      "same spectrum does not imply the same sparse-precision circuit"
+    ],
+    "not_proved": [
+      "language-model quality",
+      "GPU wall-clock speed",
+      "replacement of nonlinear FFN capacity",
+      "novelty of the algebra outside feature-axis LLM use"
+    ]
+  }
+}

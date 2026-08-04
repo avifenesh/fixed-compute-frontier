@@ -1,0 +1,50 @@
+stage=environment
+2026-07-31T08:21:51+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+.....F.                                                                  [100%]
+=================================== FAILURES ===================================
+______________ test_right_padding_cannot_change_real_final_states ______________
+
+    def test_right_padding_cannot_change_real_final_states() -> None:
+        device = torch.device("cpu")
+        model = experiment.t10.core.build_model(719, device).eval()
+        sequences = [[41, 42, 43], [51, 52, 53, 54, 55]]
+        batched = experiment.encode_final_sequences(model, sequences, 2, device, 2)
+        separate = [
+            experiment.encode_final_sequences(model, [sequence], 2, device, 1)[0]
+            for sequence in sequences
+        ]
+        for left, right in zip(batched, separate, strict=True):
+>           assert torch.allclose(left, right, atol=1e-6, rtol=1e-5)
+E           assert False
+E            +  where False = <built-in method allclose of type object at 0x7b53c6ae5180>(tensor([[ 2.3264, -1.4931, -0.6438,  ..., -1.0115,  0.5163,  2.1172],\n        [ 2.3453, -1.4423, -1.4947,  ..., -0.6229, -0.3094,  2.3925],\n        [ 2.2275, -1.5212, -1.5708,  ..., -0.0622, -0.3302,  1.6431]]), tensor([[ 2.3264, -1.4931, -0.6438,  ..., -1.0115,  0.5163,  2.1172],\n        [ 2.3453, -1.4423, -1.4947,  ..., -0.6229, -0.3094,  2.3925],\n        [ 2.2275, -1.5212, -1.5708,  ..., -0.0622, -0.3302,  1.6431]]), atol=1e-06, rtol=1e-05)
+E            +    where <built-in method allclose of type object at 0x7b53c6ae5180> = torch.allclose
+
+tests/test_hotpot_predictive_metric_t14.py:39: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_hotpot_predictive_metric_t14.py::test_right_padding_cannot_change_real_final_states
+1 failed, 6 passed in 3.16s
+stage=environment
+2026-07-31T08:22:47+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+.......                                                                  [100%]
+7 passed in 2.95s
+stage=predictive_metric_gate
+{
+  "all_gates_pass": false,
+  "failed_gates": [
+    "trained_predictive_at_least_70pct",
+    "trained_predictive_beats_direct_contextual",
+    "trained_predictive_beats_lexical_by_10pp",
+    "trained_predictive_beats_random",
+    "trained_predictive_beats_static"
+  ],
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/hotpot-predictive-metric-t14.json",
+  "random_predictive_accuracy": 0.49038461538461536,
+  "trained_predictive_accuracy": 0.4326923076923077
+}
+stage=complete

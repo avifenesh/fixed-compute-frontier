@@ -1,0 +1,661 @@
+{
+  "config": {
+    "batch_size": 256,
+    "group_dim": 16,
+    "model_dim": 256,
+    "records": 128,
+    "relation_offsets": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "relations": 4,
+    "total_dim": 64,
+    "trials": 8192
+  },
+  "device": "cuda",
+  "gates": {
+    "algebra": true,
+    "causal_operator": true,
+    "common_delay_distinction": true,
+    "finite": true,
+    "ledger": true,
+    "matched_advantage": true,
+    "noise_robustness": true,
+    "predicted_limitation": true,
+    "shared_reliability": true,
+    "wide_ordinary_distinction": true
+  },
+  "ledger": {
+    "afta": {
+      "k_cache_scalars_per_token": 64,
+      "k_width": 64,
+      "logical_head_shapes": {
+        "k": [
+          [
+            256,
+            64
+          ]
+        ],
+        "q": [
+          [
+            256,
+            64
+          ]
+        ],
+        "v": [
+          [
+            256,
+            64
+          ]
+        ]
+      },
+      "materialized_shifted_v_scalars": 0,
+      "offset_metadata_integers": 4,
+      "projection_output_width": 192,
+      "projection_parameter_counts": {
+        "k": 16384,
+        "o": 16384,
+        "q": 16384,
+        "v": 16384
+      },
+      "projection_parameters_total": 65536,
+      "projection_shapes": {
+        "k": [
+          256,
+          64
+        ],
+        "o": [
+          64,
+          256
+        ],
+        "q": [
+          256,
+          64
+        ],
+        "v": [
+          256,
+          64
+        ]
+      },
+      "pv_macs": 813248,
+      "q_width": 64,
+      "qk_macs": 813248,
+      "softmax_maps": 1,
+      "transport_bounds_predicates": 50828,
+      "v_cache_scalars_per_token": 64,
+      "v_load_regions_per_map": 4,
+      "v_load_regions_total": 4,
+      "v_scalar_loads": 813248,
+      "v_width": 64
+    },
+    "afta_softmax_reduction_factor": 4.0,
+    "equal": true,
+    "equality_fields": [
+      "q_width",
+      "k_width",
+      "v_width",
+      "qk_macs",
+      "pv_macs",
+      "projection_output_width",
+      "projection_shapes",
+      "projection_parameter_counts",
+      "projection_parameters_total",
+      "k_cache_scalars_per_token",
+      "v_cache_scalars_per_token",
+      "materialized_shifted_v_scalars",
+      "offset_metadata_integers",
+      "transport_bounds_predicates",
+      "v_scalar_loads",
+      "v_load_regions_total"
+    ],
+    "split": {
+      "k_cache_scalars_per_token": 64,
+      "k_width": 64,
+      "logical_head_shapes": {
+        "k_per_head": [
+          [
+            256,
+            16
+          ],
+          [
+            256,
+            16
+          ],
+          [
+            256,
+            16
+          ],
+          [
+            256,
+            16
+          ]
+        ],
+        "q_per_head": [
+          [
+            256,
+            16
+          ],
+          [
+            256,
+            16
+          ],
+          [
+            256,
+            16
+          ],
+          [
+            256,
+            16
+          ]
+        ],
+        "v_per_head": [
+          [
+            256,
+            16
+          ],
+          [
+            256,
+            16
+          ],
+          [
+            256,
+            16
+          ],
+          [
+            256,
+            16
+          ]
+        ]
+      },
+      "materialized_shifted_v_scalars": 0,
+      "offset_metadata_integers": 4,
+      "projection_output_width": 192,
+      "projection_parameter_counts": {
+        "k": 16384,
+        "o": 16384,
+        "q": 16384,
+        "v": 16384
+      },
+      "projection_parameters_total": 65536,
+      "projection_shapes": {
+        "k": [
+          256,
+          64
+        ],
+        "o": [
+          64,
+          256
+        ],
+        "q": [
+          256,
+          64
+        ],
+        "v": [
+          256,
+          64
+        ]
+      },
+      "pv_macs": 813248,
+      "q_width": 64,
+      "qk_macs": 813248,
+      "softmax_maps": 4,
+      "transport_bounds_predicates": 50828,
+      "v_cache_scalars_per_token": 64,
+      "v_load_regions_per_map": 1,
+      "v_load_regions_total": 4,
+      "v_scalar_loads": 813248,
+      "v_width": 64
+    }
+  },
+  "noises": [
+    0.75,
+    1.0,
+    1.5
+  ],
+  "operator_audits": {
+    "effective_map_reference_max_error": 1.7881393432617188e-07,
+    "future_value_perturbation_max_error": 0.0,
+    "gradient_reference_max_error": 4.76837158203125e-07,
+    "no_renormalization_max_error": 1.1920928955078125e-07,
+    "some_boundary_mass_below_one": true,
+    "zero_offset_ordinary_max_error": 1.1920928955078125e-07
+  },
+  "pass": true,
+  "runs": [
+    {
+      "afta_exact_record_accuracy": 1.0,
+      "afta_field_accuracy": 1.0,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.250091552734375,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 11,
+      "split_exact_record_accuracy": 0.363525390625,
+      "split_field_accuracy": 0.77581787109375,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.250030517578125
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.095458984375,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.0294189453125,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 11,
+      "split_exact_record_accuracy": 0.3544921875,
+      "split_field_accuracy": 0.771636962890625,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.0289306640625
+    },
+    {
+      "afta_exact_record_accuracy": 0.9998779296875,
+      "afta_field_accuracy": 0.999969482421875,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.25006103515625,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 11,
+      "split_exact_record_accuracy": 0.123779296875,
+      "split_field_accuracy": 0.592071533203125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.25006103515625
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.085113525390625,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.027252197265625,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 11,
+      "split_exact_record_accuracy": 0.12890625,
+      "split_field_accuracy": 0.6021728515625,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.025421142578125
+    },
+    {
+      "afta_exact_record_accuracy": 0.9775390625,
+      "afta_field_accuracy": 0.985687255859375,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.24652099609375,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 11,
+      "split_exact_record_accuracy": 0.0150146484375,
+      "split_field_accuracy": 0.33648681640625,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.24658203125
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.064361572265625,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.022705078125,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 11,
+      "split_exact_record_accuracy": 0.01513671875,
+      "split_field_accuracy": 0.335174560546875,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.021575927734375
+    },
+    {
+      "afta_exact_record_accuracy": 1.0,
+      "afta_field_accuracy": 1.0,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.25018310546875,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 23,
+      "split_exact_record_accuracy": 0.354736328125,
+      "split_field_accuracy": 0.7734375,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.250152587890625
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.096343994140625,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.0284423828125,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 23,
+      "split_exact_record_accuracy": 0.3668212890625,
+      "split_field_accuracy": 0.7764892578125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.029754638671875
+    },
+    {
+      "afta_exact_record_accuracy": 1.0,
+      "afta_field_accuracy": 1.0,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.25006103515625,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 23,
+      "split_exact_record_accuracy": 0.12939453125,
+      "split_field_accuracy": 0.603057861328125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.250030517578125
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.08416748046875,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.02618408203125,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 23,
+      "split_exact_record_accuracy": 0.1220703125,
+      "split_field_accuracy": 0.5933837890625,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.026947021484375
+    },
+    {
+      "afta_exact_record_accuracy": 0.976806640625,
+      "afta_field_accuracy": 0.984832763671875,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.24627685546875,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 23,
+      "split_exact_record_accuracy": 0.01318359375,
+      "split_field_accuracy": 0.335479736328125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.246307373046875
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.061676025390625,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.02178955078125,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 23,
+      "split_exact_record_accuracy": 0.011962890625,
+      "split_field_accuracy": 0.336395263671875,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.02166748046875
+    },
+    {
+      "afta_exact_record_accuracy": 1.0,
+      "afta_field_accuracy": 1.0,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.25006103515625,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 37,
+      "split_exact_record_accuracy": 0.353271484375,
+      "split_field_accuracy": 0.770172119140625,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.250030517578125
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.093780517578125,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.0272216796875,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 37,
+      "split_exact_record_accuracy": 0.3564453125,
+      "split_field_accuracy": 0.776458740234375,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.029541015625
+    },
+    {
+      "afta_exact_record_accuracy": 1.0,
+      "afta_field_accuracy": 1.0,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.250030517578125,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 37,
+      "split_exact_record_accuracy": 0.1268310546875,
+      "split_field_accuracy": 0.596282958984375,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.25006103515625
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.08294677734375,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.025726318359375,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 37,
+      "split_exact_record_accuracy": 0.129150390625,
+      "split_field_accuracy": 0.595794677734375,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.025177001953125
+    },
+    {
+      "afta_exact_record_accuracy": 0.9769287109375,
+      "afta_field_accuracy": 0.983734130859375,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.246063232421875,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 37,
+      "split_exact_record_accuracy": 0.01416015625,
+      "split_field_accuracy": 0.336456298828125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.246063232421875
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.06243896484375,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.02117919921875,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 37,
+      "split_exact_record_accuracy": 0.01416015625,
+      "split_field_accuracy": 0.339874267578125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.020294189453125
+    },
+    {
+      "afta_exact_record_accuracy": 1.0,
+      "afta_field_accuracy": 1.0,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.250030517578125,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 53,
+      "split_exact_record_accuracy": 0.3563232421875,
+      "split_field_accuracy": 0.77362060546875,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.25006103515625
+    },
+    {
+      "afta_exact_record_accuracy": 0.0001220703125,
+      "afta_field_accuracy": 0.095123291015625,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.02801513671875,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 53,
+      "split_exact_record_accuracy": 0.358154296875,
+      "split_field_accuracy": 0.7738037109375,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.028472900390625
+    },
+    {
+      "afta_exact_record_accuracy": 0.9998779296875,
+      "afta_field_accuracy": 0.999969482421875,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.250030517578125,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 53,
+      "split_exact_record_accuracy": 0.125244140625,
+      "split_field_accuracy": 0.59564208984375,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.25006103515625
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.0823974609375,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.024658203125,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 53,
+      "split_exact_record_accuracy": 0.1214599609375,
+      "split_field_accuracy": 0.595977783203125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.024993896484375
+    },
+    {
+      "afta_exact_record_accuracy": 0.97900390625,
+      "afta_field_accuracy": 0.9857177734375,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.246612548828125,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 53,
+      "split_exact_record_accuracy": 0.01220703125,
+      "split_field_accuracy": 0.3341064453125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.246612548828125
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.060455322265625,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.02081298828125,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 53,
+      "split_exact_record_accuracy": 0.0133056640625,
+      "split_field_accuracy": 0.331695556640625,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.01995849609375
+    },
+    {
+      "afta_exact_record_accuracy": 1.0,
+      "afta_field_accuracy": 1.0,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.250030517578125,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 71,
+      "split_exact_record_accuracy": 0.3619384765625,
+      "split_field_accuracy": 0.7745361328125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.25006103515625
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.092926025390625,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.028961181640625,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 0.75,
+      "seed": 71,
+      "split_exact_record_accuracy": 0.3580322265625,
+      "split_field_accuracy": 0.773406982421875,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.0284423828125
+    },
+    {
+      "afta_exact_record_accuracy": 0.9998779296875,
+      "afta_field_accuracy": 0.999969482421875,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.249969482421875,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 71,
+      "split_exact_record_accuracy": 0.1263427734375,
+      "split_field_accuracy": 0.59423828125,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.25006103515625
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.082000732421875,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.024749755859375,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.0,
+      "seed": 71,
+      "split_exact_record_accuracy": 0.1304931640625,
+      "split_field_accuracy": 0.5960693359375,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.024810791015625
+    },
+    {
+      "afta_exact_record_accuracy": 0.980712890625,
+      "afta_field_accuracy": 0.98651123046875,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.246490478515625,
+      "condition": "shared",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 71,
+      "split_exact_record_accuracy": 0.0123291015625,
+      "split_field_accuracy": 0.3309326171875,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.24700927734375
+    },
+    {
+      "afta_exact_record_accuracy": 0.0,
+      "afta_field_accuracy": 0.063201904296875,
+      "common_delay_exact_record_accuracy": 0.0,
+      "common_delay_field_accuracy": 0.021453857421875,
+      "condition": "independent",
+      "max_algebra_error": 0.0,
+      "noise": 1.5,
+      "seed": 71,
+      "split_exact_record_accuracy": 0.0108642578125,
+      "split_field_accuracy": 0.330291748046875,
+      "wide_ordinary_exact_record_accuracy": 0.0,
+      "wide_ordinary_field_accuracy": 0.0206298828125
+    }
+  ],
+  "runtime": {
+    "cuda": "12.4",
+    "gpu": "NVIDIA H100 80GB HBM3",
+    "torch": "2.5.1+cu124"
+  },
+  "schema": "address-factored-transport-stage0-v2",
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71
+  ]
+}

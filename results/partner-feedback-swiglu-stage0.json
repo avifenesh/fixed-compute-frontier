@@ -1,0 +1,65 @@
+{
+  "all_gates_pass": true,
+  "candidate": "gauge-exposed partner-feedback SwiGLU",
+  "gates": {
+    "carrier_canonicalization_exact": true,
+    "degree_seven_witness": true,
+    "dense_mac_count_exact": true,
+    "fold_decode_exact": true,
+    "no_per_feature_carrier_or_serial_path": true,
+    "ordinary_source_orbit_invariant": true,
+    "parameter_count_exact": true,
+    "serialized_count_exact": true,
+    "source_orbit_is_functional": true,
+    "zero_endpoint_exact": true
+  },
+  "measurements": {
+    "activated_source_orbit_max_output_movement": 0.005018106967407565,
+    "canonical_carrier_scale": 1.689959013899126,
+    "canonicalization_max_abs_error": 4.440892098500626e-16,
+    "decoded_lambda": 0.08000000000000002,
+    "fold_decode_max_abs_error": 2.220446049250313e-16,
+    "nonzero_carrier_scale": 1.32,
+    "ordinary_source_orbit_max_abs_error": 2.220446049250313e-16,
+    "zero_endpoint_max_abs_error": 0.0
+  },
+  "preregistration_sha256": "5ac217bbb9b71ae003353deaec77a043068d233e511c8525496f27a44e96ede8",
+  "scope": "algebra and exact raw-resource ledger only",
+  "seed": 719,
+  "shape": {
+    "hidden_width": 32,
+    "model_width": 16
+  },
+  "small_ledger": {
+    "additional_activation_workspace_words": 0,
+    "baseline_dense_macs_per_token": 1536,
+    "baseline_serialized_words": 1536,
+    "baseline_trainable_parameters": 1536,
+    "candidate_dense_macs_per_token": 1536,
+    "candidate_serialized_words": 1536,
+    "candidate_trainable_parameters": 1536,
+    "layer_scalar_pivot_reads_per_kernel_program": 1,
+    "per_feature_coefficient_words": 0,
+    "permutation_metadata_words": 0,
+    "serial_feature_dependencies": 0
+  },
+  "source_sha256": "59b39f6cdab0e4f2d58f20a801f2f29f742eb3fd906f69e7a164d1b5bb924360",
+  "square_activation_witness": {
+    "degree_3": 1.0,
+    "degree_5": 0.5,
+    "degree_7": 0.0625
+  },
+  "target_ledger": {
+    "additional_activation_workspace_words": 0,
+    "baseline_dense_macs_per_token": 176160768,
+    "baseline_serialized_words": 176160768,
+    "baseline_trainable_parameters": 176160768,
+    "candidate_dense_macs_per_token": 176160768,
+    "candidate_serialized_words": 176160768,
+    "candidate_trainable_parameters": 176160768,
+    "layer_scalar_pivot_reads_per_kernel_program": 1,
+    "per_feature_coefficient_words": 0,
+    "permutation_metadata_words": 0,
+    "serial_feature_dependencies": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "alpha": 1,
+  "maximum_absolute_error": 0,
+  "ptx_abs_s32_count": 32,
+  "ptx_wgmma_count": 2,
+  "registers": 64,
+  "shape": {
+    "columns": 128,
+    "reduction": 128,
+    "rows": 64
+  },
+  "spills": 0
+}

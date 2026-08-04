@@ -1,0 +1,144 @@
+{
+  "admitted": false,
+  "candidate": {
+    "evaluation": {
+      "accuracy": 0.5673076923076923,
+      "errors": 45,
+      "examples": 104,
+      "finite": true,
+      "maximum_logit": 17.00679552063476,
+      "minimum_logit": -3.177325950722826,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.7211538461538461
+    },
+    "optimizer": {
+      "function_evaluations": 41,
+      "iterations": 34,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "seconds": 9.737921900115907,
+      "status": 0,
+      "success": true,
+      "terminal_regularized_loss": 0.00321162879002582
+    },
+    "shuffled_evaluation": {
+      "accuracy": 0.5096153846153846,
+      "errors": 51,
+      "examples": 104,
+      "finite": true,
+      "maximum_logit": 15.772429182565194,
+      "minimum_logit": -4.280443640384207,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.7403846153846154
+    },
+    "train": {
+      "accuracy": 1.0,
+      "errors": 0,
+      "examples": 146,
+      "finite": true,
+      "maximum_logit": 8.448759918365056,
+      "minimum_logit": -7.962233099338256,
+      "positive_rate": 0.5273972602739726,
+      "predicted_positive_rate": 0.5273972602739726
+    },
+    "weight_norm": 0.7088714496354693
+  },
+  "compiler": {
+    "coordinate_range_is_dense": true,
+    "document_fields": [
+      "document_id",
+      "text",
+      "title"
+    ],
+    "documents": 2405,
+    "exact_dimensions": 129971,
+    "function_parameters": [
+      "documents"
+    ]
+  },
+  "effects": {
+    "document_shuffle_drop_pp": 5.769230769230771,
+    "gain_over_query_only_pp": 0.0,
+    "gain_over_t19b_pp": -3.8461538461538436
+  },
+  "gates": {
+    "both_classes": true,
+    "collision_free_coordinates": true,
+    "document_shuffle_drop_at_least_10pp": false,
+    "evaluation_accuracy_at_least_75pct": false,
+    "finite_optimization": true,
+    "gain_over_query_only_at_least_10pp": false,
+    "gain_over_t19b_at_least_10pp": false,
+    "input_integrity": true,
+    "raw_only_compiler_fields": true,
+    "training_accuracy_at_least_95pct": true,
+    "two_titles_every_question": true
+  },
+  "input_checks": {
+    "candidate_corpus": true,
+    "evaluation_qa": true,
+    "preregistration_exists": true,
+    "train_qa": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "evaluation_qa_sha256": "5a0413f53bfc0fc73b5e66c941c708077624908095934af740c84d234b9fea6b",
+    "preregistration_sha256": "6ae71b6d66fd5abd848d21f76b352b7e21272bcec0b496ea455e7744b6ce2bd6",
+    "train_qa_sha256": "edaef010f68f1a919ac9f9e8389444ddde1afde6d2b9d1375156195f8758b0f9"
+  },
+  "limits": [
+    "This is an uncompressed collision-free sufficiency oracle.",
+    "It does not fit the write budget or execute in the served model.",
+    "It cannot establish a smarter production model."
+  ],
+  "query_only": {
+    "evaluation": {
+      "accuracy": 0.5673076923076923,
+      "errors": 45,
+      "examples": 104,
+      "finite": true,
+      "maximum_logit": 10.308797904901953,
+      "minimum_logit": -6.817910105435882,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.6826923076923077
+    },
+    "optimizer": {
+      "function_evaluations": 38,
+      "iterations": 35,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "seconds": 7.893860944081098,
+      "status": 0,
+      "success": true,
+      "terminal_regularized_loss": 0.09691706636771255
+    },
+    "train": {
+      "accuracy": 0.9794520547945206,
+      "errors": 3,
+      "examples": 146,
+      "finite": true,
+      "maximum_logit": 6.536040282889479,
+      "minimum_logit": -5.119436350604865,
+      "positive_rate": 0.5273972602739726,
+      "predicted_positive_rate": 0.5342465753424658
+    },
+    "weight_norm": 2.7991487895533664
+  },
+  "reader": {
+    "candidate_dimensions": 519889,
+    "evaluation_candidate_nonzeros": 22357,
+    "l2_coefficient": 0.01,
+    "max_iterations": 200,
+    "query_only_dimensions": 129971,
+    "threshold": 0.5,
+    "train_candidate_nonzeros": 31427,
+    "used_qa_fields": [
+      "question",
+      "answer"
+    ]
+  },
+  "schema": "exact-raw-key-oracle-t19e-v1",
+  "shuffle": {
+    "pairs": 104,
+    "seed": 19005,
+    "unchanged_pairs": 0
+  }
+}

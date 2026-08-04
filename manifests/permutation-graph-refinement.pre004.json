@@ -1,0 +1,324 @@
+{
+  "schema_version": 2,
+  "experiment_id": "permutation-graph-refinement-pre004",
+  "status": "pre_candidate_falsification",
+  "candidate_number": null,
+  "a_e_claim": null,
+  "gpu_authorized": false,
+  "training_authorized": false,
+  "freeze": {
+    "scope": "mechanism_workload_accounting_and_decision_rules",
+    "hypothesis_frozen": true,
+    "implementation_artifacts_frozen": false,
+    "typed_operation_ceilings_frozen": false,
+    "stage_1_authorized": false,
+    "next_action": "stage_0_exact_executor_and_child_manifest_only"
+  },
+  "streaming_contract": {
+    "commands_visible_one_at_a_time": true,
+    "controller_calls_per_command": 1,
+    "past_command_reread": false,
+    "persistent_encoder_activations": false,
+    "query_calls_after_stream": 1,
+    "all_cross_step_bits_must_be_in_state_arena": true,
+    "external_memory_or_tools": false
+  },
+  "mechanism": {
+    "node_capacity": 64,
+    "primary_degree": 2,
+    "relations": 2,
+    "relation_type": "involution_with_fixed_points",
+    "value_bits_per_node": 8,
+    "belief_dtype": "bf16",
+    "belief_width": 16,
+    "controller_state_dtype": "bf16",
+    "controller_state_width": 32,
+    "refinement_sweeps": 8,
+    "relation_schedule": [0, 1, 0, 1, 0, 1, 0, 1],
+    "pair_semantics": "disjoint_pair_read_then_write_ascending_min_node",
+    "alpha_range_inclusive": [0.0, 1.0],
+    "alpha_width": 16,
+    "evaluation_route_selection": "deterministic_argmax",
+    "local_opcode_bank": [
+      "NOOP",
+      "SWAP_VALUE",
+      "MOVE_I_TO_J",
+      "MOVE_J_TO_I",
+      "TOGGLE_I",
+      "TOGGLE_J",
+      "SET_I_FROM_CURRENT",
+      "SET_J_FROM_CURRENT"
+    ],
+    "full_model_calls_per_rewrite": 0,
+    "exact_attention_fallback": false,
+    "physical_in_place_claim_before_stage_4": false
+  },
+  "primary_state_arena": {
+    "scope": "n64_primary_machine_only",
+    "allocated_bytes_per_episode": 4096,
+    "contiguous": true,
+    "views": [
+      {"name": "X", "offset": 0, "bytes": 2048, "dtype": "bf16", "shape": [64, 16]},
+      {"name": "Z", "offset": 2048, "bytes": 128, "dtype": "uint16", "shape": [64]},
+      {"name": "pi_0", "offset": 2176, "bytes": 128, "dtype": "uint16", "shape": [64]},
+      {"name": "pi_1", "offset": 2304, "bytes": 128, "dtype": "uint16", "shape": [64]},
+      {"name": "parent", "offset": 2432, "bytes": 128, "dtype": "uint16", "shape": [64]},
+      {"name": "controller", "offset": 2560, "bytes": 64, "dtype": "bf16", "shape": [32]},
+      {"name": "status", "offset": 2624, "bytes": 2, "dtype": "uint16", "shape": [1]},
+      {"name": "masked_padding", "offset": 2626, "bytes": 1470, "readable": false}
+    ],
+    "side_episode_state_allowed": false
+  },
+  "budgets": {
+    "primary_persistent_state_allocated_bytes_cap": 4096,
+    "learned_parameters_cap": 262144,
+    "actual_learned_bytes_frozen_in_stage_0_child": true,
+    "inference_workspace_bytes_frozen_in_stage_0_child": true,
+    "typed_operation_ceilings_frozen_in_stage_0_child": true,
+    "count_logical_allocated_reserved_and_transient_bytes_separately": true,
+    "typed_operation_columns": [
+      "bf16_mac",
+      "fp32_mac",
+      "integer_arithmetic",
+      "hash",
+      "comparison",
+      "gather",
+      "scatter",
+      "branch",
+      "atomic",
+      "communication"
+    ],
+    "count_hbm_l2_and_workspace": true,
+    "dummy_work_for_matching": false
+  },
+  "comparison_lanes": {
+    "causal_ablation": "identical_layout_schedule_accesses_and_issued_work",
+    "envelope_competitor": "less_than_or_equal_to_each_frozen_resource_ceiling",
+    "single_cross_dtype_operation_equivalence": false
+  },
+  "workload": {
+    "train_active_nodes": [16, 32],
+    "train_max_mutations": 32,
+    "evaluation_active_nodes": 64,
+    "evaluation_mutations": [64, 256, 1024],
+    "minimum_relational_operand_fraction": 0.5,
+    "value_arithmetic": "uint8",
+    "path_aggregate_modulus": 257,
+    "global_opcodes": [
+      "SET",
+      "SWAP_VALUE",
+      "MOVE_VALUE",
+      "TOGGLE",
+      "TWO_SWITCH",
+      "SET_PARENT",
+      "CUT_PARENT"
+    ],
+    "invalid_operation_semantics": "error_bit_and_no_task_state_change",
+    "query_families": [
+      "complete_state",
+      "complete_trajectory",
+      "one_hop",
+      "eight_hop",
+      "thirty_two_hop",
+      "ancestor_membership",
+      "path_aggregate_mod_257"
+    ],
+    "hop_relation_words_reduced": true,
+    "minimum_distinct_nodes_for_eight_hop": 9,
+    "minimum_distinct_nodes_for_thirty_two_hop": 33,
+    "query_pointer_reads_counted": true,
+    "minimum_independent_worlds_per_cell": 256,
+    "minimum_episodes_per_cell": 10000,
+    "language_templates_disjoint_after_opcode_gate": true,
+    "language_claim_scope": "heldout_synthetic_command_routing_only"
+  },
+  "ancestor_axis": {
+    "scope": "separate_per_n_pareto_diagnostic",
+    "inherits_primary_4096_byte_cap": false,
+    "node_counts": [64, 256, 1024],
+    "forest_state_count": "(N+1)^(N-1)",
+    "forest_entropy_bits": "(N-1)*log2(N+1)",
+    "ancestor_definition": "strict_excludes_self",
+    "base_parent_dtype": "uint16",
+    "base_parent_bytes": "2*N",
+    "modes": [
+      {
+        "name": "parent_recompute",
+        "contract": "exact",
+        "batch_one_allocated_bytes": "2*N",
+        "query_cost": "O(depth)_parent_chase",
+        "mutation_cost": "O(1)_cut_or_O(depth)_validated_reparent"
+      },
+      {
+        "name": "exact_interval_rebuild",
+        "contract": "exact_forest_membership",
+        "batch_one_allocated_bytes": "6*N",
+        "query_cost": "O(1)_preorder_interval_test",
+        "mutation_cost": "cycle_check_plus_O(N)_full_dfs_rebuild"
+      },
+      {
+        "name": "materialized_closure_bitset",
+        "contract": "exact_membership_cache",
+        "batch_one_allocated_bytes": "2*N+8*N*ceil(N/64)",
+        "query_cost": "O(1)_indexed_packed_bit",
+        "mutation_cost": "cycle_check_plus_full_packed_closure_rebuild"
+      },
+      {
+        "name": "ancestor_bloom64_rebuild",
+        "contract": "approximate_membership_only",
+        "batch_one_allocated_bytes": "10*N+32",
+        "hash": "splitmix64(node_id_xor_seed_j)_and_63",
+        "hash_count": 4,
+        "hash_seed_bytes": 32,
+        "membership_rule": "all_four_bits_set",
+        "counters": false,
+        "hidden_child_index": false,
+        "query_cost": "four_hashes_and_bit_tests",
+        "mutation_cost": "cycle_check_plus_all_rows_parent_chase_rebuild",
+        "false_negative_contract_after_rebuild": 0
+      },
+      {
+        "name": "continuous_ancestor_bf16x16",
+        "contract": "learned_approximate_only",
+        "batch_one_allocated_bytes": "34*N_plus_learned_weights",
+        "aliases_primary_X": false,
+        "query_cost": "learned_vector_read"
+      }
+    ],
+    "membership_query_to_mutation_ratios": [1, 8, 64],
+    "depth_bins_by_n": {
+      "64": [1, 8, 32],
+      "256": [1, 8, 32, 128],
+      "1024": [1, 8, 32, 512]
+    },
+    "mutation_mix": {
+      "cut": 0.25,
+      "valid_reparent": 0.5,
+      "new_leaf_attach": 0.25
+    },
+    "expected_batch_one_allocated_bytes_by_n": {
+      "64": {
+        "parent_recompute": 128,
+        "exact_interval_rebuild": 384,
+        "materialized_closure_bitset": 640,
+        "ancestor_bloom64_rebuild": 672,
+        "continuous_ancestor_bf16x16": 2176
+      },
+      "256": {
+        "parent_recompute": 512,
+        "exact_interval_rebuild": 1536,
+        "materialized_closure_bitset": 8704,
+        "ancestor_bloom64_rebuild": 2592,
+        "continuous_ancestor_bf16x16": 8704
+      },
+      "1024": {
+        "parent_recompute": 2048,
+        "exact_interval_rebuild": 6144,
+        "materialized_closure_bitset": 133120,
+        "ancestor_bloom64_rebuild": 10272,
+        "continuous_ancestor_bf16x16": 34816
+      }
+    },
+    "identical_trace_for_every_mode": true,
+    "path_aggregate_claim_allowed_for_bloom_or_continuous_modes": false,
+    "closure_compression_is_not_memory_superiority": true,
+    "identity_claim_requires_exact_mode": true,
+    "complete_workload_cost_required": true,
+    "compute_increase_is_trade_until_service_win": true
+  },
+  "variants": {
+    "candidate": "permutation_graph_refinement",
+    "envelope_controls": [
+      "flat_exact_registers",
+      "continuous_recurrent_graph",
+      "one_pass_discrete_graph",
+      "tiny_transformer_or_recurrent_scratchpad"
+    ],
+    "causal_ablations": [
+      "random_valid_involutions",
+      "rewiring_disabled",
+      "exact_channel_masked",
+      "refinement_evidence_shuffled"
+    ],
+    "all_receive_same_exact_global_primitive_bank": true,
+    "same_training_examples_optimizer_updates_and_tuning_trials": true,
+    "all_configs_and_artifacts_hashed": true
+  },
+  "corruption_grid": {
+    "operand_evidence_erasure_probability": [0.05, 0.1, 0.2],
+    "operand_candidate_set_size": [2, 4],
+    "local_evidence_feature_sign_flip_probability": [0.01, 0.05, 0.1],
+    "clean_control_probability": 0.0,
+    "corrupts_hidden_task_state": false,
+    "post_result_cell_selection": false,
+    "identical_evidence_for_every_variant": true
+  },
+  "stage_order": [
+    "oracle_executor_generator_and_accounting",
+    "oracle_bound_frozen_correction",
+    "learned_canonical_command_routing",
+    "heldout_synthetic_language_routing",
+    "hardware_feasibility"
+  ],
+  "gates": {
+    "stage_0_oracle_bitwise_accuracy": 1.0,
+    "learned_trajectory_accuracy_at_1024": 0.99,
+    "canonical_control_noninferiority_margin_points": 1.0,
+    "stage_1_minimum_complete_trajectory_advantage_points": 5.0,
+    "stage_1_maximum_clean_regression_points": 1.0,
+    "stage_2_superiority_required": false,
+    "maximum_accuracy_decline_per_length_doubling_points": 1.0,
+    "maximum_query_family_regression_points": 1.0,
+    "invariant_violations_allowed": 0,
+    "hardware_stage_requires_all_prior_stages": true
+  },
+  "statistics": {
+    "training_seeds": [17, 29, 43],
+    "paired_by": ["latent_graph_world", "operation_trace"],
+    "bootstrap_unit": "latent_graph_world",
+    "bootstrap_resamples": 10000,
+    "bootstrap_rng_seed": 20260725,
+    "simultaneous_one_sided_confidence": 0.95,
+    "simultaneous_method": "bootstrap_max_statistic",
+    "multiplicity_family": "all_registered_seed_length_query_and_corruption_cells",
+    "superiority_uses_lower_bound": true,
+    "nonregression_uses_upper_loss_bound": true,
+    "report_every_seed_and_worst_seed": true
+  },
+  "stage_0_child_manifest_requirements": [
+    "generator_sha256",
+    "independent_reference_interpreter_sha256",
+    "corruption_trace_commitment_sha256",
+    "baseline_shape_grid_sha256",
+    "per_variant_config_sha256",
+    "trained_artifact_hash_schema",
+    "locked_world_seed_commitment",
+    "numeric_typed_operation_ceilings",
+    "actual_learned_byte_cap",
+    "inference_workspace_byte_cap",
+    "training_compute_and_tuning_trial_budget",
+    "exact_resource_ledger"
+  ],
+  "stage_0_gold_validation": {
+    "reference_interpreter_must_not_share_transition_code": true,
+    "exhaustive_small_n_max": 6,
+    "exhaustive_value_alphabet": [0, 1, 255],
+    "metamorphic_invariants": [
+      "involution_squared_is_identity",
+      "two_switch_is_invertible",
+      "parent_relation_is_acyclic",
+      "rejected_operation_is_task_state_noop",
+      "node_renaming_equivariance"
+    ]
+  },
+  "pre_locked_evaluation_requirements": [
+    "per_variant_per_seed_artifact_sha256",
+    "selected_config_from_frozen_dev_rule",
+    "locked_evaluation_not_previously_read"
+  ],
+  "promotion": {
+    "may_assign_candidate_004": false,
+    "may_make_a_e_claim": false,
+    "next_allowed_action_on_full_pass": "write_separate_g0_admission_proposal"
+  }
+}

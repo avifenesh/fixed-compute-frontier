@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "candidate": "shared input basis with cheap per-output selection and scaling",
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "checkpoint_sha256": "80521b40281d6ce74e35c9282c22539e75aa0ac8578892b2a59955ef78d55da1",
+  "source_sha256": "afe220f368b632b5c11268c33c3d76694896b6f1762ea386073b0df88456f2a5",
+  "layers": [
+    0,
+    14,
+    29
+  ],
+  "projection_suffixes": [
+    "self_attn.q_proj.weight",
+    "self_attn.k_proj.weight",
+    "self_attn.v_proj.weight",
+    "mlp.gate_proj.weight",
+    "mlp.up_proj.weight"
+  ],
+  "iterations": 4,
+  "results": [
+    {
+      "layer": 0,
+      "row_count": 4032,
+      "width": 576,
+      "projection_shapes": {
+        "self_attn.q_proj.weight": [
+          576,
+          576
+        ],
+        "self_attn.k_proj.weight": [
+          192,
+          576
+        ],
+        "self_attn.v_proj.weight": [
+          192,
+          576
+        ],
+        "mlp.gate_proj.weight": [
+          1536,
+          576
+        ],
+        "mlp.up_proj.weight": [
+          1536,
+          576
+        ]
+      },
+      "fits": [
+        {
+          "atom_count": 288,
+          "real_relative_frobenius_error": 0.837990403175354,
+          "random_relative_frobenius_error": 0.8547296524047852,
+          "real_history": [
+            0.9016410112380981,
+            0.8490758538246155,
+            0.8423916697502136,
+            0.839532732963562,
+            0.837990403175354
+          ],
+          "random_history": [
+            0.9557823538780212,
+            0.8688555955886841,
+            0.8594262003898621,
+            0.8564777970314026,
+            0.8547296524047852
+          ],
+          "real_maximum_cluster_size": 61,
+          "random_maximum_cluster_size": 28,
+          "ledger": {
+            "original_bf16_bits": 37158912,
+            "encoded_bits": 2755008,
+            "encoded_to_original_ratio": 0.07414124503968254,
+            "index_bits_per_row": 9,
+            "baseline_projection_macs_per_token": 2322432,
+            "dictionary_projection_macs_per_token": 169920,
+            "ideal_macs_ratio": 0.07316468253968254,
+            "excludes": [
+              "gather and index execution cost",
+              "output projections",
+              "activation-weighted causal error",
+              "physical kernel efficiency"
+            ]
+          }
+        },
+        {
+          "atom_count": 576,
+          "real_relative_frobenius_error": 0.7813670039176941,
+          "random_relative_frobenius_error": 0.7958812713623047,
+          "real_history": [
+            0.8482608795166016,
+            0.7920873165130615,
+            0.785424530506134,
+            0.7827480435371399,
+            0.7813670039176941
+          ],
+          "random_history": [
+            0.917519211769104,
+            0.8094757199287415,
+            0.8007423281669617,
+            0.7973120212554932,
+            0.7958812713623047
+          ],
+          "real_maximum_cluster_size": 46,
+          "random_maximum_cluster_size": 17,
+          "ledger": {
+            "original_bf16_bits": 37158912,
+            "encoded_bits": 5413248,
+            "encoded_to_original_ratio": 0.1456783234126984,
+            "index_bits_per_row": 10,
+            "baseline_projection_macs_per_token": 2322432,
+            "dictionary_projection_macs_per_token": 335808,
+            "ideal_macs_ratio": 0.14459325396825398,
+            "excludes": [
+              "gather and index execution cost",
+              "output projections",
+              "activation-weighted causal error",
+              "physical kernel efficiency"
+            ]
+          }
+        },
+        {
+          "atom_count": 1152,
+          "real_relative_frobenius_error": 0.6924487352371216,
+          "random_relative_frobenius_error": 0.701688826084137,
+          "real_history": [
+            0.7642688751220703,
+            0.7010615468025208,
+            0.6943557858467102,
+            0.693122148513794,
+            0.6924487352371216
+          ],
+          "random_history": [
+            0.8346995115280151,
+            0.715785562992096,
+            0.705560028553009,
+            0.7032710313796997,
+            0.701688826084137
+          ],
+          "real_maximum_cluster_size": 151,
+          "random_maximum_cluster_size": 12,
+          "ledger": {
+            "original_bf16_bits": 37158912,
+            "encoded_bits": 10725696,
+            "encoded_to_original_ratio": 0.2886439732142857,
+            "index_bits_per_row": 11,
+            "baseline_projection_macs_per_token": 2322432,
+            "dictionary_projection_macs_per_token": 667584,
+            "ideal_macs_ratio": 0.2874503968253968,
+            "excludes": [
+              "gather and index execution cost",
+              "output projections",
+              "activation-weighted causal error",
+              "physical kernel efficiency"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "layer": 14,
+      "row_count": 4032,
+      "width": 576,
+      "projection_shapes": {
+        "self_attn.q_proj.weight": [
+          576,
+          576
+        ],
+        "self_attn.k_proj.weight": [
+          192,
+          576
+        ],
+        "self_attn.v_proj.weight": [
+          192,
+          576
+        ],
+        "mlp.gate_proj.weight": [
+          1536,
+          576
+        ],
+        "mlp.up_proj.weight": [
+          1536,
+          576
+        ]
+      },
+      "fits": [
+        {
+          "atom_count": 288,
+          "real_relative_frobenius_error": 0.8807323575019836,
+          "random_relative_frobenius_error": 0.8962016701698303,
+          "real_history": [
+            0.9429026246070862,
+            0.8943870663642883,
+            0.8861379027366638,
+            0.8828045725822449,
+            0.8807323575019836
+          ],
+          "random_history": [
+            0.9547794461250305,
+            0.9077984690666199,
+            0.9004562497138977,
+            0.8975396752357483,
+            0.8962016701698303
+          ],
+          "real_maximum_cluster_size": 53,
+          "random_maximum_cluster_size": 26,
+          "ledger": {
+            "original_bf16_bits": 37158912,
+            "encoded_bits": 2755008,
+            "encoded_to_original_ratio": 0.07414124503968254,
+            "index_bits_per_row": 9,
+            "baseline_projection_macs_per_token": 2322432,
+            "dictionary_projection_macs_per_token": 169920,
+            "ideal_macs_ratio": 0.07316468253968254,
+            "excludes": [
+              "gather and index execution cost",
+              "output projections",
+              "activation-weighted causal error",
+              "physical kernel efficiency"
+            ]
+          }
+        },
+        {
+          "atom_count": 576,
+          "real_relative_frobenius_error": 0.8195527791976929,
+          "random_relative_frobenius_error": 0.8362898230552673,
+          "real_history": [
+            0.8998095393180847,
+            0.8345487713813782,
+            0.8250882029533386,
+            0.8214284181594849,
+            0.8195527791976929
+          ],
+          "random_history": [
+            0.9201720952987671,
+            0.8514923453330994,
+            0.842815637588501,
+            0.8384495377540588,
+            0.8362898230552673
+          ],
+          "real_maximum_cluster_size": 48,
+          "random_maximum_cluster_size": 17,
+          "ledger": {
+            "original_bf16_bits": 37158912,
+            "encoded_bits": 5413248,
+            "encoded_to_original_ratio": 0.1456783234126984,
+            "index_bits_per_row": 10,
+            "baseline_projection_macs_per_token": 2322432,
+            "dictionary_projection_macs_per_token": 335808,
+            "ideal_macs_ratio": 0.14459325396825398,
+            "excludes": [
+              "gather and index execution cost",
+              "output projections",
+              "activation-weighted causal error",
+              "physical kernel efficiency"
+            ]
+          }
+        },
+        {
+          "atom_count": 1152,
+          "real_relative_frobenius_error": 0.7224422693252563,
+          "random_relative_frobenius_error": 0.7350991368293762,
+          "real_history": [
+            0.8130227327346802,
+            0.735005795955658,
+            0.7267177700996399,
+            0.7238360047340393,
+            0.7224422693252563
+          ],
+          "random_history": [
+            0.8354522585868835,
+            0.7504657506942749,
+            0.7403821349143982,
+            0.7370620369911194,
+            0.7350991368293762
+          ],
+          "real_maximum_cluster_size": 23,
+          "random_maximum_cluster_size": 10,
+          "ledger": {
+            "original_bf16_bits": 37158912,
+            "encoded_bits": 10725696,
+            "encoded_to_original_ratio": 0.2886439732142857,
+            "index_bits_per_row": 11,
+            "baseline_projection_macs_per_token": 2322432,
+            "dictionary_projection_macs_per_token": 667584,
+            "ideal_macs_ratio": 0.2874503968253968,
+            "excludes": [
+              "gather and index execution cost",
+              "output projections",
+              "activation-weighted causal error",
+              "physical kernel efficiency"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "layer": 29,
+      "row_count": 4032,
+      "width": 576,
+      "projection_shapes": {
+        "self_attn.q_proj.weight": [
+          576,
+          576
+        ],
+        "self_attn.k_proj.weight": [
+          192,
+          576
+        ],
+        "self_attn.v_proj.weight": [
+          192,
+          576
+        ],
+        "mlp.gate_proj.weight": [
+          1536,
+          576
+        ],
+        "mlp.up_proj.weight": [
+          1536,
+          576
+        ]
+      },
+      "fits": [
+        {
+          "atom_count": 288,
+          "real_relative_frobenius_error": 0.8944516777992249,
+          "random_relative_frobenius_error": 0.9092418551445007,
+          "real_history": [
+            0.9395777583122253,
+            0.9052616357803345,
+            0.8996502757072449,
+            0.8964133262634277,
+            0.8944516777992249
+          ],
+          "random_history": [
+            0.9562437534332275,
+            0.9193642735481262,
+            0.9131841063499451,
+            0.9104140996932983,
+            0.9092418551445007
+          ],
+          "real_maximum_cluster_size": 120,
+          "random_maximum_cluster_size": 28,
+          "ledger": {
+            "original_bf16_bits": 37158912,
+            "encoded_bits": 2755008,
+            "encoded_to_original_ratio": 0.07414124503968254,
+            "index_bits_per_row": 9,
+            "baseline_projection_macs_per_token": 2322432,
+            "dictionary_projection_macs_per_token": 169920,
+            "ideal_macs_ratio": 0.07316468253968254,
+            "excludes": [
+              "gather and index execution cost",
+              "output projections",
+              "activation-weighted causal error",
+              "physical kernel efficiency"
+            ]
+          }
+        },
+        {
+          "atom_count": 576,
+          "real_relative_frobenius_error": 0.8336592316627502,
+          "random_relative_frobenius_error": 0.8489157557487488,
+          "real_history": [
+            0.8987727761268616,
+            0.8468573689460754,
+            0.8389784693717957,
+            0.8357349038124084,
+            0.8336592316627502
+          ],
+          "random_history": [
+            0.9178170561790466,
+            0.8614385724067688,
+            0.8539647459983826,
+            0.8506407141685486,
+            0.8489157557487488
+          ],
+          "real_maximum_cluster_size": 90,
+          "random_maximum_cluster_size": 17,
+          "ledger": {
+            "original_bf16_bits": 37158912,
+            "encoded_bits": 5413248,
+            "encoded_to_original_ratio": 0.1456783234126984,
+            "index_bits_per_row": 10,
+            "baseline_projection_macs_per_token": 2322432,
+            "dictionary_projection_macs_per_token": 335808,
+            "ideal_macs_ratio": 0.14459325396825398,
+            "excludes": [
+              "gather and index execution cost",
+              "output projections",
+              "activation-weighted causal error",
+              "physical kernel efficiency"
+            ]
+          }
+        },
+        {
+          "atom_count": 1152,
+          "real_relative_frobenius_error": 0.7251271605491638,
+          "random_relative_frobenius_error": 0.7484015822410583,
+          "real_history": [
+            0.8107302784919739,
+            0.7389557957649231,
+            0.7309786677360535,
+            0.7272160053253174,
+            0.7251271605491638
+          ],
+          "random_history": [
+            0.8370694518089294,
+            0.7631247639656067,
+            0.7532773613929749,
+            0.7500784993171692,
+            0.7484015822410583
+          ],
+          "real_maximum_cluster_size": 48,
+          "random_maximum_cluster_size": 12,
+          "ledger": {
+            "original_bf16_bits": 37158912,
+            "encoded_bits": 10725696,
+            "encoded_to_original_ratio": 0.2886439732142857,
+            "index_bits_per_row": 11,
+            "baseline_projection_macs_per_token": 2322432,
+            "dictionary_projection_macs_per_token": 667584,
+            "ideal_macs_ratio": 0.2874503968253968,
+            "excludes": [
+              "gather and index execution cost",
+              "output projections",
+              "activation-weighted causal error",
+              "physical kernel efficiency"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "one_basis_summary": {
+    "mean_real_relative_frobenius_error": 0.811526338259379,
+    "mean_random_relative_frobenius_error": 0.8270289500554403
+  },
+  "decision_rule": {
+    "one_basis_weight_error_gate": 0.1,
+    "required_real_advantage_over_random": 0.25,
+    "note": "Passing is only permission for an activation-weighted causal gate; weight-space failure rejects this parameterization."
+  }
+}

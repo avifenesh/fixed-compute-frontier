@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "source": "experiments/tile_routed_cross_gate_lm_screen.py",
+  "source_sha256": "229691298e548ce318ba7ca23a6cf13c41613a1bb6e0f421163acc47176f9715",
+  "preregistration": "results/tile-routed-cross-gate-lm-screen-preregistration.md",
+  "preregistration_sha256": "6d4b3b8a7b4ed9eb90094e4899c048bbe943f22135062a9dfa3a52aae62ed3bb",
+  "test": "tests/test_tile_routed_cross_gate_lm_screen.py",
+  "test_sha256": "e794c4845ba9c516890d4180b6e57a7a387b7bd562b2e0502713e031ac678eb6"
+}

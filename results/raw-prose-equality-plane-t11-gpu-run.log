@@ -1,0 +1,210 @@
+stage=environment
+2026-07-31T07:06:38+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"bf16": true, "cuda": "12.8", "gpu": "NVIDIA H100 80GB HBM3", "python": "3.12.3", "torch": "2.11.0+cu128"}
+datasets=4.0.0 transformers=4.57.6 tokenizers=0.22.2
+stage=prepare_and_verify_data
+{
+  "dataset": "HuggingFaceTB/smollm-corpus",
+  "dataset_config": "fineweb-edu-dedup",
+  "dataset_revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+  "dtype": "uint16 little-endian",
+  "elapsed_seconds": 0.1465545240789652,
+  "files": {
+    "train": {
+      "bytes": 100195056,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/train.uint16.bin",
+      "sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a"
+    },
+    "validation": {
+      "bytes": 4202496,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/validation.uint16.bin",
+      "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+    }
+  },
+  "generated": false,
+  "generation": null,
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "schema": "raw-prose-equality-plane-t10-data-v1",
+  "sequence_length": 512,
+  "source_sha256": "442e4815facf76b0335c4227a92860cef1649a7d161c677dc5055d7d6b68d7e6",
+  "split_rule": "validation iff uint64_be(sha256(id)[:8]) mod 10 == 0",
+  "status": "pass",
+  "train_sequences": 97656,
+  "validation_sequences": 4096
+}
+stage=cpu_contract_tests
+................                                                         [100%]
+16 passed in 5.67s
+stage=bf16_representation_gate
+Traceback (most recent call last):
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/raw_prose_equality_plane_t11.py", line 14, in <module>
+    from experiments import raw_prose_equality_plane_t10 as base
+ModuleNotFoundError: No module named 'experiments'
+stage=environment
+2026-07-31T07:07:23+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"bf16": true, "cuda": "12.8", "gpu": "NVIDIA H100 80GB HBM3", "python": "3.12.3", "torch": "2.11.0+cu128"}
+datasets=4.0.0 transformers=4.57.6 tokenizers=0.22.2
+stage=prepare_and_verify_data
+{
+  "dataset": "HuggingFaceTB/smollm-corpus",
+  "dataset_config": "fineweb-edu-dedup",
+  "dataset_revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+  "dtype": "uint16 little-endian",
+  "elapsed_seconds": 0.08382965484634042,
+  "files": {
+    "train": {
+      "bytes": 100195056,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/train.uint16.bin",
+      "sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a"
+    },
+    "validation": {
+      "bytes": 4202496,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/validation.uint16.bin",
+      "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+    }
+  },
+  "generated": false,
+  "generation": null,
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "schema": "raw-prose-equality-plane-t10-data-v1",
+  "sequence_length": 512,
+  "source_sha256": "442e4815facf76b0335c4227a92860cef1649a7d161c677dc5055d7d6b68d7e6",
+  "split_rule": "validation iff uint64_be(sha256(id)[:8]) mod 10 == 0",
+  "status": "pass",
+  "train_sequences": 97656,
+  "validation_sequences": 4096
+}
+stage=cpu_contract_tests
+................                                                         [100%]
+16 passed in 5.28s
+stage=bf16_representation_gate
+{
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/raw-prose-equality-plane-t11-quick.json",
+  "all_gates_pass": true,
+  "writer": {
+    "recovered_entities": 384,
+    "surface_aliases": 768,
+    "relations": 8,
+    "surface_frames": 32,
+    "direct_facts": 3072,
+    "payload_scalars": 24576,
+    "program_hidden_coordinates_during_blocks_0_to_2": 55,
+    "protected_hidden_coordinates_after_block_2": 9,
+    "block0_program_value_coordinates": 38,
+    "block1_selection_channels": 64,
+    "block2_product_channels": 8,
+    "output_scale": 2.0,
+    "frozen_parameter_entries": 743734,
+    "frozen_parameter_fraction": 0.0203332944019261,
+    "fixed_nonzero_entries": 26214
+  },
+  "evaluation": {
+    "direct_accuracy": 1.0,
+    "direct_errors": 0,
+    "direct_queries": 12288,
+    "direct_minimum_margin": 10.3125,
+    "equality_accuracy": 1.0,
+    "equality_errors": 0,
+    "equality_queries": 196608,
+    "equality_positive_rate": 0.1785481721162796,
+    "equality_minimum_margin": 10.375
+  }
+}
+representation_all_gates_pass=true
+stage=complete mode=quick
+stage=environment
+2026-07-31T07:08:19+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"bf16": true, "cuda": "12.8", "gpu": "NVIDIA H100 80GB HBM3", "python": "3.12.3", "torch": "2.11.0+cu128"}
+datasets=4.0.0 transformers=4.57.6 tokenizers=0.22.2
+stage=prepare_and_verify_data
+{
+  "dataset": "HuggingFaceTB/smollm-corpus",
+  "dataset_config": "fineweb-edu-dedup",
+  "dataset_revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+  "dtype": "uint16 little-endian",
+  "elapsed_seconds": 0.08626764034852386,
+  "files": {
+    "train": {
+      "bytes": 100195056,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/train.uint16.bin",
+      "sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a"
+    },
+    "validation": {
+      "bytes": 4202496,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/validation.uint16.bin",
+      "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+    }
+  },
+  "generated": false,
+  "generation": null,
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "schema": "raw-prose-equality-plane-t10-data-v1",
+  "sequence_length": 512,
+  "source_sha256": "442e4815facf76b0335c4227a92860cef1649a7d161c677dc5055d7d6b68d7e6",
+  "split_rule": "validation iff uint64_be(sha256(id)[:8]) mod 10 == 0",
+  "status": "pass",
+  "train_sequences": 97656,
+  "validation_sequences": 4096
+}
+stage=cpu_contract_tests
+................                                                         [100%]
+16 passed in 5.25s
+stage=bf16_representation_gate
+{
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/raw-prose-equality-plane-t11-quick.json",
+  "all_gates_pass": true,
+  "writer": {
+    "recovered_entities": 384,
+    "surface_aliases": 768,
+    "relations": 8,
+    "surface_frames": 32,
+    "direct_facts": 3072,
+    "payload_scalars": 24576,
+    "program_hidden_coordinates_during_blocks_0_to_2": 55,
+    "protected_hidden_coordinates_after_block_2": 9,
+    "block0_program_value_coordinates": 38,
+    "block1_selection_channels": 64,
+    "block2_product_channels": 8,
+    "output_scale": 2.0,
+    "frozen_parameter_entries": 743734,
+    "frozen_parameter_fraction": 0.0203332944019261,
+    "fixed_nonzero_entries": 26214
+  },
+  "evaluation": {
+    "direct_accuracy": 1.0,
+    "direct_errors": 0,
+    "direct_queries": 12288,
+    "direct_minimum_margin": 10.3125,
+    "equality_accuracy": 1.0,
+    "equality_errors": 0,
+    "equality_queries": 196608,
+    "equality_positive_rate": 0.1785481721162796,
+    "equality_minimum_margin": 10.375
+  }
+}
+representation_all_gates_pass=true
+stage=matched_training_pilot
+{
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/raw-prose-equality-plane-t11-training-pilot.json",
+  "all_gates_pass": true,
+  "failed_gates": [],
+  "best_2x_control": {
+    "direct_heldout_accuracy": 0.0840928852558136,
+    "equality_heldout_accuracy": 0.7751322984695435
+  }
+}
+{
+  "best_2x_control": {
+    "direct_heldout_accuracy": 0.0840928852558136,
+    "equality_heldout_accuracy": 0.7751322984695435
+  },
+  "failed_gates": [],
+  "pilot_all_gates_pass": true
+}
+stage=complete mode=pilot

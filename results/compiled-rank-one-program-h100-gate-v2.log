@@ -1,0 +1,42 @@
+benchmark dtype=float16 L=4 B=1
+benchmark dtype=float16 L=4 B=8
+benchmark dtype=float16 L=4 B=32
+benchmark dtype=float16 L=4 B=128
+benchmark dtype=float16 L=8 B=1
+benchmark dtype=float16 L=8 B=8
+benchmark dtype=float16 L=8 B=32
+benchmark dtype=float16 L=8 B=128
+benchmark dtype=float16 L=16 B=1
+benchmark dtype=float16 L=16 B=8
+benchmark dtype=float16 L=16 B=32
+benchmark dtype=float16 L=16 B=128
+benchmark dtype=float16 L=32 B=1
+benchmark dtype=float16 L=32 B=8
+benchmark dtype=float16 L=32 B=32
+benchmark dtype=float16 L=32 B=128
+benchmark dtype=bfloat16 L=4 B=1
+benchmark dtype=bfloat16 L=4 B=8
+benchmark dtype=bfloat16 L=4 B=32
+benchmark dtype=bfloat16 L=4 B=128
+benchmark dtype=bfloat16 L=8 B=1
+benchmark dtype=bfloat16 L=8 B=8
+benchmark dtype=bfloat16 L=8 B=32
+benchmark dtype=bfloat16 L=8 B=128
+benchmark dtype=bfloat16 L=16 B=1
+benchmark dtype=bfloat16 L=16 B=8
+benchmark dtype=bfloat16 L=16 B=32
+benchmark dtype=bfloat16 L=16 B=128
+benchmark dtype=bfloat16 L=32 B=1
+benchmark dtype=bfloat16 L=32 B=8
+benchmark dtype=bfloat16 L=32 B=32
+benchmark dtype=bfloat16 L=32 B=128
+{
+  "gates": {
+    "full_frozen_grid_present": true,
+    "compiled_faster_than_direct_for_all_l_ge_8": false,
+    "compiled_within_1p15_additive_on_key_cells": false,
+    "float16_compiled_error_below_2e_3": false,
+    "bfloat16_compiled_error_below_2e_2": false
+  },
+  "all_gates_pass": false
+}

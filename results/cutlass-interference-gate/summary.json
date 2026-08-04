@@ -1,0 +1,192 @@
+{
+  "claim": "Raw CUTLASS ceiling only; excludes scales, routing, two-accumulator combination, activation, and quantization quality.",
+  "shape": {
+    "baseline_n": 14336,
+    "candidate_concatenated_n": 28672,
+    "k": 4096
+  },
+  "records": [
+    {
+      "case": "m2048-w4-dual-concatenated",
+      "m": 2048,
+      "n": 28672,
+      "k": 4096,
+      "runtime_ms": 16.3612,
+      "gbytes_per_second": 5.25252,
+      "gflops": 29408.3,
+      "operation": "cutlass_tensorop_s4_i16864gemm_s4_128x128_256x4_tn_align32",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m2048-w4-routed",
+      "m": 2048,
+      "n": 14336,
+      "k": 4096,
+      "runtime_ms": 8.19022,
+      "gbytes_per_second": 5.48482,
+      "gflops": 29373.7,
+      "operation": "cutlass_tensorop_s4_i16864gemm_s4_128x128_256x4_tn_align32",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m2048-w8-single",
+      "m": 2048,
+      "n": 14336,
+      "k": 4096,
+      "runtime_ms": 0.186412,
+      "gbytes_per_second": 481.964,
+      "gflops": 1290570.0,
+      "operation": "cutlass3x_sm90_tensorop_i64x128x32gemm_s8_s8_s32_s8_s8_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m256-w4-dual-concatenated",
+      "m": 256,
+      "n": 28672,
+      "k": 4096,
+      "runtime_ms": 2.33146,
+      "gbytes_per_second": 25.1318,
+      "gflops": 25796.9,
+      "operation": "cutlass_tensorop_s4_i16864gemm_s4_128x128_256x4_tn_align32",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m256-w4-routed",
+      "m": 256,
+      "n": 14336,
+      "k": 4096,
+      "runtime_ms": 1.17168,
+      "gbytes_per_second": 25.2126,
+      "gflops": 25665.9,
+      "operation": "cutlass_tensorop_s4_i16864gemm_s4_128x128_256x4_tn_align32",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m256-w8-single",
+      "m": 256,
+      "n": 14336,
+      "k": 4096,
+      "runtime_ms": 0.0310867,
+      "gbytes_per_second": 1900.56,
+      "gflops": 967362.0,
+      "operation": "cutlass3x_sm90_tensorop_i64x128x32gemm_s8_s8_s32_s8_s8_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m4096-w4-dual-concatenated",
+      "m": 4096,
+      "n": 28672,
+      "k": 4096,
+      "runtime_ms": 32.1421,
+      "gbytes_per_second": 3.64592,
+      "gflops": 29939.2,
+      "operation": "cutlass_tensorop_s4_i16864gemm_s4_128x128_256x4_tn_align32",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m4096-w4-routed",
+      "m": 4096,
+      "n": 14336,
+      "k": 4096,
+      "runtime_ms": 16.349,
+      "gbytes_per_second": 3.82287,
+      "gflops": 29430.2,
+      "operation": "cutlass_tensorop_s4_i16864gemm_s4_128x128_256x4_tn_align32",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m4096-w8-single",
+      "m": 4096,
+      "n": 14336,
+      "k": 4096,
+      "runtime_ms": 0.376053,
+      "gbytes_per_second": 332.4,
+      "gflops": 1279480.0,
+      "operation": "cutlass3x_sm90_tensorop_i64x128x32gemm_s8_s8_s32_s8_s8_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m512-w4-dual-concatenated",
+      "m": 512,
+      "n": 28672,
+      "k": 4096,
+      "runtime_ms": 4.09396,
+      "gbytes_per_second": 15.2664,
+      "gflops": 29381.9,
+      "operation": "cutlass_tensorop_s4_i16864gemm_s4_128x128_256x4_tn_align32",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m512-w4-routed",
+      "m": 512,
+      "n": 14336,
+      "k": 4096,
+      "runtime_ms": 2.33533,
+      "gbytes_per_second": 13.5905,
+      "gflops": 25754.1,
+      "operation": "cutlass_tensorop_s4_i16864gemm_s4_128x128_256x4_tn_align32",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m512-w8-single",
+      "m": 512,
+      "n": 14336,
+      "k": 4096,
+      "runtime_ms": 0.0501157,
+      "gbytes_per_second": 1266.6,
+      "gflops": 1200110.0,
+      "operation": "cutlass3x_sm90_tensorop_i64x128x32gemm_s8_s8_s32_s8_s8_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    }
+  ],
+  "comparisons": [
+    {
+      "m": 256,
+      "w8_single_ms": 0.0310867,
+      "w4_routed_ms": 1.17168,
+      "w4_dual_concatenated_ms": 2.33146,
+      "dual_w4_over_w8": 74.99863285585154,
+      "routed_w4_over_w8": 37.69071660871048,
+      "dual_w4_over_routed_w4": 1.9898436433155808
+    },
+    {
+      "m": 512,
+      "w8_single_ms": 0.0501157,
+      "w4_routed_ms": 2.33533,
+      "w4_dual_concatenated_ms": 4.09396,
+      "dual_w4_over_w8": 81.6901689490519,
+      "routed_w4_over_w8": 46.59877044518983,
+      "dual_w4_over_routed_w4": 1.75305417221549
+    },
+    {
+      "m": 2048,
+      "w8_single_ms": 0.186412,
+      "w4_routed_ms": 8.19022,
+      "w4_dual_concatenated_ms": 16.3612,
+      "dual_w4_over_w8": 87.76902774499496,
+      "routed_w4_over_w8": 43.936119992275174,
+      "dual_w4_over_routed_w4": 1.9976508567535427
+    },
+    {
+      "m": 4096,
+      "w8_single_ms": 0.376053,
+      "w4_routed_ms": 16.349,
+      "w4_dual_concatenated_ms": 32.1421,
+      "dual_w4_over_w8": 85.47226055901695,
+      "routed_w4_over_w8": 43.47525481780494,
+      "dual_w4_over_routed_w4": 1.9659979203621016
+    }
+  ]
+}

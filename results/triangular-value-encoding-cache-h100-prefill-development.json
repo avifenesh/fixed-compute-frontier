@@ -1,0 +1,360 @@
+{
+  "schema": "triangular-value-encoding-cache-h100-development-v1",
+  "device": "NVIDIA H100 80GB HBM3",
+  "runtime": {
+    "torch": "2.5.1+cu124",
+    "cuda": "12.4",
+    "triton": "3.1.0"
+  },
+  "scope": "BF16 QKV GEMM plus FP32-one-store Q/K RoPE plus required K/V cache write",
+  "cells": [
+    {
+      "rows": 1,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_qkv_max_abs": 0.0,
+        "canonical_control_qkv_mean_abs": 0.0,
+        "canonical_control_qkv_mismatch_fraction": 0.0,
+        "canonical_control_qkv_bit_exact": true,
+        "canonical_control_key_cache_max_abs": 0.0,
+        "canonical_control_key_cache_mean_abs": 0.0,
+        "canonical_control_key_cache_mismatch_fraction": 0.0,
+        "canonical_control_key_cache_bit_exact": true,
+        "canonical_control_value_cache_max_abs": 0.0,
+        "canonical_control_value_cache_mean_abs": 0.0,
+        "canonical_control_value_cache_mismatch_fraction": 0.0,
+        "canonical_control_value_cache_bit_exact": true,
+        "triangular_value_encoding_qkv_max_abs": 0.0,
+        "triangular_value_encoding_qkv_mean_abs": 0.0,
+        "triangular_value_encoding_qkv_mismatch_fraction": 0.0,
+        "triangular_value_encoding_qkv_bit_exact": true,
+        "triangular_value_encoding_key_cache_max_abs": 0.0,
+        "triangular_value_encoding_key_cache_mean_abs": 0.0,
+        "triangular_value_encoding_key_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_key_cache_bit_exact": true,
+        "triangular_value_encoding_value_cache_max_abs": 0.0,
+        "triangular_value_encoding_value_cache_mean_abs": 0.0,
+        "triangular_value_encoding_value_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_value_cache_bit_exact": true,
+        "nonzero_candidate_value_delta": true
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 74.62400197982788,
+          "p05_us": 71.55200093984604,
+          "p95_us": 89.91999924182892
+        },
+        "triangular_value_encoding": {
+          "median_us": 74.73600283265114,
+          "p05_us": 71.07199728488922,
+          "p95_us": 88.639996945858
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 1.0015008690213845,
+        "lower_95": 0.9861580573477506,
+        "upper_95": 1.0209789216227203
+      },
+      "ledger": {
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_and_candidate_cache_bytes_each": 4096,
+        "coefficient_slots_per_layer": 7680,
+        "logical_triangular_mac_per_token_layer": 7680,
+        "executed_tensor_core_mac_per_token_layer": 16384,
+        "logical_and_executed_signed_square_per_token_layer": 1024
+      }
+    },
+    {
+      "rows": 8,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_qkv_max_abs": 0.0,
+        "canonical_control_qkv_mean_abs": 0.0,
+        "canonical_control_qkv_mismatch_fraction": 0.0,
+        "canonical_control_qkv_bit_exact": true,
+        "canonical_control_key_cache_max_abs": 0.0,
+        "canonical_control_key_cache_mean_abs": 0.0,
+        "canonical_control_key_cache_mismatch_fraction": 0.0,
+        "canonical_control_key_cache_bit_exact": true,
+        "canonical_control_value_cache_max_abs": 0.0,
+        "canonical_control_value_cache_mean_abs": 0.0,
+        "canonical_control_value_cache_mismatch_fraction": 0.0,
+        "canonical_control_value_cache_bit_exact": true,
+        "triangular_value_encoding_qkv_max_abs": 0.0,
+        "triangular_value_encoding_qkv_mean_abs": 0.0,
+        "triangular_value_encoding_qkv_mismatch_fraction": 0.0,
+        "triangular_value_encoding_qkv_bit_exact": true,
+        "triangular_value_encoding_key_cache_max_abs": 0.0,
+        "triangular_value_encoding_key_cache_mean_abs": 0.0,
+        "triangular_value_encoding_key_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_key_cache_bit_exact": true,
+        "triangular_value_encoding_value_cache_max_abs": 0.0,
+        "triangular_value_encoding_value_cache_mean_abs": 0.0,
+        "triangular_value_encoding_value_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_value_cache_bit_exact": true,
+        "nonzero_candidate_value_delta": true
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 75.23199915885925,
+          "p05_us": 72.35199958086014,
+          "p95_us": 88.95999938249588
+        },
+        "triangular_value_encoding": {
+          "median_us": 75.29599964618683,
+          "p05_us": 72.54400104284286,
+          "p95_us": 88.03199976682663
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 1.0008507083161837,
+        "lower_95": 0.9809861627769291,
+        "upper_95": 1.0146996296137571
+      },
+      "ledger": {
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_and_candidate_cache_bytes_each": 32768,
+        "coefficient_slots_per_layer": 7680,
+        "logical_triangular_mac_per_token_layer": 7680,
+        "executed_tensor_core_mac_per_token_layer": 16384,
+        "logical_and_executed_signed_square_per_token_layer": 1024
+      }
+    },
+    {
+      "rows": 32,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_qkv_max_abs": 0.0,
+        "canonical_control_qkv_mean_abs": 0.0,
+        "canonical_control_qkv_mismatch_fraction": 0.0,
+        "canonical_control_qkv_bit_exact": true,
+        "canonical_control_key_cache_max_abs": 0.0,
+        "canonical_control_key_cache_mean_abs": 0.0,
+        "canonical_control_key_cache_mismatch_fraction": 0.0,
+        "canonical_control_key_cache_bit_exact": true,
+        "canonical_control_value_cache_max_abs": 0.0,
+        "canonical_control_value_cache_mean_abs": 0.0,
+        "canonical_control_value_cache_mismatch_fraction": 0.0,
+        "canonical_control_value_cache_bit_exact": true,
+        "triangular_value_encoding_qkv_max_abs": 0.0,
+        "triangular_value_encoding_qkv_mean_abs": 0.0,
+        "triangular_value_encoding_qkv_mismatch_fraction": 0.0,
+        "triangular_value_encoding_qkv_bit_exact": true,
+        "triangular_value_encoding_key_cache_max_abs": 0.0,
+        "triangular_value_encoding_key_cache_mean_abs": 0.0,
+        "triangular_value_encoding_key_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_key_cache_bit_exact": true,
+        "triangular_value_encoding_value_cache_max_abs": 0.0,
+        "triangular_value_encoding_value_cache_mean_abs": 0.0,
+        "triangular_value_encoding_value_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_value_cache_bit_exact": true,
+        "nonzero_candidate_value_delta": true
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 73.61600175499916,
+          "p05_us": 70.91200351715088,
+          "p95_us": 86.17600053548813
+        },
+        "triangular_value_encoding": {
+          "median_us": 74.41600039601326,
+          "p05_us": 71.45600020885468,
+          "p95_us": 86.14400029182434
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 1.010867184062462,
+        "lower_95": 0.9913532554365655,
+        "upper_95": 1.0323435851229157
+      },
+      "ledger": {
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_and_candidate_cache_bytes_each": 131072,
+        "coefficient_slots_per_layer": 7680,
+        "logical_triangular_mac_per_token_layer": 7680,
+        "executed_tensor_core_mac_per_token_layer": 16384,
+        "logical_and_executed_signed_square_per_token_layer": 1024
+      }
+    },
+    {
+      "rows": 128,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_qkv_max_abs": 0.0,
+        "canonical_control_qkv_mean_abs": 0.0,
+        "canonical_control_qkv_mismatch_fraction": 0.0,
+        "canonical_control_qkv_bit_exact": true,
+        "canonical_control_key_cache_max_abs": 0.0,
+        "canonical_control_key_cache_mean_abs": 0.0,
+        "canonical_control_key_cache_mismatch_fraction": 0.0,
+        "canonical_control_key_cache_bit_exact": true,
+        "canonical_control_value_cache_max_abs": 0.0,
+        "canonical_control_value_cache_mean_abs": 0.0,
+        "canonical_control_value_cache_mismatch_fraction": 0.0,
+        "canonical_control_value_cache_bit_exact": true,
+        "triangular_value_encoding_qkv_max_abs": 0.0,
+        "triangular_value_encoding_qkv_mean_abs": 0.0,
+        "triangular_value_encoding_qkv_mismatch_fraction": 0.0,
+        "triangular_value_encoding_qkv_bit_exact": true,
+        "triangular_value_encoding_key_cache_max_abs": 0.0,
+        "triangular_value_encoding_key_cache_mean_abs": 0.0,
+        "triangular_value_encoding_key_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_key_cache_bit_exact": true,
+        "triangular_value_encoding_value_cache_max_abs": 0.0,
+        "triangular_value_encoding_value_cache_mean_abs": 0.0,
+        "triangular_value_encoding_value_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_value_cache_bit_exact": true,
+        "nonzero_candidate_value_delta": true
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 75.6160020828247,
+          "p05_us": 72.15999811887741,
+          "p95_us": 90.4960036277771
+        },
+        "triangular_value_encoding": {
+          "median_us": 74.48000088334084,
+          "p05_us": 71.9359964132309,
+          "p95_us": 90.14400094747543
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 0.9849767090537321,
+        "lower_95": 0.9653443992857786,
+        "upper_95": 0.9974414083241813
+      },
+      "ledger": {
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_and_candidate_cache_bytes_each": 524288,
+        "coefficient_slots_per_layer": 7680,
+        "logical_triangular_mac_per_token_layer": 7680,
+        "executed_tensor_core_mac_per_token_layer": 16384,
+        "logical_and_executed_signed_square_per_token_layer": 1024
+      }
+    },
+    {
+      "rows": 512,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_qkv_max_abs": 0.0,
+        "canonical_control_qkv_mean_abs": 0.0,
+        "canonical_control_qkv_mismatch_fraction": 0.0,
+        "canonical_control_qkv_bit_exact": true,
+        "canonical_control_key_cache_max_abs": 0.0,
+        "canonical_control_key_cache_mean_abs": 0.0,
+        "canonical_control_key_cache_mismatch_fraction": 0.0,
+        "canonical_control_key_cache_bit_exact": true,
+        "canonical_control_value_cache_max_abs": 0.0,
+        "canonical_control_value_cache_mean_abs": 0.0,
+        "canonical_control_value_cache_mismatch_fraction": 0.0,
+        "canonical_control_value_cache_bit_exact": true,
+        "triangular_value_encoding_qkv_max_abs": 0.0,
+        "triangular_value_encoding_qkv_mean_abs": 0.0,
+        "triangular_value_encoding_qkv_mismatch_fraction": 0.0,
+        "triangular_value_encoding_qkv_bit_exact": true,
+        "triangular_value_encoding_key_cache_max_abs": 0.0,
+        "triangular_value_encoding_key_cache_mean_abs": 0.0,
+        "triangular_value_encoding_key_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_key_cache_bit_exact": true,
+        "triangular_value_encoding_value_cache_max_abs": 0.0,
+        "triangular_value_encoding_value_cache_mean_abs": 0.0,
+        "triangular_value_encoding_value_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_value_cache_bit_exact": true,
+        "nonzero_candidate_value_delta": true
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 87.71199733018875,
+          "p05_us": 85.9839990735054,
+          "p95_us": 91.61599725484848
+        },
+        "triangular_value_encoding": {
+          "median_us": 89.15200084447861,
+          "p05_us": 86.65599673986435,
+          "p95_us": 97.4079966545105
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 1.016417406490802,
+        "lower_95": 1.0058138075990495,
+        "upper_95": 1.0224742721855176
+      },
+      "ledger": {
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_and_candidate_cache_bytes_each": 2097152,
+        "coefficient_slots_per_layer": 7680,
+        "logical_triangular_mac_per_token_layer": 7680,
+        "executed_tensor_core_mac_per_token_layer": 16384,
+        "logical_and_executed_signed_square_per_token_layer": 1024
+      }
+    },
+    {
+      "rows": 2048,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_qkv_max_abs": 0.0,
+        "canonical_control_qkv_mean_abs": 0.0,
+        "canonical_control_qkv_mismatch_fraction": 0.0,
+        "canonical_control_qkv_bit_exact": true,
+        "canonical_control_key_cache_max_abs": 0.0,
+        "canonical_control_key_cache_mean_abs": 0.0,
+        "canonical_control_key_cache_mismatch_fraction": 0.0,
+        "canonical_control_key_cache_bit_exact": true,
+        "canonical_control_value_cache_max_abs": 0.0,
+        "canonical_control_value_cache_mean_abs": 0.0,
+        "canonical_control_value_cache_mismatch_fraction": 0.0,
+        "canonical_control_value_cache_bit_exact": true,
+        "triangular_value_encoding_qkv_max_abs": 0.0078125,
+        "triangular_value_encoding_qkv_mean_abs": 6.208817349140361e-10,
+        "triangular_value_encoding_qkv_mismatch_fraction": 7.947286206899662e-08,
+        "triangular_value_encoding_qkv_bit_exact": false,
+        "triangular_value_encoding_key_cache_max_abs": 0.0,
+        "triangular_value_encoding_key_cache_mean_abs": 0.0,
+        "triangular_value_encoding_key_cache_mismatch_fraction": 0.0,
+        "triangular_value_encoding_key_cache_bit_exact": true,
+        "triangular_value_encoding_value_cache_max_abs": 0.0078125,
+        "triangular_value_encoding_value_cache_mean_abs": 3.725290298461914e-09,
+        "triangular_value_encoding_value_cache_mismatch_fraction": 4.76837158203125e-07,
+        "triangular_value_encoding_value_cache_bit_exact": false,
+        "nonzero_candidate_value_delta": true
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 207.07199722528458,
+          "p05_us": 203.64800095558167,
+          "p95_us": 212.73599565029144
+        },
+        "triangular_value_encoding": {
+          "median_us": 207.91999995708466,
+          "p05_us": 205.47200739383698,
+          "p95_us": 212.89600431919098
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 1.0040952071895917,
+        "lower_95": 0.9996137647841651,
+        "upper_95": 1.0083707867885592
+      },
+      "ledger": {
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_and_candidate_cache_bytes_each": 8388608,
+        "coefficient_slots_per_layer": 7680,
+        "logical_triangular_mac_per_token_layer": 7680,
+        "executed_tensor_core_mac_per_token_layer": 16384,
+        "logical_and_executed_signed_square_per_token_layer": 1024
+      }
+    }
+  ]
+}

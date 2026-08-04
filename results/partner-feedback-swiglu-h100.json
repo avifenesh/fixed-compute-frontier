@@ -1,0 +1,173 @@
+{
+  "all_gates_pass": true,
+  "args": {
+    "batches": "1,8,32,128",
+    "carrier_gain": 4.0,
+    "coefficient": 0.08,
+    "dimension": 4096,
+    "hidden": 14336,
+    "output": "results/partner-feedback-swiglu-h100.json",
+    "samples": 200,
+    "seed": 733,
+    "warmup": 40
+  },
+  "candidate": "gauge-exposed partner-feedback SwiGLU",
+  "carrier_scale": 1.32,
+  "cells": [
+    {
+      "batch": 1,
+      "partner_over_baseline_median": 1.0037785944647064,
+      "timings": {
+        "baseline": {
+          "max_us": 163.13600540161133,
+          "mean_us": 144.3713603168726,
+          "median_us": 143.96800100803375,
+          "min_us": 141.76000654697418,
+          "p10_us": 142.84480065107346,
+          "p90_us": 145.50399780273438,
+          "samples": 200
+        },
+        "partner": {
+          "max_us": 156.89599514007568,
+          "mean_us": 144.77184012532234,
+          "median_us": 144.51199769973755,
+          "min_us": 142.62400567531586,
+          "p10_us": 143.54880452156067,
+          "p90_us": 145.8623930811882,
+          "samples": 200
+        }
+      },
+      "zero_endpoint_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 8,
+      "partner_over_baseline_median": 1.0021805661044072,
+      "timings": {
+        "baseline": {
+          "max_us": 168.99199783802032,
+          "mean_us": 147.0065599679947,
+          "median_us": 146.7519998550415,
+          "min_us": 144.96000111103058,
+          "p10_us": 145.6640064716339,
+          "p90_us": 148.16959649324417,
+          "samples": 200
+        },
+        "partner": {
+          "max_us": 150.2400040626526,
+          "mean_us": 147.08623968064785,
+          "median_us": 147.07200229167938,
+          "min_us": 144.9279934167862,
+          "p10_us": 145.94560116529465,
+          "p90_us": 148.16639572381973,
+          "samples": 200
+        }
+      },
+      "zero_endpoint_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 32,
+      "partner_over_baseline_median": 1.0004124593254604,
+      "timings": {
+        "baseline": {
+          "max_us": 164.41600024700165,
+          "mean_us": 155.34959986805916,
+          "median_us": 155.16799688339233,
+          "min_us": 152.63999998569489,
+          "p10_us": 153.75680029392242,
+          "p90_us": 157.02399611473083,
+          "samples": 200
+        },
+        "partner": {
+          "max_us": 171.26399278640747,
+          "mean_us": 155.49024060368538,
+          "median_us": 155.2319973707199,
+          "min_us": 152.76800096035004,
+          "p10_us": 153.98079603910446,
+          "p90_us": 156.8319946527481,
+          "samples": 200
+        }
+      },
+      "zero_endpoint_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 128,
+      "partner_over_baseline_median": 1.0041785694796295,
+      "timings": {
+        "baseline": {
+          "max_us": 183.58400464057922,
+          "mean_us": 168.6537603288889,
+          "median_us": 168.47999393939972,
+          "min_us": 165.8879965543747,
+          "p10_us": 167.1327993273735,
+          "p90_us": 169.98399794101715,
+          "samples": 200
+        },
+        "partner": {
+          "max_us": 174.27200078964233,
+          "mean_us": 169.193599447608,
+          "median_us": 169.18399930000305,
+          "min_us": 165.3759926557541,
+          "p10_us": 167.58080124855042,
+          "p90_us": 171.02080583572388,
+          "samples": 200
+        }
+      },
+      "zero_endpoint_max_row_relative_error": 0.0
+    }
+  ],
+  "cuda_version": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "device_properties": "_CudaDeviceProperties(name='NVIDIA H100 80GB HBM3', major=9, minor=0, total_memory=80994MB, multi_processor_count=132, uuid=44700db4-f6b2-9122-550e-6987512886e8, L2_cache_size=50MB)",
+  "driver_version": "550.163.01",
+  "gates": {
+    "lambda_decode_below_0p002": true,
+    "no_duplicate_parameter_or_workspace": true,
+    "no_serial_feature_dependency": true,
+    "nonzero_reference_below_1_percent": true,
+    "protocol_valid": true,
+    "reference_exercises_all_clip_regions": true,
+    "within_1p02_on_key_cells": true,
+    "within_1p05_on_full_grid": true,
+    "zero_endpoint_below_0p2_percent": true
+  },
+  "kernel": {
+    "block": 256,
+    "coefficient_source": "deployed U[0,0] scale orbit",
+    "cuda_graph_full_path": true,
+    "matching": "adjacent fixed-point-free involution",
+    "num_warps": 4,
+    "serial_feature_dependencies": 0
+  },
+  "ledger": {
+    "additional_activation_loads_per_output_feature": 2,
+    "additional_activation_workspace_words": 0,
+    "additional_silu_evaluations_per_output_feature": 1,
+    "carrier_pivot_loads_per_kernel_program": 1,
+    "dense_macs_per_token_each": 176160768,
+    "kernel_programs_by_batch": {
+      "1": 56,
+      "128": 7168,
+      "32": 1792,
+      "8": 448
+    },
+    "per_feature_coefficient_words": 0,
+    "permutation_metadata_words": 0,
+    "production_coalesced_projection_parity_established": false,
+    "serialized_words_each": 176160768
+  },
+  "nonzero_reference": {
+    "carrier_scale": 1.32,
+    "decoded_lambda": 0.080078125,
+    "encoded_lambda": 0.08,
+    "lambda_absolute_decode_error": 7.812499999999833e-05,
+    "max_row_relative_error": 0.0016633187187835574,
+    "negative_clipped_coordinates": 8304,
+    "positive_clipped_coordinates": 8304,
+    "unclipped_coordinates": 26400
+  },
+  "preregistration_sha256": "19935dd2392c643ce146217c9af39397c30e1e1ae32d27ebb1370239c0d8456f",
+  "scope": "fused full-FFN H100 feasibility only",
+  "source_sha256": "13ba6b1038bc2f164b71d9082c6abc57d67a15e9f14e8f418d62145874cceb96",
+  "torch_version": "2.5.1+cu124",
+  "triton_version": "3.1.0"
+}

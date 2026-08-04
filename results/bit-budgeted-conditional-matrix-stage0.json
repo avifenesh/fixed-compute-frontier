@@ -1,0 +1,91 @@
+{
+  "all_gates_pass": true,
+  "args": {
+    "alignment": 16,
+    "base_bits": 8,
+    "baseline_bits": 16,
+    "delta_bits": 2,
+    "dimension": 4096,
+    "experts": 4,
+    "hidden": 14336,
+    "output": "results/bit-budgeted-conditional-matrix-stage0.json",
+    "router_bits": 16,
+    "scale_bits": 16
+  },
+  "candidate": "Bit-Budgeted Conditional Matrix",
+  "conditional_witness": {
+    "best_dense_affine": {
+      "bias": 3.0,
+      "mse": 5.375,
+      "slope": 0.0
+    },
+    "inputs": [
+      -4.0,
+      -3.0,
+      -2.0,
+      -1.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "routed": {
+      "mse": 0.0,
+      "multiplications_per_example": 1
+    },
+    "routes": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3
+    ],
+    "targets": [
+      6.0,
+      4.5,
+      1.0,
+      0.5,
+      0.5,
+      1.0,
+      4.5,
+      6.0
+    ],
+    "two_bit_delta_levels": [
+      -1.5,
+      -0.5,
+      0.5,
+      1.5
+    ]
+  },
+  "gates": {
+    "active_matrix_plus_router_macs_not_above_baseline": true,
+    "conditional_witness_exact": true,
+    "exact_resident_storage_not_above_bf16": true,
+    "natural_expert_cap_is_four": true,
+    "same_raw_code_cardinality": true,
+    "single_affine_witness_inexact": true
+  },
+  "ledger": {
+    "baseline_bytes": 352321536,
+    "baseline_hidden": 14336,
+    "baseline_matrix_macs_per_token": 176160768,
+    "baseline_matrix_weights": 176160768,
+    "candidate_bytes_including_scales_and_router": 352288448,
+    "candidate_matrix_plus_router_macs_per_token": 175980544,
+    "candidate_matrix_weights": 175964160,
+    "equal_storage_aligned_hidden": 14320,
+    "hidden_reduction": 16,
+    "logical_base_plus_expert_weight_values": 879820800,
+    "mac_reduction_fraction": 0.0010230654761904762,
+    "natural_expert_cap": 4,
+    "payload_bits_per_coordinate": 16,
+    "unused_bytes": 33088
+  },
+  "net_gain_condition": "In a local quadratic loss model, routed specialization helps only when the between-route Hessian-weighted variance of optimal matrices exceeds the Hessian-weighted base-plus-delta quantization error and routing error.",
+  "preregistration_sha256": "5b01b26b9ad83f6850933d7c8ba16c53d4fb902cb7d07409ca33b8af3845f66b",
+  "scope": "stage-0 exact arithmetic and artificial function-class witness only",
+  "source_sha256": "33d08c03855be5efec7dece465bd6da6654adbdd9901f6d1b1846c35a7f36c84"
+}

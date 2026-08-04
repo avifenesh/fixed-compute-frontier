@@ -1,0 +1,28 @@
+{
+  "all_gates_pass": true,
+  "device": "cuda",
+  "gates": {
+    "candidate_beats_linear_by_100x": true,
+    "candidate_fits_teacher": true,
+    "candidate_rank_is_12": true,
+    "equal_teacher_parameter_counts": true,
+    "ordinary_rank_is_9": true,
+    "rank_gain_matches_strict_lower_dimension": true
+  },
+  "jacobian": {
+    "candidate_rank": 12,
+    "expected_gain": 3,
+    "ordinary_rank": 9
+  },
+  "schema": "triangular-value-flow-stage0-development-v1",
+  "teacher": {
+    "candidate_at_least_100x_better": true,
+    "candidate_coefficient_abs_max": 0.41091230511665344,
+    "candidate_mse_at_most_1e_6": true,
+    "candidate_test_mse": 3.000166770493972e-15,
+    "control_over_candidate_mse": 2574518163071.246,
+    "control_test_mse": 0.007723983842879534,
+    "learned_scalars_each": 64,
+    "width": 8
+  }
+}

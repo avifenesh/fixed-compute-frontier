@@ -1,0 +1,16 @@
+{
+  "attention_source_sha256": "2a19f4d99835bc45ff7f3ccdbc85657f1732eba2f89dac7d36bac99a96a19225",
+  "attention_test_sha256": "580da40e986b6ed8876abcb5928a1ac3f5c4471541b6c10ce926955815167a45",
+  "cuda_version": "12.4",
+  "data_manifest_sha256": "8770dd2e042e65090c17e2d0061ebe215fe3f1436815cdb65c968e1ba91b1627",
+  "direct_native_manifest_sha256": "2b645d68183c17598e15abe4078e604b4d1fac9ca53e3ebb49eac379462d09d7",
+  "direct_native_preregistration_sha256": "ade032b6cf5f7ee0fb4a09c554f3ef76cabed62c697613f14a1face7c5b14cf2",
+  "mechanism_source_sha256": "44736cf48622d203b9f7251f010ba30f26119cb073ef8d260109d48f60a05ccb",
+  "numpy_version": "2.1.2",
+  "pilot_source_sha256": "078516e894b638dae7a71df4f0b5387e6a435de21f036325d6615874012c3f57",
+  "preregistration_sha256": "ca4028891083d869100a858a4901ea86b7e9009e69c6f2fe6942ab0ce187ca44",
+  "python_version": "3.11.10",
+  "torch_version": "2.5.1+cu124",
+  "transformers_version": "4.57.6",
+  "triton_version": "3.1.0"
+}

@@ -1,0 +1,1758 @@
+# Radial-trust Cayley program tree B2 physical-operator preregistration
+
+Status: **FROZEN FOR IMPLEMENTATION AUDIT; DO NOT RUN**  
+Date: 2026-08-01  
+Parent decisions:
+
+- `results/radial-trust-cayley-proof-first-reassessment.md`
+- `results/radial-trust-cayley-conditioning-b1-decision.md`
+
+## 1. Binary question
+
+On one full, non-MIG H100 SXM 80 GB, can the exact width-4,096 radial-trust
+Cayley FFN execute its complete natural-route forward graph at low decode batch
+with a **simultaneous one-sided 95% upper confidence bound no greater than
+0.50x dense SwiGLU p95 latency**, while preserving p99 latency, energy, HBM
+traffic, peak memory, and exact 12-layer resident bytes?
+
+The primary cells are `B in {1,2,4,8}` for two frozen RMS-one input families.
+The resource-valid object is a panel of 12 distinct FFN layers sharing one
+immutable topology table. A single FFN is a latency diagnostic, not an
+equal-resident-byte claim.
+
+This is a material physical gate, not a request for a small optimization. A
+valid result slower than the frozen boundary closes this exact packed-topology,
+one-CTA-per-token, radial-Cayley construction as a dense-relative low-batch
+physical substrate. It does not permit a post-result kernel search.
+
+## 2. What a pass would and would not prove
+
+A pass would prove only that the exact served FFN graph has enough physical
+headroom on the named Hopper stratum to justify measuring route/traffic
+coupling in B3. It would establish neither language-model quality nor a smarter
+model.
+
+In particular, B2 does not establish:
+
+- that the operator can learn from raw prose;
+- that its paths discover useful digital structure;
+- that it matches dense, MoE, or structured controls in capability;
+- that attention or end-to-end transformer latency is reduced;
+- that an H100 result transfers to H200, Blackwell, or a local GPU.
+
+No language training is authorized by B2 alone.
+
+## 3. Pre-run feasibility argument
+
+The hypothesis is physically plausible but not implied by the arithmetic
+ledger. At maximum depth, one token uniquely addresses 319,488 learned BF16
+payload bytes, 36,864 learned BF16 basis bytes, 26 threshold bytes, and a
+shared 147,456-byte topology table. This is not an HBM-read count. Without
+cache or staging, the 104 sparse applications request 5,111,808 descriptor
+bytes and 2,555,904 coefficient bytes because values are revisited. Dense
+SwiGLU stores 352,321,536 BF16 weight bytes per layer. The difference creates
+a possible memory-latency gap at low batch, not a predicted one.
+
+The countervailing term is serial depth. Each selected edge contains two
+four-step sparse Neumann recurrences, a diagonal SwiGLU payload, a block-wide
+FP32 reduction, a reciprocal square root, and a residual update. A single CTA
+must cross those dependencies 12 or 13 times. Dense GEMMs read far more bytes
+but distribute regular tensor-core work across the GPU.
+
+Therefore neither bytes nor scalar operations decide B2. The experiment asks
+whether the serial synchronization and irregular addressing consume less than
+half of the optimized dense reference's latency in the primary cells.
+
+Before code, publish a symbolic dependency and traffic sheet containing the
+exact 104 sparse applications, 13 reductions, 13 normalization operations,
+and the requested-versus-unique byte counts. It may use NVIDIA's published
+H100 limits only as explicitly labeled hardware envelopes. It must not insert
+fitted latency constants or claim a measured bound. After the implementation
+and code audit pass, U0-U5 calibrate HBM, L2, barrier, launch, reduction,
+special-function, and recurrence costs on the actual device before U6/U7 run.
+This ordering removes the circular requirement to measure an H100 before the
+code is allowed to exist.
+
+## 4. Exact candidate graph
+
+### 4.1 Dimensions and incomplete tree
+
+Freeze:
+
+- hidden width `D=4096`;
+- dense comparison width `M=14336`;
+- internal nodes `N=7166`, indexed `0..7165`;
+- edge payloads `E=2N=14332`;
+- bases `K=3`;
+- sparse matchings per basis `q=3`;
+- Neumann order `p=4`;
+- radial radius `tau=1`;
+- residual scale `1/sqrt(13)` for every visited edge.
+
+`N=7166` is the largest integer satisfying the scalar budget:
+
+\[
+N(6D+1)+3\cdot3\cdot D/2\le 3DM.
+\]
+
+For `N=7166`, the candidate is 23,554 learned scalars below dense. `N=7167`
+would be 1,023 scalars above dense.
+
+At internal node `i`, bit `b in {0,1}` selects payload `[i,b]` and child
+
+\[
+j=2i+1+b.
+\]
+
+The token stops when `j >= N`. The reachable leaves are heap indices
+`7166..14332`: 1,025 leaves have depth 12 and 6,142 have depth 13. Under
+independent uniform route bits,
+
+\[
+P(L=12)=1025/4096,
+\qquad
+P(L=13)=6142/8192,
+\]
+
+and `E[L]=52223/4096=12.749755859375`. The constant `1/sqrt(13)` is retained
+on short paths; a path-dependent rescale is prohibited.
+
+### 4.2 Sparse Cayley basis
+
+The nine perfect matchings and their ordering are exactly those generated by
+`experiments/cayley_program_tree.py` from:
+
+```text
+topology seeds:      21,124,233,93,160,191,18,31,38
+affine multipliers:  61,359,169,373,131,115,113,19,29
+alpha:               0.25
+```
+
+For deployment, the formula is compiled once into one immutable `uint32`
+descriptor for each `(basis, matching, output coordinate)`. Each descriptor
+packs:
+
+- bits `0..11`: 12-bit partner coordinate;
+- bits `12..22`: 11-bit learned pair-weight index;
+- bit `23`: sign, with zero for positive and one for negative;
+- bits `24..31`: reserved and exactly zero.
+
+The descriptor array has exactly `9*4096*4=147456` bytes and is shared by all
+12 layers. A reference generator must prove that every packed descriptor
+reconstructs the formula-derived permutation, partner, pair index, and sign.
+No per-layer copy is allowed.
+
+The HBM layout is `[basis][matching][output_coordinate]`, row-major, so the
+descriptor read for one matching is contiguous across output coordinates.
+Basis coefficients use `[layer][basis][matching][pair_index]`; payloads use
+`[layer][node][bit][gate_up_down][coordinate]`. Every base pointer is 256-byte
+aligned.
+
+For basis `k`, let `A_k` be the learned skew operator produced by its three
+matchings. The stored serving coefficients are
+
+\[
+w=(0.25/3)\tanh(w_{raw})
+\]
+
+cast once to BF16 during artifact packing. `w_raw` and a runtime `tanh` are not
+resident in the served artifact. If a descriptor for matching `m` and output
+coordinate `j` decodes `(partner,pair,sign)`, then
+
+\[
+(A_kv)_j=\sum_{m=0}^{2}(-1)^{sign_{k,m,j}}
+w_{k,m,pair_{k,m,j}}v_{partner_{k,m,j}}.
+\]
+
+With `v_0=v`, the two basis directions are
+
+\[
+C_k(v)=2\sum_{r=0}^{4}(-A_k)^r v-v,
+\]
+
+\[
+C_k^T(v)=2\sum_{r=0}^{4}(A_k)^r v-v.
+\]
+
+Depth `t` uses basis `k=t mod 3`.
+
+### 4.3 Routing and selected payload
+
+Layer `ell` has construction seed
+
+\[
+s_\ell=815+104729\ell,
+\qquad \ell=0,\ldots,11,
+\]
+
+and `route_seed=s_ell+7919`. At depth `t`, node `i` reads coordinate
+
+\[
+c(i,t,\ell)=
+(i\cdot1103515247 + route\_seed + t\cdot12345)\bmod4096.
+\]
+
+The kernel evaluates this with unsigned 32-bit wraparound followed by
+`&4095`. Because 4,096 divides `2^32`, the result equals the mathematical
+modulo above. Signed overflow and a stored per-node coordinate table are
+prohibited.
+
+Serving routing is hard and contains no sigmoid or straight-through estimator:
+
+\[
+b=\mathbf{1}[C_{t\bmod3}(h)_c-\theta_i\ge0].
+\]
+
+The selected edge stores BF16 vectors `g,u,d in R^4096` and computes
+
+\[
+z=C_{t\bmod3}(h),
+\]
+
+\[
+a=\operatorname{SiLU}(g\odot z)\odot(u\odot z),
+\]
+
+\[
+\delta=C_{t\bmod3}^{T}(d\odot a).
+\]
+
+The radial map and state update are
+
+\[
+S(\delta)=\frac{\delta}{\sqrt{1+\operatorname{mean}(\delta^2)}},
+\qquad
+h\leftarrow h+\frac{1}{\sqrt{13}}S(\delta).
+\]
+
+After stopping, the FFN returns `h-h_initial` in BF16.
+
+### 4.4 Frozen serving arithmetic
+
+The candidate is one numerical operator, not a family selected by kernel
+tuning. The following stage boundaries apply to every candidate kernel ID.
+`BF16_RN` means round-to-nearest-even conversion from FP32.
+
+| Stage | Inputs | Arithmetic | Stored output |
+|---|---|---|---|
+| layer input | BF16 | none | BF16 `h_initial`, BF16 `h` |
+| one sparse `A_k` application | BF16 term, BF16 coefficients | convert operands to FP32; compute matching order `0,1,2` as one RN multiply followed by two RN FMAs | `BF16_RN` term after every Neumann power |
+| Neumann accumulator | BF16 source/terms | FP32 accumulator initialized from source; four RN additions in power order | FP32 registers |
+| `C_k` or `C_k^T` output | FP32 accumulator, BF16 source | FP32 RN FMA `2*acc-source` | `BF16_RN` vector |
+| router | BF16 projected coordinate/threshold | FP32 RN subtraction, ordered `>=0` comparison | one bit; NaN is a validity failure |
+| gate/up projections | BF16 payload/projected state | FP32 RN multiplication | FP32 |
+| SiLU | FP32 gate projection | inline PTX `neg.f32` for `-x`; FP32 libdevice `expf`; RN add `1+exp`; RN divide `1/(1+exp)`; RN multiply by `x` | FP32 |
+| payload product | FP32 SiLU/up, BF16 down | two ordered FP32 RN multiplications | `BF16_RN` local delta |
+| transpose basis | BF16 local delta | same recurrence contract, with the transpose sign | `BF16_RN` raw delta |
+| norm squares | BF16 raw delta | one FP32 RN multiply per coordinate | FP32 shared scratch |
+| norm reduction | 4,096 FP32 squares | fixed pairwise tree with strides `2048,1024,...,1`, RN add at each node, independent of CTA size | one FP32 sum |
+| inverse denominator | FP32 sum | RN multiply by exact `2^-12`, RN add of `1`, `__fsqrt_rn`, then `__fdiv_rn(1,denominator)` | one FP32 scale |
+| trusted delta | BF16 raw delta, FP32 scale | FP32 RN multiply | `BF16_RN` vector |
+| residual | BF16 hidden/trusted delta | FP32 RN FMA with the FP32 constant `1/sqrt(13)` | `BF16_RN` hidden after every edge |
+| layer output | BF16 final/initial hidden | FP32 RN subtraction | `BF16_RN(h-h_initial)` |
+
+The first product in a three-matching sum is an explicit RN multiply; the next
+two are explicit `__fmaf_rn` operations. Recurrence signs are XORed into the
+descriptor sign before multiplication. No candidate kernel may retain a
+Neumann term, basis output, local delta, trusted delta, or inter-edge hidden
+state at higher precision than the table permits.
+
+The FP32 residual-scale bit pattern is `0x3e8e00d5`
+(`0.2773500978946686`); the FP32 mean multiplier `2^-12` is `0x39800000`.
+These constants are loaded exactly, not recomputed by device `sqrt` or integer
+division.
+
+Compile for `sm_90a` with FMA enabled, precise division and square root, FTZ
+disabled, and `--use_fast_math` disabled. Explicit intrinsics above define the
+allowed contractions. The exact CUDA compiler, flags, generated PTX, cubin,
+libdevice, and SASS are hashed and independently checked before tuning. The
+PyTorch reference must emulate these named rounding boundaries; it may not
+silently use its ordinary eager reduction order as the oracle.
+
+### 4.5 Initialization used only to define natural routes
+
+For each layer, initialize in this order with a NumPy
+`Generator(PCG64(s_ell))`, drawing in FP64 on CPU:
+
+1. draw each of the nine raw basis-weight vectors as `Normal(0,1)` in row-major
+   order; without an intermediate cast, compute NumPy FP64
+   `tanh(raw)`, then FP64 multiplication by exact real `1/12`, then convert
+   only the final serving coefficient to BF16 round-to-nearest-even;
+2. draw every gate payload as `Normal(1,0.02)` in row-major order and convert
+   the completed tensor to BF16 round-to-nearest-even;
+3. do the same for every up payload as `Normal(1,0.02)`;
+4. do the same for every down payload as `Normal(0,0.15)`;
+5. store every threshold as exact BF16 zero without consuming RNG state.
+
+The FP64 raw basis draws are neither BF16-quantized before `tanh` nor retained
+in the serving artifact. The NumPy `tanh` implementation/version and every
+final packed tensor hash are part of the freeze.
+
+The implementation manifest must pin the NumPy and BF16-conversion library
+versions and hash each packed tensor. Performance cannot depend on regenerating weights.
+The values are not a capability claim; they produce one reproducible natural
+route distribution for physical testing.
+
+## 5. Exact resident-byte ledger
+
+All learned serving arrays use BF16. Each independently allocated array is
+rounded to 256 bytes. No compression, aliasing, unified-memory migration, or
+host streaming is allowed.
+
+### 5.1 One candidate layer
+
+| Item | Scalars | Raw bytes | Allocated bytes |
+|---|---:|---:|---:|
+| 14,332 edge payload triples | 176,111,616 | 352,223,232 | 352,223,232 |
+| nine matching-weight vectors | 18,432 | 36,864 | 36,864 |
+| 7,166 thresholds | 7,166 | 14,332 | 14,336 |
+| **layer subtotal** | **176,137,214** | **352,274,428** | **352,274,432** |
+
+Dense SwiGLU has `3*4096*14336=176160768` BF16 scalars and 352,321,536
+allocated bytes. Before the shared table, the candidate saves 47,104 bytes per
+layer.
+
+### 5.2 Twelve-layer primary object
+
+| Item | Allocated bytes |
+|---|---:|
+| 12 candidate layer subtotals | 4,227,293,184 |
+| one shared packed topology table | 147,456 |
+| **candidate total** | **4,227,440,640** |
+| 12 dense SwiGLU layers | 4,227,858,432 |
+| **candidate minus dense** | **-417,792** |
+
+The table amortizes at four layers: the four-layer candidate is 40,960 bytes
+below four dense layers. At one, two, or three layers, the candidate's total
+resident bytes exceed dense. This is why no one-layer memory claim is allowed.
+
+At a maximum-depth path, unique learned bytes addressed in one layer are:
+
+```text
+payload:    13 * 3 * 4096 * 2 = 319,488
+bases:      3 * 3 * 2048 * 2  =  36,864
+thresholds: 13 * 2             =      26
+total learned                         356,378
+```
+
+This is `0.0010115135` of dense learned bytes. Including the entire shared
+topology table gives 503,834 unique learned-plus-static bytes, before cache
+reuse and before repeated reads. These are address-set counts, not HBM-traffic
+claims.
+
+### 5.3 What else counts
+
+The result must separately report:
+
+- GPU code and constant data;
+- CUDA graph objects and kernel argument arrays;
+- input, output, and route-trace buffers;
+- CUDA-library handles and workspaces;
+- allocator reserved and active bytes;
+- peak transient HBM;
+- host state or bytes transferred per invocation.
+
+All arms receive the same input/output buffers and a 64 MiB maximum persistent
+library-workspace allowance. Actual bytes, not the allowance, enter the
+componentwise resource comparison. Any unexplained HBM residual invalidates
+the result.
+
+Memory attribution uses five dedicated fresh processes per arm, each loading
+only the common harness and that arm. Candidate process `p` is paired only with
+dense process `p`, for `p in {0,...,4}`. For each pair, launch the two arm-only
+processes sequentially in
+`Generator(PCG64(9_990_815+p)).permutation([candidate,dense])` order; the first
+process must exit before the second starts. MoE and Monarch use the same five
+arm-only process indices but are not part of the dense-relative memory gate.
+
+Serving processes do not use PyTorch's allocator. Every explicit device array,
+graph backing buffer, and library workspace is allocated by audited
+`B2Arena`, whose only backing calls are synchronous `cudaMalloc`/`cudaFree`.
+For request `n`, it calls `cudaMalloc` with `round_up(n,256)` and records the
+live pointer, requested bytes, padded bytes, component, arm, and cell. It has no
+cache or pool. At a snapshot, `A` is the sum of live requested bytes, `L` is
+the sum of live padded bytes, and `R=L`; these definitions are respectively
+called active, allocated, and reserved. A duplicate/unknown free, pointer not
+owned by the arena, asynchronous allocation, managed memory, VMM allocation,
+or host-mapped serving buffer is invalid.
+
+Create CUDA/library handles before the post-context baseline. CUPTI 13.0.85
+runtime/driver callback tracing records every allocation/free API from then
+until process exit. Opaque driver/library allocations are allowed only during
+graph/handle construction before the corresponding snapshot, must be assigned
+to a named component, and are charged through `cudaMemGetInfo`; any allocation
+or free during a graph replay is invalid. SASS audit also rejects device-side
+malloc/free or dynamic parallelism.
+
+For every snapshot, first `cudaDeviceSynchronize`, then call exactly
+`cudaMemGetInfo(&F_i,&T_i)` and `B2Arena::snapshot()`; total bytes `T_i` must
+remain constant. Take `i=0` after context/handles and `i=1` after model data and
+common input/output/trace buffers. Visit the eight natural primary cells in
+Section 10 order. For each cell, create only its frozen graph/workspace, run
+warmups `r=-1000,...,-1`, synchronize, and take `i=2`. Run exactly one replay
+at `r=0`, synchronize, and take `i=3`. Allocation tracing must be empty during
+that replay and `F3,A3,L3,R3` must equal `F2,A2,L2,R2`; therefore define the
+replay peak exactly as `F_P=F2, A_P=A2, L_P=L2, R_P=R2`. There is no polling or
+sampled minimum. Destroy that graph/workspace before the next cell and require
+`F,A,L,R` to return exactly to snapshot 1; otherwise the process is invalid.
+
+For every process and cell, publish integer-byte absolute snapshots and these
+nonnegative deltas, with any negative delta invalid:
+
+```text
+                         free consumption   active       allocated    reserved
+model/common data         F0-F1              A1-A0        L1-L0        R1-R0
+graph/workspace           F1-F2              A2-A1        L2-L1        R2-R1
+post-graph total          F0-F2              A2-A0        L2-L0        R2-R0
+peak total                F0-FP              AP-A0        LP-L0        RP-R0
+```
+
+Every table entry must be nonnegative; a negative value is invalid. No mean,
+maximum over process pairs,
+bootstrap, confidence interval, or rounding enters the memory decision:
+candidate must be `<=dense` for every paired `p`, every cell, every delta, and
+every byte source. Exact learned-plus-static resident bytes are compared
+separately. Absolute use remains a published diagnostic. The interleaved timing
+process, which holds all arms, cannot attribute per-arm reserved or peak HBM.
+
+## 6. Typed operation ledger
+
+The old `30D` per-edge number is only an optimistic multiply-like lower count.
+It is not the complete work claim.
+
+For one sparse application `A_k v`, each output coordinate reads three partner
+values and three coefficients. The mathematical graph contains three
+multiplications and two additions. Each of four Neumann steps additionally
+accumulates the new term. The final affine form is `2*sum-source`. For one
+forward or transpose basis call, the unfused scalar graph therefore contains:
+
+```text
+12D matching multiplications
+ 8D matching additions
+ 4D Neumann-accumulator additions
+  D final multiplications
+  D final additions/subtractions
+```
+
+Two basis calls contribute `26D` multiplications and `26D` additions or
+subtractions per visited edge. The remaining named graph contains:
+
+- `4D` payload multiplications and `D` SiLU evaluations;
+- `D` trust squares, `D-1` reduction additions, one multiply by `1/D`, one
+  scalar add, one reciprocal square root, and `D` trust scalings;
+- `D` residual scalings and `D` residual additions;
+- one route subtraction and comparison, integer address operations, and one
+  stop comparison.
+
+At depth `L`, the implementation must publish exact `F_math` from this graph
+and exact `F_issued` from SASS/CUPTI, partitioned into BF16, FP32, integer,
+comparison, special-function, load/store, and synchronization instructions.
+FMA counts as two FLOPs. Fused sign changes or powers of two may reduce issued
+instructions but not erase the mathematical operation from `F_math`.
+
+At `D=4096, L=13`, before expanding each named SiLU into its internal scalar
+graph, the complete path core has:
+
+```text
+104 sparse A applications
+1,757,197 multiplications, squares, or scalings
+1,490,957 additions or subtractions
+53,248 SiLU evaluations
+13 square roots and 13 scalar divisions for radial normalization
+```
+
+The final `h-h_initial` adds 4,096 subtractions. Expanding SiLU as the frozen
+`negate/exp/add/divide/multiply` sequence additionally contributes 53,248 of
+each of those five operation types. The unary negate is part of `F_math` even
+when SASS represents it as a source modifier rather than a standalone
+instruction. Conversions, comparisons, descriptor decoding,
+integer node/coordinate updates, and memory operations remain separately
+counted. The implementation must generate these totals mechanically from the
+executed path length; hard-coded receipt totals are prohibited.
+
+Without staging or cache reuse, 104 sparse applications request
+`104*3*4096*4=5,111,808` descriptor bytes and
+`104*3*4096*2=2,555,904` coefficient bytes at maximum depth. Hardware traffic
+may be lower because of shared/L1/L2 reuse and must be measured rather than
+substituted with either requested or unique bytes.
+
+For reference, the predecessor's multiply-like lower count at maximum depth is
+
+\[
+30\cdot4096\cdot13=1,597,440,
+\]
+
+or `0.906808%` of dense SwiGLU's 176,160,768 MACs. The complete graph is larger
+and this percentage is not a predicted latency ratio.
+
+## 7. Frozen implementations
+
+### 7.0 Frozen software and driver stratum
+
+The decision stratum is fixed here, not selected in the later manifest:
+
+```text
+base image:  nvcr.io/nvidia/pytorch:25.09-py3
+amd64 digest sha256:4bf906c628d572681a977681765a44a3c1d7e34b39633b7160a84de707608139
+OS:          Ubuntu 24.04 from that digest
+CUDA:        13.0.1.012
+nvcc/cudart: 13.0.88
+cuBLAS/Lt:   13.0.2.14
+CUPTI:       13.0.85
+PyTorch:     2.9.0a0+50eac811a6
+driver:      Linux 580.126.20 exactly
+```
+
+Build the final custom image from that immutable amd64 digest without package
+upgrade. Install only the pinned NumPy wheel in Section 9.1, CUTLASS v4.4.1 at
+commit `4370102f9dacab813282e1d67722fceb0b90a019`, Transformer Engine v2.15 at
+commit `42b840051647eef89761a16dfdff87e82bb253ab`, the audited B2 source, and
+the watchdog/SSH supervisor. The base image's Transformer Engine 2.7 is removed
+and D5 links only the source-built v2.15 C API. Hash the Dockerfile, build
+context, final image manifest, every installed shared object, `nvcc --version`,
+and `ldd` closure before instance creation. The only permitted host injection
+mechanism is the NVIDIA Container Toolkit's normal OCI driver/device exposure
+with `NVIDIA_DRIVER_CAPABILITIES=compute,utility`; this is explicitly allowed
+to inject its complete CUDA/NVML support set rather than only `libcuda` and
+`libnvidia-ml`. A CUDA compatibility package or compatibility-library
+injection remains prohibited.
+
+This provider-container experiment does **not** claim that an unprivileged
+container can freeze or even observe the complete outer OCI runtime, device
+cgroup/BPF policy, hypervisor, firmware, or host scheduler. Those are blocked
+nuisance variables shared by every arm on one isolated instance, not claimed
+reproducible inputs. The claim is therefore conditional on this recorded
+instance and its paired randomized schedule; it is not a cross-provider or
+all-H100 absolute-latency claim. A later replication may test generality, but
+cannot be selected using this run's result.
+
+`/opt/b2/entrypoint` remains PID 1 for the container's lifetime. It is a
+persistent supervisor/auditor: it starts the watchdog child, waits for the
+armed receipt, then starts `sshd -D` as a child, and never `exec`s or replaces
+itself. PID 1 owns a private Unix socket used to block and release one audited
+measurement child at a time; neither PID 1 nor `sshd` creates a CUDA context.
+
+The auditor writes RFC 8785 canonical JSON and hashes its UTF-8 bytes. Every
+integer is a decimal string; every filesystem path or arbitrary byte string is
+RFC 4648 base64url without padding. Arrays sort bytewise by canonical path or
+key. The invariant schema `b2-container-runtime-v1` contains exactly:
+
+- raw `/proc/1/mountinfo` and `/proc/1/cgroup`; require unified cgroup v2 and,
+  at PID 1's cgroup path, record `cgroup.controllers`,
+  `cgroup.subtree_control`, `cgroup.type`, `cpu.max`, `cpu.max.burst`,
+  `cpu.weight`, `cpu.uclamp.min`, `cpu.uclamp.max`, `cpuset.cpus`,
+  `cpuset.cpus.effective`, `cpuset.mems`, `cpuset.mems.effective`,
+  `cpuset.cpus.partition`, `memory.min`, `memory.low`, `memory.high`,
+  `memory.max`, `memory.swap.max`, `pids.max`, `rdma.max`, and only the
+  bytewise-sorted direct entries matching `hugetlb.*.max`; a named absent path
+  is encoded with exact `errno`;
+- every PID 1 environment-variable name and SHA-256 of its raw value, plus raw
+  values whose names equal `LD_LIBRARY_PATH` or `LD_PRELOAD`, or start with
+  `CUDA_`, `NVIDIA_`, `CUBLAS_`, `CUDNN_`, `NVTE_`, `OMP_`, `MKL_`,
+  `OPENBLAS_`, `KMP_`, `NUMEXPR_`, `TORCH_`, or `PYTORCH_`; a name containing
+  case-insensitive `KEY`, `TOKEN`, `SECRET`, or `PASSWORD` is hash-only;
+- recursive `lstat` records for the exact glob `/dev/nvidia*` and the exact
+  directory `/dev/nvidia-caps` when present, with path, type, mode, UID, GID,
+  major/minor, and symlink bytes; SHA-256 for `/etc/ld.so.cache` and
+  `/etc/ld.so.preload`, or exact `errno`; and path plus complete-file SHA-256
+  for every regular-file mount outside the root overlay and the filesystems
+  `proc`, `sysfs`, `devtmpfs`, `devpts`, `cgroup2`, `mqueue`, and `tmpfs`;
+- at the exact NVML PCI BDF directory `/sys/bus/pci/devices/<BDF>`, only
+  `vendor`, `device`, `subsystem_vendor`, `subsystem_device`, `class`,
+  `revision`, `numa_node`, `current_link_speed`, `current_link_width`,
+  `max_link_speed`, `max_link_width`, `local_cpulist`, and `local_cpus`; exact
+  files `/proc/driver/nvidia/version`, `/proc/driver/nvidia/params`, and
+  `/proc/driver/nvidia/gpus/<BDF>/information`; and only direct regular or
+  symlink entries, without recursion, under `/sys/module/nvidia/parameters`
+  and `/sys/module/nvidia_uvm/parameters`; every absent or unreadable named
+  path is encoded with exact `errno`; and
+- NVML `nvmlDeviceGetUUID`, `nvmlDeviceGetPciInfo_v3`,
+  `nvmlDeviceGetVbiosVersion`, `nvmlDeviceGetGspFirmwareVersion`,
+  `nvmlDeviceGetInforomImageVersion`, `nvmlDeviceGetMigMode`,
+  `nvmlDeviceGetComputeMode`, `nvmlDeviceGetPersistenceMode`, both current and
+  pending values from `nvmlDeviceGetEccMode`,
+  `nvmlDeviceGetPowerManagementLimit`,
+  `nvmlDeviceGetPowerManagementLimitConstraints`, every value from
+  `nvmlDeviceGetSupportedMemoryClocks` and its corresponding
+  `nvmlDeviceGetSupportedGraphicsClocks`, and `nvmlDeviceGetApplicationsClock`
+  for `NVML_CLOCK_MEM` and `NVML_CLOCK_SM`; an unsupported query is encoded as
+  its exact NVML return code. Dynamic process lists, temperature, current
+  clocks, and event reasons are boundary-monitor records, not invariant fields.
+
+PID 1 records this invariant after the watchdog arms but before `sshd`,
+compilation, tuning, or any CUDA context. PID 1 recreates it before and after
+every measurement process and at both boundaries of every chunk. Any invariant
+field change invalidates B2.
+
+Each measurement child separately records `b2-process-runtime-v1` after it has
+created its CUDA context, graphs, and handles and explicitly `dlopen`ed every
+backend permitted for that process class, but before its first warmup. It
+contains raw `/proc/self/cgroup` and `/proc/self/limits`; the exact `Groups`,
+`Cap*`, `NoNewPrivs`, `Seccomp`, `Cpus_allowed*`, and `Mems_allowed*` status
+fields and `sched_getaffinity`. Make exactly two NUMA calls with zeroed
+16-element `unsigned long` masks and `maxnode=1024`: first
+`get_mempolicy(&mode,policy_mask,1024,NULL,0)` with `mode=-1`, then
+`get_mempolicy(NULL,allowed_mask,1024,NULL,MPOL_F_MEMS_ALLOWED)`. Both must
+return zero; record `mode` and the 16 unsigned-long elements of each mask in
+ascending index order. Any syscall failure is invalid. Record the
+`getrlimit` results for exactly `RLIMIT_AS`, `RLIMIT_CORE`, `RLIMIT_CPU`,
+`RLIMIT_DATA`, `RLIMIT_FSIZE`, `RLIMIT_LOCKS`, `RLIMIT_MEMLOCK`,
+`RLIMIT_MSGQUEUE`, `RLIMIT_NICE`, `RLIMIT_NOFILE`, `RLIMIT_NPROC`,
+`RLIMIT_RSS`, `RLIMIT_RTPRIO`, `RLIMIT_RTTIME`, `RLIMIT_SIGPENDING`, and
+`RLIMIT_STACK`, and the full environment-name/value-hash set. From
+`/proc/self/maps`, discard virtual
+addresses and anonymous mappings; deduplicate and sort tuples of file path,
+permissions, file offset, device, inode, and complete-file SHA-256. Every tuple
+must match the frozen implementation manifest. The child recreates this
+process snapshot after its final chunk and before context teardown; any change
+other than an implementation-manifest-listed CUDA JIT code-cache file is
+invalid, and every allowed JIT file is hashed and published.
+
+Every chunk uses one order with no exceptions: PID 1 completes the invariant
+and NVML-process **precheck** while the child blocks; PID 1 releases the child;
+the child executes that chunk's prescribed initial/immediate warmups; the
+child executes only the measured or profiled chunk; the child synchronizes;
+then PID 1 completes the invariant and NVML-process **postcheck** before either
+process advances. “Immediately precede” in Section 9.4 means no intervening GPU
+work between the final warmup and measurement; the precheck is before warmup.
+For CUPTI the precheck precedes SetConfig/Start, warmups remain outside the
+range, and the postcheck follows Pop/Stop and synchronization. For energy the
+precheck precedes warmups, and the postcheck follows the final synchronized
+power sample.
+
+At both checks, any NVML compute/graphics PID other than the one audited child
+is invalid. Record clocks, temperature, power limit, event reasons, CPU
+quota/cpuset, and child affinity. A power-limit/configuration or
+affinity/cpuset change is invalid. `GpuIdle` (`0x1`),
+`ApplicationsClocksSetting` (`0x2`), and `SwPowerCap` (`0x4`) event bits are
+permitted and published; any bit in `0x8|0x10|0x20|0x40|0x80|0x100` or an
+unknown bit outside `0x1ff` is invalid.
+
+The boundary NVML calls and error handling are exact. In this order query
+`nvmlDeviceGetComputeRunningProcesses_v3`,
+`nvmlDeviceGetGraphicsRunningProcesses_v3`, and
+`nvmlDeviceGetMPSComputeRunningProcesses_v3`. For each API, make at most three
+two-call attempts. In an attempt initialize `count=0` and `infos=NULL`; a
+first-call `NVML_SUCCESS` is accepted only with `count=0` and means an empty
+list. Otherwise require `NVML_ERROR_INSUFFICIENT_SIZE`, allocate exactly
+`count+8` zeroed `nvmlProcessInfo_t` entries after checked unsigned overflow,
+set `count` to that capacity, and call again. A second-call
+`NVML_ERROR_INSUFFICIENT_SIZE` restarts the attempt; `NVML_SUCCESS` freezes the
+first `count` returned entries; every other return code, or no success after
+three attempts, is invalid. Sort entries by
+`(pid,gpuInstanceId,computeInstanceId,usedGpuMemory)` and publish all four
+fields. The compute list must contain exactly the audited child's PID, the
+graphics list must be empty, and the MPS list must be empty; MPS is prohibited.
+
+After the three process queries, require `NVML_SUCCESS` from, in order,
+`nvmlDeviceGetClockInfo(device,NVML_CLOCK_SM,...)`,
+`nvmlDeviceGetClockInfo(device,NVML_CLOCK_MEM,...)`,
+`nvmlDeviceGetTemperature(device,NVML_TEMPERATURE_GPU,...)`,
+`nvmlDeviceGetPowerManagementLimit`, and
+`nvmlDeviceGetCurrentClocksEventReasons`. Record integer MHz, integer degrees
+Celsius, integer milliwatts, and the unsigned 64-bit event mask. No retry,
+fallback API, alternate sensor, graphics-clock substitution, missing value, or
+`NVML_ERROR_NOT_SUPPORTED` is accepted. All calls use the same full-GPU handle
+resolved once by the Section 12.3 UUID rule and the exact NVML ABI exported by
+`libnvidia-ml.so.580.126.20`.
+
+An outer policy that remains unobservable or changes transiently between these
+checks is handled only by the preregistered arm/cell randomization and paired
+process bootstrap; it is not relabeled as frozen. It can add variance and make
+the result inconclusive under the fixed precision rule, but it cannot justify
+dropping samples, extending the run, changing order, or claiming portability.
+No additional user-requested host bind mount is allowed after startup.
+
+At startup, require a full non-MIG H100 SXM 80 GB and exact driver
+`580.126.20`; otherwise destroy before compilation. If no offer with this
+stratum exists, B2 waits. A newer driver, CUDA image, cuBLASLt, or rebuilt base
+is a new paper/hash and cannot substitute in this run.
+
+### 7.1 Candidate kernel
+
+Use a custom CUDA C++ SM90 kernel, with CUTLASS/CuTe primitives only where they
+do not change the graph:
+
+- one CTA owns one token for the complete 12/13-edge path;
+- one kernel launch implements one FFN layer;
+- no atomics;
+- descriptor-gather sparse applications in matching order `0,1,2`;
+- BF16 input, output, payloads, and stored basis coefficients;
+- the exact arithmetic and rounding table in Section 4.4;
+- a fixed 4,096-element pairwise FP32 trust reduction;
+- two 8,192-byte shared ping-pong buffers, reinterpreted as one 16,384-byte
+  FP32 reduction scratch after the transpose recurrence;
+- no dynamic allocation and no device-to-host route decision;
+- no route or diagnostic stores in timed kernels;
+- dynamic shared-memory opt-in when the allocation exceeds 48 KiB.
+
+H100 permits up to 227 KiB addressable shared memory per block after its 1 KiB
+reservation, but that architectural limit is not evidence that the selected
+kernel reaches acceptable occupancy. The result must record registers per
+thread, shared bytes per CTA, spills, active CTAs/SM, active warps/SM, and the
+CUDA occupancy calculation.
+
+The only memory schedules are:
+
+| ID | Static placement | Shared bytes/CTA | Payload behavior |
+|---|---|---:|---|
+| `M0` | descriptors and coefficients remain global/L1/L2 | 16,640 | selected triple loaded directly after route |
+| `M1` | preload all 36,864 basis-coefficient bytes with fixed 16-byte `cp.async` copies | 53,504 | selected triple loaded directly after route |
+| `M2` | preload all 147,456 descriptor bytes and 36,864 coefficient bytes with fixed 16-byte `cp.async` copies | 200,960 | selected triple loaded directly after route |
+
+The 256 bytes beyond the aliased term/reduction scratch hold the node, route
+bit, norm scale, and barrier padding. No payload is speculatively prefetched:
+the next child is unknowable until the current route finishes. TMA and
+double-buffered payload variants are prohibited.
+
+For each memory schedule, compile exactly this Cartesian product:
+
+```text
+threads per CTA:       128, 256, 512
+coordinates/thread:    derived exactly as 4096/threads
+vector load width:     2, 4, 8 BF16 values
+```
+
+This produces 27 named kernel IDs `M{0,1,2}-T{128,256,512}-V{2,4,8}`.
+Coordinates are assigned in increasing vector groups
+`base=V*(threadIdx.x + group*blockDim.x)`. Vector width applies only to aligned
+linear payload/input/output and static-preload transfers. Descriptor and
+partner-coordinate gathers remain scalar; pretending they are vectorized is
+prohibited.
+
+Every edge follows one schedule: write the BF16 source to ping-pong scratch and
+synchronize; execute four forward sparse powers with one synchronization after
+each; broadcast the hard route bit and synchronize; write the BF16 local delta
+and synchronize; execute four transpose powers with one synchronization after
+each; write all 4,096 FP32 squares and synchronize; execute the twelve fixed
+pairwise reduction strides with a synchronization after every stride; have
+thread zero write the norm scale and synchronize. This is 25 CTA barriers per
+visited edge, including the two source writes and route/scale broadcasts. A
+candidate ID must issue exactly these dependency barriers as `bar.sync`; none
+may be removed, fused, or reordered. A changed synchronization DAG is a new
+paper requiring a new hash and independent audit, not a tuning variant.
+
+`M0` therefore executes 300 or 325 CTA barriers for a depth-12 or depth-13
+path. `M1` and `M2` add exactly one `cp.async` wait plus CTA barrier after their
+one-time static preload, giving 301 or 326. These counts are part of the frozen
+critical-path ledger.
+
+The 12-layer panel is exactly twelve layer calls in ascending layer order on
+one CUDA stream. Each call has `B` CTAs and must complete before the next call
+starts. Thus candidate occupancy is at most `B` CTAs at a time, never `12B`.
+The inputs and outputs are distinct pointers, but their independence does not
+authorize concurrent kernels. Dense and structured panels use the same serial
+one-stream layer order.
+
+Invalid combinations may be removed only for compile failure, resource-limit
+failure, or correctness failure, with the reason recorded. No new axis or
+value may be introduced after final measurement begins.
+
+### 7.2 Independent target-shape references
+
+Before performance measurement, implement:
+
+1. a clear PyTorch target-shape graph using formula-generated topology;
+2. a CPU FP64 forced-route oracle for small batches;
+3. a descriptor decoder independent of the CUDA kernel;
+4. a route/node trace checker independent of both forward implementations.
+
+The CUDA kernel and the reference may share constants but not index-generation
+code. All imported source, generated descriptors, packed tensors, binaries,
+and manifests are hashed before evaluation data are generated.
+
+### 7.3 Dense control
+
+The dense arm is exact bias-free BF16 SwiGLU:
+
+\[
+y=W_d(\operatorname{SiLU}(W_gx)\odot W_ux),
+\]
+
+with FP32 GEMM accumulation and `D=4096, M=14336`. For layer `ell`, use NumPy
+`Generator(PCG64(20_000_815+104729*ell))`; initialize `W_g`, `W_u`, then `W_d` with independent
+normal draws of standard deviations `D^-1/2`, `D^-1/2`, and `M^-1/2`, then
+pack to BF16 and hash.
+
+The dense schedules are exactly:
+
+1. `D0-LT-COMBINED`: one cuBLASLt `D -> 2M` gate/up GEMM, one separate
+   vector SwiGLU kernel, and one cuBLASLt `M -> D` down GEMM;
+2. `D1-LT-SPLIT-SERIAL`: separate serial cuBLASLt gate and up GEMMs, the same
+   SwiGLU kernel, then the down GEMM;
+3. `D2-LT-SPLIT-DUAL`: gate and up cuBLASLt GEMMs on two captured child
+   streams, one event join, the same SwiGLU kernel, then the down GEMM;
+4. `D3-CUTLASS-COMBINED` and `D4-CUTLASS-SPLIT-SERIAL`: the D0/D1 graphs with
+   GEMMs drawn from the frozen CUTLASS manifest instead of cuBLASLt.
+5. `D5-TE215`: bias-free BF16 Transformer Engine linear `D -> 2M`, its C API
+   `nvte_swiglu` activation, and bias-free BF16 linear `M -> D`, all with FP32
+   accumulation.
+
+The vector SwiGLU kernel has only `T in {128,256,512}` and aligned BF16 vector
+width `V in {2,4,8}`. cuBLASLt enumeration records every returned algorithm
+descriptor that supports BF16 inputs/outputs, FP32 accumulation, the exact
+shape, and at most 64 MiB workspace. The CUTLASS source is tag `v4.4.1`, commit
+`4370102f9dacab813282e1d67722fceb0b90a019`; its generator emits every SM90
+BF16/BF16/FP32/BF16 GEMM kernel supporting the exact shapes and alignment. The
+generated manifest is finite and hashed before compilation. No custom GEMM
+epilogue or unlisted schedule is legal.
+
+For every cuBLASLt shape in D0--D2 and E0, call
+`cublasLtMatmulAlgoGetHeuristic` exactly once with
+`requestedAlgoCount=8192`. Set the preference attributes explicitly:
+
+```text
+CUBLASLT_MATMUL_PREF_SEARCH_MODE                 CUBLASLT_SEARCH_BEST_FIT
+CUBLASLT_MATMUL_PREF_MAX_WORKSPACE_BYTES         67,108,864
+CUBLASLT_MATMUL_PREF_REDUCTION_SCHEME_MASK       CUBLASLT_REDUCTION_SCHEME_MASK
+CUBLASLT_MATMUL_PREF_MIN_ALIGNMENT_A_BYTES       256
+CUBLASLT_MATMUL_PREF_MIN_ALIGNMENT_B_BYTES       256
+CUBLASLT_MATMUL_PREF_MIN_ALIGNMENT_C_BYTES       256
+CUBLASLT_MATMUL_PREF_MIN_ALIGNMENT_D_BYTES       256
+CUBLASLT_MATMUL_PREF_MAX_WAVES_COUNT             FP32 +0.0
+CUBLASLT_MATMUL_PREF_IMPL_MASK                    UINT64_MAX
+CUBLASLT_MATMUL_PREF_GROUPED_AVERAGE_REDUCTION_DIM      uint32 0
+CUBLASLT_MATMUL_PREF_GROUPED_DESC_D_AVERAGE_ROWS        uint32 0
+CUBLASLT_MATMUL_PREF_GROUPED_DESC_D_AVERAGE_COLS        uint32 0
+```
+
+The pinned cuBLASLt version and every preference value returned by
+`cublasLtMatmulPreferenceGetAttribute` are serialized in the manifest. A
+preference attribute present in that pinned version but not named above must
+equal its documented default; otherwise the universe is invalid rather than
+silently altered. Retain only results whose `state` is
+`CUBLAS_STATUS_SUCCESS`, whose returned workspace is within the cap, and that
+pass Section 11. The returned count and ordered full descriptors are hashed.
+No second heuristic call, larger result buffer, `cublasLtMatmulAlgoGetIds`
+expansion, or caller-supplied algorithm is permitted after this enumeration.
+
+Transformer Engine is tag `v2.15`, commit
+`42b840051647eef89761a16dfdff87e82bb253ab`. If D5 cannot expose the exact
+graph and dtype contract, that is a paper/control validity failure requiring
+amendment and re-audit; it is not silently dropped after seeing timings.
+
+Exactly one correct schedule/algorithm tuple per exact batch size `B` is selected
+by Section 10's cross-family eligibility and tie rule, then frozen before the
+measurement phase. A framework eager baseline is prohibited as the decisive
+control.
+
+### 7.4 Exact-learned-byte top-1 MoE control
+
+Use eight experts whose intermediate widths are:
+
+```text
+1792,1792,1792,1792,1792,1791,1791,1791
+```
+
+Their widths sum to 14,333. Add a BF16 router `W_r in R^(4096x8)` and a learned
+BF16 input scale `s in R^4096`; route with
+
+\[
+e=\arg\max(W_r^T(s\odot x)).
+\]
+
+Each token executes one bias-free SwiGLU expert. The exact parameter identity
+is
+
+\[
+3\cdot4096\cdot14333+4096\cdot8+4096
+=176160768.
+\]
+
+Thus learned bytes equal dense exactly. Dispatch metadata and workspace are
+charged separately.
+
+For layer `ell`, use NumPy
+`Generator(PCG64(30_000_815+104729*ell))` and draw,
+in order: `s ~ Normal(1,0.02)`, router weights with standard deviation
+`D^-1/2`, then experts in ascending ID. Within an expert, draw gate, up, and
+down weights with standard deviations `D^-1/2`, `D^-1/2`, and
+`expert_width^-1/2`. Pack every tensor to BF16 and hash it.
+
+Dispatch is stable sort by `(expert_id, original_token_index)`, with no
+capacity limit, token drop, padding, or duplicated token. The output is
+unpermuted to original order before the layer returns. Router, stable dispatch,
+offset construction, unpermute, and every metadata byte are inside the timed
+and resource graphs.
+
+The only MoE schedules are:
+
+1. `E0-LT`: execute each nonempty expert in ascending ID with the winning
+   dense cuBLASLt subgraph for its exact local batch and width;
+2. `E1-CUTLASS-GROUPED`: one stable dispatch followed by BF16 Hopper grouped
+   GEMMs instantiated from CUTLASS v4.4.1's C++ grouped-GEMM path for gate/up
+   and down, with the same finite vector SwiGLU kernel set.
+
+Every grouped kernel template, tile, cluster, and schedule is listed in a
+generated, hashed implementation manifest before tuning. The newest CUTLASS
+Python contiguous-offset grouped API is not substituted because its documented
+grouped path targets Blackwell. The one E0/E1 tuple per exact batch size `B` is
+selected only by Section 10's cross-family eligibility and tie rule.
+
+`E0-LT` has a total lookup table before any natural router is run. For each
+expert width in `{1791,1792}` and every possible nonempty expert-local batch
+`b_local in {1,...,2048}`, enumerate correct cuBLASLt algorithms for the
+combined gate/up and down shapes with the exact one-call preference and result
+count above. For `b_local<=8`, tune
+every returned tuple on Gaussian tuning rows
+`(r*b_local+j) mod 2048`, with `r=-200,...,-1` for warmup and `r=0,...,199`
+for timing. Sort tuples by serialized descriptor SHA-256, then permute with
+`PCG64(8_850_815 + 2048*(expert_width-1791) + b_local)`. Let `P_c` and `M_c`
+be that tuple's type-7 p95 and median, let `P_min=min_c P_c`, retain exactly
+the tuples with `P_c<=P_min*(1+0.0025)`, and select the lexicographic minimum
+of `(M_c,integer_peak_HBM_c,descriptor_SHA256)`. Use the binary64/no-display-
+rounding rule of Section 10. For `b_local>8`, select the
+first correct descriptor in cuBLASLt's returned heuristic order, breaking an
+equal heuristic rank by serialized descriptor SHA-256. `b_local=0` launches
+nothing. Hash the complete 4,096-entry shape lookup. Thus an expert occupancy
+absent from a natural tuning trace cannot trigger a late algorithm choice.
+
+### 7.5 Lower-byte Monarch-family top-1 control
+
+Use 111 experts. Each of the gate, up, and down projections is a square
+`4096x4096` two-factor block-permutation matrix with block size 64. Each factor
+has 64 dense `64x64` blocks; the fixed reshape-transpose permutation lies
+between the factors. This is the hardware-efficient two-block-diagonal
+structure introduced by Monarch, used here as a serious structured control
+rather than as evidence for the candidate.
+
+Index a vector as `x[r,c]` with `r,c in {0,...,63}` and flattened index
+`64r+c`. Freeze `P(64r+c)=64c+r`; `P=P^T`. Every structured projection is
+
+\[
+W(x)=P^T B_2 P B_1x,
+\]
+
+where `B_1` and `B_2` are 64-block BF16 block-diagonal matrices in the current
+flattening. Gate, up, and down have independent factors. No learned diagonal,
+residual, alternative permutation, or factor order is allowed.
+
+Each expert has
+
+\[
+3\cdot2\cdot4096\cdot64=1572864
+\]
+
+learned scalars. With a `4096x111` router and a learned 4,096-vector input
+scale, the layer has 175,046,656 BF16 scalars, 1,114,112 fewer than dense.
+One selected expert plus its full router requires 2,027,520 MACs. Use the
+same stable top-1 dispatch rule as the MoE control.
+
+For layer `ell`, use NumPy
+`Generator(PCG64(40_000_815+104729*ell))` and draw
+the input scale, router, then experts in ascending ID. Within each expert draw
+gate `B1,B2`, up `B1,B2`, and down `B1,B2` in that order, each block entry from
+`Normal(0,64^-1/2)`. The input scale and router use the MoE control's
+distributions. Pack to BF16 and hash.
+
+The only physical schedule is `H0-CUTLASS-BMM`: stable dispatch, CUTLASS v4.4.1
+strided/grouped `64x64` BF16 block GEMMs for every factor, `P` represented by
+the exact stride/reshape when legal and by one explicit transpose kernel
+otherwise, the finite vector SwiGLU kernel, and stable unpermute. Every GEMM
+template, tile, schedule, transpose decision, and graph node is listed and
+hashed before tuning. There is no later “custom fused” escape hatch.
+
+### 7.6 Identity-basis diagnostic
+
+Replay the exact node/bit trace produced by the candidate's untimed natural
+reference, retain its tree, selected payloads, trust map, and residual update,
+but set every `C_k` and `C_k^T` to identity and remove basis and router
+execution. This fixed diagnostic is `I0-ROUTE-REPLAY`. It is a physical lower
+bound on selected conditional payload plus trust, not a different natural
+router. It is not a capability-equivalent control and can neither pass nor
+fail B2.
+
+The top-1 MoE and Monarch-family arms are mandatory comparisons. Since B2 has
+no capability evidence, being slower than them is reported as a warning rather
+than a scientific kill: a speed ordering between unequal hypothesis classes
+cannot establish a capability-adjusted Pareto ordering. Any later language
+gate must compare quality at the measured serving costs.
+
+## 8. Explainable component microbenchmarks
+
+Every component is first checked alone. The full operator remains decisive.
+
+| ID | Component | Required explanation |
+|---|---|---|
+| U0 | packed descriptor gather | formula equality, bytes, coalescing, integer instructions |
+| U1 | one three-matching `A_k v` | arithmetic, L1/L2/HBM bytes, bank conflicts |
+| U2 | one four-step `C_k` / `C_k^T` | barriers, recurrence latency, shared residency |
+| U3 | diagonal payload SwiGLU | payload bytes, SiLU/SFU cost |
+| U4 | radial trust | reduction tree, sqrt/divide, barriers, numerical bound |
+| U5 | one complete edge | predicted versus observed composition overhead |
+| U6 | one complete 12/13-edge FFN | route depth, critical path, spills |
+| U7 | 12-layer panel | graph replay and shared-table amortization |
+
+For U0-U6, publish a dependency DAG and a lower-bound latency model using the
+measured primitive bandwidth/latency values. The model is not allowed to fit
+free constants after seeing U6 or U7. Report predicted/observed ratios; a
+greater than 20% absolute error is an instrumentation warning but does not
+replace the full-operator decision.
+
+## 9. Frozen workload
+
+### 9.1 Input traces
+
+Using the pinned NumPy version and
+`rng=np.random.Generator(np.random.PCG64(seed))`, generate two independent
+8,192-row FP64 evaluation traces and normalize every row before BF16
+conversion:
+
+```text
+Python ABI:  CPython 3.12, little-endian x86-64
+NumPy:       2.3.5 official manylinux_2_27/2_28 x86-64 CPython-3.12 wheel
+wheel SHA:   0d8163f43acde9a73c2a33605353a4f1bc4798745a8b1d73183b28e5b435ae28
+```
+
+1. Gaussian, seed `9_000_815`: one call
+   `rng.standard_normal(size=(8192,4096),dtype=np.float64)`;
+2. Rademacher, seed `9_100_815`: one call
+   `rng.integers(0,2,size=(8192,4096),dtype=np.uint8,endpoint=False)`, then in row-major
+   order convert each bit to FP64 by `2.0*bit-1.0` without another RNG call.
+
+Generate separate 2,048-row tuning traces by the same rules with Gaussian seed
+`8_000_815` and Rademacher seed `8_100_815`, substituting shape
+`(2048,4096)` in the calls above. Tuning may never read an evaluation row.
+
+Normalize each row independently in ascending row and coordinate order using
+binary64 round-to-nearest-even operations: initialize binary64 `s=+0`; for
+`j=0,...,4095`, compute a separately rounded binary64 product `x[j]*x[j]` and
+then a separately rounded `s+product`; compute
+`rms=np.sqrt(np.float64(s*np.float64(2**-12)))`; then divide every coordinate
+by `rms` with one binary64 division. FMA, vector/tree reduction, extended x87
+precision, and reassociation are prohibited. Pin and hash the NumPy build and
+the normalized FP64 trace bytes.
+
+Convert normalized FP64 inputs to served BF16 by first applying IEEE
+round-to-nearest-even FP64-to-FP32, then applying this finite-FP32 bit recipe:
+view FP32 bits as `u`, set `bias=0x7fff+((u>>16)&1)`, add modulo `2^32`, and
+store `uint16((u+bias)>>16)`. NaN or infinity before conversion is invalid. The
+little-endian row-major FP64 and BF16 files and their SHA-256 hashes are frozen
+artifacts; every arm reads the same BF16 bytes.
+
+No row may be rejected. For evaluation process `p in {0,...,9}`, cell-local
+round `q in {0,...,19}`, within-chunk replay `k in {0,...,49}`, define
+`r=50*q+k`. For layer `ell` and batch lane `j`, use
+
+\[
+row=(1000pB+rB+j+683\ell)\bmod8192.
+\]
+
+Equivalently, the executable integer expression is
+`(((1000*p + r)*B + j + 683*ell) & 8191)`.
+
+For tuning replay index `r`, use
+`(r*B + j + 683*ell) mod 2048`; negative warmup indices use mathematical
+modulo and therefore wrap into `0..2047`.
+The 12 layer offsets are distinct because 683 is odd; their slices are not
+claimed disjoint, especially at high batch. Every arm sees identical layer
+inputs and no arm's output becomes another arm's next input. The 12-layer
+object is a serial matched panel of real layer calls, not an end-to-end
+transformer simulation.
+
+### 9.2 Batch cells
+
+Primary natural-route cells:
+
+```text
+B = 1, 2, 4, 8
+```
+
+Diagnostic cells:
+
+```text
+B = 16, 32, 64, 128, 512, 2048
+```
+
+Measure one layer and the 12-layer panel for natural primary cells. Measure
+only the 12-layer panel for natural high-batch cells and for candidate route
+diagnostics. Section 12.4 freezes each schedule; no one-layer high-batch or
+other implicit cross-product exists. Only the 12-layer natural primary cells
+enter the dense-relative physical-feasibility gate. High-batch results map the
+crossover and cannot rescue a low-batch failure.
+
+### 9.3 Route regimes
+
+1. **Natural, primary:** execute the exact initialized hard router.
+2. **Collapsed diagnostic:** force the all-zero maximum-depth path.
+3. **Uniform diagnostic:** generate route bits from a frozen counter-based PRF
+   over `(trace_row, layer, depth)` and stop at the exact incomplete-tree leaf.
+
+The diagnostic hash is SplitMix64. Form the unsigned 64-bit counter
+`0xD1B54A32D192ED03 + row + (layer<<13) + (depth<<17)` modulo `2^64`; add
+`0x9E3779B97F4A7C15`, xor-shift by 30, multiply by
+`0xBF58476D1CE4E5B9`, xor-shift by 27, multiply by
+`0x94D049BB133111EB`, xor-shift by 31, and take the low bit. All arithmetic
+wraps modulo `2^64`. These bits are precomputed and hashed; diagnostic timing
+does not execute SplitMix64.
+
+Collapsed and uniform traces do not enter the primary decision. B3, if
+authorized, will separately preregister the full entropy/traffic experiment.
+
+### 9.4 Cache regimes
+
+- **Warm steady state, primary:** 1,000 untimed graph replays per arm/cell at
+  process start. Because interleaving another multi-gigabyte arm disturbs L2,
+  immediately precede every timed 50-replay chunk with 50 untimed replays of
+  that same arm/cell. Initial warmup uses replay indices `r=-1000,...,-1`.
+  Round `q`'s immediate warmup uses replay indices
+  `r=50*q-50,...,50*q-1`; timed replay `k` then uses `r=50*q+k`. These are 50
+  replays, or `50B` token rows per layer, not 50 rows when `B>1`.
+- **Cold diagnostic:** before each replay, read and reduce a frozen eviction
+  buffer at least twice the measured L2 capacity; verify with counters that the
+  operation changed L2 hit behavior.
+
+Input/output tensors rotate through the 8,192-row trace. Replaying a single
+resident input buffer is prohibited.
+
+## 10. Tuning and untouched measurement
+
+Compile every frozen implementation option first. Select exactly one
+production-legal configuration per `(arm,B)` and use it unchanged for both
+input families. For every configuration, time exactly 200 tuning replays after
+exactly 200 warmups on the separate Gaussian trace and repeat the same
+200-warmup/200-timed schedule on the separate Rademacher trace. Tuning warmups
+use indices `r=-200,...,-1` and timed replays use `r=0,...,199` under Section
+9.1's tuning map. Every tuning replay is the complete serial 12-layer panel;
+one-layer diagnostics inherit the selected panel configuration and never tune
+separately.
+
+Let `P_c=max(p95_G(c),p95_R(c))` and
+`M_c=max(median_G(c),median_R(c))`, all Hyndman-Fan type-7 values. Let
+`P_min=min_c P_c`. Configuration `c` is eligible exactly when
+`P_c <= P_min*(1+0.0025)`. Among eligible configurations select the
+lexicographic minimum of
+
+```text
+(M_c, max(peak_HBM_G(c),peak_HBM_R(c)), schedule_ID,
+ SHA256(serialized_library_algorithm_descriptor))
+```
+
+For the HBM field, before a configuration is created record post-context free
+bytes `F0` with the exact Section 5.3 snapshot API. After graph/workspace
+creation and that family's 200 warmups, synchronize and record `F1,A1,L1,R1`.
+Run the 200 timed replays, synchronize, and record `F2,A2,L2,R2`. Allocation
+tracing must be empty during those replays, and
+`F2,A2,L2,R2` must equal `F1,A1,L1,R1`; otherwise that configuration is invalid.
+Define `peak_HBM_family(c)=F0-F1`, an integer byte count. Destroy the
+configuration and require free bytes and B2Arena counters to return exactly to
+their pre-configuration snapshot before constructing the next one.
+
+CUDA-event millisecond outputs are
+converted directly to binary64; quantiles, the `1.0025` multiplication, and all
+comparisons use binary64 with no decimal quantization or display rounding.
+Apply this rule and the same workspace cap to every arm.
+
+The canonical arm order is `[candidate,dense,moe,monarch]`. The canonical
+batch order is `[1,2,4,8,16,32,64,128,512,2048]`. Within one `(arm,B)`, sort
+configuration tuples lexicographically by schedule ID and then by the SHA-256
+of the fully serialized library algorithm descriptor. Permute that list once
+with `Generator(PCG64(8_900_815 + 1000*arm_index + B_index))`; for each
+configuration in that frozen order execute Gaussian and then Rademacher.
+Publish the order and every raw tuning timing. Freeze algorithm IDs, launch
+parameters, generated code, graph nodes, library versions, compiler, tensor
+hashes, and a complete manifest.
+
+An independent code audit must approve that manifest and the executable before
+evaluation traces are materialized. A version change, newly generated library
+kernel, altered control graph, or new candidate ID invalidates the freeze and
+requires paper/code re-audit; it cannot be introduced after tuning.
+
+The measurement process then starts from fresh processes and never revisits
+selection. Evaluation rows are generated only after the implementation freeze.
+Tuning results are published but cannot be substituted for the final result.
+
+Run exactly ten fresh measurement processes. In each process and each primary
+cell, collect 1,000 replays as 20 rounds of 50. A round contains one 50-replay
+chunk for every arm and primary cell. Before permutation, the canonical chunk
+list is cell-major using primary cells
+`[(Gaussian,1),(Gaussian,2),(Gaussian,4),(Gaussian,8),`
+`(Rademacher,1),(Rademacher,2),(Rademacher,4),(Rademacher,8)]`, with arms in
+the canonical order above inside each cell. Its order is the permutation produced by
+NumPy `Generator(PCG64(9_900_815 + 1000*process + round))`. Publish and hash the
+complete schedule before process zero starts. There is no precision-triggered
+extension or early stop.
+
+All timed calls use preallocated tensors and CUDA graphs. Graph capture,
+compilation, allocation, descriptor generation, and autotuning are reported as
+cold-start costs but excluded from warm steady-state latency. Exact graph nodes
+and stream dependencies are frozen in the implementation manifest; launch count
+is part of the architecture and is not artificially equalized.
+
+## 11. Correctness and harness-validity gates
+
+Failure of a validity gate is **inconclusive**, not a scientific fail. A fixed
+harness requires a new hash and independent re-audit before execution.
+
+For numerical gates, compute in FP64
+
+\[
+NRMSE(y,r)=\frac{\sqrt{\operatorname{mean}((y-r)^2)}}
+{\max(\sqrt{\operatorname{mean}(r^2)},2^{-12})}.
+\]
+
+For a finite BF16 reference value `r`, define `ULP_BF16(r)` as the larger of
+the absolute gaps to its immediately adjacent finite BF16 values; at zero use
+the smallest positive BF16 subnormal. A coordinate is near zero exactly when
+`abs(r)<2^-12`. Its absolute predicate is
+
+```text
+abs(y-r) <= 2^-10                    if abs(r) < 2^-12
+abs(y-r) <= 8 * ULP_BF16(r)          otherwise
+```
+
+Both this predicate for every coordinate and `NRMSE<=2^-7` must pass. NaN or
+infinity fails before ULP evaluation.
+
+Correctness coverage is frozen as follows; untimed correctness kernels may
+store every intermediate layer output and route:
+
+1. **Before tuning:** test every compiled candidate ID at every listed `B` on
+   both tuning families, natural routes, complete 12-layer panels, and
+   `r=0,...,7`. Test every dense, MoE, and Monarch configuration tuple offered
+   to Section 10 on the same cells and replays. Compare every layer output, not
+   only the panel's final buffer. A failing tuple is ineligible and its failure
+   receipt is published.
+2. **Forced candidate paths:** test every compiled candidate ID with collapsed
+   and uniform routes at `B in {1,8}`, both tuning families, `r=0,...,7`, and
+   all 12 layers. Route bits, nodes, coordinates, path length, intermediate
+   basis values, trust scales, and layer outputs are checked.
+3. **E0 lookup:** for every returned local-batch algorithm tuple in every one
+   of the 4,096 lookup shapes, test standalone gate/up and down operations on
+   Gaussian tuning replays `r in {0,1}` before it may enter timing or the
+   heuristic-order fallback.
+4. **After selection:** re-test each selected arm/B configuration on evaluation
+   process index `p=0`, both families, natural routes, `r=0,...,31`, and every
+   layer. Also test selected candidate primary-B configurations on collapsed
+   and uniform routes for `r=0,...,7`; test `I0-ROUTE-REPLAY` on its frozen
+   natural trace for the same cells and replays.
+5. **Repeatability:** use evaluation Gaussian, natural route, `B=1`, `p=0`,
+   `r=0`, and the complete panel. Repeat each surviving candidate ID and every
+   selected control 100 times. Each executable must repeat bitwise; all
+   candidate IDs must also match each other bitwise in every layer output and
+   route trace.
+
+No unlisted random row or reduced layer subset may replace this coverage. If
+an arm/B has no correct eligible configuration, harness validity fails before
+performance measurement.
+
+1. **Artifact integrity:** all source, generated data, weights, manifests,
+   binaries, profiler scripts, and results match their frozen SHA-256 hashes.
+2. **Topology:** all 36,864 descriptors match the independent formula decoder;
+   every matching is a fixed-point-free involution with one signed pair weight.
+3. **Tree:** exact node, bit, coordinate, payload, and 12/13-depth traces match
+   the independent checker in all route regimes.
+4. **Finite state:** every output and recorded intermediate is finite.
+5. **Trust invariant:** every edge's BF16 trusted-delta RMS is at most
+   `1+2^-7` in both reference and CUDA execution.
+6. **Repeatability:** identical inputs and weights produce bitwise-identical
+   CUDA outputs and route traces over 100 repetitions. All surviving candidate
+   kernel IDs produce bitwise-identical outputs and routes because Section 4.4
+   defines one numerical operator.
+7. **Numerical agreement:** route bits must be bit-exact. Against the independent
+   staged-BF16 reference, the complete FFN output must pass both exact
+   predicates above. The CPU FP64 oracle is reported separately; it cannot
+   override a mismatch with the serving reference.
+8. **Controls:** every dense, MoE, and Monarch implementation matches its
+   independent BF16 reference under the same numerical rule.
+9. **Timing integrity:** no allocation, compilation, host routing, profiler,
+   harness synchronization, or device-wide synchronization not present in all
+   arms occurs inside a timed graph. Candidate-internal CTA `bar.sync`
+   instructions are required algorithmic work and follow Section 7.1 exactly.
+10. **Accounting:** exact resident, workspace, reserved, peak, and unexplained
+    HBM bytes reconcile with CUDA queries and allocator snapshots.
+11. **Stratum:** exact GPU, MIG, clocks, power, thermals, CPU/NUMA, driver,
+    CUDA, compiler, libraries, and container match the frozen run manifest.
+
+After validity but before timing, run an untimed target-width conditioning
+census over all 8,192 evaluation rows, separately for every candidate layer and
+input family. Record every raw edge radius and the path indicators for
+`r_amp=6.8966100057915725` and `r_grad=sqrt(127)`. For each of the 48
+`(layer,family,surface)` fractions, compute a one-sided Wilson upper bound with
+no continuity correction and Bonferroni family-wise alpha `0.05/48`. Use
+`z=Phi^-1(1-0.05/48)=3.0780880728421613` and, for observed fraction `phat` and
+`n=8192`,
+
+\[
+U=\frac{\hat p+z^2/(2n)+z\sqrt{\hat p(1-\hat p)/n+z^2/(4n^2)}}
+{1+z^2/n}.
+\]
+
+Every `U` must be below `0.5`.
+A valid failure is a scientific failure of the exact target-width initialized
+candidate and stops B2 before performance timing; it is not repaired by a
+different initialization seed.
+
+The numerical tolerance above is immutable after this paper audit. Tightening,
+loosening, or redefining it requires a new paper hash and independent audit
+before implementation; no tolerance changes are made after any candidate
+output exists.
+
+## 12. Measurements
+
+### 12.1 Timing
+
+For each primary cell and each of the four primary arms (candidate, dense, MoE,
+and Monarch), collect exactly 10,000 individual graph replays across the ten
+fixed fresh-process blocks in Section 10. Interleave arms and cells in the
+frozen randomized chunks of 50. Record:
+
+- device-event p50, p90, p95, and p99 latency;
+- synchronized host-wall p50, p95, and p99 latency;
+- latency per panel, per layer, and per token;
+- throughput in completed FFN tokens/s;
+- kernel count and critical-path duration.
+
+The fixed-design precision target is relative two-sided 95% interval half-width
+at most 1% for p50/p95 and 3% for p99. Missing it after the ten already-frozen
+processes is inconclusive; no process, replay, or cell is added.
+
+### 12.2 Counters and traffic
+
+In ten separate untimed counter-process blocks for candidate and dense in every
+primary cell, warm the selected graph, then profile one range containing
+exactly 100 panel replays. Within process `p`, order the 16 `(arm,cell)` ranges
+by `Generator(PCG64(9_975_815+p)).permutation`. The gating collection path is
+only CUPTI 13.0.85 Range Profiling plus Profiler Host API; Nsight Compute and
+the deprecated CUPTI Profiling/Perfworks APIs are prohibited for gate values.
+
+Request exactly the ordered metric list
+`["dram__bytes_read.sum","dram__bytes_write.sum"]`. Use user-range mode,
+user replay, one non-nested range, `maxRanges=1`, `numNestingLevels=1`, and
+`minNestingLevel=1`. Generate and hash the host config image and counter-data
+prefix. The Profiler Host API configuration must report that these two metrics
+require exactly one hardware pass; any configuration reporting zero or more
+than one pass is instrumentation-invalid and B2 is inconclusive before a gate
+run begins. For that single pass, perform exactly this sequence: complete the
+Section 7.0 precheck; set the configuration and start profiling; execute
+initial warmups `r=-1000,...,-1`; execute immediate warmups
+`r=-50,...,-1`; push the single
+range named `b2_panel_100`; launch the exact 100 panel graphs for
+`r=0,...,99`; pop the range; end profiling; synchronize; and complete the
+Section 7.0 postcheck. There is no application or
+user replay beyond this one reported hardware pass, no input reset between
+the immediate warmups and the range, and no cache-reset operation anywhere in
+that sequence. Any unavailable metric, extra range, dropped kernel, profiler
+error, or deviation from the one-pass sequence is invalid.
+
+Evaluate the final counter image once with the same Profiler Host API. Each
+metric must be one finite nonnegative binary64 value for the user range and
+must equal an integer exactly; convert it losslessly to `uint64`. Define
+
+```text
+HBM_read_bytes_per_panel  = uint64(dram__bytes_read.sum)  / 100
+HBM_write_bytes_per_panel = uint64(dram__bytes_write.sum) / 100
+```
+
+in binary64. These metrics already sum all kernels in the range; never add
+values across profiler replay passes. All other counters below are published
+diagnostics whose exact metric list is frozen in the audited implementation
+manifest but cannot enter a gate:
+
+- HBM and L2 read/write bytes and hit rates;
+- shared-memory transactions and bank conflicts;
+- register spills and local-memory traffic;
+- issued FP/BF16/integer/SFU/load/store instructions;
+- barriers, stalls, active warps, and achieved occupancy;
+- tensor-core utilization for controls;
+- route depth and unique payload edges per panel invocation.
+
+For each ordered range, Section 9.1's evaluation map with that counter process
+index `p` supplies the rows used by the exact one-pass warmup-and-range
+sequence above. The diagnostic process-level estimator for each additive
+counter is its range sum divided by exactly 100 completed panels; rates and hit
+fractions are ratios of summed numerator and denominator counters, not means
+of per-kernel percentages.
+
+Profiler replay traffic is excluded from timing and clearly labeled. Profiler
+passes do not multiply the reported logical invocation count. HBM gate values
+are the two formulas above. Their ratios use
+the same ten-process paired bootstrap and 3% relative precision target as
+energy; counter collection or replay instability beyond that target is
+inconclusive, not silently averaged away.
+
+### 12.3 Energy and thermals
+
+For every process, candidate/dense arm, and primary cell, run one fixed
+20-second graph-replay loop. The energy gate uses only NVML from the exact
+580.126.20 driver; DCGM, `nvidia-smi`, `nvmlDeviceGetPowerUsage`, and averaged
+power field 185 are prohibited. Hash the host's
+`libnvidia-ml.so.580.126.20`, require its `nvmlSystemGetNVMLVersion` string to
+match the frozen manifest, call `nvmlInit_v2`, and resolve the full-GPU handle
+by its recorded UUID.
+
+The power sampler is one dedicated host thread. At each sample initialize one
+`nvmlFieldValue_t` with `fieldId=NVML_FI_DEV_POWER_INSTANT` (integer field 186)
+and `scopeId=0`, then call exactly
+`nvmlDeviceGetFieldValues(device,1,&field)`. Require both the function and
+field `nvmlReturn` to be `NVML_SUCCESS`, require
+`field.valueType=NVML_VALUE_TYPE_UNSIGNED_INT`,
+and read `field.value.uiVal` as milliwatts. A different type or missing sample
+is invalid. Sample at absolute `CLOCK_MONOTONIC` targets `t0+n*50,000,000 ns`
+using `clock_nanosleep(...,TIMER_ABSTIME,...)`. Timestamp a sample at
+`floor((before_call_ns+after_call_ns)/2)` and convert milliwatts to binary64
+watts by division by exactly 1000. Clocks, temperature, and throttle fields are
+separate diagnostics and cannot replace or alter this power series.
+
+Within process `p`, order the 16 loops by
+`Generator(PCG64(9_950_815+p)).permutation`. Measure a 20-second no-work idle
+interval before and after this schedule using the identical calls at
+`n=0,...,400`. In each process let integer `ref_ns` be the first before-idle
+midpoint timestamp. Convert any integer midpoint timestamp `t_ns` to time
+`x=np.float64(t_ns-ref_ns)*np.float64(1e-9)`, subtracting in signed 64-bit
+integer first and separately rounding the conversion and multiplication.
+
+For any ordered series `(x[i],w[i])`, define `trap` by scalar binary64
+round-to-nearest-even operations in this exact order: initialize `J=+0.0`; for
+ascending `i`, compute separately rounded `dt=x[i+1]-x[i]`, `ws=w[i]+w[i+1]`,
+`half=ws*np.float64(0.5)`, `term=dt*half`, and `J=J+term`. FMA, extended
+precision, vector/tree reduction, and reassociation are prohibited. For each
+idle series set `idle_mean=trap/(x[last]-x[0])`, with the subtraction and
+division separately rounded, and set
+`idle_mid=x[0]+((x[last]-x[0])*np.float64(0.5))`, rounding the inner
+subtraction, multiplication, and outer addition separately. Thus the two
+previously named midtimes are exactly the endpoint midtimes, not the mean of
+sample timestamps.
+
+Let `(m0,p0)` and `(m1,p1)` be the before- and after-idle
+`(idle_mid,idle_mean)` pairs. Compute separately rounded
+`slope=(p1-p0)/(m1-m0)`. For an active series with first and last times `a,b`,
+compute separately rounded `dt=b-a`, `mid=a+(dt*np.float64(0.5))`,
+`offset=mid-m0`, `baseline_w=p0+(slope*offset)`, and
+`idle_baseline_J=dt*baseline_w`, in that written order. Gross joules are
+`trap` on the active series. Idle-subtracted joules are the separately rounded
+`gross_J-idle_baseline_J`; a negative result is invalid. This point-slope
+midpoint product is the sole analytic fitted-line integral. Normalize both
+joule values by the exact completed panel count using one separately rounded
+binary64 division and report per panel and per token. Any non-finite value,
+zero denominator, or timestamp not strictly increasing is invalid. The
+relative two-sided 95% interval half-width target is 3%.
+
+For each ordered energy loop, use evaluation process index `p`. Execute
+warmups `r=-1000,...,-1`, then immediate warmups `r=-50,...,-1`. At the first
+power sample start the timed stream at `r=0`; each subsequently enqueued panel
+increments `r` by one and therefore rotates through Section 9.1's row map.
+Stop enqueueing at the first 20 Hz sample whose monotonic timestamp is at least
+20.000 seconds after the first, synchronize the last enqueued panel, take one
+final power sample at that synchronization, and count every completed panel.
+Integrate from the first sample through that final sample; call this actual
+duration `T>=20.000` seconds. Gross joules use that full interval.
+Idle-subtracted joules subtract the exact analytic fitted-line integral
+defined in the preceding paragraph over those same first-to-final sample
+timestamps. `T` is only the loop duration; no midpoint-watts-times-`T`
+approximation is allowed. The two process estimators are those joules divided
+by that process loop's completed-panel count.
+
+MoE and Monarch receive the complete counter and energy instrumentation on
+`B in {1,8}` for both input families in three fixed process blocks. Those
+diagnostics are published but do not enter the 64 dense-relative gates. This
+keeps the hard four-hour target run finite without presenting latency-only
+sparse controls. Sparse-control counter order uses
+`PCG64(9_980_815+process)` and energy order uses
+`PCG64(9_960_815+process)`. In each of the three sparse-control process blocks,
+use the same exact counter and energy warmups and row sequence above with
+`p in {0,1,2}`. Their point estimates are equal-weight arithmetic means of the
+three process estimators and are diagnostic only.
+
+### 12.4 Frozen diagnostic schedules
+
+Diagnostics use fresh processes disjoint from the ten primary processes and
+never enter the decision or its precision predicates. They use the one frozen
+configuration selected per `(arm,B)` in Section 10; no diagnostic retuning is
+allowed. Unless overridden below, timed replay `k` of round `q` has
+`r=50q+k`, and Section 9.1's evaluation row map uses the diagnostic process
+index `p`.
+
+1. **Natural one-layer panel:** all four arms, both families, and primary
+   `B={1,2,4,8}`; three processes; 1,000 timed replays per cell as 20 rounds of
+   50. Use initial warmups `r=-1000,...,-1` and the exact 50-replay immediate
+   warmup from Section 9.4. In each round permute the canonical eight-cell,
+   four-arm chunk list with
+   `Generator(PCG64(9_910_815+1000*p+q))`.
+2. **Natural high-batch 12-layer panel:** all four arms, both families, and
+   `B={16,32,64,128,512,2048}`; three processes; 500 timed replays per cell as
+   ten rounds of 50. Use initial warmups `r=-200,...,-1`; immediately before
+   round `q`, warm `r=50q-20,...,50q-1`. In each round permute the canonical
+   family-major, ascending-`B`, arm-inner chunk list with
+   `Generator(PCG64(9_920_815+1000*p+q))`.
+3. **Candidate route diagnostics, 12-layer:** collapsed, uniform, and
+   `I0-ROUTE-REPLAY`, both families, and primary `B`; three processes; 500
+   timed replays per `(regime,cell)` as ten rounds of 50. Use the high-batch
+   warmup rule above. In each round permute the canonical cell-major list with
+   regimes `[collapsed,uniform,I0]` inner using
+   `Generator(PCG64(9_930_815+1000*p+q))`.
+4. **Cold candidate/dense:** both families and primary `B`; three processes;
+   100 timed replays per `(arm,cell)`. For repetition `r=0,...,99`, permute the
+   canonical cell-major, arm-inner list with
+   `Generator(PCG64(9_935_815+1000*p+r))`. Immediately before every single
+   replay, execute the Section 9.4 eviction reduction and device synchronize;
+   there is no other warmup.
+5. **Components:** U0--U5 use candidate `B=1`, Gaussian, layer zero, and three
+   processes. Each component receives initial warmups `r=-1000,...,-1` and
+   5,000 timed invocations as 100 rounds of 50; immediately before each chunk,
+   warm that component with `r=50q-50,...,50q-1`. Permute `[U0,...,U5]` each
+   round with `Generator(PCG64(9_940_815+1000*p+q))`. These diagnostic kernels
+   are compiled and hashed in the manifest before tuning and inherit the
+   selected candidate `B=1` thread, vector, and memory schedule wherever that
+   field applies. U6 is the candidate slice of diagnostic 1; U7 is the primary
+   12-layer measurement.
+
+There is no unlisted cross-product: the one-layer schedule is natural-primary
+only, the high-batch schedule is 12-layer natural only, and route diagnostics
+are candidate-primary only. Publish raw timings and schedules; missing a
+diagnostic is a reporting defect, not a post-hoc reason to alter or extend the
+primary experiment.
+
+## 13. Statistics
+
+Use exactly 200,000 bootstrap replicates from NumPy
+`rng=Generator(PCG64(10_000_815))`. Make exactly these two RNG calls, in this
+order, both with `endpoint=False`:
+
+```text
+P = rng.integers(0,10,size=(200000,10),dtype=np.int64)
+Q = rng.integers(0,20,size=(200000,10,20),dtype=np.int64)
+```
+
+For replicate `b`, selected process occurrence `a`, and its round occurrence
+`t`, use original process `P[b,a]` and round `Q[b,a,t]`. Use the same `P` and
+`Q` entries for every cell, arm, device/host timing metric, and ratio; there are
+no metric-specific bootstrap draws. Pool the resulting raw 50-replay chunks,
+compute p50/p90/p95/p99 with Hyndman-Fan type 7, and form
+candidate/control ratios inside each replicate. Energy and counter replicates
+use the same `P` rows and no `Q`; within a replicate their per-arm estimate is
+the equal-weight arithmetic mean of its ten selected process estimators, and
+the ratio is candidate mean divided by dense mean. The unresampled energy and
+counter point estimates use the same arithmetic-mean-then-ratio rule.
+
+The 64 dense-relative gating ratios are eight cells times: device p95/p99,
+host p95/p99, gross/idle-subtracted energy, and HBM read/write. Give every
+ratio a Bonferroni one-sided bound at quantile
+`1-0.05/64=0.99921875`, using the empirical `higher` order statistic. This is
+one simultaneous family across metrics and cells, not eight separate
+95%-families. Ordinary two-sided 95% percentile intervals are used only for the
+fixed precision diagnostic; relative half-width is
+`(upper-lower)/(2*abs(point_estimate))`, and a zero denominator is
+inconclusive.
+
+For `n=200000` sorted bootstrap values `x[0]...x[n-1]`, the one-sided
+`higher` endpoint at probability `q` is exactly
+`x[ceil((n-1)*q)]`. Each two-sided percentile endpoint uses type-7 linear
+interpolation: for `q in {0.025,0.975}`, set `h=(n-1)*q`, `i=floor(h)`, and
+return `x[i]+(h-i)*(x[i+1]-x[i])` in binary64. Point quantiles over raw timing
+samples use the same type-7 formula. Do not round values before a gate.
+
+The precision predicate applies exactly to:
+
+1. every primary-cell, per-arm device and host p50/p95 estimate for all four
+   arms, each at `<=1%` relative half-width;
+2. every primary-cell, per-arm device and host p99 estimate for all four arms,
+   each at `<=3%`;
+3. every candidate/dense primary-cell device and host p95 ratio at `<=1%`, and
+   p99 ratio at `<=3%`;
+4. every candidate/dense primary-cell gross-energy, idle-subtracted-energy,
+   HBM-read, and HBM-write per-arm estimate and ratio, each at `<=3%`.
+
+p90, throughput, and the three-process sparse-control energy/counter
+diagnostics have intervals but no precision kill. Failure of any enumerated
+precision predicate is inconclusive after the fixed ten processes; nothing is
+extended.
+
+Report every process, round, point estimate, interval, simultaneous bound, and
+worst cell. No seed, process, route, or input-family pooling may hide a failure.
+Exact bytes have zero tolerance and do not receive confidence intervals.
+
+## 14. Scientific decision
+
+### 14.1 Dense-relative physical-feasibility pass
+
+B2 passes only if all validity gates and all 48 target-width conditioning
+bounds pass and, in **every** 12-layer natural primary cell:
+
+1. p95 device-latency ratio `candidate/dense` has simultaneous upper bound
+   `<=0.50`;
+2. p99 device-latency ratio has simultaneous upper bound `<=1.00`;
+3. synchronized host-wall p95 and p99 ratios have simultaneous upper bounds
+   `<=0.50` and `<=1.00`, respectively;
+4. gross and idle-subtracted energy ratios have simultaneous upper bounds
+   `<=1.00`;
+5. HBM-read and HBM-write ratios each have simultaneous upper bound `<=1.00`;
+6. candidate learned-plus-static resident bytes are exactly
+   `<=4,227,858,432`, and every integer-byte memory delta enumerated in Section
+   5.3 is componentwise `<=dense` for every paired process and primary cell;
+7. every output, route, and trust correctness gate passes.
+
+At least one of latency, energy, or HBM traffic must also improve by a strict
+practical margin; condition 1 already supplies that margin if satisfied.
+
+This label is deliberately not “Pareto pass,” “physical leader,” or “Edge B
+proved.” MoE and Monarch ratios are mandatory published comparisons but do not
+gate B2 because no arm has capability evidence. If either is faster, the result
+must say so prominently and cannot claim the candidate is the strongest block.
+Only a later matched-capability experiment can establish a Pareto ordering
+between unequal hypothesis classes.
+
+### 14.2 Fail
+
+If the harness is valid but any primary scientific condition fails, close the
+exact B2 candidate. The closure covers:
+
+- this width and incomplete tree;
+- this radial map and residual scale;
+- the packed descriptor topology;
+- the one-CTA-per-token complete-path kernel;
+- the frozen finite tuning space;
+- H100 SXM low-batch dense-relative physical substrate.
+
+Do not add a thread count, precision, cache trick, route distribution, or
+kernel backend after failure. A future retry requires a new mathematical
+operator or dependency graph, not another tuning point.
+
+### 14.3 Inconclusive
+
+Only validity failure, unavailable required instrumentation, or failure to
+reach the frozen confidence precision by ten full process blocks is
+inconclusive. A slow but valid result is a fail, not inconclusive.
+
+### 14.4 Consequence of pass
+
+A pass authorizes writing and independently auditing a **candidate-specific**
+B3 route/traffic mechanism study. It does not authorize language training or a
+frontier claim. B3 must determine how route entropy changes the active working
+set and tails before the candidate may approach the from-zero raw-prose gate;
+the later capability gate must include dense, exact-byte MoE, and Monarch from
+the start.
+
+## 15. Device acquisition, local-first rule, and teardown
+
+No GPU may be started before this paper, the implementation, the manifest, and
+an independent code audit all pass.
+
+Immediately before any rental:
+
+1. query the local GPU model, free VRAM, compute processes, utilization, and
+   temperature with `nvidia-smi` once per second for 60 samples;
+2. if it is idle and supports the required code, use it for compilation,
+   correctness, and non-decision development measurements;
+3. treat a non-H100 local result as a separate stratum; it cannot satisfy the
+   frozen H100 scientific gate;
+4. rent only if the H100 gate remains necessary after local work.
+
+“Idle” here means no foreign compute process, maximum sampled GPU utilization
+at most 5%, temperature below 70 C, and at least 24 GiB free VRAM. A display
+process is allowed only if it owns less than 512 MiB and produces no compute
+utilization. If any condition fails, do not interrupt or evict the local work.
+
+An H100 rental has a hard four-hour wall budget. Before the create API call,
+snapshot existing instance IDs and generate a unique label
+`fixed-frontier-b2-<128-bit-local-random-hex>`. Build and hash the Section 7.0
+container beforehand. Its Dockerfile has exact exec-form
+`ENTRYPOINT ["/opt/b2/entrypoint"]` and an empty `CMD`.
+
+Create directly, without a Vast template, using `runtype:"args"`,
+`args_str:""`, `target_state:"running"`, `cancel_unavail:true`, `vm:false`,
+an 80 GB local disk, no volume, the exact final image digest, the exact expected
+label, and env port mapping `{ "-p 22:22": "1" }`. SSH/Jupyter runtypes and
+`onstart` are prohibited because they replace or follow the image entrypoint.
+The custom entrypoint starts `/opt/b2/watchdog`, blocks until it has validated
+the provider record and written an armed receipt containing ID, label, and
+deadline, and only then configures the injected `SSH_PUBLIC_KEY` and starts the
+image's `sshd -D` as a child on internal port 22. The entrypoint remains PID 1,
+owns the Section 7.0 auditor socket, forwards termination signals, and reaps
+the watchdog, `sshd`, and measurement children; it never executes or is
+replaced by `sshd`. Thus `args` preserves the watchdog-first entrypoint while
+the explicit mapping supplies remote SSH.
+
+On start, the watchdog queries the authenticated
+`GET /api/v0/instances/$CONTAINER_ID/` record and reads only its top-level
+`instances.start_date` field. Vast defines this as a numeric Unix timestamp in
+UTC seconds and currently returns fractional IEEE-754 seconds. The watchdog:
+
+1. reads its scoped `CONTAINER_ID`, `CONTAINER_API_KEY`, and provider label;
+2. destroys itself immediately on a label mismatch, a missing/non-numeric or
+   non-finite/non-positive `start_date`, or a `start_date` more than 60 seconds
+   ahead of the current `CLOCK_REALTIME` Unix time;
+3. otherwise sets integer Unix deadline
+   `floor(start_date + 14400)` with no decimal pre-rounding and destroys
+   immediately if `CLOCK_REALTIME >= deadline`;
+4. until that condition becomes true it sleeps for at most
+   `min(10,deadline-floor(CLOCK_REALTIME))` seconds, then repeatedly invokes
+   `vastai destroy instance $CONTAINER_ID --api-key $CONTAINER_API_KEY` until
+   the container terminates.
+
+No local receipt time, container boot time, `end_date`, or substitute provider
+field may replace `start_date`. An API parse/authentication failure follows the
+immediate-destroy path using the already injected per-instance key.
+
+The per-instance key scopes the remote command to itself; no expected numeric
+ID is needed before creation. Vast does not charge a still-loading instance,
+and once the container starts the watchdog is the first workload, closing the
+create-to-SSH arming race.
+
+After create returns, write its numeric ID, verified label, final image digest,
+and mapped SSH endpoint to a mode-0600 local receipt. Refuse SSH until the
+remote armed receipt matches the local ID/label. A separate local controller trap incrementally copies artifacts
+and destroys that literal ID on success, failure, interrupt, or timeout. Every
+local lifecycle command checks the ID/label pair; globs, “all instances,” and
+pre-existing IDs are prohibited.
+
+The hard watchdog may sacrifice uncopied results; avoiding an unbounded rental
+takes priority over preserving a failed run. On the normal path, copy results,
+verify hashes locally, then destroy immediately rather than waiting for the
+watchdog. Verify that the new ID is absent from the live instance list and that
+there is **zero ongoing GPU or storage billing** for it. This does not mean the
+historical run was free. Vast stop preserves data and continues storage
+charges, so stop alone is not accepted as final teardown. Existing instances
+are out of scope and must not be touched.
+
+## 16. Current implementation references
+
+The physical design relies on current primary documentation, not on an
+assumption that sparse scalar work is automatically fast:
+
+- NVIDIA's Hopper guide documents the 228 KiB/SM carveout, 227 KiB per-block
+  addressable limit, explicit opt-in above 48 KiB, and TMA behavior:
+  <https://docs.nvidia.com/cuda/archive/13.0.0/hopper-tuning-guide/index.html>
+- CUTLASS documents Hopper BF16 tensor-core support and custom epilogues, while
+  its newest contiguous grouped-GEMM Operator API example is Blackwell-only;
+  Hopper controls therefore use the C++ CUTLASS path:
+  <https://docs.nvidia.com/cutlass/latest/index.html>
+- NVIDIA's Hopper grouped-GEMM C++ example uses TMA/GMMA warp-specialized
+  schedules:
+  <https://github.com/NVIDIA/cutlass/blob/main/examples/57_hopper_grouped_gemm/57_hopper_grouped_gemm.cu>
+- The pinned Transformer Engine release exposes BF16 linear/SwiGLU primitives:
+  <https://github.com/NVIDIA/TransformerEngine/releases/tag/v2.15>
+- The structured control is based on the two-block-diagonal Monarch family:
+  <https://arxiv.org/abs/2204.00595>
+- Vast documents that stopping preserves data and continues storage charges,
+  while destroy removes the instance, and that the per-instance key can invoke
+  both operations from inside the container:
+  <https://docs.vast.ai/guides/instances/manage-instances> and
+  <https://docs.vast.ai/guides/instances/docker-environment>
+- Vast's instance endpoint documents `instances.start_date` as a fractional
+  numeric timestamp in the authenticated instance record:
+  <https://docs.vast.ai/api-reference/instances/show-instance>
+- Vast documents that `args` preserves the image entrypoint while SSH/Jupyter
+  runtypes replace it, and that explicit env mappings can expose ports:
+  <https://docs.vast.ai/api-reference/creating-instances-with-api>
+- NVIDIA's pinned 25.09 container/release fixes CUDA 13.0.1 and PyTorch, and
+  the CUDA 13.0 Update 1 component table fixes nvcc, cudart, CUPTI, and cuBLAS:
+  <https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel-25-09.html>
+  and
+  <https://docs.nvidia.com/cuda/archive/13.0.1/cuda-toolkit-release-notes/index.html>
+- NVIDIA documents that `compute,utility` controls the driver libraries and
+  binaries injected by Container Toolkit, and defines the NVML clock-event
+  reason bits used by the validity rule:
+  <https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/docker-specialized.html>
+  and
+  <https://docs.nvidia.com/deploy/nvml-api/group__nvmlClocksEventReasons.html>
+- CUPTI documents user-range profiling and counter-image evaluation for a
+  deterministic multi-kernel range:
+  <https://docs.nvidia.com/cupti/13.0.0/main/main.html>
+- NVML documents `nvmlDeviceGetFieldValues` and instant-power field 186:
+  <https://docs.nvidia.com/deploy/nvml-api/group__nvmlFieldValueQueries.html>
+  and
+  <https://docs.nvidia.com/deploy/nvml-api/group__nvmlFieldValueEnums.html>
+
+These sources justify implementability and control selection only. They do not
+predict that the candidate passes.

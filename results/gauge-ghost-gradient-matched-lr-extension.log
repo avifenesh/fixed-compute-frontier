@@ -1,0 +1,83 @@
+{"starting_arm": "canonical_baseline", "learning_rate": 0.0048}
+{"forward_mechanism_arm": "canonical_baseline", "step": 61, "train_loss": 7.00328516960144, "validation_loss": 7.09980383515358, "gradient_norm": 0.7035477161407471}
+{"forward_mechanism_arm": "canonical_baseline", "step": 152, "train_loss": 6.361205577850342, "validation_loss": 6.327905640006065, "gradient_norm": 0.4951203465461731}
+{"forward_mechanism_arm": "canonical_baseline", "step": 305, "train_loss": 5.755968332290649, "validation_loss": 5.918236769735813, "gradient_norm": 0.20847538113594055}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.0048}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 6.960171937942505, "validation_loss": 7.056842617690563, "gradient_norm": 0.9334040284156799}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 7.34402871131897, "validation_loss": 7.421448200941086, "gradient_norm": 312.1858215332031}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 7.52921462059021, "validation_loss": 7.593402959406376, "gradient_norm": 4100.716796875}
+{"starting_arm": "canonical_baseline", "learning_rate": 0.003394112549695428}
+{"forward_mechanism_arm": "canonical_baseline", "step": 61, "train_loss": 6.967991828918457, "validation_loss": 7.089635886251926, "gradient_norm": 0.65276038646698}
+{"forward_mechanism_arm": "canonical_baseline", "step": 152, "train_loss": 6.364089488983154, "validation_loss": 6.334992378950119, "gradient_norm": 0.5103587508201599}
+{"forward_mechanism_arm": "canonical_baseline", "step": 305, "train_loss": 5.767448425292969, "validation_loss": 5.930325366556644, "gradient_norm": 0.23752087354660034}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.003394112549695428}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 6.922559022903442, "validation_loss": 7.047188051044941, "gradient_norm": 0.8828654885292053}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 6.575148105621338, "validation_loss": 6.538202092051506, "gradient_norm": 2.4791922569274902}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 11.567080974578857, "validation_loss": 11.399949535727501, "gradient_norm": 48451.73828125}
+{"starting_arm": "canonical_baseline", "learning_rate": 0.0024}
+{"forward_mechanism_arm": "canonical_baseline", "step": 61, "train_loss": 6.9971466064453125, "validation_loss": 7.118421711027622, "gradient_norm": 0.6931445002555847}
+{"forward_mechanism_arm": "canonical_baseline", "step": 152, "train_loss": 6.403524160385132, "validation_loss": 6.355321750044823, "gradient_norm": 0.5744943618774414}
+{"forward_mechanism_arm": "canonical_baseline", "step": 305, "train_loss": 5.817917585372925, "validation_loss": 5.973095305263996, "gradient_norm": 0.2526184022426605}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.0024}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 6.941952705383301, "validation_loss": 7.074051529169083, "gradient_norm": 0.7645541429519653}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 6.416274309158325, "validation_loss": 6.3828204199671745, "gradient_norm": 1.8187094926834106}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 5.967240333557129, "validation_loss": 6.1066945642232895, "gradient_norm": 2.3471884727478027}
+{"starting_arm": "canonical_baseline", "learning_rate": 0.001697056274847714}
+{"forward_mechanism_arm": "canonical_baseline", "step": 61, "train_loss": 7.042174577713013, "validation_loss": 7.175201006233692, "gradient_norm": 0.7069291472434998}
+{"forward_mechanism_arm": "canonical_baseline", "step": 152, "train_loss": 6.433727979660034, "validation_loss": 6.3948365822434425, "gradient_norm": 0.6000354290008545}
+{"forward_mechanism_arm": "canonical_baseline", "step": 305, "train_loss": 5.883106231689453, "validation_loss": 6.037161663174629, "gradient_norm": 0.28829529881477356}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.001697056274847714}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 6.994840383529663, "validation_loss": 7.119797922670841, "gradient_norm": 0.8445872068405151}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 6.437562942504883, "validation_loss": 6.39952103048563, "gradient_norm": 1.2457128763198853}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 5.94327187538147, "validation_loss": 6.089153252542019, "gradient_norm": 1.3713271617889404}
+{
+  "all_new_arms_structurally_valid": true,
+  "best_is_grid_endpoint": true,
+  "best_learning_rates": {
+    "backward_only_tve": 0.001697056274847714,
+    "canonical_baseline": 0.0048
+  },
+  "best_losses": {
+    "backward_only_tve": 6.089153252542019,
+    "canonical_baseline": 5.918236769735813
+  },
+  "classification": "endpoint_extension_required",
+  "complete": true,
+  "ghost_relative_gain": -0.02806900659543321,
+  "ghost_relative_regret": 0.02887962909497377,
+  "ghost_survives_matched_lr_frontier": false,
+  "paired_best_terminal_diagnostic": {
+    "ghost_minus_canonical_mean": 0.17091648280620575,
+    "lower_95": 0.16704128968060522,
+    "standard_error": 0.0019771393497961935,
+    "upper_95": 0.17479167593180628
+  },
+  "terminal_losses": {
+    "backward_only_tve": {
+      "0.00014999999999999999": 6.8317471370100975,
+      "0.00021213203435596422": 6.67124904692173,
+      "0.00029999999999999997": 6.507063269615173,
+      "0.0004242640687119285": 6.367832854390144,
+      "0.00059999999999999995": 6.257419563829899,
+      "0.00084852813742385699": 6.16860431432724,
+      "0.0011999999999999999": 6.102745749056339,
+      "0.001697056274847714": 6.089153252542019,
+      "0.0023999999999999998": 6.1066945642232895,
+      "0.003394112549695428": 11.399949535727501,
+      "0.0047999999999999996": 7.593402959406376
+    },
+    "canonical_baseline": {
+      "0.00014999999999999999": 6.844321824610233,
+      "0.00021213203435596422": 6.686818853020668,
+      "0.00029999999999999997": 6.523809522390366,
+      "0.0004242640687119285": 6.38331712782383,
+      "0.00059999999999999995": 6.268180273473263,
+      "0.00084852813742385699": 6.181410133838654,
+      "0.0011999999999999999": 6.099084354937077,
+      "0.001697056274847714": 6.037161663174629,
+      "0.0023999999999999998": 5.973095305263996,
+      "0.003394112549695428": 5.930325366556644,
+      "0.0047999999999999996": 5.918236769735813
+    }
+  }
+}

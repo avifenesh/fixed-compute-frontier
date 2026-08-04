@@ -1,0 +1,68 @@
+{
+  "baseline_endpoint": {
+    "exact": true,
+    "maximum_absolute_error_at_alpha_zero": 0
+  },
+  "interpretation": {
+    "alpha_one": "B + 2*ReLU(A)",
+    "control": "final-only hinge has only one projection direction",
+    "gain": "two nonparallel slope regimes from one projection row"
+  },
+  "mode_bit_funding": {
+    "exact_to_float_tolerance": true,
+    "extra_stored_parameters": 0,
+    "maximum_function_error": 0.0,
+    "mechanism": "paired sign flip of one up row and matching down column"
+  },
+  "schema": "inplace-hinge-reduction-algebra-v1",
+  "seed": 20260728,
+  "side_gradient_span": {
+    "alpha": 0.75,
+    "final_only_gradients": [
+      [
+        1.75,
+        1.75
+      ],
+      [
+        0.25,
+        0.25
+      ]
+    ],
+    "final_only_rank": 1,
+    "gradient_jump": [
+      1.5,
+      0.0
+    ],
+    "midpoint_determinant": 1.5,
+    "midpoint_gradients": [
+      [
+        1.75,
+        1.0
+      ],
+      [
+        0.25,
+        1.0
+      ]
+    ],
+    "midpoint_rank": 2
+  },
+  "strict_information_witness": {
+    "dense_outputs": [
+      0.0,
+      0.0
+    ],
+    "midpoint_hinge_outputs": [
+      1.0,
+      2.0
+    ],
+    "partial_a": [
+      1.0,
+      2.0
+    ],
+    "partial_b": [
+      -1.0,
+      -2.0
+    ],
+    "same_dense_different_candidate": true
+  }
+}

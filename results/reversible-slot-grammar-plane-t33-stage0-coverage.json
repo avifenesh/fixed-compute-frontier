@@ -1,0 +1,80 @@
+{
+  "claim_boundary": "Sealed structural coverage only. No answer was accessed and no semantic sufficiency, query mapping, or model capability is established.",
+  "controls": {
+    "edge_rule_shuffle_seed_33003": {
+      "question_both_document_coverage": 0.0,
+      "questions": 104,
+      "questions_with_both_documents": 0,
+      "support_edge_coverage": 0.027649769585253458,
+      "support_exactly_one_coverage": 0.027649769585253458,
+      "support_items": 217,
+      "support_items_with_edge": 6,
+      "support_items_with_exactly_one_edge": 6,
+      "usable_middle_lengths": {
+        "count": 6,
+        "maximum": 46,
+        "median": 32,
+        "minimum": 3
+      }
+    },
+    "note": "A dictionary-consistent global rule-ID permutation is invariant by construction; the reported rule control shuffles IDs across edges only.",
+    "title_shuffle_seed_33001": {
+      "question_both_document_coverage": 0.0,
+      "questions": 104,
+      "questions_with_both_documents": 0,
+      "support_edge_coverage": 0.03686635944700461,
+      "support_exactly_one_coverage": 0.03686635944700461,
+      "support_items": 217,
+      "support_items_with_edge": 8,
+      "support_items_with_exactly_one_edge": 8,
+      "usable_middle_lengths": {
+        "count": 8,
+        "maximum": 46,
+        "median": 25,
+        "minimum": 4
+      }
+    }
+  },
+  "correct": {
+    "question_both_document_coverage": 0.0,
+    "questions": 104,
+    "questions_with_both_documents": 0,
+    "support_edge_coverage": 0.027649769585253458,
+    "support_exactly_one_coverage": 0.027649769585253458,
+    "support_items": 217,
+    "support_items_with_edge": 6,
+    "support_items_with_exactly_one_edge": 6,
+    "usable_middle_lengths": {
+      "count": 6,
+      "maximum": 46,
+      "median": 32,
+      "minimum": 3
+    }
+  },
+  "gates": {
+    "all_inputs_exact": true,
+    "answers_not_loaded_from_source": true,
+    "every_support_item_mapped": true,
+    "phase_a_valid": true,
+    "question_both_80pct": false,
+    "support_coverage_89_44pct": false
+  },
+  "input_hashes": {
+    "candidate": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "phase_a": "06130ea809053898e0594cd9662eb87b7fcc44c22d748fac740cc45c275c496e",
+    "phase_b_source": "b0af3190692d4d217a35509291cf473bb5de8d29c18bb5854c5f384ad424a263",
+    "preregistration": "75b0cc695362dd14861d555f686f5c6862d2b9e5dd5a621c4a327d54eb9b54d2",
+    "sealed": "5a0413f53bfc0fc73b5e66c941c708077624908095934af740c84d234b9fea6b",
+    "source": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6"
+  },
+  "mapping": {
+    "mapped_support_items": 217,
+    "source_rows_read_without_answer_column": 104
+  },
+  "next_stage_admitted": false,
+  "object_sha256": "f88f54a313003c49fce576dd708de4320a0ed268154ebe4fdc4664fc4f8f28e7",
+  "phase_a_object_sha256": "23046dbe1e275d0b02cf214ec63701908caf2a9053410ee182f571b4430cb4a9",
+  "schema": "reversible-slot-grammar-plane-t33-coverage-v1",
+  "status": "fail",
+  "wall_seconds": 0.8603074951097369
+}

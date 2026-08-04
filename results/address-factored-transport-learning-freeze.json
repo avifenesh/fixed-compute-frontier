@@ -1,0 +1,29 @@
+{
+  "schema": "address-factored-transport-learning-freeze-v1",
+  "frozen_on": "2026-07-27",
+  "formal_command": "CUBLAS_WORKSPACE_CONFIG=:4096:8 python experiments/address_factored_transport_learning.py --device cuda",
+  "machine": {
+    "provider": "vast.ai",
+    "instance_id": 45944186,
+    "gpu": "NVIDIA H100 80GB HBM3"
+  },
+  "artifacts": {
+    "source": {
+      "path": "experiments/address_factored_transport_learning.py",
+      "sha256": "3c969819e558007090bc5dfb031bf59d9c268ac75ee57425215bb3fae12cb8a0"
+    },
+    "preregistration": {
+      "path": "results/address-factored-transport-learning-preregistration.md",
+      "sha256": "fb931993d65e34f4e0e493d73c4df8939683c750f16d9d5bbb7cb7f49bcf2739"
+    },
+    "stage0_result": {
+      "path": "results/address-factored-transport-stage0.json",
+      "sha256": "3efc18684ab8f1af34742c24f97138e60ad7b60b8e3ebc7a9a8949da4e2defbd"
+    }
+  },
+  "reviews": {
+    "design": "GO",
+    "source": "VALID"
+  },
+  "formal_run_authorized": true
+}

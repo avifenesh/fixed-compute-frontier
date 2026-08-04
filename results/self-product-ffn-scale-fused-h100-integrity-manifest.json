@@ -1,0 +1,22 @@
+{
+  "schema": "self-product-ffn-scale-fused-h100-integrity-v1",
+  "source_sha256": "6a8e705f254f93ab78df286068c4bcfce5c2fde5c125237e30719ab9216e8266",
+  "preregistration_sha256": "2e9c4cc5821008ad73e65d51148e2e8ad81d4f1da6a905711601b5135f83ef38",
+  "test_sha256": "a47d7762c2c523d018ae294d32aa73115d66920528013859a09ddcee9d079fc6",
+  "eager_source_sha256": "1bad25ebcdce3c60dcc0114a2eac1cef8585dc9903edf547b3f4969ac30f8ec8",
+  "eager_preregistration_sha256": "3cba19f009abf4037795bcb4045ba8866e10df84ef45a88b21c379bf09c9b8f3",
+  "eager_test_sha256": "f3fd6c2afaa000c31d7ce5c8ff948a4f73744eecfcbd7c92d2e4fc20a2467d59",
+  "eager_result_sha256": "7e4c7b6b1686a1631c1b90aad8437141ff0299dd15c312aeb76fe62f27415fc8",
+  "scale_source_sha256": "6453ea4956e7959cb7bcb283669b17813bf5f468832f3485b1bdf6b38f4d3a6b",
+  "scale_preregistration_sha256": "54be074132db7be37d62721d7dc735c146e90b935ba5e12ff7c4909ac682ac2b",
+  "scale_test_sha256": "606a95a96980102c9f6df40e35f85f3f8df692c56c33ce290abc95e81f36fb18",
+  "base_lm_source_sha256": "b7f8eabdd9caf8e914d170b18ddbbd1f850b042a20eed171c66eb5583fc75957",
+  "triangular_source_sha256": "5b5a49df441919cfd52a42e6cd093d9a0921fac1b3bb749e0c07a79b46fa92de",
+  "coalesced_source_sha256": "a35b3e8dad9e4fa9af199c8343bf4673dfe95345210629197ffa3c74c241b17f",
+  "reflex_source_sha256": "ffeda1c2dab88ed3a37a0f4c42405c4b3fa6dff2457016fc218ee2cc5b76fada",
+  "admission_source_sha256": "b98de36232ef4708166847a2731e00c968f8786eb6606d603b3238991464eb41",
+  "admission_preregistration_sha256": "d9e565703dfdcc04b528c2692d1ee072e07b447a2e9af4aefbe4967a2f3b65bd",
+  "admission_test_sha256": "f638bccd127a5bfb0b7ff3715186daa8ba5450754136bb29404e430a73601bcf",
+  "confirmation_sha256": "5faa2b2a0e685eae5fcb91085c7c91bfadb8f7dd7ce2026d5283c5bad946de05",
+  "data_manifest_sha256": "8770dd2e042e65090c17e2d0061ebe215fe3f1436815cdb65c968e1ba91b1627"
+}

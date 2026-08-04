@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "experiment_id": "smollm2-360m-instrumentation-selfcheck",
+  "claim": {
+    "scope": "serve-only",
+    "primary_edge": "D",
+    "edges": ["D"]
+  },
+  "artifacts": {
+    "baseline": {
+      "model_reference": "HuggingFaceTB/SmolLM2-360M@f8027fd0eaeea54caa13c31d31b9fdc459c38b49",
+      "checkpoint_sha256": "TO_BE_CAPTURED",
+      "tokenizer_sha256": "TO_BE_CAPTURED",
+      "learned_bytes": {
+        "core": 0,
+        "auxiliary": 0,
+        "metadata": 0,
+        "total": 0
+      }
+    },
+    "candidate": {
+      "model_reference": "HuggingFaceTB/SmolLM2-360M@f8027fd0eaeea54caa13c31d31b9fdc459c38b49",
+      "checkpoint_sha256": "TO_BE_CAPTURED",
+      "tokenizer_sha256": "TO_BE_CAPTURED",
+      "learned_bytes": {
+        "core": 0,
+        "auxiliary": 0,
+        "metadata": 0,
+        "total": 0
+      }
+    }
+  },
+  "hardware": {
+    "gpu_stratum": "H100_EXACT_SKU_TO_BE_CAPTURED",
+    "gpu_pci_id": "TO_BE_CAPTURED",
+    "container_digest": "TO_BE_CAPTURED",
+    "server_commit": "TO_BE_CAPTURED"
+  },
+  "workload": {
+    "trace_sha256": "TO_BE_CAPTURED",
+    "frozen": true,
+    "cells": [
+      {"name": "short-interactive-c1", "input_tokens": 128, "output_tokens": 128, "concurrency": 1},
+      {"name": "short-interactive-c8", "input_tokens": 128, "output_tokens": 128, "concurrency": 8},
+      {"name": "normal-chat-c1", "input_tokens": 512, "output_tokens": 128, "concurrency": 1},
+      {"name": "normal-chat-c8", "input_tokens": 512, "output_tokens": 128, "concurrency": 8},
+      {"name": "prefill-heavy-c1", "input_tokens": 2048, "output_tokens": 128, "concurrency": 1},
+      {"name": "prefill-heavy-c8", "input_tokens": 2048, "output_tokens": 128, "concurrency": 8},
+      {"name": "decode-heavy-c1", "input_tokens": 512, "output_tokens": 512, "concurrency": 1},
+      {"name": "decode-heavy-c8", "input_tokens": 512, "output_tokens": 512, "concurrency": 8}
+    ]
+  },
+  "quality": {
+    "protected_slices": ["P1", "P2", "P3", "P4", "P5"],
+    "noninferiority_margins": {
+      "P1": 0.0,
+      "P2": 0.0,
+      "P3": 0.0,
+      "P4": 0.0,
+      "P5": 0.0
+    }
+  },
+  "planned_training_seeds": [101, 202, 303]
+}

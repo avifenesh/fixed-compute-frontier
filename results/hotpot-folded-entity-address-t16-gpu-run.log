@@ -1,0 +1,54 @@
+stage=environment
+2026-07-31T08:32:07+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+........                                                                 [100%]
+8 passed in 2.73s
+stage=folded_entity_address_gate
+Traceback (most recent call last):
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/hotpot_folded_entity_address_t16.py", line 493, in <module>
+    main()
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/hotpot_folded_entity_address_t16.py", line 471, in main
+    result = run(torch.device(arguments.device), arguments.checkpoint, arguments.projection)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/hotpot_folded_entity_address_t16.py", line 306, in run
+    projection, training = train_projection(
+                           ^^^^^^^^^^^^^^^^^
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/hotpot_folded_entity_address_t16.py", line 193, in train_projection
+    keys = F.normalize(projection(canonical), dim=1)
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Inference tensors cannot be saved for backward. Please do not use Tensors created in inference mode in computation tracked by autograd. To work around this, you can make a clone to get a normal tensor and use it in autograd, or use `torch.no_grad()` instead of `torch.inference_mode()`.
+stage=environment
+2026-07-31T08:32:54+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+........                                                                 [100%]
+8 passed in 2.55s
+stage=folded_entity_address_gate
+{
+  "all_gates_pass": false,
+  "evaluation_question_top1": 0.9615384615384616,
+  "failed_gates": [
+    "evaluation_question_margin_positive",
+    "evaluation_question_top1_exact",
+    "held_raw_context_margin_positive",
+    "held_raw_context_top1_exact",
+    "train_question_margin_positive",
+    "train_question_top1_exact"
+  ],
+  "held_raw_top1": 0.9351351351351351,
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/hotpot-folded-entity-address-t16.json",
+  "train_question_top1": 0.9657534246575342
+}
+stage=complete

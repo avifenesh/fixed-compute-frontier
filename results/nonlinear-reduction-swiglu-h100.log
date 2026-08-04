@@ -1,0 +1,130 @@
+{
+  "cells": {
+    "1": {
+      "candidate_vs_custom": {
+        "lower_95": 0.9678236945320031,
+        "median_ratio": 0.9718874963447026,
+        "upper_95": 0.9740973175406907
+      },
+      "candidate_vs_fastest_ordinary": {
+        "lower_95": 1.1311394352674455,
+        "median_ratio": 1.1344614269957467,
+        "upper_95": 1.1373513367066144
+      },
+      "fastest_ordinary": "ordinary_packed",
+      "median_ms": {
+        "candidate": 0.15875199437141418,
+        "custom_disabled": 0.16334400326013565,
+        "ordinary_packed": 0.13993600010871887,
+        "ordinary_split": 0.14468800276517868
+      }
+    },
+    "128": {
+      "candidate_vs_custom": {
+        "lower_95": 1.454082218731524,
+        "median_ratio": 1.45761801428095,
+        "upper_95": 1.4616937223914357
+      },
+      "candidate_vs_fastest_ordinary": {
+        "lower_95": 2.858793911993878,
+        "median_ratio": 2.867412890041881,
+        "upper_95": 2.8781597823889293
+      },
+      "fastest_ordinary": "ordinary_packed",
+      "median_ms": {
+        "candidate": 0.47543999552726746,
+        "custom_disabled": 0.3261759877204895,
+        "ordinary_packed": 0.16580799967050552,
+        "ordinary_split": 0.1680160015821457
+      }
+    },
+    "2048": {
+      "candidate_vs_custom": {
+        "lower_95": 0.9760779395093238,
+        "median_ratio": 0.976949046836747,
+        "upper_95": 0.9783458660706282
+      },
+      "candidate_vs_fastest_ordinary": {
+        "lower_95": 6.381126644064408,
+        "median_ratio": 6.3939198364541525,
+        "upper_95": 6.405178434529904
+      },
+      "fastest_ordinary": "ordinary_packed",
+      "median_ms": {
+        "candidate": 6.622464179992676,
+        "custom_disabled": 6.778720140457153,
+        "ordinary_packed": 1.0357440114021301,
+        "ordinary_split": 1.041152000427246
+      }
+    },
+    "32": {
+      "candidate_vs_custom": {
+        "lower_95": 1.0034322864997018,
+        "median_ratio": 1.0048283067422137,
+        "upper_95": 1.007250343359176
+      },
+      "candidate_vs_fastest_ordinary": {
+        "lower_95": 1.1717412174612938,
+        "median_ratio": 1.1736254520830705,
+        "upper_95": 1.1769175533153533
+      },
+      "fastest_ordinary": "ordinary_packed",
+      "median_ms": {
+        "candidate": 0.17315200716257095,
+        "custom_disabled": 0.17231999337673187,
+        "ordinary_packed": 0.147536002099514,
+        "ordinary_split": 0.1520640030503273
+      }
+    },
+    "512": {
+      "candidate_vs_custom": {
+        "lower_95": 1.0538094475315856,
+        "median_ratio": 1.0556946669704583,
+        "upper_95": 1.0575685804279764
+      },
+      "candidate_vs_fastest_ordinary": {
+        "lower_95": 5.616333209809524,
+        "median_ratio": 5.655704630150248,
+        "upper_95": 5.685682560646986
+      },
+      "fastest_ordinary": "ordinary_packed",
+      "median_ms": {
+        "candidate": 1.6592479944229126,
+        "custom_disabled": 1.5717120170593262,
+        "ordinary_packed": 0.29337599873542786,
+        "ordinary_split": 0.29953600466251373
+      }
+    },
+    "8": {
+      "candidate_vs_custom": {
+        "lower_95": 0.9688499633848615,
+        "median_ratio": 0.9718173543324105,
+        "upper_95": 0.9741246678920744
+      },
+      "candidate_vs_fastest_ordinary": {
+        "lower_95": 1.110321096344695,
+        "median_ratio": 1.11308991232776,
+        "upper_95": 1.1156030705120812
+      },
+      "fastest_ordinary": "ordinary_packed",
+      "median_ms": {
+        "candidate": 0.1600000038743019,
+        "custom_disabled": 0.16463999450206757,
+        "ordinary_packed": 0.14374400675296783,
+        "ordinary_split": 0.14553600549697876
+      }
+    }
+  },
+  "gates": {
+    "all_timing_evidence_finite": true,
+    "candidate_peak_no_more_than_both_ordinary": true,
+    "candidate_within_custom_latency_envelope": false,
+    "candidate_within_fastest_ordinary_latency_envelope": false,
+    "raw_timing_vectors_valid": true,
+    "small_reference_correct": true,
+    "static_weight_and_state_ledger_exact": true,
+    "target_associative_matches_reference": true,
+    "target_disabled_matches_ordinary": true
+  },
+  "h100_pass": false
+}

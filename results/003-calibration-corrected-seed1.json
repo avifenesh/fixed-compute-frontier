@@ -1,0 +1,120 @@
+{
+  "config": {
+    "batch": 128,
+    "d_model": 48,
+    "eval_batches": 10,
+    "keys": 16,
+    "layers": 3,
+    "learning_rate": 0.002,
+    "memory_width": 24,
+    "modes": [
+      "top_both",
+      "input_both",
+      "top_exact_masked",
+      "top_summary_masked"
+    ],
+    "ring_size": 8,
+    "seeds": [
+      1
+    ],
+    "sequence_length": 48,
+    "train_steps": 200,
+    "values": 16
+  },
+  "device": "cuda",
+  "results": [
+    {
+      "eval_seconds": 2.0829667625948787,
+      "metrics": {
+        "loss": 2.091261386871338,
+        "macro_accuracy": 0.2917892162998517,
+        "old_get": 0.12806351482868195,
+        "old_get_count": 5794,
+        "old_get_majority_baseline": 0.06662064045667648,
+        "recent_get": 0.6723500490188599,
+        "recent_get_count": 11906,
+        "recent_get_majority_baseline": 0.06736099720001221,
+        "state": 0.0749540850520134,
+        "state_count": 8712,
+        "state_majority_baseline": 0.06990358233451843,
+        "target_count": 26412
+      },
+      "mode": "top_both",
+      "parameters": 64129,
+      "seed": 1,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 96.54292214475572,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 2.048042985610664,
+      "metrics": {
+        "loss": 2.038602113723755,
+        "macro_accuracy": 0.299025759100914,
+        "old_get": 0.13669313490390778,
+        "old_get_count": 5794,
+        "old_get_majority_baseline": 0.06662064045667648,
+        "recent_get": 0.6783134341239929,
+        "recent_get_count": 11906,
+        "recent_get_majority_baseline": 0.06736099720001221,
+        "state": 0.08207070827484131,
+        "state_count": 8712,
+        "state_majority_baseline": 0.06990358233451843,
+        "target_count": 26412
+      },
+      "mode": "input_both",
+      "parameters": 64129,
+      "seed": 1,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 96.28864423558116,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 2.0679370407015085,
+      "metrics": {
+        "loss": 2.7454915046691895,
+        "macro_accuracy": 0.09919169793526332,
+        "old_get": 0.14083534479141235,
+        "old_get_count": 5794,
+        "old_get_majority_baseline": 0.06662064045667648,
+        "recent_get": 0.09877372533082962,
+        "recent_get_count": 11906,
+        "recent_get_majority_baseline": 0.06736099720001221,
+        "state": 0.057966023683547974,
+        "state_count": 8712,
+        "state_majority_baseline": 0.06990358233451843,
+        "target_count": 26412
+      },
+      "mode": "top_exact_masked",
+      "parameters": 64129,
+      "seed": 1,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 95.94656648300588,
+      "writer_commits_per_token": 1
+    },
+    {
+      "eval_seconds": 2.076033040881157,
+      "metrics": {
+        "loss": 2.1481943130493164,
+        "macro_accuracy": 0.2753397648533185,
+        "old_get": 0.0994131863117218,
+        "old_get_count": 5794,
+        "old_get_majority_baseline": 0.06662064045667648,
+        "recent_get": 0.6577355861663818,
+        "recent_get_count": 11906,
+        "recent_get_majority_baseline": 0.06736099720001221,
+        "state": 0.06887052208185196,
+        "state_count": 8712,
+        "state_majority_baseline": 0.06990358233451843,
+        "target_count": 26412
+      },
+      "mode": "top_summary_masked",
+      "parameters": 64129,
+      "seed": 1,
+      "state_elements_per_sequence": 1752,
+      "train_seconds": 95.96948805823922,
+      "writer_commits_per_token": 1
+    }
+  ],
+  "torch": "2.11.0+cu130"
+}

@@ -1,0 +1,103 @@
+{"arm": "dense_1x", "document_updates": 50, "loss": 5.978487968444824, "natural_updates": 950, "phase": "pretrain", "step": 1000}
+{"arm": "dense_1x", "document_updates": 100, "loss": 5.992079257965088, "natural_updates": 1900, "phase": "pretrain", "step": 2000}
+{"arm": "dense_1x", "document_updates": 150, "loss": 6.017149925231934, "natural_updates": 2850, "phase": "pretrain", "step": 3000}
+{"arm": "dense_1x", "document_updates": 200, "loss": 5.372972011566162, "natural_updates": 3800, "phase": "pretrain", "step": 4000}
+{"arm": "dense_1x", "document_updates": 250, "loss": 5.504116535186768, "natural_updates": 4750, "phase": "pretrain", "step": 5000}
+{"arm": "dense_1x", "document_updates": 300, "loss": 5.697789192199707, "natural_updates": 5700, "phase": "pretrain", "step": 6000}
+{"arm": "dense_1x", "document_updates": 350, "loss": 5.178225517272949, "natural_updates": 6650, "phase": "pretrain", "step": 7000}
+{"arm": "dense_1x", "document_updates": 400, "loss": 5.262707233428955, "natural_updates": 7600, "phase": "pretrain", "step": 8000}
+{"arm": "dense_1x", "document_updates": 450, "loss": 5.525935649871826, "natural_updates": 8550, "phase": "pretrain", "step": 9000}
+{"arm": "dense_1x", "document_updates": 500, "loss": 5.201845645904541, "natural_updates": 9500, "phase": "pretrain", "step": 10000}
+{"arm": "dense_1x", "document_updates": 550, "loss": 5.174403667449951, "natural_updates": 10450, "phase": "pretrain", "step": 11000}
+{"arm": "dense_1x", "document_updates": 600, "loss": 5.277843475341797, "natural_updates": 11400, "phase": "pretrain", "step": 12000}
+{"arm": "dense_1x", "document_updates": 650, "loss": 5.285022735595703, "natural_updates": 12350, "phase": "pretrain", "step": 13000}
+{"arm": "dense_1x", "document_updates": 700, "loss": 4.773129940032959, "natural_updates": 13300, "phase": "pretrain", "step": 14000}
+{"arm": "dense_1x", "document_updates": 750, "loss": 4.94264030456543, "natural_updates": 14250, "phase": "pretrain", "step": 15000}
+{"arm": "dense_1x", "document_updates": 800, "loss": 5.0453410148620605, "natural_updates": 15200, "phase": "pretrain", "step": 16000}
+{"arm": "dense_1x", "document_updates": 850, "loss": 4.964988708496094, "natural_updates": 16150, "phase": "pretrain", "step": 17000}
+{"arm": "dense_1x", "document_updates": 900, "loss": 5.031167984008789, "natural_updates": 17100, "phase": "pretrain", "step": 18000}
+{"arm": "dense_1x", "document_updates": 950, "loss": 4.9564127922058105, "natural_updates": 18050, "phase": "pretrain", "step": 19000}
+{"arm": "dense_1x", "document_updates": 1000, "loss": 4.828373908996582, "natural_updates": 19000, "phase": "pretrain", "step": 20000}
+{"arm": "joint_code_1x", "document_updates": 50, "loss": 6.002796649932861, "natural_updates": 950, "phase": "pretrain", "step": 1000}
+{"arm": "joint_code_1x", "document_updates": 100, "loss": 6.005107879638672, "natural_updates": 1900, "phase": "pretrain", "step": 2000}
+{"arm": "joint_code_1x", "document_updates": 150, "loss": 6.028005599975586, "natural_updates": 2850, "phase": "pretrain", "step": 3000}
+{"arm": "joint_code_1x", "document_updates": 200, "loss": 5.3402228355407715, "natural_updates": 3800, "phase": "pretrain", "step": 4000}
+{"arm": "joint_code_1x", "document_updates": 250, "loss": 5.486325740814209, "natural_updates": 4750, "phase": "pretrain", "step": 5000}
+{"arm": "joint_code_1x", "document_updates": 300, "loss": 5.722667694091797, "natural_updates": 5700, "phase": "pretrain", "step": 6000}
+{"arm": "joint_code_1x", "document_updates": 350, "loss": 5.205276966094971, "natural_updates": 6650, "phase": "pretrain", "step": 7000}
+{"arm": "joint_code_1x", "document_updates": 400, "loss": 5.267114162445068, "natural_updates": 7600, "phase": "pretrain", "step": 8000}
+{"arm": "joint_code_1x", "document_updates": 450, "loss": 5.5304856300354, "natural_updates": 8550, "phase": "pretrain", "step": 9000}
+{"arm": "joint_code_1x", "document_updates": 500, "loss": 5.207396030426025, "natural_updates": 9500, "phase": "pretrain", "step": 10000}
+{"arm": "joint_code_1x", "document_updates": 550, "loss": 5.130392551422119, "natural_updates": 10450, "phase": "pretrain", "step": 11000}
+{"arm": "joint_code_1x", "document_updates": 600, "loss": 5.29429817199707, "natural_updates": 11400, "phase": "pretrain", "step": 12000}
+{"arm": "joint_code_1x", "document_updates": 650, "loss": 5.298886299133301, "natural_updates": 12350, "phase": "pretrain", "step": 13000}
+{"arm": "joint_code_1x", "document_updates": 700, "loss": 4.817987442016602, "natural_updates": 13300, "phase": "pretrain", "step": 14000}
+{"arm": "joint_code_1x", "document_updates": 750, "loss": 4.987782955169678, "natural_updates": 14250, "phase": "pretrain", "step": 15000}
+{"arm": "joint_code_1x", "document_updates": 800, "loss": 5.0493597984313965, "natural_updates": 15200, "phase": "pretrain", "step": 16000}
+{"arm": "joint_code_1x", "document_updates": 850, "loss": 5.0127787590026855, "natural_updates": 16150, "phase": "pretrain", "step": 17000}
+{"arm": "joint_code_1x", "document_updates": 900, "loss": 5.008981704711914, "natural_updates": 17100, "phase": "pretrain", "step": 18000}
+{"arm": "joint_code_1x", "document_updates": 950, "loss": 4.930604934692383, "natural_updates": 18050, "phase": "pretrain", "step": 19000}
+{"arm": "joint_code_1x", "document_updates": 1000, "loss": 4.850781440734863, "natural_updates": 19000, "phase": "pretrain", "step": 20000}
+{"arm": "dense_2x_doc", "document_updates": 100, "loss": 6.138392448425293, "natural_updates": 900, "phase": "pretrain", "step": 1000}
+{"arm": "dense_2x_doc", "document_updates": 200, "loss": 5.305516719818115, "natural_updates": 1800, "phase": "pretrain", "step": 2000}
+{"arm": "dense_2x_doc", "document_updates": 300, "loss": 5.656771183013916, "natural_updates": 2700, "phase": "pretrain", "step": 3000}
+{"arm": "dense_2x_doc", "document_updates": 400, "loss": 5.178089618682861, "natural_updates": 3600, "phase": "pretrain", "step": 4000}
+{"arm": "dense_2x_doc", "document_updates": 500, "loss": 5.09075403213501, "natural_updates": 4500, "phase": "pretrain", "step": 5000}
+{"arm": "dense_2x_doc", "document_updates": 600, "loss": 5.164067268371582, "natural_updates": 5400, "phase": "pretrain", "step": 6000}
+{"arm": "dense_2x_doc", "document_updates": 700, "loss": 4.6011433601379395, "natural_updates": 6300, "phase": "pretrain", "step": 7000}
+{"arm": "dense_2x_doc", "document_updates": 800, "loss": 5.000012397766113, "natural_updates": 7200, "phase": "pretrain", "step": 8000}
+{"arm": "dense_2x_doc", "document_updates": 900, "loss": 4.965025901794434, "natural_updates": 8100, "phase": "pretrain", "step": 9000}
+{"arm": "dense_2x_doc", "document_updates": 1000, "loss": 4.815438747406006, "natural_updates": 9000, "phase": "pretrain", "step": 10000}
+{"arm": "dense_2x_doc", "document_updates": 1100, "loss": 4.608127117156982, "natural_updates": 9900, "phase": "pretrain", "step": 11000}
+{"arm": "dense_2x_doc", "document_updates": 1200, "loss": 4.719320297241211, "natural_updates": 10800, "phase": "pretrain", "step": 12000}
+{"arm": "dense_2x_doc", "document_updates": 1300, "loss": 4.538847923278809, "natural_updates": 11700, "phase": "pretrain", "step": 13000}
+{"arm": "dense_2x_doc", "document_updates": 1400, "loss": 4.515912055969238, "natural_updates": 12600, "phase": "pretrain", "step": 14000}
+{"arm": "dense_2x_doc", "document_updates": 1500, "loss": 4.706729888916016, "natural_updates": 13500, "phase": "pretrain", "step": 15000}
+{"arm": "dense_2x_doc", "document_updates": 1600, "loss": 4.366183280944824, "natural_updates": 14400, "phase": "pretrain", "step": 16000}
+{"arm": "dense_2x_doc", "document_updates": 1700, "loss": 4.370097637176514, "natural_updates": 15300, "phase": "pretrain", "step": 17000}
+{"arm": "dense_2x_doc", "document_updates": 1800, "loss": 4.5223188400268555, "natural_updates": 16200, "phase": "pretrain", "step": 18000}
+{"arm": "dense_2x_doc", "document_updates": 1900, "loss": 4.379528045654297, "natural_updates": 17100, "phase": "pretrain", "step": 19000}
+{"arm": "dense_2x_doc", "document_updates": 2000, "loss": 4.564949989318848, "natural_updates": 18000, "phase": "pretrain", "step": 20000}
+{"arm": "dense_2x_doc", "document_updates": 2000, "loss": 5.317574501037598, "natural_updates": 19000, "phase": "pretrain", "step": 21000}
+{"arm": "dense_1x", "loss": 0.0, "phase": "qa", "step": 500}
+{"arm": "dense_1x", "loss": 0.0, "phase": "qa", "step": 1000}
+{"arm": "dense_1x", "loss": 0.0, "phase": "qa", "step": 1500}
+{"arm": "dense_1x", "loss": 0.0, "phase": "qa", "step": 2000}
+{"arm": "dense_1x", "loss": 0.0, "phase": "qa", "step": 2500}
+{"arm": "dense_1x", "loss": 0.0, "phase": "qa", "step": 3000}
+{"arm": "joint_code_1x", "loss": 0.0, "phase": "qa", "step": 500}
+{"arm": "joint_code_1x", "loss": 0.0, "phase": "qa", "step": 1000}
+{"arm": "joint_code_1x", "loss": 0.0, "phase": "qa", "step": 1500}
+{"arm": "joint_code_1x", "loss": 0.0, "phase": "qa", "step": 2000}
+{"arm": "joint_code_1x", "loss": 0.0, "phase": "qa", "step": 2500}
+{"arm": "joint_code_1x", "loss": 0.0, "phase": "qa", "step": 3000}
+{"arm": "dense_2x_doc", "loss": 2.9802315282267955e-08, "phase": "qa", "step": 500}
+{"arm": "dense_2x_doc", "loss": 9.685740565146261e-08, "phase": "qa", "step": 1000}
+{"arm": "dense_2x_doc", "loss": 0.0, "phase": "qa", "step": 1500}
+{"arm": "dense_2x_doc", "loss": 0.0, "phase": "qa", "step": 2000}
+{"arm": "dense_2x_doc", "loss": 0.0, "phase": "qa", "step": 2500}
+{"arm": "dense_2x_doc", "loss": 0.0, "phase": "qa", "step": 3000}
+Traceback (most recent call last):
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/joint_quantized_document_code_t21a.py", line 949, in <module>
+    main()
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/joint_quantized_document_code_t21a.py", line 944, in main
+    arguments.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/usr/lib/python3.12/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Tensor is not JSON serializable

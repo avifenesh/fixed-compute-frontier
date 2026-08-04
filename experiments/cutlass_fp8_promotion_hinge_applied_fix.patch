@@ -1,0 +1,9 @@
+diff --git a/include/cutlass/gemm/collective/fp8_accumulation.hpp b/include/cutlass/gemm/collective/fp8_accumulation.hpp
+--- a/include/cutlass/gemm/collective/fp8_accumulation.hpp
++++ b/include/cutlass/gemm/collective/fp8_accumulation.hpp
+@@ -127,6 +127,7 @@ public:
+       accum_(i) = value > 0.0f ? value + value : 0.0f;
+     }
+   }
++#endif
+ };

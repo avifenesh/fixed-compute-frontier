@@ -1,0 +1,74 @@
+{
+  "all_gates_pass": true,
+  "candidate": "orbit-activated SwiGLU",
+  "gates": {
+    "activated_orbit_is_live": true,
+    "bf16_export_below_0p5_percent": true,
+    "canonicalization_exact": true,
+    "degree_seven_witness": true,
+    "dense_mac_count_exact": true,
+    "fold_decode_exact": true,
+    "ordinary_orbit_invariant": true,
+    "serialized_word_count_exact": true,
+    "trainable_parameter_count_exact": true,
+    "zero_endpoint_exact": true
+  },
+  "measurements": {
+    "activated_orbit_max_output_movement": 0.013577651565457538,
+    "bf16_coefficient_max_abs_error": 0.0004707396714510939,
+    "bf16_export_max_row_relative_rms": 0.004762378055602312,
+    "canonical_scale_max": 2.179614327592069,
+    "canonical_scale_min": 1.0252532456479755,
+    "canonicalization_max_abs_error": 4.996003610813204e-16,
+    "carrier_scale_max": 1.2727601685087166,
+    "carrier_scale_min": 0.7230181313008468,
+    "coefficient_decode_max_abs_error": 1.3877787807814457e-17,
+    "fold_decode_output_max_abs_error": 1.1102230246251565e-16,
+    "ordinary_orbit_max_abs_error": 4.440892098500626e-16,
+    "zero_endpoint_max_abs_error": 0.0
+  },
+  "preregistration_sha256": "daf3c171989ad9444bd3d617def3876c514c9a961619ac081a4be3c43dcf503e",
+  "scope": "algebra, parameter/storage/MAC ledger, and BF16 carrier sanity only",
+  "seed": 509,
+  "small_ledger": {
+    "baseline_dense_macs_per_token": 1536,
+    "baseline_serialized_words": 1536,
+    "baseline_trainable_parameters": 1536,
+    "candidate_dense_macs_per_token": 1536,
+    "candidate_nonroot_dependencies_per_token": 28,
+    "candidate_pivot_read_fraction_of_weight_words": 0.020833333333333332,
+    "candidate_pivot_reads_words_per_invocation": 32,
+    "candidate_root_biases_per_token": 4,
+    "candidate_serialized_words": 1536,
+    "candidate_trainable_parameters": 1536,
+    "maximum_serial_predecessor_steps": 7,
+    "training_only_fixed_pivots": 32,
+    "training_only_learned_carriers": 32
+  },
+  "small_shape": {
+    "group_size": 8,
+    "hidden_width": 32,
+    "model_width": 16
+  },
+  "source_sha256": "30bdd5d7913024fa7f52753dec94b891aa1981c4b4ebe4beea8e2099a8daa1b9",
+  "square_activation_witness": {
+    "degree_3": 1.0,
+    "degree_5": 0.5,
+    "degree_7": 0.0625
+  },
+  "target_ledger": {
+    "baseline_dense_macs_per_token": 176160768,
+    "baseline_serialized_words": 176160768,
+    "baseline_trainable_parameters": 176160768,
+    "candidate_dense_macs_per_token": 176160768,
+    "candidate_nonroot_dependencies_per_token": 12544,
+    "candidate_pivot_read_fraction_of_weight_words": 8.138020833333333e-05,
+    "candidate_pivot_reads_words_per_invocation": 14336,
+    "candidate_root_biases_per_token": 1792,
+    "candidate_serialized_words": 176160768,
+    "candidate_trainable_parameters": 176160768,
+    "maximum_serial_predecessor_steps": 7,
+    "training_only_fixed_pivots": 14336,
+    "training_only_learned_carriers": 14336
+  }
+}

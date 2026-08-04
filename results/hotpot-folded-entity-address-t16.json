@@ -1,0 +1,127 @@
+{
+  "address_results": {
+    "canonical": {
+      "correct": 2405,
+      "examples": 2405,
+      "mean_target_margin": 2.0706138610839844,
+      "minimum_target_margin": 0.0013625621795654297,
+      "top1_accuracy": 1.0
+    },
+    "evaluation_question_surfaces": {
+      "correct": 200,
+      "examples": 208,
+      "mean_target_margin": 0.06605661660432816,
+      "minimum_target_margin": -0.07719960808753967,
+      "top1_accuracy": 0.9615384615384616
+    },
+    "held_raw_contexts": {
+      "correct": 2249,
+      "examples": 2405,
+      "mean_target_margin": 1.290755271911621,
+      "minimum_target_margin": -1.3754302263259888,
+      "top1_accuracy": 0.9351351351351351
+    },
+    "t15_identity_reference": {
+      "evaluation_question_top1": 0.8125,
+      "train_question_top1": 0.8561643835616438
+    },
+    "train_question_surfaces": {
+      "correct": 282,
+      "examples": 292,
+      "mean_target_margin": 0.06702843308448792,
+      "minimum_target_margin": -0.02750934660434723,
+      "top1_accuracy": 0.9657534246575342
+    },
+    "training_raw_contexts": {
+      "correct": 9564,
+      "examples": 9620,
+      "mean_target_margin": 1.4182020425796509,
+      "minimum_target_margin": -0.24067461490631104,
+      "top1_accuracy": 0.9941787941787942
+    }
+  },
+  "all_gates_pass": false,
+  "claim_boundary": "Passing only establishes a foldable entity address. It does not compile records, improve QA, or establish a strict Pareto gain.",
+  "compiler_training": {
+    "checkpoints": {
+      "100": {
+        "loss": 0.3567734360694885
+      },
+      "400": {
+        "loss": 0.15775808691978455
+      },
+      "800": {
+        "loss": 0.09782682359218597
+      }
+    },
+    "elapsed_seconds": 0.9488081550225616,
+    "failed_or_retried_updates": 0,
+    "maximum_loss": 3.414355993270874,
+    "optimizer_state_bytes": 196612,
+    "steps": 800
+  },
+  "configuration": {
+    "answer_label_reads": 0,
+    "canonical_titles": 2405,
+    "held_views_per_title": 1,
+    "prefix_tokens": 32,
+    "projection_batch": 256,
+    "projection_dimensions": 64,
+    "projection_lr": 0.003,
+    "projection_seed": 9109,
+    "projection_steps": 800,
+    "served_model_updates": 0,
+    "served_parameter_count": 36577152,
+    "served_projection_operations": 0,
+    "served_projection_parameters": 0,
+    "temperature": 0.05,
+    "train_views_per_title": 4
+  },
+  "development_only": true,
+  "device": "cuda",
+  "fold_contract": {
+    "absolute_error": 2.384185791015625e-07,
+    "formula": "h_q^T P^T a_e == (P h_q)^T a_e"
+  },
+  "gates": {
+    "canonical_margin_positive": true,
+    "canonical_top1_exact": true,
+    "checkpoint_byte_identical": true,
+    "evaluation_question_margin_positive": false,
+    "evaluation_question_top1_exact": false,
+    "exact_training_ledger": true,
+    "finite_training_and_scores": true,
+    "fold_algebra_exact": true,
+    "held_raw_context_margin_positive": false,
+    "held_raw_context_top1_exact": false,
+    "input_integrity": true,
+    "projection_exists_and_hashed": true,
+    "projection_sealed_before_questions": true,
+    "served_model_state_unchanged": true,
+    "train_question_margin_positive": false,
+    "train_question_top1_exact": false,
+    "zero_answer_label_reads": true,
+    "zero_served_model_updates": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "checkpoint_sha256_after": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "checkpoint_sha256_before": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "data_manifest_sha256": "90e539279f540a7516e3c90c3ee59539d3f8654cc84e88a82dc950ce6fb5036e",
+    "preregistration_sha256": "6bace24a8d0acbf20576d18e72d70cf2073d1706ffe3a9b5f4994aad4f8c0df3",
+    "served_state_sha256_after": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57",
+    "served_state_sha256_before": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57",
+    "source_parquet_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+    "source_sha256": "4efbcf9792df168142142ee7335fd8ce3acc746bbafa0c4d5f669f05df0792b5",
+    "t15_result_sha256": "b88c42915fd4b7e594a3fb337d3153c90db25be33fb3fce5a5a538c2044c36a0"
+  },
+  "projection": {
+    "bytes": 100389,
+    "path": "/workspace/fixed-compute-frontier-t10-46367071/results/hotpot-folded-entity-address-t16-projection.pt",
+    "sealed_before_questions": true,
+    "sha256": "70861caae201e145e156bcadbe2330990f7a09ab98b91f912623b9cd2d29b08c"
+  },
+  "schema": "hotpot-folded-entity-address-t16-v1",
+  "status": "fail",
+  "torch_version": "2.11.0+cu128"
+}

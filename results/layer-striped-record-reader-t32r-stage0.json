@@ -1,0 +1,113 @@
+{
+  "claim_boundary": "Raw CPU routing/resource census only; no learned scan, physical kernel, natural model gain, latency, or smarter-model claim.",
+  "compute_equation": {
+    "break_even_integer_tokens": 4,
+    "dense_saving": "967680*q",
+    "scan_upper_bound": "3700000 + 12288*q"
+  },
+  "experiment": "layer-striped-record-reader-t32r-stage0",
+  "gates": {
+    "compute_margin": true,
+    "cpu_only": true,
+    "forbidden_reads_or_operations": true,
+    "handle_token_nonincrease": true,
+    "input_hashes": true,
+    "parameter_ledger": true,
+    "record_roundtrip_namespace_order": true,
+    "routing": true,
+    "tokenizer_identity_revision": true
+  },
+  "integrity": {
+    "answer_value_reads": 0,
+    "evaluator_prompt_fields": [
+      "id",
+      "question"
+    ],
+    "gpu_operations": 0,
+    "model_weight_reads": 0,
+    "observed_hashes": {
+      "corpus": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+      "evaluator": "5a0413f53bfc0fc73b5e66c941c708077624908095934af740c84d234b9fea6b"
+    },
+    "preregistration_sha256": "84a910d40f267a93cb9ac35edc874c6b0bf7f7d270b2d55beb8a4d035a0ec7ed",
+    "source_sha256": "dbab287ff5dd98136aeba6c538e8336239f5da0891a45718fd8b51654034cc5a",
+    "support_value_reads": 0,
+    "test_sha256": "01129bb388e4113c5a0a642af84bc05ad6c5970f29af99a3b27d08dda209d78f",
+    "tokenizer": "HuggingFaceTB/SmolLM2-135M",
+    "tokenizer_config_path": "/root/.cache/huggingface/hub/models--HuggingFaceTB--SmolLM2-135M/snapshots/93efa2f097d58c2a74874c7e644dbc9b0cee75a2/tokenizer_config.json",
+    "tokenizer_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2"
+  },
+  "parameter_ledger": {
+    "bounded_local_scan_reserve_entries": 3072,
+    "candidate_allocated_entries": 947025,
+    "matched_slack_entries": 20655,
+    "record_digit_entries": 916305,
+    "removed_dense_entries": 967680,
+    "removed_ffn_width_per_layer": 84,
+    "scan_qkv_entries": 3072,
+    "shared_token_query_projection_entries": 12288,
+    "summary_output_entries": 12288
+  },
+  "questions": {
+    "base_token_length": {
+      "max": 34,
+      "mean": 15.509615384615385,
+      "min": 10
+    },
+    "compute_margin_multiplies": {
+      "max": 25917152,
+      "mean": 7617720.615384615,
+      "min": 4898528
+    },
+    "count": 104,
+    "handle_token_length": {
+      "max": 31,
+      "mean": 11.846153846153847,
+      "min": 9
+    },
+    "ordered_ids_sha256": "e9693fd7b1d68aed3937385d0b2c2c7a24ca0d689ff01000ec9254208ff94e8f",
+    "route_failures": 0,
+    "token_saving": {
+      "max": 12,
+      "mean": 3.6634615384615383,
+      "min": 0,
+      "total": 381
+    }
+  },
+  "record_namespace": {
+    "base_vocabulary": [
+      0,
+      49151
+    ],
+    "handle_count": 2405,
+    "input_only_handles": [
+      49152,
+      51556
+    ],
+    "maximum_length": 128,
+    "maximum_token_id": 49137,
+    "mean_length": 100.84698544698544,
+    "minimum_length": 16,
+    "minimum_token_id": 0,
+    "record_count": 2405,
+    "record_digit_sha256": "3c7e83a9b4b3a6910957570a93707cd67f65e6a9bada7edaa5a3c20897e16549",
+    "reverse_record_digit_sha256": "3c7e83a9b4b3a6910957570a93707cd67f65e6a9bada7edaa5a3c20897e16549",
+    "roundtrip_failures": 0,
+    "table_bf16_bytes": 1832610,
+    "table_shape": [
+      2405,
+      381
+    ]
+  },
+  "runtime": {
+    "cpu_seconds": 0.996387576,
+    "numpy": "2.5.1",
+    "peak_rss_kib": 744640,
+    "python": "3.12.3",
+    "torch": "2.11.0+cu128",
+    "torch_cuda_available": false,
+    "transformers": "5.14.1",
+    "wall_seconds": 0.9915307210758328
+  },
+  "status": "PASS"
+}

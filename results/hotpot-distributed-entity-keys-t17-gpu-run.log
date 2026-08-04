@@ -1,0 +1,68 @@
+stage=environment
+2026-07-31T08:40:04+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+......F.                                                                 [100%]
+=================================== FAILURES ===================================
+____________ test_selected_interfaces_equal_actual_ffn_gate_inputs _____________
+
+    def test_selected_interfaces_equal_actual_ffn_gate_inputs() -> None:
+        model = experiment.t10.core.build_model(941, torch.device("cpu")).eval()
+        tokens = torch.tensor([[11, 12, 13, 14]], dtype=torch.long)
+        captured: list[torch.Tensor] = []
+        hooks = []
+        for layer in experiment.LAYERS:
+            hooks.append(
+                model.blocks[layer].gate.register_forward_pre_hook(
+                    lambda _module, arguments: captured.append(arguments[0].detach().clone())
+                )
+            )
+        with torch.inference_mode():
+            model.hidden(tokens)
+            direct = experiment.selected_ffn_interfaces(model, tokens)
+        for hook in hooks:
+            hook.remove()
+>       assert len(captured) == len(experiment.LAYERS)
+E       assert 6 == 3
+E        +  where 6 = len([tensor([[[-2.6814,  1.0857, -0.3540,  ..., -0.5680, -1.4526,  0.1328],\n         [-2.0923,  0.9428, -0.7700,  ..., -0....7, -1.6243,  ...,  0.1545, -1.2075, -0.5345],\n         [-0.9163,  1.5304, -0.8816,  ..., -0.6021, -1.1101, -0.1602]]])])
+E        +  and   3 = len((7, 8, 9))
+E        +    where (7, 8, 9) = experiment.LAYERS
+
+tests/test_hotpot_distributed_entity_keys_t17.py:61: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_hotpot_distributed_entity_keys_t17.py::test_selected_interfaces_equal_actual_ffn_gate_inputs
+1 failed, 7 passed in 2.81s
+stage=environment
+2026-07-31T08:40:50+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+........                                                                 [100%]
+8 passed in 2.79s
+stage=distributed_entity_key_gate
+{
+  "all_gates_pass": false,
+  "allocation_counts": [
+    805,
+    836,
+    764
+  ],
+  "evaluation_question_top1": 0.7980769230769231,
+  "failed_gates": [
+    "canonical_margin_positive",
+    "canonical_top1_exact",
+    "evaluation_question_surfaces_margin_positive",
+    "evaluation_question_surfaces_top1_exact",
+    "held_raw_contexts_margin_positive",
+    "held_raw_contexts_top1_exact",
+    "train_question_surfaces_margin_positive",
+    "train_question_surfaces_top1_exact",
+    "training_raw_contexts_margin_positive",
+    "training_raw_contexts_top1_exact"
+  ],
+  "held_raw_top1": 0.7596673596673597,
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/hotpot-distributed-entity-keys-t17.json",
+  "train_question_top1": 0.7705479452054794
+}
+stage=complete

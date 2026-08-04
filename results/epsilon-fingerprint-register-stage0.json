@@ -1,0 +1,121 @@
+{
+  "bounded_streaming_gate": {
+    "accepted_equal_segments_at_boundary": true,
+    "empty_segments_accepted": true,
+    "maximum_length_per_segment": 1000000,
+    "overflow_rejected_without_mutation": true,
+    "stored_fields": [
+      "evaluation_point",
+      "prime",
+      "maximum_length",
+      "left_hash",
+      "right_hash",
+      "left_length",
+      "right_length",
+      "phase"
+    ],
+    "unequal_length_rejected": true
+  },
+  "candidate_number": null,
+  "claim_scope": "explicitly_delimited_equal_length_byte_string_equality",
+  "decision": "retain_as_classical_epsilon_trade_not_architecture_candidate",
+  "direct_classical_collision": {
+    "novelty_scope": "no_new_streaming_algorithm_claim",
+    "work": "Karp_Rabin_1987_randomized_string_fingerprints"
+  },
+  "excluded_accounting": [
+    "random_number_generation_latency_and_entropy_source",
+    "token_to_field_encoding",
+    "packed_versus_allocated_state_bytes",
+    "physical_wide_multiply_and_modular_reduction_kernel"
+  ],
+  "exhaustive_small_field_gate": {
+    "alphabet_size": 2,
+    "field_evaluations": 1370838,
+    "maximum_collision_roots": 5,
+    "maximum_example": {
+      "left": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "right": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "roots": [
+        0,
+        4,
+        64,
+        193,
+        253
+      ]
+    },
+    "maximum_length": 6,
+    "prime": 257,
+    "unequal_pairs": 5334
+  },
+  "gpu_required": false,
+  "matched_control": "a_randomized_recurrent_digital_cell_executes_the_identical_update_with_identical_state_arithmetic_randomness_and_error",
+  "method": "fixed_update_randomized_finite_field_fingerprint",
+  "not_proven": [
+    "new_model_architecture_or_novel_randomized_streaming_algorithm",
+    "general_language_model_capability_gain",
+    "quality_noninferiority_after_replacing_neural_state_or_compute",
+    "gpu_latency_energy_or_kernel_efficiency",
+    "arbitrary_substring_or_semantic_entity_comparison"
+  ],
+  "operator": {
+    "learned_per_token_router": false,
+    "read": "equal_lengths and equal_hashes",
+    "update": "hash = (hash * fresh_request_point + token + 1) mod prime"
+  },
+  "required_assumptions": [
+    "prime_field_arithmetic_is_exact",
+    "evaluation_point_is_fresh_hidden_and_independent_of_input",
+    "input_is_nonadaptive_to_internal_collision_outcomes",
+    "segment_boundaries_are_explicit_and_correct"
+  ],
+  "resource_model": {
+    "logical_machine": "word_RAM_with_word_bits_at_least_ceil_log2_prime",
+    "logical_update": "one_modular_Horner_step_plus_counter_and_phase_update",
+    "physical_caveat": "64x64_product_uses_a_128_bit_intermediate_and_modular_reduction_may_require_multiple_CPU_or_GPU_instructions"
+  },
+  "schema_version": 2,
+  "source_hashes": {
+    "executable_sha256": "7c8370369f47b45907bdbdcb4b57da817669a7ad4c9c4fa4c005c35d39bd8f1f",
+    "focused_test_sha256": "6db04269be3568ae337f27dae5bf2c0173279e63525d19323f0fad4fcd56cc4b"
+  },
+  "state_ledger": {
+    "alphabet_size": 256,
+    "deterministic_exact_one_pass_bits_lower_bound": 8000000,
+    "deterministic_exact_one_pass_bytes_lower_bound": 1000000,
+    "error_model": "fresh_hidden_random_point_independent_of_nonadaptive_input",
+    "exact_to_randomized_state_ratio": 34188.03418803419,
+    "field_bits": 64,
+    "field_prime": 18446744073709551557,
+    "logical_register_bits": 234,
+    "logical_register_bytes_ceiling": 30,
+    "maximum_length_per_segment": 1000000,
+    "negative_log2_error_bound": 44.06843287337159,
+    "phase_bits": 2,
+    "request_random_evaluation_point_bits": 64,
+    "two_fingerprint_bits": 128,
+    "two_length_counter_bits": 40,
+    "worst_case_false_positive_probability_bound": 5.42100544141666e-14
+  },
+  "status": "algebra_and_bounded_streaming_reference_pass",
+  "theorem": {
+    "deterministic_exact_state_lower_bound": "ceil(length*log2(alphabet_size))_bits",
+    "false_negative_probability": 0,
+    "false_positive_probability": "at_most_(length-1)/prime",
+    "field_choice": "prime > max(alphabet_size, (length-1)/epsilon)"
+  }
+}

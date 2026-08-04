@@ -1,0 +1,1211 @@
+{
+  "checkpoint_hashes": {
+    "A1/DIRECT3/1701": {
+      "development_nll": 1.0053410150855933,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1701/run.json",
+      "selected_epoch": 1,
+      "sha256": "e6ffbc720a34631a1dd8aacb44cc11b51a33a64941694f55a435b231863c8103"
+    },
+    "A1/DIRECT3/1702": {
+      "development_nll": 1.0308566279651414,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1702/run.json",
+      "selected_epoch": 20,
+      "sha256": "2a1eadb13f34674cca10f5932c96a0471b467a820411d2afe55cc6efc61655e1"
+    },
+    "A1/DIRECT3/1703": {
+      "development_nll": 1.095063838153582,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1703/run.json",
+      "selected_epoch": 1,
+      "sha256": "5d7fd9f08a2e6a48a8341bfa7e49ba846342c729038edc9396a99a6a6c279ee0"
+    },
+    "A1/DIRECT3/1704": {
+      "development_nll": 1.0115303560014088,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1704/run.json",
+      "selected_epoch": 15,
+      "sha256": "31df8ff5d7e7825978c96f8961ca2d935843be3022e58de7a32d812efe3e563f"
+    },
+    "A1/DIRECT3/1705": {
+      "development_nll": 1.06244453403501,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1705/run.json",
+      "selected_epoch": 19,
+      "sha256": "b87e0bcb4e963c8e712cd715518602b8d073fb5e265e9b0d5720301f3c7e90e6"
+    },
+    "A1/DIRECT3/1706": {
+      "development_nll": 0.9566914182870718,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1706/run.json",
+      "selected_epoch": 1,
+      "sha256": "fb6acc5ddd9818b59b17f19a76cd5009dc208bccef57c7019082c2acc7a92eb3"
+    },
+    "A1/DIRECT3/1707": {
+      "development_nll": 1.0378614025096817,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1707/run.json",
+      "selected_epoch": 1,
+      "sha256": "0f86ad6e76748d48245cef34a776ce7da7c9a7444d9685e8d0ea12fbccc720ce"
+    },
+    "A1/DIRECT3/1708": {
+      "development_nll": 1.1152838762192439,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1708/run.json",
+      "selected_epoch": 20,
+      "sha256": "a75ca0d99db04c3d1867ef97964c65b745170d415df27311a6129c493ef91227"
+    },
+    "A1/DIRECT3/1709": {
+      "development_nll": 1.0014912054851337,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1709/run.json",
+      "selected_epoch": 16,
+      "sha256": "abd22d74a3a130047e95f9b8f9ebb1f26b0b38fcf1a662fab99fef7679fd103b"
+    },
+    "A1/DIRECT3/1710": {
+      "development_nll": 1.141981620217117,
+      "path": "runtime/cpkv-topk-001/A1/DIRECT3/1710/run.json",
+      "selected_epoch": 18,
+      "sha256": "4ae2192c07d6ffc046ac0e60cb05171ecd3bfdf9db35fd0e5883e1e273c5f4cf"
+    },
+    "A1/HARD3/1701": {
+      "development_nll": 1.073422922166955,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1701/run.json",
+      "selected_epoch": 2,
+      "sha256": "ab8c18062bff5ed65b91211ca2054593348a98e530a68291b4c6c8a6bc16e145"
+    },
+    "A1/HARD3/1702": {
+      "development_nll": 1.0316886523595528,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1702/run.json",
+      "selected_epoch": 13,
+      "sha256": "91f30e78ad4ae021bae141e2c653f5464bb4cd7a0723cb8d308d11951d064c80"
+    },
+    "A1/HARD3/1703": {
+      "development_nll": 1.0556835197201913,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1703/run.json",
+      "selected_epoch": 11,
+      "sha256": "c41117b9ed21c4e852c702eaf60594c4d10959f7b7d8510ff40a11fbe34f7d9c"
+    },
+    "A1/HARD3/1704": {
+      "development_nll": 0.9502311210652999,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1704/run.json",
+      "selected_epoch": 20,
+      "sha256": "9ab7aa2d7f6dd2e8027a729c31cf6f1e332e9eb07e3a01c5e4cea42f76ab5d94"
+    },
+    "A1/HARD3/1705": {
+      "development_nll": 0.997694793545665,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1705/run.json",
+      "selected_epoch": 1,
+      "sha256": "1f0d21c6d5c11d46276a97984aeb8f82e6a5c39e4d154c5524068a6c98b33695"
+    },
+    "A1/HARD3/1706": {
+      "development_nll": 1.041301307929718,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1706/run.json",
+      "selected_epoch": 1,
+      "sha256": "93534d56ae8c05f5bb70387953b9989185aa7712cd393b7e4747db689da1f19c"
+    },
+    "A1/HARD3/1707": {
+      "development_nll": 1.0955027157235446,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1707/run.json",
+      "selected_epoch": 1,
+      "sha256": "e3da4b73c3c1e0e98dc6823e566d98e400960919876f29f1d16df13d8f974b8f"
+    },
+    "A1/HARD3/1708": {
+      "development_nll": 1.2361320485962553,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1708/run.json",
+      "selected_epoch": 2,
+      "sha256": "e8e55d9ec650cdda4b122b76f14292e0facf22541bd1d1f6157c92cc66b8e4e6"
+    },
+    "A1/HARD3/1709": {
+      "development_nll": 1.1618819659543895,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1709/run.json",
+      "selected_epoch": 1,
+      "sha256": "8cd464fe96b970f90f9617d13b4036cf6f68ad4e64ea342a2604b8361a3bcc8b"
+    },
+    "A1/HARD3/1710": {
+      "development_nll": 1.056574243659773,
+      "path": "runtime/cpkv-topk-001/A1/HARD3/1710/run.json",
+      "selected_epoch": 1,
+      "sha256": "2005b12ec5d45ea6a53a77a4c2c45281c63012f11df7f75d12aa4eede7dc41a2"
+    },
+    "A1/LINK32/1701": {
+      "development_nll": 1.0206761749401665,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1701/run.json",
+      "selected_epoch": 1,
+      "sha256": "eb46e04b732a9e6096c0513c5c92c544ba2fc8e5bf128ce71c4c1e4f8fa20770"
+    },
+    "A1/LINK32/1702": {
+      "development_nll": 1.1069308081333054,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1702/run.json",
+      "selected_epoch": 4,
+      "sha256": "3e17417c189352c7fa366c2b2b7aae469bbaba90cdfe2110616e5773f11614b1"
+    },
+    "A1/LINK32/1703": {
+      "development_nll": 1.09671187728533,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1703/run.json",
+      "selected_epoch": 1,
+      "sha256": "76c21c185a96cf78cd09611b23997f2a71b0aab4fd993bb91ac6c3dacb7bb582"
+    },
+    "A1/LINK32/1704": {
+      "development_nll": 1.0162738742360797,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1704/run.json",
+      "selected_epoch": 15,
+      "sha256": "6e8177e42a7a9684a810fe323592dc6e2c58a54f9f309a718270c7ff427549d7"
+    },
+    "A1/LINK32/1705": {
+      "development_nll": 1.053064772542268,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1705/run.json",
+      "selected_epoch": 20,
+      "sha256": "a0bf9803725b75dee770ee393bd4de5a624715b397970a4bb7347f25a5b21f5c"
+    },
+    "A1/LINK32/1706": {
+      "development_nll": 1.1475355222679435,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1706/run.json",
+      "selected_epoch": 1,
+      "sha256": "92ef5a3a6dd577a007a5f9583fd917a5b7a25b6c8283faa288915e37b8d3e4de"
+    },
+    "A1/LINK32/1707": {
+      "development_nll": 1.0555942732698878,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1707/run.json",
+      "selected_epoch": 1,
+      "sha256": "eacc99f39b3e38a2c02d6d3bd39d1b97a7ac855b3f9de0fcb92ae53438082373"
+    },
+    "A1/LINK32/1708": {
+      "development_nll": 1.1763181841298134,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1708/run.json",
+      "selected_epoch": 3,
+      "sha256": "11291cd52e84d22858583e3753c24936af28462e4e1a913052d6b490cb0385cd"
+    },
+    "A1/LINK32/1709": {
+      "development_nll": 1.1166080279639525,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1709/run.json",
+      "selected_epoch": 16,
+      "sha256": "b99eac8dd6446f6af0c9dec301e4eb447b226a1151de5c4eda82bbad1274c627"
+    },
+    "A1/LINK32/1710": {
+      "development_nll": 1.063220962030846,
+      "path": "runtime/cpkv-topk-001/A1/LINK32/1710/run.json",
+      "selected_epoch": 17,
+      "sha256": "02e2b015c1f58a896635a025fad629a85de751b543508dba5dbcc41bcd1843b0"
+    },
+    "A1/MLP/1701": {
+      "development_nll": 0.9158686722758118,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1701/run.json",
+      "selected_epoch": 1,
+      "sha256": "7fe95b9fe8ce0bbfb0c57fc3258fbaf50a4b03e48ebec55db9cdb7b652ae48a1"
+    },
+    "A1/MLP/1702": {
+      "development_nll": 1.1294594303857695,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1702/run.json",
+      "selected_epoch": 4,
+      "sha256": "73adeeb687b7b8fa3a5e6df8f3bc44a94c48bf050c5ad594a70522f5f24686c2"
+    },
+    "A1/MLP/1703": {
+      "development_nll": 1.1650685568104195,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1703/run.json",
+      "selected_epoch": 1,
+      "sha256": "09be7b06b44e06628d999a638819ab7372b684cd52afca7046dda21088f727fb"
+    },
+    "A1/MLP/1704": {
+      "development_nll": 1.1214760727264534,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1704/run.json",
+      "selected_epoch": 13,
+      "sha256": "a06d9457bc02cf7b70c63d84e4285ffec30142f0f2d343d0ed84c14ed571aaeb"
+    },
+    "A1/MLP/1705": {
+      "development_nll": 1.0517665762337263,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1705/run.json",
+      "selected_epoch": 1,
+      "sha256": "139a4f52a8811436221f75f9029d510e1ed4ab4b48c4f9a0c291fad67272539f"
+    },
+    "A1/MLP/1706": {
+      "development_nll": 1.0927428321611625,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1706/run.json",
+      "selected_epoch": 1,
+      "sha256": "0efee6b9e9af948af415c445f72c7bd83b50ef8ca98a4cb7875fb1486f806396"
+    },
+    "A1/MLP/1707": {
+      "development_nll": 1.2323224521794809,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1707/run.json",
+      "selected_epoch": 1,
+      "sha256": "addb59fe743d86cd8e3e3cf7a45eac4c4d9142e63b2ea5a07144aedb42eeabf5"
+    },
+    "A1/MLP/1708": {
+      "development_nll": 1.2405324877682748,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1708/run.json",
+      "selected_epoch": 20,
+      "sha256": "825e41738820ae60eebf10ed56a525b4179c7acea9d396ca308931472ce0181a"
+    },
+    "A1/MLP/1709": {
+      "development_nll": 1.3579536743612823,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1709/run.json",
+      "selected_epoch": 14,
+      "sha256": "fdb3ac0b224b76de6c80ac7c0626b65f480531f73fbd3c69a19b4b96145592f3"
+    },
+    "A1/MLP/1710": {
+      "development_nll": 1.1990390750031856,
+      "path": "runtime/cpkv-topk-001/A1/MLP/1710/run.json",
+      "selected_epoch": 8,
+      "sha256": "0bf2276773214d6de54f3b6efd31671c79d7e6fefb2a01ed95ccab744c5a6d12"
+    },
+    "A1/RNN32/1701": {
+      "development_nll": 1.4239880614542662,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1701/run.json",
+      "selected_epoch": 11,
+      "sha256": "bfade71bc621143d035188a80ef61fc4e71c4b1d0484360289671b05e0a162b6"
+    },
+    "A1/RNN32/1702": {
+      "development_nll": 1.2618039825141047,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1702/run.json",
+      "selected_epoch": 12,
+      "sha256": "1d9bffaaa5b07dca94826e225514adf4cbd9e8ecfe8ae0ce9ca2a98bf8e5b0a4"
+    },
+    "A1/RNN32/1703": {
+      "development_nll": 1.1144970396775122,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1703/run.json",
+      "selected_epoch": 1,
+      "sha256": "6e3878d6a2cbaa49f1ae0d972bcc7933cc82399ff967d4f4c8c1f075a74990ec"
+    },
+    "A1/RNN32/1704": {
+      "development_nll": 1.1136820563594507,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1704/run.json",
+      "selected_epoch": 9,
+      "sha256": "dd6d963846cc210b3b9d80d5dde802bedc0b4856c91b526df7088e55191f5009"
+    },
+    "A1/RNN32/1705": {
+      "development_nll": 1.0421670576634823,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1705/run.json",
+      "selected_epoch": 1,
+      "sha256": "39e41e3f74a6c179e9fbbe360cb29e3f95506882d849cabb6afc248c67acffc7"
+    },
+    "A1/RNN32/1706": {
+      "development_nll": 1.054574594949576,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1706/run.json",
+      "selected_epoch": 1,
+      "sha256": "6daac071917a5874171e87ea4ee148bcadd5b2bd5c73eb1fb29f07c9c136920a"
+    },
+    "A1/RNN32/1707": {
+      "development_nll": 1.1392633879888134,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1707/run.json",
+      "selected_epoch": 2,
+      "sha256": "62baca48787fbfe98d97fdc356bdc98414ba1f264e32d3c24dae130150d4e1b8"
+    },
+    "A1/RNN32/1708": {
+      "development_nll": 1.1802776865115328,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1708/run.json",
+      "selected_epoch": 13,
+      "sha256": "da5f26b1f1943bacb75e869036e5e188b2cb947d60be73c5cea4a885d9292166"
+    },
+    "A1/RNN32/1709": {
+      "development_nll": 0.9680049469714869,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1709/run.json",
+      "selected_epoch": 7,
+      "sha256": "4eafaa2c9c7e04708d38dca9c0aa26b80510e0297a1c469635266351c33de037"
+    },
+    "A1/RNN32/1710": {
+      "development_nll": 1.1013713587699636,
+      "path": "runtime/cpkv-topk-001/A1/RNN32/1710/run.json",
+      "selected_epoch": 11,
+      "sha256": "06df2c75fd67e74ac28608b2df2c4dca313b4adc6be149c7b88f40c82ad5b051"
+    },
+    "A1/S32/1701": {
+      "development_nll": 1.0350920954194371,
+      "path": "runtime/cpkv-topk-001/A1/S32/1701/run.json",
+      "selected_epoch": 20,
+      "sha256": "d2ab67c5b703f16d354cb07f677957a2abf222db1641eafb2cec450225af3006"
+    },
+    "A1/S32/1702": {
+      "development_nll": 1.1086392114335877,
+      "path": "runtime/cpkv-topk-001/A1/S32/1702/run.json",
+      "selected_epoch": 4,
+      "sha256": "6ae9ad4d68ec885c09f0a7afa075d24753905d07a187298381b44c2388d59bdf"
+    },
+    "A1/S32/1703": {
+      "development_nll": 1.032319772638262,
+      "path": "runtime/cpkv-topk-001/A1/S32/1703/run.json",
+      "selected_epoch": 1,
+      "sha256": "1d7510b04d8e72a6291fdb918ce280d89cd66a63510f25388b3e3bc41ac5dade"
+    },
+    "A1/S32/1704": {
+      "development_nll": 1.0385419772081352,
+      "path": "runtime/cpkv-topk-001/A1/S32/1704/run.json",
+      "selected_epoch": 1,
+      "sha256": "28cd17edf5233665b6070efbe76b11da4f3677bc7eb0df20b958cff353e50008"
+    },
+    "A1/S32/1705": {
+      "development_nll": 1.0896952350893745,
+      "path": "runtime/cpkv-topk-001/A1/S32/1705/run.json",
+      "selected_epoch": 1,
+      "sha256": "2ab0a98b2e4c0c1c3f37f73640c0541c836da9f0b279a9df1a98d751a61924d2"
+    },
+    "A1/S32/1706": {
+      "development_nll": 0.9972152277046503,
+      "path": "runtime/cpkv-topk-001/A1/S32/1706/run.json",
+      "selected_epoch": 1,
+      "sha256": "97ab029f4c9a9332023e175c5b8b37694a40fe48a720006b90ea33f481ec82fe"
+    },
+    "A1/S32/1707": {
+      "development_nll": 1.0322958002705043,
+      "path": "runtime/cpkv-topk-001/A1/S32/1707/run.json",
+      "selected_epoch": 1,
+      "sha256": "c6738013b236dcfa16f11e1f63d3dd46f478797079a5ce4f59f45d6db301159d"
+    },
+    "A1/S32/1708": {
+      "development_nll": 0.9829190604330656,
+      "path": "runtime/cpkv-topk-001/A1/S32/1708/run.json",
+      "selected_epoch": 20,
+      "sha256": "b97b58b6374d341afabe5f642c3e69446bb0ff02d90d5fd76ee714e238c0fb49"
+    },
+    "A1/S32/1709": {
+      "development_nll": 1.0848240217219896,
+      "path": "runtime/cpkv-topk-001/A1/S32/1709/run.json",
+      "selected_epoch": 20,
+      "sha256": "3cc9e5491dbbe46b9dc055877d60631d1d170f670c11ede3dc35f4e60e0c4404"
+    },
+    "A1/S32/1710": {
+      "development_nll": 1.0732330680375428,
+      "path": "runtime/cpkv-topk-001/A1/S32/1710/run.json",
+      "selected_epoch": 14,
+      "sha256": "dd918678523df6b42b4cb78d8a92dd1a29135bd8cc8c8e5271cf8ec66d97a562"
+    },
+    "A2/DIRECT3/1701": {
+      "development_nll": 0.5107269454665538,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1701/run.json",
+      "selected_epoch": 1,
+      "sha256": "2aa402c5b9750654fd6dd962594ec73e41eb4c86d82f44f9ce80dbf73d4aacd7"
+    },
+    "A2/DIRECT3/1702": {
+      "development_nll": 0.5185214666022937,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1702/run.json",
+      "selected_epoch": 2,
+      "sha256": "0ad813d694a95a3b23e912817d8182e05b17df679ced50913078cadce3126576"
+    },
+    "A2/DIRECT3/1703": {
+      "development_nll": 0.481670837001898,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1703/run.json",
+      "selected_epoch": 2,
+      "sha256": "898236006bcb96c610fd12deab5de79d8639750dba29bc9f99e92ae8f99832a7"
+    },
+    "A2/DIRECT3/1704": {
+      "development_nll": 0.5667921119031821,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1704/run.json",
+      "selected_epoch": 2,
+      "sha256": "c0e47b000f871af01b1ce6967cabcf82cefe091c4e98d0db9877fd31be636b26"
+    },
+    "A2/DIRECT3/1705": {
+      "development_nll": 0.4918204382795145,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1705/run.json",
+      "selected_epoch": 3,
+      "sha256": "ff88a71376191a7f5c68d2f361edddc3215c0d44c060eb3c62b01c25bc640fc7"
+    },
+    "A2/DIRECT3/1706": {
+      "development_nll": 0.5066135239418887,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1706/run.json",
+      "selected_epoch": 2,
+      "sha256": "ca7bafaddbb017e9684c79b3611885a4d454a9dff1ab9b0f9b696fb2e7cc1009"
+    },
+    "A2/DIRECT3/1707": {
+      "development_nll": 0.5071786393460123,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1707/run.json",
+      "selected_epoch": 2,
+      "sha256": "04aea51054b03fcd7e882729fede4b72667b3b442f95ef4d9636bd6cfecb8bc7"
+    },
+    "A2/DIRECT3/1708": {
+      "development_nll": 0.5552100838321161,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1708/run.json",
+      "selected_epoch": 2,
+      "sha256": "97dd21812834c57f7126f44f285893cb79c09262599ac3ffcc40df8d28d1366f"
+    },
+    "A2/DIRECT3/1709": {
+      "development_nll": 0.47210569992411217,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1709/run.json",
+      "selected_epoch": 2,
+      "sha256": "8332feeeb6d10f589a1c3368f9af0076262bc3765bb5de62f32f1f7cf3f8831c"
+    },
+    "A2/DIRECT3/1710": {
+      "development_nll": 0.5115399782948706,
+      "path": "runtime/cpkv-topk-001/A2/DIRECT3/1710/run.json",
+      "selected_epoch": 2,
+      "sha256": "3e972ecb862adf157307c6cc52f722eee849aed01e4178c9f8388a8649503e5b"
+    },
+    "A2/HARD3/1701": {
+      "development_nll": 0.5156518599156448,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1701/run.json",
+      "selected_epoch": 3,
+      "sha256": "41c9870e9fefefe7513d1356cdbabdcf27c51b451096a500cf988a900b9d2e83"
+    },
+    "A2/HARD3/1702": {
+      "development_nll": 0.4785188097107248,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1702/run.json",
+      "selected_epoch": 2,
+      "sha256": "c78328581fc9875c063034c72d9c873c64eb60c6206441b9b616eb734d329edb"
+    },
+    "A2/HARD3/1703": {
+      "development_nll": 0.5424247179292295,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1703/run.json",
+      "selected_epoch": 2,
+      "sha256": "a1990d944922767f67f64855cf4183bd5ec2f20ca383714e1c5454c3933bc837"
+    },
+    "A2/HARD3/1704": {
+      "development_nll": 0.5489373117214854,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1704/run.json",
+      "selected_epoch": 2,
+      "sha256": "e90542c6245db240888f740e5fae3a6722547217b54b1aaf31aa11283f319ed9"
+    },
+    "A2/HARD3/1705": {
+      "development_nll": 0.5247170422398583,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1705/run.json",
+      "selected_epoch": 2,
+      "sha256": "80209a134493376fd3d1c53e81457fb334d20de71f35f0a35db0bd287ee1c0fe"
+    },
+    "A2/HARD3/1706": {
+      "development_nll": 0.4593305814793373,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1706/run.json",
+      "selected_epoch": 2,
+      "sha256": "477597fe5f001e4206b5b68e8e4e913ee1f79f5e6a5d9fcb1857ecb38a554621"
+    },
+    "A2/HARD3/1707": {
+      "development_nll": 0.5219761061592594,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1707/run.json",
+      "selected_epoch": 2,
+      "sha256": "dd4a104ea567f6f3524f9e221b2270bac432a63487b14eabbaa9c7e40cd44515"
+    },
+    "A2/HARD3/1708": {
+      "development_nll": 0.6024850438005946,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1708/run.json",
+      "selected_epoch": 2,
+      "sha256": "84a8ba3c35fecb24aef37518cf2e5234767fbb7e9a5dae6d0ea307bba55cb435"
+    },
+    "A2/HARD3/1709": {
+      "development_nll": 0.5631282819252036,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1709/run.json",
+      "selected_epoch": 2,
+      "sha256": "2a0a140e5bc155aa3acefec39733fab54f2d5ccc4298021c3a1891968e540992"
+    },
+    "A2/HARD3/1710": {
+      "development_nll": 0.4949880287759279,
+      "path": "runtime/cpkv-topk-001/A2/HARD3/1710/run.json",
+      "selected_epoch": 2,
+      "sha256": "7620e825623b98f5ee301c97b5fe5856c35fbf78355873082e999384210566ce"
+    },
+    "A2/LINK32/1701": {
+      "development_nll": 0.523292473607592,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1701/run.json",
+      "selected_epoch": 3,
+      "sha256": "dbe1deaaf213023c4103e7e909483a696e06d1b297c0a4ab68a1e2727a2fe898"
+    },
+    "A2/LINK32/1702": {
+      "development_nll": 0.47621039370219115,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1702/run.json",
+      "selected_epoch": 2,
+      "sha256": "16f9a068cc40064e67451c93c25e850f27bc579d9bcdf9d4b016d7895294f942"
+    },
+    "A2/LINK32/1703": {
+      "development_nll": 0.46195316727576297,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1703/run.json",
+      "selected_epoch": 2,
+      "sha256": "e05dd934e583ab5ff8fe447d7c53e9a55e0af4d36760df50fcba1dba556cfbf5"
+    },
+    "A2/LINK32/1704": {
+      "development_nll": 0.5118605973529051,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1704/run.json",
+      "selected_epoch": 2,
+      "sha256": "037183500ab47696c875829681d016d234aa152ff2aaed971b680d00da21beba"
+    },
+    "A2/LINK32/1705": {
+      "development_nll": 0.5354500798361941,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1705/run.json",
+      "selected_epoch": 3,
+      "sha256": "09bcc8b12200829e7b0c0ec3850c2295af276c953f6e1fde5639e809a6f0e3a8"
+    },
+    "A2/LINK32/1706": {
+      "development_nll": 0.4373593093535011,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1706/run.json",
+      "selected_epoch": 2,
+      "sha256": "24a95d85f879287a467f071a35a42b0755ef9f7858dd4c3af351c6b109edfc68"
+    },
+    "A2/LINK32/1707": {
+      "development_nll": 0.4537562639557241,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1707/run.json",
+      "selected_epoch": 2,
+      "sha256": "7b8ac30f752308df4d3fc9db35781ddf378048c8683dfe5bd8e09395fd780fe2"
+    },
+    "A2/LINK32/1708": {
+      "development_nll": 0.5443601603877798,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1708/run.json",
+      "selected_epoch": 2,
+      "sha256": "e7cb008d397043b33985f525fcb43ed8af9011cddc9be4ce80c3464967b23a8d"
+    },
+    "A2/LINK32/1709": {
+      "development_nll": 0.482359003857504,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1709/run.json",
+      "selected_epoch": 2,
+      "sha256": "d6b53181a9272ff1e7a582360c6628ecbde951f5e132bf83138429ebd014282f"
+    },
+    "A2/LINK32/1710": {
+      "development_nll": 0.49664852087838646,
+      "path": "runtime/cpkv-topk-001/A2/LINK32/1710/run.json",
+      "selected_epoch": 1,
+      "sha256": "25d04ae756ec1451ddeab0a9668dc6389bbd05af430cb82e6db3cd68851164fd"
+    },
+    "A2/MLP/1701": {
+      "development_nll": 0.5899203532761582,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1701/run.json",
+      "selected_epoch": 2,
+      "sha256": "c15abae9ae69d8bb8565c77a3ff0453f027f955ec2c649fa49a8973bb0ccf36d"
+    },
+    "A2/MLP/1702": {
+      "development_nll": 0.5476373917432874,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1702/run.json",
+      "selected_epoch": 2,
+      "sha256": "35c41503063d3a78ab630c59c5fdbfbfe76d8088278a835fe998c9ae70a6536f"
+    },
+    "A2/MLP/1703": {
+      "development_nll": 0.6243480483710202,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1703/run.json",
+      "selected_epoch": 2,
+      "sha256": "5a3a8a480f2347cf353e5f723f37d2097d4e4a9b89c841a757fb0594a3a84547"
+    },
+    "A2/MLP/1704": {
+      "development_nll": 0.7471544226558751,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1704/run.json",
+      "selected_epoch": 2,
+      "sha256": "844a2d253b82d53091c8395abbcb25af326c37d8d0d8dfc1a68958dc1fc22081"
+    },
+    "A2/MLP/1705": {
+      "development_nll": 0.7071401361291306,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1705/run.json",
+      "selected_epoch": 2,
+      "sha256": "4e775987062a0b1d3ab4196ac376ded7c40128732065439c55760094cc9d8f05"
+    },
+    "A2/MLP/1706": {
+      "development_nll": 0.632203368940754,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1706/run.json",
+      "selected_epoch": 2,
+      "sha256": "d7c63413db5ac2fc732ab48504560a4cdb85b8828fd610fc523a18e1652f7d27"
+    },
+    "A2/MLP/1707": {
+      "development_nll": 0.521100940403249,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1707/run.json",
+      "selected_epoch": 8,
+      "sha256": "e19f7fcc81527d156ac6de6633a06002cb28d8407d94a6d69544d186fa251195"
+    },
+    "A2/MLP/1708": {
+      "development_nll": 0.6541127416266797,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1708/run.json",
+      "selected_epoch": 2,
+      "sha256": "2e05bf3a5b8d6944481ccd016e6caca65147e73c1a2adf41a1429cd1c6c709a2"
+    },
+    "A2/MLP/1709": {
+      "development_nll": 0.86488107562255,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1709/run.json",
+      "selected_epoch": 1,
+      "sha256": "1e225a9b87896a7db39865e606dd7bbdd713b38718494350e27e0bf87c5f4fb0"
+    },
+    "A2/MLP/1710": {
+      "development_nll": 0.5723163063172758,
+      "path": "runtime/cpkv-topk-001/A2/MLP/1710/run.json",
+      "selected_epoch": 2,
+      "sha256": "ff101215f0932ffa5a35ce00309cb81d2700e3dfa33169dae2d69a37b96ba351"
+    },
+    "A2/RNN32/1701": {
+      "development_nll": 0.6931982134945187,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1701/run.json",
+      "selected_epoch": 3,
+      "sha256": "28acfd0429e328ed0f5e8c3ab02eb738db53feb7d358e40898d099d0d4bec9f5"
+    },
+    "A2/RNN32/1702": {
+      "development_nll": 0.738158585030267,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1702/run.json",
+      "selected_epoch": 2,
+      "sha256": "66242ca11311f78bfaef727438ade149ef2c28fac4201dc325c7f15c01295ce2"
+    },
+    "A2/RNN32/1703": {
+      "development_nll": 0.6359403275128895,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1703/run.json",
+      "selected_epoch": 2,
+      "sha256": "934b71c25e238c6d46ed6cdd67ccbabde48e7c6b4677b0872eeece5c7b65e7de"
+    },
+    "A2/RNN32/1704": {
+      "development_nll": 0.6868688188898607,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1704/run.json",
+      "selected_epoch": 2,
+      "sha256": "e804f3acb8c758896a28d215144072d31fd672f6509574189ab5b6d20d2643a5"
+    },
+    "A2/RNN32/1705": {
+      "development_nll": 0.7344450108472498,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1705/run.json",
+      "selected_epoch": 2,
+      "sha256": "b61318e8306c7af21d47dae1fbd67c3d0f30bcf8b121a2ae3f70d47aeae4620c"
+    },
+    "A2/RNN32/1706": {
+      "development_nll": 0.8615227390963542,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1706/run.json",
+      "selected_epoch": 3,
+      "sha256": "ea18fe956c94df4d76355c658b835c1de1d18a38959fbdea4e6843ac75bdb23c"
+    },
+    "A2/RNN32/1707": {
+      "development_nll": 0.793879533932582,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1707/run.json",
+      "selected_epoch": 2,
+      "sha256": "af9de1aea280b1d6e0a5064056e083bc4a26a8114b1114cbe32e01e3671941c7"
+    },
+    "A2/RNN32/1708": {
+      "development_nll": 0.705586360071834,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1708/run.json",
+      "selected_epoch": 2,
+      "sha256": "24aa6308414263c76fd0263dac7d16649d71a9a472a14b504b05c5708f6ea29f"
+    },
+    "A2/RNN32/1709": {
+      "development_nll": 0.6254653084203404,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1709/run.json",
+      "selected_epoch": 2,
+      "sha256": "2ae51d315b66056fc5e2348361a3b680ef63b60c60a913c3c40a82596ce85072"
+    },
+    "A2/RNN32/1710": {
+      "development_nll": 0.5339907069268727,
+      "path": "runtime/cpkv-topk-001/A2/RNN32/1710/run.json",
+      "selected_epoch": 1,
+      "sha256": "7b1b2176523a074262f7c5d002abe49247409ff4dd33e3bc88f4403f8f26c597"
+    },
+    "A2/S32/1701": {
+      "development_nll": 0.4944999197152504,
+      "path": "runtime/cpkv-topk-001/A2/S32/1701/run.json",
+      "selected_epoch": 2,
+      "sha256": "06aadc7ff1d019813e868784c0572c1a37260e06f8b77e162b87adbaab7504e8"
+    },
+    "A2/S32/1702": {
+      "development_nll": 0.4991137036880705,
+      "path": "runtime/cpkv-topk-001/A2/S32/1702/run.json",
+      "selected_epoch": 2,
+      "sha256": "7d61374d45750b951931fa9088258f0c6da8f17758a4c62234445d9d48c3a321"
+    },
+    "A2/S32/1703": {
+      "development_nll": 0.47656733433252585,
+      "path": "runtime/cpkv-topk-001/A2/S32/1703/run.json",
+      "selected_epoch": 2,
+      "sha256": "80702a2b02e176d99243a0e0bf4307762bf8937ddc49bc2598381de6d58009fc"
+    },
+    "A2/S32/1704": {
+      "development_nll": 0.536039342083287,
+      "path": "runtime/cpkv-topk-001/A2/S32/1704/run.json",
+      "selected_epoch": 2,
+      "sha256": "52c52f43a04a5830b2f150c31d8890117e62e1a6135eb660cb77c37a9588f255"
+    },
+    "A2/S32/1705": {
+      "development_nll": 0.5191721171403668,
+      "path": "runtime/cpkv-topk-001/A2/S32/1705/run.json",
+      "selected_epoch": 3,
+      "sha256": "ecd0e56192b1327581421ffc0ffbbd5dfc474fa9259acb8049ba5a15673fada0"
+    },
+    "A2/S32/1706": {
+      "development_nll": 0.448948352685001,
+      "path": "runtime/cpkv-topk-001/A2/S32/1706/run.json",
+      "selected_epoch": 2,
+      "sha256": "e615998729a2b9cf0e49f4c64777384e350f421b0a6950d840cbf1cc0ca31a92"
+    },
+    "A2/S32/1707": {
+      "development_nll": 0.41748378683707266,
+      "path": "runtime/cpkv-topk-001/A2/S32/1707/run.json",
+      "selected_epoch": 1,
+      "sha256": "587269d06dd984107a1f0fafb54f71d8efe728af5f80fe00b8faf24a9457f8f5"
+    },
+    "A2/S32/1708": {
+      "development_nll": 0.5856468033174349,
+      "path": "runtime/cpkv-topk-001/A2/S32/1708/run.json",
+      "selected_epoch": 2,
+      "sha256": "7a25f08e3db6787aa8bc94b69457825ceb544f1b1fb12e494400e8d631778898"
+    },
+    "A2/S32/1709": {
+      "development_nll": 0.495229746223287,
+      "path": "runtime/cpkv-topk-001/A2/S32/1709/run.json",
+      "selected_epoch": 2,
+      "sha256": "a0de22436911f18277892b592eb7db34d190527ec4f3b53210361f620be5e323"
+    },
+    "A2/S32/1710": {
+      "development_nll": 0.5177028066198782,
+      "path": "runtime/cpkv-topk-001/A2/S32/1710/run.json",
+      "selected_epoch": 1,
+      "sha256": "275132e0eae57fe79ba5aee73dc4ffc492b7347a9d33fbabbc7724bd4f5acfe9"
+    },
+    "D1/DIRECT3/1701": {
+      "development_nll": 0.9683625441981144,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1701/run.json",
+      "selected_epoch": 2,
+      "sha256": "57d484c046d18921c345c30f22a4777bb1a29e840c3683c1edd9e9f7f7040d2e"
+    },
+    "D1/DIRECT3/1702": {
+      "development_nll": 0.8705886659878648,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1702/run.json",
+      "selected_epoch": 3,
+      "sha256": "4c438815dcf7aab4afc84feed536aa07f6f703589440eba0955305d018660666"
+    },
+    "D1/DIRECT3/1703": {
+      "development_nll": 0.960475396114008,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1703/run.json",
+      "selected_epoch": 7,
+      "sha256": "2d7f7bcd4a682bec2649582cba956ddbccc717c41033fd80536c097f79abc54d"
+    },
+    "D1/DIRECT3/1704": {
+      "development_nll": 1.00352434980822,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1704/run.json",
+      "selected_epoch": 6,
+      "sha256": "97ac5f630de4b4d1c1624f0d534524a53148ff43555d474e86a06e2a4c007daa"
+    },
+    "D1/DIRECT3/1705": {
+      "development_nll": 0.9364535872850619,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1705/run.json",
+      "selected_epoch": 2,
+      "sha256": "22744217bb30b2dbe3525f8aadd0be8edae410045137e771a5a23dd220e1315e"
+    },
+    "D1/DIRECT3/1706": {
+      "development_nll": 0.8656754068254076,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1706/run.json",
+      "selected_epoch": 6,
+      "sha256": "c85d9c58ff4e45326f3cb19d732dcbad55f3ed22c0a1ca3029c73ceb46845b7b"
+    },
+    "D1/DIRECT3/1707": {
+      "development_nll": 1.0162594584648987,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1707/run.json",
+      "selected_epoch": 5,
+      "sha256": "31a91a84d1ddf817e6dc453c9bbd063eb0e3de2cd9e4a2c7c9c8bb3f6a97b4c4"
+    },
+    "D1/DIRECT3/1708": {
+      "development_nll": 0.9794261986665957,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1708/run.json",
+      "selected_epoch": 4,
+      "sha256": "bb1649765976bccd99d7c2e65e371c8abd81c3fca4b8a01a3aa84b05216dd032"
+    },
+    "D1/DIRECT3/1709": {
+      "development_nll": 0.8736158486671624,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1709/run.json",
+      "selected_epoch": 6,
+      "sha256": "d3d8fbd8ebc7bf4328f6cb958612cd5aca5ab2df933948859773e0b96ada85a8"
+    },
+    "D1/DIRECT3/1710": {
+      "development_nll": 0.9826106494276688,
+      "path": "runtime/cpkv-topk-001/D1/DIRECT3/1710/run.json",
+      "selected_epoch": 3,
+      "sha256": "b1d4cf244798b9f678000aa4f70885e9039a48b6baa520898e365edd8c9ded83"
+    },
+    "D1/HARD3/1701": {
+      "development_nll": 1.1135307754180537,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1701/run.json",
+      "selected_epoch": 13,
+      "sha256": "d0e199be298b9a5003ad5846ee1fffd66266fe8372c2345d6d663d521e674059"
+    },
+    "D1/HARD3/1702": {
+      "development_nll": 0.9208104500694743,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1702/run.json",
+      "selected_epoch": 3,
+      "sha256": "1b1229b3c05834b1a41ac6cb09248d1b83ebeb7711333c9b45e1ada87a441616"
+    },
+    "D1/HARD3/1703": {
+      "development_nll": 1.111177711549976,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1703/run.json",
+      "selected_epoch": 8,
+      "sha256": "f92f793a22aefb71197dc114342168fa514eb04eaef08c08512a3352e208364b"
+    },
+    "D1/HARD3/1704": {
+      "development_nll": 1.0084354125109958,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1704/run.json",
+      "selected_epoch": 8,
+      "sha256": "35e0507db234a22fe80112b016675da467163c58b8184374140e05bb4024fb1a"
+    },
+    "D1/HARD3/1705": {
+      "development_nll": 1.0718735965690447,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1705/run.json",
+      "selected_epoch": 7,
+      "sha256": "b11d7935595f105614541987b8199d42bbc6070cee4234dd53def750dc50a1f8"
+    },
+    "D1/HARD3/1706": {
+      "development_nll": 1.0063094815149096,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1706/run.json",
+      "selected_epoch": 3,
+      "sha256": "8eb1a61629f07802ec0c71e25f62f5b9fd03aa13afa29961d74d0b4010d3b57f"
+    },
+    "D1/HARD3/1707": {
+      "development_nll": 1.0833304245214024,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1707/run.json",
+      "selected_epoch": 5,
+      "sha256": "b44ba08151ca32dfc0b5f99af836d541fffc00c91453f0c43a73cbde4e2aba34"
+    },
+    "D1/HARD3/1708": {
+      "development_nll": 0.9738239992836548,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1708/run.json",
+      "selected_epoch": 5,
+      "sha256": "7a82f267ffcf925c634c4b6e21991daefd1130deb9644065ef335858b3b554f6"
+    },
+    "D1/HARD3/1709": {
+      "development_nll": 1.128226117056047,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1709/run.json",
+      "selected_epoch": 10,
+      "sha256": "64c5bce46194ffb07382cc134e1b4b3df77963429b73bc52187ab642b3560967"
+    },
+    "D1/HARD3/1710": {
+      "development_nll": 0.9408378638813778,
+      "path": "runtime/cpkv-topk-001/D1/HARD3/1710/run.json",
+      "selected_epoch": 6,
+      "sha256": "6f29d80fcb00acce087b44790bd6d320265ec433290e78f128cc40fcf795725b"
+    },
+    "D1/LINK32/1701": {
+      "development_nll": 1.0341351262338254,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1701/run.json",
+      "selected_epoch": 7,
+      "sha256": "39793b38b96c54b3291e0f776ad90a2a8a8778164c2e5146f2d1861cb2185b83"
+    },
+    "D1/LINK32/1702": {
+      "development_nll": 0.9859649430481758,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1702/run.json",
+      "selected_epoch": 3,
+      "sha256": "519eea359e6388e34c84a457ae3c30745b19e8f61a9b3a5fe90dc07971da99de"
+    },
+    "D1/LINK32/1703": {
+      "development_nll": 0.9864094838890974,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1703/run.json",
+      "selected_epoch": 7,
+      "sha256": "13a351fefee4256f7ce88280e6976a6f25701461d4cd3faa5912922fc7f3c345"
+    },
+    "D1/LINK32/1704": {
+      "development_nll": 0.8736905674847456,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1704/run.json",
+      "selected_epoch": 10,
+      "sha256": "b976a0b60c0f2783e1c2ad38a36232aa5d968b236ded3dd10c5394cdbab5d4b6"
+    },
+    "D1/LINK32/1705": {
+      "development_nll": 1.1237993227342804,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1705/run.json",
+      "selected_epoch": 5,
+      "sha256": "1373fcec117e255c4b403b245458de230223d854b4754ad8d1240f06299c07a1"
+    },
+    "D1/LINK32/1706": {
+      "development_nll": 1.033554134660055,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1706/run.json",
+      "selected_epoch": 7,
+      "sha256": "bf9d445954fa6c94837bba527199c52a77d6cc7c1655a46f9d19afea838846fd"
+    },
+    "D1/LINK32/1707": {
+      "development_nll": 0.9366805911745195,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1707/run.json",
+      "selected_epoch": 4,
+      "sha256": "2e53567f02ddf3db935c3b605e2c2825934d31ccb2cc314e8ed3039d97b2525f"
+    },
+    "D1/LINK32/1708": {
+      "development_nll": 1.0819592155495272,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1708/run.json",
+      "selected_epoch": 5,
+      "sha256": "cc1e87b5cc4a2f683d2e938a8c4f68f0dad44b813e073f17cb82d555abc0af33"
+    },
+    "D1/LINK32/1709": {
+      "development_nll": 0.8819068638129134,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1709/run.json",
+      "selected_epoch": 6,
+      "sha256": "e53e306f33489c83576a1998602e1fbfbe0eb46548cc7e1d5864e031d1357ad0"
+    },
+    "D1/LINK32/1710": {
+      "development_nll": 0.995473145267371,
+      "path": "runtime/cpkv-topk-001/D1/LINK32/1710/run.json",
+      "selected_epoch": 5,
+      "sha256": "fc972a8195dccf3a55020bd7010a0d20c106f06b30a2e9ab60ee819848b3f9f5"
+    },
+    "D1/MLP/1701": {
+      "development_nll": 1.3619536655203648,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1701/run.json",
+      "selected_epoch": 2,
+      "sha256": "ea1876df0b4ff8cd2d0552edfb4895fd06bd255d1d8d102ce5166bde5b5827e2"
+    },
+    "D1/MLP/1702": {
+      "development_nll": 1.1835229586558955,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1702/run.json",
+      "selected_epoch": 2,
+      "sha256": "2159ee0103548efd8df3687e24f2487a7f8fcc34ce75eec5fe1ab2ec50d3fb6a"
+    },
+    "D1/MLP/1703": {
+      "development_nll": 1.1508780652217603,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1703/run.json",
+      "selected_epoch": 2,
+      "sha256": "16d851583172124a31445dcb89dd5521d62161a49b1827ebad0f2c6c713a1e8e"
+    },
+    "D1/MLP/1704": {
+      "development_nll": 1.1434174916667972,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1704/run.json",
+      "selected_epoch": 1,
+      "sha256": "29396e761f1be63f1706793956549840c60fe50e7d4c537bea83f761d27acfd2"
+    },
+    "D1/MLP/1705": {
+      "development_nll": 1.2392344308217875,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1705/run.json",
+      "selected_epoch": 3,
+      "sha256": "f80ba7a289c2e379fd714cc4a82d012144623377589e03da608da7ea9e038a7c"
+    },
+    "D1/MLP/1706": {
+      "development_nll": 1.4980598730419943,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1706/run.json",
+      "selected_epoch": 7,
+      "sha256": "30fd40dada025a99ce032dc9fea9c23bd3eecec9588a9b205807429749147f3b"
+    },
+    "D1/MLP/1707": {
+      "development_nll": 1.1768968512035822,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1707/run.json",
+      "selected_epoch": 2,
+      "sha256": "0cd7770ede3cfa3b33c48c8a34b03c56dc145efe0861fd30ea7bc0c3726f8e79"
+    },
+    "D1/MLP/1708": {
+      "development_nll": 1.2226118341308985,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1708/run.json",
+      "selected_epoch": 1,
+      "sha256": "ca2ff1fbe43671714076172dd32e352d090d16af41bd0c8f588b1351d653e9a5"
+    },
+    "D1/MLP/1709": {
+      "development_nll": 1.335823434725117,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1709/run.json",
+      "selected_epoch": 3,
+      "sha256": "ee6e756383f23a370da4078000cf2ccdd399ae0e8bfa839ac4e33790a06fbf43"
+    },
+    "D1/MLP/1710": {
+      "development_nll": 1.3803193767424482,
+      "path": "runtime/cpkv-topk-001/D1/MLP/1710/run.json",
+      "selected_epoch": 2,
+      "sha256": "c8f1f5b08e0fd175099236b2b14f15cd421fb26eaa424f125efa1fd39871c63b"
+    },
+    "D1/RNN32/1701": {
+      "development_nll": 1.535956003056799,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1701/run.json",
+      "selected_epoch": 3,
+      "sha256": "cc8d203b22b989030377653b65727e4bec77d3b8fb0c64ce56cf381abc683e4b"
+    },
+    "D1/RNN32/1702": {
+      "development_nll": 1.3643688106071845,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1702/run.json",
+      "selected_epoch": 3,
+      "sha256": "da0b321b980bd8bdfac3e3e7ebd444f84a2d66fa6e55a4d772e7423e750ec822"
+    },
+    "D1/RNN32/1703": {
+      "development_nll": 1.3310814920954774,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1703/run.json",
+      "selected_epoch": 1,
+      "sha256": "0e9a4581b4dc03e8ad2bddd6441472028ddd6b3764a3c7cc7c80210232e4b8d2"
+    },
+    "D1/RNN32/1704": {
+      "development_nll": 1.1522874306662496,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1704/run.json",
+      "selected_epoch": 2,
+      "sha256": "4c15edab24ee858f67f2733223aee45b3527912d644c318c55b894bdae36a338"
+    },
+    "D1/RNN32/1705": {
+      "development_nll": 1.4111980658284415,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1705/run.json",
+      "selected_epoch": 1,
+      "sha256": "370d4fec2b9baf821e66d46ee17371c974aa77fef9a81975ef5dca6704b8182b"
+    },
+    "D1/RNN32/1706": {
+      "development_nll": 1.336990641504781,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1706/run.json",
+      "selected_epoch": 3,
+      "sha256": "cc2de793b8c21f0f2f7620b7d7cb2f2dd4a3d415d645ff6d6a46de2afba8a379"
+    },
+    "D1/RNN32/1707": {
+      "development_nll": 1.3412477893863355,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1707/run.json",
+      "selected_epoch": 1,
+      "sha256": "c1312e8ef02eef08710405b4d99e91b4deebf080544b3d63686b344c44a8c424"
+    },
+    "D1/RNN32/1708": {
+      "development_nll": 1.1864134993712274,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1708/run.json",
+      "selected_epoch": 1,
+      "sha256": "d8b237b149f104b2cbb4c7c8e195343158dbd417b969552e32a640b509e60f5e"
+    },
+    "D1/RNN32/1709": {
+      "development_nll": 1.6145140642092775,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1709/run.json",
+      "selected_epoch": 4,
+      "sha256": "c4c3e9cc75482a4217947c6c9e52e3b7e14708243d4996a4b446c82e73b3d72b"
+    },
+    "D1/RNN32/1710": {
+      "development_nll": 1.0975434334360266,
+      "path": "runtime/cpkv-topk-001/D1/RNN32/1710/run.json",
+      "selected_epoch": 2,
+      "sha256": "ee00b4c9ade9d96c5117a6f89d8ff9d84e96d2f278c2be06535394f0f5dc23b2"
+    },
+    "D1/S32/1701": {
+      "development_nll": 0.9995592707504217,
+      "path": "runtime/cpkv-topk-001/D1/S32/1701/run.json",
+      "selected_epoch": 3,
+      "sha256": "beecaff2ce20274514389313926c5c5d5b2a1e5da8313ae3a999fc73c4b873ee"
+    },
+    "D1/S32/1702": {
+      "development_nll": 0.992490922904536,
+      "path": "runtime/cpkv-topk-001/D1/S32/1702/run.json",
+      "selected_epoch": 3,
+      "sha256": "937c1be096b5ec86154ed79d31ade4dfd9d5c550f747533eeef0d701e7a255bc"
+    },
+    "D1/S32/1703": {
+      "development_nll": 0.888081000797839,
+      "path": "runtime/cpkv-topk-001/D1/S32/1703/run.json",
+      "selected_epoch": 9,
+      "sha256": "7c398d4eead5dd64e52174205e9223123d0e3835032452ac6f195c1b0315df14"
+    },
+    "D1/S32/1704": {
+      "development_nll": 0.9861594713617848,
+      "path": "runtime/cpkv-topk-001/D1/S32/1704/run.json",
+      "selected_epoch": 7,
+      "sha256": "86828f96d1d5a76c712c56eeb256c8814fa503fa006a0175aca8530f45b91e5d"
+    },
+    "D1/S32/1705": {
+      "development_nll": 1.0631129964548993,
+      "path": "runtime/cpkv-topk-001/D1/S32/1705/run.json",
+      "selected_epoch": 4,
+      "sha256": "aca4402bb878b5a401f6d7cfb18971923be9acf23c44f4a0b98a99ea1a97a533"
+    },
+    "D1/S32/1706": {
+      "development_nll": 1.0454610977746839,
+      "path": "runtime/cpkv-topk-001/D1/S32/1706/run.json",
+      "selected_epoch": 8,
+      "sha256": "9a54637643d14fc7dbf2b063849bff2e5028b89876b4fbbdc32b013fbedc715a"
+    },
+    "D1/S32/1707": {
+      "development_nll": 1.0542797716349035,
+      "path": "runtime/cpkv-topk-001/D1/S32/1707/run.json",
+      "selected_epoch": 4,
+      "sha256": "20071a798ceb4eb4a9891828d57b2e8d8b28b57c2889ff30b9a2587ef7c85990"
+    },
+    "D1/S32/1708": {
+      "development_nll": 0.9729577592225979,
+      "path": "runtime/cpkv-topk-001/D1/S32/1708/run.json",
+      "selected_epoch": 5,
+      "sha256": "a7b32c684d677e4b624381c59ff1a1a81dc714b1d35fc76a5ab5b64dc96f75f3"
+    },
+    "D1/S32/1709": {
+      "development_nll": 1.0264890104752389,
+      "path": "runtime/cpkv-topk-001/D1/S32/1709/run.json",
+      "selected_epoch": 6,
+      "sha256": "9f50698f1619437cbbfc8ad1c8009d012fa8868ecc0a301575b433676118ff0f"
+    },
+    "D1/S32/1710": {
+      "development_nll": 1.0795870191825971,
+      "path": "runtime/cpkv-topk-001/D1/S32/1710/run.json",
+      "selected_epoch": 5,
+      "sha256": "994ea92e1bfb494c812c76cec4338c2ab55d6b0f77693f1e32d2075d9efa51f0"
+    }
+  },
+  "lineage": "CPKV-TOPK-001",
+  "manifest_sha256": "c48cf230e86162e598a87d1b3c9eb0b5714066195d044341685ab9ecbd21060e",
+  "resource_cells": {
+    "A1/1701": {
+      "cpu_seconds": 13641.749476384002,
+      "peak_rss_kb": 436928.0
+    },
+    "A1/1702": {
+      "cpu_seconds": 13581.231987772,
+      "peak_rss_kb": 435204.0
+    },
+    "A1/1703": {
+      "cpu_seconds": 13654.112829157999,
+      "peak_rss_kb": 435112.0
+    },
+    "A1/1704": {
+      "cpu_seconds": 13588.81875623,
+      "peak_rss_kb": 437592.0
+    },
+    "A1/1705": {
+      "cpu_seconds": 13535.940754016001,
+      "peak_rss_kb": 435400.0
+    },
+    "A1/1706": {
+      "cpu_seconds": 13610.417441285,
+      "peak_rss_kb": 434480.0
+    },
+    "A1/1707": {
+      "cpu_seconds": 13618.143817499,
+      "peak_rss_kb": 436608.0
+    },
+    "A1/1708": {
+      "cpu_seconds": 13593.105058995,
+      "peak_rss_kb": 436276.0
+    },
+    "A1/1709": {
+      "cpu_seconds": 13486.637949989,
+      "peak_rss_kb": 433504.0
+    },
+    "A1/1710": {
+      "cpu_seconds": 13539.919834701,
+      "peak_rss_kb": 432956.0
+    },
+    "A2/1701": {
+      "cpu_seconds": 19729.266276924,
+      "peak_rss_kb": 468384.0
+    },
+    "A2/1702": {
+      "cpu_seconds": 19685.688996355,
+      "peak_rss_kb": 470076.0
+    },
+    "A2/1703": {
+      "cpu_seconds": 19916.930946342,
+      "peak_rss_kb": 472600.0
+    },
+    "A2/1704": {
+      "cpu_seconds": 19727.004479178002,
+      "peak_rss_kb": 468956.0
+    },
+    "A2/1705": {
+      "cpu_seconds": 19790.484821596998,
+      "peak_rss_kb": 471460.0
+    },
+    "A2/1706": {
+      "cpu_seconds": 19752.698300123004,
+      "peak_rss_kb": 467736.0
+    },
+    "A2/1707": {
+      "cpu_seconds": 19776.755443267,
+      "peak_rss_kb": 472096.0
+    },
+    "A2/1708": {
+      "cpu_seconds": 19767.337874066998,
+      "peak_rss_kb": 471476.0
+    },
+    "A2/1709": {
+      "cpu_seconds": 19900.661811488,
+      "peak_rss_kb": 470976.0
+    },
+    "A2/1710": {
+      "cpu_seconds": 19894.308592609,
+      "peak_rss_kb": 468824.0
+    },
+    "D1/1701": {
+      "cpu_seconds": 13087.659983509002,
+      "peak_rss_kb": 431236.0
+    },
+    "D1/1702": {
+      "cpu_seconds": 12969.682332325001,
+      "peak_rss_kb": 429108.0
+    },
+    "D1/1703": {
+      "cpu_seconds": 12927.863929305,
+      "peak_rss_kb": 430940.0
+    },
+    "D1/1704": {
+      "cpu_seconds": 12931.019215674001,
+      "peak_rss_kb": 431756.0
+    },
+    "D1/1705": {
+      "cpu_seconds": 12919.096102342999,
+      "peak_rss_kb": 429532.0
+    },
+    "D1/1706": {
+      "cpu_seconds": 13101.195076304999,
+      "peak_rss_kb": 431272.0
+    },
+    "D1/1707": {
+      "cpu_seconds": 12934.000300832,
+      "peak_rss_kb": 430004.0
+    },
+    "D1/1708": {
+      "cpu_seconds": 12991.277511287,
+      "peak_rss_kb": 432992.0
+    },
+    "D1/1709": {
+      "cpu_seconds": 12769.503334912999,
+      "peak_rss_kb": 429488.0
+    },
+    "D1/1710": {
+      "cpu_seconds": 12869.500859745,
+      "peak_rss_kb": 430760.0
+    }
+  },
+  "schema": "cpkv-topk-001-checkpoint-freeze-v1",
+  "status": "checkpoints-frozen",
+  "total_cpu_seconds": 463292.014094217
+}

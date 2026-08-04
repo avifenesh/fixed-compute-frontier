@@ -1,0 +1,143 @@
+{
+  "admitted": false,
+  "candidate": {
+    "evaluation": {
+      "accuracy": 0.4519230769230769,
+      "errors": 57,
+      "examples": 104,
+      "finite": true,
+      "maximum_logit": 4.350171243572829,
+      "minimum_logit": -4.633681981678395,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.5288461538461539
+    },
+    "optimizer": {
+      "function_evaluations": 22,
+      "iterations": 21,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "seconds": 4.052896570879966,
+      "status": 0,
+      "success": true,
+      "terminal_regularized_loss": 0.034856485924918426
+    },
+    "shuffled_evaluation": {
+      "accuracy": 0.5480769230769231,
+      "errors": 47,
+      "examples": 104,
+      "finite": true,
+      "maximum_logit": 4.169561449627946,
+      "minimum_logit": -4.033430764733885,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.5673076923076923
+    },
+    "train": {
+      "accuracy": 0.9931506849315068,
+      "errors": 1,
+      "examples": 146,
+      "finite": true,
+      "maximum_logit": 6.168161974275898,
+      "minimum_logit": -6.167406866242879,
+      "positive_rate": 0.5273972602739726,
+      "predicted_positive_rate": 0.5205479452054794
+    },
+    "weight_norm": 1.8802886258908356
+  },
+  "claim_boundary": "Uncompressed decoded-record information oracle only; no serving, training-efficiency, or smarter-model claim.",
+  "compiler": {
+    "anchor_features": 701,
+    "compiler_fields": [
+      "document_id",
+      "text",
+      "title"
+    ],
+    "documents": 2405,
+    "edges": 14146,
+    "empty_documents": 157,
+    "features": 8036,
+    "skeletons": 3392,
+    "target_features": 7335
+  },
+  "decision": "close_anchor_window_quotient_for_natural_comparison_qa",
+  "effects": {
+    "document_shuffle_drop_pp": -9.61538461538462,
+    "gain_over_query_only_pp": -9.61538461538462,
+    "gain_over_t19b_pp": -15.38461538461538,
+    "gain_over_t19e_pp": -11.538461538461537
+  },
+  "gates": {
+    "both_classes": true,
+    "document_shuffle_drop_at_least_10pp": false,
+    "evaluation_accuracy_at_least_75pct": false,
+    "finite_optimization": true,
+    "gain_over_query_only_at_least_10pp": false,
+    "gain_over_t19b_at_least_10pp": false,
+    "gain_over_t19e_at_least_10pp": false,
+    "input_integrity": true,
+    "raw_only_compiler_fields": true,
+    "raw_quotient_exact": true,
+    "training_accuracy_at_least_95pct": true,
+    "two_titles_every_question": true
+  },
+  "input_checks": {
+    "candidate_corpus": true,
+    "evaluation_qa": true,
+    "preregistration": true,
+    "t24_stage0_result": true,
+    "train_qa": true
+  },
+  "provenance": {
+    "preregistration_sha256": "71e5709e7d8d2da1f1fad7207dbca69e7dde5988b3fffec6390c4c860783b101",
+    "source_sha256": "a95f5a30f8042133843f0be958f7cec47487131ee1b48c79f3c550f8eebd122f",
+    "t24_stage0_result_sha256": "e31fb880785c49c1a4f972cc5d8b1c8f10f8aba5a990c707cf975def35b6c99e"
+  },
+  "query_only": {
+    "evaluation": {
+      "accuracy": 0.5480769230769231,
+      "errors": 47,
+      "examples": 104,
+      "finite": true,
+      "maximum_logit": 9.322975506470208,
+      "minimum_logit": -6.64512021648543,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.6057692307692307
+    },
+    "optimizer": {
+      "function_evaluations": 49,
+      "iterations": 45,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "seconds": 0.16921572294086218,
+      "status": 0,
+      "success": true,
+      "terminal_regularized_loss": 0.22986311726520897
+    },
+    "train": {
+      "accuracy": 0.8904109589041096,
+      "errors": 16,
+      "examples": 146,
+      "finite": true,
+      "maximum_logit": 5.580030226669616,
+      "minimum_logit": -5.947386931704621,
+      "positive_rate": 0.5273972602739726,
+      "predicted_positive_rate": 0.4726027397260274
+    },
+    "weight_norm": 2.472503759616671
+  },
+  "reader": {
+    "candidate_dimensions": 32149,
+    "evaluation_empty_queries": 0,
+    "evaluation_nonzeros": 1759,
+    "function_parameters": [],
+    "l2_coefficient": 0.01,
+    "max_iterations": 200,
+    "query_only_dimensions": 8036,
+    "threshold": 0.5,
+    "train_empty_queries": 0,
+    "train_nonzeros": 2524
+  },
+  "schema": "xor-functional-record-t24-sufficiency-v1",
+  "shuffle": {
+    "pairs": 104,
+    "seed": 19005,
+    "unchanged_pairs": 0
+  }
+}

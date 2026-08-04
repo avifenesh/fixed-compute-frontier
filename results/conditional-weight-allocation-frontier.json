@@ -1,0 +1,229 @@
+{
+  "all_gates_pass": true,
+  "allocation_neutral_witness": {
+    "actual_routes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "base": [
+      1,
+      2
+    ],
+    "best_single_bias_free_linear": {
+      "mse": 4.0,
+      "weights": [
+        1,
+        2
+      ]
+    },
+    "exactly_representable_by": [
+      "shared_12_plus_4x1",
+      "shared_8_plus_4x2_ternary",
+      "shared_4_plus_4x3",
+      "independent_k4_w4"
+    ],
+    "inputs_and_router_rows": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "route_deltas": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "route_weights": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "routed_mse": 0.0,
+    "targets": [
+      -1,
+      3,
+      1,
+      5
+    ]
+  },
+  "args": {
+    "alignment": 16,
+    "baseline_bits": 16,
+    "dimension": 4096,
+    "hidden": 14336,
+    "output": "results/conditional-weight-allocation-frontier.json",
+    "router_bits": 16,
+    "scale_bits": 16
+  },
+  "gates": {
+    "all_layouts_fit_bf16_bytes": true,
+    "all_layouts_fit_bf16_matrix_macs_including_router": true,
+    "allocation_neutral_witness_routes_and_reconstructs_exactly": true,
+    "eight_plus_four_times_two_requires_route_correlation_above_0p93_in_high_rate_model": true,
+    "independent_k4_w4_reads_less_active_payload_than_8_plus_4x2": true
+  },
+  "high_rate_model": {
+    "assumption": "distortion is proportional to variance times 2^(-2 bits); codebook constants, ternary unused code, cross terms, routing, and nonlinear loss are omitted",
+    "crossovers_against_independent_k4_w4": [
+      {
+        "base_bits": 12,
+        "base_distortion_factor": 5.960464477539063e-08,
+        "delta_bits": 1,
+        "delta_distortion_factor": 0.25,
+        "independent_bits": 4,
+        "independent_distortion_factor": 0.00390625,
+        "maximum_delta_to_base_variance_ratio_for_structured_win": 0.01587277367001488,
+        "minimum_pairwise_route_correlation_for_structured_win": 0.9843752346933448
+      },
+      {
+        "base_bits": 8,
+        "base_distortion_factor": 1.52587890625e-05,
+        "delta_bits": 2,
+        "delta_distortion_factor": 0.0625,
+        "independent_bits": 4,
+        "independent_distortion_factor": 0.00390625,
+        "maximum_delta_to_base_variance_ratio_for_structured_win": 0.06640625,
+        "minimum_pairwise_route_correlation_for_structured_win": 0.9377289377289377
+      },
+      {
+        "base_bits": 4,
+        "base_distortion_factor": 0.00390625,
+        "delta_bits": 3,
+        "delta_distortion_factor": 0.015625,
+        "independent_bits": 4,
+        "independent_distortion_factor": 0.00390625,
+        "maximum_delta_to_base_variance_ratio_for_structured_win": 0.0,
+        "minimum_pairwise_route_correlation_for_structured_win": 1.0
+      }
+    ]
+  },
+  "layouts": [
+    {
+      "active_payload_bits_per_coordinate": 13,
+      "active_payload_fraction_of_bf16": 0.8125,
+      "aligned_hidden": 14320,
+      "hidden_reduction": 16,
+      "mac_slack": 180224,
+      "matrix_plus_router_macs": 175980544,
+      "name": "shared_base_12_plus_4x1",
+      "payload_bits_per_coordinate": 16,
+      "resident_bytes": 352288456,
+      "routes": 4,
+      "scale_sets": 5,
+      "storage_slack_bytes": 33080
+    },
+    {
+      "active_payload_bits_per_coordinate": 10,
+      "active_payload_fraction_of_bf16": 0.625,
+      "aligned_hidden": 14320,
+      "hidden_reduction": 16,
+      "mac_slack": 180224,
+      "matrix_plus_router_macs": 175980544,
+      "name": "shared_base_8_plus_4x2_ternary",
+      "payload_bits_per_coordinate": 16,
+      "resident_bytes": 352288456,
+      "routes": 4,
+      "scale_sets": 5,
+      "storage_slack_bytes": 33080
+    },
+    {
+      "active_payload_bits_per_coordinate": 7,
+      "active_payload_fraction_of_bf16": 0.4375,
+      "aligned_hidden": 14320,
+      "hidden_reduction": 16,
+      "mac_slack": 180224,
+      "matrix_plus_router_macs": 175980544,
+      "name": "shared_base_4_plus_4x3",
+      "payload_bits_per_coordinate": 16,
+      "resident_bytes": 352288456,
+      "routes": 4,
+      "scale_sets": 5,
+      "storage_slack_bytes": 33080
+    },
+    {
+      "active_payload_bits_per_coordinate": 4,
+      "active_payload_fraction_of_bf16": 0.25,
+      "aligned_hidden": 14320,
+      "hidden_reduction": 16,
+      "mac_slack": 180224,
+      "matrix_plus_router_macs": 175980544,
+      "name": "independent_k4_w4",
+      "payload_bits_per_coordinate": 16,
+      "resident_bytes": 352222984,
+      "routes": 4,
+      "scale_sets": 4,
+      "storage_slack_bytes": 98552
+    },
+    {
+      "active_payload_bits_per_coordinate": 2,
+      "active_payload_fraction_of_bf16": 0.125,
+      "aligned_hidden": 14304,
+      "hidden_reduction": 32,
+      "mac_slack": 360448,
+      "matrix_plus_router_macs": 175800320,
+      "name": "independent_k8_w2",
+      "payload_bits_per_coordinate": 16,
+      "resident_bytes": 352123920,
+      "routes": 8,
+      "scale_sets": 8,
+      "storage_slack_bytes": 197616
+    },
+    {
+      "active_payload_bits_per_coordinate": 8,
+      "active_payload_fraction_of_bf16": 0.5,
+      "aligned_hidden": 14320,
+      "hidden_reduction": 16,
+      "mac_slack": 188416,
+      "matrix_plus_router_macs": 175972352,
+      "name": "independent_k2_w8",
+      "payload_bits_per_coordinate": 16,
+      "resident_bytes": 352075652,
+      "routes": 2,
+      "scale_sets": 2,
+      "storage_slack_bytes": 245884
+    }
+  ],
+  "preregistration_sha256": "cd0cf3f2cf4ef0c6541efa18f7e76463107ecc01bd3358deed7c2d48a25e2601",
+  "scope": "single-GPU exact ledger plus optimistic scalar high-rate screen; no LLM-quality claim",
+  "source_sha256": "b97cfabb3277d337f08838aa4c7933c669a4fd4795ce0c51a7a2517d6a9e1b95"
+}

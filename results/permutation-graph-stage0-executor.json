@@ -1,0 +1,17 @@
+{
+  "arena_bytes": 4096,
+  "commands": 1024,
+  "final_arena_sha256": "01087b8f7de9726d92b38537320f5f5513d0e6761d9edf60f0aeb6a9fefd6415",
+  "final_snapshot_sha256": "0da5809dfee2551327b1a3345e8b9e3e898aa6feff57bba4b11028c657f1fa53",
+  "node_count": 64,
+  "schema_version": 1,
+  "seed": 17,
+  "trajectory_steps": 1024,
+  "typed_operations": {
+    "branch": 305,
+    "comparison": 4804,
+    "gather": 1468,
+    "integer_arithmetic": 0,
+    "scatter": 2970
+  }
+}

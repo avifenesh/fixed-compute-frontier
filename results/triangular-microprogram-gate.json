@@ -1,0 +1,46 @@
+{
+  "all_gates_pass": true,
+  "candidate": "triangular-microprogram-layer",
+  "capability_status": "untested",
+  "claim_boundary": {
+    "not_free": "lower-triangular scalars are learned bytes and their recurrence is serial",
+    "strict_gain": "program-specific nonlinear feature composition with additive PEER as T=0",
+    "structural_prior": "many useful functions reuse a smaller global bank of input/output feature vectors"
+  },
+  "dimension": 48,
+  "gate": "G0-algebra-and-ledger-only",
+  "gates": {
+    "contains_additive_endpoint_exactly": true,
+    "contains_sequential_rank_one_endpoint": true,
+    "degree_grows_exponentially_for_square_activation": true,
+    "learned_coupling_changes_function": true,
+    "scalar_runtime_overhead_below_0p1_percent": true
+  },
+  "length": 8,
+  "metrics": {
+    "max_compiled_sequential_relative_error": 1.8951674800129173e-16,
+    "max_zero_coupling_absolute_error": 0.0,
+    "median_learned_coupling_distance_from_additive": 0.1629496831077673,
+    "square_activation_additive_degree": 2,
+    "square_activation_triangular_degree": 256
+  },
+  "resource_ledger": {
+    "active_expert_bytes": 131104,
+    "bank_size": 16384,
+    "dimension": 4096,
+    "equal_byte_additive_peer_bank_size": 20777,
+    "expert_bank_bytes": 268500992,
+    "length": 8,
+    "program_record_bytes": 72,
+    "program_table_bytes": 72000000,
+    "programs": 1000000,
+    "scalar_overhead_fraction": 0.00042724609375,
+    "total_bytes_excluding_router_and_alignment": 340500992,
+    "triangle_scalars_per_program": 28,
+    "triangular_scalar_macs": 28,
+    "vector_macs": 65536
+  },
+  "seed": 31,
+  "source_sha256": "870b8d69564d355d23dda0ff28dd08b60a37a7d22a1f04ac279509360111219a",
+  "trials": 64
+}

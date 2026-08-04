@@ -1,0 +1,15 @@
+{
+  "checked_prefixes": 642,
+  "checked_sequences": 127,
+  "lineage": "CPKV-TOPK-001",
+  "max_length": 6,
+  "minimum_bound_slack": 1.0812780555216042,
+  "minimum_k3_history_mass": 0.005346229695846937,
+  "status": "pass",
+  "x4": {
+    "bound": 0.5,
+    "discarded_mass": 0.25,
+    "read_error": 0.28867513459481287,
+    "top3_history_mass": 0.75
+  }
+}

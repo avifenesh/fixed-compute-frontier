@@ -1,0 +1,181 @@
+{
+  "cells": [
+    {
+      "candidate_over_control_median": 1.013352454981077,
+      "correctness": {
+        "bit_exact_bf16": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "logical": {
+        "atlas_bits": 6144,
+        "candidate_extra_per_key_pair_token": "one square, one coefficient multiply, one add, one pivot load per program",
+        "dense_qkv_macs_each": 25165824,
+        "output_bytes_each": 12288,
+        "resident_weight_bytes_each": 50331648
+      },
+      "rows": 1,
+      "timing": {
+        "canonical_control": {
+          "median_us": 33.55199843645096,
+          "p05_us": 32.48000144958496,
+          "p95_us": 35.999998450279236
+        },
+        "gauge_zero_g1": {
+          "median_us": 33.99999998509884,
+          "p05_us": 33.15199911594391,
+          "p95_us": 36.479998379945755
+        }
+      }
+    },
+    {
+      "candidate_over_control_median": 0.9859616303374955,
+      "correctness": {
+        "bit_exact_bf16": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "logical": {
+        "atlas_bits": 6144,
+        "candidate_extra_per_key_pair_token": "one square, one coefficient multiply, one add, one pivot load per program",
+        "dense_qkv_macs_each": 201326592,
+        "output_bytes_each": 98304,
+        "resident_weight_bytes_each": 50331648
+      },
+      "rows": 8,
+      "timing": {
+        "canonical_control": {
+          "median_us": 34.19199958443642,
+          "p05_us": 32.54399821162224,
+          "p95_us": 36.0959991812706
+        },
+        "gauge_zero_g1": {
+          "median_us": 33.7119996547699,
+          "p05_us": 33.02399814128876,
+          "p95_us": 35.42400151491165
+        }
+      }
+    },
+    {
+      "candidate_over_control_median": 1.0084945274362171,
+      "correctness": {
+        "bit_exact_bf16": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "logical": {
+        "atlas_bits": 6144,
+        "candidate_extra_per_key_pair_token": "one square, one coefficient multiply, one add, one pivot load per program",
+        "dense_qkv_macs_each": 805306368,
+        "output_bytes_each": 393216,
+        "resident_weight_bytes_each": 50331648
+      },
+      "rows": 32,
+      "timing": {
+        "canonical_control": {
+          "median_us": 33.904001116752625,
+          "p05_us": 32.99200162291527,
+          "p95_us": 36.768000572919846
+        },
+        "gauge_zero_g1": {
+          "median_us": 34.19199958443642,
+          "p05_us": 33.15199911594391,
+          "p95_us": 35.679999738931656
+        }
+      }
+    },
+    {
+      "candidate_over_control_median": 1.019469763410693,
+      "correctness": {
+        "bit_exact_bf16": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "logical": {
+        "atlas_bits": 6144,
+        "candidate_extra_per_key_pair_token": "one square, one coefficient multiply, one add, one pivot load per program",
+        "dense_qkv_macs_each": 3221225472,
+        "output_bytes_each": 1572864,
+        "resident_weight_bytes_each": 50331648
+      },
+      "rows": 128,
+      "timing": {
+        "canonical_control": {
+          "median_us": 38.62399980425835,
+          "p05_us": 37.856001406908035,
+          "p95_us": 41.21600091457367
+        },
+        "gauge_zero_g1": {
+          "median_us": 39.37599994242191,
+          "p05_us": 38.047999143600464,
+          "p95_us": 41.50399938225746
+        }
+      }
+    },
+    {
+      "candidate_over_control_median": 1.003503062631008,
+      "correctness": {
+        "bit_exact_bf16": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "logical": {
+        "atlas_bits": 6144,
+        "candidate_extra_per_key_pair_token": "one square, one coefficient multiply, one add, one pivot load per program",
+        "dense_qkv_macs_each": 12884901888,
+        "output_bytes_each": 6291456,
+        "resident_weight_bytes_each": 50331648
+      },
+      "rows": 512,
+      "timing": {
+        "canonical_control": {
+          "median_us": 68.51200014352798,
+          "p05_us": 67.16799736022949,
+          "p95_us": 70.20799815654755
+        },
+        "gauge_zero_g1": {
+          "median_us": 68.7520019710064,
+          "p05_us": 67.23199784755707,
+          "p95_us": 70.88000327348709
+        }
+      }
+    },
+    {
+      "candidate_over_control_median": 1.0013938468019032,
+      "correctness": {
+        "bit_exact_bf16": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0
+      },
+      "logical": {
+        "atlas_bits": 6144,
+        "candidate_extra_per_key_pair_token": "one square, one coefficient multiply, one add, one pivot load per program",
+        "dense_qkv_macs_each": 51539607552,
+        "output_bytes_each": 25165824,
+        "resident_weight_bytes_each": 50331648
+      },
+      "rows": 2048,
+      "timing": {
+        "canonical_control": {
+          "median_us": 206.62399381399155,
+          "p05_us": 205.76000213623047,
+          "p95_us": 208.67200195789337
+        },
+        "gauge_zero_g1": {
+          "median_us": 206.91199600696564,
+          "p05_us": 205.82400262355804,
+          "p95_us": 209.08799767494202
+        }
+      }
+    }
+  ],
+  "device": "NVIDIA H100 80GB HBM3",
+  "schema": "gauge-zero-g1-h100-development-v1",
+  "shape": {
+    "head_dim": 128,
+    "hidden": 4096,
+    "kv_heads": 8,
+    "qkv_dim": 6144,
+    "query_heads": 32
+  }
+}

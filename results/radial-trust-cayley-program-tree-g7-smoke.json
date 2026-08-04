@@ -1,0 +1,54 @@
+{
+  "arguments": {
+    "gradient_clip": 1.0,
+    "micro_batch_size": 8,
+    "output": "results/radial-trust-cayley-program-tree-g7-smoke.json",
+    "router_aux_weight": 0.01,
+    "seed": 815,
+    "sequence_length": 512,
+    "train_file": "data/block-algebra-scratch-v4576/train.uint16.bin"
+  },
+  "data_sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a",
+  "environment": {
+    "cuda": "13.0",
+    "device_total_bytes": 101975851008,
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.12.1+cu130",
+    "transformers": "4.57.6"
+  },
+  "integrity": true,
+  "language_preregistration_sha256": "a42bb81d5981cbcb0f5cc62ae33bda2a144a13ee41f7d6a3965392df5b2a0947",
+  "ledger": {
+    "baseline_dense_macs": 1179648,
+    "baseline_swiglu_parameters": 1179648,
+    "candidate_multiply_like_active_upper_bound": 96768,
+    "candidate_parameters": 1179583,
+    "generator_parameters": 1728,
+    "hard_path_payload_scalars": 10368,
+    "ideal_active_ratio": 0.08203125,
+    "nodes": 511,
+    "parameter_difference": -65,
+    "payload_parameters": 1177344,
+    "threshold_parameters": 511
+  },
+  "measurement": {
+    "elapsed_seconds": 2.466745333003928,
+    "finite": true,
+    "gradient_norm": 3.254190444946289,
+    "language_loss": 11.215583801269531,
+    "peak_allocated_bytes": 45984291840,
+    "peak_reserved_bytes": 50138710016,
+    "router_auxiliary": 1.0116920471191406
+  },
+  "module_sha256": "cf64ab47717ec0cb8a8720fbd768adf48ca9785f0169253966f5a1539ff70226",
+  "parameters": {
+    "ffn": 14154996,
+    "total": 37752948
+  },
+  "pass": true,
+  "pilot_source_sha256": "79cdccbbaffb11428f5fc5e1368c9f690a56538f74d7cafdb8c5914c7f806ca5",
+  "preregistration_sha256": "15aa767b7ba756d21e064a59a5d8f51d07065f5f2694c51a035840b7bbc8197b",
+  "schema": "radial-trust-cayley-program-tree-g7-smoke-v1",
+  "source_sha256": "7e228e7b23703bea6105523c48c87adf547e61876fdbc54e9465ef0a4431af6f",
+  "stage0_result_sha256": "973a2a210dce047544347c7b2cecbca1805c4f707553bcc2753c47d3740cfa6e"
+}

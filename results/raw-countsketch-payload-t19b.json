@@ -1,0 +1,90 @@
+{
+  "all_gates_pass": false,
+  "claim_boundary": "This is a raw-payload sufficiency and physical-write screen. It does not train an LM or demonstrate deployed knowledge/reasoning.",
+  "configuration": {
+    "active_title_token_rows": 4150,
+    "address_dimensions": 32,
+    "documents": 2405,
+    "expected_writes": 743670,
+    "l2_coefficient": 0.01,
+    "lbfgs_iterations": 200,
+    "payload_dimensions": 220,
+    "payload_start": 64,
+    "reader_feature_dimensions": 885,
+    "titles": 2405,
+    "write_budget": 743734
+  },
+  "corpus": {
+    "minimum_bf16_cosine": 0.9999971389770508,
+    "minimum_bf16_norm": 0.9978584051132202,
+    "minimum_fp32_norm": 0.9999998211860657,
+    "unique_features": 129971
+  },
+  "device": "cuda",
+  "gates": {
+    "bf16_cosine_at_least_0p9999": true,
+    "both_classes": true,
+    "compiler_signature_raw_only": true,
+    "finite_no_retry_reader": true,
+    "input_integrity": true,
+    "ordinary_served_structure_identical": true,
+    "payloads_finite_nonzero": true,
+    "raw_only_compiler_fields": true,
+    "reader_beats_t12_semantic_by_10pp": false,
+    "reader_evaluation_at_least_75pct": false,
+    "two_titles_every_question": true,
+    "write_budget": true,
+    "write_count_exact": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "evaluation_qa_sha256": "5a0413f53bfc0fc73b5e66c941c708077624908095934af740c84d234b9fea6b",
+    "preregistration_sha256": "861f5690a99d70f232373bfd6c071cf1035bba8a26d3b6ec2e169d66d70110d9",
+    "source_sha256": "17b030f69b86dc7be68dfc63e363eb45962032393cddff360a333fe412263598",
+    "train_qa_sha256": "edaef010f68f1a919ac9f9e8389444ddde1afde6d2b9d1375156195f8758b0f9"
+  },
+  "physical_write_ledger": {
+    "blocks_used": 3,
+    "channels_used": 2405,
+    "down_payload_writes": 529100,
+    "gate_key_writes": 76960,
+    "gate_threshold_writes": 2405,
+    "title_code_writes": 132800,
+    "total_writes": 743670,
+    "up_constant_writes": 2405
+  },
+  "reader": {
+    "closure_evaluations": 25,
+    "evaluation": {
+      "accuracy": 0.6057692307692307,
+      "errors": 41,
+      "examples": 104,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.5096153846153846
+    },
+    "finite": true,
+    "terminal_regularized_loss": 0.03537329562708532,
+    "train": {
+      "accuracy": 1.0,
+      "errors": 0,
+      "examples": 146,
+      "positive_rate": 0.5273972602739726,
+      "predicted_positive_rate": 0.5273972602739726
+    },
+    "weight_norm": 2.203310911249053
+  },
+  "reader_data": {
+    "evaluation": {
+      "examples": 104,
+      "positive_rate": 0.5384615384615384,
+      "unique_title_pairs": 104
+    },
+    "train": {
+      "examples": 146,
+      "positive_rate": 0.5273972602739726,
+      "unique_title_pairs": 146
+    }
+  },
+  "schema": "raw-countsketch-payload-t19b-v1",
+  "status": "fail"
+}

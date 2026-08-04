@@ -1,0 +1,17 @@
+{
+  "device": "cpu",
+  "equality_code_gradient_norm": 2.025998592376709,
+  "equality_loss": 0.48218482732772827,
+  "evaluation_negative_pairs": 224,
+  "evaluation_positive_pairs": 36,
+  "evaluation_structured_reads": 1743,
+  "finite": true,
+  "preregistration_sha256": "fa70cd79d4d632c524db5da3db0e326edf932f5a996990d94e1bb8145c88e1fc",
+  "source_sha256": "ff68db68976581ac70fdd4117d195b4c535c57ab9ec2e3af97fe87f98c750375",
+  "tests_sha256": "50cb983e0402c46989b2e66d8d5b57b48d2f6c0214e665ca017ca42fb9fc6678",
+  "train_negative_pairs": 21148,
+  "train_positive_pairs": 562,
+  "train_structured_reads": 10746,
+  "unary_code_gradient_norm": 1.9421690702438354,
+  "unary_loss": 10.84826946258545
+}

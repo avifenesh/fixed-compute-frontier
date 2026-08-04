@@ -1,0 +1,171 @@
+{
+  "all_gates_pass": true,
+  "args": {
+    "alignment": 16,
+    "base_bits": 8,
+    "baseline_bits": 16,
+    "delta_bits": 2,
+    "dimension": 4096,
+    "experts": 4,
+    "hidden": 14336,
+    "output": "results/bit-budgeted-conditional-matrix-stage0-v3.json",
+    "router_bits": 16,
+    "scale_bits": 16
+  },
+  "candidate": "Bit-Budgeted Conditional Matrix",
+  "conditional_witness": {
+    "actual_affine_router_routes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "base_int8_codes": [
+      0,
+      0
+    ],
+    "base_scale": 1.0,
+    "best_single_bias_free_linear": {
+      "mse": 4.0,
+      "weights": [
+        0.0,
+        0.0
+      ]
+    },
+    "decoded_route_weights": [
+      [
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0
+      ]
+    ],
+    "delta_codes": [
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "delta_scale": 1.0,
+    "delta_two_bit_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "expected_routes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "inputs": [
+      [
+        -2.0,
+        0.0
+      ],
+      [
+        0.0,
+        -2.0
+      ],
+      [
+        0.0,
+        2.0
+      ],
+      [
+        2.0,
+        0.0
+      ]
+    ],
+    "routed": {
+      "mse": 0.0,
+      "multiplications_per_example_after_routing": 2,
+      "routes_match": true
+    },
+    "router_biases": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "router_weights": [
+      [
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        1.0
+      ],
+      [
+        1.0,
+        0.0
+      ]
+    ],
+    "targets": [
+      2.0,
+      2.0,
+      2.0,
+      2.0
+    ],
+    "unused_two_bit_pattern_count": 1
+  },
+  "gates": {
+    "active_matrix_plus_router_macs_not_above_baseline": true,
+    "affine_router_realizes_four_frozen_regions": true,
+    "conditional_witness_exact": true,
+    "exact_physical_payload_is_16_bits": true,
+    "exact_resident_storage_not_above_bf16": true,
+    "frozen_8_plus_k_times_2_allocation_cap_is_four": true,
+    "single_bias_free_linear_witness_inexact": true,
+    "witness_uses_deployed_ternary_delta_alphabet": true
+  },
+  "ledger": {
+    "baseline_bytes": 352321536,
+    "baseline_hidden": 14336,
+    "baseline_matrix_macs_per_token": 176160768,
+    "baseline_matrix_weights": 176160768,
+    "candidate_bytes_including_scales_and_router": 352288456,
+    "candidate_matrix_plus_router_macs_per_token": 175980544,
+    "candidate_matrix_weights": 175964160,
+    "equal_storage_aligned_hidden": 14320,
+    "frozen_allocation_expert_cap": 4,
+    "hidden_reduction": 16,
+    "logical_base_plus_expert_weight_values": 879820800,
+    "mac_reduction_fraction": 0.0010230654761904762,
+    "payload_bits_per_coordinate": 16,
+    "physical_delta_bit_patterns_per_coordinate": 256,
+    "router_bias_additions_per_token": 4,
+    "semantic_delta_combinations_per_coordinate": 81,
+    "unused_bytes": 33080
+  },
+  "net_gain_condition": "In a local quadratic loss model, routed specialization helps only when the between-route Hessian-weighted variance of optimal matrices exceeds the Hessian-weighted base-plus-delta quantization error and routing error.",
+  "preregistration_sha256": "a1047d74c5c684e76a593c4fd2a75019758279fed22fe9b7adb95e5a8c54c206",
+  "scope": "stage-0 exact arithmetic and artificial function-class witness only",
+  "source_sha256": "718d12f75e662ca7f57763faebcaaea72d7815cd88ba618b883d03fd6e069494"
+}

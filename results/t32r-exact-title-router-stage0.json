@@ -1,0 +1,48 @@
+{
+  "status": "fail_exact_surface_router",
+  "domain": {
+    "documents": 2405,
+    "questions": 104
+  },
+  "counts": {
+    "routes_produced": 104,
+    "distinct_route_pairs": 104,
+    "support_matches": 102,
+    "support_mismatches": 2,
+    "case_matches": 104,
+    "alias_rejections": 104,
+    "deletion_rejections": 98,
+    "deletion_nonrejections": 6,
+    "order_matches": 104
+  },
+  "failed_gates": [
+    "all_support_pairs_match",
+    "single_title_deletions_rejected"
+  ],
+  "support_mismatch_examples": [
+    {
+      "id": "5ac0d9a35542992a796ded90",
+      "raw_route": ["Hungry Hungry Hippos", "Parker Brothers"],
+      "sealed_support": ["Hungry Hungry Hippos", "Parcheesi"]
+    },
+    {
+      "id": "5ae0847455429945ae959394",
+      "raw_route": ["Hanafuda", "Card game"],
+      "sealed_support": ["Hanafuda", "Okey"]
+    }
+  ],
+  "integrity": {
+    "corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "evaluator_sha256": "5a0413f53bfc0fc73b5e66c941c708077624908095934af740c84d234b9fea6b",
+    "route_digest_sha256": "666e375a1d2c7cfec921170bdffea5ab52bd6936989fdb1a89b5005fffcdbbd3",
+    "executed_source_sha256": "b2da49e841ae2cf46d95f2d2d2226c8e4d14377d747bc987414c63f79b820699",
+    "executed_tests_sha256": "a9ff76e126f0ae39fb1064713a4a3ba648124e991ba3bbc792d8efc637fb9aca",
+    "preregistration_sha256": "abfce6f664483e2c50a64ba58f5991b1d7da1e47d285406a1fe1c6e0136e20d8"
+  },
+  "environment": {
+    "gpu_access": false,
+    "model_access": false,
+    "cpu_only": true
+  },
+  "decision": "close_literal_longest_two_matcher_as_autonomous_router"
+}

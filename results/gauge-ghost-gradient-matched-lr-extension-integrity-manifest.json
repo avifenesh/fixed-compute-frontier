@@ -1,0 +1,20 @@
+{
+  "schema": "gauge-ghost-gradient-matched-lr-extension-integrity-v1",
+  "extension_source_sha256": "0d609b4e15551787fd649f4618461d748cbdd8b2e433d31caff563d948746c6e",
+  "preregistration_sha256": "d45c3fc15e66e03c57ccbb46e162766b4d3f5870513c431d017a925b2ee78aac",
+  "matched_source_sha256": "e91c7f098341839c6b1c8584bea2f04c068f91ff82ed88f98f1beddaf2e25c8b",
+  "matched_preregistration_sha256": "d6a35778dce1c5034623799fe6b022ed4810f3e7814691f315750807cfa0ddc1",
+  "matched_manifest_sha256": "6054ac9811de161f85a229d0d6f4cd9393e13a19651022e06a8d9649edec0594",
+  "matched_result_sha256": "901a3d6818bed0889b8b9370dee955471659b78cd2947e9a8a56f7fc25bc8224",
+  "replication_source_sha256": "93c7d85e32aa0436195d434b941aa3807f2597c22c20032e811368023a98d7b5",
+  "mechanism_source_sha256": "0974217c77ef21e6fde368f58d3adfa745d3455a691a9f8d7e83c1406bd72fa8",
+  "mechanism_manifest_sha256": "9c7b832194cbd25a4ededa732e52ea6aaf760295456a4581f557ec60cb15d6b9",
+  "mechanism_result_sha256": "706f38007b87400420ab916748796b0ffb75a5c431fa084c0add1a25a6c836e4",
+  "data_manifest_sha256": "8770dd2e042e65090c17e2d0061ebe215fe3f1436815cdb65c968e1ba91b1627",
+  "python_version": "3.11.10",
+  "numpy_version": "2.1.2",
+  "torch_version": "2.5.1+cu124",
+  "cuda_version": "12.4",
+  "transformers_version": "4.57.6",
+  "triton_version": "3.1.0"
+}

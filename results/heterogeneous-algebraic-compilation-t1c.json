@@ -1,0 +1,1405 @@
+{
+  "schema": "heterogeneous-algebraic-compilation-t1c-v1",
+  "status": "complete",
+  "device": "cuda",
+  "torch_version": "2.12.1+cu130",
+  "configuration": {
+    "vocab_size": 4,
+    "context": 32,
+    "hidden": 64,
+    "heads": 4,
+    "ffn_width": 128,
+    "parameter_count": 43392,
+    "world_seeds": [
+      731,
+      947,
+      1213
+    ],
+    "checkpoints": [
+      4,
+      8,
+      500,
+      2000
+    ]
+  },
+  "ledger": {
+    "candidate_dense_training_steps": 0,
+    "candidate_prefix_examples": 256,
+    "control_examples_per_run": 128000,
+    "candidate_parameter_writes_upper_bound": 43392,
+    "same_inference_graph": true
+  },
+  "worlds": {
+    "731": {
+      "observed_support": [
+        4,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        24,
+        25,
+        27,
+        28,
+        30,
+        31
+      ],
+      "candidate": {
+        "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+        "rank": 32,
+        "xor_bit_ops": 131175,
+        "recovered_support": [
+          4,
+          7,
+          8,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          22,
+          24,
+          25,
+          27,
+          28,
+          30,
+          31
+        ],
+        "support_exact": true,
+        "compilation": {
+          "support_size": 18,
+          "interpolation_channels": 19,
+          "interpolation_max_abs_error_float64": 2.2737367544323206e-13,
+          "attention_logit_gap": 30.0
+        },
+        "elapsed_seconds": 0.08459195100294892,
+        "evaluation": {
+          "accuracy": 1.0,
+          "parity_accuracy": 1.0,
+          "protected_accuracy": 1.0,
+          "bce": 0.00033554091351106763
+        }
+      },
+      "controls": {
+        "adamw": {
+          "runs": [
+            {
+              "family": "adamw",
+              "lr": 0.001,
+              "multiplier": null,
+              "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.4989013671875,
+                  "parity_accuracy": 0.4910324513912201,
+                  "protected_accuracy": 0.50688636302948,
+                  "bce": 0.6931954026222229
+                },
+                "8": {
+                  "accuracy": 0.494873046875,
+                  "parity_accuracy": 0.4832003712654114,
+                  "protected_accuracy": 0.5067817568778992,
+                  "bce": 0.6933057308197021
+                },
+                "500": {
+                  "accuracy": 0.7501220703125,
+                  "parity_accuracy": 0.4948174059391022,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.34302160143852234
+                },
+                "2000": {
+                  "accuracy": 0.7464599609375,
+                  "parity_accuracy": 0.4959961175918579,
+                  "protected_accuracy": 0.9999999403953552,
+                  "bce": 0.3494780659675598
+                }
+              },
+              "elapsed_seconds": 4.636283137006103,
+              "examples": 128000
+            },
+            {
+              "family": "adamw",
+              "lr": 0.003,
+              "multiplier": null,
+              "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.4989013671875,
+                  "parity_accuracy": 0.4910324513912201,
+                  "protected_accuracy": 0.50688636302948,
+                  "bce": 0.6934719681739807
+                },
+                "8": {
+                  "accuracy": 0.494873046875,
+                  "parity_accuracy": 0.4832003712654114,
+                  "protected_accuracy": 0.5067817568778992,
+                  "bce": 0.6937052011489868
+                },
+                "500": {
+                  "accuracy": 0.752197265625,
+                  "parity_accuracy": 0.49901285767555237,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.34282007813453674
+                },
+                "2000": {
+                  "accuracy": 0.7464599609375,
+                  "parity_accuracy": 0.4959961175918579,
+                  "protected_accuracy": 0.9999999403953552,
+                  "bce": 0.3490965962409973
+                }
+              },
+              "elapsed_seconds": 4.43867933099682,
+              "examples": 128000
+            }
+          ],
+          "best": {
+            "family": "adamw",
+            "lr": 0.001,
+            "multiplier": null,
+            "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+            "checkpoints": {
+              "4": {
+                "accuracy": 0.4989013671875,
+                "parity_accuracy": 0.4910324513912201,
+                "protected_accuracy": 0.50688636302948,
+                "bce": 0.6931954026222229
+              },
+              "8": {
+                "accuracy": 0.494873046875,
+                "parity_accuracy": 0.4832003712654114,
+                "protected_accuracy": 0.5067817568778992,
+                "bce": 0.6933057308197021
+              },
+              "500": {
+                "accuracy": 0.7501220703125,
+                "parity_accuracy": 0.4948174059391022,
+                "protected_accuracy": 1.0,
+                "bce": 0.34302160143852234
+              },
+              "2000": {
+                "accuracy": 0.7464599609375,
+                "parity_accuracy": 0.4959961175918579,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.3494780659675598
+              }
+            },
+            "elapsed_seconds": 4.636283137006103,
+            "examples": 128000
+          }
+        },
+        "muon": {
+          "runs": [
+            {
+              "family": "muon",
+              "lr": 0.001,
+              "multiplier": null,
+              "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.4989013671875,
+                  "parity_accuracy": 0.4910324513912201,
+                  "protected_accuracy": 0.50688636302948,
+                  "bce": 0.6931631565093994
+                },
+                "8": {
+                  "accuracy": 0.494873046875,
+                  "parity_accuracy": 0.4832003712654114,
+                  "protected_accuracy": 0.5067817568778992,
+                  "bce": 0.6931943893432617
+                },
+                "500": {
+                  "accuracy": 0.5357666015625,
+                  "parity_accuracy": 0.5034551024436951,
+                  "protected_accuracy": 0.5673912763595581,
+                  "bce": 0.6929458379745483
+                },
+                "2000": {
+                  "accuracy": 0.5701904296875,
+                  "parity_accuracy": 0.5047318339347839,
+                  "protected_accuracy": 0.6364529132843018,
+                  "bce": 0.6671402454376221
+                }
+              },
+              "elapsed_seconds": 9.052382441994268,
+              "examples": 128000
+            },
+            {
+              "family": "muon",
+              "lr": 0.003,
+              "multiplier": null,
+              "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.4989013671875,
+                  "parity_accuracy": 0.4910324513912201,
+                  "protected_accuracy": 0.50688636302948,
+                  "bce": 0.6931743621826172
+                },
+                "8": {
+                  "accuracy": 0.494873046875,
+                  "parity_accuracy": 0.4832003712654114,
+                  "protected_accuracy": 0.5067817568778992,
+                  "bce": 0.6932618021965027
+                },
+                "500": {
+                  "accuracy": 0.530029296875,
+                  "parity_accuracy": 0.4918558895587921,
+                  "protected_accuracy": 0.5673912763595581,
+                  "bce": 0.690048098564148
+                },
+                "2000": {
+                  "accuracy": 0.7464599609375,
+                  "parity_accuracy": 0.4959961175918579,
+                  "protected_accuracy": 0.9999999403953552,
+                  "bce": 0.34879255294799805
+                }
+              },
+              "elapsed_seconds": 8.938922870001988,
+              "examples": 128000
+            }
+          ],
+          "best": {
+            "family": "muon",
+            "lr": 0.003,
+            "multiplier": null,
+            "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+            "checkpoints": {
+              "4": {
+                "accuracy": 0.4989013671875,
+                "parity_accuracy": 0.4910324513912201,
+                "protected_accuracy": 0.50688636302948,
+                "bce": 0.6931743621826172
+              },
+              "8": {
+                "accuracy": 0.494873046875,
+                "parity_accuracy": 0.4832003712654114,
+                "protected_accuracy": 0.5067817568778992,
+                "bce": 0.6932618021965027
+              },
+              "500": {
+                "accuracy": 0.530029296875,
+                "parity_accuracy": 0.4918558895587921,
+                "protected_accuracy": 0.5673912763595581,
+                "bce": 0.690048098564148
+              },
+              "2000": {
+                "accuracy": 0.7464599609375,
+                "parity_accuracy": 0.4959961175918579,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.34879255294799805
+              }
+            },
+            "elapsed_seconds": 8.938922870001988,
+            "examples": 128000
+          }
+        },
+        "rademacher_hinge": {
+          "runs": [
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.001,
+              "multiplier": 0.5,
+              "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.4989013671875,
+                  "parity_accuracy": 0.4910324513912201,
+                  "protected_accuracy": 0.50688636302948,
+                  "bce": 0.6933753490447998
+                },
+                "8": {
+                  "accuracy": 0.494873046875,
+                  "parity_accuracy": 0.4832003712654114,
+                  "protected_accuracy": 0.5067817568778992,
+                  "bce": 0.6939922571182251
+                },
+                "500": {
+                  "accuracy": 0.751220703125,
+                  "parity_accuracy": 0.49703851342201233,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.43057411909103394
+                },
+                "2000": {
+                  "accuracy": 0.751220703125,
+                  "parity_accuracy": 0.5054598450660706,
+                  "protected_accuracy": 0.9999999403953552,
+                  "bce": 0.45135924220085144
+                }
+              },
+              "elapsed_seconds": 4.462493863000418,
+              "examples": 128000
+            },
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.003,
+              "multiplier": 0.5,
+              "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.4989013671875,
+                  "parity_accuracy": 0.4910324513912201,
+                  "protected_accuracy": 0.50688636302948,
+                  "bce": 0.698262095451355
+                },
+                "8": {
+                  "accuracy": 0.494873046875,
+                  "parity_accuracy": 0.4832003712654114,
+                  "protected_accuracy": 0.5067817568778992,
+                  "bce": 0.7025872468948364
+                },
+                "500": {
+                  "accuracy": 0.7576904296875,
+                  "parity_accuracy": 0.5101184844970703,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.42863839864730835
+                },
+                "2000": {
+                  "accuracy": 0.7464599609375,
+                  "parity_accuracy": 0.4959961175918579,
+                  "protected_accuracy": 0.9999999403953552,
+                  "bce": 0.3760353922843933
+                }
+              },
+              "elapsed_seconds": 4.703323370995349,
+              "examples": 128000
+            },
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.001,
+              "multiplier": 1.0,
+              "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.5,
+                  "parity_accuracy": 0.4932137429714203,
+                  "protected_accuracy": 0.50688636302948,
+                  "bce": 0.6954361796379089
+                },
+                "8": {
+                  "accuracy": 0.494873046875,
+                  "parity_accuracy": 0.4832003712654114,
+                  "protected_accuracy": 0.5067817568778992,
+                  "bce": 0.7028269171714783
+                },
+                "500": {
+                  "accuracy": 0.7578125,
+                  "parity_accuracy": 0.5103653073310852,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3797505795955658
+                },
+                "2000": {
+                  "accuracy": 0.7464599609375,
+                  "parity_accuracy": 0.4959961175918579,
+                  "protected_accuracy": 0.9999999403953552,
+                  "bce": 0.45303481817245483
+                }
+              },
+              "elapsed_seconds": 4.787708335992647,
+              "examples": 128000
+            },
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.003,
+              "multiplier": 1.0,
+              "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.4989013671875,
+                  "parity_accuracy": 0.4910324513912201,
+                  "protected_accuracy": 0.50688636302948,
+                  "bce": 0.8066344261169434
+                },
+                "8": {
+                  "accuracy": 0.494873046875,
+                  "parity_accuracy": 0.4832003712654114,
+                  "protected_accuracy": 0.5067817568778992,
+                  "bce": 0.7381681799888611
+                },
+                "500": {
+                  "accuracy": 0.7578125,
+                  "parity_accuracy": 0.5103653073310852,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3983710706233978
+                },
+                "2000": {
+                  "accuracy": 0.7464599609375,
+                  "parity_accuracy": 0.4959961175918579,
+                  "protected_accuracy": 0.9999999403953552,
+                  "bce": 0.41557636857032776
+                }
+              },
+              "elapsed_seconds": 4.478294685992296,
+              "examples": 128000
+            }
+          ],
+          "best": {
+            "family": "rademacher_hinge",
+            "lr": 0.001,
+            "multiplier": 0.5,
+            "initial_hash": "370f186dec824876e7a6d02228c6226a9e97e554ba8b8573ccc8bb1605e41444",
+            "checkpoints": {
+              "4": {
+                "accuracy": 0.4989013671875,
+                "parity_accuracy": 0.4910324513912201,
+                "protected_accuracy": 0.50688636302948,
+                "bce": 0.6933753490447998
+              },
+              "8": {
+                "accuracy": 0.494873046875,
+                "parity_accuracy": 0.4832003712654114,
+                "protected_accuracy": 0.5067817568778992,
+                "bce": 0.6939922571182251
+              },
+              "500": {
+                "accuracy": 0.751220703125,
+                "parity_accuracy": 0.49703851342201233,
+                "protected_accuracy": 1.0,
+                "bce": 0.43057411909103394
+              },
+              "2000": {
+                "accuracy": 0.751220703125,
+                "parity_accuracy": 0.5054598450660706,
+                "protected_accuracy": 0.9999999403953552,
+                "bce": 0.45135924220085144
+              }
+            },
+            "elapsed_seconds": 4.462493863000418,
+            "examples": 128000
+          }
+        }
+      },
+      "identical_initial_hashes": true
+    },
+    "947": {
+      "observed_support": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        16,
+        18,
+        20,
+        23,
+        25,
+        26,
+        30,
+        31
+      ],
+      "candidate": {
+        "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+        "rank": 32,
+        "xor_bit_ops": 133848,
+        "recovered_support": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          16,
+          18,
+          20,
+          23,
+          25,
+          26,
+          30,
+          31
+        ],
+        "support_exact": true,
+        "compilation": {
+          "support_size": 17,
+          "interpolation_channels": 18,
+          "interpolation_max_abs_error_float64": 2.2737367544323206e-13,
+          "attention_logit_gap": 30.0
+        },
+        "elapsed_seconds": 0.037163864995818585,
+        "evaluation": {
+          "accuracy": 1.0,
+          "parity_accuracy": 1.0,
+          "protected_accuracy": 1.0,
+          "bce": 0.00033552461536601186
+        }
+      },
+      "controls": {
+        "adamw": {
+          "runs": [
+            {
+              "family": "adamw",
+              "lr": 0.001,
+              "multiplier": null,
+              "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.500244140625,
+                  "parity_accuracy": 0.5039043426513672,
+                  "protected_accuracy": 0.4965803623199463,
+                  "bce": 0.6931513547897339
+                },
+                "8": {
+                  "accuracy": 0.49755859375,
+                  "parity_accuracy": 0.5060620903968811,
+                  "protected_accuracy": 0.4889380633831024,
+                  "bce": 0.6931902766227722
+                },
+                "500": {
+                  "accuracy": 0.7615966796875,
+                  "parity_accuracy": 0.5173010230064392,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.34212347865104675
+                },
+                "2000": {
+                  "accuracy": 0.7503662109375,
+                  "parity_accuracy": 0.5029168725013733,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.34809380769729614
+                }
+              },
+              "elapsed_seconds": 4.453614910002216,
+              "examples": 128000
+            },
+            {
+              "family": "adamw",
+              "lr": 0.003,
+              "multiplier": null,
+              "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.496337890625,
+                  "parity_accuracy": 0.4960956573486328,
+                  "protected_accuracy": 0.4965803623199463,
+                  "bce": 0.6931734085083008
+                },
+                "8": {
+                  "accuracy": 0.4912109375,
+                  "parity_accuracy": 0.4934529662132263,
+                  "protected_accuracy": 0.4889380633831024,
+                  "bce": 0.6932886242866516
+                },
+                "500": {
+                  "accuracy": 0.7554931640625,
+                  "parity_accuracy": 0.5049431324005127,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3423309922218323
+                },
+                "2000": {
+                  "accuracy": 0.7503662109375,
+                  "parity_accuracy": 0.5029168725013733,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3480961322784424
+                }
+              },
+              "elapsed_seconds": 4.453768008999759,
+              "examples": 128000
+            }
+          ],
+          "best": {
+            "family": "adamw",
+            "lr": 0.001,
+            "multiplier": null,
+            "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+            "checkpoints": {
+              "4": {
+                "accuracy": 0.500244140625,
+                "parity_accuracy": 0.5039043426513672,
+                "protected_accuracy": 0.4965803623199463,
+                "bce": 0.6931513547897339
+              },
+              "8": {
+                "accuracy": 0.49755859375,
+                "parity_accuracy": 0.5060620903968811,
+                "protected_accuracy": 0.4889380633831024,
+                "bce": 0.6931902766227722
+              },
+              "500": {
+                "accuracy": 0.7615966796875,
+                "parity_accuracy": 0.5173010230064392,
+                "protected_accuracy": 1.0,
+                "bce": 0.34212347865104675
+              },
+              "2000": {
+                "accuracy": 0.7503662109375,
+                "parity_accuracy": 0.5029168725013733,
+                "protected_accuracy": 1.0,
+                "bce": 0.34809380769729614
+              }
+            },
+            "elapsed_seconds": 4.453614910002216,
+            "examples": 128000
+          }
+        },
+        "muon": {
+          "runs": [
+            {
+              "family": "muon",
+              "lr": 0.001,
+              "multiplier": null,
+              "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.500244140625,
+                  "parity_accuracy": 0.5039043426513672,
+                  "protected_accuracy": 0.4965803623199463,
+                  "bce": 0.693152129650116
+                },
+                "8": {
+                  "accuracy": 0.497802734375,
+                  "parity_accuracy": 0.5065470337867737,
+                  "protected_accuracy": 0.4889380633831024,
+                  "bce": 0.6931709051132202
+                },
+                "500": {
+                  "accuracy": 0.5462646484375,
+                  "parity_accuracy": 0.5069203972816467,
+                  "protected_accuracy": 0.5846599340438843,
+                  "bce": 0.692832350730896
+                },
+                "2000": {
+                  "accuracy": 0.678466796875,
+                  "parity_accuracy": 0.4895479083061218,
+                  "protected_accuracy": 0.8690534830093384,
+                  "bce": 0.4985717236995697
+                }
+              },
+              "elapsed_seconds": 8.990366063997499,
+              "examples": 128000
+            },
+            {
+              "family": "muon",
+              "lr": 0.003,
+              "multiplier": null,
+              "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.500244140625,
+                  "parity_accuracy": 0.5039043426513672,
+                  "protected_accuracy": 0.4965803623199463,
+                  "bce": 0.6931532025337219
+                },
+                "8": {
+                  "accuracy": 0.497802734375,
+                  "parity_accuracy": 0.5065470337867737,
+                  "protected_accuracy": 0.4889380633831024,
+                  "bce": 0.6931846141815186
+                },
+                "500": {
+                  "accuracy": 0.523681640625,
+                  "parity_accuracy": 0.489372193813324,
+                  "protected_accuracy": 0.5571635365486145,
+                  "bce": 0.6885722279548645
+                },
+                "2000": {
+                  "accuracy": 0.7503662109375,
+                  "parity_accuracy": 0.5029168725013733,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3480952978134155
+                }
+              },
+              "elapsed_seconds": 8.975200497996411,
+              "examples": 128000
+            }
+          ],
+          "best": {
+            "family": "muon",
+            "lr": 0.003,
+            "multiplier": null,
+            "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+            "checkpoints": {
+              "4": {
+                "accuracy": 0.500244140625,
+                "parity_accuracy": 0.5039043426513672,
+                "protected_accuracy": 0.4965803623199463,
+                "bce": 0.6931532025337219
+              },
+              "8": {
+                "accuracy": 0.497802734375,
+                "parity_accuracy": 0.5065470337867737,
+                "protected_accuracy": 0.4889380633831024,
+                "bce": 0.6931846141815186
+              },
+              "500": {
+                "accuracy": 0.523681640625,
+                "parity_accuracy": 0.489372193813324,
+                "protected_accuracy": 0.5571635365486145,
+                "bce": 0.6885722279548645
+              },
+              "2000": {
+                "accuracy": 0.7503662109375,
+                "parity_accuracy": 0.5029168725013733,
+                "protected_accuracy": 1.0,
+                "bce": 0.3480952978134155
+              }
+            },
+            "elapsed_seconds": 8.975200497996411,
+            "examples": 128000
+          }
+        },
+        "rademacher_hinge": {
+          "runs": [
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.001,
+              "multiplier": 0.5,
+              "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.496337890625,
+                  "parity_accuracy": 0.4960956573486328,
+                  "protected_accuracy": 0.4965803623199463,
+                  "bce": 0.6937961578369141
+                },
+                "8": {
+                  "accuracy": 0.4912109375,
+                  "parity_accuracy": 0.4934529662132263,
+                  "protected_accuracy": 0.4889380633831024,
+                  "bce": 0.6942737102508545
+                },
+                "500": {
+                  "accuracy": 0.75634765625,
+                  "parity_accuracy": 0.5066732168197632,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.4306952655315399
+                },
+                "2000": {
+                  "accuracy": 0.745361328125,
+                  "parity_accuracy": 0.4929509162902832,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.4025854170322418
+                }
+              },
+              "elapsed_seconds": 4.44944812200265,
+              "examples": 128000
+            },
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.003,
+              "multiplier": 0.5,
+              "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.496337890625,
+                  "parity_accuracy": 0.4960956573486328,
+                  "protected_accuracy": 0.4965803623199463,
+                  "bce": 0.6946766972541809
+                },
+                "8": {
+                  "accuracy": 0.499755859375,
+                  "parity_accuracy": 0.4934529662132263,
+                  "protected_accuracy": 0.5061455368995667,
+                  "bce": 0.6965482831001282
+                },
+                "500": {
+                  "accuracy": 0.75634765625,
+                  "parity_accuracy": 0.5066732168197632,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.40623676776885986
+                },
+                "2000": {
+                  "accuracy": 0.748779296875,
+                  "parity_accuracy": 0.49975693225860596,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.38086098432540894
+                }
+              },
+              "elapsed_seconds": 4.460611855000025,
+              "examples": 128000
+            },
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.001,
+              "multiplier": 1.0,
+              "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.499755859375,
+                  "parity_accuracy": 0.4960956573486328,
+                  "protected_accuracy": 0.5034196376800537,
+                  "bce": 0.7054306864738464
+                },
+                "8": {
+                  "accuracy": 0.502197265625,
+                  "parity_accuracy": 0.4934529662132263,
+                  "protected_accuracy": 0.51106196641922,
+                  "bce": 0.7096351981163025
+                },
+                "500": {
+                  "accuracy": 0.75634765625,
+                  "parity_accuracy": 0.5066732168197632,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.44981420040130615
+                },
+                "2000": {
+                  "accuracy": 0.7474365234375,
+                  "parity_accuracy": 0.4970831573009491,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.41323503851890564
+                }
+              },
+              "elapsed_seconds": 4.448643262992846,
+              "examples": 128000
+            },
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.003,
+              "multiplier": 1.0,
+              "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.499755859375,
+                  "parity_accuracy": 0.4960956573486328,
+                  "protected_accuracy": 0.5034196376800537,
+                  "bce": 0.7339177131652832
+                },
+                "8": {
+                  "accuracy": 0.5020751953125,
+                  "parity_accuracy": 0.4934529662132263,
+                  "protected_accuracy": 0.5108161568641663,
+                  "bce": 0.755207896232605
+                },
+                "500": {
+                  "accuracy": 0.75634765625,
+                  "parity_accuracy": 0.5066732168197632,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.4283803105354309
+                },
+                "2000": {
+                  "accuracy": 0.7474365234375,
+                  "parity_accuracy": 0.4970831573009491,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.41147229075431824
+                }
+              },
+              "elapsed_seconds": 4.454949045990361,
+              "examples": 128000
+            }
+          ],
+          "best": {
+            "family": "rademacher_hinge",
+            "lr": 0.003,
+            "multiplier": 0.5,
+            "initial_hash": "5e607e278b89204fa9fd8fe88c5411fb4fdc081e4926b896e3744f585efee3af",
+            "checkpoints": {
+              "4": {
+                "accuracy": 0.496337890625,
+                "parity_accuracy": 0.4960956573486328,
+                "protected_accuracy": 0.4965803623199463,
+                "bce": 0.6946766972541809
+              },
+              "8": {
+                "accuracy": 0.499755859375,
+                "parity_accuracy": 0.4934529662132263,
+                "protected_accuracy": 0.5061455368995667,
+                "bce": 0.6965482831001282
+              },
+              "500": {
+                "accuracy": 0.75634765625,
+                "parity_accuracy": 0.5066732168197632,
+                "protected_accuracy": 1.0,
+                "bce": 0.40623676776885986
+              },
+              "2000": {
+                "accuracy": 0.748779296875,
+                "parity_accuracy": 0.49975693225860596,
+                "protected_accuracy": 1.0,
+                "bce": 0.38086098432540894
+              }
+            },
+            "elapsed_seconds": 4.460611855000025,
+            "examples": 128000
+          }
+        }
+      },
+      "identical_initial_hashes": true
+    },
+    "1213": {
+      "observed_support": [
+        0,
+        2,
+        3,
+        5,
+        8,
+        13,
+        18,
+        19,
+        20,
+        23,
+        27,
+        30,
+        31
+      ],
+      "candidate": {
+        "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+        "rank": 32,
+        "xor_bit_ops": 134376,
+        "recovered_support": [
+          0,
+          2,
+          3,
+          5,
+          8,
+          13,
+          18,
+          19,
+          20,
+          23,
+          27,
+          30,
+          31
+        ],
+        "support_exact": true,
+        "compilation": {
+          "support_size": 13,
+          "interpolation_channels": 14,
+          "interpolation_max_abs_error_float64": 6.394884621840902e-14,
+          "attention_logit_gap": 30.0
+        },
+        "elapsed_seconds": 0.03522366400284227,
+        "evaluation": {
+          "accuracy": 1.0,
+          "parity_accuracy": 1.0,
+          "protected_accuracy": 1.0,
+          "bce": 0.00033543520839884877
+        }
+      },
+      "controls": {
+        "adamw": {
+          "runs": [
+            {
+              "family": "adamw",
+              "lr": 0.001,
+              "multiplier": null,
+              "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.5054931640625,
+                  "parity_accuracy": 0.50229412317276,
+                  "protected_accuracy": 0.508763313293457,
+                  "bce": 0.6931121945381165
+                },
+                "8": {
+                  "accuracy": 0.4945068359375,
+                  "parity_accuracy": 0.5048923492431641,
+                  "protected_accuracy": 0.4841617941856384,
+                  "bce": 0.6932166814804077
+                },
+                "500": {
+                  "accuracy": 0.751708984375,
+                  "parity_accuracy": 0.4971569776535034,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3425939083099365
+                },
+                "2000": {
+                  "accuracy": 0.751953125,
+                  "parity_accuracy": 0.5015943050384521,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.34497371315956116
+                }
+              },
+              "elapsed_seconds": 4.470660583989229,
+              "examples": 128000
+            },
+            {
+              "family": "adamw",
+              "lr": 0.003,
+              "multiplier": null,
+              "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.5054931640625,
+                  "parity_accuracy": 0.50229412317276,
+                  "protected_accuracy": 0.508763313293457,
+                  "bce": 0.6930896043777466
+                },
+                "8": {
+                  "accuracy": 0.4945068359375,
+                  "parity_accuracy": 0.5048923492431641,
+                  "protected_accuracy": 0.4841617941856384,
+                  "bce": 0.6933094263076782
+                },
+                "500": {
+                  "accuracy": 0.7508544921875,
+                  "parity_accuracy": 0.4954264461994171,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3423849940299988
+                },
+                "2000": {
+                  "accuracy": 0.7470703125,
+                  "parity_accuracy": 0.49178314208984375,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3465386629104614
+                }
+              },
+              "elapsed_seconds": 4.470476483998937,
+              "examples": 128000
+            }
+          ],
+          "best": {
+            "family": "adamw",
+            "lr": 0.001,
+            "multiplier": null,
+            "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+            "checkpoints": {
+              "4": {
+                "accuracy": 0.5054931640625,
+                "parity_accuracy": 0.50229412317276,
+                "protected_accuracy": 0.508763313293457,
+                "bce": 0.6931121945381165
+              },
+              "8": {
+                "accuracy": 0.4945068359375,
+                "parity_accuracy": 0.5048923492431641,
+                "protected_accuracy": 0.4841617941856384,
+                "bce": 0.6932166814804077
+              },
+              "500": {
+                "accuracy": 0.751708984375,
+                "parity_accuracy": 0.4971569776535034,
+                "protected_accuracy": 1.0,
+                "bce": 0.3425939083099365
+              },
+              "2000": {
+                "accuracy": 0.751953125,
+                "parity_accuracy": 0.5015943050384521,
+                "protected_accuracy": 1.0,
+                "bce": 0.34497371315956116
+              }
+            },
+            "elapsed_seconds": 4.470660583989229,
+            "examples": 128000
+          }
+        },
+        "muon": {
+          "runs": [
+            {
+              "family": "muon",
+              "lr": 0.001,
+              "multiplier": null,
+              "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.5054931640625,
+                  "parity_accuracy": 0.50229412317276,
+                  "protected_accuracy": 0.508763313293457,
+                  "bce": 0.693131148815155
+                },
+                "8": {
+                  "accuracy": 0.4945068359375,
+                  "parity_accuracy": 0.5048923492431641,
+                  "protected_accuracy": 0.4841617941856384,
+                  "bce": 0.6931780576705933
+                },
+                "500": {
+                  "accuracy": 0.5020751953125,
+                  "parity_accuracy": 0.4981458783149719,
+                  "protected_accuracy": 0.5059078931808472,
+                  "bce": 0.6930304765701294
+                },
+                "2000": {
+                  "accuracy": 0.6717529296875,
+                  "parity_accuracy": 0.5015943050384521,
+                  "protected_accuracy": 0.8403401970863342,
+                  "bce": 0.5711969137191772
+                }
+              },
+              "elapsed_seconds": 8.9942908709927,
+              "examples": 128000
+            },
+            {
+              "family": "muon",
+              "lr": 0.003,
+              "multiplier": null,
+              "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.5054931640625,
+                  "parity_accuracy": 0.50229412317276,
+                  "protected_accuracy": 0.508763313293457,
+                  "bce": 0.6931231021881104
+                },
+                "8": {
+                  "accuracy": 0.4945068359375,
+                  "parity_accuracy": 0.5048923492431641,
+                  "protected_accuracy": 0.4841617941856384,
+                  "bce": 0.6931909322738647
+                },
+                "500": {
+                  "accuracy": 0.5289306640625,
+                  "parity_accuracy": 0.49740421772003174,
+                  "protected_accuracy": 0.5596817135810852,
+                  "bce": 0.6902673244476318
+                },
+                "2000": {
+                  "accuracy": 0.7518310546875,
+                  "parity_accuracy": 0.5013490319252014,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3450112044811249
+                }
+              },
+              "elapsed_seconds": 8.974545438992209,
+              "examples": 128000
+            }
+          ],
+          "best": {
+            "family": "muon",
+            "lr": 0.003,
+            "multiplier": null,
+            "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+            "checkpoints": {
+              "4": {
+                "accuracy": 0.5054931640625,
+                "parity_accuracy": 0.50229412317276,
+                "protected_accuracy": 0.508763313293457,
+                "bce": 0.6931231021881104
+              },
+              "8": {
+                "accuracy": 0.4945068359375,
+                "parity_accuracy": 0.5048923492431641,
+                "protected_accuracy": 0.4841617941856384,
+                "bce": 0.6931909322738647
+              },
+              "500": {
+                "accuracy": 0.5289306640625,
+                "parity_accuracy": 0.49740421772003174,
+                "protected_accuracy": 0.5596817135810852,
+                "bce": 0.6902673244476318
+              },
+              "2000": {
+                "accuracy": 0.7518310546875,
+                "parity_accuracy": 0.5013490319252014,
+                "protected_accuracy": 1.0,
+                "bce": 0.3450112044811249
+              }
+            },
+            "elapsed_seconds": 8.974545438992209,
+            "examples": 128000
+          }
+        },
+        "rademacher_hinge": {
+          "runs": [
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.001,
+              "multiplier": 0.5,
+              "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.502685546875,
+                  "parity_accuracy": 0.50229412317276,
+                  "protected_accuracy": 0.5030856728553772,
+                  "bce": 0.6931735277175903
+                },
+                "8": {
+                  "accuracy": 0.4945068359375,
+                  "parity_accuracy": 0.5048923492431641,
+                  "protected_accuracy": 0.4841617941856384,
+                  "bce": 0.6933345794677734
+                },
+                "500": {
+                  "accuracy": 0.752685546875,
+                  "parity_accuracy": 0.49913474917411804,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.402971476316452
+                },
+                "2000": {
+                  "accuracy": 0.752197265625,
+                  "parity_accuracy": 0.5020848512649536,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.4560224413871765
+                }
+              },
+              "elapsed_seconds": 4.4660447079950245,
+              "examples": 128000
+            },
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.003,
+              "multiplier": 0.5,
+              "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.5054931640625,
+                  "parity_accuracy": 0.50229412317276,
+                  "protected_accuracy": 0.508763313293457,
+                  "bce": 0.6936179399490356
+                },
+                "8": {
+                  "accuracy": 0.4945068359375,
+                  "parity_accuracy": 0.5048923492431641,
+                  "protected_accuracy": 0.4841617941856384,
+                  "bce": 0.6958411931991577
+                },
+                "500": {
+                  "accuracy": 0.752197265625,
+                  "parity_accuracy": 0.4981458783149719,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.36268478631973267
+                },
+                "2000": {
+                  "accuracy": 0.751953125,
+                  "parity_accuracy": 0.5015943050384521,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3459065854549408
+                }
+              },
+              "elapsed_seconds": 4.455526956007816,
+              "examples": 128000
+            },
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.001,
+              "multiplier": 1.0,
+              "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.5054931640625,
+                  "parity_accuracy": 0.50229412317276,
+                  "protected_accuracy": 0.508763313293457,
+                  "bce": 0.7094906568527222
+                },
+                "8": {
+                  "accuracy": 0.4945068359375,
+                  "parity_accuracy": 0.5048923492431641,
+                  "protected_accuracy": 0.4841617941856384,
+                  "bce": 0.726405918598175
+                },
+                "500": {
+                  "accuracy": 0.752197265625,
+                  "parity_accuracy": 0.4981458783149719,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.398310124874115
+                },
+                "2000": {
+                  "accuracy": 0.751953125,
+                  "parity_accuracy": 0.5015943050384521,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3742345869541168
+                }
+              },
+              "elapsed_seconds": 4.45846003999759,
+              "examples": 128000
+            },
+            {
+              "family": "rademacher_hinge",
+              "lr": 0.003,
+              "multiplier": 1.0,
+              "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+              "checkpoints": {
+                "4": {
+                  "accuracy": 0.5054931640625,
+                  "parity_accuracy": 0.50229412317276,
+                  "protected_accuracy": 0.508763313293457,
+                  "bce": 0.7526639103889465
+                },
+                "8": {
+                  "accuracy": 0.4945068359375,
+                  "parity_accuracy": 0.5048923492431641,
+                  "protected_accuracy": 0.4841617941856384,
+                  "bce": 0.8199445009231567
+                },
+                "500": {
+                  "accuracy": 0.7520751953125,
+                  "parity_accuracy": 0.4978986382484436,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.36097633838653564
+                },
+                "2000": {
+                  "accuracy": 0.751220703125,
+                  "parity_accuracy": 0.500122606754303,
+                  "protected_accuracy": 1.0,
+                  "bce": 0.3908226490020752
+                }
+              },
+              "elapsed_seconds": 4.457112490999862,
+              "examples": 128000
+            }
+          ],
+          "best": {
+            "family": "rademacher_hinge",
+            "lr": 0.001,
+            "multiplier": 0.5,
+            "initial_hash": "757dd65b2b876f0bbb220401dc823eb6a1ffa659be2e6bebcab90f151c41e74d",
+            "checkpoints": {
+              "4": {
+                "accuracy": 0.502685546875,
+                "parity_accuracy": 0.50229412317276,
+                "protected_accuracy": 0.5030856728553772,
+                "bce": 0.6931735277175903
+              },
+              "8": {
+                "accuracy": 0.4945068359375,
+                "parity_accuracy": 0.5048923492431641,
+                "protected_accuracy": 0.4841617941856384,
+                "bce": 0.6933345794677734
+              },
+              "500": {
+                "accuracy": 0.752685546875,
+                "parity_accuracy": 0.49913474917411804,
+                "protected_accuracy": 1.0,
+                "bce": 0.402971476316452
+              },
+              "2000": {
+                "accuracy": 0.752197265625,
+                "parity_accuracy": 0.5020848512649536,
+                "protected_accuracy": 1.0,
+                "bce": 0.4560224413871765
+              }
+            },
+            "elapsed_seconds": 4.4660447079950245,
+            "examples": 128000
+          }
+        }
+      },
+      "identical_initial_hashes": true
+    }
+  },
+  "gates": {
+    "731_candidate_full_ge_99": true,
+    "731_candidate_parity_ge_99": true,
+    "731_candidate_protected_ge_99": true,
+    "731_support_exact": true,
+    "731_same_initialization": true,
+    "731_controls_step8_parity_lt_80": true,
+    "731_controls_step2000_parity_lt_80": true,
+    "731_some_control_protected_ge_95": true,
+    "947_candidate_full_ge_99": true,
+    "947_candidate_parity_ge_99": true,
+    "947_candidate_protected_ge_99": true,
+    "947_support_exact": true,
+    "947_same_initialization": true,
+    "947_controls_step8_parity_lt_80": true,
+    "947_controls_step2000_parity_lt_80": true,
+    "947_some_control_protected_ge_95": true,
+    "1213_candidate_full_ge_99": true,
+    "1213_candidate_parity_ge_99": true,
+    "1213_candidate_protected_ge_99": true,
+    "1213_support_exact": true,
+    "1213_same_initialization": true,
+    "1213_controls_step8_parity_lt_80": true,
+    "1213_controls_step2000_parity_lt_80": true,
+    "1213_some_control_protected_ge_95": true
+  },
+  "all_gates_pass": true,
+  "integrity": {
+    "source_sha256": "5f8bf8331be40ebbb2c7ef8647498e493121cf068eea4b62665ffc5735ca08d8",
+    "test_sha256": "14fa66198257b8a087ec6d5f2fe2339c91ec97737a85ec348b37477b0b59bd6b",
+    "preregistration_sha256": "4c04a89363311a63a07712a667e06b56e027fc5ee803865520a4d995f7b01d97",
+    "predecessor_sha256": "d4e9e33b79e3ef695bd580e515303120becf22f95190454b043edcbc5e563726"
+  }
+}

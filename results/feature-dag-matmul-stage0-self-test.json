@@ -1,0 +1,47 @@
+{
+  "device": "cpu",
+  "output_shapes": {
+    "butterfly": [
+      7,
+      32
+    ],
+    "dense_ffn": [
+      7,
+      32
+    ],
+    "dense_linear": [
+      7,
+      32
+    ],
+    "feature_dag": [
+      7,
+      32
+    ],
+    "lookup": [
+      7,
+      32
+    ],
+    "low_rank": [
+      7,
+      32
+    ]
+  },
+  "parameter_counts": {
+    "butterfly": 1024,
+    "dense_ffn": 1024,
+    "dense_linear": 1024,
+    "feature_dag": 1024,
+    "lookup": 1024,
+    "low_rank": 1024
+  },
+  "prefix_algebra": {
+    "dense_nonzero_terms": 528,
+    "matrix_rank": 32,
+    "max_abs_error": 1.3322676295501878e-15,
+    "parallel_scan_additions": 129,
+    "serial_prefix_additions": 31,
+    "width": 32
+  },
+  "status": "pass",
+  "torch_cuda_available": false
+}

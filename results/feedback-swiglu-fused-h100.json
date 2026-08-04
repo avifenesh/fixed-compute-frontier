@@ -1,0 +1,190 @@
+{
+  "all_gates_pass": false,
+  "args": {
+    "batches": "1,8,32,128",
+    "dimension": 4096,
+    "groups": 8,
+    "hidden": 14336,
+    "hidden_alignment": 8,
+    "output": "results/feedback-swiglu-fused-h100.json",
+    "samples": 200,
+    "seed": 43,
+    "state": 8,
+    "warmup": 40
+  },
+  "candidate": "group-local Feedback-SwiGLU",
+  "cells": [
+    {
+      "batch": 1,
+      "equal_parameter_over_baseline_median": 1.1176734295435045,
+      "same_width_over_baseline_median": 1.1120592465866235,
+      "timings": {
+        "baseline": {
+          "max_us": 151.8400013446808,
+          "mean_us": 142.77679972350597,
+          "median_us": 142.4960047006607,
+          "min_us": 140.79999923706055,
+          "p10_us": 141.4719969034195,
+          "p90_us": 143.94239336252213,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 184.51200425624847,
+          "mean_us": 159.4327998161316,
+          "median_us": 159.2639982700348,
+          "min_us": 157.27999806404114,
+          "p10_us": 158.07999670505524,
+          "p90_us": 160.54719388484955,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 166.1120057106018,
+          "mean_us": 158.58544006943703,
+          "median_us": 158.4639996290207,
+          "min_us": 156.12800419330597,
+          "p10_us": 157.21599757671356,
+          "p90_us": 159.75999534130096,
+          "samples": 200
+        }
+      },
+      "zero_feedback_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 8,
+      "equal_parameter_over_baseline_median": 1.1121204623305516,
+      "same_width_over_baseline_median": 1.1121204623305516,
+      "timings": {
+        "baseline": {
+          "max_us": 164.8319959640503,
+          "mean_us": 144.80816066265106,
+          "median_us": 144.41600441932678,
+          "min_us": 142.46399700641632,
+          "p10_us": 143.42400431632996,
+          "p90_us": 145.82719951868057,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 174.49599504470825,
+          "mean_us": 160.85792012512684,
+          "median_us": 160.60799360275269,
+          "min_us": 158.59200060367584,
+          "p10_us": 159.39199924468994,
+          "p90_us": 161.92639619112015,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 187.77599930763245,
+          "mean_us": 160.86671970784664,
+          "median_us": 160.60799360275269,
+          "min_us": 158.6879938840866,
+          "p10_us": 159.42400693893433,
+          "p90_us": 161.9199961423874,
+          "samples": 200
+        }
+      },
+      "zero_feedback_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 32,
+      "equal_parameter_over_baseline_median": 1.2030717355806657,
+      "same_width_over_baseline_median": 1.2047782332742616,
+      "timings": {
+        "baseline": {
+          "max_us": 160.35200655460358,
+          "mean_us": 150.241439640522,
+          "median_us": 150.01599490642548,
+          "min_us": 146.30399644374847,
+          "p10_us": 148.8287940621376,
+          "p90_us": 151.52319967746735,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 206.01600408554077,
+          "mean_us": 180.65711982548237,
+          "median_us": 180.4800033569336,
+          "min_us": 178.20799350738525,
+          "p10_us": 179.19679433107376,
+          "p90_us": 181.69919848442078,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 206.33600652217865,
+          "mean_us": 180.96528016030788,
+          "median_us": 180.7360053062439,
+          "min_us": 177.3120015859604,
+          "p10_us": 179.23200130462646,
+          "p90_us": 182.01919943094254,
+          "samples": 200
+        }
+      },
+      "zero_feedback_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 128,
+      "equal_parameter_over_baseline_median": 1.7408994125343116,
+      "same_width_over_baseline_median": 1.7432354241982344,
+      "timings": {
+        "baseline": {
+          "max_us": 196.1279958486557,
+          "mean_us": 164.7636802494526,
+          "median_us": 164.38399255275726,
+          "min_us": 161.9199961423874,
+          "p10_us": 163.25760632753372,
+          "p90_us": 165.89119732379913,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 296.4160144329071,
+          "mean_us": 286.3215993344784,
+          "median_us": 286.17599606513977,
+          "min_us": 283.1999957561493,
+          "p10_us": 284.9920094013214,
+          "p90_us": 287.77599334716797,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 296.25600576400757,
+          "mean_us": 286.7068801820278,
+          "median_us": 286.5599989891052,
+          "min_us": 283.55199098587036,
+          "p10_us": 285.12001037597656,
+          "p90_us": 287.8496080636978,
+          "samples": 200
+        }
+      },
+      "zero_feedback_max_row_relative_error": 0.0
+    }
+  ],
+  "cuda_version": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "device_properties": "_CudaDeviceProperties(name='NVIDIA H100 80GB HBM3', major=9, minor=0, total_memory=80994MB, multi_processor_count=132, uuid=44700db4-f6b2-9122-550e-6987512886e8, L2_cache_size=50MB)",
+  "driver_version": "550.163.01",
+  "gates": {
+    "equal_parameter_within_1p02_on_key_cells": false,
+    "equal_parameter_within_1p05_on_full_grid": false,
+    "protocol_valid": true,
+    "same_width_within_1p02_on_key_cells": false,
+    "same_width_within_1p05_on_full_grid": false,
+    "zero_feedback_inclusion_below_0p2_percent": true
+  },
+  "kernel": {
+    "baseline_block": 256,
+    "cuda_graph_full_path": true,
+    "feedback_block_hidden_equal_parameter": 2048,
+    "feedback_block_hidden_same_width": 2048,
+    "feedback_num_stages": 2,
+    "feedback_num_warps": 8
+  },
+  "ledger": {
+    "baseline_hidden": 14336,
+    "equal_parameter_hidden": 14272,
+    "feedback_groups": 8,
+    "same_width_matrix_mac_overhead_fraction": 0.0013020833333333333,
+    "states_per_token": 64
+  },
+  "preregistration_sha256": "a80ef51128cff9c8a017b479eb85d773066e7a5909f0c31e5ee27d4caa09d54b",
+  "scope": "fused single-H100 serving gate only",
+  "source_sha256": "a43ebb66df5c39860446caf5d8b2d323bd3b70b12af041c94f5d8b133bb23546",
+  "torch_version": "2.5.1+cu124",
+  "triton_version": "3.1.0"
+}

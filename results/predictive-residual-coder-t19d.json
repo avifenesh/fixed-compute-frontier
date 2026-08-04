@@ -1,0 +1,65 @@
+{
+  "all_gates_pass": false,
+  "claim_boundary": "This proves only finite residual coding and cached-CDF roundtrip. It does not provide an in-model parallel decoder or QA capability.",
+  "coder": {
+    "bitstream_sha256": "5b53e752722d66ac96b47fcf32f8004afc5a1f93adcdf04179f448ef3515f7b3",
+    "documents": 2405,
+    "escape_rate_after_first_token": 0.23082304732397183,
+    "escapes": 55428,
+    "finite_bits": 1889614,
+    "finite_over_ideal": 1.0500715423027356,
+    "ideal_bits": 1799509.7704068858,
+    "maximum_payload_cells": 361,
+    "mean_payload_cells": 196.82245322245322,
+    "payload_cells": 473358,
+    "tokens": 242537
+  },
+  "configuration": {
+    "admission_write_budget": 693734,
+    "context": 128,
+    "documents": 2405,
+    "frequency_total": 65536,
+    "hard_write_budget": 743734,
+    "maximum_payload_cells": 350,
+    "state_bits": 32,
+    "top_k": 256,
+    "vocabulary": 49152
+  },
+  "device": "cuda",
+  "gates": {
+    "all_documents_roundtrip_exact": true,
+    "all_frequency_contracts": true,
+    "checkpoint_metadata": true,
+    "complete_writes_leave_50k_decoder_entries": true,
+    "complete_writes_within_hard_cap": true,
+    "decoded_tokens_in_range": true,
+    "finite_length_accounting": true,
+    "input_integrity": true,
+    "maximum_payload_at_most_350_cells": false,
+    "raw_only_compiler_interface": true,
+    "unit_contracts": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "checkpoint_sha256": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "preregistration_sha256": "3d3018fe92c44f97ccf8ac44fc23738b696244f97e999d9c7a52d0a7f0c2075d",
+    "source_sha256": "fd9b6c24a7bbebdb5604afea57fae78090c2e7475ddf5b822bdbe58fbefdd43f"
+  },
+  "physical_write_ledger": {
+    "address_writes": 81770,
+    "decoder_reserved_entries": 53401,
+    "hard_cap_headroom": 53401,
+    "payload_writes": 473358,
+    "sentinel_writes": 2405,
+    "title_writes": 132800,
+    "total_writes": 690333
+  },
+  "schema": "predictive-residual-coder-t19d-v1",
+  "status": "fail",
+  "unit_contracts": {
+    "escape_uniform": true,
+    "randomized": true,
+    "skewed": true,
+    "uniform": true
+  }
+}

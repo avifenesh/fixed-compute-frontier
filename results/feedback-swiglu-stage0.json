@@ -1,0 +1,44 @@
+{
+  "all_gates_pass": true,
+  "candidate": "Feedback-SwiGLU",
+  "gates": {
+    "equal_parameter_width_reduction_below_0p20_percent": true,
+    "exact_baseline_inclusion": true,
+    "reference_overhead_below_0p14_percent": true,
+    "silu_feedback_has_mixed_interaction": true,
+    "strict_polynomial_degree_witness": true
+  },
+  "inclusion": {
+    "max_absolute_error": 0.0
+  },
+  "polynomial_witness": {
+    "degree_7_coefficient_for_alpha_0p7": 0.48999999999999994,
+    "degree_7_monomial": "x1^6*x2",
+    "derivation": "(x2 + alpha*x1^3)^2*x2",
+    "feedback_square_gated_degree": 7,
+    "ordinary_square_gated_max_degree": 3
+  },
+  "resource_ledger": {
+    "baseline_bf16_bytes": 352321536,
+    "baseline_hidden": 14336,
+    "baseline_parameters": 176160768,
+    "dimension": 4096,
+    "equal_parameter_candidate_parameters": 176156368,
+    "equal_parameter_hidden": 14317,
+    "equal_parameter_hidden_reduction": 19,
+    "equal_parameter_hidden_reduction_fraction": 0.0013253348214285715,
+    "equal_parameter_unused_parameters": 4400,
+    "equal_width_parameter_and_mac_overhead_fraction": 0.0013020833333333333,
+    "feedback_bf16_bytes_at_equal_width": 458752,
+    "feedback_parameters_at_equal_width": 229376,
+    "state": 8
+  },
+  "scope": "G0 algebra, expressivity analogue, and ledger only",
+  "seed": 37,
+  "silu_interaction_witness": {
+    "epsilon": 0.0001,
+    "feedback_rectangular_mixed_difference": 0.21889224599558332,
+    "no_feedback_rectangular_mixed_difference": 0.0
+  },
+  "source_sha256": "b07e018e789882203e072e65a9ef0a528f5c0774d44022feb23bda26ea0d1a2d"
+}

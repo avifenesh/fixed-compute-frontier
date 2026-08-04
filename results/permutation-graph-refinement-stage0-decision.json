@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "experiment_id": "permutation-graph-refinement-pre004",
+  "status": "closed_at_stage_0_fatal_control",
+  "candidate_number": null,
+  "a_e_claim": null,
+  "gpu_rented": false,
+  "training_run": false,
+  "preregistration_manifest_sha256": "db9218e7542ccfe20cef81f557c9df498a218bc2b91d035afae7ccffaba3c882",
+  "exact_gate_report_sha256": "898dc487a3a180c5eca908d687bdb82f158ccb627cad7268d3f3aa5c2672e86c",
+  "exact_gate": {
+    "random_state_transitions_compared": 3072,
+    "directed_semantic_transitions_compared": 30,
+    "total_state_transitions_compared": 3102,
+    "independent_queries_compared": 13440,
+    "bitwise_task_state_agreement": 1.0,
+    "seeds": [17, 29, 43],
+    "tests_passed": 48
+  },
+  "fatal_control": {
+    "visible_input": "exact_current_task_state_plus_full_oracle_command_including_opcode_bound_arguments_and_all_transition_payloads_such_as_SET_value",
+    "gold_transition": "S_t=F(S_(t-1),C_t)",
+    "control": "ignore_corrupted_evidence_and_apply_F",
+    "whole_episode_trajectory_accuracy": 1.0,
+    "learned_parameters": 0,
+    "logical_task_state_bytes": {
+      "Z": 128,
+      "two_involutions": 256,
+      "parents": 128,
+      "status": 2,
+      "total": 514
+    },
+    "candidate_accuracy_upper_bound": 1.0,
+    "maximum_possible_candidate_advantage_points": 0.0,
+    "required_candidate_advantage_points": 5.0,
+    "gate_reachable": false
+  },
+  "hidden_binding_alternative": {
+    "reduced_word_repair": "visible_anchor_plus_eight_relation_labels_requires_eight_pointer_gathers",
+    "bounded_candidate_repair": "at_most_four_operand_roles_times_four_candidates_requires_at_most_4^4_or_256_assignments",
+    "if_not_identifiable": "positive_conditional_entropy_prevents_universal_exact_recovery",
+    "degree_two_union": "after_treating_fixed_points_as_unary_and_ignoring_self_loops_disjoint_paths_and_even_alternating_cycles",
+    "generic_global_latent_claim": "not_closed_by_this_result_and_requires_a_new_preregistration"
+  },
+  "decision": {
+    "rent_gpu": false,
+    "run_learned_refinement": false,
+    "admit_candidate_004": false,
+    "next_action": "return_to_zero_and_search_for_an_algebra_without_a_cheaper_exact_same_information_control"
+  }
+}

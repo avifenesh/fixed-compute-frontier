@@ -1,0 +1,41 @@
+{
+  "dataset": "HuggingFaceTB/smollm-corpus",
+  "dataset_config": "fineweb-edu-dedup",
+  "dataset_revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+  "documents_contributing": {
+    "train": 94049,
+    "validation": 2057
+  },
+  "documents_scanned": 104448,
+  "dtype": "uint16",
+  "elapsed_seconds": 116.96996078407392,
+  "eos_token_id": 0,
+  "files": {
+    "train": {
+      "bytes": 200275200,
+      "path": "data/self-product-ffn-scale/train.uint16.bin",
+      "sha256": "7b2b9a44a1b60b5fd58c4de70d0641b5af2958f2b8e82bc612f578f043670cf3"
+    },
+    "validation": {
+      "bytes": 4202496,
+      "path": "data/self-product-ffn-scale/validation.uint16.bin",
+      "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+    }
+  },
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "sequence_length": 512,
+  "split_rule": "validation iff uint64_be(sha256(id)[:8]) mod 10 == 0",
+  "target_tokens": {
+    "train": 100137600,
+    "validation": 2101248
+  },
+  "tokenizer_length": 49152,
+  "train_sequences": 195200,
+  "validation_sequences": 4096
+}
+Fatal Python error: PyGILState_Release: thread state 0x7dd4f401de40 must be current when releasing
+Python runtime state: finalizing (tstate=0x00005f32109179f8)
+
+Thread 0x00007dda2c6f6740 (most recent call first):
+  <no Python frame>

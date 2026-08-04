@@ -1,0 +1,531 @@
+{
+  "args": {
+    "checkpoint_dir": "results/triangular-value-encoding-lm-smoke2-checkpoints",
+    "data_manifest": "results/block-algebra-scratch-data-manifest.json",
+    "eval_batch_size": 1,
+    "eval_batches": 2,
+    "eval_steps": [
+      1
+    ],
+    "formal": false,
+    "gradient_accumulation": 1,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.0003,
+    "micro_batch_size": 1,
+    "output": "results/triangular-value-encoding-lm-smoke2.json",
+    "seed": 3311,
+    "sequence_length": 512,
+    "steps": 1,
+    "train_file": "data/block-algebra-scratch/train.uint16.bin",
+    "validation_file": "data/block-algebra-scratch/validation.uint16.bin",
+    "warmup_steps": 1,
+    "weight_decay": 0.1
+  },
+  "arms": {
+    "canonical_value_control": {
+      "arm": "canonical_value_control",
+      "attention_diagnostics": {
+        "initial": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "value_delta_abs_max_layer_max": 0.0,
+          "value_delta_rms_layer_median": 0.0,
+          "value_nonfinite_fraction_layer_max": 0.0
+        },
+        "terminal": {
+          "coefficient_abs_max_layer_max": 0.002399994758889079,
+          "coefficient_rms_layer_median": 0.0023982939310371876,
+          "value_delta_abs_max_layer_max": 0.0,
+          "value_delta_rms_layer_median": 0.0,
+          "value_nonfinite_fraction_layer_max": 0.0
+        }
+      },
+      "dense_attention_values_per_layer": [
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216
+      ],
+      "evaluations": {
+        "0": {
+          "elapsed_seconds": 0.019631735049188137,
+          "loss": 11.336336135864258,
+          "per_batch_loss": [
+            11.289690017700195,
+            11.38298225402832
+          ],
+          "prediction_tokens": 1024
+        },
+        "1": {
+          "elapsed_seconds": 0.01951325684785843,
+          "loss": 11.26480484008789,
+          "per_batch_loss": [
+            11.21254825592041,
+            11.317061424255371
+          ],
+          "prediction_tokens": 1024
+        }
+      },
+      "metadata_bits": 0,
+      "model_buffer_tensors": 1,
+      "model_buffer_values": 32,
+      "optimizer_state_bytes": 302067128,
+      "parameter_tensors": 110,
+      "serving_diagnostics": {
+        "initial": {
+          "bf16_export_coefficient_bit_exact": false,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        },
+        "terminal": {
+          "bf16_export_coefficient_bit_exact": false,
+          "coefficient_bf16_abs_max": 0.0023956298828125,
+          "coefficient_bf16_nonzero_fraction": 1.0
+        }
+      },
+      "state_dict_bytes": 226530816,
+      "state_dict_values": 56632704,
+      "terminal_ablations": {},
+      "terminal_artifacts": {
+        "saved": false
+      },
+      "terminal_serving_bridge": {
+        "all_layers_bit_exact": true,
+        "layers": 0,
+        "max_abs": 0.0
+      },
+      "total_parameters": 37758336,
+      "train": {
+        "elapsed_seconds": 0.04779398674145341,
+        "final_loss": 11.365482330322266,
+        "max_loss": 11.365482330322266,
+        "max_preclip_gradient_norm": 9.926237106323242,
+        "mean_loss": 11.365482330322266,
+        "nonfinite": false,
+        "peak_allocated_bytes": 774556160,
+        "prediction_tokens": 512,
+        "tokens_per_second": 10712.644725992786
+      }
+    },
+    "packed_raw_control": {
+      "arm": "packed_raw_control",
+      "attention_diagnostics": {
+        "initial": {
+          "coefficient_abs_max_layer_max": 1.5070222616195679,
+          "coefficient_rms_layer_median": 0.4064912497997284,
+          "value_delta_abs_max_layer_max": 0.0,
+          "value_delta_rms_layer_median": 0.0,
+          "value_nonfinite_fraction_layer_max": 0.0
+        },
+        "terminal": {
+          "coefficient_abs_max_layer_max": 1.5045779943466187,
+          "coefficient_rms_layer_median": 0.40651075541973114,
+          "value_delta_abs_max_layer_max": 0.0,
+          "value_delta_rms_layer_median": 0.0,
+          "value_nonfinite_fraction_layer_max": 0.0
+        }
+      },
+      "dense_attention_values_per_layer": [
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216
+      ],
+      "evaluations": {
+        "0": {
+          "elapsed_seconds": 0.040505878161638975,
+          "loss": 11.335615634918213,
+          "per_batch_loss": [
+            11.28854751586914,
+            11.382683753967285
+          ],
+          "prediction_tokens": 1024
+        },
+        "1": {
+          "elapsed_seconds": 0.20853350078687072,
+          "loss": 11.262670516967773,
+          "per_batch_loss": [
+            11.208171844482422,
+            11.317169189453125
+          ],
+          "prediction_tokens": 1024
+        }
+      },
+      "metadata_bits": 0,
+      "model_buffer_tensors": 1,
+      "model_buffer_values": 32,
+      "optimizer_state_bytes": 302067128,
+      "parameter_tensors": 110,
+      "serving_diagnostics": {
+        "initial": {
+          "bf16_export_coefficient_bit_exact": false,
+          "coefficient_bf16_abs_max": 1.5078125,
+          "coefficient_bf16_nonzero_fraction": 1.0
+        },
+        "terminal": {
+          "bf16_export_coefficient_bit_exact": false,
+          "coefficient_bf16_abs_max": 1.5078125,
+          "coefficient_bf16_nonzero_fraction": 1.0
+        }
+      },
+      "state_dict_bytes": 226530816,
+      "state_dict_values": 56632704,
+      "terminal_ablations": {},
+      "terminal_artifacts": {
+        "saved": false
+      },
+      "terminal_serving_bridge": {
+        "all_layers_bit_exact": true,
+        "layers": 0,
+        "max_abs": 0.0
+      },
+      "total_parameters": 37758336,
+      "train": {
+        "elapsed_seconds": 0.13379109697416425,
+        "final_loss": 11.364763259887695,
+        "max_loss": 11.364763259887695,
+        "max_preclip_gradient_norm": 9.922438621520996,
+        "mean_loss": 11.364763259887695,
+        "nonfinite": false,
+        "peak_allocated_bytes": 772983296,
+        "prediction_tokens": 512,
+        "tokens_per_second": 3826.8615145510753
+      }
+    },
+    "triangular_value_encoding": {
+      "arm": "triangular_value_encoding",
+      "attention_diagnostics": {
+        "initial": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "value_delta_abs_max_layer_max": 0.0,
+          "value_delta_rms_layer_median": 0.0,
+          "value_nonfinite_fraction_layer_max": 0.0
+        },
+        "terminal": {
+          "coefficient_abs_max_layer_max": 0.0023999998811632395,
+          "coefficient_rms_layer_median": 0.0023998769465833902,
+          "value_delta_abs_max_layer_max": 0.09765625,
+          "value_delta_rms_layer_median": 0.011409605853259563,
+          "value_nonfinite_fraction_layer_max": 0.0
+        }
+      },
+      "dense_attention_values_per_layer": [
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216
+      ],
+      "evaluations": {
+        "0": {
+          "elapsed_seconds": 0.09076754003763199,
+          "loss": 11.336336135864258,
+          "per_batch_loss": [
+            11.289690017700195,
+            11.38298225402832
+          ],
+          "prediction_tokens": 1024
+        },
+        "1": {
+          "elapsed_seconds": 0.05843792902305722,
+          "loss": 11.259146690368652,
+          "per_batch_loss": [
+            11.208732604980469,
+            11.309560775756836
+          ],
+          "prediction_tokens": 1024
+        }
+      },
+      "metadata_bits": 0,
+      "model_buffer_tensors": 1,
+      "model_buffer_values": 32,
+      "optimizer_state_bytes": 302067128,
+      "parameter_tensors": 110,
+      "serving_diagnostics": {
+        "initial": {
+          "bf16_export_coefficient_bit_exact": false,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        },
+        "terminal": {
+          "bf16_export_coefficient_bit_exact": false,
+          "coefficient_bf16_abs_max": 0.0023956298828125,
+          "coefficient_bf16_nonzero_fraction": 1.0
+        }
+      },
+      "state_dict_bytes": 226530816,
+      "state_dict_values": 56632704,
+      "terminal_ablations": {
+        "disable_encoding": {
+          "elapsed_seconds": 0.018644606694579124,
+          "loss": 11.264289379119873,
+          "per_batch_loss": [
+            11.212850570678711,
+            11.315728187561035
+          ],
+          "prediction_tokens": 1024
+        }
+      },
+      "terminal_artifacts": {
+        "saved": false
+      },
+      "terminal_serving_bridge": {
+        "all_layers_bit_exact": true,
+        "layers": 12,
+        "max_abs": 0.0
+      },
+      "total_parameters": 37758336,
+      "train": {
+        "elapsed_seconds": 0.2689675469882786,
+        "final_loss": 11.365482330322266,
+        "max_loss": 11.365482330322266,
+        "max_preclip_gradient_norm": 12.963334083557129,
+        "mean_loss": 11.365482330322266,
+        "nonfinite": false,
+        "peak_allocated_bytes": 774556160,
+        "prediction_tokens": 512,
+        "tokens_per_second": 1903.575378267894
+      }
+    }
+  },
+  "attention_source_sha256": "2a19f4d99835bc45ff7f3ccdbc85657f1732eba2f89dac7d36bac99a96a19225",
+  "candidate": "gauge-canonical triangular value encoding",
+  "data_ledger": {
+    "files": {
+      "train": {
+        "bytes": 100195056,
+        "checks": {
+          "bytes": true,
+          "sequence_count": true,
+          "sha256": true,
+          "whole_uint16_sequences": true
+        },
+        "path": "/workspace/fixed-compute-frontier/data/block-algebra-scratch/train.uint16.bin",
+        "sequences": 97656,
+        "sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a"
+      },
+      "validation": {
+        "bytes": 4202496,
+        "checks": {
+          "bytes": true,
+          "sequence_count": true,
+          "sha256": true,
+          "whole_uint16_sequences": true
+        },
+        "path": "/workspace/fixed-compute-frontier/data/block-algebra-scratch/validation.uint16.bin",
+        "sequences": 4096,
+        "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+      }
+    },
+    "manifest": "/workspace/fixed-compute-frontier/results/block-algebra-scratch-data-manifest.json",
+    "valid": true
+  },
+  "decision": {
+    "complete": true,
+    "gates": {
+      "ablation_interval_clears_0_01_percent": true,
+      "all_buffer_counts_equal": true,
+      "all_metrics_finite": true,
+      "all_parameter_counts_equal": true,
+      "all_parameter_tensor_counts_equal": true,
+      "all_state_and_optimizer_bytes_equal": true,
+      "all_value_nonfinite_fractions_zero": true,
+      "candidate_initial_bit_exact_to_control": false,
+      "candidate_vs_control_clears_0_025_percent": false,
+      "candidate_vs_raw_clears_0_025_percent": false,
+      "canonical_initial_nll_matches_raw_within_1e_4": false,
+      "canonical_initial_paired_interval_within_1e_4": false,
+      "coefficient_export_bit_exact": false,
+      "coefficients_bounded": true,
+      "control_terminal_noninferior_raw_within_0_05_percent": false,
+      "disabling_encoding_hurts_0_01_percent": true,
+      "exact_parameter_count": true,
+      "formal_artifacts_saved": true,
+      "some_coefficients_survive_bf16": true,
+      "trained_candidate_serving_bridge_bit_exact": true,
+      "zero_metadata": true
+    },
+    "paired_intervals": {
+      "candidate_vs_control": {
+        "candidate_minus_reference_mean": -0.005658149719238281,
+        "lower_95": -0.009269447326660156,
+        "standard_error": 0.0018424987792968748,
+        "upper_95": -0.002046852111816407
+      },
+      "candidate_vs_raw": {
+        "candidate_minus_reference_mean": -0.0035238265991210938,
+        "lower_95": -0.011529617309570311,
+        "standard_error": 0.004084587097167968,
+        "upper_95": 0.0044819641113281235
+      },
+      "full_vs_disabled": {
+        "candidate_minus_reference_mean": -0.005142688751220703,
+        "lower_95": -0.007151145935058594,
+        "standard_error": 0.0010247230529785156,
+        "upper_95": -0.0031342315673828125
+      },
+      "initial_control_vs_raw": {
+        "candidate_minus_reference_mean": 0.0007205009460449219,
+        "lower_95": -0.0001066207885742187,
+        "standard_error": 0.0004220008850097656,
+        "upper_95": 0.0015476226806640625
+      },
+      "terminal_control_vs_raw": {
+        "candidate_minus_reference_mean": 0.0021343231201171875,
+        "lower_95": -0.0022601699829101554,
+        "standard_error": 0.0022420883178710933,
+        "upper_95": 0.00652881622314453
+      }
+    },
+    "pilot_pass": false,
+    "relative_candidate_improvement": {
+      "canonical_value_control": 0.000502285640946278,
+      "packed_raw_control": 0.0003128766480216458
+    },
+    "terminal_losses": {
+      "canonical_value_control": 11.26480484008789,
+      "packed_raw_control": 11.262670516967773,
+      "triangular_value_encoding": 11.259146690368652
+    }
+  },
+  "device": "NVIDIA H100 80GB HBM3",
+  "experiment_protocol": {
+    "actual": {
+      "checkpoint_dir": "results/triangular-value-encoding-lm-smoke2-checkpoints",
+      "cuda_version": "12.4",
+      "device_contains": "NVIDIA H100 80GB HBM3",
+      "eval_batch_size": 1,
+      "eval_batches": 2,
+      "eval_steps": [
+        1
+      ],
+      "formal": false,
+      "gradient_accumulation": 1,
+      "gradient_clip": 1.0,
+      "head_dim": 64,
+      "hidden_size": 384,
+      "intermediate_size": 1024,
+      "kv_heads": 2,
+      "layers": 12,
+      "learning_rate": 0.0003,
+      "micro_batch_size": 1,
+      "numpy_version": "2.1.2",
+      "output": "results/triangular-value-encoding-lm-smoke2.json",
+      "prediction_tokens": 512,
+      "python_version": "3.11.10",
+      "query_heads": 6,
+      "seed": 3311,
+      "sequence_length": 512,
+      "steps": 1,
+      "torch_version": "2.5.1+cu124",
+      "transformers_version": "4.57.6",
+      "warmup_steps": 1,
+      "weight_decay": 0.1
+    },
+    "checks": {
+      "checkpoint_dir": false,
+      "cuda_version": true,
+      "device_contains": true,
+      "eval_batch_size": false,
+      "eval_batches": false,
+      "eval_steps": false,
+      "formal": false,
+      "gradient_accumulation": false,
+      "gradient_clip": true,
+      "head_dim": true,
+      "hidden_size": true,
+      "intermediate_size": true,
+      "kv_heads": true,
+      "layers": true,
+      "learning_rate": true,
+      "micro_batch_size": false,
+      "numpy_version": true,
+      "output": false,
+      "prediction_tokens": false,
+      "python_version": true,
+      "query_heads": true,
+      "seed": false,
+      "sequence_length": true,
+      "steps": false,
+      "torch_version": true,
+      "transformers_version": true,
+      "warmup_steps": false,
+      "weight_decay": true
+    },
+    "expected": {
+      "checkpoint_dir": "results/triangular-value-encoding-lm-pilot-checkpoints",
+      "cuda_version": "12.4",
+      "device_contains": "H100",
+      "eval_batch_size": 32,
+      "eval_batches": 64,
+      "eval_steps": [
+        61,
+        305
+      ],
+      "formal": true,
+      "gradient_accumulation": 2,
+      "gradient_clip": 1.0,
+      "head_dim": 64,
+      "hidden_size": 384,
+      "intermediate_size": 1024,
+      "kv_heads": 2,
+      "layers": 12,
+      "learning_rate": 0.0003,
+      "micro_batch_size": 32,
+      "numpy_version": "2.1.2",
+      "output": "results/triangular-value-encoding-lm-pilot.json",
+      "prediction_tokens": 9994240,
+      "python_version": "3.11.10",
+      "query_heads": 6,
+      "seed": 3307,
+      "sequence_length": 512,
+      "steps": 305,
+      "torch_version": "2.5.1+cu124",
+      "transformers_version": "4.57.6",
+      "warmup_steps": 50,
+      "weight_decay": 0.1
+    },
+    "valid": false
+  },
+  "formal_integrity": {
+    "checks": {},
+    "manifest_sha256": null,
+    "valid": false
+  },
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "runtime": {
+    "cuda": "12.4",
+    "numpy": "2.1.2",
+    "python": "3.11.10",
+    "torch": "2.5.1+cu124",
+    "transformers": "4.57.6"
+  },
+  "schema": "triangular-value-encoding-lm-development-v1",
+  "scope": "matched one-seed 10M-token from-scratch discovery; replication required",
+  "source_sha256": "1fa52c9412dc005254fef2ce734097e0a0efda01ed35e8f0d42192e4dcd2c7a2"
+}

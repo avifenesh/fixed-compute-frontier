@@ -1,0 +1,27 @@
+{
+  "gates": {
+    "exact_swiglu_endpoint": true,
+    "alpha_gradient_live_at_endpoint": true,
+    "shared_gradient_endpoint_identity": true,
+    "artificial_degree_witness": true,
+    "same_width_overhead_below_0p009_percent": true,
+    "exact_equal_parameter_loses_at_most_two_features": true
+  },
+  "all_gates_pass": true
+}
+reflex benchmark B=1
+reflex benchmark B=8
+reflex benchmark B=32
+reflex benchmark B=128
+{
+  "gates": {
+    "protocol_valid": true,
+    "zero_reflex_inclusion_below_0p2_percent": true,
+    "nonzero_reflex_reference_below_1_percent": true,
+    "same_width_within_1p02_on_key_cells": true,
+    "same_width_within_1p05_on_full_grid": true,
+    "equal_parameter_within_1p02_on_key_cells": true,
+    "equal_parameter_within_1p05_on_full_grid": true
+  },
+  "all_gates_pass": true
+}

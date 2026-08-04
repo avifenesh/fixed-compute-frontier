@@ -1,0 +1,59 @@
+{
+  "all_gates_pass": true,
+  "candidate": "rank-three-block-algebra-swiglu",
+  "claim_boundary": {
+    "not_proved": "better language loss or deployable fused-kernel latency",
+    "prior_boundary": "hypercomplex neural layers exist; this gate only tests the activation-core placement inside a dense real SwiGLU FFN",
+    "proved": "1.5x real bilinear tensor rank per two hidden coordinates at identical G/U/V dimensions and fixed-core parameter count"
+  },
+  "gate": "G0-real-tensor-rank-and-resource-ledger",
+  "gates": {
+    "complex_pencil_has_no_real_roots": true,
+    "core_matches_complex_product": true,
+    "diagonal_pencil_has_two_real_roots": true,
+    "fixed_core_adds_no_parameters_or_dense_macs": true,
+    "gauss_extra_products_below_0p01_percent_of_dense_macs": true,
+    "gauss_rank_three_algorithm_is_exact": true,
+    "real_change_of_basis_cannot_diagonalize_complex_core": true,
+    "zero_init_neighborhood_stays_rank_two": true
+  },
+  "metrics": {
+    "complex_pencil_coefficients": [
+      -1.0,
+      0.0,
+      -1.0
+    ],
+    "complex_pencil_discriminant": -4.0,
+    "complex_real_tensor_rank": 3,
+    "diagonal_pencil_coefficients": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "diagonal_pencil_discriminant": 1.0,
+    "diagonal_real_tensor_rank": 2,
+    "discriminant_just_above_boundary": -3.3758336214217977e-06,
+    "discriminant_just_below_boundary": 3.375825252560638e-06,
+    "interpolation_rank_three_boundary": 0.4320408003330958,
+    "maximum_core_implementation_error": 0.0,
+    "maximum_gauss_implementation_error": 2.6645352591003757e-15
+  },
+  "next_valid_test": "matched from-scratch LM screen initialized in the rank-three region; a tiny zero-initialized checkpoint sidecar is invalid",
+  "resource_ledger": {
+    "activation_output_scalars": 14336,
+    "baseline_pointwise_products_per_token": 14336,
+    "candidate_dense_weight_parameters": 176160768,
+    "candidate_extra_parameters_fixed_core": 0,
+    "complex_direct_products_per_token": 28672,
+    "complex_gauss_products_per_token": 21504,
+    "dense_projection_macs_per_token": 176160768,
+    "dense_weight_parameters": 176160768,
+    "dimension": 4096,
+    "gauss_extra_product_fraction_of_dense_macs": 4.0690104166666664e-05,
+    "gauss_extra_products_over_baseline": 7168,
+    "width": 14336
+  },
+  "seed": 211,
+  "source_sha256": "a414710d5a734e04af0b6ea06bc4eee902ca122c83e8c1012888b15f40f38ced",
+  "trials": 128
+}

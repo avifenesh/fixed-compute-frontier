@@ -1,0 +1,34 @@
+{
+  "schema": "train-time-gauge-scaffold-algebra-v1",
+  "multiple_consumer_export_max_errors": {
+    "null": [
+      3.552713678800501e-15,
+      1.7763568394002505e-15,
+      3.552713678800501e-15
+    ],
+    "scale": [
+      3.552713678800501e-15,
+      3.552713678800501e-15,
+      3.552713678800501e-15
+    ],
+    "bias": [
+      2.6645352591003757e-15,
+      1.7763568394002505e-15,
+      3.552713678800501e-15
+    ],
+    "hinge": [
+      1.7763568394002505e-15,
+      3.552713678800501e-15,
+      3.552713678800501e-15
+    ],
+    "centered": [
+      1.7763568394002505e-15,
+      2.6645352591003757e-15,
+      1.7763568394002505e-15
+    ]
+  },
+  "training_norm_parameters": 24,
+  "served_norm_parameters": 12,
+  "baseline_norm_parameters": 12,
+  "matrix_shapes_unchanged": true
+}

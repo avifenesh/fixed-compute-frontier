@@ -1,0 +1,776 @@
+{
+  "configuration": {
+    "batch_size": 256,
+    "covariance_delta": 0.15,
+    "emitted_tokens_per_bag": 16,
+    "independent_draws_per_bag": 8,
+    "learning_rate": 0.03,
+    "steps": 800,
+    "test_samples": 4096,
+    "train_samples": 2048,
+    "validation_samples": 512,
+    "width": 16,
+    "worlds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "controls": {
+    "axis_aligned": {
+      "axis_aligned": true,
+      "maximum_absolute_linear_mean": 0.0,
+      "mean_shift": false,
+      "models": {
+        "bilinear_writer": {
+          "accuracy": 0.8154296875,
+          "initialization_scale": 1.0,
+          "nll": 0.4072404116231425,
+          "seed": 100002,
+          "validation_nll": 0.3381875311372923
+        },
+        "diagonal_moments": {
+          "accuracy": 0.8837890625,
+          "nll": 0.27047906448447984
+        },
+        "full_degree2_oracle": {
+          "accuracy": 0.872802734375,
+          "nll": 0.3000895189623636
+        },
+        "gfqv_offdiag": {
+          "accuracy": 0.492919921875,
+          "nll": 0.696287291269272
+        },
+        "linear_mean": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "post_mean_degree2": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "square_writer": {
+          "accuracy": 0.8505859375,
+          "cached_square_feature_kurtosis": 6.224452608129476,
+          "cached_square_feature_rms": 4.30650788924445,
+          "initialization_scale": 1.0,
+          "nll": 0.3546749537560453,
+          "seed": 100002,
+          "validation_nll": 0.3051489803640547
+        }
+      },
+      "world": 100,
+      "writer_initializations": {
+        "bilinear_writer": [
+          {
+            "accuracy": 0.799072265625,
+            "initialization_scale": 1.0,
+            "nll": 0.4304070022402086,
+            "seed": 100000,
+            "validation_nll": 0.3795772370882857
+          },
+          {
+            "accuracy": 0.816650390625,
+            "initialization_scale": 1.0,
+            "nll": 0.4098360383050426,
+            "seed": 100001,
+            "validation_nll": 0.3473521568938216
+          },
+          {
+            "accuracy": 0.8154296875,
+            "initialization_scale": 1.0,
+            "nll": 0.4072404116231425,
+            "seed": 100002,
+            "validation_nll": 0.3381875311372923
+          }
+        ],
+        "square_writer": [
+          {
+            "accuracy": 0.83544921875,
+            "cached_square_feature_kurtosis": 6.237987709064219,
+            "cached_square_feature_rms": 3.2207981701411814,
+            "initialization_scale": 0.1,
+            "nll": 0.372830026948311,
+            "seed": 100000,
+            "validation_nll": 0.32657902278580453
+          },
+          {
+            "accuracy": 0.82177734375,
+            "cached_square_feature_kurtosis": 7.433086739124759,
+            "cached_square_feature_rms": 3.1535262286875567,
+            "initialization_scale": 0.3,
+            "nll": 0.38793112691385734,
+            "seed": 100001,
+            "validation_nll": 0.33819524416065383
+          },
+          {
+            "accuracy": 0.8505859375,
+            "cached_square_feature_kurtosis": 6.224452608129476,
+            "cached_square_feature_rms": 4.30650788924445,
+            "initialization_scale": 1.0,
+            "nll": 0.3546749537560453,
+            "seed": 100002,
+            "validation_nll": 0.3051489803640547
+          }
+        ]
+      }
+    },
+    "mean_shift": {
+      "axis_aligned": false,
+      "maximum_absolute_linear_mean": 0.19194429356260792,
+      "mean_shift": true,
+      "models": {
+        "bilinear_writer": {
+          "accuracy": 1.0,
+          "initialization_scale": 1.0,
+          "nll": 2.0418102437701474e-06,
+          "seed": 100101,
+          "validation_nll": 2.069023518480628e-06
+        },
+        "diagonal_moments": {
+          "accuracy": 1.0,
+          "nll": 0.00025335104952541016
+        },
+        "full_degree2_oracle": {
+          "accuracy": 1.0,
+          "nll": 0.00025803062448124896
+        },
+        "gfqv_offdiag": {
+          "accuracy": 1.0,
+          "nll": 0.00025738811678717774
+        },
+        "linear_mean": {
+          "accuracy": 1.0,
+          "nll": 0.00025280223559482587
+        },
+        "post_mean_degree2": {
+          "accuracy": 1.0,
+          "nll": 0.00025280223559482587
+        },
+        "square_writer": {
+          "accuracy": 1.0,
+          "cached_square_feature_kurtosis": 6.193797538097774,
+          "cached_square_feature_rms": 0.8449270584542389,
+          "initialization_scale": 0.3,
+          "nll": 2.0417185291358836e-06,
+          "seed": 100101,
+          "validation_nll": 2.0606761598524883e-06
+        }
+      },
+      "world": 101,
+      "writer_initializations": {
+        "bilinear_writer": [
+          {
+            "accuracy": 1.0,
+            "initialization_scale": 1.0,
+            "nll": 2.044485573100497e-06,
+            "seed": 100100,
+            "validation_nll": 2.07446260037618e-06
+          },
+          {
+            "accuracy": 1.0,
+            "initialization_scale": 1.0,
+            "nll": 2.0418102437701474e-06,
+            "seed": 100101,
+            "validation_nll": 2.069023518480628e-06
+          },
+          {
+            "accuracy": 1.0,
+            "initialization_scale": 1.0,
+            "nll": 2.0581130053459497e-06,
+            "seed": 100102,
+            "validation_nll": 2.091966355228906e-06
+          }
+        ],
+        "square_writer": [
+          {
+            "accuracy": 1.0,
+            "cached_square_feature_kurtosis": 6.569135347524714,
+            "cached_square_feature_rms": 0.7783037826687756,
+            "initialization_scale": 0.1,
+            "nll": 2.0514629032481277e-06,
+            "seed": 100100,
+            "validation_nll": 2.077162000699265e-06
+          },
+          {
+            "accuracy": 1.0,
+            "cached_square_feature_kurtosis": 6.193797538097774,
+            "cached_square_feature_rms": 0.8449270584542389,
+            "initialization_scale": 0.3,
+            "nll": 2.0417185291358836e-06,
+            "seed": 100101,
+            "validation_nll": 2.0606761598524883e-06
+          },
+          {
+            "accuracy": 1.0,
+            "cached_square_feature_kurtosis": 6.938211589664722,
+            "cached_square_feature_rms": 1.4586173865574148,
+            "initialization_scale": 1.0,
+            "nll": 2.0756312558201423e-06,
+            "seed": 100102,
+            "validation_nll": 2.1009510473374586e-06
+          }
+        ]
+      }
+    }
+  },
+  "experiment": "gauge_curvature_covariance_gate",
+  "gpu_required_now": false,
+  "rotated_worlds": [
+    {
+      "axis_aligned": false,
+      "maximum_absolute_linear_mean": 0.0,
+      "mean_shift": false,
+      "models": {
+        "bilinear_writer": {
+          "accuracy": 0.814208984375,
+          "initialization_scale": 1.0,
+          "nll": 0.41767833651035124,
+          "seed": 90001,
+          "validation_nll": 0.3849881041068386
+        },
+        "diagonal_moments": {
+          "accuracy": 0.6640625,
+          "nll": 0.5970927787362807
+        },
+        "full_degree2_oracle": {
+          "accuracy": 0.86767578125,
+          "nll": 0.30447554860922643
+        },
+        "gfqv_offdiag": {
+          "accuracy": 0.85498046875,
+          "nll": 0.3430408070144416
+        },
+        "linear_mean": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "post_mean_degree2": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "square_writer": {
+          "accuracy": 0.8525390625,
+          "cached_square_feature_kurtosis": 5.586078117196407,
+          "cached_square_feature_rms": 4.234814747893138,
+          "initialization_scale": 1.0,
+          "nll": 0.3394351803299855,
+          "seed": 90002,
+          "validation_nll": 0.32305767029842103
+        }
+      },
+      "world": 0,
+      "writer_initializations": {
+        "bilinear_writer": [
+          {
+            "accuracy": 0.806884765625,
+            "initialization_scale": 1.0,
+            "nll": 0.4183866467449822,
+            "seed": 90000,
+            "validation_nll": 0.3851997227395597
+          },
+          {
+            "accuracy": 0.814208984375,
+            "initialization_scale": 1.0,
+            "nll": 0.41767833651035124,
+            "seed": 90001,
+            "validation_nll": 0.3849881041068386
+          },
+          {
+            "accuracy": 0.81005859375,
+            "initialization_scale": 1.0,
+            "nll": 0.41987405192490257,
+            "seed": 90002,
+            "validation_nll": 0.4055434812106442
+          }
+        ],
+        "square_writer": [
+          {
+            "accuracy": 0.838623046875,
+            "cached_square_feature_kurtosis": 6.390074589158812,
+            "cached_square_feature_rms": 3.343303603096615,
+            "initialization_scale": 0.1,
+            "nll": 0.3697532516986358,
+            "seed": 90000,
+            "validation_nll": 0.3888130993071464
+          },
+          {
+            "accuracy": 0.834228515625,
+            "cached_square_feature_kurtosis": 5.713411942873627,
+            "cached_square_feature_rms": 3.4871909570145707,
+            "initialization_scale": 0.3,
+            "nll": 0.3806689144305927,
+            "seed": 90001,
+            "validation_nll": 0.35147056915757646
+          },
+          {
+            "accuracy": 0.8525390625,
+            "cached_square_feature_kurtosis": 5.586078117196407,
+            "cached_square_feature_rms": 4.234814747893138,
+            "initialization_scale": 1.0,
+            "nll": 0.3394351803299855,
+            "seed": 90002,
+            "validation_nll": 0.32305767029842103
+          }
+        ]
+      }
+    },
+    {
+      "axis_aligned": false,
+      "maximum_absolute_linear_mean": 0.0,
+      "mean_shift": false,
+      "models": {
+        "bilinear_writer": {
+          "accuracy": 0.82275390625,
+          "initialization_scale": 1.0,
+          "nll": 0.3852547419146781,
+          "seed": 90100,
+          "validation_nll": 0.4170419618904494
+        },
+        "diagonal_moments": {
+          "accuracy": 0.62451171875,
+          "nll": 0.6443512245282501
+        },
+        "full_degree2_oracle": {
+          "accuracy": 0.87646484375,
+          "nll": 0.2867704145732228
+        },
+        "gfqv_offdiag": {
+          "accuracy": 0.86962890625,
+          "nll": 0.30105511173584
+        },
+        "linear_mean": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "post_mean_degree2": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "square_writer": {
+          "accuracy": 0.86474609375,
+          "cached_square_feature_kurtosis": 5.538381239494709,
+          "cached_square_feature_rms": 4.412410679639018,
+          "initialization_scale": 1.0,
+          "nll": 0.31269113240939606,
+          "seed": 90102,
+          "validation_nll": 0.3398714430249318
+        }
+      },
+      "world": 1,
+      "writer_initializations": {
+        "bilinear_writer": [
+          {
+            "accuracy": 0.82275390625,
+            "initialization_scale": 1.0,
+            "nll": 0.3852547419146781,
+            "seed": 90100,
+            "validation_nll": 0.4170419618904494
+          },
+          {
+            "accuracy": 0.81884765625,
+            "initialization_scale": 1.0,
+            "nll": 0.404572026737423,
+            "seed": 90101,
+            "validation_nll": 0.42952579156073367
+          },
+          {
+            "accuracy": 0.82763671875,
+            "initialization_scale": 1.0,
+            "nll": 0.38804162872785425,
+            "seed": 90102,
+            "validation_nll": 0.41973626360141614
+          }
+        ],
+        "square_writer": [
+          {
+            "accuracy": 0.814697265625,
+            "cached_square_feature_kurtosis": 8.385633551601877,
+            "cached_square_feature_rms": 2.9738304773162936,
+            "initialization_scale": 0.1,
+            "nll": 0.40393043158412045,
+            "seed": 90100,
+            "validation_nll": 0.43150764531530356
+          },
+          {
+            "accuracy": 0.859130859375,
+            "cached_square_feature_kurtosis": 5.542956771557467,
+            "cached_square_feature_rms": 3.098889328361233,
+            "initialization_scale": 0.3,
+            "nll": 0.3337281016284246,
+            "seed": 90101,
+            "validation_nll": 0.35746079885154936
+          },
+          {
+            "accuracy": 0.86474609375,
+            "cached_square_feature_kurtosis": 5.538381239494709,
+            "cached_square_feature_rms": 4.412410679639018,
+            "initialization_scale": 1.0,
+            "nll": 0.31269113240939606,
+            "seed": 90102,
+            "validation_nll": 0.3398714430249318
+          }
+        ]
+      }
+    },
+    {
+      "axis_aligned": false,
+      "maximum_absolute_linear_mean": 0.0,
+      "mean_shift": false,
+      "models": {
+        "bilinear_writer": {
+          "accuracy": 0.79443359375,
+          "initialization_scale": 1.0,
+          "nll": 0.4361784443886698,
+          "seed": 90200,
+          "validation_nll": 0.37358846130270856
+        },
+        "diagonal_moments": {
+          "accuracy": 0.673095703125,
+          "nll": 0.6095233666400575
+        },
+        "full_degree2_oracle": {
+          "accuracy": 0.871337890625,
+          "nll": 0.30672138467427157
+        },
+        "gfqv_offdiag": {
+          "accuracy": 0.854248046875,
+          "nll": 0.34024076797603126
+        },
+        "linear_mean": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "post_mean_degree2": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "square_writer": {
+          "accuracy": 0.842041015625,
+          "cached_square_feature_kurtosis": 5.555399221932544,
+          "cached_square_feature_rms": 2.990298695324929,
+          "initialization_scale": 0.3,
+          "nll": 0.36905087107200507,
+          "seed": 90201,
+          "validation_nll": 0.3071706587643357
+        }
+      },
+      "world": 2,
+      "writer_initializations": {
+        "bilinear_writer": [
+          {
+            "accuracy": 0.79443359375,
+            "initialization_scale": 1.0,
+            "nll": 0.4361784443886698,
+            "seed": 90200,
+            "validation_nll": 0.37358846130270856
+          },
+          {
+            "accuracy": 0.81103515625,
+            "initialization_scale": 1.0,
+            "nll": 0.4237102714843547,
+            "seed": 90201,
+            "validation_nll": 0.37406801197656125
+          },
+          {
+            "accuracy": 0.809326171875,
+            "initialization_scale": 1.0,
+            "nll": 0.4339384896951652,
+            "seed": 90202,
+            "validation_nll": 0.3876969096742344
+          }
+        ],
+        "square_writer": [
+          {
+            "accuracy": 0.84619140625,
+            "cached_square_feature_kurtosis": 5.609386983648778,
+            "cached_square_feature_rms": 3.7103511920442043,
+            "initialization_scale": 0.1,
+            "nll": 0.3668458702196048,
+            "seed": 90200,
+            "validation_nll": 0.3209561407421725
+          },
+          {
+            "accuracy": 0.842041015625,
+            "cached_square_feature_kurtosis": 5.555399221932544,
+            "cached_square_feature_rms": 2.990298695324929,
+            "initialization_scale": 0.3,
+            "nll": 0.36905087107200507,
+            "seed": 90201,
+            "validation_nll": 0.3071706587643357
+          },
+          {
+            "accuracy": 0.84716796875,
+            "cached_square_feature_kurtosis": 5.767923398193232,
+            "cached_square_feature_rms": 4.998235533071991,
+            "initialization_scale": 1.0,
+            "nll": 0.36795146176246823,
+            "seed": 90202,
+            "validation_nll": 0.32394698623214646
+          }
+        ]
+      }
+    },
+    {
+      "axis_aligned": false,
+      "maximum_absolute_linear_mean": 0.0,
+      "mean_shift": false,
+      "models": {
+        "bilinear_writer": {
+          "accuracy": 0.810302734375,
+          "initialization_scale": 1.0,
+          "nll": 0.4247330787625603,
+          "seed": 90301,
+          "validation_nll": 0.4182774505657858
+        },
+        "diagonal_moments": {
+          "accuracy": 0.6201171875,
+          "nll": 0.6480226004780689
+        },
+        "full_degree2_oracle": {
+          "accuracy": 0.869140625,
+          "nll": 0.300096106013504
+        },
+        "gfqv_offdiag": {
+          "accuracy": 0.861083984375,
+          "nll": 0.3177308532930212
+        },
+        "linear_mean": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "post_mean_degree2": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "square_writer": {
+          "accuracy": 0.86279296875,
+          "cached_square_feature_kurtosis": 5.213883879186687,
+          "cached_square_feature_rms": 4.555632280026618,
+          "initialization_scale": 1.0,
+          "nll": 0.3400759944055919,
+          "seed": 90302,
+          "validation_nll": 0.3686690158472059
+        }
+      },
+      "world": 3,
+      "writer_initializations": {
+        "bilinear_writer": [
+          {
+            "accuracy": 0.8056640625,
+            "initialization_scale": 1.0,
+            "nll": 0.43052550883680635,
+            "seed": 90300,
+            "validation_nll": 0.45737096818992806
+          },
+          {
+            "accuracy": 0.810302734375,
+            "initialization_scale": 1.0,
+            "nll": 0.4247330787625603,
+            "seed": 90301,
+            "validation_nll": 0.4182774505657858
+          },
+          {
+            "accuracy": 0.79541015625,
+            "initialization_scale": 1.0,
+            "nll": 0.44129175637567475,
+            "seed": 90302,
+            "validation_nll": 0.42342590622269766
+          }
+        ],
+        "square_writer": [
+          {
+            "accuracy": 0.8544921875,
+            "cached_square_feature_kurtosis": 5.4941375768016645,
+            "cached_square_feature_rms": 3.680405139619475,
+            "initialization_scale": 0.1,
+            "nll": 0.359139061642334,
+            "seed": 90300,
+            "validation_nll": 0.39097169309022617
+          },
+          {
+            "accuracy": 0.82080078125,
+            "cached_square_feature_kurtosis": 7.520664511847213,
+            "cached_square_feature_rms": 2.5833717760913286,
+            "initialization_scale": 0.3,
+            "nll": 0.40082660812688853,
+            "seed": 90301,
+            "validation_nll": 0.4144587147397417
+          },
+          {
+            "accuracy": 0.86279296875,
+            "cached_square_feature_kurtosis": 5.213883879186687,
+            "cached_square_feature_rms": 4.555632280026618,
+            "initialization_scale": 1.0,
+            "nll": 0.3400759944055919,
+            "seed": 90302,
+            "validation_nll": 0.3686690158472059
+          }
+        ]
+      }
+    },
+    {
+      "axis_aligned": false,
+      "maximum_absolute_linear_mean": 0.0,
+      "mean_shift": false,
+      "models": {
+        "bilinear_writer": {
+          "accuracy": 0.8173828125,
+          "initialization_scale": 1.0,
+          "nll": 0.4081812091015099,
+          "seed": 90400,
+          "validation_nll": 0.3291834917145319
+        },
+        "diagonal_moments": {
+          "accuracy": 0.7041015625,
+          "nll": 0.5690063893877437
+        },
+        "full_degree2_oracle": {
+          "accuracy": 0.875732421875,
+          "nll": 0.29671492355829904
+        },
+        "gfqv_offdiag": {
+          "accuracy": 0.850341796875,
+          "nll": 0.35060013639573595
+        },
+        "linear_mean": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "post_mean_degree2": {
+          "accuracy": 0.5,
+          "nll": 0.6931471805599453
+        },
+        "square_writer": {
+          "accuracy": 0.8603515625,
+          "cached_square_feature_kurtosis": 5.364855501039638,
+          "cached_square_feature_rms": 3.641162729070253,
+          "initialization_scale": 0.3,
+          "nll": 0.3409926759344378,
+          "seed": 90401,
+          "validation_nll": 0.24985905282275395
+        }
+      },
+      "world": 4,
+      "writer_initializations": {
+        "bilinear_writer": [
+          {
+            "accuracy": 0.8173828125,
+            "initialization_scale": 1.0,
+            "nll": 0.4081812091015099,
+            "seed": 90400,
+            "validation_nll": 0.3291834917145319
+          },
+          {
+            "accuracy": 0.818603515625,
+            "initialization_scale": 1.0,
+            "nll": 0.4045595090637347,
+            "seed": 90401,
+            "validation_nll": 0.3330247280293457
+          },
+          {
+            "accuracy": 0.816650390625,
+            "initialization_scale": 1.0,
+            "nll": 0.4012185830657407,
+            "seed": 90402,
+            "validation_nll": 0.34306242254190783
+          }
+        ],
+        "square_writer": [
+          {
+            "accuracy": 0.801025390625,
+            "cached_square_feature_kurtosis": 8.732779322291178,
+            "cached_square_feature_rms": 3.3614656647941463,
+            "initialization_scale": 0.1,
+            "nll": 0.42841404063232924,
+            "seed": 90400,
+            "validation_nll": 0.3809857744061057
+          },
+          {
+            "accuracy": 0.8603515625,
+            "cached_square_feature_kurtosis": 5.364855501039638,
+            "cached_square_feature_rms": 3.641162729070253,
+            "initialization_scale": 0.3,
+            "nll": 0.3409926759344378,
+            "seed": 90401,
+            "validation_nll": 0.24985905282275395
+          },
+          {
+            "accuracy": 0.860107421875,
+            "cached_square_feature_kurtosis": 5.259130590417011,
+            "cached_square_feature_rms": 4.52966652022887,
+            "initialization_scale": 1.0,
+            "nll": 0.34979731988938567,
+            "seed": 90402,
+            "validation_nll": 0.2732282405632178
+          }
+        ]
+      }
+    }
+  ],
+  "schema_version": 1,
+  "source_sha256": "92d290733e1290c20e1638aa65a22dc9d828afc298f9824adcf80caed9ec16b1",
+  "summary": {
+    "checks": {
+      "full_covariance_ceiling_at_least_82pct_each_world": true,
+      "linear_and_post_mean_accuracy_at_most_52pct_each_world": true
+    },
+    "decision": "reject_gfqv_preference_retain_gauge_to_curvature_family",
+    "gfqv_vs_strongest_equal_budget": {
+      "gfqv_win_count": 3,
+      "mean": 0.22998436546720274,
+      "paired_95pct_ci": [
+        -0.21797740804052262,
+        0.6779461389749282
+      ],
+      "passes_preference_rule": false,
+      "relative_excess_nll_improvement_by_world": [
+        -0.10313686120197621,
+        0.44890811848264445,
+        0.4622226936402518,
+        0.5589095420534702,
+        -0.21698166563837679
+      ],
+      "strongest_writer_by_world": [
+        "square_writer",
+        "square_writer",
+        "square_writer",
+        "square_writer",
+        "square_writer"
+      ]
+    },
+    "harness_valid": true,
+    "median_rotated_metrics": {
+      "bilinear_writer": {
+        "accuracy": 0.814208984375,
+        "nll": 0.41767833651035124
+      },
+      "diagonal_moments": {
+        "accuracy": 0.6640625,
+        "nll": 0.6095233666400575
+      },
+      "full_degree2_oracle": {
+        "accuracy": 0.871337890625,
+        "nll": 0.300096106013504
+      },
+      "gfqv_offdiag": {
+        "accuracy": 0.85498046875,
+        "nll": 0.34024076797603126
+      },
+      "linear_mean": {
+        "accuracy": 0.5,
+        "nll": 0.6931471805599453
+      },
+      "post_mean_degree2": {
+        "accuracy": 0.5,
+        "nll": 0.6931471805599453
+      },
+      "square_writer": {
+        "accuracy": 0.8603515625,
+        "nll": 0.3400759944055919
+      }
+    }
+  }
+}

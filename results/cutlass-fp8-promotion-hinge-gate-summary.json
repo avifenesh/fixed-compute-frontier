@@ -1,0 +1,142 @@
+{
+  "schema": "cutlass-fp8-promotion-hinge-gate-v1",
+  "claim": "Active alpha=1 midpoint hinge reuses an accurate-FP8 promotion boundary.",
+  "shape": {
+    "rows": [
+      64,
+      256,
+      1024,
+      4096
+    ],
+    "n": 4096,
+    "k": 4096
+  },
+  "records": [
+    {
+      "case": "m1024-baseline",
+      "m": 1024,
+      "n": 4096,
+      "k": 4096,
+      "runtime_ms": 0.0304179,
+      "gbytes_per_second": 898.936,
+      "gflops": 1129860.0,
+      "operation": "cutlass3x_sm90_tensorop_s64x128x32gemm_e4m3_e4m3_f32_bf16_bf16_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m1024-hinge",
+      "m": 1024,
+      "n": 4096,
+      "k": 4096,
+      "runtime_ms": 0.0313552,
+      "gbytes_per_second": 872.064,
+      "gflops": 1096090.0,
+      "operation": "cutlass3x_sm90_tensorop_s64x128x32gemm_e4m3_e4m3_f32_bf16_bf16_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m256-baseline",
+      "m": 256,
+      "n": 4096,
+      "k": 4096,
+      "runtime_ms": 0.0164426,
+      "gbytes_per_second": 1128.45,
+      "gflops": 522548.0,
+      "operation": "cutlass3x_sm90_tensorop_s64x128x32gemm_e4m3_e4m3_f32_bf16_bf16_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m256-hinge",
+      "m": 256,
+      "n": 4096,
+      "k": 4096,
+      "runtime_ms": 0.0171026,
+      "gbytes_per_second": 1084.91,
+      "gflops": 502383.0,
+      "operation": "cutlass3x_sm90_tensorop_s64x128x32gemm_e4m3_e4m3_f32_bf16_bf16_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m4096-baseline",
+      "m": 4096,
+      "n": 4096,
+      "k": 4096,
+      "runtime_ms": 0.109114,
+      "gbytes_per_second": 572.797,
+      "gflops": 1259900.0,
+      "operation": "cutlass3x_sm90_tensorop_s64x128x32gemm_e4m3_e4m3_f32_bf16_bf16_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m4096-hinge",
+      "m": 4096,
+      "n": 4096,
+      "k": 4096,
+      "runtime_ms": 0.112414,
+      "gbytes_per_second": 555.979,
+      "gflops": 1222910.0,
+      "operation": "cutlass3x_sm90_tensorop_s64x128x32gemm_e4m3_e4m3_f32_bf16_bf16_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m64-baseline",
+      "m": 64,
+      "n": 4096,
+      "k": 4096,
+      "runtime_ms": 0.016528,
+      "gbytes_per_second": 989.679,
+      "gflops": 129962.0,
+      "operation": "cutlass3x_sm90_tensorop_s64x128x32gemm_e4m3_e4m3_f32_bf16_bf16_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    },
+    {
+      "case": "m64-hinge",
+      "m": 64,
+      "n": 4096,
+      "k": 4096,
+      "runtime_ms": 0.0172258,
+      "gbytes_per_second": 949.591,
+      "gflops": 124697.0,
+      "operation": "cutlass3x_sm90_tensorop_s64x128x32gemm_e4m3_e4m3_f32_bf16_bf16_128x128x128_2x1x1_0_tnn_align16_warpspecialized_cooperative_epi_tma",
+      "disposition": "not_verified",
+      "status": "success"
+    }
+  ],
+  "comparisons": [
+    {
+      "m": 64,
+      "baseline_ms": 0.016528,
+      "hinge_ms": 0.0172258,
+      "hinge_over_baseline": 1.0422192642787995
+    },
+    {
+      "m": 256,
+      "baseline_ms": 0.0164426,
+      "hinge_ms": 0.0171026,
+      "hinge_over_baseline": 1.0401396372836411
+    },
+    {
+      "m": 1024,
+      "baseline_ms": 0.0304179,
+      "hinge_ms": 0.0313552,
+      "hinge_over_baseline": 1.0308140930175982
+    },
+    {
+      "m": 4096,
+      "baseline_ms": 0.109114,
+      "hinge_ms": 0.112414,
+      "hinge_over_baseline": 1.0302435984383305
+    }
+  ],
+  "decision": {
+    "key_cells_at_most_1_005": false,
+    "all_cells_at_most_1_01": false
+  }
+}

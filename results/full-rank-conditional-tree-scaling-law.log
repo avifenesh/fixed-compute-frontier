@@ -1,0 +1,69 @@
+{
+  "schema": "full-rank-conditional-tree-scaling-v1",
+  "source_sha256": "5a2586ba40feb9a9c60560253a8dce23158ec764072cd42df213b00dd36ee5d5",
+  "theorem_sha256": "967af0ce09482be0076247681b56389015290c907134d3202464b3f87b82548a",
+  "rows": [
+    {
+      "width": 384,
+      "intermediate_width": 1024,
+      "dense_parameters_and_macs": 1179648,
+      "internal_nodes": 511,
+      "maximum_balanced_depth": 9,
+      "candidate_parameters": 1179583,
+      "parameter_slack": 65,
+      "hard_path_payload_scalars": 10368,
+      "active_multiply_like_upper_bound": 96768,
+      "active_ratio": 0.08203125,
+      "ideal_reduction": 12.19047619047619,
+      "neumann_operator_error_upper_bound": 0.0026041666666666665,
+      "truncated_basis_sigma_min_lower_bound": 0.9973958333333334,
+      "tree_local_update_rank": 384,
+      "optimistic_equal_active_moe_width_and_rank_upper_bound": 84,
+      "tree_to_moe_local_rank_lower_ratio": 4.571428571428571
+    },
+    {
+      "width": 4096,
+      "intermediate_width": 14336,
+      "dense_parameters_and_macs": 176160768,
+      "internal_nodes": 7166,
+      "maximum_balanced_depth": 13,
+      "candidate_parameters": 176137214,
+      "parameter_slack": 23554,
+      "hard_path_payload_scalars": 159744,
+      "active_multiply_like_upper_bound": 1490944,
+      "active_ratio": 0.008463541666666666,
+      "ideal_reduction": 118.15384615384616,
+      "neumann_operator_error_upper_bound": 0.0026041666666666665,
+      "truncated_basis_sigma_min_lower_bound": 0.9973958333333334,
+      "tree_local_update_rank": 4096,
+      "optimistic_equal_active_moe_width_and_rank_upper_bound": 121,
+      "tree_to_moe_local_rank_lower_ratio": 33.85123966942149
+    },
+    {
+      "width": 8192,
+      "intermediate_width": 28672,
+      "dense_parameters_and_macs": 704643072,
+      "internal_nodes": 14334,
+      "maximum_balanced_depth": 14,
+      "candidate_parameters": 704595966,
+      "parameter_slack": 47106,
+      "hard_path_payload_scalars": 344064,
+      "active_multiply_like_upper_bound": 3211264,
+      "active_ratio": 0.004557291666666667,
+      "ideal_reduction": 219.42857142857142,
+      "neumann_operator_error_upper_bound": 0.0026041666666666665,
+      "truncated_basis_sigma_min_lower_bound": 0.9973958333333334,
+      "tree_local_update_rank": 8192,
+      "optimistic_equal_active_moe_width_and_rank_upper_bound": 130,
+      "tree_to_moe_local_rank_lower_ratio": 63.01538461538462
+    }
+  ],
+  "gates": {
+    "all_candidates_fit_dense_parameter_budget": true,
+    "active_ratio_strictly_decreases_with_width": true,
+    "truncated_basis_provably_invertible": true,
+    "tree_rank_exceeds_optimistic_equal_active_moe_rank": true
+  },
+  "all_gates_pass": true,
+  "boundary": "The MoE width bound gives the expert every active multiply and charges zero routing work, so it is optimistic for the MoE. The ledger proves a local rank/resource separation, not language quality or GPU speed."
+}

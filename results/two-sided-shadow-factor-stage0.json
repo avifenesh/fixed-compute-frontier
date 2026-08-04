@@ -1,0 +1,40 @@
+{
+  "all_gates_pass": true,
+  "candidate": "two-sided-shadow-factor-training",
+  "claim_boundary": {
+    "not_proved": "an AdamW language-learning gain, advantage over a higher learning rate, or advantage per unit of training cost",
+    "paid_cost": "extra training parameters, optimizer state, and weight-space products",
+    "proved": "exact ordinary-matrix endpoint and a low-rank two-sided first-step preconditioner under plain SGD",
+    "served_cost": "identical after exact factor merge"
+  },
+  "gate": "G0-exact-collapse-and-optimizer-geometry",
+  "gates": {
+    "collapse_has_identical_served_parameter_and_mac_budget": true,
+    "optimizer_geometry_differs_from_scalar_learning_rate": true,
+    "ordinary_weight_is_exact_initial_endpoint": true,
+    "two_sided_preconditioner_formula_is_exact": true
+  },
+  "metrics": {
+    "maximum_first_step_frobenius_ratio_to_plain_sgd": 1.7384877987558438,
+    "maximum_first_update_formula_error": 4.364997946426641e-16,
+    "maximum_initial_endpoint_error": 0.0,
+    "mean_first_step_frobenius_ratio_to_plain_sgd": 1.6379026550216063,
+    "minimum_first_step_frobenius_ratio_to_plain_sgd": 1.5366067583665468
+  },
+  "resource_ledger": {
+    "candidate_extra_served_dense_macs_per_token": 0,
+    "candidate_extra_served_parameters": 0,
+    "candidate_served_ffn_weight_parameters": 14155776,
+    "dimension": 384,
+    "extra_training_parameter_fraction_of_served_ffn": 0.11458333333333333,
+    "extra_training_parameters": 1622016,
+    "factor_product_macs_per_optimizer_step": 452984832,
+    "layers": 12,
+    "rank_per_side": 16,
+    "served_ffn_weight_parameters": 14155776,
+    "width": 1024
+  },
+  "seed": 307,
+  "source_sha256": "e04fb5589f1d5f324bb2ad6cf0dd0b99a3b625278159518e532fca69e28a4933",
+  "trials": 128
+}

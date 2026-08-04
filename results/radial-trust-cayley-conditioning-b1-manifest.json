@@ -1,0 +1,12 @@
+{
+  "schema": "radial-trust-cayley-conditioning-b1-manifest-v1",
+  "date": "2026-08-01",
+  "sha256": {
+    "preregistration": "5519f3bbb9622a28e48acf8f25d9a7bf7b629b1c8706669b213830c7b76a9bc7",
+    "paper_audit": "03c8031c641fd7723ac8ef1a03a762bc2f29c7e576eebd28f74bffae4e3baeac",
+    "executable": "cd37f67ea5fc947f9d87b9aa49c42ed28c30927c5e468a7d322d22a9dad21d02",
+    "candidate_source": "cf64ab47717ec0cb8a8720fbd768adf48ca9785f0169253966f5a1539ff70226",
+    "base_source": "166ce56d7e619d1d9a9ea35346d3b474d1f0dd05babbb735f9beff6f6725ff8b",
+    "tests": "ba053cf2051da1e27de822f2dc046c94b1882f47e3a62043b92d3a80f488a012"
+  }
+}

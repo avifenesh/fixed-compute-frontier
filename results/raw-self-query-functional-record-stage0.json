@@ -1,0 +1,107 @@
+{
+  "collisions": {
+    "all": {
+      "ambiguous_document_skeletons_excluded": 267,
+      "collision_documents": 2248,
+      "collision_groups": 3392,
+      "collision_probe_pairs": 14146,
+      "conditional_target_entropy_bits": 2.567697866632396,
+      "equality_documents": 1501,
+      "equality_groups": 299,
+      "negative_cross_document_pairs": 37970,
+      "positive_cross_document_pairs": 905,
+      "unique_skeletons": 95943
+    },
+    "evaluation": {
+      "ambiguous_document_skeletons_excluded": 12,
+      "collision_documents": 1072,
+      "collision_groups": 549,
+      "collision_probe_pairs": 1743,
+      "conditional_target_entropy_bits": 1.8920967722390307,
+      "equality_documents": 91,
+      "equality_groups": 17,
+      "negative_cross_document_pairs": 224,
+      "positive_cross_document_pairs": 36,
+      "unique_skeletons": 20443
+    },
+    "train": {
+      "ambiguous_document_skeletons_excluded": 176,
+      "collision_documents": 2149,
+      "collision_groups": 2686,
+      "collision_probe_pairs": 10746,
+      "conditional_target_entropy_bits": 2.4640685417547084,
+      "equality_documents": 1247,
+      "equality_groups": 225,
+      "negative_cross_document_pairs": 21148,
+      "positive_cross_document_pairs": 562,
+      "unique_skeletons": 77498
+    }
+  },
+  "corpus": {
+    "documents": 2405,
+    "fields": [
+      "document_id",
+      "text",
+      "title"
+    ],
+    "path": "data/hotpot-real-prose-t12/candidate-raw-prose.jsonl",
+    "sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a"
+  },
+  "decision": "admit_preregistration_of_a_raw-only_unary-read_and_balanced-pair-equality_GPU_gate",
+  "digital_record": {
+    "bits_per_cell": 4,
+    "cells_per_document": 220,
+    "documents": 2405,
+    "logical_bits": 2116400
+  },
+  "gates": {
+    "collision_queries_cover_at_least_85pct_documents": true,
+    "collision_target_entropy_at_least_2_bits": true,
+    "evaluation_retains_at_least_10_equality_groups_and_25_positive_pairs": true,
+    "every_document_has_disjoint_train_and_evaluation_reads": true,
+    "expected_raw_documents_and_fields": true,
+    "logical_record_budget_unchanged": true,
+    "train_has_at_least_200_equality_groups_and_500_positive_pairs": true
+  },
+  "limits": [
+    "Stage 0 proves only that the raw corpus supplies ambiguous query families and self-supervised equality pairs.",
+    "It does not show that a quantized record learns the reads, transfers to natural QA, or exports into ordinary weights.",
+    "The reused Hotpot development split cannot support a final capability claim; an admitted mechanism needs untouched holdout."
+  ],
+  "probe_rule": {
+    "anchor_words": 810,
+    "evaluation_hash_buckets": 5,
+    "fallback_documents": 1,
+    "radius_words_each_side": 4,
+    "rare_non_target_words_are_masked": true,
+    "raw_fields": [
+      "document_id",
+      "text",
+      "title"
+    ],
+    "target_is_removed": true,
+    "target_words": 21681,
+    "thresholds": {
+      "anchor_max_document_frequency": 1202,
+      "anchor_min_document_frequency": 25,
+      "target_max_document_frequency": 121,
+      "target_min_document_frequency": 1
+    },
+    "uses_parser_teacher_qa_or_support_fields": false
+  },
+  "probes": {
+    "fallback_probes": 2,
+    "split_counts": {
+      "evaluation": 21748,
+      "train": 86822
+    },
+    "split_documents": {
+      "evaluation": 2405,
+      "train": 2405
+    },
+    "total": 108570
+  },
+  "schema": "raw-self-query-functional-record-stage0-v1",
+  "stage0_pass": true,
+  "status": "stage0_only_not_capability_evidence"
+}

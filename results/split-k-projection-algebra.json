@@ -1,0 +1,29 @@
+{
+  "exact_sum": true,
+  "exact_contrast": true,
+  "exact_zero_endpoint": true,
+  "first_second_reconstruction": true,
+  "information_rank": {
+    "ordinary_rank": 2,
+    "sum_contrast_rank": 4,
+    "input_width": 4
+  },
+  "hessian_rank": {
+    "ordinary_quadratic_rank": 2,
+    "sum_contrast_quadratic_rank": 4,
+    "input_width": 4
+  },
+  "ledger": {
+    "output_width": 14336,
+    "input_width": 4096,
+    "rows": 256,
+    "tile_n": 128,
+    "dense_wgmma_instructions": 57344,
+    "split_wgmma_instructions": 57344,
+    "weight_payload_bytes": 58720256,
+    "input_payload_bytes": 1048576,
+    "baseline_accumulator_registers_per_thread": 64,
+    "split_accumulator_registers_per_thread": 128,
+    "split_epilogue_integer_add_sub_per_output": 2
+  }
+}

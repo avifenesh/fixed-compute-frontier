@@ -1,0 +1,93 @@
+{
+  "all_gates_pass": false,
+  "claim_boundary": "Passing only admits entity-record loading. It does not demonstrate record extraction, record capacity, QA gain, or strict Pareto gain.",
+  "configuration": {
+    "answer_label_reads": 0,
+    "canonical_form": "leading_space_plus_title_last_token",
+    "canonical_titles": 2405,
+    "interface": "final_block_pre_ffn_normalized_hidden",
+    "metric": "cosine",
+    "parameter_count": 36577152,
+    "surface_form": "full_question_title_span_last_token",
+    "training_updates": 0
+  },
+  "development_only": true,
+  "device": "cuda",
+  "entity_address": {
+    "claim_boundary": "Privileged target scoring using supporting-title identities, with no answer reads; not a QA or capability result.",
+    "random_initialization": {
+      "evaluation": {
+        "canonical_collisions": 0,
+        "canonical_minimum_margin": 0.006326258182525635,
+        "canonical_titles": 2405,
+        "correct": 63,
+        "mean_target_margin": -0.12786550354212523,
+        "minimum_target_margin": -0.6834262609481812,
+        "surfaces": 208,
+        "top1_accuracy": 0.30288461538461536
+      },
+      "state_sha256_after": "40d208029720fb9221f5aa74cbf772e5fa214464f27f90de3a5e7edc77a8843c",
+      "state_sha256_before": "40d208029720fb9221f5aa74cbf772e5fa214464f27f90de3a5e7edc77a8843c",
+      "train": {
+        "canonical_collisions": 0,
+        "canonical_minimum_margin": 0.006326258182525635,
+        "canonical_titles": 2405,
+        "correct": 79,
+        "mean_target_margin": -0.1330363391196891,
+        "minimum_target_margin": -0.5441102385520935,
+        "surfaces": 292,
+        "top1_accuracy": 0.2705479452054795
+      }
+    },
+    "trained": {
+      "evaluation": {
+        "canonical_collisions": 0,
+        "canonical_minimum_margin": 4.5299530029296875e-05,
+        "canonical_titles": 2405,
+        "correct": 169,
+        "mean_target_margin": 0.039137353690770954,
+        "minimum_target_margin": -0.19963431358337402,
+        "surfaces": 208,
+        "top1_accuracy": 0.8125
+      },
+      "state_sha256_after": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57",
+      "state_sha256_before": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57",
+      "train": {
+        "canonical_collisions": 0,
+        "canonical_minimum_margin": 4.5299530029296875e-05,
+        "canonical_titles": 2405,
+        "correct": 250,
+        "mean_target_margin": 0.04196728704726859,
+        "minimum_target_margin": -0.07895201444625854,
+        "surfaces": 292,
+        "top1_accuracy": 0.8561643835616438
+      }
+    }
+  },
+  "gates": {
+    "checkpoint_byte_identical": true,
+    "input_integrity": true,
+    "random_state_unchanged": true,
+    "trained_canonical_keys_distinct": true,
+    "trained_evaluation_margin_positive": false,
+    "trained_evaluation_top1_exact": false,
+    "trained_state_unchanged": true,
+    "trained_train_margin_positive": false,
+    "trained_train_top1_exact": false,
+    "zero_answer_label_reads": true,
+    "zero_training_updates": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "checkpoint_sha256_after": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "checkpoint_sha256_before": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "data_manifest_sha256": "90e539279f540a7516e3c90c3ee59539d3f8654cc84e88a82dc950ce6fb5036e",
+    "preregistration_sha256": "790fac82fa71cf67b95a83114ab09e7d8ef9febb10d1a15ddbd9081b6b1f7b0a",
+    "source_parquet_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+    "source_sha256": "a9cdd35b599a4ffaae69864a8681fba61cfc9fddfa4f99c0cbcc690d1a60abc5",
+    "t14_result_sha256": "4e80b58fb9d2d6372b8093792ba57c133eb6ea27b78ec01b63330325cd019839"
+  },
+  "schema": "hotpot-internal-entity-address-t15-v1",
+  "status": "fail",
+  "torch_version": "2.11.0+cu128"
+}

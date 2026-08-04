@@ -1,0 +1,51 @@
+stage=environment
+2026-07-31T07:53:00+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+.....F.                                                                  [100%]
+=================================== FAILURES ===================================
+_______________ test_deterministic_codes_are_stable_and_bipolar ________________
+
+    def test_deterministic_codes_are_stable_and_bipolar() -> None:
+        first = experiment.deterministic_token_code(123)
+        second = experiment.deterministic_token_code(123)
+        other = experiment.deterministic_token_code(124)
+        assert torch.equal(first, second)
+        assert not torch.equal(first, other)
+        assert len(first) == experiment.ADDRESS_DIMS
+>       assert set(first.tolist()) == {-1.0, 1.0}
+E       assert {1.0, 255.0} == {-1.0, 1.0}
+E         
+E         Extra items in the left set:
+E         255.0
+E         Extra items in the right set:
+E         -1.0
+E         Use -v to get more diff
+
+tests/test_hotpot_semantic_address_t12.py:35: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_hotpot_semantic_address_t12.py::test_deterministic_codes_are_stable_and_bipolar
+1 failed, 6 passed in 2.63s
+stage=environment
+2026-07-31T07:53:48+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+.......                                                                  [100%]
+7 passed in 2.44s
+stage=from_scratch_semantic_address_gate
+{"maximum_loss": 10.877599716186523, "natural_nll": 5.7652552127838135, "step": 5000}
+{"maximum_loss": 10.877599716186523, "natural_nll": 5.436325624585152, "step": 20000}
+{
+  "all_gates_pass": false,
+  "entity_surface_top1": 1.0,
+  "failed_gates": [
+    "trained_semantic_at_least_70pct",
+    "trained_semantic_beats_lexical_by_10pp"
+  ],
+  "final_natural_nll": 5.436325624585152,
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/hotpot-semantic-address-t12.json",
+  "semantic_evaluation_accuracy": 0.6057692307692307
+}
+stage=complete

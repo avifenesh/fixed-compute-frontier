@@ -1,0 +1,184 @@
+{
+  "all_gates_pass": true,
+  "args": {
+    "batches": "1,8,32,128",
+    "dimension": 4096,
+    "hidden": 14336,
+    "hidden_alignment": 8,
+    "output": "results/reflex-swiglu-fused-h100.json",
+    "samples": 200,
+    "seed": 53,
+    "warmup": 40
+  },
+  "candidate": "Reflex-SwiGLU",
+  "cells": [
+    {
+      "batch": 1,
+      "equal_parameter_over_baseline_median": 1.013998646859152,
+      "same_width_over_baseline_median": 0.9986452820646805,
+      "timings": {
+        "baseline": {
+          "max_us": 194.240003824234,
+          "mean_us": 142.2441601753235,
+          "median_us": 141.7279988527298,
+          "min_us": 139.39200341701508,
+          "p10_us": 140.66879898309708,
+          "p90_us": 143.30560266971588,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 154.01600301265717,
+          "mean_us": 144.02895987033844,
+          "median_us": 143.71199905872345,
+          "min_us": 141.40799641609192,
+          "p10_us": 142.74880588054657,
+          "p90_us": 145.18719613552094,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 166.75199568271637,
+          "mean_us": 141.73551999032497,
+          "median_us": 141.53599739074707,
+          "min_us": 139.1039937734604,
+          "p10_us": 140.3168022632599,
+          "p90_us": 142.63040572404861,
+          "samples": 200
+        }
+      },
+      "zero_reflex_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 8,
+      "equal_parameter_over_baseline_median": 1.010570337159905,
+      "same_width_over_baseline_median": 0.9997798337791178,
+      "timings": {
+        "baseline": {
+          "max_us": 148.73600006103516,
+          "mean_us": 145.3760001808405,
+          "median_us": 145.31199634075165,
+          "min_us": 143.23200285434723,
+          "p10_us": 144.41600441932678,
+          "p90_us": 146.46720439195633,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 151.2639969587326,
+          "mean_us": 146.95392027497292,
+          "median_us": 146.84799313545227,
+          "min_us": 144.896000623703,
+          "p10_us": 146.01600170135498,
+          "p90_us": 147.9071944952011,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 167.29600727558136,
+          "mean_us": 145.38048043847084,
+          "median_us": 145.28000354766846,
+          "min_us": 143.19999516010284,
+          "p10_us": 144.19199526309967,
+          "p90_us": 146.3711977005005,
+          "samples": 200
+        }
+      },
+      "zero_reflex_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 32,
+      "equal_parameter_over_baseline_median": 1.0151773917573974,
+      "same_width_over_baseline_median": 1.0042752641393344,
+      "timings": {
+        "baseline": {
+          "max_us": 158.24000537395477,
+          "mean_us": 149.96703997254372,
+          "median_us": 149.6960073709488,
+          "min_us": 147.16799557209015,
+          "p10_us": 148.92800152301788,
+          "p90_us": 151.1391967535019,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 174.49599504470825,
+          "mean_us": 152.1700793504715,
+          "median_us": 151.96800231933594,
+          "min_us": 149.79200065135956,
+          "p10_us": 150.97280144691467,
+          "p90_us": 153.12319695949554,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 159.10400450229645,
+          "mean_us": 150.43760046362877,
+          "median_us": 150.33599734306335,
+          "min_us": 148.0640023946762,
+          "p10_us": 149.43360537290573,
+          "p90_us": 151.45919919013977,
+          "samples": 200
+        }
+      },
+      "zero_reflex_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 128,
+      "equal_parameter_over_baseline_median": 1.008732798523186,
+      "same_width_over_baseline_median": 1.0015525055478578,
+      "timings": {
+        "baseline": {
+          "max_us": 191.0720020532608,
+          "mean_us": 165.15359982848167,
+          "median_us": 164.89599645137787,
+          "min_us": 162.36799955368042,
+          "p10_us": 163.87200355529785,
+          "p90_us": 166.054405272007,
+          "samples": 200
+        },
+        "equal_parameter": {
+          "max_us": 175.61599612236023,
+          "mean_us": 166.39087967574596,
+          "median_us": 166.33599996566772,
+          "min_us": 163.68000209331512,
+          "p10_us": 165.13919830322266,
+          "p90_us": 167.65120178461075,
+          "samples": 200
+        },
+        "same_width": {
+          "max_us": 175.58400332927704,
+          "mean_us": 165.36864005029202,
+          "median_us": 165.15199840068817,
+          "min_us": 162.9440039396286,
+          "p10_us": 164.09279853105545,
+          "p90_us": 166.53120070695877,
+          "samples": 200
+        }
+      },
+      "zero_reflex_max_row_relative_error": 0.0
+    }
+  ],
+  "cuda_version": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "device_properties": "_CudaDeviceProperties(name='NVIDIA H100 80GB HBM3', major=9, minor=0, total_memory=80994MB, multi_processor_count=132, uuid=44700db4-f6b2-9122-550e-6987512886e8, L2_cache_size=50MB)",
+  "driver_version": "550.163.01",
+  "gates": {
+    "equal_parameter_within_1p02_on_key_cells": true,
+    "equal_parameter_within_1p05_on_full_grid": true,
+    "protocol_valid": true,
+    "same_width_within_1p02_on_key_cells": true,
+    "same_width_within_1p05_on_full_grid": true,
+    "zero_reflex_inclusion_below_0p2_percent": true
+  },
+  "kernel": {
+    "block": 256,
+    "cuda_graph_full_path": true,
+    "num_warps": 4
+  },
+  "ledger": {
+    "aligned_equal_parameter_hidden": 14328,
+    "baseline_hidden": 14336,
+    "exact_equal_parameter_hidden": 14334,
+    "same_width_parameter_overhead_fraction": 8.138020833333333e-05
+  },
+  "preregistration_sha256": "5531d4d61fb7a49126fe4cda51b9845d00569322cc6140ea480868ef8ad45618",
+  "scope": "fused single-H100 serving gate only",
+  "source_sha256": "f077f53c89f887f1de5af3cdf91a8caf072937516f4a962114a92b2bc523f62a",
+  "torch_version": "2.5.1+cu124",
+  "triton_version": "3.1.0"
+}

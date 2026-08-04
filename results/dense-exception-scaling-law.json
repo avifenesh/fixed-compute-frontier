@@ -1,0 +1,1212 @@
+{
+  "schema_version": 1,
+  "claim": "a capped dense exception must shrink proportionally with scale",
+  "source_sha256": "607ff696ae50b211ace193a02ee399fe7ef58392cd24be7b4e1e93a05c51fdf4",
+  "mixture": {
+    "bulk_weight": 0.75,
+    "exception_weight": 0.25
+  },
+  "widths": [
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192
+  ],
+  "tolerances": [
+    0.1,
+    0.05,
+    0.01
+  ],
+  "random_orthogonal_witness": {
+    "width": 64,
+    "minimum_singular_value": 0.24999999999999983,
+    "maximum_singular_value": 0.25000000000000017,
+    "exception_relative_errors": {
+      "0": 1.0,
+      "6": 0.9519716382329886,
+      "32": 0.7071067811865475,
+      "63": 0.12499999999999992,
+      "64": 0.0
+    },
+    "all_singular_values_equal": true
+  },
+  "isotropic_exception": [
+    {
+      "width": 256,
+      "tolerance": 0.1,
+      "required_rank": 231,
+      "achieved_error": 0.09882117688026186,
+      "cost": {
+        "width": 256,
+        "rank": 231,
+        "rank_fraction": 0.90234375,
+        "dense_macs": 65536,
+        "ideal_bulk_macs": 2048.0,
+        "rank_correction_macs": 118272,
+        "total_to_dense_ratio": 1.8359375
+      }
+    },
+    {
+      "width": 256,
+      "tolerance": 0.05,
+      "required_rank": 250,
+      "achieved_error": 0.04841229182759271,
+      "cost": {
+        "width": 256,
+        "rank": 250,
+        "rank_fraction": 0.9765625,
+        "dense_macs": 65536,
+        "ideal_bulk_macs": 2048.0,
+        "rank_correction_macs": 128000,
+        "total_to_dense_ratio": 1.984375
+      }
+    },
+    {
+      "width": 256,
+      "tolerance": 0.01,
+      "required_rank": 256,
+      "achieved_error": 0.0,
+      "cost": {
+        "width": 256,
+        "rank": 256,
+        "rank_fraction": 1.0,
+        "dense_macs": 65536,
+        "ideal_bulk_macs": 2048.0,
+        "rank_correction_macs": 131072,
+        "total_to_dense_ratio": 2.03125
+      }
+    },
+    {
+      "width": 512,
+      "tolerance": 0.1,
+      "required_rank": 461,
+      "achieved_error": 0.0998044963916957,
+      "cost": {
+        "width": 512,
+        "rank": 461,
+        "rank_fraction": 0.900390625,
+        "dense_macs": 262144,
+        "ideal_bulk_macs": 4608.0,
+        "rank_correction_macs": 472064,
+        "total_to_dense_ratio": 1.818359375
+      }
+    },
+    {
+      "width": 512,
+      "tolerance": 0.05,
+      "required_rank": 500,
+      "achieved_error": 0.04841229182759271,
+      "cost": {
+        "width": 512,
+        "rank": 500,
+        "rank_fraction": 0.9765625,
+        "dense_macs": 262144,
+        "ideal_bulk_macs": 4608.0,
+        "rank_correction_macs": 512000,
+        "total_to_dense_ratio": 1.970703125
+      }
+    },
+    {
+      "width": 512,
+      "tolerance": 0.01,
+      "required_rank": 512,
+      "achieved_error": 0.0,
+      "cost": {
+        "width": 512,
+        "rank": 512,
+        "rank_fraction": 1.0,
+        "dense_macs": 262144,
+        "ideal_bulk_macs": 4608.0,
+        "rank_correction_macs": 524288,
+        "total_to_dense_ratio": 2.017578125
+      }
+    },
+    {
+      "width": 1024,
+      "tolerance": 0.1,
+      "required_rank": 922,
+      "achieved_error": 0.0998044963916957,
+      "cost": {
+        "width": 1024,
+        "rank": 922,
+        "rank_fraction": 0.900390625,
+        "dense_macs": 1048576,
+        "ideal_bulk_macs": 10240.0,
+        "rank_correction_macs": 1888256,
+        "total_to_dense_ratio": 1.810546875
+      }
+    },
+    {
+      "width": 1024,
+      "tolerance": 0.05,
+      "required_rank": 999,
+      "achieved_error": 0.04941058844013093,
+      "cost": {
+        "width": 1024,
+        "rank": 999,
+        "rank_fraction": 0.9755859375,
+        "dense_macs": 1048576,
+        "ideal_bulk_macs": 10240.0,
+        "rank_correction_macs": 2045952,
+        "total_to_dense_ratio": 1.9609375
+      }
+    },
+    {
+      "width": 1024,
+      "tolerance": 0.01,
+      "required_rank": 1023,
+      "achieved_error": 0.009882117688026186,
+      "cost": {
+        "width": 1024,
+        "rank": 1023,
+        "rank_fraction": 0.9990234375,
+        "dense_macs": 1048576,
+        "ideal_bulk_macs": 10240.0,
+        "rank_correction_macs": 2095104,
+        "total_to_dense_ratio": 2.0078125
+      }
+    },
+    {
+      "width": 2048,
+      "tolerance": 0.1,
+      "required_rank": 1844,
+      "achieved_error": 0.0998044963916957,
+      "cost": {
+        "width": 2048,
+        "rank": 1844,
+        "rank_fraction": 0.900390625,
+        "dense_macs": 4194304,
+        "ideal_bulk_macs": 22528.0,
+        "rank_correction_macs": 7553024,
+        "total_to_dense_ratio": 1.80615234375
+      }
+    },
+    {
+      "width": 2048,
+      "tolerance": 0.05,
+      "required_rank": 1997,
+      "achieved_error": 0.04990224819584785,
+      "cost": {
+        "width": 2048,
+        "rank": 1997,
+        "rank_fraction": 0.97509765625,
+        "dense_macs": 4194304,
+        "ideal_bulk_macs": 22528.0,
+        "rank_correction_macs": 8179712,
+        "total_to_dense_ratio": 1.95556640625
+      }
+    },
+    {
+      "width": 2048,
+      "tolerance": 0.01,
+      "required_rank": 2046,
+      "achieved_error": 0.009882117688026186,
+      "cost": {
+        "width": 2048,
+        "rank": 2046,
+        "rank_fraction": 0.9990234375,
+        "dense_macs": 4194304,
+        "ideal_bulk_macs": 22528.0,
+        "rank_correction_macs": 8380416,
+        "total_to_dense_ratio": 2.00341796875
+      }
+    },
+    {
+      "width": 4096,
+      "tolerance": 0.1,
+      "required_rank": 3687,
+      "achieved_error": 0.09992673097074677,
+      "cost": {
+        "width": 4096,
+        "rank": 3687,
+        "rank_fraction": 0.900146484375,
+        "dense_macs": 16777216,
+        "ideal_bulk_macs": 49152.0,
+        "rank_correction_macs": 30203904,
+        "total_to_dense_ratio": 1.80322265625
+      }
+    },
+    {
+      "width": 4096,
+      "tolerance": 0.05,
+      "required_rank": 3994,
+      "achieved_error": 0.04990224819584785,
+      "cost": {
+        "width": 4096,
+        "rank": 3994,
+        "rank_fraction": 0.97509765625,
+        "dense_macs": 16777216,
+        "ideal_bulk_macs": 49152.0,
+        "rank_correction_macs": 32718848,
+        "total_to_dense_ratio": 1.953125
+      }
+    },
+    {
+      "width": 4096,
+      "tolerance": 0.01,
+      "required_rank": 4092,
+      "achieved_error": 0.009882117688026186,
+      "cost": {
+        "width": 4096,
+        "rank": 4092,
+        "rank_fraction": 0.9990234375,
+        "dense_macs": 16777216,
+        "ideal_bulk_macs": 49152.0,
+        "rank_correction_macs": 33521664,
+        "total_to_dense_ratio": 2.0009765625
+      }
+    },
+    {
+      "width": 8192,
+      "tolerance": 0.1,
+      "required_rank": 7373,
+      "achieved_error": 0.09998779222360098,
+      "cost": {
+        "width": 8192,
+        "rank": 7373,
+        "rank_fraction": 0.9000244140625,
+        "dense_macs": 67108864,
+        "ideal_bulk_macs": 106496.0,
+        "rank_correction_macs": 120799232,
+        "total_to_dense_ratio": 1.8016357421875
+      }
+    },
+    {
+      "width": 8192,
+      "tolerance": 0.05,
+      "required_rank": 7988,
+      "achieved_error": 0.04990224819584785,
+      "cost": {
+        "width": 8192,
+        "rank": 7988,
+        "rank_fraction": 0.97509765625,
+        "dense_macs": 67108864,
+        "ideal_bulk_macs": 106496.0,
+        "rank_correction_macs": 130875392,
+        "total_to_dense_ratio": 1.9517822265625
+      }
+    },
+    {
+      "width": 8192,
+      "tolerance": 0.01,
+      "required_rank": 8184,
+      "achieved_error": 0.009882117688026186,
+      "cost": {
+        "width": 8192,
+        "rank": 8184,
+        "rank_fraction": 0.9990234375,
+        "dense_macs": 67108864,
+        "ideal_bulk_macs": 106496.0,
+        "rank_correction_macs": 134086656,
+        "total_to_dense_ratio": 1.9996337890625
+      }
+    }
+  ],
+  "power_law_exception": [
+    {
+      "width": 256,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.1,
+      "required_rank": 231,
+      "rank_fraction": 0.90234375,
+      "cost_ratio": 1.8359375
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.05,
+      "required_rank": 250,
+      "rank_fraction": 0.9765625,
+      "cost_ratio": 1.984375
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.01,
+      "required_rank": 256,
+      "rank_fraction": 1.0,
+      "cost_ratio": 2.03125
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.1,
+      "required_rank": 210,
+      "rank_fraction": 0.8203125,
+      "cost_ratio": 1.671875
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.05,
+      "required_rank": 244,
+      "rank_fraction": 0.953125,
+      "cost_ratio": 1.9375
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.01,
+      "required_rank": 256,
+      "rank_fraction": 1.0,
+      "cost_ratio": 2.03125
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.1,
+      "required_rank": 139,
+      "rank_fraction": 0.54296875,
+      "cost_ratio": 1.1171875
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.05,
+      "required_rank": 220,
+      "rank_fraction": 0.859375,
+      "cost_ratio": 1.75
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.01,
+      "required_rank": 255,
+      "rank_fraction": 0.99609375,
+      "cost_ratio": 2.0234375
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.1,
+      "required_rank": 29,
+      "rank_fraction": 0.11328125,
+      "cost_ratio": 0.2578125
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.05,
+      "required_rank": 114,
+      "rank_fraction": 0.4453125,
+      "cost_ratio": 0.921875
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.01,
+      "required_rank": 247,
+      "rank_fraction": 0.96484375,
+      "cost_ratio": 1.9609375
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.1,
+      "required_rank": 6,
+      "rank_fraction": 0.0234375,
+      "cost_ratio": 0.078125
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.05,
+      "required_rank": 22,
+      "rank_fraction": 0.0859375,
+      "cost_ratio": 0.203125
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.01,
+      "required_rank": 181,
+      "rank_fraction": 0.70703125,
+      "cost_ratio": 1.4453125
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.1,
+      "required_rank": 2,
+      "rank_fraction": 0.0078125,
+      "cost_ratio": 0.046875
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.05,
+      "required_rank": 4,
+      "rank_fraction": 0.015625,
+      "cost_ratio": 0.0625
+    },
+    {
+      "width": 256,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.01,
+      "required_rank": 20,
+      "rank_fraction": 0.078125,
+      "cost_ratio": 0.1875
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.1,
+      "required_rank": 461,
+      "rank_fraction": 0.900390625,
+      "cost_ratio": 1.818359375
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.05,
+      "required_rank": 500,
+      "rank_fraction": 0.9765625,
+      "cost_ratio": 1.970703125
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.01,
+      "required_rank": 512,
+      "rank_fraction": 1.0,
+      "cost_ratio": 2.017578125
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.1,
+      "required_rank": 418,
+      "rank_fraction": 0.81640625,
+      "cost_ratio": 1.650390625
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.05,
+      "required_rank": 488,
+      "rank_fraction": 0.953125,
+      "cost_ratio": 1.923828125
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.01,
+      "required_rank": 512,
+      "rank_fraction": 1.0,
+      "cost_ratio": 2.017578125
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.1,
+      "required_rank": 259,
+      "rank_fraction": 0.505859375,
+      "cost_ratio": 1.029296875
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.05,
+      "required_rank": 432,
+      "rank_fraction": 0.84375,
+      "cost_ratio": 1.705078125
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.01,
+      "required_rank": 509,
+      "rank_fraction": 0.994140625,
+      "cost_ratio": 2.005859375
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.1,
+      "required_rank": 34,
+      "rank_fraction": 0.06640625,
+      "cost_ratio": 0.150390625
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.05,
+      "required_rank": 174,
+      "rank_fraction": 0.33984375,
+      "cost_ratio": 0.697265625
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.01,
+      "required_rank": 484,
+      "rank_fraction": 0.9453125,
+      "cost_ratio": 1.908203125
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.1,
+      "required_rank": 6,
+      "rank_fraction": 0.01171875,
+      "cost_ratio": 0.041015625
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.05,
+      "required_rank": 23,
+      "rank_fraction": 0.044921875,
+      "cost_ratio": 0.107421875
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.01,
+      "required_rank": 278,
+      "rank_fraction": 0.54296875,
+      "cost_ratio": 1.103515625
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.1,
+      "required_rank": 2,
+      "rank_fraction": 0.00390625,
+      "cost_ratio": 0.025390625
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.05,
+      "required_rank": 4,
+      "rank_fraction": 0.0078125,
+      "cost_ratio": 0.033203125
+    },
+    {
+      "width": 512,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.01,
+      "required_rank": 20,
+      "rank_fraction": 0.0390625,
+      "cost_ratio": 0.095703125
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.1,
+      "required_rank": 922,
+      "rank_fraction": 0.900390625,
+      "cost_ratio": 1.810546875
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.05,
+      "required_rank": 999,
+      "rank_fraction": 0.9755859375,
+      "cost_ratio": 1.9609375
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.01,
+      "required_rank": 1023,
+      "rank_fraction": 0.9990234375,
+      "cost_ratio": 2.0078125
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.1,
+      "required_rank": 834,
+      "rank_fraction": 0.814453125,
+      "cost_ratio": 1.638671875
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.05,
+      "required_rank": 975,
+      "rank_fraction": 0.9521484375,
+      "cost_ratio": 1.9140625
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.01,
+      "required_rank": 1022,
+      "rank_fraction": 0.998046875,
+      "cost_ratio": 2.005859375
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.1,
+      "required_rank": 483,
+      "rank_fraction": 0.4716796875,
+      "cost_ratio": 0.953125
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.05,
+      "required_rank": 849,
+      "rank_fraction": 0.8291015625,
+      "cost_ratio": 1.66796875
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.01,
+      "required_rank": 1017,
+      "rank_fraction": 0.9931640625,
+      "cost_ratio": 1.99609375
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.1,
+      "required_rank": 40,
+      "rank_fraction": 0.0390625,
+      "cost_ratio": 0.087890625
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.05,
+      "required_rank": 251,
+      "rank_fraction": 0.2451171875,
+      "cost_ratio": 0.5
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.01,
+      "required_rank": 946,
+      "rank_fraction": 0.923828125,
+      "cost_ratio": 1.857421875
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.1,
+      "required_rank": 6,
+      "rank_fraction": 0.005859375,
+      "cost_ratio": 0.021484375
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.05,
+      "required_rank": 24,
+      "rank_fraction": 0.0234375,
+      "cost_ratio": 0.056640625
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.01,
+      "required_rank": 382,
+      "rank_fraction": 0.373046875,
+      "cost_ratio": 0.755859375
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.1,
+      "required_rank": 2,
+      "rank_fraction": 0.001953125,
+      "cost_ratio": 0.013671875
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.05,
+      "required_rank": 4,
+      "rank_fraction": 0.00390625,
+      "cost_ratio": 0.017578125
+    },
+    {
+      "width": 1024,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.01,
+      "required_rank": 20,
+      "rank_fraction": 0.01953125,
+      "cost_ratio": 0.048828125
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.1,
+      "required_rank": 1844,
+      "rank_fraction": 0.900390625,
+      "cost_ratio": 1.80615234375
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.05,
+      "required_rank": 1997,
+      "rank_fraction": 0.97509765625,
+      "cost_ratio": 1.95556640625
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.01,
+      "required_rank": 2046,
+      "rank_fraction": 0.9990234375,
+      "cost_ratio": 2.00341796875
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.1,
+      "required_rank": 1665,
+      "rank_fraction": 0.81298828125,
+      "cost_ratio": 1.63134765625
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.05,
+      "required_rank": 1949,
+      "rank_fraction": 0.95166015625,
+      "cost_ratio": 1.90869140625
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.01,
+      "required_rank": 2044,
+      "rank_fraction": 0.998046875,
+      "cost_ratio": 2.00146484375
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.1,
+      "required_rank": 902,
+      "rank_fraction": 0.4404296875,
+      "cost_ratio": 0.88623046875
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.05,
+      "required_rank": 1669,
+      "rank_fraction": 0.81494140625,
+      "cost_ratio": 1.63525390625
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.01,
+      "required_rank": 2032,
+      "rank_fraction": 0.9921875,
+      "cost_ratio": 1.98974609375
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.1,
+      "required_rank": 44,
+      "rank_fraction": 0.021484375,
+      "cost_ratio": 0.04833984375
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.05,
+      "required_rank": 340,
+      "rank_fraction": 0.166015625,
+      "cost_ratio": 0.33740234375
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.01,
+      "required_rank": 1830,
+      "rank_fraction": 0.8935546875,
+      "cost_ratio": 1.79248046875
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.1,
+      "required_rank": 6,
+      "rank_fraction": 0.0029296875,
+      "cost_ratio": 0.01123046875
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.05,
+      "required_rank": 24,
+      "rank_fraction": 0.01171875,
+      "cost_ratio": 0.02880859375
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.01,
+      "required_rank": 469,
+      "rank_fraction": 0.22900390625,
+      "cost_ratio": 0.46337890625
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.1,
+      "required_rank": 2,
+      "rank_fraction": 0.0009765625,
+      "cost_ratio": 0.00732421875
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.05,
+      "required_rank": 4,
+      "rank_fraction": 0.001953125,
+      "cost_ratio": 0.00927734375
+    },
+    {
+      "width": 2048,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.01,
+      "required_rank": 20,
+      "rank_fraction": 0.009765625,
+      "cost_ratio": 0.02490234375
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.1,
+      "required_rank": 3687,
+      "rank_fraction": 0.900146484375,
+      "cost_ratio": 1.80322265625
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.05,
+      "required_rank": 3994,
+      "rank_fraction": 0.97509765625,
+      "cost_ratio": 1.953125
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.01,
+      "required_rank": 4092,
+      "rank_fraction": 0.9990234375,
+      "cost_ratio": 2.0009765625
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.1,
+      "required_rank": 3327,
+      "rank_fraction": 0.812255859375,
+      "cost_ratio": 1.62744140625
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.05,
+      "required_rank": 3897,
+      "rank_fraction": 0.951416015625,
+      "cost_ratio": 1.90576171875
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.01,
+      "required_rank": 4088,
+      "rank_fraction": 0.998046875,
+      "cost_ratio": 1.9990234375
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.1,
+      "required_rank": 1683,
+      "rank_fraction": 0.410888671875,
+      "cost_ratio": 0.82470703125
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.05,
+      "required_rank": 3280,
+      "rank_fraction": 0.80078125,
+      "cost_ratio": 1.6044921875
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.01,
+      "required_rank": 4060,
+      "rank_fraction": 0.9912109375,
+      "cost_ratio": 1.9853515625
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.1,
+      "required_rank": 48,
+      "rank_fraction": 0.01171875,
+      "cost_ratio": 0.0263671875
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.05,
+      "required_rank": 436,
+      "rank_fraction": 0.1064453125,
+      "cost_ratio": 0.2158203125
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.01,
+      "required_rank": 3495,
+      "rank_fraction": 0.853271484375,
+      "cost_ratio": 1.70947265625
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.1,
+      "required_rank": 6,
+      "rank_fraction": 0.00146484375,
+      "cost_ratio": 0.005859375
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.05,
+      "required_rank": 24,
+      "rank_fraction": 0.005859375,
+      "cost_ratio": 0.0146484375
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.01,
+      "required_rank": 529,
+      "rank_fraction": 0.129150390625,
+      "cost_ratio": 0.26123046875
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.1,
+      "required_rank": 2,
+      "rank_fraction": 0.00048828125,
+      "cost_ratio": 0.00390625
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.05,
+      "required_rank": 4,
+      "rank_fraction": 0.0009765625,
+      "cost_ratio": 0.0048828125
+    },
+    {
+      "width": 4096,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.01,
+      "required_rank": 20,
+      "rank_fraction": 0.0048828125,
+      "cost_ratio": 0.0126953125
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.1,
+      "required_rank": 7373,
+      "rank_fraction": 0.9000244140625,
+      "cost_ratio": 1.8016357421875
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.05,
+      "required_rank": 7988,
+      "rank_fraction": 0.97509765625,
+      "cost_ratio": 1.9517822265625
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.0,
+      "tolerance": 0.01,
+      "required_rank": 8184,
+      "rank_fraction": 0.9990234375,
+      "cost_ratio": 1.9996337890625
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.1,
+      "required_rank": 6648,
+      "rank_fraction": 0.8115234375,
+      "cost_ratio": 1.6246337890625
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.05,
+      "required_rank": 7791,
+      "rank_fraction": 0.9510498046875,
+      "cost_ratio": 1.9036865234375
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.25,
+      "tolerance": 0.01,
+      "required_rank": 8176,
+      "rank_fraction": 0.998046875,
+      "cost_ratio": 1.9976806640625
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.1,
+      "required_rank": 3141,
+      "rank_fraction": 0.3834228515625,
+      "cost_ratio": 0.7684326171875
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.05,
+      "required_rank": 6446,
+      "rank_fraction": 0.786865234375,
+      "cost_ratio": 1.5753173828125
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.5,
+      "tolerance": 0.01,
+      "required_rank": 8114,
+      "rank_fraction": 0.990478515625,
+      "cost_ratio": 1.9825439453125
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.1,
+      "required_rank": 51,
+      "rank_fraction": 0.0062255859375,
+      "cost_ratio": 0.0140380859375
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.05,
+      "required_rank": 530,
+      "rank_fraction": 0.064697265625,
+      "cost_ratio": 0.1309814453125
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 0.75,
+      "tolerance": 0.01,
+      "required_rank": 6563,
+      "rank_fraction": 0.8011474609375,
+      "cost_ratio": 1.6038818359375
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.1,
+      "required_rank": 6,
+      "rank_fraction": 0.000732421875,
+      "cost_ratio": 0.0030517578125
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.05,
+      "required_rank": 24,
+      "rank_fraction": 0.0029296875,
+      "cost_ratio": 0.0074462890625
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 1.0,
+      "tolerance": 0.01,
+      "required_rank": 566,
+      "rank_fraction": 0.069091796875,
+      "cost_ratio": 0.1397705078125
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.1,
+      "required_rank": 2,
+      "rank_fraction": 0.000244140625,
+      "cost_ratio": 0.0020751953125
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.05,
+      "required_rank": 4,
+      "rank_fraction": 0.00048828125,
+      "cost_ratio": 0.0025634765625
+    },
+    {
+      "width": 8192,
+      "spectral_exponent": 1.5,
+      "tolerance": 0.01,
+      "required_rank": 20,
+      "rank_fraction": 0.00244140625,
+      "cost_ratio": 0.0064697265625
+    }
+  ],
+  "near_linear_full_fallback_rate": {
+    "256": 0.03125,
+    "512": 0.017578125,
+    "1024": 0.009765625,
+    "2048": 0.00537109375,
+    "4096": 0.0029296875,
+    "8192": 0.0015869140625
+  },
+  "exception_geometries": {
+    "feature_rank": {
+      "logical_cost": "C_bulk(D) + 2 D r(D)",
+      "breaks_quadratic_only_if": "r(D) = o(D)",
+      "near_linear_if": "r(D) = O(log D)"
+    },
+    "local_dense_block": {
+      "logical_cost": "D b(D) plus cross-block communication",
+      "breaks_quadratic_only_if": "b(D) = o(D)"
+    },
+    "token_fallback": {
+      "logical_cost": "C_bulk(D) + p(D) D^2",
+      "breaks_quadratic_only_if": "p(D) = o(1)",
+      "near_linear_if": "p(D) = O(log D / D)"
+    },
+    "layer_fallback": {
+      "logical_cost": "C_bulk(D) + q(D) D^2",
+      "breaks_quadratic_only_if": "q(D) = o(1)",
+      "near_linear_if": "q(D) = O(log D / D)"
+    },
+    "resident_full_fallback": {
+      "static_bytes": "Theta(D^2) even when execution is skipped",
+      "cannot_claim": "smaller-model edge"
+    }
+  },
+  "decision": {
+    "broad_key_shift_is_a_candidate": false,
+    "single_width_cap_is_evidence": false,
+    "required_next_evidence": "At three or more widths, protected quality must hold while the measured exception fraction decreases with width.",
+    "gpu_rental_justified": false
+  }
+}

@@ -1,0 +1,75 @@
+{"starting_arm": "canonical_baseline", "learning_rate": 0.000848528137423857}
+{"forward_mechanism_arm": "canonical_baseline", "step": 61, "train_loss": 7.146153211593628, "validation_loss": 7.261467449367046, "gradient_norm": 0.7733125686645508}
+{"forward_mechanism_arm": "canonical_baseline", "step": 152, "train_loss": 6.5692832469940186, "validation_loss": 6.506049335002899, "gradient_norm": 0.7454208135604858}
+{"forward_mechanism_arm": "canonical_baseline", "step": 305, "train_loss": 6.034075498580933, "validation_loss": 6.181410133838654, "gradient_norm": 0.3244960904121399}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.000848528137423857}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 7.09868597984314, "validation_loss": 7.223309554159641, "gradient_norm": 0.771751880645752}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 6.55510687828064, "validation_loss": 6.480464391410351, "gradient_norm": 0.97993403673172}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 6.019471883773804, "validation_loss": 6.16860431432724, "gradient_norm": 0.491250216960907}
+{"starting_arm": "canonical_baseline", "learning_rate": 0.0012}
+{"forward_mechanism_arm": "canonical_baseline", "step": 61, "train_loss": 7.069890737533569, "validation_loss": 7.207127116620541, "gradient_norm": 0.7132280468940735}
+{"forward_mechanism_arm": "canonical_baseline", "step": 152, "train_loss": 6.49234414100647, "validation_loss": 6.438337594270706, "gradient_norm": 0.7173112630844116}
+{"forward_mechanism_arm": "canonical_baseline", "step": 305, "train_loss": 5.951933860778809, "validation_loss": 6.099084354937077, "gradient_norm": 0.31938689947128296}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.0012}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 7.036951541900635, "validation_loss": 7.174763284623623, "gradient_norm": 0.7788668870925903}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 6.473318338394165, "validation_loss": 6.4222071170806885, "gradient_norm": 1.1703637838363647}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 5.954155921936035, "validation_loss": 6.102745749056339, "gradient_norm": 0.6397066712379456}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.00015}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 8.044217109680176, "validation_loss": 8.065467953681946, "gradient_norm": 1.1412031650543213}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 7.124685287475586, "validation_loss": 7.055382996797562, "gradient_norm": 0.6332652568817139}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 6.744701147079468, "validation_loss": 6.8317471370100975, "gradient_norm": 0.5372406244277954}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.00021213203435596422}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 7.609045505523682, "validation_loss": 7.67767820507288, "gradient_norm": 0.8315884470939636}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 7.003921270370483, "validation_loss": 6.93266935646534, "gradient_norm": 0.6610533595085144}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 6.567280054092407, "validation_loss": 6.67124904692173, "gradient_norm": 0.5496915578842163}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.0004242640687119285}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 7.242040157318115, "validation_loss": 7.341834329068661, "gradient_norm": 0.9650329947471619}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 6.736447095870972, "validation_loss": 6.6698276698589325, "gradient_norm": 0.7808346748352051}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 6.237339973449707, "validation_loss": 6.367832854390144, "gradient_norm": 0.4798453152179718}
+{"starting_arm": "backward_only_tve", "learning_rate": 0.0006}
+{"forward_mechanism_arm": "backward_only_tve", "step": 61, "train_loss": 7.190398216247559, "validation_loss": 7.290763586759567, "gradient_norm": 0.948211133480072}
+{"forward_mechanism_arm": "backward_only_tve", "step": 152, "train_loss": 6.6372575759887695, "validation_loss": 6.567618601024151, "gradient_norm": 0.8689043521881104}
+{"forward_mechanism_arm": "backward_only_tve", "step": 305, "train_loss": 6.1179118156433105, "validation_loss": 6.257419563829899, "gradient_norm": 0.450050950050354}
+{
+  "all_new_arms_structurally_valid": true,
+  "best_is_grid_endpoint": true,
+  "best_learning_rates": {
+    "backward_only_tve": 0.0012,
+    "canonical_baseline": 0.0012
+  },
+  "best_losses": {
+    "backward_only_tve": 6.102745749056339,
+    "canonical_baseline": 6.099084354937077
+  },
+  "classification": "endpoint_extension_required",
+  "complete": true,
+  "ghost_relative_gain": -0.0005999584891487331,
+  "ghost_relative_regret": 0.0006003186554222051,
+  "ghost_survives_matched_lr_frontier": false,
+  "paired_best_terminal_diagnostic": {
+    "ghost_minus_canonical_mean": 0.0036613941192626953,
+    "lower_95": 0.0025078040777971934,
+    "standard_error": 0.0005885663476864806,
+    "upper_95": 0.004814984160728198
+  },
+  "terminal_losses": {
+    "backward_only_tve": {
+      "0.00014999999999999999": 6.8317471370100975,
+      "0.00021213203435596422": 6.67124904692173,
+      "0.00029999999999999997": 6.507063269615173,
+      "0.0004242640687119285": 6.367832854390144,
+      "0.00059999999999999995": 6.257419563829899,
+      "0.00084852813742385699": 6.16860431432724,
+      "0.0011999999999999999": 6.102745749056339
+    },
+    "canonical_baseline": {
+      "0.00014999999999999999": 6.844321824610233,
+      "0.00021213203435596422": 6.686818853020668,
+      "0.00029999999999999997": 6.523809522390366,
+      "0.0004242640687119285": 6.38331712782383,
+      "0.00059999999999999995": 6.268180273473263,
+      "0.00084852813742385699": 6.181410133838654,
+      "0.0011999999999999999": 6.099084354937077
+    }
+  }
+}

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/scale_referenced_whole_record_t32_information_oracle.py", line 749, in <module>
+    main()
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/scale_referenced_whole_record_t32_information_oracle.py", line 745, in main
+    print(json.dumps(run_oracle(), indent=2, sort_keys=True))
+                     ^^^^^^^^^^^^
+  File "/workspace/fixed-compute-frontier-t10-46367071/experiments/scale_referenced_whole_record_t32_information_oracle.py", line 489, in run_oracle
+    raise RuntimeError("unexpected evaluator schema")
+RuntimeError: unexpected evaluator schema

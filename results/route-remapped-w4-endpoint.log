@@ -1,0 +1,13 @@
+{
+  "endpoint_pass": false,
+  "gates": {
+    "all_90_matrices_finite_and_bf16_scales_exact": true,
+    "baseline_anchor_exact": true,
+    "integrity_protocol_data_valid": true,
+    "paired_upper_at_most_0p2_percent_baseline": false,
+    "relative_nll_degradation_at_most_0p2_percent": false,
+    "resident_ledger_exact": true
+  },
+  "relative_nll_degradation": 0.0843619379793815,
+  "resident_bits_per_weight": 4.1342592592592595
+}

@@ -1,0 +1,78 @@
+{
+  "claim_boundary": "This proves exact raw-sequence recovery only in a controlled identifiable repeated-frame regime. XOR is derived by the training-only compiler; the SwiGLU identity is proved separately, but deployed-model integration is not yet tested.",
+  "extractor": {
+    "compiler_signature": "(sentences: 'Sequence[str]') -> 'CompileResult'",
+    "contradictory_mentions_after_majority": 43639,
+    "induced_frames": 36,
+    "inferred_relations": 6,
+    "inferred_views": 3,
+    "minimum_fact_vote_fraction": 0.6825396825396826,
+    "observed_contradiction_fraction": 0.15032173170194005,
+    "relation_permutations_tested": 1440
+  },
+  "gates": {
+    "alias_view_count_exact": true,
+    "all_held_out_xor_compositions_exact": true,
+    "all_sentences_assigned_once": true,
+    "compiler_api_accepts_raw_strings_only": true,
+    "direct_facts_exact": true,
+    "duplicate_signature_null_rejected": true,
+    "entity_aliases_exact": true,
+    "independent_view_null_rejected": true,
+    "majority_error_union_bound_below_1pct": true,
+    "relation_paraphrases_exact": true,
+    "surface_frame_count_exact": true,
+    "swiglu_product_identity_below_1e_12": true
+  },
+  "mathematics": {
+    "entity_signature_collision_union_bound_per_view": 0.000484466552734375,
+    "majority_error_bound_per_fact_frame": 1.9799976363801276e-07,
+    "majority_error_union_bound": 0.0009123829108439627,
+    "swiglu_bipolar_product_max_abs_error": 0.0
+  },
+  "metrics": {
+    "compiler_derived_xor_accuracy": 1.0,
+    "compiler_derived_xor_queries": 4608,
+    "direct_fact_accuracy": 1.0,
+    "direct_fact_queries": 768,
+    "entity_alias_accuracy": 1.0,
+    "entity_aliases": 384,
+    "relation_paraphrase_accuracy": 1.0,
+    "relation_paraphrases": 36
+  },
+  "null_controls": {
+    "duplicate_entity_signature": {
+      "reason": "duplicate complete entity signature",
+      "rejected": true
+    },
+    "independent_views": {
+      "reason": "view 1 has 0 admissible alignments",
+      "rejected": true
+    }
+  },
+  "resource_ledger": {
+    "compiler_seconds": 13.636126206998597,
+    "failed_or_retried_compilations": 0,
+    "generation_seconds": 0.11174232099438086,
+    "gpu_seconds": 0.0,
+    "relation_permutations_tested": 1440
+  },
+  "schema": "consensus-permutation-raw-prose-stage0-v1",
+  "sealing": {
+    "preregistration_sha256": "9d2e535bf0a643ebe751dbd8d605d9b9c18f28f40d46f6a7c023c0a91b70fb52",
+    "raw_corpus_sha256": "d84a79cce4fe80df8870934d2a9d76e6417d2d11802543e8b0be0ab6a180a13e",
+    "source_sha256": "de8f860f4984d7a5bff869cf6c5b4444a1dec4c7004f68cedff7c668e2a10106"
+  },
+  "status": "pass",
+  "world": {
+    "alias_views": 3,
+    "contradiction_probability": 0.15,
+    "entities": 128,
+    "mentions_per_fact_frame": 63,
+    "paraphrases_per_relation_view": 2,
+    "raw_sentences": 290304,
+    "raw_tokens": 2661120,
+    "relations": 6,
+    "values": 16
+  }
+}

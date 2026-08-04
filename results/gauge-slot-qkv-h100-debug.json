@@ -1,0 +1,52 @@
+{
+  "cells": [
+    {
+      "correctness": {
+        "allclose_atol_0_25_rtol_0_02": true,
+        "max_abs": 0.015625,
+        "mean_abs": 0.0009318978409282863
+      },
+      "logical": {
+        "atlas_bits": 6144,
+        "output_bytes_each": 12288,
+        "qkv_values": 25165824,
+        "resident_weight_bytes_each": 50331648
+      },
+      "rows": 1,
+      "timing": {
+        "decoded_control": {
+          "median_ratio_to_torch_baseline": 1.450117773345318,
+          "median_us": 59.07199904322624,
+          "p05_us": 58.62399935722351,
+          "p95_us": 59.84000116586685
+        },
+        "gauge_slot_g2": {
+          "median_ratio_to_torch_baseline": 2.118617424968132,
+          "median_us": 86.30400151014328,
+          "p05_us": 59.29600074887276,
+          "p95_us": 90.04800021648407
+        },
+        "torch_baseline": {
+          "median_us": 40.73600098490715,
+          "p05_us": 28.12799997627735,
+          "p95_us": 54.976001381874084
+        },
+        "triton_baseline": {
+          "median_ratio_to_torch_baseline": 1.1115474577153133,
+          "median_us": 45.27999833226204,
+          "p05_us": 44.863998889923096,
+          "p95_us": 82.30400085449219
+        }
+      }
+    }
+  ],
+  "device": "NVIDIA H100 80GB HBM3",
+  "schema": "gauge-slot-qkv-h100-development-v1",
+  "shape": {
+    "head_dim": 128,
+    "hidden": 4096,
+    "kv_heads": 8,
+    "qkv_dim": 6144,
+    "query_heads": 32
+  }
+}

@@ -1,0 +1,77 @@
+stage=environment
+2026-07-31T06:49:12+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"bf16": true, "cuda": "12.8", "gpu": "NVIDIA H100 80GB HBM3", "python": "3.12.3", "torch": "2.11.0+cu128"}
+datasets=4.0.0 transformers=4.57.6 tokenizers=0.22.2
+stage=prepare_and_verify_data
+{
+  "dataset": "HuggingFaceTB/smollm-corpus",
+  "dataset_config": "fineweb-edu-dedup",
+  "dataset_revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+  "dtype": "uint16 little-endian",
+  "elapsed_seconds": 0.08443251810967922,
+  "files": {
+    "train": {
+      "bytes": 100195056,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/train.uint16.bin",
+      "sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a"
+    },
+    "validation": {
+      "bytes": 4202496,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/validation.uint16.bin",
+      "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+    }
+  },
+  "generated": false,
+  "generation": null,
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "schema": "raw-prose-equality-plane-t10-data-v1",
+  "sequence_length": 512,
+  "source_sha256": "442e4815facf76b0335c4227a92860cef1649a7d161c677dc5055d7d6b68d7e6",
+  "split_rule": "validation iff uint64_be(sha256(id)[:8]) mod 10 == 0",
+  "status": "pass",
+  "train_sequences": 97656,
+  "validation_sequences": 4096
+}
+stage=cpu_contract_tests
+............                                                             [100%]
+12 passed in 5.23s
+stage=bf16_representation_gate
+{
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/raw-prose-equality-plane-t10-quick.json",
+  "all_gates_pass": true,
+  "evaluation": {
+    "direct_accuracy": 1.0,
+    "direct_errors": 0,
+    "direct_queries": 12288,
+    "direct_minimum_margin": 163.0,
+    "equality_accuracy": 1.0,
+    "equality_errors": 0,
+    "equality_queries": 196608,
+    "equality_positive_rate": 0.1785481721162796,
+    "equality_minimum_margin": 163.0
+  }
+}
+representation_all_gates_pass=true
+stage=matched_training_pilot
+{
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/raw-prose-equality-plane-t10-training-pilot.json",
+  "all_gates_pass": false,
+  "best_2x_control": {
+    "direct_heldout_accuracy": 0.0840928852558136,
+    "equality_heldout_accuracy": 0.7751322984695435
+  }
+}
+{
+  "best_2x_control": {
+    "direct_heldout_accuracy": 0.0840928852558136,
+    "equality_heldout_accuracy": 0.7751322984695435
+  },
+  "failed_gates": [
+    "candidate_1000_natural_within_0p5pct",
+    "candidate_500_natural_within_0p5pct"
+  ],
+  "pilot_all_gates_pass": false
+}
+stage=complete mode=pilot

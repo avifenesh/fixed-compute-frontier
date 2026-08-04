@@ -1,0 +1,29 @@
+{
+  "all_gates_pass": false,
+  "failed_gates": [
+    "reader_beats_t12_by_10pp",
+    "reader_beats_t19b_by_10pp",
+    "reader_evaluation_at_least_75pct"
+  ],
+  "output": "results/self-latent-payload-t19c.json",
+  "reader": {
+    "closure_evaluations": 56,
+    "evaluation": {
+      "accuracy": 0.5,
+      "errors": 52,
+      "examples": 104,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.5
+    },
+    "finite": true,
+    "terminal_regularized_loss": 0.05317060409260729,
+    "train": {
+      "accuracy": 1.0,
+      "errors": 0,
+      "examples": 146,
+      "positive_rate": 0.5273972602739726,
+      "predicted_positive_rate": 0.5273972602739726
+    },
+    "weight_norm": 2.6347268230000656
+  }
+}

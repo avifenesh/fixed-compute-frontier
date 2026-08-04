@@ -1,0 +1,30 @@
+{
+  "chance": 0.25,
+  "config": {
+    "batch_size": 64,
+    "candidate_floor": 0.9,
+    "chance_tolerance": 0.08,
+    "eval_batches": 10,
+    "num_keys": 16,
+    "num_values": 4,
+    "steps": 200
+  },
+  "device": "cpu",
+  "means": {
+    "candidate_accuracy": 1.0,
+    "detached_accuracy": 0.928125,
+    "independent_shuffle_accuracy": 0.2625,
+    "reset_accuracy": 0.2609375
+  },
+  "scope": "operator development smoke only; not T70 cross-family admission",
+  "seeds": [
+    {
+      "candidate_accuracy": 1.0,
+      "detached_accuracy": 0.928125,
+      "independent_shuffle_accuracy": 0.2625,
+      "reset_accuracy": 0.2609375,
+      "seed": 701
+    }
+  ],
+  "status": "fail"
+}

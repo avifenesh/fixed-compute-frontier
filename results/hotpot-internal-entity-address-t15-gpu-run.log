@@ -1,0 +1,22 @@
+stage=environment
+2026-07-31T08:27:01+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+.......                                                                  [100%]
+7 passed in 2.74s
+stage=internal_entity_address_gate
+{
+  "all_gates_pass": false,
+  "failed_gates": [
+    "trained_evaluation_margin_positive",
+    "trained_evaluation_top1_exact",
+    "trained_train_margin_positive",
+    "trained_train_top1_exact"
+  ],
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/hotpot-internal-entity-address-t15.json",
+  "random_evaluation_top1": 0.30288461538461536,
+  "trained_evaluation_top1": 0.8125,
+  "trained_train_top1": 0.8561643835616438
+}
+stage=complete

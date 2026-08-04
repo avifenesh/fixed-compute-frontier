@@ -1,0 +1,113 @@
+{
+  "all_gates_pass": false,
+  "args": {
+    "batches": "1",
+    "dimension": 4096,
+    "dtypes": "float16",
+    "lengths": "8",
+    "output": "results/compiled-rank-one-program-h100-smoke.json",
+    "samples": 10,
+    "seed": 23,
+    "warmup": 3
+  },
+  "candidate": "compiled-ordered-rank-one-program",
+  "cells": [
+    {
+      "batch": 1,
+      "dimension": 4096,
+      "dtype": "float16",
+      "length": 8,
+      "modes": {
+        "compiled": {
+          "relative_errors": {
+            "additive": 0.00023206901096273214,
+            "compiled": 0.00021222789655439556,
+            "direct": 0.0005868098232895136
+          },
+          "timings": {
+            "additive": {
+              "max_us": 94.97600048780441,
+              "mean_us": 83.35680067539215,
+              "median_us": 82.20800012350082,
+              "min_us": 77.2159993648529,
+              "p10_us": 77.2159993648529,
+              "p90_us": 88.128000497818,
+              "samples": 10
+            },
+            "compiled": {
+              "max_us": 99.07200187444687,
+              "mean_us": 88.50239962339401,
+              "median_us": 86.01599931716919,
+              "min_us": 81.91999793052673,
+              "p10_us": 81.91999793052673,
+              "p90_us": 97.50399738550186,
+              "samples": 10
+            },
+            "compiled_over_additive_median": 1.0463215160075372,
+            "compiled_over_direct_median": 1.0320598717576523,
+            "direct": {
+              "max_us": 117.08799749612808,
+              "mean_us": 87.09120005369186,
+              "median_us": 83.3440013229847,
+              "min_us": 77.27999985218048,
+              "p10_us": 77.27999985218048,
+              "p90_us": 93.08800101280212,
+              "samples": 10
+            }
+          }
+        },
+        "eager": {
+          "relative_errors": {
+            "additive": 0.00023128523025661707,
+            "compiled": 0.00021240822388790548,
+            "direct": 0.0005865414277650416
+          },
+          "timings": {
+            "additive": {
+              "max_us": 84.927998483181,
+              "mean_us": 81.30879923701286,
+              "median_us": 80.80000057816505,
+              "min_us": 75.99999755620956,
+              "p10_us": 75.99999755620956,
+              "p90_us": 83.99999886751175,
+              "samples": 10
+            },
+            "compiled": {
+              "max_us": 582.912027835846,
+              "mean_us": 536.1727952957153,
+              "median_us": 525.2159833908081,
+              "min_us": 517.7599787712097,
+              "p10_us": 517.7599787712097,
+              "p90_us": 564.8639798164368,
+              "samples": 10
+            },
+            "compiled_over_additive_median": 6.500197767730457,
+            "compiled_over_direct_median": 0.9695770333028706,
+            "direct": {
+              "max_us": 566.3040280342102,
+              "mean_us": 546.8511939048767,
+              "median_us": 541.6959822177887,
+              "min_us": 532.2880148887634,
+              "p10_us": 532.2880148887634,
+              "p90_us": 560.8639717102051,
+              "samples": 10
+            }
+          }
+        }
+      }
+    }
+  ],
+  "cuda_version": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "device_properties": "_CudaDeviceProperties(name='NVIDIA H100 80GB HBM3', major=9, minor=0, total_memory=80994MB, multi_processor_count=132, uuid=44700db4-f6b2-9122-550e-6987512886e8, L2_cache_size=50MB)",
+  "gate": "G1-unoptimized-H100-executor",
+  "gates": {
+    "bfloat16_compiled_error_below_2e_2": true,
+    "compiled_faster_than_direct_for_all_l_ge_8": false,
+    "compiled_within_1p15_additive_on_key_cells": true,
+    "float16_compiled_error_below_2e_3": true
+  },
+  "scope": "executor only; selected program tensors already resident",
+  "source_sha256": "8a8d49d9caf15c9c95db70d061707d1d0b19536456eef8a315d349a3df22406e",
+  "torch_version": "2.5.1+cu124"
+}

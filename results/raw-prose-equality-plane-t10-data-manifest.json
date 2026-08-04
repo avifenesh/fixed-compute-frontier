@@ -1,0 +1,30 @@
+{
+  "dataset": "HuggingFaceTB/smollm-corpus",
+  "dataset_config": "fineweb-edu-dedup",
+  "dataset_revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+  "dtype": "uint16 little-endian",
+  "elapsed_seconds": 0.08443251810967922,
+  "files": {
+    "train": {
+      "bytes": 100195056,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/train.uint16.bin",
+      "sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a"
+    },
+    "validation": {
+      "bytes": 4202496,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/block-algebra-scratch-v4576/validation.uint16.bin",
+      "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+    }
+  },
+  "generated": false,
+  "generation": null,
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "schema": "raw-prose-equality-plane-t10-data-v1",
+  "sequence_length": 512,
+  "source_sha256": "442e4815facf76b0335c4227a92860cef1649a7d161c677dc5055d7d6b68d7e6",
+  "split_rule": "validation iff uint64_be(sha256(id)[:8]) mod 10 == 0",
+  "status": "pass",
+  "train_sequences": 97656,
+  "validation_sequences": 4096
+}

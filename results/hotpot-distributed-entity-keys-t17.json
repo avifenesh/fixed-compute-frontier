@@ -1,0 +1,132 @@
+{
+  "address_results": {
+    "canonical": {
+      "correct": 1918,
+      "examples": 2405,
+      "mean_target_margin": 1.7554025650024414,
+      "minimum_target_margin": -4.442502975463867,
+      "top1_accuracy": 0.7975051975051975
+    },
+    "evaluation_question_surfaces": {
+      "correct": 166,
+      "examples": 208,
+      "mean_target_margin": 1.324891209602356,
+      "minimum_target_margin": -3.8608505725860596,
+      "top1_accuracy": 0.7980769230769231
+    },
+    "held_raw_contexts": {
+      "correct": 1827,
+      "examples": 2405,
+      "mean_target_margin": 1.467780590057373,
+      "minimum_target_margin": -5.284137725830078,
+      "top1_accuracy": 0.7596673596673597
+    },
+    "train_question_surfaces": {
+      "correct": 225,
+      "examples": 292,
+      "mean_target_margin": 1.2264611721038818,
+      "minimum_target_margin": -3.3328399658203125,
+      "top1_accuracy": 0.7705479452054794
+    },
+    "training_raw_contexts": {
+      "correct": 9090,
+      "examples": 9620,
+      "mean_target_margin": 2.788386821746826,
+      "minimum_target_margin": -2.9050636291503906,
+      "top1_accuracy": 0.9449064449064449
+    }
+  },
+  "all_gates_pass": false,
+  "claim_boundary": "Passing only establishes physically allocable entity keys. It does not write payloads, preserve LM quality after writing, improve QA, or establish a strict Pareto gain.",
+  "compiler_training": {
+    "checkpoints": {
+      "100": {
+        "loss": 1.4845497608184814
+      },
+      "400": {
+        "loss": 0.9047847986221313
+      },
+      "800": {
+        "loss": 0.8632723093032837
+      }
+    },
+    "elapsed_seconds": 1.2970440383069217,
+    "failed_or_retried_updates": 0,
+    "maximum_loss": 3.747997283935547,
+    "optimizer_state_bytes": 7388164,
+    "steps": 800
+  },
+  "configuration": {
+    "allocation_counts": [
+      805,
+      836,
+      764
+    ],
+    "answer_label_reads": 0,
+    "canonical_titles": 2405,
+    "ffn_width_per_layer": 1024,
+    "key_batch": 256,
+    "key_lr": 0.003,
+    "key_seed": 9323,
+    "key_steps": 800,
+    "layers": [
+      7,
+      8,
+      9
+    ],
+    "served_extra_operations": 0,
+    "served_extra_parameters": 0,
+    "served_model_updates": 0,
+    "served_parameter_count": 36577152,
+    "stored_key_fraction_of_model": 0.025248548602143765,
+    "stored_key_scalars": 923520,
+    "temperature": 0.05
+  },
+  "development_only": true,
+  "device": "cuda",
+  "gates": {
+    "canonical_margin_positive": false,
+    "canonical_top1_exact": false,
+    "checkpoint_byte_identical": true,
+    "evaluation_question_surfaces_margin_positive": false,
+    "evaluation_question_surfaces_top1_exact": false,
+    "exact_training_ledger": true,
+    "finite_training_and_scores": true,
+    "held_raw_contexts_margin_positive": false,
+    "held_raw_contexts_top1_exact": false,
+    "input_integrity": true,
+    "keys_exist_and_hashed": true,
+    "keys_sealed_before_questions": true,
+    "physical_allocation_fits": true,
+    "served_model_state_unchanged": true,
+    "stored_key_ledger_exact": true,
+    "train_question_surfaces_margin_positive": false,
+    "train_question_surfaces_top1_exact": false,
+    "training_raw_contexts_margin_positive": false,
+    "training_raw_contexts_top1_exact": false,
+    "zero_answer_label_reads": true,
+    "zero_served_model_updates": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "checkpoint_sha256_after": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "checkpoint_sha256_before": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "data_manifest_sha256": "90e539279f540a7516e3c90c3ee59539d3f8654cc84e88a82dc950ce6fb5036e",
+    "preregistration_sha256": "643037c11d43a4091384dae7aac725c3f4a77baf32a281aaa780831a26e42c6e",
+    "served_state_sha256_after": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57",
+    "served_state_sha256_before": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57",
+    "source_parquet_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+    "source_sha256": "adbb47ef020c9179b721d113cccdd875a699f11f1edbb5208e79eb23667213b6",
+    "t16_projection_sha256": "70861caae201e145e156bcadbe2330990f7a09ab98b91f912623b9cd2d29b08c",
+    "t16_result_sha256": "f3bb7cc9b2182334e5ec9faa1dbe6b779a38491e7fb06baa1ef0b51db620a917"
+  },
+  "keys": {
+    "bytes": 3715685,
+    "path": "/workspace/fixed-compute-frontier-t10-46367071/results/hotpot-distributed-entity-keys-t17-keys.pt",
+    "sealed_before_questions": true,
+    "sha256": "a19f576027a81e5aa8788ee50ecf946374a9f0d5fd5eeef10ef6a98473ea21a5"
+  },
+  "schema": "hotpot-distributed-entity-keys-t17-v1",
+  "status": "fail",
+  "torch_version": "2.11.0+cu128"
+}

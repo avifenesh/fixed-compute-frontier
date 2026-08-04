@@ -1,0 +1,15 @@
+fused benchmark B=1
+fused benchmark B=8
+fused benchmark B=32
+fused benchmark B=128
+{
+  "gates": {
+    "protocol_valid": true,
+    "zero_feedback_inclusion_below_0p2_percent": true,
+    "same_width_within_1p02_on_key_cells": false,
+    "same_width_within_1p05_on_full_grid": false,
+    "equal_parameter_within_1p02_on_key_cells": false,
+    "equal_parameter_within_1p05_on_full_grid": false
+  },
+  "all_gates_pass": false
+}

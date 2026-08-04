@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/fixed-compute-frontier/experiments/triangular_value_encoding_forward_mechanism.py", line 691, in <module>
+    main()
+  File "/workspace/fixed-compute-frontier/experiments/triangular_value_encoding_forward_mechanism.py", line 686, in main
+    payload = run(parser.parse_args())
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/fixed-compute-frontier/experiments/triangular_value_encoding_forward_mechanism.py", line 633, in run
+    raise RuntimeError(f"invalid backward-only implementation: {probe['gates']}")
+RuntimeError: invalid backward-only implementation: {'initial_state_bit_exact': True, 'first_logits_bit_exact': True, 'first_loss_bit_exact': True, 'first_full_model_gradients_bit_exact': False, 'all_gradients_finite': True, 'gradient_element_count_positive': True, 'end_to_end_active_coefficient_gradient_nonzero_all_layers': True, 'outside_active_output_gradient_matches_canonical_all_layers': False, 'nonzero_coefficient_forward_vjp_probe_pass': True}

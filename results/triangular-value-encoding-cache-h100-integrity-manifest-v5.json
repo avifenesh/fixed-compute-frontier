@@ -1,0 +1,16 @@
+{
+  "schema": "triangular-value-encoding-cache-h100-integrity-v5",
+  "formal_source_sha256": "7f2272c25e2dad8608bd814602520d21c7a81c6a69f14e914ceafbe8e67d7ead",
+  "executor_source_sha256": "d280a18ef15d923855f5f4b005936a42520084cfdb086cf104910e4df2f789f0",
+  "executor_helper_source_sha256": "91fccdc44b3f82014a373c0b9a2ef26917ae7aedf5014b782ecf0aacd4a1b3b1",
+  "attention_source_sha256": "2a19f4d99835bc45ff7f3ccdbc85657f1732eba2f89dac7d36bac99a96a19225",
+  "attention_test_sha256": "580da40e986b6ed8876abcb5928a1ac3f5c4471541b6c10ce926955815167a45",
+  "bridge_test_sha256": "74c1bf44fbb9fe04243d3f1edf0b6e02db752d5e36dbecf477e320fd79aab894",
+  "lm_test_sha256": "a5240659f7209d906d5a690a36ec5ea703e522b3b5b0b60d30f0f5d100000a40",
+  "preregistration_sha256": "3d04a0a35819fddddd2bc21f71ddfd249b00914c79a8d088a1e93c93857048a6",
+  "python_version": "3.11.10",
+  "numpy_version": "2.1.2",
+  "torch_version": "2.5.1+cu124",
+  "cuda_version": "12.4",
+  "triton_version": "3.1.0"
+}

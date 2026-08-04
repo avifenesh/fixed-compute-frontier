@@ -1,0 +1,12 @@
+{
+  "schema": "heterogeneous-swiglu-long-horizon-integrity-v1",
+  "source_sha256": "2063e530f7142834bbed999582271457c06608daafde82a283888e3433de56c8",
+  "preregistration_sha256": "ca9463fd28ee74b5e946a4273a638594f79903018c3fb4de4cf35edc88c7cfe1",
+  "ratio_source_sha256": "1c43f1602850169c364b665e058496db6c400cff4e43b2a7b976ab9b5baa279a",
+  "algebra_source_sha256": "fc733a6fb98c2d3b828d52389f96c8a0bfb4a1a95a52f286466963c1d8866aed",
+  "test_sha256": "471638a09c885408b0725ef9801cc012148d15c734109807a546b796139977f1",
+  "training_source_sha256": "c64fc00567c03f2adb719a8d772554eee7dfa29a6ba6a29540d308b3b9d82ec9",
+  "reflex_source_sha256": "ffeda1c2dab88ed3a37a0f4c42405c4b3fa6dff2457016fc218ee2cc5b76fada",
+  "scratch_source_sha256": "5b5a49df441919cfd52a42e6cd093d9a0921fac1b3bb749e0c07a79b46fa92de",
+  "data_manifest_sha256": "102d8518f3b3737bcffc92a79bbf6988f30515079db47f48bbcc445acb43f7b8"
+}

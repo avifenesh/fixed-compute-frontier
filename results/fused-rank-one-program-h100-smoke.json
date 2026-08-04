@@ -1,0 +1,76 @@
+{
+  "all_gates_pass": false,
+  "args": {
+    "batches": "1",
+    "dimension": 4096,
+    "dtypes": "float16",
+    "lengths": "8",
+    "output": "results/fused-rank-one-program-h100-smoke.json",
+    "samples": 30,
+    "seed": 41,
+    "warmup": 10
+  },
+  "candidate": "compiled-ordered-rank-one-program",
+  "cells": [
+    {
+      "batch": 1,
+      "dimension": 4096,
+      "dtype": "float16",
+      "errors": {
+        "additive": {
+          "global_relative": 0.0002081683778669685,
+          "max_absolute": 0.0009694099426269531,
+          "max_row_relative": 0.0002081683778669685
+        },
+        "compiled": {
+          "global_relative": 0.0002074666554108262,
+          "max_absolute": 0.0009732246398925781,
+          "max_row_relative": 0.0002074666554108262
+        },
+        "direct": {
+          "global_relative": 0.00020747202506754547,
+          "max_absolute": 0.0009732246398925781,
+          "max_row_relative": 0.00020747202506754547
+        }
+      },
+      "length": 8,
+      "timings": {
+        "additive": {
+          "mean_us": 15.32799998919169,
+          "median_us": 15.200000256299973,
+          "p10_us": 14.944000169634819,
+          "p90_us": 15.680000185966492,
+          "samples": 30
+        },
+        "compiled": {
+          "mean_us": 16.372266660134,
+          "median_us": 15.616000164300203,
+          "p10_us": 15.263999812304974,
+          "p90_us": 16.287999227643013,
+          "samples": 30
+        },
+        "compiled_over_additive_median": 1.0273684145385333,
+        "compiled_over_direct_median": 0.6768377151079796,
+        "direct": {
+          "mean_us": 23.153066635131836,
+          "median_us": 23.072000592947006,
+          "p10_us": 22.84800074994564,
+          "p90_us": 23.615999147295952,
+          "samples": 30
+        }
+      }
+    }
+  ],
+  "cuda_version": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "gate": "G1-single-launch-fused-H100-executor",
+  "gates": {
+    "compiled_faster_than_fused_direct_for_l_ge_8": true,
+    "compiled_within_1p15_additive_on_key_cells": true,
+    "full_frozen_grid_present": false,
+    "max_row_relative_below_0p005": true
+  },
+  "scope": "executor only; selected program tensors already resident",
+  "source_sha256": "3a8d9b46fe2790421b9b049d16919e709979848ed2ae7fceb96cb8fa7ac34a5c",
+  "torch_version": "2.5.1+cu124"
+}

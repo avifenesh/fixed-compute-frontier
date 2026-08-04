@@ -1,0 +1,31 @@
+{
+  "arbitrary_scalar_quadratic_factorization_max_abs_error_over_256_inputs": 1.7763568394002505e-15,
+  "candidate": "coverage_complete_gauge_curvature_value",
+  "cyclic_mask_covers_every_quadratic_monomial": true,
+  "decision": "retain_for_learned_attention_gate_not_candidate_004",
+  "gpu_required_now": false,
+  "logical_projection_ledger_example": {
+    "candidate_scalar_additions": 524160,
+    "candidate_scalar_multiplications": 524288,
+    "candidate_value_weights": 524160,
+    "candidate_weight_saving": 128,
+    "covered_unique_quadratic_monomials": 8256,
+    "dense_scalar_additions": 524160,
+    "dense_scalar_multiplications": 524288,
+    "dense_value_weights": 524288,
+    "gate_learned_scalars": 16256,
+    "model_width": 4096,
+    "total_unique_quadratic_monomials": 8256,
+    "value_cache_scalars_per_token_both": 128,
+    "value_width": 128
+  },
+  "logical_scalar_arithmetic_exactly_matched": true,
+  "minimum_supported_value_width": 3,
+  "scalar_quadratic_map_dimension": 15,
+  "scalar_quadratic_map_kernel_dimension": 5,
+  "schema_version": 1,
+  "seed": 20260726,
+  "source_sha256": "6d272030f0cb8d06e23a50f2d32d5a6524daad37cb610ede1273a0f3ae11ff9b",
+  "zero_gate_value_max_abs_error_over_128_inputs": 0.0,
+  "zero_initialization_functional_jacobian_nonzero_on_open_set": true
+}

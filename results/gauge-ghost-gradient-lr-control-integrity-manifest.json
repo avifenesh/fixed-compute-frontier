@@ -1,0 +1,18 @@
+{
+  "schema": "gauge-ghost-gradient-lr-control-integrity-v1",
+  "control_source_sha256": "f6ab0e4c366eb7deac60c324ccaf062aa08d74d910629b79438e636010ba5f88",
+  "preregistration_sha256": "18fb9beafef23b4a55bd7f67e4728df26c6b3f53f4521839905ef8d591702edf",
+  "mechanism_source_sha256": "0974217c77ef21e6fde368f58d3adfa745d3455a691a9f8d7e83c1406bd72fa8",
+  "mechanism_preregistration_sha256": "cee05a1d3adc88649ff657be25a2b58d26cce20d167384a086051fb8becc8495",
+  "prior_manifest_sha256": "9c7b832194cbd25a4ededa732e52ea6aaf760295456a4581f557ec60cb15d6b9",
+  "prior_result_sha256": "706f38007b87400420ab916748796b0ffb75a5c431fa084c0add1a25a6c836e4",
+  "pilot_source_sha256": "078516e894b638dae7a71df4f0b5387e6a435de21f036325d6615874012c3f57",
+  "attention_source_sha256": "2a19f4d99835bc45ff7f3ccdbc85657f1732eba2f89dac7d36bac99a96a19225",
+  "data_manifest_sha256": "8770dd2e042e65090c17e2d0061ebe215fe3f1436815cdb65c968e1ba91b1627",
+  "python_version": "3.11.10",
+  "numpy_version": "2.1.2",
+  "torch_version": "2.5.1+cu124",
+  "cuda_version": "12.4",
+  "transformers_version": "4.57.6",
+  "triton_version": "3.1.0"
+}

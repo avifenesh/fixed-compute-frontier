@@ -1,0 +1,53 @@
+{
+  "claim_boundary": {
+    "not_proved": "language learning gain, compute-equivalent gain, novelty beyond future-summary prediction, or breakthrough",
+    "proved_if_pass": "cheap recurrence correctness, order separation, finite-precision margin, finite-horizon recoverability, and export accounting"
+  },
+  "gates": {
+    "bow_collides_on_every_same_multiset_pair": true,
+    "compact_target_does_not_evade_suffix_bit_bound": true,
+    "export_graph_unchanged": true,
+    "reverse_recurrence_matches_direct_float64": true,
+    "reverse_recurrence_stable_float32": true,
+    "spectral_code_separates_every_pair_float32": true,
+    "spectral_p01_margin_above_one_percent": true,
+    "vandermonde_recovers_eight_horizons": true
+  },
+  "measurements": {
+    "permutation_separation": {
+      "bow_collisions": 4096,
+      "median_relative_distance": 1.3322772028110146,
+      "minimum_relative_distance": 0.8630133741932351,
+      "p01_relative_distance": 1.0130129534850865,
+      "pairs": 4096,
+      "spectral_float32_collisions": 0
+    },
+    "recurrence": {
+      "float32_maximum_error": 1.8430060869884102e-06,
+      "float64_maximum_error": 5.402578411571407e-15
+    },
+    "vandermonde_recovery": {
+      "condition_number": 1.431972781052428,
+      "maximum_reconstruction_error": 6.703843073538639e-16
+    }
+  },
+  "pairs": 4096,
+  "pass": true,
+  "preregistration_sha256": "acc1794715320b43a66277d3a7373f5ea3d99e53a8901fc5ba5db777af394cfc",
+  "resource_ledger": {
+    "arbitrary_suffix_symbol_bits_lower_bound": 7979.500800369232,
+    "bf16_target_bits_per_prefix": 1024,
+    "extra_exported_parameters": 0,
+    "extra_inference_operations": 0,
+    "head_fraction_of_model": 0.000650876140304488,
+    "head_fraction_of_unembedding": 0.0013020833333333333,
+    "hidden": 384,
+    "target_recurrence_scalar_ops_per_token_upper_bound": 128,
+    "target_width": 64,
+    "training_only_head_parameters": 24576
+  },
+  "schema": "spectral-successor-stage0-v1",
+  "seed": 260730,
+  "source_sha256": "94260afe2bf2107ea23d67ffcfbba7fe3d9813c3b172484c0442f5743c6a6465",
+  "test_sha256": "26c415dbc2e5b81f59977bdff56fcf9f0736d2797792e2dcb897be6d4c7f14fb"
+}

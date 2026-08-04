@@ -1,0 +1,543 @@
+{
+  "args": {
+    "checkpoint_dir": "results/gauge-zero-g1-lm-pilot-checkpoints",
+    "data_manifest": "results/block-algebra-scratch-data-manifest.json",
+    "eval_batch_size": 2,
+    "eval_batches": 2,
+    "eval_steps": [
+      2
+    ],
+    "formal": false,
+    "gradient_accumulation": 1,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.0003,
+    "micro_batch_size": 2,
+    "output": "results/gauge-zero-g1-lm-smoke-v3.json",
+    "seed": 2207,
+    "sequence_length": 512,
+    "steps": 2,
+    "train_file": "data/block-algebra-scratch/train.uint16.bin",
+    "validation_file": "data/block-algebra-scratch/validation.uint16.bin",
+    "warmup_steps": 2,
+    "weight_decay": 0.1
+  },
+  "arms": {
+    "canonical_bilinear_control": {
+      "arm": "canonical_bilinear_control",
+      "attention_diagnostics": {
+        "initial": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_abs_max_layer_median": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "key_abs_max_layer_max": 5.1875,
+          "key_abs_max_layer_median": 4.421875,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.000317394733429
+        },
+        "terminal": {
+          "coefficient_abs_max_layer_max": 0.003600242082029581,
+          "coefficient_abs_max_layer_median": 0.003597998758777976,
+          "coefficient_rms_layer_median": 0.002611267031170428,
+          "key_abs_max_layer_max": 5.375,
+          "key_abs_max_layer_median": 4.453125,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.00251042842865
+        }
+      },
+      "dense_attention_values_per_layer": [
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216
+      ],
+      "evaluations": {
+        "0": {
+          "elapsed_seconds": 0.025656206998974085,
+          "loss": 11.389337539672852,
+          "per_batch_loss": [
+            11.356353759765625,
+            11.422321319580078
+          ],
+          "prediction_tokens": 2048
+        },
+        "2": {
+          "elapsed_seconds": 0.035287265200167894,
+          "loss": 11.07678508758545,
+          "per_batch_loss": [
+            11.0310640335083,
+            11.122506141662598
+          ],
+          "prediction_tokens": 2048
+        }
+      },
+      "model_buffer_tensors": 1,
+      "model_buffer_values": 32,
+      "optimizer_state_bytes": 302067128,
+      "parameter_tensors": 110,
+      "pivot_metadata_bits": 0,
+      "pivot_rule": "column equals RoPE pair index",
+      "runtime_scope": "quality pilot; confirmed incremental H100 executor only, not full production admission",
+      "serving_diagnostics": {
+        "initial": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        },
+        "terminal": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.00360107421875,
+          "coefficient_bf16_nonzero_fraction": 1.0
+        }
+      },
+      "state_dict_bytes": 226530816,
+      "state_dict_values": 56632704,
+      "terminal_ablations": {},
+      "terminal_artifacts": {
+        "saved": false
+      },
+      "terminal_serving_bridge": {
+        "all_layers_bf16_bit_exact": true,
+        "layers": 0,
+        "max_abs": 0.0
+      },
+      "total_parameters": 37758336,
+      "train": {
+        "elapsed_seconds": 0.2282795635983348,
+        "final_loss": 11.269377708435059,
+        "max_loss": 11.3300199508667,
+        "max_preclip_gradient_norm": 6.375385284423828,
+        "mean_loss": 11.299698829650879,
+        "nonfinite": false,
+        "peak_allocated_bytes": 1475401728,
+        "prediction_tokens": 2048,
+        "tokens_per_second": 8971.455734879193
+      }
+    },
+    "gauge_zero_g1": {
+      "arm": "gauge_zero_g1",
+      "attention_diagnostics": {
+        "initial": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_abs_max_layer_median": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "key_abs_max_layer_max": 5.1875,
+          "key_abs_max_layer_median": 4.421875,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.000317394733429
+        },
+        "terminal": {
+          "coefficient_abs_max_layer_max": 0.003600708208978176,
+          "coefficient_abs_max_layer_median": 0.003599822521209717,
+          "coefficient_rms_layer_median": 0.00259695656131953,
+          "key_abs_max_layer_max": 5.40625,
+          "key_abs_max_layer_median": 4.4375,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.0025360584259033
+        }
+      },
+      "dense_attention_values_per_layer": [
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216
+      ],
+      "evaluations": {
+        "0": {
+          "elapsed_seconds": 0.02303240867331624,
+          "loss": 11.389337539672852,
+          "per_batch_loss": [
+            11.356353759765625,
+            11.422321319580078
+          ],
+          "prediction_tokens": 2048
+        },
+        "2": {
+          "elapsed_seconds": 0.023093962110579014,
+          "loss": 11.07664442062378,
+          "per_batch_loss": [
+            11.030546188354492,
+            11.122742652893066
+          ],
+          "prediction_tokens": 2048
+        }
+      },
+      "model_buffer_tensors": 1,
+      "model_buffer_values": 32,
+      "optimizer_state_bytes": 302067128,
+      "parameter_tensors": 110,
+      "pivot_metadata_bits": 0,
+      "pivot_rule": "column equals RoPE pair index",
+      "runtime_scope": "quality pilot; confirmed incremental H100 executor only, not full production admission",
+      "serving_diagnostics": {
+        "initial": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        },
+        "terminal": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.00360107421875,
+          "coefficient_bf16_nonzero_fraction": 1.0
+        }
+      },
+      "state_dict_bytes": 226530816,
+      "state_dict_values": 56632704,
+      "terminal_ablations": {
+        "disable_shear": {
+          "elapsed_seconds": 0.02106824889779091,
+          "loss": 11.076399326324463,
+          "per_batch_loss": [
+            11.030435562133789,
+            11.122363090515137
+          ],
+          "prediction_tokens": 2048
+        }
+      },
+      "terminal_artifacts": {
+        "saved": false
+      },
+      "terminal_serving_bridge": {
+        "all_layers_bf16_bit_exact": false,
+        "key_cache_bytes_per_checked_layer": [
+          1792,
+          1792,
+          1792,
+          1792,
+          1792,
+          1792,
+          1792,
+          1792,
+          1792,
+          1792,
+          1792,
+          1792
+        ],
+        "layers": 12,
+        "max_abs": 0.0078125,
+        "numerical_contract": "BF16 dense projection; shear and split-half RoPE in FP32; one BF16 final store"
+      },
+      "total_parameters": 37758336,
+      "train": {
+        "elapsed_seconds": 0.10246919561177492,
+        "final_loss": 11.269079208374023,
+        "max_loss": 11.3300199508667,
+        "max_preclip_gradient_norm": 6.394241809844971,
+        "mean_loss": 11.299549579620361,
+        "nonfinite": false,
+        "peak_allocated_bytes": 1481699328,
+        "prediction_tokens": 2048,
+        "tokens_per_second": 19986.494358355834
+      }
+    },
+    "raw_baseline": {
+      "arm": "raw_baseline",
+      "attention_diagnostics": {
+        "initial": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_abs_max_layer_median": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "key_abs_max_layer_max": 4.5625,
+          "key_abs_max_layer_median": 4.453125,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.0002876818180084
+        },
+        "terminal": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_abs_max_layer_median": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "key_abs_max_layer_max": 4.71875,
+          "key_abs_max_layer_median": 4.390625,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.0024157762527466
+        }
+      },
+      "dense_attention_values_per_layer": [],
+      "evaluations": {
+        "0": {
+          "elapsed_seconds": 0.04224469978362322,
+          "loss": 11.388918399810791,
+          "per_batch_loss": [
+            11.354418754577637,
+            11.423418045043945
+          ],
+          "prediction_tokens": 2048
+        },
+        "2": {
+          "elapsed_seconds": 0.019930706825107336,
+          "loss": 11.076195240020752,
+          "per_batch_loss": [
+            11.029845237731934,
+            11.12254524230957
+          ],
+          "prediction_tokens": 2048
+        }
+      },
+      "model_buffer_tensors": 1,
+      "model_buffer_values": 32,
+      "optimizer_state_bytes": 302067128,
+      "parameter_tensors": 110,
+      "pivot_metadata_bits": 0,
+      "pivot_rule": "column equals RoPE pair index",
+      "runtime_scope": "quality pilot; confirmed incremental H100 executor only, not full production admission",
+      "serving_diagnostics": {
+        "initial": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        },
+        "terminal": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        }
+      },
+      "state_dict_bytes": 226530816,
+      "state_dict_values": 56632704,
+      "terminal_ablations": {},
+      "terminal_artifacts": {
+        "saved": false
+      },
+      "terminal_serving_bridge": {
+        "all_layers_bf16_bit_exact": true,
+        "layers": 0,
+        "max_abs": 0.0
+      },
+      "total_parameters": 37758336,
+      "train": {
+        "elapsed_seconds": 0.1946964394301176,
+        "final_loss": 11.268670082092285,
+        "max_loss": 11.33036994934082,
+        "max_preclip_gradient_norm": 6.375748634338379,
+        "mean_loss": 11.299520015716553,
+        "nonfinite": false,
+        "peak_allocated_bytes": 1463343104,
+        "prediction_tokens": 2048,
+        "tokens_per_second": 10518.939154689004
+      }
+    }
+  },
+  "attention_source_sha256": "3dbc236c40e572bbb237c4db53030daeac6a89fed1d38f8936fe4bc6bdfe392d",
+  "candidate": "dense-zero-pivot-G1-attention",
+  "data_ledger": {
+    "files": {
+      "train": {
+        "bytes": 100195056,
+        "checks": {
+          "bytes": true,
+          "sequence_count": true,
+          "sha256": true,
+          "whole_uint16_sequences": true
+        },
+        "path": "/workspace/fixed-compute-frontier/data/block-algebra-scratch/train.uint16.bin",
+        "sequences": 97656,
+        "sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a"
+      },
+      "validation": {
+        "bytes": 4202496,
+        "checks": {
+          "bytes": true,
+          "sequence_count": true,
+          "sha256": true,
+          "whole_uint16_sequences": true
+        },
+        "path": "/workspace/fixed-compute-frontier/data/block-algebra-scratch/validation.uint16.bin",
+        "sequences": 4096,
+        "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+      }
+    },
+    "manifest": "/workspace/fixed-compute-frontier/results/block-algebra-scratch-data-manifest.json",
+    "valid": true
+  },
+  "data_manifest_sha256": "102d8518f3b3737bcffc92a79bbf6988f30515079db47f48bbcc445acb43f7b8",
+  "decision": {
+    "complete": true,
+    "gates": {
+      "all_key_nonfinite_fractions_zero": true,
+      "all_model_buffer_tensor_counts_equal": true,
+      "all_model_buffer_value_counts_equal": true,
+      "all_optimizer_state_bytes_equal": true,
+      "all_parameter_counts_equal": true,
+      "all_parameter_tensor_counts_equal": true,
+      "all_reported_metrics_finite": true,
+      "all_state_dict_bytes_equal": true,
+      "all_state_dict_value_counts_equal": true,
+      "bf16_export_coefficient_bit_exact": true,
+      "candidate_initial_nll_matches_control_within_1e_7": true,
+      "candidate_vs_control_upper_interval_clears_0_025_percent": false,
+      "candidate_vs_raw_upper_interval_clears_0_025_percent": false,
+      "canonical_initial_nll_matches_raw_within_1e_4": false,
+      "canonical_initial_paired_interval_within_1e_4": false,
+      "coefficient_abs_max_at_most_0_5": true,
+      "control_terminal_noninferior_raw_within_0_05_percent": true,
+      "disabling_shear_hurts_0_01_percent": false,
+      "formal_terminal_artifacts_saved_and_hashed": true,
+      "full_vs_shear_disabled_upper_interval_clears_0_01_percent": false,
+      "some_bf16_coefficients_survive": true,
+      "trained_candidate_matches_fused_h100_export_bit_exact": false,
+      "zero_pivot_metadata_bits": true
+    },
+    "paired_intervals": {
+      "candidate_vs_control": {
+        "candidate_minus_reference_mean": -0.00014066696166992188,
+        "lower_95": -0.0008799362182617186,
+        "standard_error": 0.0003771781921386718,
+        "upper_95": 0.0005986022949218748
+      },
+      "candidate_vs_raw": {
+        "candidate_minus_reference_mean": 0.00044918060302734375,
+        "lower_95": -4.4288635253906194e-05,
+        "standard_error": 0.00025177001953125,
+        "upper_95": 0.0009426498413085937
+      },
+      "full_vs_shear_disabled": {
+        "candidate_minus_reference_mean": 0.00024509429931640625,
+        "lower_95": -1.846313476562496e-05,
+        "standard_error": 0.00013446807861328122,
+        "upper_95": 0.0005086517333984374
+      },
+      "initial_control_vs_raw": {
+        "candidate_minus_reference_mean": 0.0004191398620605469,
+        "lower_95": -0.002551956176757812,
+        "standard_error": 0.0015158653259277342,
+        "upper_95": 0.003390235900878906
+      },
+      "terminal_control_vs_raw": {
+        "candidate_minus_reference_mean": 0.0005898475646972656,
+        "lower_95": -0.0006428909301757811,
+        "standard_error": 0.0006289482116699219,
+        "upper_95": 0.0018225860595703124
+      }
+    },
+    "pilot_pass": false,
+    "relative_candidate_improvement": {
+      "canonical_bilinear_control": 1.2699258905688933e-05,
+      "raw_baseline": -4.055369134378875e-05
+    },
+    "terminal_losses": {
+      "canonical_bilinear_control": 11.07678508758545,
+      "gauge_zero_g1": 11.07664442062378,
+      "raw_baseline": 11.076195240020752
+    }
+  },
+  "device": "NVIDIA H100 80GB HBM3",
+  "experiment_protocol": {
+    "actual": {
+      "checkpoint_dir": "results/gauge-zero-g1-lm-pilot-checkpoints",
+      "cuda_version": "12.4",
+      "device_contains": "NVIDIA H100 80GB HBM3",
+      "eval_batch_size": 2,
+      "eval_batches": 2,
+      "eval_steps": [
+        2
+      ],
+      "formal": false,
+      "gradient_accumulation": 1,
+      "gradient_clip": 1.0,
+      "learning_rate": 0.0003,
+      "micro_batch_size": 2,
+      "numpy_version": "2.1.2",
+      "output": "results/gauge-zero-g1-lm-smoke-v3.json",
+      "prediction_tokens": 2048,
+      "python_version": "3.11.10",
+      "seed": 2207,
+      "sequence_length": 512,
+      "steps": 2,
+      "torch_version": "2.5.1+cu124",
+      "transformers_version": "4.57.6",
+      "warmup_steps": 2,
+      "weight_decay": 0.1
+    },
+    "checks": {
+      "checkpoint_dir": true,
+      "cuda_version": true,
+      "device_contains": true,
+      "eval_batch_size": false,
+      "eval_batches": false,
+      "eval_steps": false,
+      "formal": false,
+      "gradient_accumulation": false,
+      "gradient_clip": true,
+      "learning_rate": true,
+      "micro_batch_size": false,
+      "numpy_version": true,
+      "output": false,
+      "prediction_tokens": false,
+      "python_version": true,
+      "seed": true,
+      "sequence_length": true,
+      "steps": false,
+      "torch_version": true,
+      "transformers_version": true,
+      "warmup_steps": false,
+      "weight_decay": true
+    },
+    "expected": {
+      "checkpoint_dir": "results/gauge-zero-g1-lm-pilot-checkpoints",
+      "cuda_version": "12.4",
+      "device_contains": "H100",
+      "eval_batch_size": 32,
+      "eval_batches": 64,
+      "eval_steps": [
+        61,
+        305
+      ],
+      "formal": true,
+      "gradient_accumulation": 2,
+      "gradient_clip": 1.0,
+      "learning_rate": 0.0003,
+      "micro_batch_size": 32,
+      "numpy_version": "2.1.2",
+      "output": "results/gauge-zero-g1-lm-pilot.json",
+      "prediction_tokens": 9994240,
+      "python_version": "3.11.10",
+      "seed": 2207,
+      "sequence_length": 512,
+      "steps": 305,
+      "torch_version": "2.5.1+cu124",
+      "transformers_version": "4.57.6",
+      "warmup_steps": 50,
+      "weight_decay": 0.1
+    },
+    "valid": false
+  },
+  "formal_integrity": {
+    "checks": {},
+    "manifest_sha256": null,
+    "valid": false
+  },
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "preregistration_sha256": null,
+  "runtime": {
+    "cuda": "12.4",
+    "numpy": "2.1.2",
+    "python": "3.11.10",
+    "torch": "2.5.1+cu124",
+    "transformers": "4.57.6"
+  },
+  "schema": "gauge-zero-g1-lm-pilot-development-v3",
+  "scope": "matched one-seed 10M-token from-scratch discovery; replication required",
+  "source_sha256": "f5ed71dcaea42db789d6f35f39d44b857c67b5d3b68e9121435c6a78973373c5"
+}

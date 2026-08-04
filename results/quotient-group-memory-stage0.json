@@ -1,0 +1,93 @@
+{
+  "candidate_number": null,
+  "decision": "retain_as_classical_typed_ram_primitive_not_architecture_candidate",
+  "direct_collision": {
+    "mechanism": "extended_union_find_with_parent_relative_noncommutative_permutations_and_compatibility_rejection",
+    "scope_note": "neural_systems_memory_planning_not_an_LLM_request_memory_head",
+    "work": "ED-Batch_Algorithm_5"
+  },
+  "excluded_accounting": [
+    "language_or_entity_name_to_dense_slot_mapping",
+    "active_slot_free_list_and_generation_metadata",
+    "capacity_overflow_eviction_and_deletion_policy",
+    "operation_stream_storage_and_evidence_or_provenance",
+    "Python_object_allocator_and_interpreter_overhead",
+    "packed_kernel_code_and_fixed_group_operation_tables"
+  ],
+  "gpu_required": false,
+  "group": "non_commutative_S3",
+  "group_operation_model": {
+    "excluded_from_packed_array_payload": "Python_object_overhead_allocator_and_executable_code",
+    "logical_compose": "constant_size_S3_permutation_composition",
+    "logical_inverse": "constant_size_S3_permutation_inversion",
+    "potential_bits_per_entity": 3,
+    "scope": "fixed_word_sized_S3",
+    "variable_group_caveat": "charge_the_group_representation_and_nonconstant_operation_cost"
+  },
+  "method": "quotient_group_memory",
+  "not_proven": [
+    "novel_data_structure_or_new_model_algebra",
+    "learned_language_to_entity_and_relation_interface",
+    "gpu_latency_or_energy_advantage",
+    "general_language_model_quality_noninferiority",
+    "separation_from_a_matched_recurrent_machine_with_random_access_memory"
+  ],
+  "operator": {
+    "contradiction": "reject inconsistent relation without semantic mutation",
+    "link": "assert z_destination = relation * z_source",
+    "rel": "return relation or disconnected"
+  },
+  "resource_model": {
+    "charged_per_traversed_edge": "parent_probe_plus_fixed_word_sized_group_operations",
+    "machine": "online_word_RAM_or_cell_probe",
+    "request_state_theorem_scope": "predeclared_dense_entity_slots",
+    "word_bits": "Theta(log2(entities))_and_large_enough_for_one_group_element"
+  },
+  "schema_version": 2,
+  "source_hashes": {
+    "executable_sha256": "610d5b2ab45a7e73fbd7c7d8e6fcf6cd0bdfa3b37ae7a63099d96cbdd353adce",
+    "focused_test_sha256": "e22b69f4d6ad839fbbc16392edd05c86b174e31510d12a5531082383bf8af85d"
+  },
+  "state_ledger": {
+    "entities": 64,
+    "group_order": 6,
+    "hypothetical_packed_uint32_uint8_uint8_array_payload_bytes": 384,
+    "logical_state_scope": "predeclared_dense_entity_slots_only",
+    "minimum_distinguishing_bits": 339,
+    "parent_bits": 384,
+    "potential_bits": 192,
+    "rank_bits": 192,
+    "representation_to_lower_bound_ratio": 2.265486725663717,
+    "simple_bit_packed_array_payload_bytes": 96,
+    "simple_packed_representation_bits": 768
+  },
+  "status": "algebra_cpu_pass_architecture_claim_closed",
+  "total_operations": 12288,
+  "total_relation_checks": 49152,
+  "traces": [
+    {
+      "consistent": 2837,
+      "contradiction": 1196,
+      "merged": 63,
+      "operations": 4096,
+      "relation_checks": 16384,
+      "seed": 17
+    },
+    {
+      "consistent": 2820,
+      "contradiction": 1213,
+      "merged": 63,
+      "operations": 4096,
+      "relation_checks": 16384,
+      "seed": 29
+    },
+    {
+      "consistent": 2829,
+      "contradiction": 1204,
+      "merged": 63,
+      "operations": 4096,
+      "relation_checks": 16384,
+      "seed": 43
+    }
+  ]
+}

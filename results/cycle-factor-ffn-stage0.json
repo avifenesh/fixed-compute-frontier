@@ -1,0 +1,67 @@
+{
+  "checks": {
+    "candidate_is_two_thirds_full_swiglu": true,
+    "cycle_full_sampled_rank": true,
+    "cycle_quadratics_indefinite": true,
+    "cycle_rank_exceeds_narrow_swiglu": true,
+    "equal_2dm_parameters": true,
+    "fixed_point_free_permutation": true,
+    "one_in_one_out": true,
+    "self_quadratics_psd": true
+  },
+  "ledger": {
+    "cycle": 72,
+    "full_swiglu": 108,
+    "narrow_swiglu": 72,
+    "self_product": 72
+  },
+  "pass": true,
+  "quadratic_spectra": {
+    "cycle_all_indefinite": true,
+    "cycle_max_eigenvalue": 1.4818163051402498,
+    "cycle_min_eigenvalue": -2.377302694901405,
+    "self_all_psd": true,
+    "self_min_eigenvalue": -2.3136809135722814e-16
+  },
+  "ranks": {
+    "cycle": {
+      "nullity": 0,
+      "outputs": 96,
+      "parameters": 72,
+      "rank": 72,
+      "smallest_counted": 0.007290622994739756,
+      "tolerance": 2.642138085424726e-12
+    },
+    "narrow_swiglu": {
+      "nullity": 8,
+      "outputs": 96,
+      "parameters": 72,
+      "rank": 64,
+      "smallest_counted": 0.015626372877848058,
+      "tolerance": 2.2002102786662314e-12
+    },
+    "self_product": {
+      "nullity": 0,
+      "outputs": 96,
+      "parameters": 72,
+      "rank": 72,
+      "smallest_counted": 0.002043599995226138,
+      "tolerance": 4.007751295189889e-12
+    }
+  },
+  "route": [
+    1,
+    2,
+    3,
+    0,
+    5,
+    6,
+    7,
+    4,
+    9,
+    10,
+    11,
+    8
+  ],
+  "schema": "cycle-factor-ffn-stage0-v1"
+}

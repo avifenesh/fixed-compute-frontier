@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "candidate_dense_projection_nonincrease": true,
+    "dedicated_endpoint_max_abs_error": 8.43769498715119e-15,
+    "dedicated_endpoint_pass": true,
+    "fused_down_max_abs_error": 8.43769498715119e-15,
+    "fused_down_pass": true,
+    "independent_floor_positive": true,
+    "input_rows_exactly_matched": true
+  },
+  "ledger": {
+    "baseline_dense_parameters": 1572864,
+    "baseline_input_rows": 2688,
+    "baseline_output_columns": 1408,
+    "baseline_width": 1024,
+    "candidate_dense_parameters": 1548288,
+    "candidate_input_rows": 2688,
+    "candidate_output_columns": 1344,
+    "candidate_to_baseline": 0.984375,
+    "candidate_width": 1344,
+    "head_dim": 64,
+    "hidden_size": 384,
+    "independent_swiglu_floor": 704,
+    "kv_dim": 128,
+    "kv_heads": 2,
+    "query_heads": 6
+  },
+  "schema": "coalesced-attention-ffn-stage0-v1",
+  "stage0_pass": true
+}

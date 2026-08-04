@@ -1,0 +1,112 @@
+{
+  "claim_boundary": "Exact CPU scan algebra only; no natural learnability, physical kernel, latency, language quality, or smarter-model claim.",
+  "concentration_worlds": [
+    {
+      "delta": 2,
+      "exact_target_weight": 0.05498257308609407,
+      "selected_value_error": 1.8900348538278102,
+      "target_weight": 0.05498257308609405,
+      "target_weight_derivative": 0.05195948974292638,
+      "theorem_bound": 34.37516194209962
+    },
+    {
+      "delta": 4,
+      "exact_target_weight": 0.3006536686809822,
+      "selected_value_error": 1.3986926626380354,
+      "target_weight": 0.30065366868098226,
+      "target_weight_derivative": 0.21026104018964842,
+      "theorem_bound": 4.652172277738481
+    },
+    {
+      "delta": 8,
+      "exact_target_weight": 0.9591371567667543,
+      "selected_value_error": 0.08172568646649248,
+      "target_weight": 0.9591371567667557,
+      "target_weight_derivative": 0.03919307127613959,
+      "theorem_bound": 0.08520750748723802
+    },
+    {
+      "delta": 12,
+      "exact_target_weight": 0.9992202934478213,
+      "selected_value_error": 0.001559413104359697,
+      "target_weight": 0.999220293447821,
+      "target_weight_derivative": 0.0007790986098714496,
+      "theorem_bound": 0.0015606299377453653
+    },
+    {
+      "delta": 16,
+      "exact_target_weight": 0.9999857082370681,
+      "selected_value_error": 2.8583525859326997e-05,
+      "target_weight": 0.9999857082370677,
+      "target_weight_derivative": 1.429155867784032e-05,
+      "theorem_bound": 2.8583934378691814e-05
+    }
+  ],
+  "experiment": "t32r-rank32-scan-stage0",
+  "gates": {
+    "bit_exact_repeat": true,
+    "concentration_theorem": true,
+    "finite_random_world": true,
+    "independent_reference": true,
+    "multiplication_ledger": true,
+    "no_handle_identity": true,
+    "parameter_ledger": true,
+    "role_swap_negates": true,
+    "zero_external_access": true
+  },
+  "integrity": {
+    "corpus_reads": 0,
+    "evaluator_reads": 0,
+    "gpu_operations": 0,
+    "model_weight_reads": 0,
+    "preregistration_sha256": "3cfae3a525037f98c3b570cbc66a0cfa2918a63a9ff2e71bef6e7d6f5fb0edb4",
+    "source_sha256": "e6a9218eb0b10e46a9fcd80d59f8b01c12bb7d661ed969adf2d6bcb283a112eb",
+    "test_sha256": "a900f16b4f4317f2a738726d409a151d298e6134728f87b9d86331de0be019b1"
+  },
+  "multiplication_ledger": {
+    "boundary_query_projection": 12288,
+    "depthwise_context": 24576,
+    "diagonal_qkv": 16416,
+    "frozen_envelope": 3700000,
+    "gate_dot_and_gated_residual": 416,
+    "role_maps": 2048,
+    "score_and_weighted_value": 16384,
+    "summary_output": 12288,
+    "total_multiplies": 3230144,
+    "two_embedding_projections": 3145728
+  },
+  "parameter_ledger": {
+    "depthwise_filter_entries": 96,
+    "diagonal_qkv_entries": 96,
+    "matched_slack_entries": 24142,
+    "projection_entries": 12288,
+    "record_digit_entries": 916305,
+    "removed_dense_entries": 967680,
+    "role_map_entries": 2048,
+    "scalar_gate_entries": 33,
+    "shared_handle_marker_entries": 384,
+    "summary_output_entries": 12288,
+    "total_allocated_entries": 943538
+  },
+  "random_world": {
+    "gate": 0.5588456768919121,
+    "independent_reference_max_absolute_error": 1.4901161193847656e-08,
+    "output_sha256": "7e5438234d51cce9ffa9fcad74c90852694030cfc5bed77f0faa4cf31bf9ed4f",
+    "seed": 32032
+  },
+  "runtime": {
+    "cpu_seconds": 0.011587678000000004,
+    "numpy": "2.3.5",
+    "peak_rss_kib": 36744,
+    "python": "3.14.4",
+    "wall_seconds": 0.015383580001071095
+  },
+  "shape": {
+    "head_dim": 8,
+    "heads": 4,
+    "hidden": 384,
+    "rank": 32,
+    "record_tokens": 128
+  },
+  "status": "PASS"
+}

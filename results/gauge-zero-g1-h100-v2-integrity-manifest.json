@@ -1,0 +1,11 @@
+{
+  "attention_source_sha256": "3dbc236c40e572bbb237c4db53030daeac6a89fed1d38f8936fe4bc6bdfe392d",
+  "attention_test_sha256": "62d3bd6423011a600ff6ee5c167af2706844098c61b04ba8083cbc4b3c8c55e8",
+  "base_source_sha256": "5beadec71b345aa3eece6f9cf013cae3a3b411b03ac8a05657998ccbd6c44b8f",
+  "cuda_version": "12.4",
+  "preregistration_sha256": "590e3f81804fb31d0362d033a3b0f8028deeb41d538d1b1e5f8418859bbbad04",
+  "source_sha256": "450759838b93e4c450f7c206b94e8117541130f128df6f1d71db7d4b05ecf0ec",
+  "test_sha256": "92f5197ba46c998037989d0b4780c38bee7525295954a34ec8eac06be61d4c42",
+  "torch_version": "2.5.1+cu124",
+  "triton_version": "3.1.0"
+}

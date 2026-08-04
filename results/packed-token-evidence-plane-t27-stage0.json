@@ -1,0 +1,56 @@
+{
+  "channel_ledger": {
+    "available_swiglu_width": 1024,
+    "four_nibble_token_decoder_upper_bound": 192,
+    "two_token_squared_distance_upper_bound": 880,
+    "unique_successor_selection_upper_bound": 220
+  },
+  "claim_boundary": "Primitive identity only; no natural sufficiency, physical Transformer, language quality, or smarter-model claim.",
+  "domain": {
+    "logical_bits": 880,
+    "plane_cells": 220,
+    "random_tapes": 1000,
+    "seed": 27001,
+    "tape_tokens": 55,
+    "vocab_capacity": 65536
+  },
+  "experiment": "packed-token-evidence-plane-t27-stage0",
+  "gates": {
+    "all_65536_token_roundtrips": true,
+    "bf16_level_roundtrip": true,
+    "binary_code_roundtrip_and_margin": true,
+    "boundary_pack_roundtrips": true,
+    "channel_ledger": true,
+    "random_unique_successor_reads": true,
+    "repeated_pair_is_ambiguous": true,
+    "silu_square_identity": true
+  },
+  "integrity": {
+    "preregistration_sha256": "771646b606589317f1817cd676b6b7e2b4686b33d36475ed41e93e6a920c80a8",
+    "source_sha256": "162cc9be2e5aaa4b98f543fe27ba746113c6c70f58e4d5bfc7452281eb03d1b7",
+    "test_sha256": "0cc7e108e324c95b77e29443b09dd9233d05b3e9db247eefce98f7400d3cb695"
+  },
+  "numeric": {
+    "amplitude_levels": [-15, -13, -11, -9, -7, -5, -3, -1, 1, 3, 5, 7, 9, 11, 13, 15],
+    "bf16_levels": [-15.0, -13.0, -11.0, -9.0, -7.0, -5.0, -3.0, -1.0, 1.0, 3.0, 5.0, 7.0, 9.0, 11.0, 13.0, 15.0],
+    "difference_domain": [-30.0, -28.0, -26.0, -24.0, -22.0, -20.0, -18.0, -16.0, -14.0, -12.0, -10.0, -8.0, -6.0, -4.0, -2.0, 0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 22.0, 24.0, 26.0, 28.0, 30.0],
+    "max_silu_square_absolute_error": 1.1368683772161603e-13,
+    "minimum_nonzero_squared_distance": 3.9999999999999996
+  },
+  "output_code": {
+    "correct_scores": [16],
+    "minimum_margin": 2,
+    "one_bit_neighbor_scores": [14]
+  },
+  "reads": {
+    "no_unique_pair_count": 0,
+    "random_read_failures": [],
+    "repeated_pair_result": {
+      "positions": [0, 3],
+      "status": "ambiguous",
+      "value": null
+    },
+    "unique_read_count": 1000
+  },
+  "status": "PASS"
+}

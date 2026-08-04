@@ -1,0 +1,57 @@
+{
+  "decision": "hold_h100_close_frozen_bf16_width940_implementation",
+  "domain": {
+    "num_records": 2405,
+    "record_length": 128,
+    "vocab_size": 49152
+  },
+  "finite_projection_counterexample": {
+    "ambient_dimension": 2,
+    "finite_set_is_injective": true,
+    "points": [[0, 0], [1, 0], [0, 1]],
+    "projected_values": [0, 1, 2],
+    "projection": [1, 2],
+    "projection_rank": 1
+  },
+  "information": {
+    "fano_lower_bits": {
+      "0.0": 1994.875200092308,
+      "0.01": 1964.5849642672738,
+      "0.05": 1858.472817429678,
+      "0.1": 1735.3566198093047
+    },
+    "source_entropy_bits_fixed_length": 1994.875200092308,
+    "t32_logical_bits": 2286,
+    "t32_logical_over_entropy": 1.1459363472432866,
+    "t32_physical_bits": 6096,
+    "t32_physical_over_entropy": 3.055830259315431
+  },
+  "resident": {
+    "t32_record_bytes_per_token": 5.953125,
+    "t32_record_table_bytes": 1832610,
+    "typed_plane": {
+      "arithmetic_break_even_tokens": 10,
+      "candidate_width": 994,
+      "length_bytes": 4810,
+      "position_bytes": 8192,
+      "saved_multiplies_per_token": 345600,
+      "scanner_bytes": 54466,
+      "slack_bytes": 8052,
+      "token_bytes": 615680,
+      "total_bytes": 683148,
+      "width_removed": 30
+    }
+  },
+  "scope": {
+    "establishes_latency": false,
+    "establishes_learnability": false,
+    "trains_model": false,
+    "uses_corpus": false,
+    "uses_gpu": false
+  },
+  "tests": {
+    "passed": 5,
+    "failed": 0,
+    "wall_seconds": 0.02
+  }
+}

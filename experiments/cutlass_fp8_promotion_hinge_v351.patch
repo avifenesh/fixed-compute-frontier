@@ -1,0 +1,58 @@
+diff --git a/include/cutlass/gemm/collective/fp8_accumulation.hpp b/include/cutlass/gemm/collective/fp8_accumulation.hpp
+index f0cd9b7..be91d24 100644
+--- a/include/cutlass/gemm/collective/fp8_accumulation.hpp
++++ b/include/cutlass/gemm/collective/fp8_accumulation.hpp
+@@ -118,0 +119,12 @@
++
++#if defined(CUTLASS_ENABLE_FP8_PROMOTION_HINGE)
++  /// Apply alpha=1 midpoint hinge to the already-promoted main accumulator.
++  CUTLASS_DEVICE
++  void apply_midpoint_hinge() {
++    CUTLASS_PRAGMA_UNROLL
++    for (int i = 0; i < size(accum_); ++i) {
++      float value = accum_(i);
++      accum_(i) = value > 0.0f ? value + value : 0.0f;
++    }
++  }
++#endif
+diff --git a/include/cutlass/gemm/collective/sm90_mma_tma_gmma_ss_warpspecialized_fp8.hpp b/include/cutlass/gemm/collective/sm90_mma_tma_gmma_ss_warpspecialized_fp8.hpp
+index 06d17a2..78f4cb4 100644
+--- a/include/cutlass/gemm/collective/sm90_mma_tma_gmma_ss_warpspecialized_fp8.hpp
++++ b/include/cutlass/gemm/collective/sm90_mma_tma_gmma_ss_warpspecialized_fp8.hpp
+@@ -475,6 +475,10 @@ public:
+     //
+     static_assert((0 <= K_PIPE_MMAS) && (K_PIPE_MMAS <  K_PIPE_MAX),
+         "ERROR : Incorrect number of MMAs in flight");
++#if defined(CUTLASS_ENABLE_FP8_PROMOTION_HINGE)
++    int const original_k_tile_count = k_tile_count;
++    int processed_k_tiles = 0;
++#endif
+ 
+     // We release buffers to producer warps(dma load) with some mmas in flight
+     PipelineState smem_pipe_release = smem_pipe_read;
+@@ -505,6 +509,12 @@ public:
+       warpgroup_commit_batch();
+ 
+       accumulation.promote_if_needed();
++#if defined(CUTLASS_ENABLE_FP8_PROMOTION_HINGE)
++      ++processed_k_tiles;
++      if (processed_k_tiles == original_k_tile_count / 2) {
++        accumulation.apply_midpoint_hinge();
++      }
++#endif
+ 
+       ++smem_pipe_read;
+     }
+@@ -548,6 +558,12 @@ public:
+       warpgroup_fence_operand(accumulation());
+ 
+       accumulation.promote_if_needed();
++#if defined(CUTLASS_ENABLE_FP8_PROMOTION_HINGE)
++      ++processed_k_tiles;
++      if (processed_k_tiles == original_k_tile_count / 2) {
++        accumulation.apply_midpoint_hinge();
++      }
++#endif
+ 
+       pipeline.consumer_release(smem_pipe_release);                 // UNLOCK smem_pipe_release, done _computing_ on it
+ 

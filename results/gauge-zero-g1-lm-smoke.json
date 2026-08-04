@@ -1,0 +1,381 @@
+{
+  "args": {
+    "data_manifest": "results/block-algebra-scratch-data-manifest.json",
+    "eval_batch_size": 2,
+    "eval_batches": 2,
+    "eval_steps": [
+      2
+    ],
+    "gradient_accumulation": 1,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.0003,
+    "micro_batch_size": 2,
+    "output": "results/gauge-zero-g1-lm-smoke.json",
+    "seed": 2207,
+    "sequence_length": 512,
+    "steps": 2,
+    "train_file": "data/block-algebra-scratch/train.uint16.bin",
+    "validation_file": "data/block-algebra-scratch/validation.uint16.bin",
+    "warmup_steps": 2,
+    "weight_decay": 0.1
+  },
+  "arms": {
+    "canonical_bilinear_control": {
+      "arm": "canonical_bilinear_control",
+      "attention_diagnostics": {
+        "initial": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_abs_max_layer_median": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "key_abs_max_layer_max": 5.15625,
+          "key_abs_max_layer_median": 4.46875,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.0003099739551544
+        },
+        "terminal": {
+          "coefficient_abs_max_layer_max": 0.0036001100670546293,
+          "coefficient_abs_max_layer_median": 0.003598118433728814,
+          "coefficient_rms_layer_median": 0.0026104541029781103,
+          "key_abs_max_layer_max": 5.375,
+          "key_abs_max_layer_median": 4.46875,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.0025848150253296
+        }
+      },
+      "dense_attention_values_per_layer": [
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216
+      ],
+      "evaluations": {
+        "0": {
+          "elapsed_seconds": 0.020082362927496433,
+          "loss": 11.389337539672852,
+          "per_batch_loss": [
+            11.356353759765625,
+            11.422321319580078
+          ],
+          "prediction_tokens": 2048
+        },
+        "2": {
+          "elapsed_seconds": 0.019519282039254904,
+          "loss": 11.077154159545898,
+          "per_batch_loss": [
+            11.032083511352539,
+            11.122224807739258
+          ],
+          "prediction_tokens": 2048
+        }
+      },
+      "optimizer_state_bytes": 302067128,
+      "parameter_tensors": 110,
+      "pivot_metadata_bits": 0,
+      "pivot_rule": "column equals RoPE pair index",
+      "runtime_scope": "quality pilot; confirmed incremental H100 executor only, not full production admission",
+      "serving_diagnostics": {
+        "initial": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        },
+        "terminal": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.00360107421875,
+          "coefficient_bf16_nonzero_fraction": 1.0
+        }
+      },
+      "terminal_ablations": {},
+      "total_parameters": 37758336,
+      "train": {
+        "elapsed_seconds": 0.08679036283865571,
+        "final_loss": 11.269577026367188,
+        "max_loss": 11.3300199508667,
+        "max_preclip_gradient_norm": 6.379595756530762,
+        "mean_loss": 11.299798488616943,
+        "nonfinite": false,
+        "peak_allocated_bytes": 1465976832,
+        "prediction_tokens": 2048,
+        "tokens_per_second": 23597.089965014384
+      }
+    },
+    "gauge_zero_g1": {
+      "arm": "gauge_zero_g1",
+      "attention_diagnostics": {
+        "initial": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_abs_max_layer_median": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "key_abs_max_layer_max": 5.15625,
+          "key_abs_max_layer_median": 4.46875,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.0003099739551544
+        },
+        "terminal": {
+          "coefficient_abs_max_layer_max": 0.0036007047165185213,
+          "coefficient_abs_max_layer_median": 0.003600481548346579,
+          "coefficient_rms_layer_median": 0.0026020656805485487,
+          "key_abs_max_layer_max": 5.40625,
+          "key_abs_max_layer_median": 4.453125,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.0025619864463806
+        }
+      },
+      "dense_attention_values_per_layer": [
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216,
+        393216
+      ],
+      "evaluations": {
+        "0": {
+          "elapsed_seconds": 0.022854398004710674,
+          "loss": 11.389337539672852,
+          "per_batch_loss": [
+            11.356353759765625,
+            11.422321319580078
+          ],
+          "prediction_tokens": 2048
+        },
+        "2": {
+          "elapsed_seconds": 0.022896029986441135,
+          "loss": 11.076716423034668,
+          "per_batch_loss": [
+            11.031332015991211,
+            11.122100830078125
+          ],
+          "prediction_tokens": 2048
+        }
+      },
+      "optimizer_state_bytes": 302067128,
+      "parameter_tensors": 110,
+      "pivot_metadata_bits": 0,
+      "pivot_rule": "column equals RoPE pair index",
+      "runtime_scope": "quality pilot; confirmed incremental H100 executor only, not full production admission",
+      "serving_diagnostics": {
+        "initial": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        },
+        "terminal": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.00360107421875,
+          "coefficient_bf16_nonzero_fraction": 1.0
+        }
+      },
+      "terminal_ablations": {
+        "zero_coefficient": {
+          "elapsed_seconds": 0.022549001965671778,
+          "loss": 11.076961517333984,
+          "per_batch_loss": [
+            11.031755447387695,
+            11.122167587280273
+          ],
+          "prediction_tokens": 2048
+        }
+      },
+      "total_parameters": 37758336,
+      "train": {
+        "elapsed_seconds": 0.3855056380853057,
+        "final_loss": 11.269289016723633,
+        "max_loss": 11.3300199508667,
+        "max_preclip_gradient_norm": 6.3906450271606445,
+        "mean_loss": 11.299654483795166,
+        "nonfinite": false,
+        "peak_allocated_bytes": 1472274432,
+        "prediction_tokens": 2048,
+        "tokens_per_second": 5312.503366155213
+      }
+    },
+    "raw_baseline": {
+      "arm": "raw_baseline",
+      "attention_diagnostics": {
+        "initial": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_abs_max_layer_median": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "key_abs_max_layer_max": 4.5625,
+          "key_abs_max_layer_median": 4.453125,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.0002876818180084
+        },
+        "terminal": {
+          "coefficient_abs_max_layer_max": 0.0,
+          "coefficient_abs_max_layer_median": 0.0,
+          "coefficient_rms_layer_median": 0.0,
+          "key_abs_max_layer_max": 4.71875,
+          "key_abs_max_layer_median": 4.375,
+          "key_nonfinite_fraction_layer_max": 0.0,
+          "key_nonfinite_fraction_layer_median": 0.0,
+          "key_rms_layer_median": 1.0025488138198853
+        }
+      },
+      "dense_attention_values_per_layer": [],
+      "evaluations": {
+        "0": {
+          "elapsed_seconds": 0.04150149505585432,
+          "loss": 11.388918399810791,
+          "per_batch_loss": [
+            11.354418754577637,
+            11.423418045043945
+          ],
+          "prediction_tokens": 2048
+        },
+        "2": {
+          "elapsed_seconds": 0.019834643229842186,
+          "loss": 11.076531887054443,
+          "per_batch_loss": [
+            11.030508995056152,
+            11.122554779052734
+          ],
+          "prediction_tokens": 2048
+        }
+      },
+      "optimizer_state_bytes": 302067128,
+      "parameter_tensors": 110,
+      "pivot_metadata_bits": 0,
+      "pivot_rule": "column equals RoPE pair index",
+      "runtime_scope": "quality pilot; confirmed incremental H100 executor only, not full production admission",
+      "serving_diagnostics": {
+        "initial": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        },
+        "terminal": {
+          "bf16_export_coefficient_bit_exact": true,
+          "coefficient_bf16_abs_max": 0.0,
+          "coefficient_bf16_nonzero_fraction": 0.0
+        }
+      },
+      "terminal_ablations": {},
+      "total_parameters": 37758336,
+      "train": {
+        "elapsed_seconds": 0.19182422803714871,
+        "final_loss": 11.267827033996582,
+        "max_loss": 11.33036994934082,
+        "max_preclip_gradient_norm": 6.371618747711182,
+        "mean_loss": 11.299098491668701,
+        "nonfinite": false,
+        "peak_allocated_bytes": 1463343104,
+        "prediction_tokens": 2048,
+        "tokens_per_second": 10676.440723657619
+      }
+    }
+  },
+  "candidate": "dense-zero-pivot-G1-attention",
+  "data_ledger": {
+    "files": {
+      "train": {
+        "bytes": 100195056,
+        "checks": {
+          "bytes": true,
+          "sequence_count": true,
+          "sha256": true,
+          "whole_uint16_sequences": true
+        },
+        "path": "/workspace/fixed-compute-frontier/data/block-algebra-scratch/train.uint16.bin",
+        "sequences": 97656,
+        "sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a"
+      },
+      "validation": {
+        "bytes": 4202496,
+        "checks": {
+          "bytes": true,
+          "sequence_count": true,
+          "sha256": true,
+          "whole_uint16_sequences": true
+        },
+        "path": "/workspace/fixed-compute-frontier/data/block-algebra-scratch/validation.uint16.bin",
+        "sequences": 4096,
+        "sha256": "889188f0e4c43cd49b2933ac462e8bd367520f15fe08d324f169f7eca962ce7b"
+      }
+    },
+    "manifest": "/workspace/fixed-compute-frontier/results/block-algebra-scratch-data-manifest.json",
+    "valid": true
+  },
+  "decision": {
+    "complete": true,
+    "gates": {
+      "all_key_nonfinite_fractions_zero": true,
+      "all_optimizer_state_bytes_equal": true,
+      "all_parameter_counts_equal": true,
+      "all_parameter_tensor_counts_equal": true,
+      "all_training_and_diagnostics_finite": true,
+      "bf16_export_coefficient_bit_exact": true,
+      "candidate_improves_control_by_0_01_percent": false,
+      "candidate_improves_raw_by_0_025_percent": false,
+      "candidate_initial_nll_matches_control_within_1e_7": true,
+      "canonical_initial_nll_matches_raw_within_1e_4": false,
+      "coefficient_abs_max_at_most_0_5": true,
+      "control_terminal_noninferior_raw_within_0_05_percent": true,
+      "paired_interval_favors_candidate_vs_control": false,
+      "paired_interval_favors_candidate_vs_raw": false,
+      "paired_interval_favors_full_vs_zero": false,
+      "some_bf16_coefficients_survive": true,
+      "zero_pivot_metadata_bits": true,
+      "zeroing_coefficient_hurts_0_01_percent": false
+    },
+    "paired_intervals": {
+      "candidate_vs_control": {
+        "candidate_minus_reference_mean": -0.00043773651123046875,
+        "lower_95": -0.0010527038574218751,
+        "standard_error": 0.00031375885009765625,
+        "upper_95": 0.00017723083496093753
+      },
+      "candidate_vs_raw": {
+        "candidate_minus_reference_mean": 0.00018453598022460938,
+        "lower_95": -0.00106689453125,
+        "standard_error": 0.0006384849548339844,
+        "upper_95": 0.0014359664916992188
+      },
+      "full_vs_zero": {
+        "candidate_minus_reference_mean": -0.00024509429931640625,
+        "lower_95": -0.000594635009765625,
+        "standard_error": 0.00017833709716796872,
+        "upper_95": 0.00010444641113281243
+      }
+    },
+    "pilot_pass": false,
+    "relative_candidate_improvement": {
+      "canonical_bilinear_control": 3.9517055096072935e-05,
+      "raw_baseline": -1.6660086578208063e-05
+    },
+    "terminal_losses": {
+      "canonical_bilinear_control": 11.077154159545898,
+      "gauge_zero_g1": 11.076716423034668,
+      "raw_baseline": 11.076531887054443
+    }
+  },
+  "device": "NVIDIA H100 80GB HBM3",
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "model_revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "runtime": {
+    "cuda": "12.4",
+    "torch": "2.5.1+cu124"
+  },
+  "schema": "gauge-zero-g1-lm-pilot-development-v1",
+  "scope": "matched 10M-token from-scratch quality pilot"
+}

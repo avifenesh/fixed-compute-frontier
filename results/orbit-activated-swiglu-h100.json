@@ -1,0 +1,190 @@
+{
+  "all_gates_pass": false,
+  "args": {
+    "batches": "1,8,32,128",
+    "carrier_gain": 8.0,
+    "coefficient_bound": 0.035,
+    "dimension": 4096,
+    "hidden": 14336,
+    "output": "results/orbit-activated-swiglu-h100.json",
+    "samples": 200,
+    "seed": 617,
+    "warmup": 40
+  },
+  "candidate": "orbit-activated SwiGLU",
+  "carrier_statistics": {
+    "absolute_error_max": 0.00048826076090335846,
+    "absolute_error_p50": 0.0001645121956244111,
+    "absolute_error_p90": 0.0003950805403292179,
+    "absolute_error_p99": 0.00047990321763791144,
+    "material_coefficients": 13893,
+    "material_sign_flips": 0,
+    "material_zero_collapses": 0,
+    "maximum_scale_condition_factor": 1.3888708353042603,
+    "scale_max": 1.2798815965652466,
+    "scale_min": 0.7200093865394592
+  },
+  "cells": [
+    {
+      "batch": 1,
+      "orbit_over_baseline_median": 1.0336418992125604,
+      "timings": {
+        "baseline": {
+          "max_us": 160.70400178432465,
+          "mean_us": 142.00223959982395,
+          "median_us": 141.7279988527298,
+          "min_us": 139.42399621009827,
+          "p10_us": 140.54399728775024,
+          "p90_us": 143.04320067167282,
+          "samples": 200
+        },
+        "orbit": {
+          "max_us": 159.32799875736237,
+          "mean_us": 146.6817595809698,
+          "median_us": 146.4959979057312,
+          "min_us": 143.90400052070618,
+          "p10_us": 145.53280472755432,
+          "p90_us": 147.71840572357178,
+          "samples": 200
+        }
+      },
+      "zero_endpoint_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 8,
+      "orbit_over_baseline_median": 1.032928168585637,
+      "timings": {
+        "baseline": {
+          "max_us": 163.42400014400482,
+          "mean_us": 144.92751993238926,
+          "median_us": 144.80000734329224,
+          "min_us": 142.68800616264343,
+          "p10_us": 143.70879977941513,
+          "p90_us": 146.02240175008774,
+          "samples": 200
+        },
+        "orbit": {
+          "max_us": 157.53600001335144,
+          "mean_us": 149.79760020971298,
+          "median_us": 149.56800639629364,
+          "min_us": 147.2640037536621,
+          "p10_us": 148.60799908638,
+          "p90_us": 151.17120295763016,
+          "samples": 200
+        }
+      },
+      "zero_endpoint_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 32,
+      "orbit_over_baseline_median": 1.027405951164826,
+      "timings": {
+        "baseline": {
+          "max_us": 171.6800034046173,
+          "mean_us": 150.92176020145416,
+          "median_us": 150.62400698661804,
+          "min_us": 148.12800288200378,
+          "p10_us": 149.75999295711517,
+          "p90_us": 151.99999511241913,
+          "samples": 200
+        },
+        "orbit": {
+          "max_us": 165.43999314308167,
+          "mean_us": 155.00319942831993,
+          "median_us": 154.7520011663437,
+          "min_us": 153.05599570274353,
+          "p10_us": 153.85599434375763,
+          "p90_us": 156.07360303401947,
+          "samples": 200
+        }
+      },
+      "zero_endpoint_max_row_relative_error": 0.0
+    },
+    {
+      "batch": 128,
+      "orbit_over_baseline_median": 1.1016393522126275,
+      "timings": {
+        "baseline": {
+          "max_us": 176.256000995636,
+          "mean_us": 166.0145603120327,
+          "median_us": 165.92000424861908,
+          "min_us": 163.29599916934967,
+          "p10_us": 164.82559591531754,
+          "p90_us": 167.0751988887787,
+          "samples": 200
+        },
+        "orbit": {
+          "max_us": 204.54399287700653,
+          "mean_us": 182.98207975924015,
+          "median_us": 182.78400599956512,
+          "min_us": 180.41600286960602,
+          "p10_us": 181.56479746103287,
+          "p90_us": 183.9040070772171,
+          "samples": 200
+        }
+      },
+      "zero_endpoint_max_row_relative_error": 0.0
+    }
+  ],
+  "coefficient_max_abs_decode_error": 0.00048826076090335846,
+  "cuda_version": "12.4",
+  "device": "NVIDIA H100 80GB HBM3",
+  "device_properties": "_CudaDeviceProperties(name='NVIDIA H100 80GB HBM3', major=9, minor=0, total_memory=80994MB, multi_processor_count=132, uuid=44700db4-f6b2-9122-550e-6987512886e8, L2_cache_size=50MB)",
+  "driver_version": "550.163.01",
+  "folded_bf16_export_check": {
+    "candidate_excess_over_ordinary_export_error": 5.025649443268776e-05,
+    "candidate_vs_canonical_fp32_max_row_relative": 0.005410594865679741,
+    "ordinary_folded_bf16_vs_canonical_fp32_max_row_relative": 0.005360338371247053
+  },
+  "gates": {
+    "candidate_bf16_excess_export_error_below_0p5_percent": true,
+    "carrier_condition_factor_below_1p5": true,
+    "coefficient_decode_below_0p001": true,
+    "no_additional_activation_workspace": true,
+    "no_duplicate_coefficient_tensor": true,
+    "no_material_sign_flips_or_zero_collapse": true,
+    "nonzero_reference_below_1_percent": true,
+    "protocol_valid": true,
+    "reference_exercises_all_clip_regions": true,
+    "within_1p02_on_key_cells": false,
+    "within_1p05_on_full_grid": false,
+    "zero_endpoint_below_0p2_percent": true
+  },
+  "kernel": {
+    "coefficient_source": "semantic BF16 pivots in deployed U matrix",
+    "cuda_graph_full_path": true,
+    "group_size": 8,
+    "groups_per_program": 32,
+    "num_warps": 4
+  },
+  "ledger": {
+    "additional_activation_workspace_words": 0,
+    "baseline_and_candidate_use_separate_gate_up_gemms": true,
+    "baseline_dense_macs_per_token": 176160768,
+    "baseline_serialized_words": 176160768,
+    "candidate_dense_macs_per_token": 176160768,
+    "candidate_serialized_words": 176160768,
+    "coefficient_tensor_words": 0,
+    "pivot_loads_may_hit_cache_but_are_not_counted_as_free": true,
+    "production_coalesced_gate_up_parity_established": false,
+    "semantic_pivot_load_instructions_by_batch": {
+      "1": 14336,
+      "128": 1835008,
+      "32": 458752,
+      "8": 114688
+    },
+    "semantic_pivot_load_instructions_per_token": 14336
+  },
+  "nonzero_reference": {
+    "coefficient_max_abs_decode_error": 0.0004881415516138077,
+    "max_row_relative_error": 0.001678981352597475,
+    "negative_clipped_coordinates": 8297,
+    "positive_clipped_coordinates": 8312,
+    "unclipped_coordinates": 26396
+  },
+  "preregistration_sha256": "22be1d2adc1a10183afaded2ebf9a763ee8efa8d50238bca382e5438d1a30939",
+  "scope": "fused full-FFN single-H100 serving gate only",
+  "source_sha256": "bdacb590225deb215633000d8070cb3f50a8080cbebad581d72d39dc08c07f67",
+  "torch_version": "2.5.1+cu124",
+  "triton_version": "3.1.0"
+}

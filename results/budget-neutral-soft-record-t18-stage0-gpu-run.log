@@ -1,0 +1,20 @@
+stage=environment
+2026-07-31T08:47:40+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+.........                                                                [100%]
+9 passed in 3.53s
+stage=operator_and_ledger
+/usr/local/lib/python3.12/dist-packages/torch/autograd/graph.py:869: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at /pytorch/aten/src/ATen/cuda/CublasHandlePool.cpp:335.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+{
+  "all_gates_pass": true,
+  "baseline_parameters": 36577152,
+  "candidate_parameters": 36577152,
+  "failed_gates": [],
+  "matrix_macs_per_token": 2359296,
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/budget-neutral-soft-record-t18-stage0.json",
+  "peak_hbm_allocated_bytes": 685018624
+}
+stage=complete

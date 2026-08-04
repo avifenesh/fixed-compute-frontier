@@ -1,0 +1,2960 @@
+{
+  "cell_key": "A2/E2/1707",
+  "checkpoint_freeze_receipt_sha256": "10749e85bcd6c699aa8e277c9db92126d0e40d681ed1684756eba725a2e27c63",
+  "continuations": {
+    "cells": {
+      "A2/E2/1707": {
+        "arms": {
+          "DIRECT3": {
+            "conditional_suffix_nll": 77.40109510193864,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0004,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9985,
+            "strata": 23,
+            "stratified_outcome_tv": 1.0000000000000002
+          },
+          "HARD3": {
+            "conditional_suffix_nll": 33.709621224167144,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 1.0,
+            "strata": 23,
+            "stratified_outcome_tv": 1.0000000000000002
+          },
+          "K1": {
+            "conditional_suffix_nll": 63.11334170279818,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0009,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.999,
+            "strata": 23,
+            "stratified_outcome_tv": 1.0000000000000002
+          },
+          "K2": {
+            "conditional_suffix_nll": 63.09574077784738,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0009,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9989,
+            "strata": 23,
+            "stratified_outcome_tv": 1.0000000000000002
+          },
+          "K3": {
+            "conditional_suffix_nll": 60.79520642436984,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0011,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9981,
+            "strata": 23,
+            "stratified_outcome_tv": 1.0000000000000002
+          },
+          "LINK32": {
+            "conditional_suffix_nll": 57.073900232256335,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0001,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9998,
+            "strata": 23,
+            "stratified_outcome_tv": 1.0000000000000002
+          },
+          "MLP": {
+            "conditional_suffix_nll": 53.083526405215274,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 1.0,
+            "strata": 23,
+            "stratified_outcome_tv": 1.0000000000000002
+          },
+          "RNN32": {
+            "conditional_suffix_nll": 41.425238667542985,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9996,
+            "strata": 23,
+            "stratified_outcome_tv": 1.0000000000000002
+          },
+          "S32": {
+            "conditional_suffix_nll": 68.16602900282109,
+            "grammar_valid_rate": 0.0,
+            "greedy_analytic_map_rate": 0.0,
+            "greedy_grammar_valid_rate": 0.0,
+            "late_eos_rate": 0.0032,
+            "no_eos_rate": 0.0,
+            "paired_samples": 10000,
+            "premature_eos_rate": 0.9945,
+            "strata": 23,
+            "stratified_outcome_tv": 1.0000000000000002
+          }
+        },
+        "family": "A2",
+        "seed": 1707,
+        "split": "E2"
+      }
+    },
+    "paired_samples_per_cell": 10000,
+    "sampling_seed": 9401,
+    "schema": "cpkv-topk-001-continuations-v1"
+  },
+  "lineage": "CPKV-TOPK-001",
+  "locked_evaluator_sha256": "d7cadcb82ba8f25b92ddc96f01a0f38cc60fb375fa0e8fcb592d43a4a9657086",
+  "manifest_sha256": "c48cf230e86162e598a87d1b3c9eb0b5714066195d044341685ab9ecbd21060e",
+  "schema": "cpkv-topk-001-locked-evaluation-shard-v1",
+  "shard_index": 36,
+  "status": "complete",
+  "teacher_forced": {
+    "cells": {
+      "A2/E2/1707": {
+        "arms": {
+          "DIRECT3": {
+            "conditional_suffix_nll": 77.40109510193864,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 0.4684441056392824,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.49227864116169723,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.5,
+                "nll": 0.8224162062551879,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.5065437239738251,
+                "nll": 0.8208569537244191,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.503522857611011,
+                "nll": 0.8337551842768108,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.5130493349048661,
+                "nll": 0.8296501117760658,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.5051813471502591,
+                "nll": 0.8509117868184148,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.5118654889858465,
+                "nll": 0.8462460649381518,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.5118858954041204,
+                "nll": 0.8582584394949339,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.5191396555614048,
+                "nll": 0.8576241556383883,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.5090044576523031,
+                "nll": 0.8718300556697828,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.5146629427446998,
+                "nll": 0.8691117866344478,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.508838017965807,
+                "nll": 0.8814695248000659,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.5141375101708706,
+                "nll": 0.872616173454449,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.5042004773269689,
+                "nll": 0.8993929882261685,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.5050347468444192,
+                "nll": 0.9000129795488937,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.4970890566724279,
+                "nll": 0.9196499145749067,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.5039740394111838,
+                "nll": 0.9108891280343347,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.4932052908135532,
+                "nll": 0.9304824367513468,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.496067699949409,
+                "nll": 0.9259623286959048,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.48668426103646834,
+                "nll": 0.9421271997714568,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.48799037511279164,
+                "nll": 0.9395011308983742,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.48038297872340424,
+                "nll": 0.9533933541938276,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.48187724397332876,
+                "nll": 0.9495618284677231,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.47464118690533785,
+                "nll": 0.9616708288733955,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.47622616371055043,
+                "nll": 0.9576905157251118,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.4779292929292929,
+                "nll": 0.9556890614958895,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.47909042111940664,
+                "nll": 0.9525207000441583,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.4764801297648013,
+                "nll": 0.9546379846196099,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.47536379882563184,
+                "nll": 0.9518455689222987,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.4729978398271862,
+                "nll": 0.957510758857114,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.47569875776397513,
+                "nll": 0.9500846806258503,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.4744265914387342,
+                "nll": 0.9484059445434182,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.47546742209631726,
+                "nll": 0.9437441786136778,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.4730617608409987,
+                "nll": 0.9442880695961431,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.46875,
+                "nll": 0.9406308864233973,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 0.9193290159277275,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 2392261,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 26968,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 90,
+              "merged_candidates": 28637934,
+              "payload_reads": 2412261,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 1794272,
+              "push_candidates": 21530349,
+              "retained_configurations": 2412261,
+              "softmaxes": 1586969,
+              "tokens": 804087,
+              "valid_transition_branches": 35853915
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.18764002646773123,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.7492481848108575,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.560755425388535,
+            "sequences": 10000,
+            "token_nll": 1.5680641746291912,
+            "tokens": 804087
+          },
+          "HARD3": {
+            "conditional_suffix_nll": 33.709621224167144,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 0.7937,
+            "delayed_nll": 0.43544101871057816,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.4516249032233699,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.5,
+                "nll": 0.865823883233396,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.4934562760261749,
+                "nll": 0.8679979594736726,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.4789447812551204,
+                "nll": 0.8797645208154657,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.4808890385586799,
+                "nll": 0.8805112616883835,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.46729274611398963,
+                "nll": 0.8915877140036094,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.47387464084282216,
+                "nll": 0.8874803421286878,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.4657686212361331,
+                "nll": 0.8981033592019345,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.4669474317515229,
+                "nll": 0.8996515678841106,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.46323922734026746,
+                "nll": 0.9067689946430416,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.46927764377301,
+                "nll": 0.9045558078483252,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.4638752052545156,
+                "nll": 0.9121770119254328,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.4722843775427177,
+                "nll": 0.9057786261310564,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.45513126491646777,
+                "nll": 0.9264981805925036,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.45667281236704016,
+                "nll": 0.9268782255728157,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.44728463567724913,
+                "nll": 0.9423757933527631,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.4530404928749471,
+                "nll": 0.9373885432569796,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.44591411487588334,
+                "nll": 0.9519247787255662,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.45090373913443405,
+                "nll": 0.9489738574228518,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.4453374920025592,
+                "nll": 0.9612701725164816,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.4479869376530744,
+                "nll": 0.9604755073680777,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.4410212765957447,
+                "nll": 0.9727574138398932,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.4439647803043255,
+                "nll": 0.9701531377799468,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.43642154491211094,
+                "nll": 0.9815993488707689,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.4396702473145141,
+                "nll": 0.9806192845470322,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.4391919191919192,
+                "nll": 0.9818948666925978,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.44234616698384815,
+                "nll": 0.9811259174768656,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.44214652608813193,
+                "nll": 0.9842624675943232,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.4451748787337248,
+                "nll": 0.983099192400854,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.43955516441315307,
+                "nll": 0.9903596261897615,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.4452639751552795,
+                "nll": 0.9871454352650476,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.4422911811603091,
+                "nll": 0.988281250510917,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.4473654390934844,
+                "nll": 0.9848755993516625,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.44152431011826543,
+                "nll": 0.9899451523600491,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.4375,
+                "nll": 0.9883268620921618,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 0.9480447812907892,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 2412261,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 26851,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 73,
+              "merged_candidates": 2412261,
+              "payload_reads": 2412261,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 1858710,
+              "push_candidates": 21710349,
+              "retained_configurations": 2412261,
+              "softmaxes": 2412261,
+              "tokens": 804087,
+              "valid_transition_branches": 36093915
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.22968211234617575,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 0.5874,
+                "nll": 0.6411999250749889,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.041707934084488,
+            "sequences": 10000,
+            "token_nll": 1.0436088222665842,
+            "tokens": 804087
+          },
+          "K1": {
+            "conditional_suffix_nll": 63.11334170279818,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 1.128592658149157,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.5033819891610174,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.5238095238095238,
+                "nll": 1.007248818975333,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.5300416418798334,
+                "nll": 1.0156364429883424,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.5266262493855481,
+                "nll": 1.0342201568855476,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.5307290789695235,
+                "nll": 1.0117770561947927,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.5239637305699482,
+                "nll": 1.0413068359011184,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.5309141215281473,
+                "nll": 1.0191345721995957,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.5255150554675119,
+                "nll": 1.034069636626073,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.531623674513048,
+                "nll": 1.0257385418872789,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.5221396731054978,
+                "nll": 1.043623680255423,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.5278024628665736,
+                "nll": 1.0246378075238773,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.5208635178209214,
+                "nll": 1.0466309031876313,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.5285292921074044,
+                "nll": 1.0264550707263604,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.5144152744630072,
+                "nll": 1.0700089178002492,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.5168061267905262,
+                "nll": 1.0523646956180643,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.5050486673337579,
+                "nll": 1.093133778683124,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.5132859897474487,
+                "nll": 1.070661794893834,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.5008606631636165,
+                "nll": 1.1124562022796298,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.506185898909994,
+                "nll": 1.0929318091881843,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.49600127959053103,
+                "nll": 1.1233966546157161,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.49941992867271084,
+                "nll": 1.1135732197998232,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.48859574468085104,
+                "nll": 1.143413535084237,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.49294751239528123,
+                "nll": 1.127793789770837,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.48302693114013867,
+                "nll": 1.1598116513630035,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.48713464901324005,
+                "nll": 1.14584563505051,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.4865151515151515,
+                "nll": 1.1625570681407424,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.48899624261943103,
+                "nll": 1.1359784152744703,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.4852662881859962,
+                "nll": 1.1505342400111307,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.48800102118968597,
+                "nll": 1.1391220042431331,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.48227858228658294,
+                "nll": 1.1627824081265021,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.4863354037267081,
+                "nll": 1.1422926682811907,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.4820311541763768,
+                "nll": 1.1640108812328396,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.4860056657223796,
+                "nll": 1.1297951666370987,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.47963206307490147,
+                "nll": 1.1461266229910672,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.484375,
+                "nll": 1.16231968442212,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 1.0990025964263792,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 804087,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 25460,
+              "maximum_retained_configurations": 1,
+              "maximum_stack_depth": 68,
+              "merged_candidates": 12031305,
+              "payload_reads": 804087,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 570680,
+              "push_candidates": 7236783,
+              "retained_configurations": 804087,
+              "softmaxes": 804087,
+              "tokens": 804087,
+              "valid_transition_branches": 12031305
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.19005251027684578,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 2.0671328060214464,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.498090159217276,
+            "sequences": 10000,
+            "token_nll": 1.5087076672271114,
+            "tokens": 804087
+          },
+          "K2": {
+            "conditional_suffix_nll": 63.09574077784738,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 1.1288569914406712,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.5033819891610174,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.5238095238095238,
+                "nll": 1.007248818975333,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.5300416418798334,
+                "nll": 1.0156364429883424,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.5266262493855481,
+                "nll": 1.0342201568855476,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.5307290789695235,
+                "nll": 1.0117770561947927,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.5239637305699482,
+                "nll": 1.0413068359011184,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.5309141215281473,
+                "nll": 1.0191345721995957,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.5255150554675119,
+                "nll": 1.034069636626073,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.531623674513048,
+                "nll": 1.0257385418872789,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.5221396731054978,
+                "nll": 1.043623680255423,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.5278024628665736,
+                "nll": 1.0246378075238773,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.5208635178209214,
+                "nll": 1.0466309031876313,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.5285292921074044,
+                "nll": 1.0264550707263604,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.5144152744630072,
+                "nll": 1.0700089178002492,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.5168061267905262,
+                "nll": 1.0523646956180643,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.5050486673337579,
+                "nll": 1.093133778683124,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.5132859897474487,
+                "nll": 1.070661794893834,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.5008606631636165,
+                "nll": 1.1124562022796298,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.506185898909994,
+                "nll": 1.0929318091881843,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.49600127959053103,
+                "nll": 1.1233966546157161,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.49941992867271084,
+                "nll": 1.1135732197998232,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.48859574468085104,
+                "nll": 1.143413535084237,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.49294751239528123,
+                "nll": 1.127793789770837,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.48302693114013867,
+                "nll": 1.1598116513630035,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.48713464901324005,
+                "nll": 1.14584563505051,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.4865151515151515,
+                "nll": 1.1625570681407424,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.48899624261943103,
+                "nll": 1.1359784152744703,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.4852662881859962,
+                "nll": 1.1505342400111307,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.48800102118968597,
+                "nll": 1.1391220042431331,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.48227858228658294,
+                "nll": 1.1627824081265021,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.4863354037267081,
+                "nll": 1.1422926682811907,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.4820311541763768,
+                "nll": 1.1640108812328396,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.4860056657223796,
+                "nll": 1.1297951666370987,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.47963206307490147,
+                "nll": 1.1461266229910672,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.484375,
+                "nll": 1.16231968442212,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 1.0990025964263792,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 1598174,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 26079,
+              "maximum_retained_configurations": 2,
+              "maximum_stack_depth": 68,
+              "merged_candidates": 23722104,
+              "payload_reads": 1608174,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 1132422,
+              "push_candidates": 14383566,
+              "retained_configurations": 1608174,
+              "softmaxes": 839311,
+              "tokens": 804087,
+              "valid_transition_branches": 23942610
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.19005251027684578,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 2.0676614726044726,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.4978220808420624,
+            "sequences": 10000,
+            "token_nll": 1.50848877393632,
+            "tokens": 804087
+          },
+          "K3": {
+            "conditional_suffix_nll": 60.79520642436984,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 1.1405951418008962,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.5049814000037767,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.5238095238095238,
+                "nll": 1.007248818975333,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.5300416418798334,
+                "nll": 1.0156364429883424,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.5266262493855481,
+                "nll": 1.0342201568855476,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.5307290789695235,
+                "nll": 0.9883385202123623,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.5276338514680483,
+                "nll": 1.0160680297362854,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.5309141215281473,
+                "nll": 1.0034207337821786,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.5286053882725832,
+                "nll": 0.9983317935822724,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.531623674513048,
+                "nll": 0.994908594872767,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.5264190193164933,
+                "nll": 0.9871491302448112,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.5301510727434302,
+                "nll": 0.9815612359773671,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.5245339515116392,
+                "nll": 1.0008510826760835,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.5302074857607811,
+                "nll": 0.994780165875993,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.517708830548926,
+                "nll": 1.0246233004731153,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.5188389353755969,
+                "nll": 1.0106410768366691,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.508414445556263,
+                "nll": 1.0481310049164696,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.5150261016789729,
+                "nll": 1.0337053378491325,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.504212719695597,
+                "nll": 1.0596369210619199,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.5077956123809961,
+                "nll": 1.0540414377054135,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.4990802943058221,
+                "nll": 1.0782790579992072,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.500279293602028,
+                "nll": 1.0850319193166242,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.49,
+                "nll": 1.1152891323415697,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.49294751239528123,
+                "nll": 1.1099169303790652,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.4847605224963715,
+                "nll": 1.1262224724489018,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.48713464901324005,
+                "nll": 1.123167574646603,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.48782828282828283,
+                "nll": 1.1261342536859802,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.48899624261943103,
+                "nll": 1.1166140781136487,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.486955934036226,
+                "nll": 1.1080996457724934,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.48800102118968597,
+                "nll": 1.1318931776980392,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.48227858228658294,
+                "nll": 1.147453495855898,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.4863354037267081,
+                "nll": 1.1422926682811907,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.4820311541763768,
+                "nll": 1.1440677992377284,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.4860056657223796,
+                "nll": 1.1297951666370987,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.47963206307490147,
+                "nll": 1.1461266229910672,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.484375,
+                "nll": 1.16231968442212,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 1.0675348837673464,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 2392261,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 26698,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 68,
+              "merged_candidates": 34279098,
+              "payload_reads": 2412261,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 1708600,
+              "push_candidates": 21530349,
+              "retained_configurations": 2412261,
+              "softmaxes": 1045502,
+              "tokens": 804087,
+              "valid_transition_branches": 35853915
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.23401161708608476,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 2.047178666515674,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.4477908008388904,
+            "sequences": 10000,
+            "token_nll": 1.4591536893899228,
+            "tokens": 804087
+          },
+          "LINK32": {
+            "conditional_suffix_nll": 57.073900232256335,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 0.31370764459923567,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.38858885510886193,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.40476190476190477,
+                "nll": 0.9328016209594436,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.4125520523497918,
+                "nll": 0.9324142567288884,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.41110929051286255,
+                "nll": 0.9374648187434703,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.411011954874558,
+                "nll": 0.9359114567270439,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.40803108808290156,
+                "nll": 0.9400336563873818,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.4117271469617963,
+                "nll": 0.9331848796524917,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.40491283676703643,
+                "nll": 0.9363673667726051,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.4092652478002557,
+                "nll": 0.9300648472779437,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.40160475482912333,
+                "nll": 0.934331056373202,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.4061190808683509,
+                "nll": 0.9255110958351851,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.40186419395344347,
+                "nll": 0.924000673853639,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.40886899918633035,
+                "nll": 0.9095652312619156,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.3956563245823389,
+                "nll": 0.9279029760126605,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.3980522857277927,
+                "nll": 0.9240479926625766,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.38715546256708816,
+                "nll": 0.9324844394756285,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.39392371725532616,
+                "nll": 0.9197565014016853,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.38231563689074105,
+                "nll": 0.9295147935823025,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.3874810283769489,
+                "nll": 0.9198562036488025,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.37863883557261674,
+                "nll": 0.9265301833021483,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.3830619172431573,
+                "nll": 0.9175979331398623,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.3740851063829787,
+                "nll": 0.9253216827572561,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.379167379039152,
+                "nll": 0.9182349886289066,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.37243992904370266,
+                "nll": 0.9208583023335392,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.3763427429427929,
+                "nll": 0.9132683267934331,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.37666666666666665,
+                "nll": 0.9078159953312366,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.37920265456497343,
+                "nll": 0.9011609235823375,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.3767910246012436,
+                "nll": 0.8986770942012441,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.381031401582844,
+                "nll": 0.8895541970135344,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.37466997359788784,
+                "nll": 0.896346866071326,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.38090062111801243,
+                "nll": 0.882477497598022,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.38182264197228016,
+                "nll": 0.8777778148680767,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.38628895184135975,
+                "nll": 0.8674251261142468,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.38501971090670173,
+                "nll": 0.8653407216667878,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.390625,
+                "nll": 0.8513507435606493,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 0.9170304326196385,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 25090784,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 27963,
+              "maximum_retained_configurations": 32,
+              "maximum_stack_depth": 97,
+              "merged_candidates": 36961863,
+              "payload_reads": 25260784,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 2412261,
+              "push_candidates": 225817056,
+              "retained_configurations": 25400784,
+              "softmaxes": 7207098,
+              "tokens": 804087,
+              "valid_transition_branches": 375911760
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.3138584183505923,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.3135568708478872,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.31321814576583,
+            "sequences": 10000,
+            "token_nll": 1.3137518807352284,
+            "tokens": 804087
+          },
+          "MLP": {
+            "conditional_suffix_nll": 53.083526405215274,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 0.1486633336657276,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.28204203410314027,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.4523809523809524,
+                "nll": 0.9790739375727541,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.45954788816180847,
+                "nll": 0.9941987080342086,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.432410290021301,
+                "nll": 1.11965595468838,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.415053039232194,
+                "nll": 1.1398113785258246,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.3920552677029361,
+                "nll": 1.2946039924691433,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.3765031392997765,
+                "nll": 1.341139522892721,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.3602218700475436,
+                "nll": 1.4405926375582836,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.3427088817026397,
+                "nll": 1.4938094679737275,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.3426448736998514,
+                "nll": 1.518817920634037,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.32969404595658247,
+                "nll": 1.563448956441768,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.3192311407321549,
+                "nll": 1.6518450307763968,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.3153986981285598,
+                "nll": 1.6577573679985547,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.3038663484486874,
+                "nll": 1.7199402647660422,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.2946154209804756,
+                "nll": 1.704042566977568,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.286727917765851,
+                "nll": 1.767408580736246,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.276442646851338,
+                "nll": 1.804691396791282,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.2721507519478166,
+                "nll": 1.846118232582557,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.26532677183461345,
+                "nll": 1.8508561626580018,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.26251599488163785,
+                "nll": 1.8955044715969522,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.26103209728011,
+                "nll": 1.8783085202299952,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.2593191489361702,
+                "nll": 1.9128071727552178,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.25470165840314585,
+                "nll": 1.9006670444629807,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.2547572972101274,
+                "nll": 1.9263543894130335,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.24947955699891747,
+                "nll": 1.923787965955991,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.24191919191919192,
+                "nll": 2.0213942699031153,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.23388474113111793,
+                "nll": 2.0121219342879746,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.232022168153555,
+                "nll": 2.0748266523627046,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.22951238192494255,
+                "nll": 2.0617037450778857,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.22961836946955758,
+                "nll": 2.082610825585341,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.22717391304347825,
+                "nll": 2.078482520064733,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.22494787194897584,
+                "nll": 2.138816259972982,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.2236827195467422,
+                "nll": 2.123018382363664,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.22076215505913271,
+                "nll": 2.1414313229483763,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.21875,
+                "nll": 2.1112899009716024,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 1.8007377211865419,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 0,
+              "configurations_expanded": 0,
+              "dense_macs": 14512162176,
+              "logical_peak_auxiliary_bytes": 0,
+              "maximum_retained_configurations": 0,
+              "maximum_stack_depth": 0,
+              "merged_candidates": 0,
+              "payload_reads": 0,
+              "payload_vectors_written": 0,
+              "persistent_nodes_written": 0,
+              "push_candidates": 0,
+              "retained_configurations": 0,
+              "softmaxes": 0,
+              "tokens": 804087,
+              "valid_transition_branches": 0
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.286106530654489,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.011220136676967248,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.824048386602545,
+            "sequences": 10000,
+            "token_nll": 1.846133489364167,
+            "tokens": 804087
+          },
+          "RNN32": {
+            "conditional_suffix_nll": 41.425238667542985,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 0.91465,
+            "delayed_nll": 0.42982086708667405,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.3398984081424552,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.42857142857142855,
+                "nll": 0.8705153343789983,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.4229625223081499,
+                "nll": 0.8742145833386389,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.41586105194166806,
+                "nll": 0.8788759116963637,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.4121906044788685,
+                "nll": 0.8838067131559378,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.40414507772020725,
+                "nll": 0.8909281574744028,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.4003405342130467,
+                "nll": 0.8971023125925219,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.3936608557844691,
+                "nll": 0.9037186733469407,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.3871549973678273,
+                "nll": 0.9131736753293439,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.38407132243684994,
+                "nll": 0.9164577842411157,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.3793322330836613,
+                "nll": 0.9248640175471128,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.3720660678064329,
+                "nll": 0.9320212367773302,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.3698128559804719,
+                "nll": 0.9394434288583522,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.3617183770883055,
+                "nll": 0.943091955985179,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.3590980002836477,
+                "nll": 0.9485003631716314,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.35122350586737017,
+                "nll": 0.9562984269248939,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.34792832620044206,
+                "nll": 0.9640489031230101,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.3408226127921725,
+                "nll": 0.9714165348482411,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.3377638780297107,
+                "nll": 0.9782986493628777,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.3310940499040307,
+                "nll": 0.98536926698927,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.3279336570274567,
+                "nll": 0.9923994865353941,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.322468085106383,
+                "nll": 0.9978839110099706,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.3208240724910241,
+                "nll": 1.0020231941119924,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.3149492017416546,
+                "nll": 1.0098303905508286,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.3117661753684736,
+                "nll": 1.0163012906721813,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.30727272727272725,
+                "nll": 1.0231193717974896,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.30478700043917434,
+                "nll": 1.0260850154066394,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.3004866180048662,
+                "nll": 1.036560795934372,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.297549144753638,
+                "nll": 1.0370503790201526,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.29522361788943113,
+                "nll": 1.0411178355434254,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.29208074534161493,
+                "nll": 1.0463429062688436,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.2892186925058261,
+                "nll": 1.0567131684772215,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.28759206798866854,
+                "nll": 1.0555070326162608,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.28383705650459923,
+                "nll": 1.0642288334999035,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.28125,
+                "nll": 1.0617572316164325,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 0.9771765876397618,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 0,
+              "configurations_expanded": 0,
+              "dense_macs": 14512162176,
+              "logical_peak_auxiliary_bytes": 128,
+              "maximum_retained_configurations": 0,
+              "maximum_stack_depth": 0,
+              "merged_candidates": 0,
+              "payload_reads": 0,
+              "payload_vectors_written": 0,
+              "persistent_nodes_written": 0,
+              "push_candidates": 0,
+              "retained_configurations": 0,
+              "softmaxes": 0,
+              "tokens": 804087,
+              "valid_transition_branches": 0
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.31832559987010484,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 0.8293,
+                "nll": 0.541316134303274,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.152586882817587,
+            "sequences": 10000,
+            "token_nll": 1.1587499762988538,
+            "tokens": 804087
+          },
+          "S32": {
+            "conditional_suffix_nll": 68.16602900282109,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 1.2446646745809944,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.5177011537662632,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.5476190476190477,
+                "nll": 0.8624643713965934,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.5535395597858418,
+                "nll": 0.8511070393572279,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.5497296411600852,
+                "nll": 0.8691725345615832,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.5484088230341808,
+                "nll": 0.8627744968194535,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.5464162348877375,
+                "nll": 0.8824891761756335,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.549962754070448,
+                "nll": 0.869041923124585,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.5452456418383518,
+                "nll": 0.8865968685657716,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.5475671204030984,
+                "nll": 0.8811173191314513,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.5393164933135215,
+                "nll": 0.8979332256451434,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.5431001650374508,
+                "nll": 0.8882577574327623,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.5385878489326765,
+                "nll": 0.9016821844318299,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.5445992676973149,
+                "nll": 0.8890292950678126,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.531217183770883,
+                "nll": 0.9183052794147883,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.531555807686853,
+                "nll": 0.9123161272336427,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.521877558446284,
+                "nll": 0.9366790447419938,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.5278182758782862,
+                "nll": 0.9247791295562731,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.5154919369450988,
+                "nll": 0.9506620063278659,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.5191095984914685,
+                "nll": 0.9397870613602126,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.5094769673704415,
+                "nll": 0.9631035201955885,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.5115369741760839,
+                "nll": 0.9556550079695839,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.5022553191489362,
+                "nll": 0.9781845345137162,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.5052145665925799,
+                "nll": 0.9675351633528377,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.4962909208192227,
+                "nll": 0.9926589538889898,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.4980431343159297,
+                "nll": 0.9849708955605105,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.49803030303030305,
+                "nll": 0.9944650245444383,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.49987800712438396,
+                "nll": 0.9866844002207609,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.4953365774533658,
+                "nll": 1.000699503721146,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.49846821547102377,
+                "nll": 0.9928391934028918,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.49291943355468437,
+                "nll": 1.0074256472227805,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.49751552795031057,
+                "nll": 0.9979428630976667,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.49429657794676807,
+                "nll": 1.007434180655982,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.49813031161473087,
+                "nll": 0.9998089476834883,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.49540078843626806,
+                "nll": 1.0052642178885576,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.5,
+                "nll": 1.003734940459602,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 0.9460781576674989,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 25220784,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 40581,
+              "maximum_retained_configurations": 32,
+              "maximum_stack_depth": 38,
+              "merged_candidates": 216370842,
+              "payload_reads": 25430784,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 13659634,
+              "push_candidates": 226987056,
+              "retained_configurations": 25530784,
+              "softmaxes": 5000538,
+              "tokens": 804087,
+              "valid_transition_branches": 377981760
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.35834839694246706,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 2.130980952219555,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.4593384289568958,
+            "sequences": 10000,
+            "token_nll": 1.4708295246455942,
+            "tokens": 804087
+          }
+        },
+        "causal_k3_history": {
+          "fraction_delta_le_0_01": 0.0,
+          "maximum_bound_excess": -0.9999998946893769,
+          "maximum_delta": 1.0,
+          "mean_delta": 0.994570414985528,
+          "mean_read_error": 0.7783367977380107,
+          "prefixes": 804087
+        },
+        "family": "A2",
+        "interventions": {
+          "K3/CHRONO-LINK": {
+            "conditional_suffix_nll": 77.34543870111801,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 1.148620814842069,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.5033819891610174,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.5238095238095238,
+                "nll": 1.0753486384291047,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.5300416418798334,
+                "nll": 1.0780440803328928,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.5266262493855481,
+                "nll": 1.0992971260144013,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.5307290789695235,
+                "nll": 1.101056039157346,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.5239637305699482,
+                "nll": 1.1254667207033018,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.5309141215281473,
+                "nll": 1.1205334203031827,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.5255150554675119,
+                "nll": 1.1426454159839023,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.531623674513048,
+                "nll": 1.1420548990667505,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.5221396731054978,
+                "nll": 1.1671751475244887,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.5278024628665736,
+                "nll": 1.1640504480469318,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.5208635178209214,
+                "nll": 1.1891899733002957,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.5285292921074044,
+                "nll": 1.1748618023238235,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.5144152744630072,
+                "nll": 1.2262601370484743,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.5168061267905262,
+                "nll": 1.2280728609989993,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.5050486673337579,
+                "nll": 1.2679551532628561,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.5132859897474487,
+                "nll": 1.2559978038371638,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.5008606631636165,
+                "nll": 1.2976415661717278,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.506185898909994,
+                "nll": 1.291938934697275,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.49600127959053103,
+                "nll": 1.3290290448237738,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.49941992867271084,
+                "nll": 1.3276811435225806,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.48859574468085104,
+                "nll": 1.3635277203923506,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.49294751239528123,
+                "nll": 1.3572758493196355,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.48302693114013867,
+                "nll": 1.3901997074998456,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.48713464901324005,
+                "nll": 1.3884196007530087,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.4865151515151515,
+                "nll": 1.395000364885936,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.48899624261943103,
+                "nll": 1.394562216881966,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.4852662881859962,
+                "nll": 1.4108475180379276,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.48800102118968597,
+                "nll": 1.4096999957454661,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.48227858228658294,
+                "nll": 1.429143961964491,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.4863354037267081,
+                "nll": 1.4211419707724826,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.4820311541763768,
+                "nll": 1.4314753148968409,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.4860056657223796,
+                "nll": 1.4268352299197036,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.47963206307490147,
+                "nll": 1.4429705171353062,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.484375,
+                "nll": 1.4354118384700263,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 1.2942940726185717,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 2392261,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 26770,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 94,
+              "merged_candidates": 16334355,
+              "payload_reads": 2412261,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 1671360,
+              "push_candidates": 21530349,
+              "retained_configurations": 2412261,
+              "softmaxes": 2260298,
+              "tokens": 804087,
+              "valid_transition_branches": 35853915
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.1353195488610061,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 2.1619220808230546,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.8001171679892003,
+            "sequences": 10000,
+            "token_nll": 1.8143232001611878,
+            "tokens": 804087
+          },
+          "K3/ZERO-READ": {
+            "conditional_suffix_nll": 43.48523337033097,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 0.8027407585007282,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.20771569386483374,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.2619047619047619,
+                "nll": 1.686002363275566,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.2584770969660916,
+                "nll": 1.687032663997537,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.25413730951990826,
+                "nll": 1.6947035674901103,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.25189425829264184,
+                "nll": 1.6953542582511665,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.2469775474956822,
+                "nll": 1.7036037209108892,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.24465254868575076,
+                "nll": 1.7021404906027262,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.2405705229793978,
+                "nll": 1.7098295093755023,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.23659472061367226,
+                "nll": 1.7117831381911561,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.23471025260029718,
+                "nll": 1.718336601229158,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.23181414244001525,
+                "nll": 1.718432922630181,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.22737370810393123,
+                "nll": 1.725823818466011,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.22599674532139952,
+                "nll": 1.722736736067685,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.22105011933174223,
+                "nll": 1.7374000344459997,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.21944877795111806,
+                "nll": 1.738203822717574,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.21463658691894844,
+                "nll": 1.7504352803822145,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.21262286601138128,
+                "nll": 1.7478715538672234,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.20828048559521653,
+                "nll": 1.7600649115048534,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.20641125879593433,
+                "nll": 1.7591235724265626,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.2023352527191299,
+                "nll": 1.7697458434288003,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.2004039015167791,
+                "nll": 1.7701352128674388,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.19706382978723405,
+                "nll": 1.78008235550187,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.1960591554111814,
+                "nll": 1.7787666613830582,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.19246895661990002,
+                "nll": 1.787961429222782,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.19052377383628946,
+                "nll": 1.788172470769065,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.18777777777777777,
+                "nll": 1.7904281468370145,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.18625872249060654,
+                "nll": 1.7905628761250374,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.1836307110029738,
+                "nll": 1.7947112067491948,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.18183558846055656,
+                "nll": 1.7947861598321733,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.18041443315465236,
+                "nll": 1.7999646578819024,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.17849378881987576,
+                "nll": 1.798828116495512,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.17674475653133817,
+                "nll": 1.801027719801826,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.17575070821529745,
+                "nll": 1.799280166290444,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.17345597897503284,
+                "nll": 1.8032748963093954,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.171875,
+                "nll": 1.8006257731961186,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 1.7586247330666203,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 2392261,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 26509,
+              "maximum_retained_configurations": 3,
+              "maximum_stack_depth": 34,
+              "merged_candidates": 27869274,
+              "payload_reads": 2382261,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 1289018,
+              "push_candidates": 21530349,
+              "retained_configurations": 2412261,
+              "softmaxes": 1963204,
+              "tokens": 804087,
+              "valid_transition_branches": 35763915
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.32338067121152353,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 1.2821008457899485,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.6918716489837895,
+            "sequences": 10000,
+            "token_nll": 1.6990291269397895,
+            "tokens": 804087
+          },
+          "S32/CHRONO-LINK": {
+            "conditional_suffix_nll": 75.53802078008479,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 1.1438352644029248,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.5145589818154351,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.5476190476190477,
+                "nll": 1.1023795465737796,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.5535395597858418,
+                "nll": 1.102616156099443,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.5435031951499263,
+                "nll": 1.1257759853267333,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.5484088230341808,
+                "nll": 1.1254480436940788,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.5385362694300518,
+                "nll": 1.15002405501068,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.5471959135894434,
+                "nll": 1.1410060024842006,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.5396196513470681,
+                "nll": 1.164612162092997,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.5408738813266151,
+                "nll": 1.1662550589195737,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.5352154531946508,
+                "nll": 1.1890481293855841,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.5391011806525327,
+                "nll": 1.1851685345734766,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.535158891142664,
+                "nll": 1.2077846930809937,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.5413954434499593,
+                "nll": 1.1945037821342523,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.5273985680190931,
+                "nll": 1.24405687763559,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.5285775067366331,
+                "nll": 1.2456781889436561,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.5167834076230329,
+                "nll": 1.2861024944978938,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.522927150449137,
+                "nll": 1.274011072639343,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.5122304765356043,
+                "nll": 1.314879892994595,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.5161201306167502,
+                "nll": 1.309425579337456,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.5067178502879078,
+                "nll": 1.3450098310049323,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.5087440381558028,
+                "nll": 1.3452066777600822,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.49948936170212765,
+                "nll": 1.3796085081469043,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.5021798598050949,
+                "nll": 1.3739948145165772,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.49342847927753586,
+                "nll": 1.4067336821716998,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.4954617370305604,
+                "nll": 1.4059597881803114,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.4947979797979798,
+                "nll": 1.4109433496018158,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.4963646123066413,
+                "nll": 1.4107469638805468,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.4953365774533658,
+                "nll": 1.423761948829155,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.49674495787592543,
+                "nll": 1.423744109874983,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.49291943355468437,
+                "nll": 1.4419260881743645,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.49448757763975154,
+                "nll": 1.437147555764954,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.49429657794676807,
+                "nll": 1.4442116781987278,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.49813031161473087,
+                "nll": 1.438746643480853,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.49540078843626806,
+                "nll": 1.4537745489372373,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.5,
+                "nll": 1.448667835555374,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 1.311994552797508,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 25090784,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 27963,
+              "maximum_retained_configurations": 32,
+              "maximum_stack_depth": 97,
+              "merged_candidates": 38253264,
+              "payload_reads": 25260784,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 2412261,
+              "push_candidates": 225817056,
+              "retained_configurations": 25400784,
+              "softmaxes": 7296783,
+              "tokens": 804087,
+              "valid_transition_branches": 375911760
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.13788003999602033,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 2.1497904888098756,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.7890880576207582,
+            "sequences": 10000,
+            "token_nll": 1.8035028089324026,
+            "tokens": 804087
+          },
+          "S32/ZERO-READ": {
+            "conditional_suffix_nll": 43.48523337033097,
+            "conditional_suffix_tokens": 274517,
+            "delayed_accuracy": 1.0,
+            "delayed_nll": 0.8027407585007282,
+            "delayed_tokens": 20000,
+            "early_accuracy": 0.20771569386483374,
+            "early_length_slices": {
+              "63": {
+                "accuracy": 0.2619047619047619,
+                "nll": 1.686002363275566,
+                "tokens": 2646
+              },
+              "64": {
+                "accuracy": 0.2584770969660916,
+                "nll": 1.687032663997537,
+                "tokens": 3362
+              },
+              "65": {
+                "accuracy": 0.25413730951990826,
+                "nll": 1.6947035674901103,
+                "tokens": 6103
+              },
+              "66": {
+                "accuracy": 0.25189425829264184,
+                "nll": 1.6953542582511665,
+                "tokens": 5939
+              },
+              "67": {
+                "accuracy": 0.2469775474956822,
+                "nll": 1.7036037209108892,
+                "tokens": 9264
+              },
+              "68": {
+                "accuracy": 0.24465254868575076,
+                "nll": 1.7021404906027262,
+                "tokens": 9397
+              },
+              "69": {
+                "accuracy": 0.2405705229793978,
+                "nll": 1.7098295093755023,
+                "tokens": 12620
+              },
+              "70": {
+                "accuracy": 0.23659472061367226,
+                "nll": 1.7117831381911561,
+                "tokens": 13297
+              },
+              "71": {
+                "accuracy": 0.23471025260029718,
+                "nll": 1.718336601229158,
+                "tokens": 16825
+              },
+              "72": {
+                "accuracy": 0.23181414244001525,
+                "nll": 1.718432922630181,
+                "tokens": 15754
+              },
+              "73": {
+                "accuracy": 0.22737370810393123,
+                "nll": 1.725823818466011,
+                "tokens": 20706
+              },
+              "74": {
+                "accuracy": 0.22599674532139952,
+                "nll": 1.722736736067685,
+                "tokens": 19664
+              },
+              "75": {
+                "accuracy": 0.22105011933174223,
+                "nll": 1.7374000344459997,
+                "tokens": 20950
+              },
+              "76": {
+                "accuracy": 0.21944877795111806,
+                "nll": 1.738203822717574,
+                "tokens": 21153
+              },
+              "77": {
+                "accuracy": 0.21463658691894844,
+                "nll": 1.7504352803822145,
+                "tokens": 21986
+              },
+              "78": {
+                "accuracy": 0.21262286601138128,
+                "nll": 1.7478715538672234,
+                "tokens": 21263
+              },
+              "79": {
+                "accuracy": 0.20828048559521653,
+                "nll": 1.7600649115048534,
+                "tokens": 22076
+              },
+              "80": {
+                "accuracy": 0.20641125879593433,
+                "nll": 1.7591235724265626,
+                "tokens": 21743
+              },
+              "81": {
+                "accuracy": 0.2023352527191299,
+                "nll": 1.7697458434288003,
+                "tokens": 25008
+              },
+              "82": {
+                "accuracy": 0.2004039015167791,
+                "nll": 1.7701352128674388,
+                "tokens": 23273
+              },
+              "83": {
+                "accuracy": 0.19706382978723405,
+                "nll": 1.78008235550187,
+                "tokens": 23500
+              },
+              "84": {
+                "accuracy": 0.1960591554111814,
+                "nll": 1.7787666613830582,
+                "tokens": 23396
+              },
+              "85": {
+                "accuracy": 0.19246895661990002,
+                "nll": 1.787961429222782,
+                "tokens": 24804
+              },
+              "86": {
+                "accuracy": 0.19052377383628946,
+                "nll": 1.788172470769065,
+                "tokens": 24018
+              },
+              "87": {
+                "accuracy": 0.18777777777777777,
+                "nll": 1.7904281468370145,
+                "tokens": 19800
+              },
+              "88": {
+                "accuracy": 0.18625872249060654,
+                "nll": 1.7905628761250374,
+                "tokens": 20493
+              },
+              "89": {
+                "accuracy": 0.1836307110029738,
+                "nll": 1.7947112067491948,
+                "tokens": 14796
+              },
+              "90": {
+                "accuracy": 0.18183558846055656,
+                "nll": 1.7947861598321733,
+                "tokens": 15668
+              },
+              "91": {
+                "accuracy": 0.18041443315465236,
+                "nll": 1.7999646578819024,
+                "tokens": 12499
+              },
+              "92": {
+                "accuracy": 0.17849378881987576,
+                "nll": 1.798828116495512,
+                "tokens": 12880
+              },
+              "93": {
+                "accuracy": 0.17674475653133817,
+                "nll": 1.801027719801826,
+                "tokens": 8153
+              },
+              "94": {
+                "accuracy": 0.17575070821529745,
+                "nll": 1.799280166290444,
+                "tokens": 8825
+              },
+              "95": {
+                "accuracy": 0.17345597897503284,
+                "nll": 1.8032748963093954,
+                "tokens": 3805
+              },
+              "96": {
+                "accuracy": 0.171875,
+                "nll": 1.8006257731961186,
+                "tokens": 3904
+              }
+            },
+            "early_nll": 1.7586247330666203,
+            "early_tokens": 529570,
+            "executed_state": {
+              "action_projections": 804087,
+              "configurations_expanded": 25220784,
+              "dense_macs": 14460700608,
+              "logical_peak_auxiliary_bytes": 37170,
+              "maximum_retained_configurations": 32,
+              "maximum_stack_depth": 6,
+              "merged_candidates": 183681708,
+              "payload_reads": 23118523,
+              "payload_vectors_written": 804087,
+              "persistent_nodes_written": 9847485,
+              "push_candidates": 226987056,
+              "retained_configurations": 25530784,
+              "softmaxes": 8767792,
+              "tokens": 804087,
+              "valid_transition_branches": 371134977
+            },
+            "position_types": {
+              "b_to_c_boundary": {
+                "accuracy": 1.0,
+                "nll": 0.32338067121152353,
+                "tokens": 10000
+              },
+              "c_to_eos_boundary": {
+                "accuracy": 1.0,
+                "nll": 1.2821008457899485,
+                "tokens": 10000
+              }
+            },
+            "sequence_weighted_nll": 1.6918716489837895,
+            "sequences": 10000,
+            "token_nll": 1.6990291269397895,
+            "tokens": 804087
+          }
+        },
+        "kl_s32_to_k3": {
+          "nat_per_token": 0.07376633123859355,
+          "tokens": 804087
+        },
+        "seed": 1707,
+        "split": "E2"
+      }
+    },
+    "logical_state_byte_accounting": {
+      "configuration_q_pointer_weight_fp64": 16,
+      "payload_vector_fp32": 256,
+      "persistent_node_parent_source_symbol": 9,
+      "rnn32_state_fp32": 128,
+      "scope": "peak logical auxiliary state per sequence; Python object overhead excluded"
+    },
+    "schema": "cpkv-topk-001-teacher-forced-v1"
+  }
+}

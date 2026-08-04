@@ -1,0 +1,33 @@
+{
+  "schema": "cutlass-inplace-hinge-gate-v1",
+  "claim": "Active alpha=1 midpoint hinge in native CUTLASS SM90a S8 TMA/WGMMA mainloop.",
+  "shape": {
+    "rows": [1, 8, 64, 256, 1024, 4096],
+    "n": 4096,
+    "k": 4096
+  },
+  "comparisons": [
+    {"m": 1, "supported": false},
+    {"m": 8, "supported": false},
+    {"m": 64, "supported": true, "baseline_ms": 0.0148754, "hinge_ms": 0.0149482, "hinge_over_baseline": 1.0048939860440727},
+    {"m": 256, "supported": true, "baseline_ms": 0.014293, "hinge_ms": 0.0145506, "hinge_over_baseline": 1.0180228083677325},
+    {"m": 1024, "supported": true, "baseline_ms": 0.0286662, "hinge_ms": 0.0289482, "hinge_over_baseline": 1.0098373694455491},
+    {"m": 4096, "supported": true, "baseline_ms": 0.0926938, "hinge_ms": 0.0938298, "hinge_over_baseline": 1.0122554043528262}
+  ],
+  "resources": {
+    "baseline_registers": 168,
+    "hinge_registers": 168,
+    "baseline_local_bytes": 0,
+    "hinge_local_bytes": 0,
+    "baseline_shared_bytes_reported": 1024,
+    "hinge_shared_bytes_reported": 1024,
+    "candidate_extra_warpgroup_depbar": 1
+  },
+  "decision": {
+    "same_registers_no_spills": true,
+    "key_cells_at_most_1_01": false,
+    "all_supported_cells_at_most_1_02": true,
+    "decode_cells_supported_by_kernel": false,
+    "advance_exact_width_s8_executor": false
+  }
+}

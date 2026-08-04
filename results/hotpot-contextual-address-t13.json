@@ -1,0 +1,97 @@
+{
+  "all_gates_pass": false,
+  "claim_boundary": "Passing only admits a compiler experiment on a new holdout. It does not demonstrate autonomous extraction, QA capability, strict Pareto superiority, or a smarter production model.",
+  "configuration": {
+    "checkpoint_steps": 20000,
+    "chunk_tokens": 128,
+    "document_pooling": "maximum_token_cosine_then_minimum_page",
+    "document_tokens": 512,
+    "encode_batch": 32,
+    "interface": "final_block_pre_ffn_normalized_hidden",
+    "parameter_count": 36577152,
+    "question_pooling": "last_real_token",
+    "training_updates": 0
+  },
+  "contextual_probe": {
+    "claim_boundary": "Privileged gold-page development diagnostic on a previously observed aggregate evaluator; not fresh held-out evidence.",
+    "privileged_lexical_reference_accuracy": 0.5576923076923077,
+    "random_initialization": {
+      "evaluation": {
+        "accuracy": 0.47115384615384615,
+        "examples": 104,
+        "positive_rate": 0.5384615384615384,
+        "predicted_positive_rate": 0.625
+      },
+      "fitted_train_accuracy": 0.5958904109589042,
+      "greater_equal": false,
+      "score_summary": {
+        "evaluation_max": 0.28247374296188354,
+        "evaluation_min": -0.15570580959320068,
+        "train_max": 0.31160569190979004,
+        "train_min": -0.2143177092075348
+      },
+      "threshold": 0.10954856127500534,
+      "train": {
+        "accuracy": 0.5958904109589042,
+        "examples": 146,
+        "positive_rate": 0.5273972602739726,
+        "predicted_positive_rate": 0.589041095890411
+      }
+    },
+    "trained": {
+      "evaluation": {
+        "accuracy": 0.5384615384615384,
+        "examples": 104,
+        "positive_rate": 0.5384615384615384,
+        "predicted_positive_rate": 0.3269230769230769
+      },
+      "fitted_train_accuracy": 0.5753424657534246,
+      "greater_equal": true,
+      "score_summary": {
+        "evaluation_max": 0.5728110074996948,
+        "evaluation_min": 0.20548933744430542,
+        "train_max": 0.6013821959495544,
+        "train_min": 0.18790310621261597
+      },
+      "threshold": 0.43624022603034973,
+      "train": {
+        "accuracy": 0.5753424657534246,
+        "examples": 146,
+        "positive_rate": 0.5273972602739726,
+        "predicted_positive_rate": 0.2671232876712329
+      }
+    },
+    "trained_static_reference_accuracy": 0.6057692307692307
+  },
+  "development_only": true,
+  "device": "cuda",
+  "gates": {
+    "checkpoint_byte_identical": true,
+    "finite_scores": true,
+    "input_integrity": true,
+    "random_state_unchanged": true,
+    "trained_contextual_at_least_70pct": false,
+    "trained_contextual_beats_lexical_by_10pp": false,
+    "trained_contextual_beats_random": true,
+    "trained_contextual_beats_static": false,
+    "trained_state_unchanged": true,
+    "zero_training_updates": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "checkpoint_sha256_after": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "checkpoint_sha256_before": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "data_manifest_sha256": "90e539279f540a7516e3c90c3ee59539d3f8654cc84e88a82dc950ce6fb5036e",
+    "preregistration_sha256": "0d1e30a2742b9f23c0b865ac31d18de4b7d31c7dadc0dd17d2351a0971fa94ff",
+    "random_state_sha256_after": "40d208029720fb9221f5aa74cbf772e5fa214464f27f90de3a5e7edc77a8843c",
+    "random_state_sha256_before": "40d208029720fb9221f5aa74cbf772e5fa214464f27f90de3a5e7edc77a8843c",
+    "source_parquet_sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+    "source_sha256": "fe01cc3dcc4b15d25bfffcd5827f1b2bc0c9f28d7477995ade6971113459ca67",
+    "t12_result_sha256": "e7c260ec7cbf1aef33e1f8e15213a6ee53f58741ab6971b1446e8e6186b0853a",
+    "trained_state_sha256_after": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57",
+    "trained_state_sha256_before": "53b3117727045ad31b52efd719b55fb251a557b2256008c924318c3cc244de57"
+  },
+  "schema": "hotpot-contextual-address-t13-v1",
+  "status": "fail",
+  "torch_version": "2.11.0+cu128"
+}

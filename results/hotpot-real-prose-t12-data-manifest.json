@@ -1,0 +1,82 @@
+{
+  "all_gates_pass": true,
+  "candidate_corpus": {
+    "characters": 1180913,
+    "documents": 2405,
+    "fields": [
+      "document_id",
+      "text",
+      "title"
+    ]
+  },
+  "claim_boundary": "This freezes a real-prose, natural-question data boundary. It does not show autonomous extraction or model capability.",
+  "files": {
+    "candidate_raw_prose": {
+      "bytes": 1500449,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/hotpot-real-prose-t12/candidate-raw-prose.jsonl",
+      "sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a"
+    },
+    "router_and_control_train": {
+      "bytes": 19304,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/hotpot-real-prose-t12/router-and-control-train.jsonl",
+      "sha256": "edaef010f68f1a919ac9f9e8389444ddde1afde6d2b9d1375156195f8758b0f9"
+    },
+    "sealed_evaluator": {
+      "bytes": 23338,
+      "path": "/workspace/fixed-compute-frontier-t10-46367071/data/hotpot-real-prose-t12/sealed-evaluator.jsonl",
+      "sha256": "5a0413f53bfc0fc73b5e66c941c708077624908095934af740c84d234b9fea6b"
+    }
+  },
+  "gates": {
+    "candidate_has_no_question_answer_or_support_fields": true,
+    "evaluation_has_both_classes": true,
+    "questions_withheld_from_compiler_corpus": true,
+    "source_exact": true,
+    "train_evaluation_ids_disjoint": true,
+    "train_evaluation_support_titles_disjoint": true
+  },
+  "privileged_lexical_probe": {
+    "claim_boundary": "Uses sealed supporting-page identities and fitted train labels; this is a privileged lexical difficulty probe, not an admissible model.",
+    "evaluation": {
+      "accuracy": 0.5576923076923077,
+      "examples": 104,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.40384615384615385
+    },
+    "greater_equal": true,
+    "threshold": 0.13564618744141793,
+    "train": {
+      "accuracy": 0.6164383561643836,
+      "examples": 146,
+      "positive_rate": 0.5273972602739726,
+      "predicted_positive_rate": 0.4178082191780822
+    }
+  },
+  "schema": "hotpot-real-prose-t12-data-v1",
+  "selection": {
+    "definition": "HotpotQA hard comparison, yes/no answer, contains ' both ', exactly two supporting titles both present verbatim in the question",
+    "dropped_for_support_title_overlap": 3,
+    "eligible": 253,
+    "evaluation_answer_counts": {
+      "no": 48,
+      "yes": 56
+    },
+    "router_and_control_train": 146,
+    "sealed_evaluation": 104,
+    "train_answer_counts": {
+      "no": 69,
+      "yes": 77
+    },
+    "unique_evaluation_support_titles": 205,
+    "unique_train_support_titles": 286
+  },
+  "source": {
+    "bytes": 27452575,
+    "hub_file": "distractor/validation-00000-of-00001.parquet",
+    "hub_repo": "hotpotqa/hotpot_qa",
+    "hub_revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+    "license": "CC BY-SA 4.0",
+    "sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6"
+  },
+  "status": "pass"
+}

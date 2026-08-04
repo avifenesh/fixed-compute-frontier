@@ -1,0 +1,21 @@
+stage=environment
+2026-07-31T08:15:43+00:00
+0, NVIDIA H100 80GB HBM3, 81559 MiB, 580.126.20
+{"gpu": "NVIDIA H100 80GB HBM3", "torch": "2.11.0+cu128", "cuda": "12.8"}
+stage=contracts
+........                                                                 [100%]
+8 passed in 3.04s
+stage=contextual_interface_gate
+{
+  "all_gates_pass": false,
+  "failed_gates": [
+    "trained_contextual_at_least_70pct",
+    "trained_contextual_beats_lexical_by_10pp",
+    "trained_contextual_beats_static"
+  ],
+  "output": "/workspace/fixed-compute-frontier-t10-46367071/results/hotpot-contextual-address-t13.json",
+  "random_contextual_accuracy": 0.47115384615384615,
+  "static_reference_accuracy": 0.6057692307692307,
+  "trained_contextual_accuracy": 0.5384615384615384
+}
+stage=complete

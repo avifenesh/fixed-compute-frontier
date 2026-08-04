@@ -1,0 +1,102 @@
+{
+  "activation_and_nonmatrix_ledger": {
+    "baseline_elementwise_products_per_token": 2048,
+    "baseline_peak_gate_up_product_bytes": 1572864,
+    "baseline_peak_gate_up_product_scalars": 786432,
+    "baseline_silu_evaluations_per_token": 2048,
+    "baseline_total_gate_up_product_bytes": 3145728,
+    "baseline_total_gate_up_product_scalars": 1572864,
+    "candidate_elementwise_products_per_token": 444,
+    "candidate_materialized_score_probability_bytes": 2463744,
+    "candidate_materialized_score_probability_scalars": 1231872,
+    "candidate_silu_evaluations_per_token": 444,
+    "candidate_small_gate_up_product_bytes": 681984,
+    "candidate_small_gate_up_product_scalars": 340992,
+    "candidate_softmax_exponentials_per_token": 2406,
+    "candidate_softmax_reduction_terms_per_token": 2406,
+    "tokens": 256
+  },
+  "all_gates_pass": true,
+  "bounded_reference": {
+    "maximum_errors": {
+      "forward": 0.0,
+      "input_gradient": 1.4551915228366852e-11,
+      "key_gradient": 1.0477378964424133e-09,
+      "value_gradient": 0.0
+    },
+    "null_output_max_abs": 5.354550888096235e-33
+  },
+  "claim_boundary": "Stage 0 proves only operator/reference/resource/compiler contracts. It does not prove language quality, record usefulness, QA gain, runtime noninferiority, or a strict Pareto result.",
+  "configuration": {
+    "baseline_ffn_width": 1024,
+    "candidate_small_ffn_width": 444,
+    "entities": 2405,
+    "hidden": 384,
+    "record_slots_including_null": 2406,
+    "reference_batch": 2,
+    "reference_context": 128
+  },
+  "device": "cuda",
+  "execution": {
+    "all_gradients_present_and_finite": true,
+    "logit_shape": [
+      2,
+      128,
+      49152
+    ],
+    "loss": 10.872156143188477,
+    "peak_hbm_allocated_bytes": 685018624
+  },
+  "gates": {
+    "activation_and_nonmatrix_ledger_emitted": true,
+    "dense_reference_within_tolerance": true,
+    "dominant_null_suppresses_output": true,
+    "finite_complete_backward": true,
+    "finite_logits_and_loss": true,
+    "input_integrity": true,
+    "logit_shape_exact": true,
+    "matrix_mac_ledger_exact": true,
+    "raw_compiler_null_exact_zero": true,
+    "raw_compiler_rejects_extra_field": true,
+    "raw_compiler_writes_every_entity": true,
+    "replaced_parameter_ledger_exact": true,
+    "total_parameter_count_exact": true
+  },
+  "integrity": {
+    "candidate_corpus_sha256": "a02d2bdc714bae0c6e42d8527333de01506120845095aec936a301634fb7d00a",
+    "checkpoint_sha256": "a2900585a6e9afe4a9fba4f55afca30df5bd79c335d646cda5b9e940b72d693b",
+    "data_manifest_sha256": "90e539279f540a7516e3c90c3ee59539d3f8654cc84e88a82dc950ce6fb5036e",
+    "preregistration_sha256": "2e83951406de8be5a61bc9be4a666dcc6398f271696eb97aa3467cbdea4f45b7",
+    "source_sha256": "25c01d95905ffb6026cefa855d9a882f4deecd76a9ea63e2f9e9ef0e1908c628"
+  },
+  "matrix_ledger": {
+    "baseline_two_swiglu_macs_per_token": 2359296,
+    "baseline_two_swiglu_parameters": 2359296,
+    "candidate_record_macs_per_token": 1847808,
+    "candidate_record_parameters": 1847808,
+    "candidate_small_swiglu_macs_per_token": 511488,
+    "candidate_small_swiglu_parameters": 511488,
+    "candidate_total_macs_per_token": 2359296,
+    "candidate_total_parameters": 2359296
+  },
+  "parameter_counts": {
+    "baseline": 36577152,
+    "candidate_after_compile": 36577152,
+    "candidate_before_compile": 36577152
+  },
+  "raw_compilation": {
+    "accepted_fields": [
+      "document_id",
+      "text",
+      "title"
+    ],
+    "canonical_titles": 2405,
+    "documents": 2405,
+    "null_key_zero": true,
+    "null_value_zero": true,
+    "record_slots_written": 2405
+  },
+  "schema": "budget-neutral-soft-record-t18-stage0-v1",
+  "status": "pass",
+  "torch_version": "2.11.0+cu128"
+}

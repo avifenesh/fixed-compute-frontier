@@ -1,0 +1,15 @@
+reflex benchmark B=1
+reflex benchmark B=8
+reflex benchmark B=32
+reflex benchmark B=128
+{
+  "gates": {
+    "protocol_valid": true,
+    "zero_reflex_inclusion_below_0p2_percent": true,
+    "same_width_within_1p02_on_key_cells": true,
+    "same_width_within_1p05_on_full_grid": true,
+    "equal_parameter_within_1p02_on_key_cells": true,
+    "equal_parameter_within_1p05_on_full_grid": true
+  },
+  "all_gates_pass": true
+}

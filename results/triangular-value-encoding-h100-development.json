@@ -1,0 +1,265 @@
+{
+  "schema": "triangular-value-encoding-h100-development-v1",
+  "device": "NVIDIA H100 80GB HBM3",
+  "runtime": {
+    "torch": "2.5.1+cu124",
+    "cuda": "12.4",
+    "triton": "3.1.0"
+  },
+  "shape": {
+    "hidden": 4096,
+    "query_heads": 32,
+    "kv_heads": 8,
+    "head_dim": 128,
+    "block": 16,
+    "qkv_width": 6144
+  },
+  "cells": [
+    {
+      "rows": 1,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_bit_exact": true,
+        "canonical_control_max_abs": 0.0,
+        "triangular_value_encoding_bit_exact": true,
+        "triangular_value_encoding_max_abs": 0.0
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 68.207997828722,
+          "p05_us": 64.80000168085098,
+          "p95_us": 86.91199868917465
+        },
+        "triangular_value_encoding": {
+          "median_us": 68.60800087451935,
+          "p05_us": 64.70400094985962,
+          "p95_us": 85.15200018882751
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 1.0058644595726414,
+        "lower_95": 0.9836027537036742,
+        "upper_95": 1.0295238136419027
+      },
+      "ledger": {
+        "qkv_weight_bytes_each": 50331648,
+        "output_weight_bytes_each": 33554432,
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_epilogue_programs_per_token": 40,
+        "candidate_epilogue_programs_per_token": 48,
+        "coefficient_slots_per_kv_group": 960,
+        "coefficient_slots_per_layer": 7680,
+        "triangular_mac_per_token_layer": 7680,
+        "signed_square_per_token_layer": 1024,
+        "dense_masked_multiply_slots_per_token_layer": 16384
+      }
+    },
+    {
+      "rows": 8,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_bit_exact": true,
+        "canonical_control_max_abs": 0.0,
+        "triangular_value_encoding_bit_exact": true,
+        "triangular_value_encoding_max_abs": 0.0
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 67.23199784755707,
+          "p05_us": 64.4799992442131,
+          "p95_us": 76.83199644088745
+        },
+        "triangular_value_encoding": {
+          "median_us": 67.21599772572517,
+          "p05_us": 65.11999666690826,
+          "p95_us": 81.40800148248672
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 0.9997620162668946,
+        "lower_95": 0.9926868990392207,
+        "upper_95": 1.0142573490118656
+      },
+      "ledger": {
+        "qkv_weight_bytes_each": 50331648,
+        "output_weight_bytes_each": 33554432,
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_epilogue_programs_per_token": 40,
+        "candidate_epilogue_programs_per_token": 48,
+        "coefficient_slots_per_kv_group": 960,
+        "coefficient_slots_per_layer": 7680,
+        "triangular_mac_per_token_layer": 7680,
+        "signed_square_per_token_layer": 1024,
+        "dense_masked_multiply_slots_per_token_layer": 16384
+      }
+    },
+    {
+      "rows": 32,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_bit_exact": true,
+        "canonical_control_max_abs": 0.0,
+        "triangular_value_encoding_bit_exact": true,
+        "triangular_value_encoding_max_abs": 0.0
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 67.34399870038033,
+          "p05_us": 64.35199826955795,
+          "p95_us": 83.10399949550629
+        },
+        "triangular_value_encoding": {
+          "median_us": 67.16799736022949,
+          "p05_us": 64.4799992442131,
+          "p95_us": 83.74399691820145
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 0.9973865326748137,
+        "lower_95": 0.9870587043148411,
+        "upper_95": 1.0106763175934321
+      },
+      "ledger": {
+        "qkv_weight_bytes_each": 50331648,
+        "output_weight_bytes_each": 33554432,
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_epilogue_programs_per_token": 40,
+        "candidate_epilogue_programs_per_token": 48,
+        "coefficient_slots_per_kv_group": 960,
+        "coefficient_slots_per_layer": 7680,
+        "triangular_mac_per_token_layer": 7680,
+        "signed_square_per_token_layer": 1024,
+        "dense_masked_multiply_slots_per_token_layer": 16384
+      }
+    },
+    {
+      "rows": 128,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_bit_exact": true,
+        "canonical_control_max_abs": 0.0,
+        "triangular_value_encoding_bit_exact": true,
+        "triangular_value_encoding_max_abs": 0.0
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 68.43199953436852,
+          "p05_us": 66.27199798822403,
+          "p95_us": 83.13599973917007
+        },
+        "triangular_value_encoding": {
+          "median_us": 70.83200290799141,
+          "p05_us": 68.31999868154526,
+          "p95_us": 84.48000252246857
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 1.0350713612046005,
+        "lower_95": 1.021463121969124,
+        "upper_95": 1.0526082185272316
+      },
+      "ledger": {
+        "qkv_weight_bytes_each": 50331648,
+        "output_weight_bytes_each": 33554432,
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_epilogue_programs_per_token": 40,
+        "candidate_epilogue_programs_per_token": 48,
+        "coefficient_slots_per_kv_group": 960,
+        "coefficient_slots_per_layer": 7680,
+        "triangular_mac_per_token_layer": 7680,
+        "signed_square_per_token_layer": 1024,
+        "dense_masked_multiply_slots_per_token_layer": 16384
+      }
+    },
+    {
+      "rows": 512,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_bit_exact": true,
+        "canonical_control_max_abs": 0.0,
+        "triangular_value_encoding_bit_exact": true,
+        "triangular_value_encoding_max_abs": 0.0
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 95.63199803233147,
+          "p05_us": 93.56799721717834,
+          "p95_us": 101.75999999046326
+        },
+        "triangular_value_encoding": {
+          "median_us": 109.63200032711029,
+          "p05_us": 107.58399963378906,
+          "p95_us": 114.68800157308578
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 1.1463945393051986,
+        "lower_95": 1.1404678710258904,
+        "upper_95": 1.1540920480166594
+      },
+      "ledger": {
+        "qkv_weight_bytes_each": 50331648,
+        "output_weight_bytes_each": 33554432,
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_epilogue_programs_per_token": 40,
+        "candidate_epilogue_programs_per_token": 48,
+        "coefficient_slots_per_kv_group": 960,
+        "coefficient_slots_per_layer": 7680,
+        "triangular_mac_per_token_layer": 7680,
+        "signed_square_per_token_layer": 1024,
+        "dense_masked_multiply_slots_per_token_layer": 16384
+      }
+    },
+    {
+      "rows": 2048,
+      "trials": 100,
+      "correctness": {
+        "canonical_control_bit_exact": true,
+        "canonical_control_max_abs": 0.0,
+        "triangular_value_encoding_bit_exact": true,
+        "triangular_value_encoding_max_abs": 0.0
+      },
+      "timing": {
+        "canonical_control": {
+          "median_us": 240.04799872636795,
+          "p05_us": 236.92800104618073,
+          "p95_us": 251.93598866462708
+        },
+        "triangular_value_encoding": {
+          "median_us": 295.24800181388855,
+          "p05_us": 291.6480004787445,
+          "p95_us": 305.2160143852234
+        }
+      },
+      "candidate_over_control": {
+        "median_ratio": 1.2299540232803332,
+        "lower_95": 1.222634767199236,
+        "upper_95": 1.2365411415780034
+      },
+      "ledger": {
+        "qkv_weight_bytes_each": 50331648,
+        "output_weight_bytes_each": 33554432,
+        "learned_weight_bytes_added": 0,
+        "kv_bytes_added": 0,
+        "metadata_bits": 0,
+        "control_epilogue_programs_per_token": 40,
+        "candidate_epilogue_programs_per_token": 48,
+        "coefficient_slots_per_kv_group": 960,
+        "coefficient_slots_per_layer": 7680,
+        "triangular_mac_per_token_layer": 7680,
+        "signed_square_per_token_layer": 1024,
+        "dense_masked_multiply_slots_per_token_layer": 16384
+      }
+    }
+  ]
+}

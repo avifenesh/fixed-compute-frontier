@@ -1,0 +1,1280 @@
+{
+  "candidate": "GECK-G2-full-gauge-bi-curved-keys",
+  "decision": {
+    "h100_admitted": false,
+    "learning_gate_pass": true,
+    "next_gate": "natural RoPE addressed-bag screen with positional controls",
+    "worlds_passed": 5,
+    "worlds_total": 5
+  },
+  "hashes": {
+    "preregistration": "b0a9a33f3c25944bf6cee75ab700cecd455243493eb02db550dbc9df6e859859",
+    "source": "6e916d376db322c725d35c9583d02ca21fee0c8a5fe28f850ada38e6a04b49c3",
+    "stage0_result": "b57b9abb793383cc042da8052187d5dfc6d3c016df7dc510f50707eeae8e4c91",
+    "test": "b26cd0b8822cabc5acf1f653f32de8493b8cbb243ea753be523d9d216f4a1904"
+  },
+  "integrity_checks": {
+    "preregistration": true,
+    "source": true,
+    "stage0_integrity": true,
+    "stage0_preregistration": true,
+    "stage0_result": true,
+    "stage0_source": true,
+    "stage0_test": true,
+    "test": true
+  },
+  "protocol": {
+    "identical_restart_starts_within_each_teacher_world": true,
+    "optimizer": "scipy L-BFGS-B",
+    "restarts": 3,
+    "samples_per_world": 5000,
+    "soft_teacher_labels": true,
+    "test_samples": 1500,
+    "train_samples": 3500,
+    "world_seeds": [
+      41,
+      73,
+      101,
+      137,
+      179
+    ]
+  },
+  "runtime": {
+    "numpy": "2.3.5",
+    "python": "3.14.4",
+    "scipy": "1.18.0"
+  },
+  "schema": "gauge-embedded-curved-keys-learning-v1",
+  "worlds": [
+    {
+      "bilinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 9,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.813406508554817,
+            0.1906407229264352,
+            -0.40910913970394297,
+            0.9670934065710483,
+            0.8577889432639018,
+            -0.4379787952018947,
+            0.14111411221568582,
+            0.9135587242068861,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.554356881939334,
+          "train_nll": 0.5599333326223759
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 10,
+          "log_scale": -8.841951167374983e-09,
+          "optimization_success": true,
+          "parameters": [
+            0.8135930771531945,
+            0.19074052210229173,
+            -0.40900975655245453,
+            0.9671351533147529,
+            0.8575509211236239,
+            -0.43798645465171043,
+            0.14106630166880108,
+            0.913565943293107,
+            1.4337640012400129e-08,
+            -8.841951167374983e-09
+          ],
+          "phi": 1.4337640012400129e-08,
+          "test_nll": 0.5543568819393362,
+          "train_nll": 0.559933332622378
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 9,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8178273780178957,
+            0.1888769089304275,
+            -0.41088806424998014,
+            0.9520558321694631,
+            0.855595655717135,
+            -0.4277970539389527,
+            0.14536722333218216,
+            0.9251568181068566,
+            1.0195045993500453e-08,
+            0.0
+          ],
+          "phi": 1.0195045993500453e-08,
+          "test_nll": 0.554356881939335,
+          "train_nll": 0.559933332622377
+        }
+      },
+      "bilinear_teacher_test_nll": 0.5543568819393337,
+      "gates": {
+        "all_selected_fits_successful_and_finite": true,
+        "bilinear_teacher_full_matches_optimum": true,
+        "bilinear_teacher_no_geck_regression": true,
+        "bilinear_teacher_returns_curvature_near_zero": true,
+        "centered_square_matches_full": true,
+        "constant_only_does_not_beat_bilinear": true,
+        "full_beats_bilinear_by_0_08_nll": true,
+        "full_beats_one_curvature_by_0_04_nll": true,
+        "full_hard_teacher_agreement_at_least_99_9_percent": true,
+        "full_reaches_nonlinear_teacher_nll": true,
+        "linear_epilogue_does_not_beat_bilinear": true,
+        "released_pivot_linear_only_matches_bilinear": true
+      },
+      "key_pivot_input_is_identically_zero": true,
+      "nonlinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 0.81,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8555297338701295,
+            -0.014237356352377602,
+            0.003264893874968361,
+            0.8666479318962362,
+            0.8660872906546162,
+            -0.0022215764095058353,
+            0.00012096005950709755,
+            0.8877342190584042,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5793224768221286,
+          "train_nll": 0.5888091887051969
+        },
+        "centered_full": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 14,
+          "log_scale": 0.8687182667063578,
+          "optimization_success": true,
+          "parameters": [
+            0.9409687886062342,
+            6.946170814734354e-08,
+            2.387908161608387e-07,
+            0.9476887651600795,
+            1.062734605189987,
+            -2.0897074571187486e-07,
+            -1.4173295659738064e-07,
+            1.0551986935447686,
+            0.8688172962056608,
+            0.8687182667063578
+          ],
+          "phi": 0.8688172962056608,
+          "test_nll": 0.4683604973144682,
+          "train_nll": 0.47556860349922103
+        },
+        "constant_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.81,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8653305210160042,
+            -0.0018786743058536784,
+            -0.010878585293221355,
+            0.8917170881225988,
+            0.8561287004598773,
+            0.012000362592449033,
+            -0.011906878958076824,
+            0.862837803886881,
+            6.715542654953554e-08,
+            0.0
+          ],
+          "phi": 6.715542654953554e-08,
+          "test_nll": 0.5793224771709945,
+          "train_nll": 0.5888091887051967
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 14,
+          "log_scale": 0.8687181906931408,
+          "optimization_success": true,
+          "parameters": [
+            0.940968738512791,
+            5.724916524905225e-08,
+            2.6750884277779973e-07,
+            0.9476888096352193,
+            1.0627346143525147,
+            -2.2350075377786756e-07,
+            -1.4009336194537791e-07,
+            1.055198660475341,
+            0.8688174083870057,
+            0.8687181906931408
+          ],
+          "phi": 0.8688174083870057,
+          "test_nll": 0.46836049731446927,
+          "train_nll": 0.47556860349922225
+        },
+        "linear_epilogue_functional_control": {
+          "finite": true,
+          "hard_teacher_agreement": 0.81,
+          "iterations": 9,
+          "log_scale": -0.012658736039519995,
+          "optimization_success": true,
+          "parameters": [
+            0.8556315368506963,
+            -0.008755167972267669,
+            0.0069661332912016385,
+            0.8666311418708269,
+            0.8660749372380613,
+            0.0013169632634692763,
+            0.005604510250649976,
+            0.8877433977938195,
+            -0.008311348829528472,
+            -0.012658736039519995
+          ],
+          "phi": -0.008311348829528472,
+          "test_nll": 0.5793224756431762,
+          "train_nll": 0.5888091887051963
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8966666666666666,
+          "iterations": 11,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            1.0370580916987502,
+            0.004507767115550645,
+            -0.013104469550440251,
+            0.8166857154919892,
+            0.963900858190362,
+            0.010403215895512333,
+            -0.006512734152023693,
+            0.9427695991212897,
+            1.049977858746823,
+            0.0
+          ],
+          "phi": 1.049977858746823,
+          "test_nll": 0.5231260456268714,
+          "train_nll": 0.5310163542551928
+        },
+        "released_pivot_linear_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.81,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8555297338701295,
+            -0.014237356352377602,
+            0.003264893874968361,
+            0.8666479318962362,
+            0.8660872906546162,
+            -0.0022215764095058353,
+            0.00012096005950709755,
+            0.8877342190584042,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5793224768221286,
+          "train_nll": 0.5888091887051969
+        }
+      },
+      "nonlinear_teacher_test_nll": 0.46836049731445156,
+      "pass": true,
+      "raw_parameter_count_all_arms": 10,
+      "seed": 41
+    },
+    {
+      "bilinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 9,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8068397495503986,
+            0.18825592958592607,
+            -0.4089784438308679,
+            0.9744635191836245,
+            0.8646032531950156,
+            -0.4450450139350113,
+            0.14082958030464132,
+            0.906942521854364,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5597551449783382,
+          "train_nll": 0.5553199791395672
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 9,
+          "log_scale": -1.4476964209360028e-07,
+          "optimization_success": true,
+          "parameters": [
+            0.8063771405293598,
+            0.18835809620588037,
+            -0.4093216087090456,
+            0.9752318946520108,
+            0.8650163947099387,
+            -0.44523466913789017,
+            0.1405482188474491,
+            0.9063111774466814,
+            -2.861588488720969e-08,
+            -1.4476964209360028e-07
+          ],
+          "phi": -2.861588488720969e-08,
+          "test_nll": 0.5597551449783459,
+          "train_nll": 0.5553199791395736
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 9,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8063618466531703,
+            0.18835795331875327,
+            -0.40933090462150373,
+            0.9752364269767645,
+            0.8650325669798867,
+            -0.4452348579344481,
+            0.1405445035674884,
+            0.9063068769732432,
+            -2.35968703807832e-08,
+            0.0
+          ],
+          "phi": -2.35968703807832e-08,
+          "test_nll": 0.5597551449783421,
+          "train_nll": 0.5553199791395711
+        }
+      },
+      "bilinear_teacher_test_nll": 0.5597551449783378,
+      "gates": {
+        "all_selected_fits_successful_and_finite": true,
+        "bilinear_teacher_full_matches_optimum": true,
+        "bilinear_teacher_no_geck_regression": true,
+        "bilinear_teacher_returns_curvature_near_zero": true,
+        "centered_square_matches_full": true,
+        "constant_only_does_not_beat_bilinear": true,
+        "full_beats_bilinear_by_0_08_nll": true,
+        "full_beats_one_curvature_by_0_04_nll": true,
+        "full_hard_teacher_agreement_at_least_99_9_percent": true,
+        "full_reaches_nonlinear_teacher_nll": true,
+        "linear_epilogue_does_not_beat_bilinear": true,
+        "released_pivot_linear_only_matches_bilinear": true
+      },
+      "key_pivot_input_is_identically_zero": true,
+      "nonlinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8053333333333333,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.9039631211260185,
+            -0.009756355961963264,
+            -0.009741251180746221,
+            0.8863775836441943,
+            0.8936806596517931,
+            0.004175615108864584,
+            -0.005841631956105856,
+            0.8841902422497926,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.592597923528074,
+          "train_nll": 0.5794157411632552
+        },
+        "centered_full": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 15,
+          "log_scale": 0.8263604321446629,
+          "optimization_success": true,
+          "parameters": [
+            0.9320037570505574,
+            3.8386880929006254e-08,
+            -2.6831612037542837e-08,
+            0.9601430290714359,
+            1.0729570303065288,
+            6.130028586773817e-08,
+            -1.940661716241613e-08,
+            1.0415115254679201,
+            0.9129412474013987,
+            0.8263604321446629
+          ],
+          "phi": 0.9129412474013987,
+          "test_nll": 0.46795773000501867,
+          "train_nll": 0.4648372582618766
+        },
+        "constant_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8053333333333333,
+          "iterations": 8,
+          "log_scale": -4.7633696799619865e-08,
+          "optimization_success": true,
+          "parameters": [
+            0.9107084633093139,
+            -0.010540922524787305,
+            0.0035284679076164702,
+            0.877110486236629,
+            0.8871439645453065,
+            -0.008774236484827044,
+            -0.005182530707177897,
+            0.893380241461761,
+            0.0,
+            -4.7633696799619865e-08
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5925979232087131,
+          "train_nll": 0.5794157411632554
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 14,
+          "log_scale": 0.829892637464605,
+          "optimization_success": true,
+          "parameters": [
+            0.9342818666516066,
+            -1.808438880894256e-08,
+            1.1624128079089428e-07,
+            0.9621460695636666,
+            1.0703409447972747,
+            -1.5195096052716342e-09,
+            1.0302948558367369e-07,
+            1.0393432714242037,
+            0.9151812923036464,
+            0.829892637464605
+          ],
+          "phi": 0.9151812923036464,
+          "test_nll": 0.46795773000502294,
+          "train_nll": 0.46483725826188066
+        },
+        "linear_epilogue_functional_control": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8053333333333333,
+          "iterations": 9,
+          "log_scale": -0.006415662104187089,
+          "optimization_success": true,
+          "parameters": [
+            0.9105264850307457,
+            -0.007693525665323166,
+            0.0062525327581049546,
+            0.8772721717033678,
+            0.8873421925580219,
+            -0.006011444428758649,
+            -0.002366303070290243,
+            0.8931820638682342,
+            -0.006086353640500947,
+            -0.006415662104187089
+          ],
+          "phi": -0.006086353640500947,
+          "test_nll": 0.592597923008138,
+          "train_nll": 0.579415741163255
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 0.9093333333333333,
+          "iterations": 12,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            1.0308819857900284,
+            -0.008033022835707443,
+            0.016600998981407468,
+            0.8288395345784011,
+            0.9700258617762093,
+            -0.015769651915390558,
+            -0.0026281643146076053,
+            0.9447638808185841,
+            1.054125249018052,
+            0.0
+          ],
+          "phi": 1.054125249018052,
+          "test_nll": 0.5278550575243024,
+          "train_nll": 0.5176102710451289
+        },
+        "released_pivot_linear_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8053333333333333,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.9039631211260185,
+            -0.009756355961963264,
+            -0.009741251180746221,
+            0.8863775836441943,
+            0.8936806596517931,
+            0.004175615108864584,
+            -0.005841631956105856,
+            0.8841902422497926,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.592597923528074,
+          "train_nll": 0.5794157411632552
+        }
+      },
+      "nonlinear_teacher_test_nll": 0.4679577300050179,
+      "pass": true,
+      "raw_parameter_count_all_arms": 10,
+      "seed": 73
+    },
+    {
+      "bilinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 9,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8119366515619422,
+            0.1859802778574984,
+            -0.4076767463391555,
+            0.9680653365371953,
+            0.8608041819855516,
+            -0.4415574043744051,
+            0.14452262147024575,
+            0.911220424896618,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.552891575744385,
+          "train_nll": 0.5521744162686714
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 10,
+          "log_scale": 1.2127075902932357e-07,
+          "optimization_success": true,
+          "parameters": [
+            0.8072489375423507,
+            0.18690425613083128,
+            -0.4155477434453808,
+            0.9693266606505286,
+            0.866161042570835,
+            -0.43616531102994516,
+            0.14248119473221038,
+            0.909416209080051,
+            4.160052061625589e-08,
+            1.2127075902932357e-07
+          ],
+          "phi": 4.160052061625589e-08,
+          "test_nll": 0.5528915757443927,
+          "train_nll": 0.5521744162686792
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 10,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8119287085085395,
+            0.18596513013904517,
+            -0.40768040368351943,
+            0.9680848831486947,
+            0.8608174829452427,
+            -0.44156910683473183,
+            0.14453069953225248,
+            0.9111975104518075,
+            3.133459009003087e-08,
+            0.0
+          ],
+          "phi": 3.133459009003087e-08,
+          "test_nll": 0.5528915757443854,
+          "train_nll": 0.5521744162686718
+        }
+      },
+      "bilinear_teacher_test_nll": 0.5528915757443842,
+      "gates": {
+        "all_selected_fits_successful_and_finite": true,
+        "bilinear_teacher_full_matches_optimum": true,
+        "bilinear_teacher_no_geck_regression": true,
+        "bilinear_teacher_returns_curvature_near_zero": true,
+        "centered_square_matches_full": true,
+        "constant_only_does_not_beat_bilinear": true,
+        "full_beats_bilinear_by_0_08_nll": true,
+        "full_beats_one_curvature_by_0_04_nll": true,
+        "full_hard_teacher_agreement_at_least_99_9_percent": true,
+        "full_reaches_nonlinear_teacher_nll": true,
+        "linear_epilogue_does_not_beat_bilinear": true,
+        "released_pivot_linear_only_matches_bilinear": true
+      },
+      "key_pivot_input_is_identically_zero": true,
+      "nonlinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8086666666666666,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8816026923991959,
+            -0.007773081096877451,
+            0.010354247238681027,
+            0.8700464434454958,
+            0.8730765797546873,
+            0.006827676916621674,
+            -0.008360963508709372,
+            0.9002132493345597,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5752449977012154,
+          "train_nll": 0.5845786918863628
+        },
+        "centered_full": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 14,
+          "log_scale": 0.8332408986491786,
+          "optimization_success": true,
+          "parameters": [
+            0.9326777809724679,
+            3.515422176343629e-08,
+            2.624717678289118e-08,
+            0.9563236277545075,
+            1.07218167541926,
+            -3.0330958138123825e-08,
+            -4.8727180709336923e-08,
+            1.0456711024249796,
+            0.9018171418149035,
+            0.8332408986491786
+          ],
+          "phi": 0.9018171418149035,
+          "test_nll": 0.4639032675736079,
+          "train_nll": 0.46872372215599695
+        },
+        "constant_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8086666666666666,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8816026923991959,
+            -0.007773081096877451,
+            0.010354247238681027,
+            0.8700464434454958,
+            0.8730765797546873,
+            0.006827676916621674,
+            -0.008360963508709372,
+            0.9002132493345597,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5752449977012154,
+          "train_nll": 0.5845786918863628
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 14,
+          "log_scale": 0.8332411112205107,
+          "optimization_success": true,
+          "parameters": [
+            0.9326779539507976,
+            4.616519457104924e-08,
+            3.9449190497931785e-08,
+            0.9563237887138906,
+            1.0721815459732424,
+            -3.189373626663414e-08,
+            -3.680874505164681e-08,
+            1.045671007435598,
+            0.9018171976100549,
+            0.8332411112205107
+          ],
+          "phi": 0.9018171976100549,
+          "test_nll": 0.4639032675736084,
+          "train_nll": 0.46872372215599734
+        },
+        "linear_epilogue_functional_control": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8086666666666666,
+          "iterations": 8,
+          "log_scale": -0.009583259808789806,
+          "optimization_success": true,
+          "parameters": [
+            0.8764871699163993,
+            0.0016966314189263028,
+            0.017788536781283063,
+            0.8963634764630937,
+            0.8784971848689438,
+            -0.007250328781844229,
+            -0.008930812781754257,
+            0.8736549196084686,
+            0.008035209828238308,
+            -0.009583259808789806
+          ],
+          "phi": 0.008035209828238308,
+          "test_nll": 0.5752449992121241,
+          "train_nll": 0.5845786918863646
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 0.9073333333333333,
+          "iterations": 12,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            1.0347188037187445,
+            -0.019153648528223044,
+            -0.006028576670302289,
+            0.8315151534302136,
+            0.9665111619370585,
+            0.005809323804352636,
+            0.001458815151865147,
+            0.942223574608676,
+            1.0573290596889102,
+            0.0
+          ],
+          "phi": 1.0573290596889102,
+          "test_nll": 0.5161337202334159,
+          "train_nll": 0.5231904071384544
+        },
+        "released_pivot_linear_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8086666666666666,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8816026923991959,
+            -0.007773081096877451,
+            0.010354247238681027,
+            0.8700464434454958,
+            0.8730765797546873,
+            0.006827676916621674,
+            -0.008360963508709372,
+            0.9002132493345597,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5752449977012154,
+          "train_nll": 0.5845786918863628
+        }
+      },
+      "nonlinear_teacher_test_nll": 0.46390326757360717,
+      "pass": true,
+      "raw_parameter_count_all_arms": 10,
+      "seed": 101
+    },
+    {
+      "bilinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 9,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8272940285255168,
+            0.19634386312630142,
+            -0.39911332968997953,
+            0.9546012001193642,
+            0.8416994451140423,
+            -0.43493665542171084,
+            0.14114525041225642,
+            0.9275047047871308,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5546317005292356,
+          "train_nll": 0.555031446333982
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 11,
+          "log_scale": -1.5239609010656548e-09,
+          "optimization_success": true,
+          "parameters": [
+            0.8270394407535872,
+            0.1962312859393056,
+            -0.39947367589454813,
+            0.9552284762626695,
+            0.8419939572717395,
+            -0.4349809483363027,
+            0.1410913072727697,
+            0.9268535228625627,
+            1.637783070579127e-08,
+            -1.5239609010656548e-09
+          ],
+          "phi": 1.637783070579127e-08,
+          "test_nll": 0.5546317005292354,
+          "train_nll": 0.5550314463339818
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 9,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8269318489335856,
+            0.19621901799828434,
+            -0.3994493660257986,
+            0.9553107313320034,
+            0.842089361217959,
+            -0.4350947880061963,
+            0.141070374750212,
+            0.9267914832238753,
+            3.6213609615611814e-08,
+            0.0
+          ],
+          "phi": 3.6213609615611814e-08,
+          "test_nll": 0.5546317005292354,
+          "train_nll": 0.5550314463339818
+        }
+      },
+      "bilinear_teacher_test_nll": 0.5546317005292352,
+      "gates": {
+        "all_selected_fits_successful_and_finite": true,
+        "bilinear_teacher_full_matches_optimum": true,
+        "bilinear_teacher_no_geck_regression": true,
+        "bilinear_teacher_returns_curvature_near_zero": true,
+        "centered_square_matches_full": true,
+        "constant_only_does_not_beat_bilinear": true,
+        "full_beats_bilinear_by_0_08_nll": true,
+        "full_beats_one_curvature_by_0_04_nll": true,
+        "full_hard_teacher_agreement_at_least_99_9_percent": true,
+        "full_reaches_nonlinear_teacher_nll": true,
+        "linear_epilogue_does_not_beat_bilinear": true,
+        "released_pivot_linear_only_matches_bilinear": true
+      },
+      "key_pivot_input_is_identically_zero": true,
+      "nonlinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8026666666666666,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8751696699174766,
+            -0.024711678668832514,
+            0.03212164404133477,
+            0.8573269901163473,
+            0.8823187121379128,
+            0.008820549572862284,
+            -0.015026925959283042,
+            0.8553922798041789,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5914066839252715,
+          "train_nll": 0.5880203016966308
+        },
+        "centered_full": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 14,
+          "log_scale": 0.9195909535372151,
+          "optimization_success": true,
+          "parameters": [
+            0.9526186502994521,
+            3.709698007691815e-08,
+            2.324769600666118e-08,
+            0.9378643513342271,
+            1.0497379844104462,
+            1.9172358712596546e-08,
+            -1.3398831974436386e-08,
+            1.066252348179071,
+            0.8310962214009104,
+            0.9195909535372151
+          ],
+          "phi": 0.8310962214009104,
+          "test_nll": 0.47742669643850333,
+          "train_nll": 0.47181916730152235
+        },
+        "constant_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8026666666666666,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8751696178655228,
+            -0.024711680053722145,
+            0.03212164153462846,
+            0.8573270384432313,
+            0.8823186602085528,
+            0.008820546755472464,
+            -0.01502692769604331,
+            0.8553922861508382,
+            -1.1523790089470551e-07,
+            0.0
+          ],
+          "phi": -1.1523790089470551e-07,
+          "test_nll": 0.5914066836559536,
+          "train_nll": 0.5880203016966309
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 14,
+          "log_scale": 0.9195911092343684,
+          "optimization_success": true,
+          "parameters": [
+            0.9526186543477295,
+            3.091292004570612e-08,
+            3.6015741914619516e-08,
+            0.9378643090534439,
+            1.0497379485350913,
+            1.1499496005623229e-08,
+            -1.8655615959721825e-08,
+            1.0662522601128401,
+            0.8310964565527779,
+            0.9195911092343684
+          ],
+          "phi": 0.8310964565527779,
+          "test_nll": 0.4774266964385036,
+          "train_nll": 0.4718191673015226
+        },
+        "linear_epilogue_functional_control": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8026666666666666,
+          "iterations": 8,
+          "log_scale": -0.013198232123249465,
+          "optimization_success": true,
+          "parameters": [
+            0.895276680434272,
+            -0.006773567932388248,
+            0.01389563968414557,
+            0.8625795500440632,
+            0.8628059801991645,
+            0.013653202423671124,
+            -0.022052885886859035,
+            0.8503162449743903,
+            0.01465973409636396,
+            -0.013198232123249465
+          ],
+          "phi": 0.01465973409636396,
+          "test_nll": 0.5914066842343149,
+          "train_nll": 0.5880203016966319
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8933333333333333,
+          "iterations": 12,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            1.0469024163511123,
+            -0.027663493655200204,
+            -0.0012486560976639363,
+            0.7856357759628146,
+            0.9551316513805589,
+            -0.0003378295096127564,
+            -0.0035987153936101767,
+            0.9332862207766778,
+            1.0695125676021917,
+            0.0
+          ],
+          "phi": 1.0695125676021917,
+          "test_nll": 0.5331977678812203,
+          "train_nll": 0.5334628362651836
+        },
+        "released_pivot_linear_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8026666666666666,
+          "iterations": 7,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8751696699174766,
+            -0.024711678668832514,
+            0.03212164404133477,
+            0.8573269901163473,
+            0.8823187121379128,
+            0.008820549572862284,
+            -0.015026925959283042,
+            0.8553922798041789,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5914066839252715,
+          "train_nll": 0.5880203016966308
+        }
+      },
+      "nonlinear_teacher_test_nll": 0.4774266964385027,
+      "pass": true,
+      "raw_parameter_count_all_arms": 10,
+      "seed": 137
+    },
+    {
+      "bilinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 9,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8168186216086317,
+            0.19152229111535213,
+            -0.3908622362461445,
+            0.9737329949865362,
+            0.8508721729547396,
+            -0.45750993697207676,
+            0.1407357108414415,
+            0.911567524131343,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5612121835075465,
+          "train_nll": 0.5550692042285353
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 11,
+          "log_scale": -1.1932836561026706e-08,
+          "optimization_success": true,
+          "parameters": [
+            0.8050701396758692,
+            0.18931170990712837,
+            -0.402395198053796,
+            0.9793681743929987,
+            0.8645398246903265,
+            -0.45455146159200743,
+            0.1392045301918926,
+            0.9047179160550106,
+            2.7860266155641058e-08,
+            -1.1932836561026706e-08
+          ],
+          "phi": 2.7860266155641058e-08,
+          "test_nll": 0.5612121835075466,
+          "train_nll": 0.5550692042285356
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 10,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8165098280615888,
+            0.1914726056374927,
+            -0.3911511055496891,
+            0.9743338808753419,
+            0.8511927585600665,
+            -0.4576296905416983,
+            0.14062931303297532,
+            0.9110056273438661,
+            -1.8850879979178927e-08,
+            0.0
+          ],
+          "phi": -1.8850879979178927e-08,
+          "test_nll": 0.5612121835075472,
+          "train_nll": 0.5550692042285361
+        }
+      },
+      "bilinear_teacher_test_nll": 0.5612121835075464,
+      "gates": {
+        "all_selected_fits_successful_and_finite": true,
+        "bilinear_teacher_full_matches_optimum": true,
+        "bilinear_teacher_no_geck_regression": true,
+        "bilinear_teacher_returns_curvature_near_zero": true,
+        "centered_square_matches_full": true,
+        "constant_only_does_not_beat_bilinear": true,
+        "full_beats_bilinear_by_0_08_nll": true,
+        "full_beats_one_curvature_by_0_04_nll": true,
+        "full_hard_teacher_agreement_at_least_99_9_percent": true,
+        "full_reaches_nonlinear_teacher_nll": true,
+        "linear_epilogue_does_not_beat_bilinear": true,
+        "released_pivot_linear_only_matches_bilinear": true
+      },
+      "key_pivot_input_is_identically_zero": true,
+      "nonlinear_teacher": {
+        "bilinear": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8073333333333333,
+          "iterations": 6,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8794224504139784,
+            -0.0004196767346097511,
+            -0.008230001576312854,
+            0.8821809161635259,
+            0.8716572451696688,
+            -0.022211912931310352,
+            -0.010363451675807975,
+            0.8883214007256461,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5948107414113517,
+          "train_nll": 0.5845935391407688
+        },
+        "centered_full": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 14,
+          "log_scale": 0.8499674846753585,
+          "optimization_success": true,
+          "parameters": [
+            0.9384186870735557,
+            2.4676252520563477e-09,
+            6.629714260706805e-08,
+            0.9557481638897031,
+            1.0656224478389704,
+            -3.101600888314042e-08,
+            -2.3569535437822595e-08,
+            1.0463007244916198,
+            0.892619953603886,
+            0.8499674846753585
+          ],
+          "phi": 0.892619953603886,
+          "test_nll": 0.4812725959172061,
+          "train_nll": 0.4683737499419491
+        },
+        "constant_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8073333333333333,
+          "iterations": 6,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8794224504139784,
+            -0.0004196767346097511,
+            -0.008230001576312854,
+            0.8821809161635259,
+            0.8716572451696688,
+            -0.022211912931310352,
+            -0.010363451675807975,
+            0.8883214007256461,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5948107414113517,
+          "train_nll": 0.5845935391407688
+        },
+        "full_geck_g2": {
+          "finite": true,
+          "hard_teacher_agreement": 1.0,
+          "iterations": 14,
+          "log_scale": 0.8499675812572802,
+          "optimization_success": true,
+          "parameters": [
+            0.9384189759020694,
+            6.087882330544771e-09,
+            5.562098732029174e-08,
+            0.9557485165512228,
+            1.0656222083735196,
+            -5.751140825042785e-08,
+            -2.7409385288164643e-08,
+            1.046300431453782,
+            0.8926201960931944,
+            0.8499675812572802
+          ],
+          "phi": 0.8926201960931944,
+          "test_nll": 0.48127259591720806,
+          "train_nll": 0.46837374994195097
+        },
+        "linear_epilogue_functional_control": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8073333333333333,
+          "iterations": 9,
+          "log_scale": 0.0005807171075082439,
+          "optimization_success": true,
+          "parameters": [
+            0.8739426131034259,
+            -0.0018751847925812689,
+            -0.00788266634134748,
+            0.8838867326119173,
+            0.8769766404906227,
+            -0.007319170025850005,
+            -0.009405719929212748,
+            0.8865736582397141,
+            -0.01737205756087273,
+            0.0005807171075082439
+          ],
+          "phi": -0.01737205756087273,
+          "test_nll": 0.5948107405329331,
+          "train_nll": 0.5845935391407684
+        },
+        "one_curvature": {
+          "finite": true,
+          "hard_teacher_agreement": 0.912,
+          "iterations": 12,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            1.0267395686804937,
+            -0.01843366244384305,
+            -0.0005850841674812285,
+            0.8234029047111517,
+            0.9739661411947566,
+            0.0014382562863266292,
+            0.0030738435340534067,
+            0.9517267550625227,
+            1.0356500832938842,
+            0.0
+          ],
+          "phi": 1.0356500832938842,
+          "test_nll": 0.5321436942316938,
+          "train_nll": 0.5230087544959637
+        },
+        "released_pivot_linear_only": {
+          "finite": true,
+          "hard_teacher_agreement": 0.8073333333333333,
+          "iterations": 6,
+          "log_scale": 0.0,
+          "optimization_success": true,
+          "parameters": [
+            0.8794224504139784,
+            -0.0004196767346097511,
+            -0.008230001576312854,
+            0.8821809161635259,
+            0.8716572451696688,
+            -0.022211912931310352,
+            -0.010363451675807975,
+            0.8883214007256461,
+            0.0,
+            0.0
+          ],
+          "phi": 0.0,
+          "test_nll": 0.5948107414113517,
+          "train_nll": 0.5845935391407688
+        }
+      },
+      "nonlinear_teacher_test_nll": 0.48127259591720517,
+      "pass": true,
+      "raw_parameter_count_all_arms": 10,
+      "seed": 179
+    }
+  ]
+}

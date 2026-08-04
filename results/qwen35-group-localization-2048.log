@@ -1,0 +1,45 @@
+[transformers] The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/320 [00:00<?, ?it/s]Loading weights: 100%|██████████| 320/320 [00:00<00:00, 4527.30it/s]
+running code
+running bindings
+running periodic
+running heldout_00
+running shuffled_00
+running heldout_01
+running shuffled_01
+running heldout_02
+running shuffled_02
+running heldout_03
+running shuffled_03
+running heldout_04
+running shuffled_04
+running heldout_05
+running shuffled_05
+running heldout_06
+running shuffled_06
+running heldout_07
+running shuffled_07
+{
+  "output": "/root/fixed-compute-frontier/results/qwen35-group-localization-2048.json",
+  "cases": [
+    "code",
+    "bindings",
+    "periodic",
+    "heldout_00",
+    "shuffled_00",
+    "heldout_01",
+    "shuffled_01",
+    "heldout_02",
+    "shuffled_02",
+    "heldout_03",
+    "shuffled_03",
+    "heldout_04",
+    "shuffled_04",
+    "heldout_05",
+    "shuffled_05",
+    "heldout_06",
+    "shuffled_06",
+    "heldout_07",
+    "shuffled_07"
+  ]
+}

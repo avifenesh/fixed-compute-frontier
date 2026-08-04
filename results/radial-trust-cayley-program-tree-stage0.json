@@ -1,0 +1,168 @@
+{
+  "gates": {
+    "gaussian_and_adversarial_trajectories_finite_and_bounded": true,
+    "same_ideal_active_ratio_below_8p3_percent": true,
+    "same_parameter_count_as_v1": true,
+    "same_state_dict_keys_as_v1": true,
+    "trust_region_jacobian_full_rank": true,
+    "trust_region_strictly_bounds_rms": true
+  },
+  "ledger": {
+    "baseline_dense_macs": 1179648,
+    "baseline_swiglu_parameters": 1179648,
+    "candidate_multiply_like_active_upper_bound": 96768,
+    "candidate_parameters": 1179583,
+    "generator_parameters": 1728,
+    "hard_path_payload_scalars": 10368,
+    "ideal_active_ratio": 0.08203125,
+    "nodes": 511,
+    "parameter_difference": -65,
+    "payload_parameters": 1177344,
+    "threshold_parameters": 511
+  },
+  "measurements": {
+    "candidate_parameters": 1179583,
+    "random_trust_output_rms_max": 0.9999996055100268,
+    "trajectories": {
+      "gaussian": {
+        "finite": true,
+        "maximum_hidden_rms": 1.2606868743896484,
+        "maximum_trusted_delta_rms": 0.9169756174087524,
+        "output_abs_max": 9.239779472351074,
+        "output_rms_max": 0.4856890975245432,
+        "rows": [
+          {
+            "hidden_abs_max": 5.079977512359619,
+            "hidden_rms": 1.0217283964157104,
+            "raw_delta_rms": 0.25224408507347107,
+            "trusted_delta_rms": 0.24458301067352295
+          },
+          {
+            "hidden_abs_max": 5.743765830993652,
+            "hidden_rms": 1.032209873199463,
+            "raw_delta_rms": 0.3035818040370941,
+            "trusted_delta_rms": 0.2904907166957855
+          },
+          {
+            "hidden_abs_max": 7.9353766441345215,
+            "hidden_rms": 1.0705114603042603,
+            "raw_delta_rms": 0.6523886322975159,
+            "trusted_delta_rms": 0.5463939905166626
+          },
+          {
+            "hidden_abs_max": 9.323288917541504,
+            "hidden_rms": 1.1050002574920654,
+            "raw_delta_rms": 0.7522500157356262,
+            "trusted_delta_rms": 0.6011501550674438
+          },
+          {
+            "hidden_abs_max": 10.714115142822266,
+            "hidden_rms": 1.1391469240188599,
+            "raw_delta_rms": 0.5525989532470703,
+            "trusted_delta_rms": 0.48366424441337585
+          },
+          {
+            "hidden_abs_max": 8.9586181640625,
+            "hidden_rms": 1.0983599424362183,
+            "raw_delta_rms": 1.4897764921188354,
+            "trusted_delta_rms": 0.8302929997444153
+          },
+          {
+            "hidden_abs_max": 10.743464469909668,
+            "hidden_rms": 1.1376515626907349,
+            "raw_delta_rms": 0.6166074275970459,
+            "trusted_delta_rms": 0.5248521566390991
+          },
+          {
+            "hidden_abs_max": 14.961414337158203,
+            "hidden_rms": 1.2606868743896484,
+            "raw_delta_rms": 1.056836724281311,
+            "trusted_delta_rms": 0.7263690829277039
+          },
+          {
+            "hidden_abs_max": 11.517694473266602,
+            "hidden_rms": 1.152348279953003,
+            "raw_delta_rms": 2.2985124588012695,
+            "trusted_delta_rms": 0.9169756174087524
+          }
+        ],
+        "theoretical_hidden_rms_bound": 4.0
+      },
+      "one_hot_rms_one": {
+        "finite": true,
+        "maximum_hidden_rms": 1.6453360319137573,
+        "maximum_trusted_delta_rms": 0.9939586520195007,
+        "output_abs_max": 5.752223968505859,
+        "output_rms_max": 0.31389289022815975,
+        "rows": [
+          {
+            "hidden_abs_max": 25.773841857910156,
+            "hidden_rms": 1.3168827295303345,
+            "raw_delta_rms": 3.7267911434173584,
+            "trusted_delta_rms": 0.965834379196167
+          },
+          {
+            "hidden_abs_max": 19.442344665527344,
+            "hidden_rms": 0.9964144229888916,
+            "raw_delta_rms": 6.5954813957214355,
+            "trusted_delta_rms": 0.9887003302574158
+          },
+          {
+            "hidden_abs_max": 14.227497100830078,
+            "hidden_rms": 0.7342404723167419,
+            "raw_delta_rms": 1.4188578128814697,
+            "trusted_delta_rms": 0.8173874616622925
+          },
+          {
+            "hidden_abs_max": 19.666292190551758,
+            "hidden_rms": 1.0153497457504272,
+            "raw_delta_rms": 1.6325876712799072,
+            "trusted_delta_rms": 0.8527451157569885
+          },
+          {
+            "hidden_abs_max": 25.939346313476562,
+            "hidden_rms": 1.3311567306518555,
+            "raw_delta_rms": 5.129504203796387,
+            "trusted_delta_rms": 0.9815221428871155
+          },
+          {
+            "hidden_abs_max": 32.1431770324707,
+            "hidden_rms": 1.6453360319137573,
+            "raw_delta_rms": 4.415220737457275,
+            "trusted_delta_rms": 0.975297749042511
+          },
+          {
+            "hidden_abs_max": 25.81041145324707,
+            "hidden_rms": 1.3183740377426147,
+            "raw_delta_rms": 9.056212425231934,
+            "trusted_delta_rms": 0.9939586520195007
+          },
+          {
+            "hidden_abs_max": 19.474573135375977,
+            "hidden_rms": 0.9972780346870422,
+            "raw_delta_rms": 6.442647933959961,
+            "trusted_delta_rms": 0.9881673455238342
+          },
+          {
+            "hidden_abs_max": 25.348142623901367,
+            "hidden_rms": 1.298311471939087,
+            "raw_delta_rms": 2.3035988807678223,
+            "trusted_delta_rms": 0.9172977805137634
+          }
+        ],
+        "theoretical_hidden_rms_bound": 4.0
+      }
+    },
+    "trust_jacobian_rank": 8,
+    "trust_jacobian_singular_max": 0.15254831505368707,
+    "trust_jacobian_singular_min": 0.003549955553357035,
+    "v1_parameters": 1179583
+  },
+  "module_sha256": "cf64ab47717ec0cb8a8720fbd768adf48ca9785f0169253966f5a1539ff70226",
+  "pass": true,
+  "preregistration_sha256": "e841d8deca6a3d8a22d2c2468b9a5458ba4ca52d5601f26435b7d736ea83960c",
+  "schema": "radial-trust-cayley-program-tree-stage0-v1",
+  "seed": 815,
+  "source_sha256": "ae85b5072128e2f508b7113b1849e45c1bc3a192950522bd5fb6dbfda4231889",
+  "test_sha256": "d1d5dc22b069f569ea6958c610df272b15dde2a743aefa5d7c28a353b84c4fa5"
+}

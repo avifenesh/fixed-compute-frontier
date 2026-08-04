@@ -1,0 +1,37 @@
+{
+  "all_gates_pass": true,
+  "alpha_derivative_at_frozen_endpoint": 0.06218884314979763,
+  "candidate": "Reflex-SwiGLU",
+  "gates": {
+    "alpha_gradient_live_at_endpoint": true,
+    "artificial_degree_witness": true,
+    "exact_equal_parameter_loses_at_most_two_features": true,
+    "exact_swiglu_endpoint": true,
+    "same_width_overhead_below_0p009_percent": true,
+    "shared_gradient_endpoint_identity": true
+  },
+  "inclusion_max_absolute_error": 0.0,
+  "polynomial_witness": {
+    "degree_7_coefficient": 1.0,
+    "degree_7_monomial": "g^4*u^3",
+    "derivation": "(g + (g^2*u))^2*u",
+    "ordinary_square_gated_max_degree": 3,
+    "reflex_square_gated_degree": 7,
+    "scope_warning": "artificial square-activation and identity-clip analogue only"
+  },
+  "resource_ledger": {
+    "baseline_hidden": 14336,
+    "baseline_parameters": 176160768,
+    "dimension": 4096,
+    "equal_parameter_candidate_parameters": 176150526,
+    "equal_parameter_unused_parameters": 10242,
+    "exact_equal_parameter_hidden": 14334,
+    "exact_equal_parameter_hidden_reduction": 2,
+    "same_width_added_parameters": 14336,
+    "same_width_parameter_overhead_fraction": 8.138020833333333e-05
+  },
+  "scope": "G0 endpoint, trainability, artificial degree, and ledger only",
+  "seed": 47,
+  "shared_gradient_finite_difference_max_difference": 0.0,
+  "source_sha256": "2368206c9a768bd8d9e36e5cb57c0e470cf95b4a608a499592f36a344c1665d1"
+}

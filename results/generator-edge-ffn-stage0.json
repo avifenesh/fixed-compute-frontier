@@ -1,0 +1,72 @@
+{
+  "checks": {
+    "all_parameter_ledgers_equal": true,
+    "candidate_rank_exceeds_swiglu": true,
+    "graph_has_2m_unique_edges": true,
+    "graph_is_two_regular": true
+  },
+  "functional_ranks": {
+    "duplicate_edge": {
+      "kind": "duplicate_edge",
+      "largest_uncounted_singular_value": 6.902283211716974e-15,
+      "nullity": 12,
+      "outputs": 48,
+      "parameters": 36,
+      "rank": 24,
+      "smallest_counted_singular_value": 0.08207864239296177,
+      "tolerance": 8.170107260252183e-13
+    },
+    "generator_edge": {
+      "kind": "generator_edge",
+      "largest_uncounted_singular_value": null,
+      "nullity": 0,
+      "outputs": 48,
+      "parameters": 36,
+      "rank": 36,
+      "smallest_counted_singular_value": 0.0223396066680142,
+      "tolerance": 6.12763981140522e-13
+    },
+    "self_product": {
+      "kind": "self_product",
+      "largest_uncounted_singular_value": null,
+      "nullity": 0,
+      "outputs": 48,
+      "parameters": 36,
+      "rank": 36,
+      "smallest_counted_singular_value": 0.03230815631078666,
+      "tolerance": 1.1565538647405637e-12
+    },
+    "swiglu": {
+      "kind": "swiglu",
+      "largest_uncounted_singular_value": 4.003778302962583e-15,
+      "nullity": 4,
+      "outputs": 48,
+      "parameters": 36,
+      "rank": 32,
+      "smallest_counted_singular_value": 0.023420981084283345,
+      "tolerance": 5.002677814541611e-13
+    }
+  },
+  "graph": {
+    "edges": 2048,
+    "first_route_is_permutation": true,
+    "in_degree_max": 2,
+    "in_degree_min": 2,
+    "out_degree_max": 2,
+    "out_degree_min": 2,
+    "second_route_is_permutation": true,
+    "unique_edges": 2048,
+    "width": 1024
+  },
+  "ledger": {
+    "duplicate_edge_parameters": 1179648,
+    "generator_edge_parameters": 1179648,
+    "hidden_size": 384,
+    "self_product_parameters": 1179648,
+    "self_product_width": 1536,
+    "swiglu_parameters": 1179648,
+    "swiglu_width": 1024
+  },
+  "schema": "generator-edge-ffn-stage0-v1",
+  "stage0_cpu_pass": true
+}

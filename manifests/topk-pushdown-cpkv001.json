@@ -1,0 +1,664 @@
+{
+  "commands": {
+    "build_checkpoint_freeze_receipt": "python experiments/topk_compiled_pushdown_evaluator.py --manifest manifests/topk-pushdown-cpkv001.json --build-checkpoint-freeze-receipt results/topk-pushdown-checkpoints-frozen.json",
+    "locked_evaluation_merge": "python experiments/topk_compiled_pushdown_locked_eval.py --manifest manifests/topk-pushdown-cpkv001.json --checkpoint-freeze-receipt results/topk-pushdown-checkpoints-frozen.json --merge-shards results/topk-pushdown-shards --output results/topk-pushdown-locked-evaluation.json",
+    "locked_evaluation_shard": "python experiments/topk_compiled_pushdown_locked_eval.py --manifest manifests/topk-pushdown-cpkv001.json --checkpoint-freeze-receipt results/topk-pushdown-checkpoints-frozen.json --shard-index {0..59} --output results/topk-pushdown-shards/shard-{00..59}.json",
+    "oracle": "python experiments/topk_compiled_pushdown_reference.py --oracle --oracle-output results/topk-compiled-pushdown-oracle.json",
+    "post_freeze_evaluation": "python experiments/topk_compiled_pushdown_evaluator.py --manifest manifests/topk-pushdown-cpkv001.json --checkpoint-freeze-receipt PATH",
+    "preflight": "python experiments/topk_compiled_pushdown_preflight.py --manifest manifests/topk-pushdown-cpkv001.json --output results/topk-pushdown-preflight.json",
+    "prepare": "python experiments/topk_compiled_pushdown_reference.py --prepare --project-root .",
+    "training": "python experiments/topk_compiled_pushdown_train.py --manifest manifests/topk-pushdown-cpkv001.json --family {D1,A1,A2} --arm {S32,DIRECT3,HARD3,MLP,RNN32,LINK32} --seed {1701..1710}"
+  },
+  "environment": {
+    "numpy": "2.3.5",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.43",
+    "python": "3.14.4",
+    "torch_installed": "2.13.0+cpu",
+    "torch_required": "2.13.0+cpu"
+  },
+  "fixed_splits": {
+    "A1/E1": {
+      "materialized": false,
+      "post_freeze_path": "data/topk-pushdown-cpkv001/a1-e1.jsonl",
+      "range": [
+        13,
+        20
+      ],
+      "requires_checkpoint_freeze_receipt": true,
+      "seed": 9202,
+      "sequences": 10000,
+      "sha256_commitment": "b9e481405bb10f38d67f048a274e9632e3a1f6478500a8642b0ba55f17225665"
+    },
+    "A1/E2": {
+      "materialized": false,
+      "post_freeze_path": "data/topk-pushdown-cpkv001/a1-e2.jsonl",
+      "range": [
+        21,
+        32
+      ],
+      "requires_checkpoint_freeze_receipt": true,
+      "seed": 9203,
+      "sequences": 10000,
+      "sha256_commitment": "038281e5272572b0615e8d3ad6a00b42e09dc22c197649a2fbe81d44dc9ea6fe"
+    },
+    "A1/development": {
+      "materialized": true,
+      "path": "data/topk-pushdown-cpkv001/a1-development.jsonl",
+      "range": [
+        9,
+        12
+      ],
+      "seed": 9201,
+      "sequences": 5000,
+      "sha256": "0562945ee402b7a5a183467cf17bc477f9a0172deae742d3583922d4e7dccb30"
+    },
+    "A1/train/1701": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1701.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1701,
+      "sequences": 20000,
+      "sha256": "b16200fd7a509dd0e072f4e74a2059c8959e7a06b3bc86dad0efaf36e1be325d"
+    },
+    "A1/train/1702": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1702.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1702,
+      "sequences": 20000,
+      "sha256": "fd3a846401d8eb124a000d187e674802b8587dec04b26b413d336f5fa6c8ebd8"
+    },
+    "A1/train/1703": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1703.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1703,
+      "sequences": 20000,
+      "sha256": "cf682ffbbc4617674bf009e1128f89252c322c993fc7ee0be370607b955a192b"
+    },
+    "A1/train/1704": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1704.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1704,
+      "sequences": 20000,
+      "sha256": "c9d2cde3c4d2aa3fda843d8a3036d1a58be05033c43860f442d43cba7f887afa"
+    },
+    "A1/train/1705": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1705.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1705,
+      "sequences": 20000,
+      "sha256": "d9720598eeaeb64294bae4110dc7c728062c669cc704c839ec6f5ca1a190890e"
+    },
+    "A1/train/1706": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1706.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1706,
+      "sequences": 20000,
+      "sha256": "88bfec4bb053babe1baacf1a339ab4563fae50c99b0cef2703add34981b47aee"
+    },
+    "A1/train/1707": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1707.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1707,
+      "sequences": 20000,
+      "sha256": "4dcb365b87f630382111e598b17e27e1576c36b01ab44eb479c7b6e533ecc553"
+    },
+    "A1/train/1708": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1708.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1708,
+      "sequences": 20000,
+      "sha256": "8ff92d784dacedb02a8dfe242d8c2475e0dda883293f0ddcce3b03585cc85306"
+    },
+    "A1/train/1709": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1709.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1709,
+      "sequences": 20000,
+      "sha256": "f5d02a60222eeb1ef6549c8da5c7bc5619bcaf961497f21195d9ae4e0f22c7e7"
+    },
+    "A1/train/1710": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a1-1710.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1710,
+      "sequences": 20000,
+      "sha256": "35d3048ee3146e509a603dfe3bcf5db9e0bc53c232381cbc101a115a6c50887e"
+    },
+    "A2/E1": {
+      "materialized": false,
+      "post_freeze_path": "data/topk-pushdown-cpkv001/a2-e1.jsonl",
+      "range": [
+        13,
+        20
+      ],
+      "requires_checkpoint_freeze_receipt": true,
+      "seed": 9302,
+      "sequences": 10000,
+      "sha256_commitment": "81f66db37ac17bff3e07b80ad4ed2509b184288a1a39df7b21a500e035e669f9"
+    },
+    "A2/E2": {
+      "materialized": false,
+      "post_freeze_path": "data/topk-pushdown-cpkv001/a2-e2.jsonl",
+      "range": [
+        21,
+        32
+      ],
+      "requires_checkpoint_freeze_receipt": true,
+      "seed": 9303,
+      "sequences": 10000,
+      "sha256_commitment": "9edfe364c0c802668edcc17bba364db98114223128f2b824b52aa35f979bd8d2"
+    },
+    "A2/development": {
+      "materialized": true,
+      "path": "data/topk-pushdown-cpkv001/a2-development.jsonl",
+      "range": [
+        9,
+        12
+      ],
+      "seed": 9301,
+      "sequences": 5000,
+      "sha256": "8b6cff995ed8d7ae3fd5a6f3cdb3f84de04e1d0f92967f1fac96891fba8ad121"
+    },
+    "A2/train/1701": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1701.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1701,
+      "sequences": 20000,
+      "sha256": "e6d6a9a878ccbef246ca70686a4a25ef7d8fc6693a9e3c78a351837ca0062aba"
+    },
+    "A2/train/1702": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1702.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1702,
+      "sequences": 20000,
+      "sha256": "cac109a85df0cbcd4525c0f19fd8ab7a22573bc9751874f6419cdfe9b070e36e"
+    },
+    "A2/train/1703": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1703.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1703,
+      "sequences": 20000,
+      "sha256": "122b3d17d6a134c275782c090ba67a8be027ccbc0ac2bb6e75fce15e2352c74e"
+    },
+    "A2/train/1704": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1704.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1704,
+      "sequences": 20000,
+      "sha256": "2db0a1649edae63f1f1702951607d950c0cf1af2f70e6ee1f0fcb4900b418c6d"
+    },
+    "A2/train/1705": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1705.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1705,
+      "sequences": 20000,
+      "sha256": "a34517a3c4f0b39e628de5dce8a18d741f87892f2a4ef94e22646387265d3be6"
+    },
+    "A2/train/1706": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1706.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1706,
+      "sequences": 20000,
+      "sha256": "617c2ee9eb917acada1b3db0df8260b3be9ea84fc06e4ab2920fea007ae1e18b"
+    },
+    "A2/train/1707": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1707.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1707,
+      "sequences": 20000,
+      "sha256": "7a36c6ebee0bd5220e1140ee550ef08d515a1e6ff051200059955bd1e044550d"
+    },
+    "A2/train/1708": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1708.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1708,
+      "sequences": 20000,
+      "sha256": "e2ad8063f02b62730b31f358d7929492dff04f5c5e1ffaf641352c65afc5b563"
+    },
+    "A2/train/1709": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1709.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1709,
+      "sequences": 20000,
+      "sha256": "a93ef42c37dce09a05ba567db8ceac44f20b3001e7ed812964a9e1a34bc44fd9"
+    },
+    "A2/train/1710": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/a2-1710.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1710,
+      "sequences": 20000,
+      "sha256": "7629941e2cfa25d639ba6816a8c76c16f9bab3cd40a4a4db3a403db87a470eac"
+    },
+    "D1/E1": {
+      "materialized": false,
+      "post_freeze_path": "data/topk-pushdown-cpkv001/d1-e1.jsonl",
+      "range": [
+        13,
+        20
+      ],
+      "requires_checkpoint_freeze_receipt": true,
+      "seed": 9102,
+      "sequences": 10000,
+      "sha256_commitment": "6d12a4a8a981f6859b9dacc89ed747985d84b972256080d42d576efce51187a6"
+    },
+    "D1/E2": {
+      "materialized": false,
+      "post_freeze_path": "data/topk-pushdown-cpkv001/d1-e2.jsonl",
+      "range": [
+        21,
+        32
+      ],
+      "requires_checkpoint_freeze_receipt": true,
+      "seed": 9103,
+      "sequences": 10000,
+      "sha256_commitment": "b565be90e3cb9cda889661e3c0293bbe68c09f1bf291e6f129b4972d04009b0d"
+    },
+    "D1/development": {
+      "materialized": true,
+      "path": "data/topk-pushdown-cpkv001/d1-development.jsonl",
+      "range": [
+        9,
+        12
+      ],
+      "seed": 9101,
+      "sequences": 5000,
+      "sha256": "f7103fc2a50b7387fba96d66162b6e0008aa2e4890522a1dc18f43752860b609"
+    },
+    "D1/train/1701": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1701.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1701,
+      "sequences": 20000,
+      "sha256": "c1d02b5abaabb472e7f4573f7870238cf6b1009fc5967ab8c42453498dccacba"
+    },
+    "D1/train/1702": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1702.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1702,
+      "sequences": 20000,
+      "sha256": "7abd4b6c7e45e49a84741ecc3479a6215345e0b90892cac4c748c8d49153c9d2"
+    },
+    "D1/train/1703": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1703.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1703,
+      "sequences": 20000,
+      "sha256": "65742aa75994cbd5d43ca28f1872167b12cd1905777bc47a4c034bb8af76e6fe"
+    },
+    "D1/train/1704": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1704.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1704,
+      "sequences": 20000,
+      "sha256": "35438c30827ae075a582fd247d4bfbf9a57f38217994ecbbd2a93136c9b2639e"
+    },
+    "D1/train/1705": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1705.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1705,
+      "sequences": 20000,
+      "sha256": "40b65cd4b8aeefa27ca8676e982b4ab097cf34957a48b5271e60bbfa200f3636"
+    },
+    "D1/train/1706": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1706.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1706,
+      "sequences": 20000,
+      "sha256": "d003ca82fd80529a59dadf575d8fb6ee8034e6c96c18cc5ee4ba7fb5b58c4fd1"
+    },
+    "D1/train/1707": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1707.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1707,
+      "sequences": 20000,
+      "sha256": "75baa0dbb1c5842a3d6acff043440ff0dbe82fc55c8434ad26cf02905d1feacc"
+    },
+    "D1/train/1708": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1708.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1708,
+      "sequences": 20000,
+      "sha256": "2b6491d44160a535200a88d3b6d198413b116717883b9d0962433e969342039d"
+    },
+    "D1/train/1709": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1709.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1709,
+      "sequences": 20000,
+      "sha256": "cd1309962a92ad2ab07dd3aee73e9149e8e764e77fa02207a951b763e78b7f5f"
+    },
+    "D1/train/1710": {
+      "materialized": true,
+      "paired_across_arms": true,
+      "path": "data/topk-pushdown-cpkv001/train/d1-1710.jsonl",
+      "range": [
+        1,
+        8
+      ],
+      "seed": 1710,
+      "sequences": 20000,
+      "sha256": "ea2efefe439de1335a0ff9c1af09f8dd2ba33410651bd1c5066129da2ceb20be"
+    }
+  },
+  "lineage": "CPKV-TOPK-001",
+  "model": {
+    "actions": 15,
+    "control_states": 3,
+    "dense_macs_per_token_formula": "12288 + 960 + 4096 + 128*V",
+    "hidden_width": 64,
+    "parameter_counts": {
+      "A1": 18360,
+      "A2": 18553,
+      "D1": 18746
+    },
+    "parameter_formula": "193*V + 17588",
+    "payload_width": 64,
+    "served_beams": [
+      1,
+      2,
+      3
+    ],
+    "stack_module_parameters": 5236,
+    "stack_symbols": 3,
+    "training_beam": 32
+  },
+  "oracle_receipt": {
+    "checked_sequences": 127,
+    "max_length": 6,
+    "path": "results/topk-compiled-pushdown-oracle.json",
+    "sha256": "c5352de03d6d7800fe4076b895cde130cd8de38b4f24de2eacde8a0406fdac7e",
+    "x4_top3_history_mass": 0.75
+  },
+  "precision": {
+    "evaluation_probabilities_and_kl": "float64",
+    "learned_tensors": "float32",
+    "persistent_index": "uint32",
+    "served_payload": "bfloat16"
+  },
+  "preflight_receipt": {
+    "path": "results/topk-pushdown-preflight.json",
+    "projected_all_arm_cpu_hours": {
+      "A1": 2.9465357424038214,
+      "A2": 4.177989083431658,
+      "D1": 2.976589385288671
+    },
+    "projection_limit_hours": 5.7,
+    "sha256": "9f0a41ac30e51ca12259b35982e32017587a199ff1aaa93bc5f98f1539037bbe"
+  },
+  "schema": "cpkv-topk-001-manifest-v1",
+  "served_resource_ledger": {
+    "candidate": {
+      "bounded_per_sequence_beam_bytes": 52,
+      "dense_macs_per_token": "1271*d",
+      "minimum_d": 512,
+      "persistent_bytes_per_token_k3": 176,
+      "reserved_scalar_equivalents": "9*d",
+      "sparse_branch_scalar_equivalents_upper_bound": 3700,
+      "swi_glu_width": 376
+    },
+    "removed_gqa_group": {
+      "cache_bytes_per_token": 512,
+      "projection_macs_and_coefficients": "1280*d",
+      "shape": {
+        "g": 4,
+        "h": 128,
+        "kv_dtype_bytes": 2
+      }
+    }
+  },
+  "source_hashes": {
+    "candidate": {
+      "path": "results/compiled-pushdown-kv-substitution-paper-candidate.md",
+      "sha256": "f25370e222105693ccdc21792df28056f71150ed07d68fe0b39e4837bf915d68"
+    },
+    "evaluator": {
+      "path": "experiments/topk_compiled_pushdown_evaluator.py",
+      "sha256": "c537e9e8655da5deed920e28fde6f1beeaa013e0d910282959b37513f71d4480"
+    },
+    "evaluator_tests": {
+      "path": "tests/test_topk_compiled_pushdown_evaluator.py",
+      "sha256": "9824bbc5b0a306198be48b4bc4fb7f488266b44da2576f279ca547dcf99c2d4f"
+    },
+    "locked_evaluation": {
+      "path": "experiments/topk_compiled_pushdown_locked_eval.py",
+      "sha256": "d7cadcb82ba8f25b92ddc96f01a0f38cc60fb375fa0e8fcb592d43a4a9657086"
+    },
+    "locked_evaluation_tests": {
+      "path": "tests/test_topk_compiled_pushdown_locked_eval.py",
+      "sha256": "975c28322940736d714b0ed70226f342fb2bae01fd36aff2c590c20038744d73"
+    },
+    "preflight": {
+      "path": "experiments/topk_compiled_pushdown_preflight.py",
+      "sha256": "52fee730fede580b326a76832835beb556ec325a034e24af32b146ed24f86a69"
+    },
+    "preflight_tests": {
+      "path": "tests/test_topk_compiled_pushdown_preflight.py",
+      "sha256": "4589f283474f21d070c4461ca1a8a1d0324cba192f3f2c117ac796f0a9de79c5"
+    },
+    "preregistration": {
+      "path": "results/topk-compiled-pushdown-acquisition-preregistration.md",
+      "sha256": "326751c64410a22ad06db00511b5c0409c146d5c6822d9c9ff396c3692616814"
+    },
+    "reference": {
+      "path": "experiments/topk_compiled_pushdown_reference.py",
+      "sha256": "bc4a23056f640e1522d3cc2337c17699a5a261cdff24a1409f83d1290087c63e"
+    },
+    "reference_tests": {
+      "path": "tests/test_topk_compiled_pushdown_reference.py",
+      "sha256": "1c54888f198aeb6b24fc58261263fc5f71d6ef2a8f7add1ecb96f702359be7bb"
+    },
+    "training": {
+      "path": "experiments/topk_compiled_pushdown_train.py",
+      "sha256": "a0d164f432ca66b8cf3e2b3fb4ab4aa9130682ae20bd61b12ef6f8508a7f2aea"
+    },
+    "training_tests": {
+      "path": "tests/test_topk_compiled_pushdown_train.py",
+      "sha256": "4734b2f0f0a8cfd67bd9ed58e27d26436a023a8fef6472276438690c9aaf6b34"
+    }
+  },
+  "status": "oracle-data-and-training-protocol-frozen",
+  "token_maps": {
+    "A1": [
+      "BOS",
+      "EOS",
+      "0",
+      "1"
+    ],
+    "A2": [
+      "BOS",
+      "EOS",
+      "a",
+      "b",
+      "c"
+    ],
+    "D1": [
+      "BOS",
+      "EOS",
+      "open0",
+      "open1",
+      "close0",
+      "close1"
+    ]
+  },
+  "training_protocol": {
+    "adamw_decay": "decay only 2D learned matrices including embeddings; exclude biases, transition table, and gains",
+    "batching": "64 sequences, no padding; sum per-sequence target losses and divide by total non-BOS targets including EOS",
+    "determinism": "CPU only; torch.use_deterministic_algorithms(True); one torch intra-op thread; no mixed precision",
+    "hard3": "straight-through argmax without sampling noise",
+    "initialization": {
+      "biases": "zero",
+      "control_gains": "one",
+      "dense_matrices": "xavier_uniform(gain=1)",
+      "embedding": "normal(mean=0,std=0.02)",
+      "rng": "PCG64DXSM(little_endian_uint64(SHA256(f'{model_seed}:{parameter_name}')[:8]))",
+      "transition_table": "normal(mean=0,std=0.02)",
+      "xavier_bounds": "+-sqrt(6/(fan_in+fan_out))"
+    },
+    "minibatch_order": "PCG64DXSM(model_seed+100000+epoch), one fixed permutation per epoch shared across arms",
+    "model_seeds": [
+      1701,
+      1702,
+      1703,
+      1704,
+      1705,
+      1706,
+      1707,
+      1708,
+      1709,
+      1710
+    ],
+    "paired_training_file_across_arms": true,
+    "runtime_requirement": "CPython 3.14, torch==2.13.0 CPU wheel",
+    "trained_arms": [
+      "S32",
+      "DIRECT3",
+      "HARD3",
+      "MLP",
+      "RNN32",
+      "LINK32"
+    ]
+  }
+}

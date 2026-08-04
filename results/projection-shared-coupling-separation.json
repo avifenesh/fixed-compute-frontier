@@ -1,0 +1,14 @@
+{
+  "schema": "projection-shared-coupling-separation-v1",
+  "points": 4096,
+  "q": 0.7,
+  "coefficient_cap": 1.0,
+  "mse": {
+    "linear": 0.24499999999999997,
+    "coupling": 4.592583077815186e-31
+  },
+  "bounded_self_hinge_mse": 0.12249999999999998,
+  "linear_gap": 0.24499999999999997,
+  "coupling_exact": true,
+  "coupling_separates_from_bounded_self_hinge": true
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "candidate": "Cayley-conjugated diagonal conditional expert",
+  "source_sha256": "9dc81cdcb8c5a072146649364e7ed0819a2ba0e7049e07b2246ab9bbc61b2878",
+  "preregistration_sha256": "82975527bb4f4fe9a17e09273d3c53796dc2617c7393f9cc4b8c9cf723e60275",
+  "width": 16,
+  "seed": 20260730,
+  "additive_memory_controls": [
+    {
+      "active_experts": 1,
+      "update_jacobian_rank": 1,
+      "rank_upper_bound": 1,
+      "finite_difference_relative_error": 1.1540912139666249e-10,
+      "active_learned_payload_scalars": 32
+    },
+    {
+      "active_experts": 4,
+      "update_jacobian_rank": 4,
+      "rank_upper_bound": 4,
+      "finite_difference_relative_error": 5.401235420001696e-10,
+      "active_learned_payload_scalars": 128
+    },
+    {
+      "active_experts": 8,
+      "update_jacobian_rank": 8,
+      "rank_upper_bound": 8,
+      "finite_difference_relative_error": 2.450552504919128e-10,
+      "active_learned_payload_scalars": 256
+    }
+  ],
+  "cayley_expert": {
+    "update_jacobian_rank": 16,
+    "update_jacobian_density": 1.0,
+    "finite_difference_relative_error": 3.335908375267827e-10,
+    "active_learned_payload_scalars": 48,
+    "single_basis_jacobian_family_dimension": 16
+  },
+  "scaled_ledger": {
+    "width": 4096,
+    "degree": 3,
+    "neumann_order_each_direction": 4,
+    "cayley_multiply_like_active_upper_bound": 114688,
+    "dense_expert_macs": 16777216,
+    "cayley_to_dense_ratio": 0.0068359375,
+    "cayley_active_payload_scalars": 12288,
+    "dense_active_payload_scalars": 16777216,
+    "excluded": [
+      "routing",
+      "indices and additions",
+      "SiLU",
+      "gathers and synchronization",
+      "physical kernel efficiency"
+    ]
+  },
+  "frozen_gates": {
+    "all_analytic_jacobians_match_finite_difference": true,
+    "additive_memory_obeys_active_expert_rank_bound": true,
+    "one_cayley_edge_is_dense_and_full_rank": true,
+    "cayley_payload_is_exactly_three_vectors": true,
+    "dense_full_rank_control_pays_quadratic_payload_and_macs": true,
+    "scaled_cayley_active_ratio_is_below_one_percent": true,
+    "single_basis_restriction_is_disclosed": true
+  },
+  "all_gates_pass": true,
+  "claim_boundary": {
+    "proved_if_pass": [
+      "rank-k local bound for k active additive vector experts",
+      "full-rank local update from one three-vector Cayley expert",
+      "sub-one-percent ideal active multiply ratio at width 4096"
+    ],
+    "not_proved": [
+      "quality",
+      "independent memory per composed path",
+      "router learnability",
+      "GPU speed",
+      "broad novelty"
+    ]
+  }
+}

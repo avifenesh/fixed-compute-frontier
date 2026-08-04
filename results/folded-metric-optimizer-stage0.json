@@ -1,0 +1,40 @@
+{
+  "all_gates_pass": true,
+  "candidate": "folded-learned-metric-optimizer",
+  "claim_boundary": {
+    "not_proved": "AdamW language-loss gain, superiority to a matrix-LR control, or novelty",
+    "paid_cost": "training-only factor and moment state plus weight-space products",
+    "proved": "optimizer-side factor state exactly reproduces the redundant low-rank training chart under SGD while the model remains an ordinary dense model"
+  },
+  "gate": "G0-exact-optimizer-chart-and-served-ledger",
+  "gates": {
+    "learning_A_becomes_distinct_from_fixed_metric": true,
+    "model_and_served_ledgers_are_identical": true,
+    "optimizer_side_fold_matches_redundant_chart": true,
+    "zero_B_first_step_is_low_rank_left_preconditioner": true
+  },
+  "metrics": {
+    "maximum_folded_vs_redundant_update_error": 0.0,
+    "maximum_zero_B_first_step_formula_error": 4.40619762898109e-16,
+    "minimum_second_step_learned_vs_fixed_A_difference": 1.099011556927462e-07
+  },
+  "resource_ledger": {
+    "candidate_targeted_served_weight_scalars": 18874368,
+    "dimension": 384,
+    "extra_model_state_scalars": 0,
+    "extra_optimizer_factor_fraction_of_full_37m_model": 0.03449643543613786,
+    "extra_optimizer_factor_scalars": 1302528,
+    "extra_served_macs": 0,
+    "extra_served_parameters": 0,
+    "fixed_a_extra_macs_per_optimizer_update": 905969664,
+    "layers": 12,
+    "learned_ab_extra_macs_per_optimizer_update": 1207959552,
+    "rank": 16,
+    "single_factor_product_macs": 301989888,
+    "targeted_served_weight_scalars": 18874368,
+    "width": 1024
+  },
+  "seed": 331,
+  "source_sha256": "6941f0283618f36eb38028a751b0c93de1813c02ee89873fb1ee0e72f4645630",
+  "trials": 128
+}

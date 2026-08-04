@@ -1,0 +1,15 @@
+{
+  "run": {
+    "best_step": 2,
+    "elapsed_seconds": 0.016756680968683213,
+    "model_seed": 455802682,
+    "steps": 2,
+    "target": "hierarchical",
+    "test_nrmse": 0.8393868207931519,
+    "train_nrmse": 0.8390405178070068,
+    "validation_nrmse": 0.8432460427284241,
+    "variant": "feature_dag",
+    "world_seed": 31013
+  },
+  "status": "smoke"
+}

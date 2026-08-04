@@ -1,0 +1,125 @@
+{
+  "black_box_reconstruction": {
+    "basis_probes": 9265,
+    "max_error": 0.0,
+    "mismatches": 0,
+    "sequences": 85
+  },
+  "claim_boundary": "Exact D_109, monomial-affine, lazy-frame, codec, error-bound, and ledger claims only; no routing-learnability, natural-language, GPU, novelty, or production claim.",
+  "codec": {
+    "a_levels": 16,
+    "b_levels": 16,
+    "clipped_coordinates": 0,
+    "group_codes": 218,
+    "group_roundtrip_failures": 0,
+    "max_bf16_a_error": 0.0,
+    "max_bf16_b_error": 0.0,
+    "max_one_trigger_bound": 0.307525634765625,
+    "max_one_trigger_error": 0.29470486111111116,
+    "max_two_trigger_bound": 0.31901041666666663,
+    "max_two_trigger_error": 0.23046875,
+    "one_trigger_bound_violations": 0,
+    "one_trigger_cases": 114660,
+    "two_trigger_bound_violations": 0,
+    "two_trigger_cases": 37044,
+    "worst_one_trigger_witness": {
+      "bound": 0.296875,
+      "document_length": 5,
+      "error": 0.29470486111111116,
+      "group_code": 17,
+      "incoming_state_index": 2,
+      "suffix_length": 0
+    }
+  },
+  "exact_forms": {
+    "max_fold_error": 0.0,
+    "max_state_error": 4.440892098500626e-16,
+    "mismatches": 0,
+    "sequences": 1365,
+    "state_evaluations": 5460
+  },
+  "experiment": "dihedral-monomial-prefix-t30-stage0",
+  "gates": {
+    "black_box": true,
+    "codec": true,
+    "exact_forms": true,
+    "group": true,
+    "lazy_frame": true,
+    "ledger": true,
+    "separation": true,
+    "title_substitution": true
+  },
+  "group": {
+    "action_failures": 0,
+    "associativity_failures": 0,
+    "code_failures": 0,
+    "elements": 218,
+    "identity_failures": 0,
+    "inverse_failures": 0,
+    "nibble_failures": 0,
+    "ordered_pairs": 47524,
+    "ordered_triples": 10360232
+  },
+  "integrity": {
+    "paper_sha256": "79093931f90ef2afc4dc46b4924d7c6248e56eccee231dcca6bf913e781564a3",
+    "preregistration_sha256": "e8daed5f6c0f41fa8c8123086249a113c73132fbcd91b97ea228267266177297",
+    "source_sha256": "5432c7d564db6ab6f71e5164ec3c4d772180b6978cbee9f760e9b24b6311c382",
+    "test_sha256": "01320ee5ceb7168cc1e349071baa3f573f3bf3839fcb2913ab59b9da4af12ef4"
+  },
+  "lazy_frame": {
+    "additions": 2778192,
+    "cases": 5460,
+    "frame_failures": 0,
+    "max_error": 0.0,
+    "multiplies": 2778192,
+    "physical_permutation_copies": 0,
+    "physical_vector_reads": 2778192,
+    "physical_vector_writes": 2778192
+  },
+  "ledger": {
+    "additions_per_token": 109,
+    "address_gate_entries": 76960,
+    "cap_entries": 743734,
+    "documents": 2405,
+    "frame_bytes": 2,
+    "logical_bits_per_document": 880,
+    "multiplies_per_token": 109,
+    "payload_entries": 529100,
+    "record_cells": 220,
+    "spare_entries": 64,
+    "state_reads_per_token": 109,
+    "state_value_bytes": 218,
+    "state_width": 109,
+    "state_writes_per_token": 109,
+    "threshold_entries": 2405,
+    "title_code_entries": 132800,
+    "total_entries": 743670,
+    "total_state_bytes": 220,
+    "up_constant_entries": 2405
+  },
+  "runtime": {
+    "device": "cpu",
+    "numpy": "2.5.1",
+    "python": "3.12.3",
+    "torch": "2.11.0+cu128",
+    "wall_seconds": 28.91338957985863
+  },
+  "separation": {
+    "diagonal_reduction_max_error": 0.0,
+    "distinct_group_actions": 218,
+    "materialized_matrices_differ": true,
+    "ordered_noncommuting_token_pairs": 12,
+    "tau_rho_differs_from_rho_tau": true,
+    "tau_rho_tau_equals_rho_inverse": true,
+    "two_marker_max_difference": 2.0
+  },
+  "status": "PASS",
+  "title_substitution": {
+    "insensitive_wrong_document_pairs": 0,
+    "max_error": 2.220446049250313e-16,
+    "mismatches": 0,
+    "single_title_cases": 148176,
+    "two_title_cases": 200000,
+    "unequal_document_operator_pairs": 210
+  }
+}

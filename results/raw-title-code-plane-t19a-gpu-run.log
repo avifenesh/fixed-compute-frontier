@@ -1,0 +1,105 @@
+.....                                                                    [100%]
+5 passed in 2.51s
+{"arm": "compiled_1x", "natural_loss": 6.693950653076172, "router_loss": 0.08988668024539948, "step": 500}
+{"arm": "compiled_1x", "natural_loss": 6.1840338706970215, "router_loss": 0.035553544759750366, "step": 1000}
+{"arm": "compiled_1x", "natural_loss": 5.678386688232422, "router_loss": 0.019664689898490906, "step": 1500}
+{"arm": "compiled_1x", "natural_loss": 5.9419474601745605, "router_loss": 0.006824064068496227, "step": 2000}
+{"arm": "compiled_1x", "natural_loss": 5.778047561645508, "router_loss": 0.002862469293177128, "step": 2500}
+{"arm": "compiled_1x", "natural_loss": 5.893418788909912, "router_loss": 0.00208982452750206, "step": 3000}
+{"arm": "gradient_1x", "natural_loss": 6.714933395385742, "router_loss": 0.19873672723770142, "step": 500}
+{"arm": "gradient_1x", "natural_loss": 6.224796295166016, "router_loss": 0.04501888155937195, "step": 1000}
+{"arm": "gradient_1x", "natural_loss": 5.714993953704834, "router_loss": 0.019131947308778763, "step": 1500}
+{"arm": "gradient_1x", "natural_loss": 5.968371391296387, "router_loss": 0.007582210004329681, "step": 2000}
+{"arm": "gradient_1x", "natural_loss": 5.802380561828613, "router_loss": 0.0023468127474188805, "step": 2500}
+{"arm": "gradient_1x", "natural_loss": 5.904837131500244, "router_loss": 0.0014174692332744598, "step": 3000}
+{"arm": "gradient_2x", "natural_loss": 6.714933395385742, "router_loss": 0.19873672723770142, "step": 500}
+{"arm": "gradient_2x", "natural_loss": 6.218426704406738, "router_loss": 0.04633454233407974, "step": 1000}
+{"arm": "gradient_2x", "natural_loss": 5.73770809173584, "router_loss": 0.029261793941259384, "step": 1500}
+{"arm": "gradient_2x", "natural_loss": 6.021012306213379, "router_loss": 0.01869843527674675, "step": 2000}
+{"arm": "gradient_2x", "natural_loss": 5.838688850402832, "router_loss": 0.01295663695782423, "step": 2500}
+{"arm": "gradient_2x", "natural_loss": 5.964214324951172, "router_loss": 0.009384973905980587, "step": 3000}
+{"arm": "gradient_2x", "natural_loss": 5.935793399810791, "router_loss": 0.005440182983875275, "step": 3500}
+{"arm": "gradient_2x", "natural_loss": 5.420525550842285, "router_loss": 0.00382042583078146, "step": 4000}
+{"arm": "gradient_2x", "natural_loss": 5.711676597595215, "router_loss": 0.0021826885640621185, "step": 4500}
+{"arm": "gradient_2x", "natural_loss": 5.296189308166504, "router_loss": 0.001503070816397667, "step": 5000}
+{"arm": "gradient_2x", "natural_loss": 5.548635959625244, "router_loss": 0.0012867366895079613, "step": 5500}
+{"arm": "gradient_2x", "natural_loss": 5.456538200378418, "router_loss": 0.0010912716388702393, "step": 6000}
+{
+  "all_gates_pass": false,
+  "failed_gates": [
+    "candidate_beats_gradient_2x_by_10pp_all_surfaces",
+    "candidate_exact_all_surfaces"
+  ],
+  "output": "results/raw-title-code-plane-t19a.json",
+  "route": {
+    "compiled_1x": {
+      "canonical": {
+        "accuracy": 1.0,
+        "errors": 0,
+        "examples": 2405,
+        "mean_target_margin": 0.35101234912872314,
+        "minimum_target_margin": 0.00535815954208374
+      },
+      "held_wrappers": {
+        "accuracy": 0.9966735966735967,
+        "errors": 16,
+        "examples": 4810,
+        "mean_target_margin": 0.29343363642692566,
+        "minimum_target_margin": -0.2077905237674713
+      },
+      "natural_question_surfaces": {
+        "accuracy": 0.9951923076923077,
+        "errors": 1,
+        "examples": 208,
+        "mean_target_margin": 0.3211006820201874,
+        "minimum_target_margin": -0.15405893325805664
+      }
+    },
+    "gradient_1x": {
+      "canonical": {
+        "accuracy": 1.0,
+        "errors": 0,
+        "examples": 2405,
+        "mean_target_margin": 0.35219451785087585,
+        "minimum_target_margin": 0.0198020339012146
+      },
+      "held_wrappers": {
+        "accuracy": 0.9733887733887734,
+        "errors": 128,
+        "examples": 4810,
+        "mean_target_margin": 0.2800140082836151,
+        "minimum_target_margin": -0.4858788847923279
+      },
+      "natural_question_surfaces": {
+        "accuracy": 0.9855769230769231,
+        "errors": 3,
+        "examples": 208,
+        "mean_target_margin": 0.2872112989425659,
+        "minimum_target_margin": -0.1918545365333557
+      }
+    },
+    "gradient_2x": {
+      "canonical": {
+        "accuracy": 0.9995841995841996,
+        "errors": 1,
+        "examples": 2405,
+        "mean_target_margin": 0.35318711400032043,
+        "minimum_target_margin": -0.002079606056213379
+      },
+      "held_wrappers": {
+        "accuracy": 0.9706860706860707,
+        "errors": 141,
+        "examples": 4810,
+        "mean_target_margin": 0.28249549865722656,
+        "minimum_target_margin": -0.5040982961654663
+      },
+      "natural_question_surfaces": {
+        "accuracy": 0.9807692307692307,
+        "errors": 4,
+        "examples": 208,
+        "mean_target_margin": 0.2991749942302704,
+        "minimum_target_margin": -0.22537612915039062
+      }
+    }
+  }
+}

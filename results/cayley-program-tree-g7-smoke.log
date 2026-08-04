@@ -1,0 +1,54 @@
+{"status": "building_candidate"}
+{"status": "starting_optimizer_step"}
+{
+  "arguments": {
+    "gradient_clip": 1.0,
+    "micro_batch_size": 8,
+    "output": "results/cayley-program-tree-g7-smoke.json",
+    "router_aux_weight": 0.01,
+    "seed": 815,
+    "sequence_length": 512,
+    "train_file": "data/block-algebra-scratch-v4576/train.uint16.bin"
+  },
+  "data_sha256": "1871a8a790e2b2ae5273f1a46bc9fa2e39cbe95d5cb7537bde5a2b3e35cb464a",
+  "environment": {
+    "cuda": "13.0",
+    "device_total_bytes": 101975851008,
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.12.1+cu130",
+    "transformers": "4.57.6"
+  },
+  "language_preregistration_sha256": "91e68ab40d58c00ab51b6e5710ca3fe3e7ff8ae3a5e207764f5e234f735fdae5",
+  "ledger": {
+    "baseline_dense_macs": 1179648,
+    "baseline_swiglu_parameters": 1179648,
+    "candidate_multiply_like_active_upper_bound": 96768,
+    "candidate_parameters": 1179583,
+    "generator_parameters": 1728,
+    "hard_path_payload_scalars": 10368,
+    "ideal_active_ratio": 0.08203125,
+    "nodes": 511,
+    "parameter_difference": -65,
+    "payload_parameters": 1177344,
+    "threshold_parameters": 511
+  },
+  "measurement": {
+    "elapsed_seconds": 2.4899985730007757,
+    "finite": false,
+    "gradient_norm": NaN,
+    "language_loss": NaN,
+    "peak_allocated_bytes": 45303045120,
+    "peak_reserved_bytes": 49383735296,
+    "router_auxiliary": NaN
+  },
+  "module_sha256": "166ce56d7e619d1d9a9ea35346d3b474d1f0dd05babbb735f9beff6f6725ff8b",
+  "parameters": {
+    "ffn": 14154996,
+    "total": 37752948
+  },
+  "pass": false,
+  "pilot_source_sha256": "ace68e73e32bd1efd712b1850ea8425e155edf5d4075afb00f6f84b083463235",
+  "preregistration_sha256": "c28542addc8963758c669a57b56497da83f88e84f6667128af21f5fb1650f868",
+  "schema": "cayley-program-tree-g7-smoke-v1",
+  "source_sha256": "20ab617532dd9690f57ee68ddbf0d1c98313efe91d28835b2a3fa2e3a0c0a043"
+}

@@ -1,0 +1,12 @@
+{
+  "cuda_version": "12.4",
+  "numpy_version": "2.1.2",
+  "preregistration_sha256": "269652a4d4fa81451f7410205610807d023f964bf5ea9e8121c3cbd303714884",
+  "prior_long_horizon_manifest_sha256": "afcc9bf3b4de3b93a52f3b7957dd6e69fcd96460ab5bc650fa973664eb0915fc",
+  "prior_long_horizon_result_sha256": "f0877ce5aad20bbfa7629558e92bf61c26f7d575d675986956abbbf76d150e61",
+  "python_version": "3.11.10",
+  "screen_source_sha256": "5c493c730ac793124a96ead070648d35be285d1c6fa333a8ff38674f9a4cce54",
+  "torch_version": "2.5.1+cu124",
+  "transformers_version": "4.57.6",
+  "triton_version": "3.1.0"
+}

@@ -1,0 +1,288 @@
+{
+  "all_gates_pass": false,
+  "block_pair": {
+    "b1_t1": {
+      "candidate_over_baseline": 0.885703135879774,
+      "candidate_over_baseline_peak": 2.3537371134020617,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 794624,
+        "candidate": 1870336
+      },
+      "iterations_per_trial": 200,
+      "median_ms": {
+        "baseline": 0.268034725189209,
+        "candidate": 0.23739919662475586
+      },
+      "trials_ms": {
+        "baseline": [
+          0.2768374443054199,
+          0.268034725189209,
+          0.26214879989624024,
+          0.2535219192504883,
+          0.2702436828613281
+        ],
+        "candidate": [
+          0.23739919662475586,
+          0.23606048583984374,
+          0.2689204788208008,
+          0.23293344497680665,
+          0.30116512298583986
+        ]
+      }
+    },
+    "b1_t128": {
+      "candidate_over_baseline": 0.9614765521287171,
+      "candidate_over_baseline_peak": 2.5559659090909093,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 1802240,
+        "candidate": 4606464
+      },
+      "iterations_per_trial": 200,
+      "median_ms": {
+        "baseline": 0.25461023330688476,
+        "candidate": 0.2448017692565918
+      },
+      "trials_ms": {
+        "baseline": [
+          0.25897056579589844,
+          0.2521211242675781,
+          0.25461023330688476,
+          0.25225664138793946,
+          0.2641972732543945
+        ],
+        "candidate": [
+          0.25000255584716796,
+          0.2448017692565918,
+          0.24308448791503906,
+          0.24200096130371093,
+          0.35080833435058595
+        ]
+      }
+    },
+    "b32_t128": {
+      "candidate_over_baseline": 1.4776446273801966,
+      "candidate_over_baseline_peak": 2.7999131944444446,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 37748736,
+        "candidate": 105693184
+      },
+      "iterations_per_trial": 50,
+      "median_ms": {
+        "baseline": 0.25213184356689455,
+        "candidate": 0.3725612640380859
+      },
+      "trials_ms": {
+        "baseline": [
+          0.2521561622619629,
+          0.25213184356689455,
+          0.2503526306152344,
+          0.25082304000854494,
+          0.2602207946777344
+        ],
+        "candidate": [
+          0.3751340866088867,
+          0.37522369384765625,
+          0.3723923110961914,
+          0.3725612640380859,
+          0.3725606536865234
+        ]
+      }
+    },
+    "b8_t128": {
+      "candidate_over_baseline": 1.0341593590720026,
+      "candidate_over_baseline_peak": 2.499609375,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 10485760,
+        "candidate": 26210304
+      },
+      "iterations_per_trial": 50,
+      "median_ms": {
+        "baseline": 0.34374462127685546,
+        "candidate": 0.3554867172241211
+      },
+      "trials_ms": {
+        "baseline": [
+          0.40454975128173826,
+          0.31278400421142577,
+          0.2762656021118164,
+          0.34854976654052733,
+          0.34374462127685546
+        ],
+        "candidate": [
+          0.3550201416015625,
+          0.3554867172241211,
+          0.36815807342529294,
+          0.401448974609375,
+          0.24126399993896486
+        ]
+      }
+    }
+  },
+  "claim_boundary": "This is an unfused eager H100 runtime gate. Passing does not prove capability; failure requires a fused operator before training.",
+  "cuda_version": "12.8",
+  "device": "NVIDIA H100 80GB HBM3",
+  "gates": {
+    "block_latency_noninferior": false,
+    "block_parameter_count_exact": true,
+    "block_peak_allocation_noninferior": false,
+    "environment_h100_or_h200": true,
+    "finite_measurements": true,
+    "matrix_mac_ledger_exact": true,
+    "model_latency_noninferior": true,
+    "model_parameter_count_exact": true,
+    "model_peak_allocation_noninferior": true
+  },
+  "integrity": {
+    "preregistration_sha256": "220fdd40f7c19bd7033cbd6399f3d9b1e11bd634a1f591da1186d0780f25a15a",
+    "source_sha256": "836f6e4270f6c2ae0d21099a60c59adca832550ee5fd51a2ad14b18fabd115aa",
+    "stage0_result_sha256": "ba2ac04c370a4c000b513438ac30ce5b5fccd0d6856ba98861198ea83db47126",
+    "stage0_source_sha256": "25c01d95905ffb6026cefa855d9a882f4deecd76a9ea63e2f9e9ef0e1908c628"
+  },
+  "matrix_macs_per_token": {
+    "baseline": 2359296,
+    "candidate": 2359296
+  },
+  "parameter_counts": {
+    "block_pair": {
+      "baseline": 2360064,
+      "candidate": 2360064
+    },
+    "whole_model": {
+      "baseline": 36577152,
+      "candidate": 36577152
+    }
+  },
+  "protocol": {
+    "block_surfaces": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        128
+      ],
+      [
+        8,
+        128
+      ],
+      [
+        32,
+        128
+      ]
+    ],
+    "cuda_graph": false,
+    "custom_kernel": false,
+    "model_surfaces": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        128
+      ],
+      [
+        8,
+        128
+      ]
+    ],
+    "precision": "bfloat16_autocast_fp32_parameters",
+    "seed": 10109,
+    "torch_compile": false,
+    "trials": 5,
+    "warmups_per_trial": 20
+  },
+  "schema": "budget-neutral-soft-record-t18-runtime-v1",
+  "status": "fail",
+  "torch_version": "2.11.0+cu128",
+  "whole_model": {
+    "b1_t1": {
+      "candidate_over_baseline": 1.0090128922516992,
+      "candidate_over_baseline_peak": 1.0,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 37849600,
+        "candidate": 37849600
+      },
+      "iterations_per_trial": 50,
+      "median_ms": {
+        "baseline": 6.268621826171875,
+        "candidate": 6.325120239257813
+      },
+      "trials_ms": {
+        "baseline": [
+          6.268621826171875,
+          6.678071899414062,
+          7.05959228515625,
+          5.99358642578125,
+          5.96071533203125
+        ],
+        "candidate": [
+          6.050457763671875,
+          7.0862579345703125,
+          7.239135131835938,
+          6.325120239257813,
+          5.995904541015625
+        ]
+      }
+    },
+    "b1_t128": {
+      "candidate_over_baseline": 1.0070451526320834,
+      "candidate_over_baseline_peak": 1.0,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 51623936,
+        "candidate": 51623936
+      },
+      "iterations_per_trial": 50,
+      "median_ms": {
+        "baseline": 6.234374389648438,
+        "candidate": 6.2782965087890625
+      },
+      "trials_ms": {
+        "baseline": [
+          6.234374389648438,
+          6.170850830078125,
+          6.185509033203125,
+          6.27209716796875,
+          6.252771606445313
+        ],
+        "candidate": [
+          6.2940130615234375,
+          6.24731201171875,
+          6.2782965087890625,
+          6.3671630859375,
+          6.269365844726562
+        ]
+      }
+    },
+    "b8_t128": {
+      "candidate_over_baseline": 1.0067957088935233,
+      "candidate_over_baseline_peak": 1.0,
+      "incremental_peak_allocated_bytes": {
+        "baseline": 140771328,
+        "candidate": 140771328
+      },
+      "iterations_per_trial": 10,
+      "median_ms": {
+        "baseline": 6.257583999633789,
+        "candidate": 6.30010871887207
+      },
+      "trials_ms": {
+        "baseline": [
+          6.257583999633789,
+          6.2135265350341795,
+          8.23443832397461,
+          6.27204475402832,
+          6.247536087036133
+        ],
+        "candidate": [
+          6.2819358825683596,
+          6.337033462524414,
+          6.290393447875976,
+          6.31872329711914,
+          6.30010871887207
+        ]
+      }
+    }
+  }
+}

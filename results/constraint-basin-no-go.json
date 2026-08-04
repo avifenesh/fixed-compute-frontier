@@ -1,0 +1,61 @@
+{
+  "binary_step_is_threshold_bit_flipping": {
+    "binary_states": 128,
+    "coordinate_checks": 2688,
+    "couplings": 3
+  },
+  "candidate_number": null,
+  "closed_claim": "distinct_best_achievable_capability_algebra",
+  "decision": "no_distinct_capability_algebra_admitted",
+  "direct_control_reaches_map_ceiling": {
+    "clean_plus_single_flip_episodes": 128,
+    "codewords": 16,
+    "decoder_agreement": 1.0,
+    "exact_map_accuracy": 1.0,
+    "syndrome_accuracy": 1.0
+  },
+  "execution": {
+    "arithmetic": "Python_binary64_float_and_integer_standard_library",
+    "command": "python experiments/constraint_basin_no_go.py",
+    "random_seeds": [
+      20260726,
+      1701
+    ]
+  },
+  "frozen_workload": {
+    "code": "Hamming(7,4)",
+    "corruptions": "clean_or_exactly_one_flip",
+    "episodes": 128,
+    "logical_parity_matrix_bits": 21,
+    "logical_parity_matrix_packed_bytes": 3,
+    "parity_check_edges": 12
+  },
+  "gpu_required": false,
+  "parity_basin_is_message_passing": {
+    "basin_embedded_in_generic_executor_bitwise_equal": true,
+    "coordinates_compared": 1008,
+    "finite_difference_epsilon": 1e-05,
+    "finite_difference_max_abs_error": 1.7232992810534142e-11,
+    "finite_difference_tolerance": 2e-09,
+    "message_passing_max_abs_error": 4.440892098500626e-16,
+    "message_passing_tolerance": 2e-15,
+    "message_passing_within_tolerance": true,
+    "steps_per_trajectory": 8,
+    "trajectories": 16
+  },
+  "prototype_energy_is_attention": {
+    "cases": 12,
+    "coordinates_compared": 60,
+    "finite_difference_epsilon": 1e-05,
+    "max_abs_error": 6.525874285401301e-11,
+    "tolerance": 2e-08
+  },
+  "resource_dominance_claimed": false,
+  "schema_version": 1,
+  "source_hashes": {
+    "executable_sha256": "3e50db2aa768fbaa18c2e8bf755dd6cd7bef705f4f7f2db53db6a41a23b03e57",
+    "focused_test_sha256": "9560020079d663ed6826188dc1dc95717ce726e38b8f24a871096288782b830e"
+  },
+  "status": "closed_before_training",
+  "surviving_scope": "possible finite-optimizer or decoder-state tradeoff only; not a fixed-serving capability frontier"
+}

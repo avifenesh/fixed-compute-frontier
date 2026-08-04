@@ -1,0 +1,38 @@
+{
+  "all_gates_pass": false,
+  "failed_gates": [
+    "reader_beats_t12_semantic_by_10pp",
+    "reader_evaluation_at_least_75pct"
+  ],
+  "output": "results/raw-countsketch-payload-t19b.json",
+  "physical_write_ledger": {
+    "blocks_used": 3,
+    "channels_used": 2405,
+    "down_payload_writes": 529100,
+    "gate_key_writes": 76960,
+    "gate_threshold_writes": 2405,
+    "title_code_writes": 132800,
+    "total_writes": 743670,
+    "up_constant_writes": 2405
+  },
+  "reader": {
+    "closure_evaluations": 25,
+    "evaluation": {
+      "accuracy": 0.6057692307692307,
+      "errors": 41,
+      "examples": 104,
+      "positive_rate": 0.5384615384615384,
+      "predicted_positive_rate": 0.5096153846153846
+    },
+    "finite": true,
+    "terminal_regularized_loss": 0.03537329562708532,
+    "train": {
+      "accuracy": 1.0,
+      "errors": 0,
+      "examples": 146,
+      "positive_rate": 0.5273972602739726,
+      "predicted_positive_rate": 0.5273972602739726
+    },
+    "weight_norm": 2.203310911249053
+  }
+}
