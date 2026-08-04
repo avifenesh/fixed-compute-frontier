@@ -47,7 +47,7 @@ from 73.13% to 81.54%, while held-out accuracy stayed at chance (50.28% versus
 ## Evidence
 
 Implementation and raw artifacts remain in
-`/home/avifenesh/projects/virtual-feature-mlp/`:
+`~/projects/virtual-feature-mlp/` (local, unpublished):
 
 - `benchmark_interleaved_h100_b64.json`
 - `structured_factor_results.json`

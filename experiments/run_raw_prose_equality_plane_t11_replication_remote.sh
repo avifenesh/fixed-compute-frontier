@@ -3,7 +3,7 @@ set -euo pipefail
 
 protected_instance_id="45944186"
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-identity_file="${T11_SSH_IDENTITY:-/home/avifenesh/.ssh/id_ed25519}"
+identity_file="${T11_SSH_IDENTITY:-${HOME}/.ssh/id_ed25519}"
 
 [[ $# -eq 3 ]] || {
   echo "usage: bash experiments/run_raw_prose_equality_plane_t11_replication_remote.sh USER@HOST PORT NEW_INSTANCE_ID" >&2
