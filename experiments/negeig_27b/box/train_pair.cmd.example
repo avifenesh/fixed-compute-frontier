@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Template for `ctl.sh arm --cmd-file`: one wide/ctrl pair under the watchdog. The RUNBOOK arms the same thing with
+# `ctl.sh arm --cmd '...'`; use this file when the line gets long or the flags change between boxes.
+#   cp train_pair.cmd.example ./train_pair.cmd   (edit TAG, SEED, LR, STEPS; the flags are all environment-overridable)
+#   ctl.sh arm --cmd-file ./train_pair.cmd --ckpt-dir "$RUNS/$TAG"     (the TAG must match the one in the file)
+# run_pair.sh already passes --resume to train27.py and skips an arm that has complete.json, so a restart after a crash
+# or a preemption reboot continues both arms from their newest checkpoints. Do not add $RESUME_FLAG here.
+# ctl.sh installs the file as $RUN_DIR/train.cmd, so boxenv.sh is sourced by its absolute path.
+#
+# Everything the run needs comes from boxenv.sh (model, data, replay files, venv, the NVLS file accept.sh wrote) and from
+# accept/grad_ckpt.env (the grad_ckpt decision accept.sh measured). Do not pass MODEL, DATA, RUNS, PY or PYBIN here:
+# run_pair.sh reads them from boxenv.sh and refuses PY set to a directory (PY is the python binary).
+set -eo pipefail
+# shellcheck source=boxenv.sh
+. "${NEGEIG_W:-/workspace/negeig}/code/experiments/negeig_27b/box/boxenv.sh"
+TAG=${TAG:-stageA}
+SEED=${SEED:-0}
+LR=${LR:-1e-4}
+STEPS=${STEPS:-700}
+[ -f "$ACC/grad_ckpt.env" ] || { echo "train.cmd: no $ACC/grad_ckpt.env: run accept.sh first (it decides --grad_ckpt)" >&2; exit 1; }
+# shellcheck source=/dev/null
+. "$ACC/grad_ckpt.env"
+# GRAD_CKPT_FLAGS is "--grad_ckpt 0" or "--grad_ckpt 1"; run_pair.sh does not add it itself. --w_lr follows --lr in stage A.
+# shellcheck disable=SC2086  # the flag string is two words on purpose
+exec bash "$E27/run_pair.sh" "$TAG" "$SEED" --lr "$LR" --steps "$STEPS" $GRAD_CKPT_FLAGS

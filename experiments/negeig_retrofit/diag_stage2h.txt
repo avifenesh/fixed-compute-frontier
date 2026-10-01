@@ -1,0 +1,7 @@
+# stage 2g minus swap_ctrl_lr1e-3_b64 (running). The mixed pilot gets 12 replay chunks every step (about 6k WikiText
+# tokens against about 35k task tokens, the ratio of the swap-only runs that lost nothing on MMLU-Pro); codeswap-only
+# at 3.5% replay lost 1.5 MMLU-Pro points against the base.
+swap_wide_lr3e-4_b64 wide 3e-4 3e-4 800 1 --train_tasks swap --batch 64 --sched constant --eval_every 100
+swap_wide_lr1e-3_b64 wide 1e-3 1e-3 800 1 --train_tasks swap --batch 64 --sched constant --eval_every 100
+swap_wide_lr3e-5_b64 wide 3e-5 3e-5 800 1 --train_tasks swap --batch 64 --sched constant --eval_every 100
+mix_wide_lr1e-4 wide 1e-4 1e-4 1200 1 --task_counts parity:16,swap:64,codeswap:64 --sched constant --eval_every 100 --replay_batch 12 --replay_every 1 --replay_micro 4

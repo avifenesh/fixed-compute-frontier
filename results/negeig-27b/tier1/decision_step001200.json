@@ -1,0 +1,307 @@
+{
+ "root": "/workspace/negeig/runs/t1",
+ "seed": 0,
+ "step": 1200,
+ "final": false,
+ "accuracy": {
+  "tier1/w1": {
+   "wide": 0.8379313151041666,
+   "ctrl": 0.6891682942708334,
+   "untouched": 0.3109537760416667,
+   "diff_points": 14.876302083333325,
+   "diff_points_ci95": [
+    13.968912760416668,
+    15.775553385416668
+   ]
+  },
+  "tier2/w1": {
+   "wide": 0.27069091796875,
+   "ctrl": 0.2667236328125,
+   "untouched": 0.26446533203125,
+   "diff_points": 0.396728515625,
+   "diff_points_ci95": [
+    -0.54931640625,
+    1.318359375
+   ]
+  },
+  "parity/w1": {
+   "wide": 1.0,
+   "ctrl": 0.6400146484375,
+   "untouched": 0.492431640625,
+   "diff_points": 35.99853515625,
+   "diff_points_ci95": [
+    34.9609375,
+    37.01171875
+   ]
+  },
+  "swap/w1": {
+   "wide": 0.5155029296875,
+   "ctrl": 0.427734375,
+   "untouched": 0.2176513671875,
+   "diff_points": 8.77685546875,
+   "diff_points_ci95": [
+    6.16455078125,
+    11.145935058593745
+   ]
+  },
+  "codeswap/w1": {
+   "wide": 0.998291015625,
+   "ctrl": 0.999755859375,
+   "untouched": 0.2227783203125,
+   "diff_points": -0.146484375,
+   "diff_points_ci95": [
+    -0.439453125,
+    0.0244140625
+   ]
+  },
+  "s5full/w1": {
+   "wide": 0.2066650390625,
+   "ctrl": 0.1971435546875,
+   "untouched": 0.2044677734375,
+   "diff_points": 0.9521484375,
+   "diff_points_ci95": [
+    -0.20782470703124997,
+    2.16064453125
+   ]
+  },
+  "z3/w1": {
+   "wide": 0.334716796875,
+   "ctrl": 0.3363037109375,
+   "untouched": 0.324462890625,
+   "diff_points": -0.15869140625,
+   "diff_points_ci95": [
+    -1.5753173828125002,
+    1.2210083007812482
+   ]
+  },
+  "tier1/w4": {
+   "wide": 0.48281521319101256,
+   "ctrl": 0.3217909076095869,
+   "untouched": 0.2985975480405614,
+   "diff_points": 16.102430558142565,
+   "diff_points_ci95": [
+    15.382181709234525,
+    16.83078330665012
+   ]
+  },
+  "tier2/w4": {
+   "wide": 0.2671508783241734,
+   "ctrl": 0.26702880824450403,
+   "untouched": 0.2676391607383266,
+   "diff_points": 0.012207007966935635,
+   "diff_points_ci95": [
+    -0.5025227802980226,
+    0.5351257143774999
+   ]
+  },
+  "parity/w4": {
+   "wide": 0.9371744808740914,
+   "ctrl": 0.5000000009313226,
+   "untouched": 0.5008544931188226,
+   "diff_points": 43.71744799427688,
+   "diff_points_ci95": [
+    42.04895016911905,
+    45.25177008647005
+   ]
+  },
+  "swap/w4": {
+   "wide": 0.22241210949141532,
+   "ctrl": 0.1987304692156613,
+   "untouched": 0.1957600909518078,
+   "diff_points": 2.3681640275754035,
+   "diff_points_ci95": [
+    1.419982846127823,
+    3.292032848403322
+   ]
+  },
+  "codeswap/w4": {
+   "wide": 0.2888590492075309,
+   "ctrl": 0.2666422526817769,
+   "untouched": 0.19917806005105376,
+   "diff_points": 2.2216796525754035,
+   "diff_points_ci95": [
+    0.9153239146689884,
+    3.560587499523534
+   ]
+  },
+  "s5full/w4": {
+   "wide": 0.19999186205677688,
+   "ctrl": 0.19917806005105376,
+   "untouched": 0.2012125657638535,
+   "diff_points": 0.08138020057231188,
+   "diff_points_ci95": [
+    -0.6023152402485721,
+    0.7568359386641532
+   ]
+  },
+  "z3/w4": {
+   "wide": 0.3343098945915699,
+   "ctrl": 0.3348795564379543,
+   "untouched": 0.33406575571279973,
+   "diff_points": -0.05696618463844061,
+   "diff_points_ci95": [
+    -0.8464558777632192,
+    0.7121785328490654
+   ]
+  },
+  "tier1/w16": {
+   "wide": 0.3062065967436259,
+   "ctrl": 0.29935709658699733,
+   "untouched": 0.2990146206769471,
+   "diff_points": 0.6849500156628552,
+   "diff_points_ci95": [
+    0.3631591090622048,
+    1.012174760495933
+   ]
+  },
+  "tier2/w16": {
+   "wide": 0.2656148277455941,
+   "ctrl": 0.2677408853196539,
+   "untouched": 0.2671051020734012,
+   "diff_points": -0.21260575740598142,
+   "diff_points_ci95": [
+    -0.44708243396598846,
+    0.02239244757220142
+   ]
+  },
+  "parity/w16": {
+   "wide": 0.5182291651144624,
+   "ctrl": 0.5001932787708938,
+   "untouched": 0.5001932759769261,
+   "diff_points": 1.8035886343568563,
+   "diff_points_ci95": [
+    0.9752654901240021,
+    2.7222185709979385
+   ]
+  },
+  "swap/w16": {
+   "wide": 0.19973754871170968,
+   "ctrl": 0.19676717126276344,
+   "untouched": 0.20038859080523252,
+   "diff_points": 0.29703774489462376,
+   "diff_points_ci95": [
+    -0.14246633421862498,
+    0.710093162488192
+   ]
+  },
+  "codeswap/w16": {
+   "wide": 0.20065307640470564,
+   "ctrl": 0.20111083972733468,
+   "untouched": 0.1964619952486828,
+   "diff_points": -0.04577633226290345,
+   "diff_points_ci95": [
+    -0.4720051560434512,
+    0.38965862360782894
+   ]
+  },
+  "s5full/w16": {
+   "wide": 0.1980489103589207,
+   "ctrl": 0.20101928722579032,
+   "untouched": 0.20009358739480376,
+   "diff_points": -0.29703768668696284,
+   "diff_points_ci95": [
+    -0.6307727849343792,
+    0.038655638054478914
+   ]
+  },
+  "z3/w16": {
+   "wide": 0.3331807451322675,
+   "ctrl": 0.3344624834135175,
+   "untouched": 0.33411661675199866,
+   "diff_points": -0.128173828125,
+   "diff_points_ci95": [
+    -0.4750824347138405,
+    0.2217864437261595
+   ]
+  }
+ },
+ "gate": {
+  "wide_test_beta_gt1_max_layer": 0.4173423856459997,
+  "wide_test_beta_gt1_mean": 0.16618514953178193,
+  "ctrl_has_gate": false
+ },
+ "step0_identity": {
+  "seq_accuracy_entries_differing": 0,
+  "identical": true
+ },
+ "config_differences": {},
+ "switch_step_val_w1_ge_0.95": {
+  "wide": {
+   "parity": 350,
+   "swap": null,
+   "codeswap": 600
+  },
+  "ctrl": {
+   "parity": null,
+   "swap": null,
+   "codeswap": 800
+  }
+ },
+ "last_val": {
+  "wide": {
+   "step": 1200,
+   "tier1": {
+    "w1": 0.85546875,
+    "w4": 0.48784722201526165,
+    "w16": null
+   },
+   "kl_to_untouched": 0.19507799526483346,
+   "replay_nll": 2.090788649019663,
+   "gate_rate_text": 0.09327637079695705,
+   "gate_rate_tasks": 0.1772922406873205,
+   "gate_rate_tasks_max_layer": 0.418035873651987
+  },
+  "ctrl": {
+   "step": 1200,
+   "tier1": {
+    "w1": 0.689453125,
+    "w4": 0.32736545125953853,
+    "w16": null
+   },
+   "kl_to_untouched": 0.16781599670940184,
+   "replay_nll": 2.0509433335754035,
+   "gate_rate_text": null,
+   "gate_rate_tasks": null,
+   "gate_rate_tasks_max_layer": null
+  }
+ },
+ "heldout_nll": {
+  "wide": 1.9595907112390327,
+  "ctrl": 1.9550253799050288,
+  "untouched": 2.1384534387905774
+ },
+ "anchors": {
+  "4b_wikitext_1200_3seeds": {
+   "wide": 0.784,
+   "ctrl": 0.3,
+   "diff_points": 48.3,
+   "ci95": [
+    38.4,
+    54.1
+   ]
+  },
+  "4b_wikitext_1200_seed0": {
+   "wide": 0.684,
+   "ctrl": 0.301,
+   "note": "the token stream this probe's seed 0 trains on; switches at val steps 400 (parity) and 900 (swap, codeswap)"
+  },
+  "4b_clean_replay_1200": {
+   "wide_s0_s1_s2": [
+    0.478,
+    0.602,
+    0.53
+   ],
+   "ctrl_s0": 0.3,
+   "note": "clean replay delayed the switch: swap never switched in 1,200 steps"
+  },
+  "9b_wikitext_1200": {
+   "wide": 0.53,
+   "ctrl": 0.3,
+   "note": "swap switched only after +600 steps: wide 0.66-0.82"
+  }
+ },
+ "verdict": "GO",
+ "reasons": [
+  "tier-1 4x: wide beats ctrl by 16.1 points (bar 10), gate used (busiest layer 41.7% beta > 1)"
+ ]
+}

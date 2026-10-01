@@ -1,0 +1,4 @@
+# Clean-replay pair (GPUs 4-5, replacing the fourth main seed): the main recipe with FineWeb-Edu + Python replay
+# instead of WikiText-103, whose tokenized formatting (" , ", " @-@ ", space-led lines) broke HumanEval output.
+4 clean_ctrl_s0 ctrl 1e-4 1e-4 1200 0 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576 --replay /workspace/negeig/replay_clean.pt
+5 clean_wide_s0 wide 1e-4 1e-4 1200 0 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576 --replay /workspace/negeig/replay_clean.pt
