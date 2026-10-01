@@ -22,7 +22,7 @@ cuda-bindings==13.3.1
 cuda-pathfinder==1.8.1
 cuda-toolkit==13.0.3.0
 dashscope==1.27.4
-datamodel-code-generator==0.25.7
+datamodel-code-generator==0.64.0
 distro==1.9.0
 dnspython==2.8.0
 docstring-parser==0.18.0
@@ -31,7 +31,7 @@ email-validator==2.3.0
 eval-type-backport==0.4.0
 faiss-cpu==1.11.0
 fastavro==1.12.2
-filelock==3.20.0
+filelock==3.20.3
 frozenlist==1.8.0
 fsspec==2026.7.0
 genson==1.4.0
@@ -120,7 +120,7 @@ typer==0.27.2
 types-requests==2.33.0.20260906
 typing-extensions==4.16.0
 typing-inspection==0.4.4
-urllib3==2.7.0
+urllib3==2.8.0
 websocket-client==1.9.2
 websockets==16.1.1
 writer-sdk==3.0.0
