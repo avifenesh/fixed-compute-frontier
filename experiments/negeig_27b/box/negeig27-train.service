@@ -1,0 +1,28 @@
+# Installed by bootstrap.sh --stage units (placeholders filled by sed). Enabled by ctl.sh arm.
+# After a Nebius preemption the VM is STOPPED; `nebius compute instance start` boots it again, this unit starts
+# with multi-user.target, and resume_wrapper.sh restarts the training command, which resumes from its newest
+# checkpoint (train27.py --resume, verl trainer.resume_mode=auto).
+[Unit]
+Description=negeig-27b training, resumes from the last checkpoint after preemption or reboot
+After=network-online.target nvidia-persistenced.service cloud-final.service
+Wants=network-online.target
+ConditionPathExists=@W@/run/train.cmd
+
+[Service]
+Type=simple
+User=@USER@
+Environment=NEGEIG_W=@W@
+WorkingDirectory=@W@
+ExecStart=@BOXDIR@/resume_wrapper.sh
+# The wrapper owns crash accounting and exits 0 when the job is done, held or failed for good.
+# Restart only covers the wrapper itself dying (for example while the GPU driver is still coming up).
+Restart=on-failure
+RestartSec=30
+KillMode=control-group
+KillSignal=SIGTERM
+TimeoutStopSec=180
+LimitNOFILE=1048576
+LimitMEMLOCK=infinity
+
+[Install]
+WantedBy=multi-user.target

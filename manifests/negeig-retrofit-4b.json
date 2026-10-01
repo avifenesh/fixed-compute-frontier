@@ -1,0 +1,174 @@
+{
+ "schema_version": 1,
+ "experiment_id": "negeig-retrofit-qwen35-4b-base",
+ "claim": {
+  "scope": "lifecycle",
+  "primary_edge": "E",
+  "edges": [
+   "E"
+  ],
+  "statement": "Retrofitting beta in (0,2) into a pretrained Gated DeltaNet hybrid cuts tier-1 state-tracking error in the 4x length window by at least 20% relative to the same LoRA fine-tune with beta in (0,1), with no protected-slice regression.",
+  "preregistration": "results/negeig-retrofit-preregistration.md"
+ },
+ "artifacts": {
+  "hash_scheme": "sha256(canonical path\\0bytes\\0file_sha256 records)",
+  "note": "Both arms start from the same checkpoint; the arms differ in fp32 trainable adapters. baseline = ctrl (LoRA only), candidate = wide (LoRA plus zero-init beta gate); at step 0 they are bit-identical to the checkpoint (G0).",
+  "baseline": {
+   "model_reference": "Qwen/Qwen3.5-4B-Base@1001bb4d826a52d1f399e183466143f4da7b741b",
+   "checkpoint_sha256": "09562bdf4be0d95ba2a537ffc70eaccc6e307839aec338584053dd07824de483",
+   "tokenizer_sha256": "2b1acb4946bebfba695b1de96b87feb953aa2955c35260a0d1d6475d414ddb1a",
+   "learned_bytes": {
+    "core": 9319828056,
+    "auxiliary": 34701312,
+    "metadata": 22979284,
+    "total": 9377508652
+   }
+  },
+  "candidate": {
+   "model_reference": "Qwen/Qwen3.5-4B-Base@1001bb4d826a52d1f399e183466143f4da7b741b",
+   "checkpoint_sha256": "09562bdf4be0d95ba2a537ffc70eaccc6e307839aec338584053dd07824de483",
+   "tokenizer_sha256": "2b1acb4946bebfba695b1de96b87feb953aa2955c35260a0d1d6475d414ddb1a",
+   "learned_bytes": {
+    "core": 9319828056,
+    "auxiliary": 42565632,
+    "metadata": 22979284,
+    "total": 9385372972
+   }
+  }
+ },
+ "hardware": {
+  "gpu_stratum": "NVIDIA GeForce RTX 5090 Laptop GPU 24463 MiB",
+  "gpu_pci_id": "00000000:02:00.0",
+  "driver": "595.91.07",
+  "container_digest": "no-container;uv-venv=~/.venvs/negeig;pip-freeze-sha256=73fadcabe26242ec17eaf6929d8f7f7e45875d2d37f0701421d0818c2ba67c1e",
+  "server_commit": "fixed-compute-frontier@f89eaf0719f73c2e48c27e95cd39be421f00f86b;transformers==5.17.0;flash-linear-attention==0.5.2;peft==0.21.0;torch==2.14.0+cu130",
+  "host": "owner local rig (laptop RTX 5090), authorized by the owner 2026-09-29"
+ },
+ "workload": {
+  "trace_sha256": "ab4e1be50da287d50df867f6fbcccd5c7d45bf064b3abb64dada2964d80b9252",
+  "frozen": true,
+  "note": "eval sets (5 tasks x 3 lengths x 128 sequences, fixed seeds) plus the replay chunk file",
+  "cells": [
+   {
+    "name": "parity@64",
+    "input_tokens": 68,
+    "output_tokens": 64,
+    "concurrency": 8
+   },
+   {
+    "name": "parity@256",
+    "input_tokens": 260,
+    "output_tokens": 256,
+    "concurrency": 8
+   },
+   {
+    "name": "parity@1024",
+    "input_tokens": 1028,
+    "output_tokens": 1024,
+    "concurrency": 8
+   },
+   {
+    "name": "swap@64",
+    "input_tokens": 70,
+    "output_tokens": 64,
+    "concurrency": 8
+   },
+   {
+    "name": "swap@256",
+    "input_tokens": 262,
+    "output_tokens": 256,
+    "concurrency": 8
+   },
+   {
+    "name": "swap@1024",
+    "input_tokens": 1030,
+    "output_tokens": 1024,
+    "concurrency": 8
+   },
+   {
+    "name": "codeswap@64",
+    "input_tokens": 340,
+    "output_tokens": 64,
+    "concurrency": 8
+   },
+   {
+    "name": "codeswap@256",
+    "input_tokens": 1300,
+    "output_tokens": 256,
+    "concurrency": 8
+   },
+   {
+    "name": "codeswap@1024",
+    "input_tokens": 5140,
+    "output_tokens": 1024,
+    "concurrency": 8
+   },
+   {
+    "name": "s5full@64",
+    "input_tokens": 72,
+    "output_tokens": 64,
+    "concurrency": 8
+   },
+   {
+    "name": "s5full@256",
+    "input_tokens": 264,
+    "output_tokens": 256,
+    "concurrency": 8
+   },
+   {
+    "name": "s5full@1024",
+    "input_tokens": 1032,
+    "output_tokens": 1024,
+    "concurrency": 8
+   },
+   {
+    "name": "z3@64",
+    "input_tokens": 69,
+    "output_tokens": 64,
+    "concurrency": 8
+   },
+   {
+    "name": "z3@256",
+    "input_tokens": 261,
+    "output_tokens": 256,
+    "concurrency": 8
+   },
+   {
+    "name": "z3@1024",
+    "input_tokens": 1029,
+    "output_tokens": 1024,
+    "concurrency": 8
+   }
+  ]
+ },
+ "quality": {
+  "protected_slices": [
+   "P1",
+   "P2",
+   "P3",
+   "P4",
+   "P5"
+  ],
+  "noninferiority_margins": {
+   "P1": 0.005,
+   "P2": 0.02,
+   "P3": 0.02,
+   "P4": 0.02,
+   "P5": 0.02
+  },
+  "slice_definitions": {
+   "P1": "held-out WikiText-103 NLL, relative increase over ctrl (upper 95% bound)",
+   "P2": "tier-1 accuracy, 1x window, absolute drop vs ctrl",
+   "P3": "tier-2 accuracy, 1x window, absolute drop vs ctrl",
+   "P4": "each tier-1 task, 4x window, absolute drop vs ctrl",
+   "P5": "held-out NLL, relative increase over the untouched base (upper 95% bound)"
+  }
+ },
+ "planned_training_seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ]
+}

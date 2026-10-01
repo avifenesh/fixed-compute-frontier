@@ -1,0 +1,88 @@
+{
+ "schema": "negeig-general-eval-pins/1",
+ "model": {
+  "id": "Qwen/Qwen3.8-27B",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+ },
+ "datasets": {
+  "mmlupro": {
+   "repo": "TIGER-Lab/MMLU-Pro",
+   "revision": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+   "rows": 12032,
+   "test": {
+    "path": "data/test-00000-of-00001.parquet",
+    "sha256": "0e24a191921c2f453518a537a8b2117bd137e7714d4ef1565e9ba06c1ecb9ad8"
+   }
+  },
+  "humaneval": {
+   "repo": "openai/openai_humaneval",
+   "revision": "7dce6050a7d6d172f3cc5c32aa97f52fa1a2e544",
+   "rows": 164,
+   "test": {
+    "path": "openai_humaneval/test-00000-of-00001.parquet",
+    "sha256": "2f2871a15fbc95b6c683043359f4ed8e144c5a1c4f24f25f66bc51f598dfcfb6"
+   }
+  },
+  "ifeval": {
+   "repo": "google/IFEval",
+   "revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+   "rows": 541,
+   "input": {
+    "path": "ifeval_input_data.jsonl",
+    "sha256": "6a85310ca8ce15eff755aa08a3a4ff931c7e273e7515ebb3c492ea85fd8288f2"
+   }
+  },
+  "gmmlu_he": {
+   "repo": "CohereLabs/Global-MMLU",
+   "revision": "0e619dbeb34206cd48705a1a0ea7fb21cae09993",
+   "rows_test": 14042,
+   "rows_dev": 285,
+   "pop2000_seed": 20260905,
+   "pop2000_n": 2000,
+   "test": {
+    "path": "he/test-00000-of-00001.parquet",
+    "sha256": "e615cdc1abe5b7951c9c1d38bac93ef39e8f1c3e4ceeb90da072a2384f7d9e7f"
+   },
+   "dev": {
+    "path": "he/dev-00000-of-00001.parquet",
+    "sha256": "00fbe2db797727fad95c0fb544cc6fee3ff660fdf7827f9467747fd05534b3bb"
+   }
+  }
+ },
+ "ifeval_harness": {
+  "repo": "google-research/google-research",
+  "commit": "e6890f85757dd84e27ca6df2dd30651dafad28e0",
+  "dir": "instruction_following_eval",
+  "files": {
+   "evaluation_lib.py": "35decc06000718487f44d7deafa6d3f48a8ec0886281edf40162c0265b7d248c",
+   "evaluation_main.py": "e6df07a04d25a0e7134933ba2400c26e0129a243e449c88df55043e583fc4b4a",
+   "instructions.py": "60e086f5342a03ce8e18b64bbcccf86308f523c08aa826707a562150a52f3edf",
+   "instructions_registry.py": "ec92d72c264f6d906978613085db262356174300370a3fffe6fefd5969ce9cfc",
+   "instructions_util.py": "a73797261eee5bf447e279d82a2b700b1bdd3cb1193412dbab1270a85832bc6b"
+  },
+  "python_deps": {
+   "nltk": "3.10.3",
+   "langdetect": "1.0.9",
+   "immutabledict": "4.3.1",
+   "absl-py": "2.5.0"
+  },
+  "nltk_data": [
+   "punkt",
+   "punkt_tab"
+  ]
+ },
+ "bfcl": {
+  "repo": "https://github.com/ShishirPatil/gorilla.git",
+  "commit": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+  "registry_key": "negeig/qwen3.8-27b-FC",
+  "handler_sha256": "e7c9094d2864f03666858a4662d2c5188d0f8cb43cb9c4a8e2475560ce5d0ce2",
+  "requirements_sha256": "cb83f8db4436849d57f6f20b9b7509f88632e7b7ab23c01d9631ea810108ac4a",
+  "python": "3.12"
+ },
+ "normalized_sha256": {
+  "mmlupro_test.jsonl": "05146dbf9b1827999017a09ad1c0dd28b6d6ad41c4581eefb2e300d55cb414b0",
+  "humaneval_test.jsonl": "d0ddad194007f919138be398f58e2c1ba7a17bbb52edc03872acd01834144e68",
+  "gmmlu_he_test.jsonl": "de1f6d1dd75d4cf5857ea2fb53165ae8017822e910170f12ace1ab0d02b1eba6",
+  "gmmlu_he_dev.jsonl": "17aee9374f23d2b26484d7052db92b982ec85dc93ee9f6d198c6ac5e0d2e95a7"
+ }
+}

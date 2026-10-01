@@ -1,0 +1,6 @@
+# tier 2 on the laptop while the rented box runs tier 1: s5full + z3 (64 each per step), both arms, seed 0, same recipe
+tier2_wide_s0 wide 1e-4 1e-4 1200 0 --task_counts s5full:64,z3:64 --sched constant --replay_batch 4 --replay_every 1 --eval_every 100
+tier2_ctrl_s0 ctrl 1e-4 1e-4 1200 0 --task_counts s5full:64,z3:64 --sched constant --replay_batch 4 --replay_every 1 --eval_every 100
+swap_wide_lr3e-4_b64 wide 3e-4 3e-4 800 1 --train_tasks swap --batch 64 --sched constant --eval_every 100
+swap_wide_lr1e-3_b64 wide 1e-3 1e-3 800 1 --train_tasks swap --batch 64 --sched constant --eval_every 100
+swap_wide_lr3e-5_b64 wide 3e-5 3e-5 800 1 --train_tasks swap --batch 64 --sched constant --eval_every 100

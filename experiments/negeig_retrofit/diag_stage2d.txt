@@ -1,0 +1,9 @@
+# swap-only, batch 64, constant LR: the control on the recipe that made wide switch (wide 1e-4 switched at step 400-600).
+# Then codeswap-only (effective batch 64 via 4 micro-batches; from scratch it switches at 12.8k sequences), then
+# the second control LR and wide learning-rate probes (switch step per LR).
+swap_ctrl_lr1e-4_b64 ctrl 1e-4 1e-4 1600 1 --train_tasks swap --batch 64 --sched constant
+codeswap_wide_lr1e-4_b64 wide 1e-4 1e-4 800 1 --train_tasks codeswap --batch 64 --grad_accum 4 --sched constant --eval_every 100
+swap_ctrl_lr1e-3_b64 ctrl 1e-3 1e-3 1600 1 --train_tasks swap --batch 64 --sched constant
+swap_wide_lr3e-4_b64 wide 3e-4 3e-4 1000 1 --train_tasks swap --batch 64 --sched constant
+swap_wide_lr1e-3_b64 wide 1e-3 1e-3 1000 1 --train_tasks swap --batch 64 --sched constant
+swap_wide_lr3e-5_b64 wide 3e-5 3e-5 1000 1 --train_tasks swap --batch 64 --sched constant

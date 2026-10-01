@@ -1,0 +1,5 @@
+# Explaining the 4B clean-replay result: continue clean_wide_s0 for +600 steps (delayed or blocked), and two fresh
+# clean-replay seeds (switch rate under clean replay).
+3 cont_clean_wide_s0 wide 1e-4 1e-4 600 100 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576 --replay /workspace/negeig/replay_clean.pt --init_from /workspace/negeig/runs/clean_wide_s0/trainable.pt
+4 clean_wide_s1 wide 1e-4 1e-4 1200 1 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576 --replay /workspace/negeig/replay_clean.pt
+5 clean_wide_s2 wide 1e-4 1e-4 1200 2 --task_counts parity:16,swap:64,codeswap:64 --sched constant --replay_batch 12 --replay_every 1 --replay_micro 4 --micro_tokens 24576 --replay /workspace/negeig/replay_clean.pt

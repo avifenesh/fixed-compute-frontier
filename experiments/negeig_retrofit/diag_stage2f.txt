@@ -1,0 +1,9 @@
+# replaces stage 2e (not started): codeswap control, second swap control LR, wide LR probes cut to 800 steps
+# (wide 1e-4 switched between steps 400 and 600, so 800 shows whether another LR is faster), then the
+# mixed tier-1 pilot: fixed 16 parity + 64 swap + 64 codeswap per step, single-task micro-batches.
+codeswap_ctrl_lr1e-4_b64 ctrl 1e-4 1e-4 800 1 --train_tasks codeswap --batch 64 --grad_accum 4 --sched constant --eval_every 100
+swap_ctrl_lr1e-3_b64 ctrl 1e-3 1e-3 1600 1 --train_tasks swap --batch 64 --sched constant
+swap_wide_lr3e-4_b64 wide 3e-4 3e-4 800 1 --train_tasks swap --batch 64 --sched constant --eval_every 100
+swap_wide_lr1e-3_b64 wide 1e-3 1e-3 800 1 --train_tasks swap --batch 64 --sched constant --eval_every 100
+swap_wide_lr3e-5_b64 wide 3e-5 3e-5 800 1 --train_tasks swap --batch 64 --sched constant --eval_every 100
+mix_wide_lr1e-4 wide 1e-4 1e-4 1200 1 --task_counts parity:16,swap:64,codeswap:64 --sched constant --eval_every 100
