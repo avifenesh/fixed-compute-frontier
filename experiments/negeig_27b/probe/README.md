@@ -16,7 +16,7 @@ Arms: `untouched` (the base), `ctrl_s0` and `wide_s0` (train27.py `trainable_000
 | `report.py` | per arm x task x mode tables, paired comparisons with bootstrap intervals; one JSON, one markdown file |
 | `run_all.sh` | the box driver: per arm serve (evals/serve_arm.sh), check the parsers, run all jobs, take it down; then the report |
 | `probe_common.py` | modes, token accounting, the per-generation ledger, the settings guard, `check-server` |
-| `fake_probe_server.py`, `test_probe.py` | the CPU tests: an oracle fake with scripted defects and SGLang's context refusals, and 42 tests including red arms |
+| `fake_probe_server.py`, `test_probe.py` | the CPU tests: an oracle fake with scripted defects and SGLang's context refusals, and 46 tests including red arms |
 
 Reused, not copied: selfdistill's `ToolEpisode` (agentic_env's state machine at message level), `Client`, `JsonlSink`,
 `run_pool`, `FailureGate`, manifests; agentic_env's `call_key`, `turn_score`, errors and step limit; `data/common.py`
